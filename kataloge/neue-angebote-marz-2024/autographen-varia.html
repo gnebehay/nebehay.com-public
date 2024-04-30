@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neue Angebote März 2024</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/new-offers-march-2024/autographs-misc.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Neue Angebote März 2024</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Autographen &amp; Varia
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/neue-angebote-marz-2024.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/neue-angebote-marz-2024/bucher-auch-signiert.html'>Bücher (auch signiert)</a></li>
+    
+        <li><a href='/kataloge/neue-angebote-marz-2024/graphik.html'>Graphik</a></li>
+    
+        <li><a href='/kataloge/neue-angebote-marz-2024/autographen-varia.html'>Autographen &amp; Varia</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2403-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/altenberg-peter-schriftsteller-1859-1919-2403-4.html'>
+                            <img class='thumb' src='/img/thumb/altenberg-peter-schriftsteller-1859-1919-2403-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/altenberg-peter-schriftsteller-1859-1919-2403-4.html'><strong>Altenberg, Peter, Schriftsteller (1859-1919)</strong></a><br /><br />
+                    Eigenhändiges Manuskriptblatt ohne Unterschrift, 1 Seite, kl-4, Wien (Briefpapier des Graben-Hotels), um 1915. - "Abgesehen vom Talent, könnte ich alle dieselben Sachen schreiben wie dieser Peter Altenberg. Wenn ich nämlich ebenso unverschämt wäre, und dieses ununterbrochene und überflüssige Bedürfnis hätte, die Menschen über irgend etwas aufzukären! Ich bin direkt froh, dass Sie "irre gehen". Wer hat mich aufgeklärt?! Etsch!" - - - Meine Mama sagte immer zu mir noch in den sogenannt guten Zeiten: 'Wenn wir die 20000 Kronen hätten, die wir jährlich ausgeben, so hättest Du ein Recht, uns Vorwürfe zu machen, dass wir sie ganz ausgeben! Da wir sie aber nicht haben und dennoch ausgeben, ist es eine Taktlosigkeit von Dir!'" -  Auf dünnem Papier mit Faltspuren. <br /><br />
+                    <span style="display: none">Leicht abweichend gedruckt in "Fechsung" (Berlin 1915, 166), dort zusammen mit anderen Kurztexten unter der Überschrift "Splitter". Für Altenberg typische Skizzen in seiner charakteristischen Handschrift. Der Dichter, einer der wichtigsten Vertreter der sogenannten Kaffeehausliteratur der Wiener Moderne, lebte von 1913 bis zu seinem Tod im Graben-Hotel.</span>
+                    <a href='/artikel/altenberg-peter-schriftsteller-1859-1919-2403-4.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-4
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-7>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bahr-hermann-schriftsteller-1863-1934-2403-7.html'>
+                            <img class='thumb' src='/img/thumb/bahr-hermann-schriftsteller-1863-1934-2403-7.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bahr-hermann-schriftsteller-1863-1934-2403-7.html'><strong>Bahr, Hermann, Schriftsteller (1863-1934)</strong></a><br /><br />
+                    Billet mit eigenhändigem Spruch "Lerne leben!" und Unterschrift, 9 x 12,5 cm, 29.(?) 3. 1922. - Zusammen mit einer reproduzierten Porträtzeichnung und einer maschinschriftlichen Würdigung Bahrs doppelseitig auf Karton montiert. <br /><br />
+                    <span style="display: none">Der österreichische Schriftsteller und Kulturkritiker gilt als Prophet und Vermittler der Moderne.</span>
+                    <a href='/artikel/bahr-hermann-schriftsteller-1863-1934-2403-7.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-7
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/biermann-wolf-lyriker-und-liedermacher-geb-1936-2403-11.html'>
+                            <img class='thumb' src='/img/thumb/biermann-wolf-lyriker-und-liedermacher-geb-1936-2403-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/biermann-wolf-lyriker-und-liedermacher-geb-1936-2403-11.html'><strong>Biermann, Wolf, Lyriker und Liedermacher (geb. 1936)</strong></a><br /><br />
+                    Eigenhändiges Gedicht "Das Barlach-Lied" (3 Strophen mit Refrain), darunter eigh. Widmung und Unterschrift in Spiegelschrift, 1 Seite, in-4,  ohne Ort (wohl Hamburg), 10. 4. 1991. - "Ach, Mutter, mach die Fenster zu / Ich glaub, es kommt ein Regen / Da drüben steht die Wolkenwand / Die will sich auf uns legen ...". Der Widmungstext lautet: "Lieber Reinhold Eberhardt, voilá, da haben Sie das Barlach-Lied. Ich schrieb es, glaube ich, 1963, oder bald danach, für einen DEFA-Film, nach einer Novelle von Franz Fühmann über eine Episode in Barlachs Leben: Die Nazis klauten den schwebenden Engel aus der Kirche in Güstrow. Der Film wurde verboten - aber das Lied überlebte - wie Ihr Wolf Biermann". - Faltspur, kleine Mängel am oberen Rand. <br /><br />
+                    <span style="display: none">Schönes Autograph mit einem der populärsten Lieder Biermanns (Erstveröffentlichung 1969).</span>
+                    <a href='/artikel/biermann-wolf-lyriker-und-liedermacher-geb-1936-2403-11.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-11
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/billinger-richard-schriftsteller-1890-1965-2403-12.html'>
+                            <img class='thumb' src='/img/thumb/billinger-richard-schriftsteller-1890-1965-2403-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/billinger-richard-schriftsteller-1890-1965-2403-12.html'><strong>Billinger, Richard, Schriftsteller (1890-1965)</strong></a><br /><br />
+                    Ganzseitiges Gedichtfaksimile mit gedruckter Danksagung für Glückwünsche zum 70. Geburtstag und eigenhändiger Unterschrift, 1 Seite, kl-4, 2. 7. 1960. - "Was ist ein Jubilar? / Verehrt von einer Schar / von Freunden, die sich darüber freuen / jünger zu sein als der gefeierte Alte, / ihm gerne den Weihrauch streuen / und ihm singen das 'Gott erhalte!' / Was kann ein Jubilar? / Nichts, als in Geduld sich fassen, / aus den schimmernden Gelassen / seines Selbst, seines Ichs, seines Herzens / die Träne keltern des Verschmerzens / der Jugendsonnenstärke, / ausruhen auf seinem Werke, / das ihm gar nicht unsterblich dünkt, / warten, bis die Tür zuklinkt, / er den Würmern gehört und den Maden, / ein grabgeschirmter Düngerfladen. / Was ist ein Jubilar? / Ein Kinderspott! Ein alter Narr! / Einer, der die Bettlersuppe trinkt, / hinter dem vollen Erntewagen / zu den Stoppeln des geleerten Ackers hinkt." <br /><br />
+                    <span style="display: none">Der einstmals gefeierte, nach dem Krieg jedoch in Vergessenheit geratene homosexuelle Lyriker, Dramatiker und Erzähler verbrachte seinen Lebensabend alkoholkrank in Linz, wo er in Kaffee- und Gasthäusern ein meist verständnisloses Publikum mit seinen Texten konfrontierte.</span>
+                    <a href='/artikel/billinger-richard-schriftsteller-1890-1965-2403-12.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-12
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bittner-julius-komponist-1874-1939-2403-13.html'>
+                            <img class='thumb' src='/img/thumb/bittner-julius-komponist-1874-1939-2403-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bittner-julius-komponist-1874-1939-2403-13.html'><strong>Bittner, Julius, Komponist (1874-1939)</strong></a><br /><br />
+                    Eigenhändige Notenzeile mit Unterschrift auf der Rückseite einer Bildkarte des Schreinzer-Quartetts, in Bleistift, 3 Takte, Wien, 12. 4. 1924. - Minimal fleckig, leichte Klammer- und Montagespuren. Beiliegend eine zugehörige Sammlernotiz sowie ein Zeitschriftenausschnitt von 1923 mit einem faksimilierten Notenzitat Bittners. <br /><br />
+                    <span style="display: none">Bittners spätromantische Opern ("Die rote Gred" u. a.) wurden zunächst viel gespielt, nach dem 2. Weltkrieg geriet der in der Nachfolge Wagners stehende Komponist aber allmählich in Vergessenheit. Karl Schreinzer war Mitglied der Wiener Philharmoniker und begründete zusammen mit Karl Machek (ebenfalls Philharmoniker), Franz Kriwanek und Josef Mikulas eine eigene Gattung des Schrammel-Quartetts.</span>
+                    <a href='/artikel/bittner-julius-komponist-1874-1939-2403-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-13
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-21>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/buber-martin-religionsphilosoph-1878-1965-2403-21.html'>
+                            <img class='thumb' src='/img/thumb/buber-martin-religionsphilosoph-1878-1965-2403-21.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/buber-martin-religionsphilosoph-1878-1965-2403-21.html'><strong>Buber, Martin, Religionsphilosoph (1878-1965)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite, gr-8, Jerusalem, Dir Abu Tor, 5. 3. 1944. - An den Rechtsanwalt, Übersetzer und Redakteur Max Strauss. "Dear Dr. Strauss, Please let me know, if any copy of "Muckensturm" is yet in your hands, and if so, send it please to our literary agent Mr. Franz J. Horch, 141 West 23rd Street, New York City. I do not know, if Bermann Fischer has returned in its time to your address the copy he had received from me. We would thank you very much, if you would kindly clear up the state of things and inform me about it by air mail. With kind regards, yours sincerely Martin Buber". - Auf Luftpostpapier geschrieben. <br /><br />
+                    <span style="display: none">Der Roman "Muckensturm. Ein Jahr im Leben einer kleinen Stadt" wurde von Bubers Ehefrau Paula in den Jahren 1938 bis 1940 verfasst und behandelt die Anfänge des Nationalsozialismus in einer deutschen Kleinstadt - gemeint ist damit Heppenheim, wo die Familie Buber von 1916 bis 1938 lebte. Nach der Verwüstung seines Hauses durch die Nationalsozialisten emigrierte Buber nach Jerusalem. Der Verlag Bermann Fischer publizierte zunächst in Schweden, dann in den USA Exilliteratur. Der Roman "Muckensturm" konnte allerdings erst 1953 bei Lambert Schneider in Heidelberg unter dem Pseudonym Georg Munk veröffentlicht werden; eine Neuausgabe unter dem Namen Paula Buber erschien 2008.</span>
+                    <a href='/artikel/buber-martin-religionsphilosoph-1878-1965-2403-21.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-21
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.html'>
+                            <img class='thumb' src='/img/thumb/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.html'><strong>Don Carlos. - Elisabeth von Valois, Königin von Spanien (1545-1568)</strong></a><br /><br />
+                    Eigenhändiger Brief ohne Unterschrift, 1/2 Seite, in-4, ohne Ort und Datum (wohl Madrid oder Aranjuez, Juli 1568), rückseitig adressiert "A Monssieur lambassadeur". - Geheimschreiben (klein gefaltet, am rechten Rand Nadelspuren), wohl an Raimond Beccarie de Fourquevaux, den französischer Botschafter am spanischen Hof. Über den bevorstehenden Tod des Infanten Don Carlos. "monssieur lambassadeur jay eu au jaurduy de fort movaises [nouvelles] (Einfügung, wohl von fremder Hand) du prince parquoy il me samble quil vaut mieux que monssieur ... Cest atande a venir aun autre jour je Vous envoye les lettres dans lesquelles je me remets a vous je ne pance pas quil passe cete nuit" (Herr Botschafter, ich habe heute ganz schlechte Nachrichten vom Prinzen gehabt ... ich denke nicht, dass er diese Nacht überleben wird). - Stellenweise braun- und tintenfleckig. <br /><br />
+                    <span style="display: none">Elisabeth, Tocher Heinrichs II. von Frankreich und Katharinas von Medici, war die dritte Gemahlin von Philipp II. Ursprünglich mit dessen Sohn Don Carlos verlobt, wurde sie nach dem Tod von Philipps zweiter Frau als vierzehnjährige französische Prinzessin mit dem spanischen König verheiratet, was den Frieden zwischen Frankreich und Spanien sichern sollte. In ihre Rolle als spanische Königin lebte sie sich gut ein, wie auch ihre Ehe mit dem wesentlich älteren Philipp glücklich gewesen sein dürfte. Ihr körperlich und geistig zurückgebliebener Stiefsohn Don Carlos war kränklich, litt unter Wahnvorstellungen und wurde wegen seiner Unberechenbarkeit von seinem Vater unter Hausarrest gestellt. Der Infant verstarb am 24. 7. 1568 im Alter von 23 Jahren, Elisabeth folgte ihm wenige Wochen später nach einer Fehlgeburt; beide wurden im Monasterio de San Lorenzo de El Escorial beigesetzt. Die angebliche Liebesbeziehung zwischen Don Carlos und Elisabeth, wie sie unter anderem von Schiller literarisch verarbeitet wurde, gehört in den Bereich späterer romantischer Legendenbildung. - Autographe der Königin, noch dazu Don Carlos betreffend, sind von größter Seltenheit.</span>
+                    <a href='/artikel/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-24
+                    <br />
+                    
+                        € 2750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/faistauer-anton-maler-und-graphiker-1887-1930-2403-29.html'>
+                            <img class='thumb' src='/img/thumb/faistauer-anton-maler-und-graphiker-1887-1930-2403-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/faistauer-anton-maler-und-graphiker-1887-1930-2403-29.html'><strong>Faistauer, Anton, Maler und Graphiker (1887-1930)</strong></a><br /><br />
+                    Eigenhändiger Brief mit kleiner Federzeichnung (Selbstporträt als Soldat) und Unterschrift "Papa", 2 Seiten, kl-4, ohne Ort und Datum (Salzburg, Ende August oder Anfang September 1916). - An seine Familie. "Liebste Mama u. Peter Paul, Ich habe deine beiden Zigaretten-Sendungen u. auch augenblicklich das Paket erhalten u freue mich daß du so fürsorglich für mich bist. Ich bin gestern in die Barake eingezogen bekam aber die Erlaubnis heraußen zu schlafen u. hoffe des weitern die definitive Erlaubnis hiezu zu bekommen. Am meisten wohl ists mir recht wegen des Ungeziefer das mich nicht schlafen läßt. Somit geht es mir gar nicht so schlecht mehr. Heute bin ich schon uniformiert worden u fühle mich gar nicht so schlecht in den Soldatenkleidern. Ich habe auch hier wieder Collegschaft gefunden. Die Angelegenheit mit dem Pressequartier hat augenblicklich ein wenig Zeit. Auch möchte ich gerne warten bis in die Kriegslage eine Klärung u. gewisse Richtung kommt. Ich bin dort nicht viel besser dran als augenblicklich hier. Das werde ich übrigens mit dir mündlich besprechen, wenn du Sonntag kommst. Petzi nimm wohl nur bei gutem Wetter mit. u. fahre gleich ins Hotel Bristol. Hier wird man dir den Weg zu den Baraken zeigen od. auch bin ich da dich zu erwarten. Bis dahin kann ich auch schon besser saludieren u. habe hoffentlich Zeit genug für Euch. Im ganzen geht es hier in der B. bedeutend gemütlicher zu als beim Feldheer. Brauchst dich gar nicht sorgen um mich. Ich strecke mich nach der Decke so weit's geht. Gelegenheit zur Verbesserung meiner Situation wird auch kommen. Vergiß, wenn Petzi kommt den Kautschuck nicht. Magda hat ein Kind bekommen einen - Peter! Ich hab sie noch nicht gesehen da sie im Sanatorium ist. Ich muß jetzt in der(!) Barak laufen. Da ich heraußen essen durfte. Petzi umarme ich u sage ihm daß ihn der Papa sehr lieb hat u sich freut wenn er mitkommt. Ich küsse Euch beide recht herzlich. Wenn du an Frau Reichel Arenbergschlössel, Arenbergstrasse 1 Kilo Mehl u. 1/2 Butter schicken kannst, so tu's, wenn nicht geht dann nicht. Ich hab nichts versprochen, aber schon 2 mal dort gegessen. Lebt wohl auf Wiedersehen / Brief Hotel od. Einj Freiw. Inf. Reg 59 Ersatzkomp. 9 Barake 11 / Euer treuer Papa". - Geringfügig knittrig, kleiner Einriss am oberen Rand; die Federzeichnung etwas durchschlagend. <br /><br />
+                    <span style="display: none">Das k.u.k. Infanterieregiment "Erzherzog Rainer" Nr. 59 war während der Zugehörigkeit des Landes Salzburg zur österreichischen Monarchie (1816-1918) das Salzburger Hausregiment. Seit 1899 in der neuerbauten Kaserne in Salzburg-Lehen untergebracht, wurde es im August mobilisiert und war dann mit etlichen militärischen Aktionen am Ersten Weltkrieg beteiligt. Faistauer machte ab 28. August 1916 bei der in Garnison gebliebenen Ersatzkompanie Dienst ohne Waffe, bis er im Juli 1917 vom Heeresmuseum "zur besonderen Verwendung" übernommen wurde. Dort organisierte er gemeinsam mit Egon Schiele Kriegsbilderausstellungen und konnte sich künstlerisch wieder frei entfalten.</span>
+                    <a href='/artikel/faistauer-anton-maler-und-graphiker-1887-1930-2403-29.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-29
+                    <br />
+                    
+                        € 860,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fouque-friedrich-baron-de-la-motte-schriftsteller-1777-1843-2403-31.html'>
+                            <img class='thumb' src='/img/thumb/fouque-friedrich-baron-de-la-motte-schriftsteller-1777-1843-2403-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fouque-friedrich-baron-de-la-motte-schriftsteller-1777-1843-2403-31.html'><strong>Fouqué, Friedrich (Baron) de la Motte, Schriftsteller (1777-1843)</strong></a><br /><br />
+                    Eigenhändiges zehnzeiliges Gedicht "Vormittags um 11 Uhr" auf unregelmäßigem Papierauschnitt (ca. 9 x 10 cm), ohne Unterschrift, Ort und Datum. - "Sei getrost im Weltgewimmel. / Heut wird dir ein Traum der Himmel. / Nicht, als heb dich auf der Himmel / Durch das Grab, / Doch als neig' er sich herab / Zu dir in das Weltgewimmel. / Wirf all Grau'n und Grämen ab, / Womit du dich längst umspannst. / Nie umsonst / Neigt und zeigt sich wem der Himmel." Mit einigen Korrekturen. - Rückseitig ein weiteres eigenhändiges Gedicht "Zur günstgen Rückerinnerung" in schwer lesbarer Bleistiftschrift mit Erwähnung von Romuald (Hauptfigur in Fouqués Rittergedicht "Corona", 1814), Nennh[ausen] 20. 12. 1832. <br /><br />
+                    <span style="display: none">Provenienz: Auktion Hauswedell 129 (1964), aus Nr. 930; Stargardt 632 (1985), aus Nr. 104.</span>
+                    <a href='/artikel/fouque-friedrich-baron-de-la-motte-schriftsteller-1777-1843-2403-31.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-31
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/franz-i-romisch-deutscher-kaiser-1708-1765-2403-33.html'>
+                            <img class='thumb' src='/img/thumb/franz-i-romisch-deutscher-kaiser-1708-1765-2403-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/franz-i-romisch-deutscher-kaiser-1708-1765-2403-33.html'><strong>Franz I., römisch-deutscher Kaiser (1708-1765)</strong></a><br /><br />
+                    Diktatbrief mit eigenhändiger Unterschrift "Franz" und papiergedecktem Siegel, 1 1/2 Seiten, in-4, Wien, 29. 11. 1763. - Franz Stephan von Lothringen, Gemahl Maria Theresias, teilt einem geistlichen Fürsten den Tod seiner Schwiegertochter Isabella (der Gattin des späteren Kaisers Joseph II.) mit. "Ehrwürdiger Fürst, liebe Andächtiger! Gleichwie die göttliche Vorsehung in allen menschlichen Zufällen Ihre Allmacht und ohnveränderlichen Willen mehrmahlen veroffenbaret; Also hat Deroselben auch gefallen, Unsers freundlich geliebten ältesten Sohnes, des Ertz-Hertzog Joseph L[ie]bden Gemahlin, der Durchleuchtigsten Ertz-Hertzogin Isabella, gebohrnen Prinzeßin von Parma L[ie]bden, bey Ihrer Sieben Monatlichen Schwangerschafft, nachdeme Dieselbe von denen Kinder-Blattern befallen, und in der Nacht von dem  21t: auf den 22. dieses, zu vor mit einer Prinzessin, die annoch die Heil. Tauffe erhalten, kurtz hierauf aber verschieden ist, entbunden worden, in der Blühe Ihres Alters, vorgestern Frühe zwischen 5. und 6. Uhr von diesem Zeitlichen zu dem Ewigen Leben abzufordern. / Die Uns von Deiner Andacht beharrlich zutragende rühmliche Neigung und Ergebenheit giebt Uns dahero Anlaß, Deroselben von diesem Uns sehr schmertzlich fallenden Absterben dir gnädigste Nachricht mitzutheilen, indeme Wir mit Bestand hoffen können, daß Dieselbe mit Uns hierunter ein billiges Beyleid zur tragen, und die Seele der Verstorbenen in Dero Dom-Stiffterrn dem allgemeinen Gebett anzuempfehlen nicht entstehen werden. Wogegen D[eine]r Andacht Sich gesichert halten wollen, daß Wir Deroselben allstäts mit Kay[ser)l[ich]en Gnaden und allem Guten, wohl beygethan verbleiben ...". - Gegengezeichnet von Graf Colloredo, dessen Unterschrift durchschlagend; die Anfangsinitiale mit leichtem Tintenfraß. <br /><br />
+                    <span style="display: none">Die Hochzeit der schönen und geistreichen Prinzessin Isabella von Bourbon-Parma (1741-1763) mit dem Thronfolger Joseph sollte die Beziehung zwischen den Habsburgern und dem Haus Bourbon für die Zukunft sichern. Isabella wurde von Joseph sehr geliebt, konnte sich allerdings mit der ihr zugedachten Rolle als Mutter möglichst vieler Kinder und eines Thronfolgers nicht anfreunden. Sie verfiel zusehends in Melancholie und sah nach drei Fehlgeburten und zwei Geburten in nur drei Jahren bereits ihren frühen Tod voraus. Joseph konnte ihren Verlust nie ganz verwinden.</span>
+                    <a href='/artikel/franz-i-romisch-deutscher-kaiser-1708-1765-2403-33.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-33
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-35>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/franz-salvator-erzherzog-von-osterreich-1866-1939-2403-35.html'>
+                            <img class='thumb' src='/img/thumb/franz-salvator-erzherzog-von-osterreich-1866-1939-2403-35.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/franz-salvator-erzherzog-von-osterreich-1866-1939-2403-35.html'><strong>Franz Salvator, Erzherzog von Österreich (1866-1939)</strong></a><br /><br />
+                    Beidseitig eigenhändig beschriebene Fotokarte mit Unterschrift "Franz Habsburg", ohne Ort, 23. 8. 1919. - "Vielen Dank für Ihre herzlichen Glückwünsche zu meinem Geburtstage, den ich früher meistens im Kreise meiner Cameraden während der Conzentrierungen feierte. Alte Reitererinnerungen, tempi passati! Jetzt muß man für die Zukunft seiner Kinder sorgen u. arbeiten u. die schlechten Zeiten übertauchen ... [Bildseitig:] Meine drei letzten Reitpferde, habe keines mehr!" Schriftseite etwas fleckig. - Beiliegend ein nicht eigenhändiges Telegramm Franz Salvators vom 21. 8. 1901 an Erzherzog Eugen, mit dessen Registraturvermerk. <br /><br />
+                    <span style="display: none">Erzherzog Franz Salvator von Österreich-Toskana heiratete 1890 Marie Valerie, die jüngste Tochter von Kaiser Franz Joseph, und stieg als Armeeoffizier bis zum General der Kavallerie auf. Im Dezember 1918 außer Dienst versetzt, verzichtete er auf seine Thronrechte und blieb in Österreich. Das Foto zeigt ihn zu Pferd zwischen zwei anderen Offizieren.</span>
+                    <a href='/artikel/franz-salvator-erzherzog-von-osterreich-1866-1939-2403-35.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-35
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/karl-vi-romisch-deutscher-kaiser-1685-1740-2403-48.html'>
+                            <img class='thumb' src='/img/thumb/karl-vi-romisch-deutscher-kaiser-1685-1740-2403-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/karl-vi-romisch-deutscher-kaiser-1685-1740-2403-48.html'><strong>Karl VI., römisch-deutscher Kaiser (1685-1740)</strong></a><br /><br />
+                    Gedrucktes Patent mit eigenhändiger Unterschrift "Carl" und papiergedecktem Siegel, 3 Seiten, in-4, Wien, 27. 4. 1723. - Verbot der Einfuhr von Messing zum Schutz der einheimischen Produktion. Gegengezeichnet von Philipp Ludwig von Sinzendorf. - Stärkere, teilweise behelfsmäßig reparierte Schäden im Bug und an den Rändern; erste Seite mit Registraturvermerk. <br /><br />
+                    <span style="display: none">Die ersten Messinghütten entstanden in Österreich bereits im späten 15. und frühen 16. Jh., besonders in Tirol. Philipp Ludwig Wenzel Graf von Sinzendorf (1671-1742) war unter den Kaisern Joseph I. und Karl VI. sowie zu Beginn der Regentschaft von Maria Theresia Obersthofkanzler und gestaltete vor allem die Außenpolitik maßgeblich mit.</span>
+                    <a href='/artikel/karl-vi-romisch-deutscher-kaiser-1685-1740-2403-48.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-48
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.html'>
+                            <img class='thumb' src='/img/thumb/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.html'><strong>Kerner, Justinus, Schriftsteller und Arzt (1786-1862)</strong></a><br /><br />
+                    Gedicht "Ein Rath" von anderer Hand mit eigenhändiger Unterschrift und kleinen eigenhändigen Korrekturen, 1 Seite, in-8, ohne Ort und Datum (um 1860). "Hast Du ein Herz in's Herz genommen, / So schließe bald Dein Herze zu, / Laß Wenige nur dahin kommen, / Die Menge stört des Herzens Ruh. / Ein Herz nur kannst du dir erwählen, / Das mit dir durch die Leiden geht; / Willst du auf viele Herzen zählen, / Die kommen alle dir zu spät! / O! denke, wie in enger Kammer / Oft bange schlägt ein gutes Herz / Und stille trägt unsel'gen Jammer, / Betrog'ner Freundschaft bittern Schmerz. / Der, welcher setzt nur sein Vertrauen / Auf Menschenhülfe, baut auf Glas:/ "Auf Gott nur kannst du Felsen bauen!" / Ein alter wahrer Spruch ist das." <br /><br />
+                    <span style="display: none">Mit kleinen Interpunktsabweichungen gedruckt in "Winterblüthen", Stuttgart 1859. - Zwölf Gedichte Kerners wurden von Robert Schumann vertont. Als Arzt behandelte er unter anderem Nikolaus Lenau, auch ist ihm die erste klinische Beschreibung des Botulismus zu verdanken.In vorgerücktem Alter litt Kerner aufgrund einer Starerkrankung an starker Sehschwäche und schrieb kaum mehr eigenhändig.</span>
+                    <a href='/artikel/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-49
+                    <br />
+                    
+                        € 250,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kokoschka-oskar-maler-1886-1980-2403-51.html'>
+                            <img class='thumb' src='/img/thumb/kokoschka-oskar-maler-1886-1980-2403-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kokoschka-oskar-maler-1886-1980-2403-51.html'><strong>Kokoschka, Oskar, Maler (1886-1980)</strong></a><br /><br />
+                    Beidseitig beschriebene eigenhändige Ansichtskarte in etwas fehlerhaftem Englisch mit Paraphe "OK", Hotel Regina (Venedig), 17. 7. 1948. - An Lea Bondy-Jaray in London. "My dear Mrs. Bondi / The missing drawings must still be at Zürich, Kunsthaus. Unfortunately not all your drawings where shown at Amsterdam, which I myself did not know as I had nothing to do with the arrangment or selection of Dr. Sandbergs show. Please get in touch with Dr. Wartman I shall do the same. Weather is awfull here, health worse. Kindest regards from us both. Above my modell which eternally is shrowded in clouds - burst and thunder and ligthnings. Yours OK." <br /><br />
+                    <span style="display: none">Die österreichische Galeristin und Kunstsammlerin Lea Bondi-Jaray (1880-1969), die unter anderem Egon Schieles Gemälde "Wally" besaß,  emigrierte nach dem Anschluss nach England; die von ihr geführte Galerie Würthle wurde arisiert. 1943 übernahm sie gemeinsam mit Otto Brill die St. George's Gallery in Mayfair, die rasch zu einer Anlaufstelle für deutschsprachige Emigranten wurde. Der Graphiker, Typograph und Designer Willem Sandberg (1897-1984) war von 1945 bis 1962 Direktor des Amsterdamer Stedelijk Museums und organisierte dort im Herbst 1947 eine Kokoschka-Ausstellung. Wilhelm Wartmann (1882-1970) leitete von 1909 bis 1949 das Kunsthaus Zürich. Die auf der Ansichtskarte gezeigte Basilika Santa Maria della Salute in Venedig wurde von Kokoschka mehrfach gemalt; "regards from us both" bezieht sich auf Olda, die Frau des Künstlers.</span>
+                    <a href='/artikel/kokoschka-oskar-maler-1886-1980-2403-51.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-51
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/krenek-ernst-komponist-1900-1991-2403-52.html'>
+                            <img class='thumb' src='/img/thumb/krenek-ernst-komponist-1900-1991-2403-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/krenek-ernst-komponist-1900-1991-2403-52.html'><strong>Krenek, Ernst, Komponist (1900-1991)</strong></a><br /><br />
+                    Eigenhändiges musikalisches Albumblatt mit Unterschrift, kl-quer-8, (Palm Springs), 27. 3. 1985. - Drei Takte aus seinem "Klavierstück in elf Teilen op. 197 (1967)". - Mit eigh. Briefkuvert. <br /><br />
+                    <span style="display: none">Krenek wuchs in Wien auf, wo er bei Franz Schreker Komposition studierte. In den 1920er Jahren erlebte seinen größten Publikumserfolg mit der Oper "Jonny spielt auf", ab 1937 lebte er in den USA. Sein Schaffen umfasst fast alle musikalischen Stilrichtungen des 20. Jahrhunderts.</span>
+                    <a href='/artikel/krenek-ernst-komponist-1900-1991-2403-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-52
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-53>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kubin-alfred-graphiker-1877-1959-2403-53.html'>
+                            <img class='thumb' src='/img/thumb/kubin-alfred-graphiker-1877-1959-2403-53.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kubin-alfred-graphiker-1877-1959-2403-53.html'><strong>Kubin, Alfred, Graphiker (1877-1959)</strong></a><br /><br />
+                    Eigenhändige Postkarte mit Unterschrift "Alfred" und aufgeklebter kleiner Federzeichnung einer Ente, Wernstein am Inn (Adress-Stempel), undatiert (Poststempel unleserlich, nach Frankatur und Inhalt etwa Jahreswechsel 1921/22). - An Marianne Grafe in Wien: "Meine liebe Marianne - Große Freude und Überraschung über dein Packel die süssen und wollenen Dinge für Ö M. u. die Hand [kleine Skizze] Mädchen werden noch danken - - Ich wußte daß du an mich nett denken wirst, - Felix avisirt Brief und ich hoffe ihn jetzt abzuholen denn ich gehe dann auf die Post. Mir gehts gut eine Last von Büchern brachte das Christkind. - und von Morgenstern ein grüner Tschamper so daß ich wie ein Grasfrosch diese Tage herumstolzirte. Sehr mit Briefen, mit Arbeit überlastet. - Und so schließe ich in Hetz und Eile denn ich bringe Schmitz zur Bahn. Alles Gute für Euch beide Alfred". - Anschriftsseite leicht fleckig; Lesung stellenweise unsicher. <br /><br />
+                    <span style="display: none">Die Briefempfängerin Marianne Grafe geb. Weil dürfte vor 1915 in einer Liebesbeziehung zu Alfred Kubin gestanden sein, ehelichte dann aber den Lyriker und Übersetzer Felix Grafe (eigentlich Felix Löwy, 1888-1942), von dem sie sich 1927 wieder scheiden ließ; später heiratete sie einen Herrn Haeutler. Kubin fertigte für das Ehepaar Grafe ein Exlibris an und schickte Marianne weiterhin Aquarelle, Zeichnungen und Briefe sowie Postkarten mit kleinen Skizzen. Felix Grafe wurde in der NS-Zeit ein antifaschistisches Gedicht für eine illegale kommunistische Zeitschrift zum Verhängnis: er wurde wegen Zersetzung der Wehrkraft und Vorbereitung zum Hochverrat im Wiener Landesgericht hingerichtet. Kubin schuf daraufhin eine Zeichnung "In memoriam Felix Grafe", die er sowohl in Bleistift wie in Tusche ausführte; die Fassung in Tusche trägt die Widmung "'Für Marianne, von Alfred zum Gedächtnis an meinen Freund und Sammler den Dichter Felix Grafe hingerichtet in Wien am 18. Dez 1942". - Morgenstern: der Tuchfabrikant und Sammler Max Morgenstern (1883-1946), einer der frühesten und bedeutendsten Förderer Kubins; Schmitz: Kubins Schwager und oftmaliger Reisegefährte, der Schriftsteller Oscar A. H. Schmitz (1873-1931).</span>
+                    <a href='/artikel/kubin-alfred-graphiker-1877-1959-2403-53.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-53
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-54>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.html'>
+                            <img class='thumb' src='/img/thumb/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.html'><strong>Lavater, Johann Caspar, Schriftsteller und Theologe (1741-1801)</strong></a><br /><br />
+                    Blatt mit eigenhändiger Sentenz "An einen Freund nach meinem Tode" und Paraphe "L", 13 x 9 cm, ohne Ort, 3. 10. 1794. - "Laß dich nicht zu leicht, zu dem, was dich lüstet, bereden. Aber laß Dich bereden - zur schweren Pflicht - und zur Treue an dem erkannten Recht und an dem Gott, der ein Mensch ist." - Mit gestochener Bordüre und farbiger Umrahmung; verso leichte Montagespuren. <br /><br />
+                    <span style="display: none">Dekoratives Autograph. - Der reformierte Schweizer Pastor verfasste eine Reihe von philosophischen, religiösen und poetischen Schriften und wurde vor allem durch seine Theorie der Physiognomik bekannt. Blätter wie das vorliegende verschenkte er zu verschiedenen Anlässen an Freunde.</span>
+                    <a href='/artikel/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-54
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-56>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lloyd-osterreichischer-2403-56.html'>
+                            <img class='thumb' src='/img/thumb/lloyd-osterreichischer-2403-56.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lloyd-osterreichischer-2403-56.html'><strong>Lloyd, Österreichischer</strong></a><br /><br />
+                    Eigenhändiger Brief des deutschen Schriftstellers Friedrich von Bodenstedt (1819-1892), 3 Seiten, in-8, Triest, 6. 7. 1848, geringfügig altersfleckig. - Bodenstedt, der damals nach wechselnden Verhältnissen einen Posten als Hauptredakteur des "Journals" des Österreichischen Lloyd in Triest gefunden hatte, schildert einem Freund die Schifffahrtsgesellschaft und ihrer Einrichtungen. "... Der Lloyd ist wirklich eines der großartigsten Institute der Welt. Vierzehn Menschen arbeiten fortwährend an den drei hier erscheinenden Journalen; ein und dreißig eigene Dampfschiffe unterhalten die Verbindungen mit den Küstenländern des Mittelländischen-, des Marmara- und des Schwarzen Meeres; aus Odessa, Trapezunt, Constantinopel, Athen, Alexandrien, kurz, aus den bedeutendsten Hafenplätzen laufen täglich durch unsere eigenen Capitains und Couriere frische Berichte ein, wovon die wichtigsten im Auszuge schon bis Mittag gedruckt sein müssen; in einem 60 Fuß langen und 20 Fuß breiten Lesesaal liegen die Zeitungen der wichtigsten Länder der Welt ausgebreitet; 2 Schnellpressen sind vom Morgen bis zum Abend in fortwährender Arbeit; in drei großen Sälen arbeiten unausgesetzt 40 Drucker, Setzer und metteurs en page; 4 Directoren, welche wieder eine Menge Secretaire, Factoren, Cassiers &c. unter sich haben, leiten die verschiedenen Zweige der Geschäfte, der Eine die Schiffahrt, der andere die Bank, der dritte die Presse, der vierte die Consularangelegenheiten. Von den Tausenden welche durch den Lloyd ihren Unterhalt finden, sind alle zeitlebens gesichert; es besteht nämlich eine vor kurzem gegründete Pensionsanstalt, wozu Jeder nach Maßgabe seiner Einnahmen beisteuern muß, nämlich von jedem Gulden 1 Kreuzer. Dafür erhält jeder im Lloyd Angestellte nach 10 Jahren ein Drittheil, nach 20 Jahren zwei Drittheile seines Gehalts als Pension. Die Gründung dieser Anstalt, wie manches andere Großartige, hat man dem einen der Directoren H. v. Bruck, denselben welchen ich in Frankfurt besuchte, zu verdanken; wie verlautet wird H. v. Bruck bei der Bildung eines deutschen Ministeriums zum Marineminister ernannt werden ...". Im Herbst 1848 übersiedelte die Redaktion des "Journals" und mit ihr Bodenstedt nach Wien, wo der Schriftsteller die Oktoberrevolution miterlebte; nach einem Wechsel der politischen Linie der Zeitung legte er seine Stelle nieder. <br /><br />
+                    <span style="display: none">Zur Biographie Bodenstedts ausführlich ADB 47, 44-67. - "H. v. Bruck": Karl Ludwig von Bruck (1798-1860), deutscher Kaufmann, später österreichischer Minister und Botschafter in Konstantinopel. Der Empfänger des Briefes konnte von uns nicht ermittelt werden.</span>
+                    <a href='/artikel/lloyd-osterreichischer-2403-56.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-56
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/perutz-leo-schriftsteller-1882-1957-2403-66.html'>
+                            <img class='thumb' src='/img/thumb/perutz-leo-schriftsteller-1882-1957-2403-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/perutz-leo-schriftsteller-1882-1957-2403-66.html'><strong>Perutz, Leo, Schriftsteller (1882-1957)</strong></a><br /><br />
+                    Maschinschriftlicher Brief mit Unterschrift, Wien (Briefkopf), 1/2 Seite, kl-4, 19. 7. 1929. - Ersucht einen Hofrat um Auskunft über einen aus Paris erhaltenen Brief betreffend die geplante Übersetzung seines Romans "Der Marques de Bolibar". "Da ich wegen der Unleserlichkeit der Unterschrift den Brief nicht direkt beantworten kann, nehme ich mir die Freiheit, mich an Sie, verehrter Herr Hofrat, zu wenden, mit der Bitte, mir mitzuteilen, ob Sie etwas über diese Sache wissen ...". - Auf Karton montiert. <br /><br />
+                    <span style="display: none">Perutz' phantastischer Roman "Der Marques de Bolibar" war 1920 bei Albert Langen in München erschienen und wurde 1962 in Frankreich posthum mit dem Prix Nocturne ausgezeichnet. Im Hauptberuf war der in Prag geborene Schriftsteller Versicherungsmathematiker; 1928 hatte er Frau und Sohn verloren, zog sich daraufhin aus dem öffentlichen Leben zurück und beschäftigte sich verstärkt mit Okkultismus. 1938 emigrierte Perutz nach Palästina, 1952 nahm er wieder die österreichische Staatsbügerschaft an. - Selten.</span>
+                    <a href='/artikel/perutz-leo-schriftsteller-1882-1957-2403-66.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-66
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schnitzler-arthur-schriftsteller-1862-1931-2403-71.html'>
+                            <img class='thumb' src='/img/thumb/schnitzler-arthur-schriftsteller-1862-1931-2403-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schnitzler-arthur-schriftsteller-1862-1931-2403-71.html'><strong>Schnitzler, Arthur, Schriftsteller (1862-1931)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 2 Seiten auf Doppelblatt, in-8, Wien, 2. 9. 1905. - An einen Veranstalter in Berlin. "Sehr geehrter Herr Doktor, es ist mir nicht möglich, Ihnen eine bestimmte Zusage zu machen, eh ich selbst über meine Berliner Reise sicheres weiß. Ich verpflichte mich deshalb so ungern, weil ja auch noch im letzten Moment oder wenigstens in den letzten Wochen Premieren-Verschiebungen einzutreten pflegen, und es dann passiren könnte, daß ich wegen eines Vortrags allein eine Reise unternehmen und meine Arbeiten unterbrechen müsste, was, wie Sie gewiss ohne weiters einsehen, meinem Geschmack nicht sehr entspricht. - Sobald ich etwas sicheres weiß, werde ich Sie gern benachrichtigen - ohne Verpflichtung für Sie und für mich. - Was Honorar anlangt, gestatte ich mir, in einem Saal v. Fassungsraum - 600 Personen: 500 Mark, - 800 Personen 600 M. zu beanspruchen. Größerer Saal kommt hoffentlich nicht in Betracht. - Mit verbindlichem Gruß Ihr sehr ergebener Arthur Schnitzler". - Geschrieben auf dünnem grauem Briefpapier; das zweite Blatt mit minimalen Klebebandspuren. <br /><br />
+                    <span style="display: none">Im September 1905 stellte Schnitzler seine zur Uraufführung im Wiener Burgtheater bestimmte Komödie "Zwischenspiel" fertig. Der Autor konnte Vorschläge für die Besetzung der Rollen einbringen, die Premiere fand am 12. Oktober statt und war mäßig erfolgreich. - Schöner ausführlicher Brief.</span>
+                    <a href='/artikel/schnitzler-arthur-schriftsteller-1862-1931-2403-71.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-71
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/slezak-leo-tenor-1873-1946-2403-75.html'>
+                            <img class='thumb' src='/img/thumb/slezak-leo-tenor-1873-1946-2403-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/slezak-leo-tenor-1873-1946-2403-75.html'><strong>Slezak, Leo, Tenor (1873-1946)</strong></a><br /><br />
+                    Beidseitig eigenhändig beschriebene Porträtpostkarte (Rollenbild als Alfonso in Wolfgang Korngolds Oper "Violanta") mit Unterschrift, Wien, 20. 12. 1927. - "Lieber Herr College, ich danke Ihnen herzlich für die Marken, Sie haben mir eine große Freude damit gemacht. - Ich bin ganz traurig, daß Sie diese herrliche Sammlung hergeben wollen -  seien Sie mir nicht leichtsinnig und wenn schon - dann womöglich nicht verschleudern. Herzliche Grüße und beste Weihnacht von Ihrem  Slezak". <br /><br />
+                    <span style="display: none">Slezak war leidenschaftlicher Briefmarkensammler. In "Wortbruch", einem seiner autobiographischen Bücher, beschreibt er humorvoll eine damit verbundene Episode aus seinem Leben.</span>
+                    <a href='/artikel/slezak-leo-tenor-1873-1946-2403-75.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-75
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/torberg-friedrich-schriftsteller-1908-1979-2403-81.html'>
+                            <img class='thumb' src='/img/thumb/torberg-friedrich-schriftsteller-1908-1979-2403-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/torberg-friedrich-schriftsteller-1908-1979-2403-81.html'><strong>Torberg, Friedrich, Schriftsteller (1908-1979)</strong></a><br /><br />
+                    Brief mit Unterschrift, 1/2 Seite, kl-4, Wien (Briefkopf des "Forum"),  13. 2. 1956. - An den Schriftsteller Felix Braun betr. die Veröffentlichung von einigen seiner Texte im "Forum". "... 'Das Wunder', so schön es ist, wird möglicherweise an der satanischen Raumbeschränkung unsrer karg gezählten Literaturseiten scheitern, und die womöglich noch schönere 'Mutter' eben doch daran, dass wir sie nicht gut unter dem Heroldsruf 'Ungedruckte Gedichte von Felix Braun' veröffentlichen können ...". <br /><br />
+                    <span style="display: none">Der in Wien als Friedrich Kantor geborene, aus einer deutsch-jüdischen Prager Familie stammende Torberg war federführender Herausgeber der 1954 gegründeten und international verbreiteten Kulturzeitschrift "Forum". Er prägte das Blatt in den ersten Jahren durch seinen rigiden, einige Zeit auch von einer Vorfeldorganisation der CIA unterstützten Antikommunismus und konnte an den Wiener Bühnen einen bis 1963 andauernden Brecht-Boykott durchsetzen.</span>
+                    <a href='/artikel/torberg-friedrich-schriftsteller-1908-1979-2403-81.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-81
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wellesz-egon-komponist-1885-1974-2403-86.html'>
+                            <img class='thumb' src='/img/thumb/wellesz-egon-komponist-1885-1974-2403-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wellesz-egon-komponist-1885-1974-2403-86.html'><strong>Wellesz, Egon, Komponist (1885-1974)</strong></a><br /><br />
+                    Eigenhändiges Schreiben mit Unterschrift, 1 1/2 Seiten, gr-8, Oxford (gedruckter Briefkopf), undatiert (1938). - Empfehlungsschreiben für den damals 25-jährigen Musiker Friedrich Wildgans. "... Friedrich Wildgans ist mir als ausgezeichneter Musiker, Komponist, Theorielehrer und vorzüglicher Clarinettist seit Jahren sehr wohl bekannt und ich habe seine Entwicklung mit wärmstem Interesse verfolgt. Herr Wildgans hat auch in den letzten Jahren organisatorisch sehr viel für die Verbreitung zeitgenössischer Musik in Wien geleistet und die Werke ausländischer Musiker aufführen helfen und selbst bei diesen Aufführungen mitgewirkt ..." <br /><br />
+                    <span style="display: none">Der in Wien geborene Komponist und Musikwissenschaftler Egon Wellesz war einer der ersten Privatschüler von Arnold Schönberg, verfasste 1920 die erste Biographie über seinen Lehrer und gründete zusammen mit Rudolf Réti die Internationale Gesellschaft für Neue Musik (IGNM). Ab 1929 Professor für Musikwissenschaft an der Universität Wien, emigrierte er 1938 über Amsterdam nach England, wo er für kurze Zeit an der im Briefkopf angegebenen Adresse wohnte; 1946 erhielt er die britische Staatsbürgerschaft. - Friedrich Wildgans (1913-1965), Sohn des Dichters Anton Wildgans, war Schüler von Joseph Marx, unterrichtete am Mozarteum und arbeitete von 1936 bis 1940 als Soloklarinettist an der Wiener Staatsoper. Wegen seiner Unterstützung der Widerstandgruppe um Roman Scholz längere Zeit inhaftiert, fand er nach dem Krieg erst 1955 wieder eine dauernde Anstellung an der Wiener Musikakademie. Von 1948 bis 1961 war er Präsident der österreichischen Sektion der Internationalen Gesellschaft für Neue Musik.</span>
+                    <a href='/artikel/wellesz-egon-komponist-1885-1974-2403-86.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-86
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wien-hetzendorf-2403-87.html'>
+                            <img class='thumb' src='/img/thumb/wien-hetzendorf-2403-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wien-hetzendorf-2403-87.html'><strong>Wien - Hetzendorf</strong></a><br /><br />
+                    "Entwurf einer Eingabe an die Gemeinde Vertretung der k. k., Reichs- Haupt und Residenzstadt Wien, behufs Inangriffnahme des Baues einer Bürgerschule in Hetzendorf". Aktenstück von Schreiberhand unterzeichnet von einem Oberkommissär Hermann, 3 1/2 Seiten, in-4, Wien, 13. 5. 1898. - Obwohl zur Errichtung einer Bürgerschule für die ehemaligen Gemeinden Hetzendorf und Altmannsdorf im 12. Wiener Gemeindebezirk bereits das Grundstück und die notwendigen Geldmittel vorhanden sind, "wird die Inangriffnahme dieses Schulbaues von Jahr zu Jahr verschoben. Daß durch die Verzögerung dieses Baues den Bewohnern dieses Bezirkstheiles in vieler Hinsicht Nachtheile erwachsen ist leicht nachzuweisen. Viele Bewohner von Hetzendorf resp. Altmannsdorf sind aus dem Grunde ... von hier weggezogen, und diese Fälle wiederholen sich jährlich. ... Schon seit Jahren wird von Seite der hiesigen Bevölkerung bitter empfunden, daß ihre Kinder, sobald sie das 5, Schuljahr absovirt haben vor die alternative gestellt sind, entweder in der 5. Classe der Volksschule durch 3 Jahre hindurch denselben Unterricht zu genießen, oder auf dem Wege nach der über eine halbe Stunde entfernten Bürgerschule zu Meidling ihre Gesundheit aufs Spiel zu setzen. Bekanntlich führen die Wege zwischen Altmannsdorf, Hetzendorf einerseits und Meidling anderseits zum größten Theile über freie Felder ... Ohne gerade das Schlimste ins Auge zu fassen - erscheint es passend, wenn Knaben und Mädchen in diesem Alter gemeinsam auf einsamen Wegen über freies Feld und durch das Gatterholz zur Schule wandern müssen? Aus demselben Grund sahen sich Famlien, die so vermögend sind, daß sie ihre Kinder per Bahn in eine Wiener Bürgerschule schicken könnten gezwungen, in die Stadt zu übersiedeln, sobald ihre Kinder die Volksschule absoviert hatten. Wer selbst einmal Zeuge war, welchen Belästigungen die Mädchen vonseite halbwüchsiger Burschen im Coupé ausgesetzt sind, wer mit eigenen Ohren gehört, in welch picante Dialoge oft ein solches Mädchen, das zuhaus nie ein zweideutiges Wort hörte, verwickelt wird, der muß jeder Mutter rechtgeben, die die geistige Ausbildung ihrer Tochter nicht um den Preis einer sittlichen Verderbniß erkaufen will ...". Es folgen kritische Bemerkungen zu den baulichen und sanitären Verhältnissen in den beiden heillos überfüllten Hetzendorfer Volksschulen. - Gebräunt und fleckig, kleine Bug- und Randmängel. <br /><br />
+                    <span style="display: none">Beiliegend ein Schriftstück betreffend die Aufführung von Haydns "Schöpfung" im Hetzendorfer Casino, Februar 1901.</span>
+                    <a href='/artikel/wien-hetzendorf-2403-87.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-87
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/yun-isang-komponist-1917-1995-2403-90.html'>
+                            <img class='thumb' src='/img/thumb/yun-isang-komponist-1917-1995-2403-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/yun-isang-komponist-1917-1995-2403-90.html'><strong>Yun, Isang, Komponist (1917-1995)</strong></a><br /><br />
+                    Eigenhändige Notenzeile (3 Takte) auf Notenpapier mit Unterschrift, quer-8, Berlin, 15. 12. 1989. - Leichte Faltspur. <br /><br />
+                    <span style="display: none">Der in Südkorea aufgewachsene Isang Yun (eigentlich Yun I-sang) studierte in Paris und Berlin und erlangte mit seinen Kompositionen, in denen er fernöstliche Traditionen mit Techniken der westlichen Avantgarde verschmolz, internationale Anerkennung. 1967 wurde er nach einem Besuch Nordkoreas vom südkoreanischen Geheimdienst aus Deutschland entführt und wegen angeblichen Landesverrats in Südkorea zu lebenslanger Haft verurteilt. Nach internationalen Protesten im Februar 1969 wieder freigelassen, kehrte er nach Deutschland zurück und erhielt 1971 gemeinsam mit seiner Frau die deutsche Staatsbürgerschaft.</span>
+                    <a href='/artikel/yun-isang-komponist-1917-1995-2403-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-90
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.html'>
+                            <img class='thumb' src='/img/thumb/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.html'><strong>Zschokke, Heinrich, Schriftsteller und Pädagoge (1771-1848)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift,  in-8, 1 Seite auf Doppelblatt, B[lumenhalde] 3. 6. 1844. - "Guten Morgen, Lieber, wenn es auch draussen ein wenig neblicht um Aarau hängt. Hier send' ich Dir das Mspt. der achten Rechenschaft unsrer Taubstummen-Anstalt. Auch das dabei Liegende gilt, als Manuskript, wo es nicht abgeändert ist. Herr Burkhardt-Horosen wird dir morgen ... die dazu gehörige Rechnung schikken. Es sollen wieder davon, wie sonst, 1500 Ex. gedrukt und geheftet werden. Aber wieder, wie sonst, drängt, wegen Versendung der Ex. durch den Kanton, die Zeit, und darum bitt' ich Dich dringend wieder im Namen der Gesellschaft, wenn immer möglich, noch bis Ende der Woche uns den Bogen zur Versendung vollenden zu lassen. Gern würd' ich noch die Korrektur besorgen. Dein H. Zschokke". - Geringfügig knittrig und fleckig, Bearbeitungsvermerk in Rötel am linken Rand. <br /><br />
+                    <span style="display: none">Aus einer Magdeburger Tuchmacherfamilie stammend, ließ sich Zschokke 1796 in der Schweiz nieder. Er übernahm dort zahlreiche politische Ämter, wirkte als liberaler Vorkämpfer und Volksaufklärer und wurde zu einem der meistgelesenen deutschsprachigen Schriftsteller seiner Zeit. Die Villa Blumenhald in Aarau, wo er von 1818 bis zu seinem Tod lebte, entstand nach seinen eigenen Entwürfen.</span>
+                    <a href='/artikel/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-92
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

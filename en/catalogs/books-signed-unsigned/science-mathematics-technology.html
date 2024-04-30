@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books (signed &amp; unsigned)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Books (signed &amp; unsigned)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Science, Mathematics, Technology
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/books-signed-unsigned.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/early-printed-books.html'>Early Printed Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/local-history-and-topography.html'>Local History and Topography</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/botany-zoology-agriculture-horsemanship-hunting.html'>Botany, Zoology, Agriculture, Horsemanship, Hunting</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/geography-travel-ethnology.html'>Geography, Travel, Ethnology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/history-archeology-numismatics.html'>History, Archeology, Numismatics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/children-s-books.html'>Children&#39;s Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/gastronomy-sports-and-games-miscellaneous.html'>Gastronomy, Sports and Games, Miscellaneous</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/art-and-crafts.html'>Art and Crafts</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/literature-liguistics-books-about-books.html'>Literature, Liguistics, Books about Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/medicine-psychology-pedagogics.html'>Medicine, Psychology, Pedagogics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/militaria-and-naval-matters.html'>Militaria and Naval Matters</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/science-mathematics-technology.html'>Science, Mathematics, Technology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/philosophy-and-religion.html'>Philosophy and Religion</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/politics-law-economics.html'>Politics, Law, Economics</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1701-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/clemandot-j-s-1701-12.html'>
+                            <img class='thumb' src='/img/thumb/clemandot-j-s-1701-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/clemandot-j-s-1701-12.html'><strong>Clemandot, J. S.</strong></a><br /><br />
+                    Fabrikation des Zuckers aus Runkelrüben. Betrachtungen über die Wirkungsart der dießfällig angewendeten Klärmittel und Beantwortung der Frage: ob Krystallisirgefäße oder Zuckerhutformen in der Anwendung den Vorzug verdienen? Aus dem Französischen frey übersetzt und mit Anmerkungen versehen von J. Seitz ... Vorrede von P. T. Meißner. Wien, Gerold, 1831. In-8; X, 11-58 pp; OBrosch., unbeschnitten; überwiegend etwas stockfleckig. <br /><br />
+                    <span style="display: none">Engelmann (Bibl. mech.-techn.) 49. - Seltene Schrift zur Zuckerherstellung. Unter dem Druck der Napoleonischen Kontinentalsperre begann man im frühen 19. Jh. mit der Produktion von Rübenzucker, die bald einen industriellen Maßstab erreichte und damit das ehemalige Luxusgut Zucker allgemein erschwinglich machte.</span>
+                    <a href='/en/articles/clemandot-j-s-1701-12.html'>Continue reading</a><br /><br />
+                    Order no. 1701-12
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.html'>
+                            <img class='thumb' src='/img/thumb/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.html'><strong>Lavoisier. - Duvee, Denis I. &amp; Klickstein, Herbert S.</strong></a><br /><br />
+                    A Bibliography of the Works of Antoine Laurent Lavoisier 1743-1794. [Und:] Supplement to A Bibliography of the Works of Antoine Laurent Lavoisier ... 2 Bände. London, Dawson and Weil bzw. Dawsons, 1954/1965. Kl-4; Frontispiz, XXIII, 491 pp, 1 Bl., 41 (von 42) Taf.; Frontispiz, XIII, 1 Bl., 171 pp, 2 Bll., 6 Taf.; goldgepr. Orig.-Leinen mit Orig.-Umschlägen (minimal bestoßen, Umschläge mit Gebrauchsspuren); jeder Band mit faksimiliertem Exlibris von Lavoisier. - Bd. 1 ohne Taf. 15. <br /><br />
+                    <span style="display: none">Erste Ausgabe. - Die detailreiche kommentierte Standardbibliographie zum Werk des großen Chemikers, der während der Französischen Revolution nach einem Schauprozess hingerichtet wurde.</span>
+                    <a href='/en/articles/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.html'>Continue reading</a><br /><br />
+                    Order no. 2102-49
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mako-paul-retzer-joseph-von-ubers-2309-48.html'>
+                            <img class='thumb' src='/img/thumb/mako-paul-retzer-joseph-von-ubers-2309-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mako-paul-retzer-joseph-von-ubers-2309-48.html'><strong>Mako, Paul - Retzer, Joseph von (Übers.)</strong></a><br /><br />
+                    Physikalische Abhandlung von den Eigenschaften des Donners, und den Mitteln wider das Einschlagen. Bey Gelegenheit einer ... Vertheidigung, welche Wenzel Edler von Brognard, in der k. k. Akademie der orientalischen Sprachen bey St. Barbara zu halten die Ehre haben wird ... Wien, Trattner, 1772. In-8; 7 Bll. (inkl. gest. Fontispiz), 125 pp; 1 weißes Bl., 44 pp; einige Zierleisten, Vignetten und Initialen; blaue Interimsbroschur (fleckig und mit kleinen Schäden, vord. flieg. Vorsatz an Frontispiz geklebt); einzelne leichte Gebrauchsspuren, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Poggendorf 2, 21; Wurzbach 16, 321 f. - Erste Ausgabe. Eingehende Studie über die atmosphärische Elektrizität und Plädoyer für die von Benjamin Franklin entwickelten Schutzmaßnahmen. Im Anhang die Prüfungsfragen zur angekündigten Defensio unter dem Vorsitz von Joseph von Sonnenfels. Der ungarische Jesuit Paul Mako von Kerek Gede (1723-1793) unterrichtete Logik und Metaphysik in Tyrnau und Wien sowie Mathematik und Physik am Wiener Theresianum; die lateinische Fassung seines Werks erschien 1773, eine zweite deutsche Ausgabe 1775.</span>
+                    <a href='/en/articles/mako-paul-retzer-joseph-von-ubers-2309-48.html'>Continue reading</a><br /><br />
+                    Order no. 2309-48
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/petrina-franz-1705-66.html'>
+                            <img class='thumb' src='/img/thumb/petrina-franz-1705-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/petrina-franz-1705-66.html'><strong>Petrina, Franz</strong></a><br /><br />
+                    Magneto-electrische Maschine von der vortheilhaftesten Einrichtung für den ärztlichen und physikalischen Gebrauch, nebst einer theoretischen Begründung, leichtfasslichen Erläuterung und Gebrauchsanweisung. Linz, Eurich, 1844. In-8; VIII, 56 pp, 1 Bl.; mit 10 Abb. in Holzstich (die letzte auf dem hinteren Umschlag); OBrosch., tlw. unaufgeschnitten (Rücken verstärkt, etwas fleckig und knittrig); vereinzelt gering stockfleckig, das letzte Blatt mit Feuchtrand. - Umschlagtitel leicht abweichend. <br /><br />
+                    <span style="display: none">ÖBL 8, 5 f. - Der Autor (1799-1855) war Physiker in Prag und Linz, verbesserte die Telegraphie und erfand neben dem hier vorgestellten Stromerzeuger auch einen Stromunterbrecher sowie die elektrische Harmonika.</span>
+                    <a href='/en/articles/petrina-franz-1705-66.html'>Continue reading</a><br /><br />
+                    Order no. 1705-66
+                    <br />
+                    
+                        € 180,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-61>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/petzval-joseph-maximilian-2109-61.html'>
+                            <img class='thumb' src='/img/thumb/petzval-joseph-maximilian-2109-61.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/petzval-joseph-maximilian-2109-61.html'><strong>Petzval, Joseph [Maximilian]</strong></a><br /><br />
+                    Integration der linearen Differentialgleichungen mit constanten und veränderlichen Coefficienten. 2 Bde. (6 Lieferungen) in 5 Heften (so komplett). Wien, Braumüller, 1853 (-1855) und Gerold, 1859. Kl-4; XVI, 1 Bl., 416 pp, 1 Bl., 1 lithogr. Taf.; 686 pp, XXX, 4 Interimstitel; Bd. 1 (Lfg. 1+2) bedruckte Orig.-Broschur, Bd. 2 (Lfg. 3-6) in den orig. Interimsumschlägen; unbeschnitten und unaufgeschnitten, die Umschläge teilweise etwas angeschmutzt bzw. fleckig, innen nur vereinzelt gering stockfleckig. <br /><br />
+                    <span style="display: none">Poggendorff 3, 1031; ÖBL 8, 18. - Eines der Hauptwerke des bedeutenden Mathematikers und Physikers (1807-1891), auf Kosten der kais. Akademie der Wissenschaften gedruckt. Diese in jahrzehntelanger Arbeit erstellte erste systematische Untersuchung der Laplace-Transformation, eines für verschiedene Einzelwissenschaften wichtigen Lösungsverfahrens,  fand allerdings zunächst kaum Beachtung - nicht zuletzt deshalb, weil gegen Petzval zu Unrecht Plagiatsvorwürfe erhoben wurden. Dem Autor selbst war bewusst, "dass ausgedehntere, einen einzigen Gegenstand im Zusammenhang verfolgende mathematische Werke ... sich nur schwer bei den Zeitgenossen Eingang schaffen und ... oft mehrere Decennien auf die ihnen gebührende Beachtung warten müssen ..." (Vorrede zu Bd. 2). - Einzelbände bzw. -lieferungen auf Anfrage.</span>
+                    <a href='/en/articles/petzval-joseph-maximilian-2109-61.html'>Continue reading</a><br /><br />
+                    Order no. 2109-61
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sartori-giuseppe-2209-80.html'>
+                            <img class='thumb' src='/img/thumb/sartori-giuseppe-2209-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sartori-giuseppe-2209-80.html'><strong>Sartori, Giuseppe</strong></a><br /><br />
+                    Projekt zur Verwerthung der Wasserkraft der Kerka-Fälle in Dalmatien. Triest, Giulio di A. Levi, 1897. Quer-folio; doppelblattgroßes Frontispiz, 63, (1) pp mit zahlreichen teils ganzseitigen Abb., 6 teils doppelblattgr. Tafeln lose beiliegend; blind- und goldgepr. (Orig.-?)Leinen mit Deckeltitel "Kerka" (berieben, bestoßen und etwas fleckig, Bindung gelockert, hintere Rückenkante angeplatzt); Titel zweifach gestempelt, diverse Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Übersetzung aus dem Italienischen. Ausführliche Projektbeschreibung für das zweite Jaruga-Kraftwerk beim Wasserfall Skradinski Buk am Fluss Krka, wo bereits 1895 ein Wechselstromkraftwerk für die Straßenbeleuchtung von ibenice in Betrieb ging. Das hier vom Elektrotechniker Giuseppe Sartori (1868-1937) vorgelegte neue Projekt wurde von 1898 bis 1905 verwirklicht und bildet heute ein bedeutendes Industriedenkmal im kroatischen Nationalpark Krka. Die von Sartori geplanten Kraftwerke gehörten zu den bemerkenswertesten Anlagen ihrer Zeit und zeichneten sich durch hohe Wirtschaftlichkeit aus. - Selten.</span>
+                    <a href='/en/articles/sartori-giuseppe-2209-80.html'>Continue reading</a><br /><br />
+                    Order no. 2209-80
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schreber-daniel-gottfried-hrsg-2209-82.html'>
+                            <img class='thumb' src='/img/thumb/schreber-daniel-gottfried-hrsg-2209-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schreber-daniel-gottfried-hrsg-2209-82.html'><strong>Schreber, Daniel Gottfried (Hrsg.)</strong></a><br /><br />
+                    Beschreibung der Eisenberg- und Hüttenwerke zu Eisenärz in Steyermark. [Mit:] Nikolaus Poda, Mineralogischer Versuch über die Eisensteine des Arzberges in Obersteyermark, nebst beygefügter Beschreibung der Eisenerzstufen des Graezischen Naturalien-Kabinets. Aus: Schauplatz der Künste und Handwerke, oder vollständige Beschreibung derselben, verfertiget oder gebilliget von den Herren der Academie der Wissenschaften zu Paris Bd. 11. Leipzig u. Königsberg, J. J. Kanter, 1772. Kl-4; 4 Bll. (Reihentitel und Vorrede zum Gesamtband), 138 pp, 1 Falttabelle, 1 gefaltete Kupfertaf., 2 Holzschnitt-Vignetten; moderner Pappband mit Rückenschildchen; leicht gebräunt (Reihentitel stärker), gelegentlich etwas stockfleckig. <br /><br />
+                    <span style="display: none">Schlossar 149. - Erste Ausgabe. Ausführliche Darstellung des Eisenerzer Bergbaubetriebs nach dem Bericht eines zeitgenössischen Reisenden, mit erstmaliger Beschreibung und Abbildung der zur Verhüttung verwendeten Floßöfen. Der mineralogische Teil stammt von dem Grazer Naturforscher Nicolaus Poda von Neuhaus (1723-1798), der vor allem als Entomologe bekannt wurde. Der "Schauplatz der Künste und Handwerke", den Schreber von Bd. 5 (1766) bis Bd. 13 (1775) als Herausgeber betreute, war eine vor allem auf Übersetzungen und Bearbeitungen französischer Publikationen aufgebaute Reihe zur Verbreitung gemeinnützig-praktischen Wissens.</span>
+                    <a href='/en/articles/schreber-daniel-gottfried-hrsg-2209-82.html'>Continue reading</a><br /><br />
+                    Order no. 2209-82
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/weltausstellung-chicago-1893-2009-78.html'>
+                            <img class='thumb' src='/img/thumb/weltausstellung-chicago-1893-2009-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/weltausstellung-chicago-1893-2009-78.html'><strong>Weltausstellung Chicago 1893</strong></a><br /><br />
+                    Officieller Bericht der k.k. österr. Central-Comission für die Weltausstellung in Chicago im Jahre 1893. 4 Bände (so komplett). Wien, Verlag der k. k. Central-Comission, 1894-95. Kl-4; pro Band etwa 500 pp; insgesamt 98 Textabb. und 110 Falttafeln; prachtvolle zeitgenössische Lederbände mit reicher Goldprägung, Wappensupralibros (österreichisches Kaiserwappen), Innenkantenvergoldung, Kopfgoldschnitt, Seidenmoiré-Vorsätzen und Lesebändchen; Rücken und Kanten teilweise etwas berieben, jeder Band mit Exlibris und kleinem Bibliotheksetikett; insgesamt sehr schönes, vermutlich für das Kaiserhaus gebundenes Set. <br /><br />
+                    <span style="display: none">Gedruckt In insgesamt neun Einzelheften mit jeweils separater Paginierung. Umfangreiche Dokumentation des damaligen Standes der Technik und der industriellen Produktion mit teils reich illustrierten Beiträgen über Textilindustrie, die amerikanische Brauindustrie, Bergbau und Hüttenwesen, Eisenbahnwesen, Elektrotechnik und vieles mehr. - Wohl in sehr kleiner Auflage hergestellt und dementsprechend selten.</span>
+                    <a href='/en/articles/weltausstellung-chicago-1893-2009-78.html'>Continue reading</a><br /><br />
+                    Order no. 2009-78
+                    <br />
+                    
+                        € 2400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

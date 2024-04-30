@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/history-archeology-numismatics.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Geschichte, Archäologie, Numismatik
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1710-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/atlas-historischer-1710-5.html'>
+                            <img class='thumb' src='/img/thumb/atlas-historischer-1710-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/atlas-historischer-1710-5.html'><strong>Atlas, historischer</strong></a><br /><br />
+                    Historisch- Genealogisch- Geographischer Atlas von Le Sage, Grafen Las Cases in fünf und dreisig(!) Uebersichten / Aus dem Französischen übersetzt und zum Theil verbessert zum Theil ganz umgearbeitet durch Alexander von Dusch ... und Joseph Eiselein. Karlsruhe, Johann Velten, (1825-1828). Gr-folio; 3 Bll. (inkl. lith. Titel u. Widmung), 36 meist doppelblattgroße Taf. mit teils altkolor. Übersichtstabellen und 25 altkolor. lithograph. Karten, 2 Bll. Inhaltsverzeichnis; Verlagsprospekt beigebunden; restaur. Hldr. d. Zt. mit aufgezog. lithograph. Deckeltitel (etwas berieben und bestoßen); Widmungsblatt möglicherweise beschnitten, stellenweise etwas angeschmutzt oder stockfleckig, einzelne dezente Farbstift-Anstreichungen; insgesamt gutes Exemplar, auf starkem Papier gedruckt. <br /><br />
+                    <span style="display: none">Versuch einer tabellarisch-kartographischen Darstellung der Weltgeschichte von der Erschaffung der Welt (nach biblischer Überlieferung) bis zur Gegenwart nach dem 1803-1804 erschienenen Grundwerk von Emmanuel-Augustin-Dieudonné-Joseph de Las Cases (Pseudonym Le Sage), franz. Marineoffizier und Staatsmann unter Napoleon. Enthält u. a. eine Weltkarte in zwei Hemisphären.</span>
+                    <a href='/artikel/atlas-historischer-1710-5.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-5
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bartsch-zacharias-2105-10.html'>
+                            <img class='thumb' src='/img/thumb/bartsch-zacharias-2105-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bartsch-zacharias-2105-10.html'><strong>Bartsch, Zacharias</strong></a><br /><br />
+                    Steiermärkisches Wappen-Buch 1567. Facsimile-Ausgabe mit historischen und heraldischen Anmerkungen von Dr. Josef Zahn und Alfred Ritter Anthony von Siegenfeld. Graz und Leipzig, Ulrich Moser, 1893. In-8; 9 Bll., 168 num. Tafeln, 1 Bl., 180 pp; dekorativer Lederband der Zeit mit goldgeprägtem Rückentitel, 2 blindgeprägten Deckelvignetten, Buntpapiervorsätzen, Rotschnitt und Lesebändchen (minimal berieben, Kellergeruch); sehr schönes, nahezu fleckenfreies Exemplar. <br /><br />
+                    <span style="display: none">In kleiner Auflage sorgfältig produziertes Faksimile des äußerst seltenen Originals. Besonders wertvoll durch den ausführlichen heraldisch-genealogischen Kommentar mit ausführlichen Informationen zur Geschichte des steirischen Adels.</span>
+                    <a href='/artikel/bartsch-zacharias-2105-10.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-10
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/british-museum-2305-14.html'>
+                            <img class='thumb' src='/img/thumb/british-museum-2305-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/british-museum-2305-14.html'><strong>British Museum</strong></a><br /><br />
+                    Catalogue of Greek coins in the British Museum (London 1873/1927). 15 Bände (von 29). Reprint Bologna, Arnaldo Forni, 1963/1981. Gr-8; je Bd. ca. 150-350 pp; zahlreiche Fototafeln, einige Karten; Orig.-Leinenbände mit goldgepr. Rückentitel. Vorhanden: Bd. 6 Thessaly to Aetolia (P. Gardner 1883), Bd. 7 The Ptolemies, Kings of Egypt (R. S. Poole 1883), Bd. 9 Crete and the Aegean Islands (W. Wroth 1886), Bd. 10 Peloponnesus (P. Gardner 1887), Bd. 13 Pontus, Paphlagonia, Bithynia, and the Kingdom of Bosporus (W. Wroth 1889), Bd. 14 Ionia (B. V. Head 1892), Bd. 16 Mysia (W. Wroth 1894), Bd. 17 Troas, Aeolis, and Lesbos (W. Wroth 1894), Bd. 18 Caria, Cos, Rhodes, &c. (B. V. Head 1897), Bd. 20 Galatia, Cappadocia, and Syria (W. Wroth 1899), Bd. 21 Lycaonia, Isauria and Cilicia (G. F. Hill 1900), Bd. 25 Phrygia (B. V. Head 1906), Bd. 26 Phoenicia (G. F. Hill 1910), Bd. 27 Palestine (G. F. Hill 1914) und Bd. 29 Cyrenaica (E. S. G. Robinson 1927). - Gut erhaltene Serie mit nur geringfügigen Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 1888 (mit etwas abweichender Bandreihung). - Reichhaltige Auswahl aus dem kommentierten wissenschaftlichen Katalog des Londoner Münzkabinetts. Er wurde von Reginald Stuart Poole ins Leben gerufen und bis 1893 von ihm betreut.</span>
+                    <a href='/artikel/british-museum-2305-14.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-14
+                    <br />
+                    
+                        € 950,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/deutscher-orden-1902-14.html'>
+                            <img class='thumb' src='/img/thumb/deutscher-orden-1902-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/deutscher-orden-1902-14.html'><strong>Deutscher Orden</strong></a><br /><br />
+                    Rangsliste und Personalstatus des Deutschen Ritterordens für das Jahr 1910 [bis] 1914 samt dem Geschäftsbericht für das Jahr 1909 [bis] 1913 sowie dem Verzeichnisse der dem freiwilligen Sanitätsdienste des Deutschen Ritterordens beigetretenen Förderer (Marianer). 5 Hefte. Wien, Deutscher Ritterorden, 1910-1913. Gr-8; je Jg. ca. 180 pp; bedruckte OBrosch.; teilweise mit Lager- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Verzeichnet auch die historischen Führungspersönlichkeiten des Ordens.</span>
+                    <a href='/artikel/deutscher-orden-1902-14.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-14
+                    <br />
+                    
+                        € 330,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ferrari-guido-sj-1802-28.html'>
+                            <img class='thumb' src='/img/thumb/ferrari-guido-sj-1802-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ferrari-guido-sj-1802-28.html'><strong>Ferrari, Guido (SJ)</strong></a><br /><br />
+                    De rebus gestis Eugenii principis a Sabaudia bello Italico libri IV. Editio ... tertia, apud Germanos prima. Augsburg und Freiburg, Wagner, 1754. Kl-8; 6 Bll., 192 pp, (2) Bll., mehrere Vignetten; spätere Buntpapier-Broschur mit Rotschnitt; flieg. Vorsatz mit zwei alten Besitzvermerken sowie Rasur, Titel geknittert und mit kleinem Namensstempel, geringfügig gebräunt bzw. stockfleckig, stellenweise wurmspurig, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Vgl. Biogr. Univ. 14/411 (Ausg. Mailand 1752); Böhm (Eugen-Bibliogr.) 1260/II. - Beschreibt das Wirken Prinz Eugens am italienischen Kriegsschauplatz im Spanischen Erbfolgekrieg in den Jahren 1701-1706.</span>
+                    <a href='/artikel/ferrari-guido-sj-1802-28.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1802-28
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1906-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fiala-eduard-hauptbearbeiter-1906-11.html'>
+                            <img class='thumb' src='/img/thumb/fiala-eduard-hauptbearbeiter-1906-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fiala-eduard-hauptbearbeiter-1906-11.html'><strong>Fiala, Eduard (Hauptbearbeiter)</strong></a><br /><br />
+                    Katalog der Münzen- und Medaillen-Stempel-Sammlung des k. k. Hauptmünzamtes in Wien. 4 Bände und Tafelteil. Wien, Hof- und Staatsdruckerei, 1901-1906. Kl-4; insgesamt VIII, IV, IV, V, 1428 pp, 43 Tafeln mit Abbildungen in Lichtdruck oder Heliogravüre auf aufgewalztem China; Halbleinenbände der Zeit mit aufgezogenen Originalumschlägen, die Tafeln lose in Halbleinenkassette mit aufgezogenem Originalumschlag; Einbände berieben und etwas fleckig, Textteil mit einzelnen kleinen Einrissen, Tafeln teilweise leicht stockfleckig und vereinzelt hart beschnitten. - "Berichtigungen und Nachträge zu den drei ersten Bänden des Kataloges" (Wien, Hof- und Staatsdruckerei, 1908, 15 pp) in Fotokopie beiliegend. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 8187; Slg. Mayer 3161 (mit abweichenden Angaben zum Nachtrag). - Grundlegendes Werk zur Geschichte und Produktion des österreichischen Hauptmünzamtes (heute Münze Österreich) vom 15. bis 19. Jahrhundert.</span>
+                    <a href='/artikel/fiala-eduard-hauptbearbeiter-1906-11.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1906-11
+                    <br />
+                    
+                        € 950,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/florus-2302-18.html'>
+                            <img class='thumb' src='/img/thumb/florus-2302-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/florus-2302-18.html'><strong>Florus</strong></a><br /><br />
+                    L. Annaei Flori epitome rerum Romanorum. Accedit L. Ampelii liber memorabilis. Curante Ioanne Petro Millero. Berlin, Haude und Spener, 1750. Kl-8; Titel mit gestochener Vignette, 10 Bll., 80 pp, 57 Bll. (Index), 24 Bll. (Ampelius); dekorativer blind- und goldgeprägter Lederband der Zeit mit Rückenvergoldung, zwei Rückenschildchen, goldgeprägtem Kardinalswappen auf Vorderdeckel, Buntpapiervorsätzen mit floralen Mustern und dreifachem Goldschnitt (geringfügig berieben, kleine Siegelspuren auf Vorsätzen); ausgezeichnet erhaltenes, frisches und fleckenfreies Exemplar. <br /><br />
+                    <span style="display: none">Engelmann 363. - Hauptsächlich auf Livius fußender Abriss der römischen Geschichte, zusammengestellt um 120 n. Chr. von Lucius Annaeus Florus und trotz mancher geographischer und chronologischer Irrtümer im Mittelalter viel benutzt. Die vorliegende, mit einem ausführlichen Index versehene Ausgabe wurde von dem deutschen Theologen und Pädagogen Johann Peter Miller (1725-1789) besorgt und enthält als Anhang den "Liber memorialis" des Lucius Ampelius, ein in der römischen Kaiserzeit entstandenes Lehrbuch der antiken Mythologie, Geographie und Geschichte. Welcher Kardinal das hübsche Buch in seiner Bibliothek stehen hatte, konnten wir bisher leider nicht feststellen.</span>
+                    <a href='/artikel/florus-2302-18.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-18
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fromageot-abbe-2005-18.html'>
+                            <img class='thumb' src='/img/thumb/fromageot-abbe-2005-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fromageot-abbe-2005-18.html'><strong>Fromageot, (Abbé)</strong></a><br /><br />
+                    Annales du regne de Marie-Thérese, Impératrice douairiere, Reine de Hongrie & de Bohême, Archiduchesse d'Autriche, &c. &c. &c. dédiées a la Reine. Paris, Prault fils, 1775. In-8; 3 Bll., 337, (3) pp mit 2 Textkupfern und einigen Holzschnitt-Vignetten, 5 Kupfertafeln (inkl. Frontispiz); schlichtes Halbleder der Zeit (berieben und bestoßen, oberes Kapital beschädigt, Innengelenke geplatzt); Titel im Falz restauriert, eine Tafel mit Randmängeln, insgesamt innen frisch und weitgehend fleckenfrei. <br /><br />
+                    <span style="display: none">Cohen 412 f.; Boissais-Deleplanque 81. - Erste Ausgabe dieser zeitgenössischen Biographie Maria Theresias mit qualitätvollen Illustrationen nach Joseph Ducreux und Jean-Michel Moreau, gestochen von Cathelin, Duclos, Gaucher, de Launay, Prévost und Simonet. "Un des ouvrages les plus réussis de Moreau le jeune" (Cohen). Neben Porträts von Maria Theresia, Joseph II. und Marie Antoinette werden Szenen aus dem Leben der Kaiserin gezeigt. Spätere Ausgaben mit deutlich schlechterer Abbildungsqualität.</span>
+                    <a href='/artikel/fromageot-abbe-2005-18.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2005-18
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/galizien-krainsky-maurycy-hrsg-2105-32.html'>
+                            <img class='thumb' src='/img/thumb/galizien-krainsky-maurycy-hrsg-2105-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/galizien-krainsky-maurycy-hrsg-2105-32.html'><strong>Galizien. - [Krainsky, Maurycy (Hrsg.)]</strong></a><br /><br />
+                    Memoiren und Actenstücke aus Galizien, im Jahre 1846. Gesammelt von einem Mähren. Leipzig, Wilhelm Engelmann, 1847. Kl-8; VI, 7-328 pp, 4 teils gefaltete Tabellen; einfaches Halbleder der Zeit mit Rotschnitt und Lesebändchen (berieben und bestoßen); innen weitgehend sauber und frisch, leichte Knickspuren. <br /><br />
+                    <span style="display: none">Holzmann-Bohatta 3, 4235; ÖBL 4, 194. - Die seltene Originalausgabe. Anonym herausgegebener Sammelband, in dessen Mittelpunkt der Aufstand von 1846 und seine Folgen stehen; die Republik Krakau wurde damals als letzter Rest Polens dem österreichischen Kaiserreich einverleibt. Krainsky Maurycy (1804-1885) war Politiker und Wirtschaftsfachmann. 1831 kämpfte er beim polnischen Novemberaufstand als Offizier in der Weichsellegion, später war er als guter Kenner der bäuerlichen Verhältnisse vor allem mit der Regelung der Untertänigkeitsaufhebung in Galizien befasst.</span>
+                    <a href='/artikel/galizien-krainsky-maurycy-hrsg-2105-32.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-32
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2007-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hahn-wolfgang-2007-14.html'>
+                            <img class='thumb' src='/img/thumb/hahn-wolfgang-2007-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hahn-wolfgang-2007-14.html'><strong>Hahn, Wolfgang</strong></a><br /><br />
+                    Moneta Imperii Byzantini. Rekonstruktion des Prägeaufbaues auf synoptisch-tabellarischer Grundlage. Teil III: Von Heraclius bis Leo III. / Alleinregierung (610 - 720). Mit Nachträgen zum 1. und 2. Band. Wien, Verlag d. Österr. Akad. d. Wiss., 1981. Kl-4; 315 pp, 1 Bl., 58 Tafeln, 16 zweifarbige Falttabellen. Goldgepr. Orig.-Leinen mit Schutzumschlag; neuwertig. <br /><br />
+                    <span style="display: none">Denkschriften der phil.-hist. Klasse Bd. 148 / Veröffentlichungen der Numismatischen Kommission Bd. X. - Numismatisches Standardwerk, vergriffen und gesucht.</span>
+                    <a href='/artikel/hahn-wolfgang-2007-14.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2007-14
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hammer-purgstall-joseph-von-2209-26.html'>
+                            <img class='thumb' src='/img/thumb/hammer-purgstall-joseph-von-2209-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hammer-purgstall-joseph-von-2209-26.html'><strong>Hammer [-Purgstall], Joseph von</strong></a><br /><br />
+                    Über die Länderverwaltung unter dem Chalifate. Eine von der Königl. Akademie der Wissenschaften zu Berlin am 3. Juli 1832 gekrönte Preisschrift. Berlin, F. Dümmler, 1835. Gr-8; XIV, 1 Bl., 262 pp, 1 Bl.; Interimsbroschur, unbeschnitten und unaufgeschnitten (Umschlag angeschmutzt und mit Läsuren); teilweise etwas wellig, knittrig oder leicht stockfleckig, die ersten Seiten mit kleinen Druckstellen. <br /><br />
+                    <span style="display: none">Wurzbach 7, 271; Goedeke VII, 766, 89; ÖBL 2, 167; NDB VII, 593. - Erste Ausgabe. Behandelt  Staats- und Finanzeinrichtungen sowie die Provinzverwaltung der islamischen Welt unter den Umayyaden und Abbasiden und gilt als eine der bedeutendsten wissenschaftlichen Leistungen des österreichischen Orientalisten, Historikers und Dichters Joseph von Hammer-Purgstall (1774-1865). Mit arabischen, persischen und türkischen Originalquellen im Anhang.</span>
+                    <a href='/artikel/hammer-purgstall-joseph-von-2209-26.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-26
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-25>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/haus-philipp-ludwig-2205-25.html'>
+                            <img class='thumb' src='/img/thumb/haus-philipp-ludwig-2205-25.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/haus-philipp-ludwig-2205-25.html'><strong>Haus, Philipp Ludwig</strong></a><br /><br />
+                    Altertümerskunde von Germanien oder Tazitus über Germaniens Lage, Sitten und Völker / in ein System gebracht und mit Zusätzen von den übrigen klassischen Schriftstellern erläutert. 2 Tle. in 1 Bd. Mainz, Universitätsbuchhandlung, 1791-1792. In-8; XVI, 196 pp; XII, 226 pp, 1 Bl.; Pappband der Zeit mit goldgepr. Rückenschildchen (berieben und bestoßen); zweiseitig unbeschnitten mit stark unregelmäßigen Rändern, einige Lagen unaufgeschnitten; Papier etwas mürbe, teilweise feuchtrandig oder leicht gebräunt; Rotstift-Vermerk auf erstem Titel verso. <br /><br />
+                    <span style="display: none">Enthält: I. Germanien überhaupt. - II. Germanische Staaten und Völker insbesondere. Seltenes kompilatorisches Werk eines deutschen Gymnasialprofessors mit weiter ausgreifenden Anmerkungen. Die zeitgenössische Kritik bemängelte die ungenügende chronologische Durchdringung des Stoffes.</span>
+                    <a href='/artikel/haus-philipp-ludwig-2205-25.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-25
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-40>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/head-barclay-v-1606-40.html'>
+                            <img class='thumb' src='/img/thumb/head-barclay-v-1606-40.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/head-barclay-v-1606-40.html'><strong>Head, Barclay V.</strong></a><br /><br />
+                    Historia Numorum. A Manual of Greek Numismatics. New and enlarged edition. New York, Durst, 1983. Kl-4; LXXXVIII, 966, (1) pp mit 399 Textabb., 5 Schrifttafeln, 3 Bll. Verlagsanz; goldgepr. KunstLdr.; neuwertig. <br /><br />
+                    <span style="display: none">Reprint der Ausgabe Oxford 1911. Das klassische Übersichtswerk zur griechischen Numismatik.</span>
+                    <a href='/artikel/head-barclay-v-1606-40.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1606-40
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hollschek-karl-sammlung-2102-34.html'>
+                            <img class='thumb' src='/img/thumb/hollschek-karl-sammlung-2102-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hollschek-karl-sammlung-2102-34.html'><strong>Hollschek, Karl (Sammlung)</strong></a><br /><br />
+                    Austria in Nummis. 1.-3. Teil in 3 Bänden. Auktionskataloge Kunstabteilung Dorotheum Wien, 1956/1957. Kl-4; IV, (I), 65 pp, 8 Taf.; II, 52 pp, 1 Bl., 4 Taf.; II, 32 pp, 4 Taf.; orig.-kartoniert. - Mit allen Ergebnislisten (beiliegend). Minimale Lagerspuren, sonst tadellos. <br /><br />
+                    <span style="display: none">Die von Robert Göbl bearbeiteten und sorgfältig illustrierten Kataloge dokumentieren die ersten drei Teile der Sammlung Hollschek, die als eine der weltgrößten privaten Universalsammlungen von Münzen und Medaillen gilt. Das hier vorgelegte Material umfasst österreichische Prägungen von Maximilian I. bis zum Ende der Habsburgermonarchie einschließlich aller Nebengebiete (Erzbistum Salzburg usw.).</span>
+                    <a href='/artikel/hollschek-karl-sammlung-2102-34.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-34
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/holzmair-eduard-1708-37.html'>
+                            <img class='thumb' src='/img/thumb/holzmair-eduard-1708-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/holzmair-eduard-1708-37.html'><strong>Holzmair, Eduard</strong></a><br /><br />
+                    Katalog der Sammlung Dr. Josef Brettauer. Medicina in Nummis. Hrsg. vom Kuratorium der Dr. Josef Brettauer-Stiftung. Wien, Selbstverlag, 1937. Kl-4; Porträt-Frontispiz, XVI, 384 pp, 25 Tafeln; OBrosch. (vord. Umschlag leicht, Rücken und hinterer Umschlag stärker beschädigt); Frontispiz geringfügig knittrig, letzte Lage gelockert, letzte Tafel mit kleinen Randmängeln. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 16354; Garrison-Morton 6633.1. - Originalausgabe eines bis heute mustergültigen Katalogs von Münzen und Medaillen zu medizinischen Themen (Ärzte und Naturforscher, Spitäler und Asyle, Rettungswesen und Hygiene, Geschlechtsleben und Fortpflanzung, Krankheiten und Seuchen, Tod und Begräbnis etc.). Sorgfältig beschrieben und zum Teil abgebildet sind 5557 numismatische Objekte.</span>
+                    <a href='/artikel/holzmair-eduard-1708-37.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-37
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiser-hans-2302-37.html'>
+                            <img class='thumb' src='/img/thumb/kaiser-hans-2302-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiser-hans-2302-37.html'><strong>Kaiser, Hans</strong></a><br /><br />
+                    Medaillen / Plaketten / Abzeichen der deutschen Luftfahrt. Gütersloh, B. Strothotte, 1998. Kl-4; VII, 654 pp mit zahlr. Abb.; illustr. Orig-Pappband; neuwertig. <br /><br />
+                    <span style="display: none">Vergriffen und im Handel kaum auffindbar. Umfangreicher Standardkatalog mit über 2000 sorgfältig beschriebenen und abgebildeten Nummern, gegliedert in die Abschnitte Ballonfahrt - Luftschifffahrt - Flugwesen - Raketentechnik und Raumfahrt.</span>
+                    <a href='/artikel/kaiser-hans-2302-37.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-37
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lindgren-henry-clay-1810-60.html'>
+                            <img class='thumb' src='/img/thumb/lindgren-henry-clay-1810-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lindgren-henry-clay-1810-60.html'><strong>Lindgren, Henry Clay</strong></a><br /><br />
+                    Ancient Greek Bronze Coins (Lindgren I-III). 3 Bände. San Mateo / Quarryville, Chrysopylon Publishers, 1985-1993. Kl-4; XV, 212 pp, 135 Taf.; XX, 89 pp, 89 Taf.; XVIII, 102 pp, 102 Taf., III; goldgepr. Orig.-Leinen (Bd. II mit Orig.-Umschlag); tadellos. <br /><br />
+                    <span style="display: none">Wichtiger Sammlungskatalog griechischer Bronzemünzen (einschließlich Kaiserzeit), umfasst: Ancient Bronze Coins of Asia Minor and the Levant (mit Frank L. Kovacs) - European Mints - Lindgren III (Neuzugänge). Der erste Band ist selten und gesucht.</span>
+                    <a href='/artikel/lindgren-henry-clay-1810-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-60
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/luschin-von-ebengreuth-arnold-1902-48.html'>
+                            <img class='thumb' src='/img/thumb/luschin-von-ebengreuth-arnold-1902-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/luschin-von-ebengreuth-arnold-1902-48.html'><strong>Luschin von Ebengreuth, Arnold</strong></a><br /><br />
+                    Wiens Münzwesen, Handel und Verkehr im späten Mittelalter. Separatabdruck aus Band II der "Geschichte der Stadt Wien", hrsg. vom Alterthumsvereine zu Wien. Wien, Druck von Adolf Holzhausen, 1902. In-folio; IV, 126 pp mit 16 Abb., 9 Taf. (davon 1 farbig und 1 gefaltet), 1 farb. Faltkarte; HLdr. der Zeit mit goldgepr. Rückentitel (berieben); stellenweiset leicht fingerfleckig. - Mit Erwerbungsvermerk (auf Titel verso) und vereinzelten Anmerkungen des österr. Historikers Karl Uhlirz (1854-1914). <br /><br />
+                    <span style="display: none">Clain-Stefanelli 6988. - Umfassende numismatische und wirtschaftsgeschichtliche Studie; als Separatausgabe sehr selten.</span>
+                    <a href='/artikel/luschin-von-ebengreuth-arnold-1902-48.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-48
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-57>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/maximilian-i-kaiser-von-mexiko-1832-1867-2001-57.html'>
+                            <img class='thumb' src='/img/thumb/maximilian-i-kaiser-von-mexiko-1832-1867-2001-57.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/maximilian-i-kaiser-von-mexiko-1832-1867-2001-57.html'><strong>Maximilian I., Kaiser von Mexiko (1832-1867)</strong></a><br /><br />
+                    "Maximilian von Habsburg, Kaiser von Mexiko." Flugblatt bei F. H. Schimpff, Triest um 1868, kl-4, (4) pp. - Stockfleckig, stärkere Bug- und Randschäden. <br /><br />
+                    <span style="display: none">Anonyme Ballade auf Thronbesteigung, Regierung und Tod Maximilians und die Überführung seines Leichnams nach Wien. Sehr selten. - Beiliegend Foto der Staatskarosse Maximilians im Museum in Mexico City, Aufnahme C. B. Waite mit Copyrightvermerk 1904, 13 x 20 cm.</span>
+                    <a href='/artikel/maximilian-i-kaiser-von-mexiko-1832-1867-2001-57.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-57
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mayer-fr-ant-2309-52.html'>
+                            <img class='thumb' src='/img/thumb/mayer-fr-ant-2309-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mayer-fr-ant-2309-52.html'><strong>Mayer, Fr. Ant.</strong></a><br /><br />
+                    Einleitung in die alte römische Numismatik. Zürich, Meyer & Zeller, 1842. Kl-8; 144 pp, 2 Bll., 3 lith. Taf.; späteres Halbleinen mit aufgezogener Orig.-Broschur (etwas berieben und fleckig); alte Besitzvermerke auf Umschlag und Titel, überwiegend leicht stockfleckig, die Tafeln sauber und frisch. <br /><br />
+                    <span style="display: none">Leitzmann 86. - Seltene, durchaus noch lesenswerte Einführung in grundlegende Aspekte des römischen Münzwesens. Der Autor, Pfarrer in Eichstädt und Mitglied einiger gelehrter Gesellschaften, verfasste mehrere Abhandlungen über römische und prähistorische Altertümer.</span>
+                    <a href='/artikel/mayer-fr-ant-2309-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-52
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/menzel-heinz-1902-52.html'>
+                            <img class='thumb' src='/img/thumb/menzel-heinz-1902-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/menzel-heinz-1902-52.html'><strong>Menzel, Heinz</strong></a><br /><br />
+                    Die römischen Bronzen aus Deutschland. (Teil) III Bonn. Text- und Tafelband. 2 Bde. Mainz, Zabern, 1986. Kl-4; (VIII), 215 pp mit 4 Abb.; IV, 180 Taf. mit 837 Abb.; goldgepr. Orig.-Leinen; neuwertig. <br /><br />
+                    <span style="display: none">Vorlage des reichen Fundmaterials im Rheinischen Landesmuseum Bonn, hrsg. gemeinsam mit dem Römisch-Germanischen Zentralmuseum zu Mainz.</span>
+                    <a href='/artikel/menzel-heinz-1902-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-52
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-53>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mesnil-du-buisson-comte-robert-du-2105-53.html'>
+                            <img class='thumb' src='/img/thumb/mesnil-du-buisson-comte-robert-du-2105-53.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mesnil-du-buisson-comte-robert-du-2105-53.html'><strong>Mesnil du Buisson, Comte [Robert du]</strong></a><br /><br />
+                    Les tessères et les monnaies de Palmyre: Un art, une culture et une philosophie grecs dans les moules d'une cité et d'une religion sémitiques. 2 Bände. Paris, Bibliothèque Nationale bzw. E. de Boccard, 1944/1962. Kl-4; Textband: 834, (1) pp mit Frontispiz und 321 Textabb., Orig.-Leinen mit illlustr. Schutzumschlag; Tafelteil: 16 pp (unaufgeschnitten), 2 Bll., 125 Lichtdrucktafeln, lose in Orig.-Halbleinenmappe mit Bindebändern; unbenutztes Exemplar mit nur minimalen Lagerspuren. <br /><br />
+                    <span style="display: none">Der französische Offizier, Historiker und Archäologe Mesnil du Buisson (1895-1986) leitete mehrere Ausgrabungen im Nahen Osten und entdeckte unter anderem die Synagoge von Dura Europos. Die vorliegende Monographie, deren Tafelteil vor dem Textband erschien, behandelt den Bestand der Pariser Nationalbibliothek an Tesseren und Münzen von Palmyra (Syrien), der bedeutenden antiken Metropole mit ihrer einzigartigen Mischkultur.</span>
+                    <a href='/artikel/mesnil-du-buisson-comte-robert-du-2105-53.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-53
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/nesbitt-john-oikonomides-nicolas-hrsg-2302-58.html'>
+                            <img class='thumb' src='/img/thumb/nesbitt-john-oikonomides-nicolas-hrsg-2302-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/nesbitt-john-oikonomides-nicolas-hrsg-2302-58.html'><strong>Nesbitt, John - Oikonomides, Nicolas (Hrsg.)</strong></a><br /><br />
+                    Catalogue of Byzantine Seals at Dumbarton Oaks and in the Fogg Museum of Art. Volume 1-3. 3 Bände. Washington D.C., Dumbarton Oaks Research Library and Collection, 1991-1996. Kl-4; jeder Band ca. 250 pp mit zahlreichen Abb.; goldgepr. Orig.-Leinen. - Ungebrauchte Exemplare, originalverschweißt. <br /><br />
+                    <span style="display: none">Die beim Verlag vergriffenen ersten drei Bände des inzwischen auf sieben Teile angewachsenen Standardwerks zur byzantinischen Siegelkunde. Vol. 1: Italy, North of the Balkans, North of the Black Sea - Vol. 2: South of the Balkans, the Islands, South of Asia Minor - Vol.3: West, Northwest, and Central Asia Minor and the Orient.</span>
+                    <a href='/artikel/nesbitt-john-oikonomides-nicolas-hrsg-2302-58.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-58
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/orden-2305-63.html'>
+                            <img class='thumb' src='/img/thumb/orden-2305-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/orden-2305-63.html'><strong>(Orden)</strong></a><br /><br />
+                    Statuten für den Oesterreichisch-Kaiserlichen Orden der eisernen Krone / Statuti per l'ordine imperiale austriaco della corona di ferro. [Wien, 1884]. In-folio; 16 pp, 4 Bll. (1.-4. Nachtrag), 10 Bll. (italienischer Text), 7 Kupfertafeln mit Seidenhemdchen (von Philipp von Stubenrauch u. a.); Orig.-Leinen mit goldgeprägtem Deckeltitel; ausgezeichnet erhaltenes Exemplar mit nur minimalen Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Slg. Mayer 1892. - Der 1816 von Franz I. in Mailand als Nachfolge-Dekoration des ehemaligen Napoleonischen Ordens der lombardischen Eisernen Krone gestiftete Orden war ursprünglich nur für die italienischen Provinzen der Habsburgermonarchie bestimmt. Die Tafeln zeigen Ordensdekorationen, Ornat und Insignien.</span>
+                    <a href='/artikel/orden-2305-63.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-63
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pichler-friedrich-2309-63.html'>
+                            <img class='thumb' src='/img/thumb/pichler-friedrich-2309-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pichler-friedrich-2309-63.html'><strong>Pichler, Friedrich</strong></a><br /><br />
+                    Repertorium der steierischen Münzkunde. 3 Bde. Graz, Leuschner & Lubensky, 1865-1875. In-8; 4 Bll., 248 pp, 5 gefaltete Taf.; XXII, 1 Bl., 246 pp, 1 Faltkarte; 4 Bll., 232 pp, 7 Taf.; Teil 1 moderner Pappband, sonst Orig.-Broschur (Teil 2 unbeschnitten); mäßige Alters- und Gebrauchsspuren; Reihentitel von Bd. 1 sauber faksimiliert. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 8274. - Teil 1: Die keltischen und consularen Münzen der Steiermark. Mit einer Einleitung über die Pflege der Numismatik im Lande. Teil 2: Die Münzen der römischen und byzantinischen Kaiser in der Steiermark. Teil 3: Die mittelalterigen und neuen Münzen und Medaillen der Steiermark. - Originalausgabe; ein einbändiger Nachdruck des gesamten Werks erschien 1974.</span>
+                    <a href='/artikel/pichler-friedrich-2309-63.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-63
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-77>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/reinhard-johann-paul-2202-77.html'>
+                            <img class='thumb' src='/img/thumb/reinhard-johann-paul-2202-77.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/reinhard-johann-paul-2202-77.html'><strong>Reinhard, Johann Paul</strong></a><br /><br />
+                    Einleitung zu den Weltlichen Geschichten der vornehmsten Staaten zum Gebrauch academischer Vorlesungen. 2. verb. Aufl. Jena, Christian Heinrich Cuno, 1761. In-8; gestochenes allegorisches Frontispiz, 3 Bll., 404 pp, 21 Bll. Register; mehrere Holzschnitt-Vignetten; restaurierter Halbpergamentband der Zeit mit Rückenschildchen und Farbschnitt; einige Seiten mit Tintenstift bekritzelt, sonst überwiegend fleckenfrei und frisch. <br /><br />
+                    <span style="display: none">Vgl. ADB 28, 38. - Mit Abraham beginnende Kompilation der politischen Geschichte der Alten Welt, Europas und des Nahen Ostens aus verschiedenen Werken, unter origineller Verwendung regionaler Zeitrechnungen für die vorchristliche Ära. Die erste Ausgabe erschien 1746. Der polyglotte Autor (1722-1779) unterrichtete Geschichte, Philosophie, Philologie, Beredsamkeit und Poesie an der Universität Erlangen.</span>
+                    <a href='/artikel/reinhard-johann-paul-2202-77.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-77
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1906-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/rizzolli-helmut-1906-36.html'>
+                            <img class='thumb' src='/img/thumb/rizzolli-helmut-1906-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/rizzolli-helmut-1906-36.html'><strong>Rizzolli, Helmut</strong></a><br /><br />
+                    Münzgeschichte des alttirolischen Raumes im Mittelalter und Corpus Nummorum Tirolensium Mediaevalium. Bd. I.: Die Münzstätten Brixen/Innsbruck, Trient, Lienz und Meran vor 1363. Bozen, Verlagsanstalt Athesia, 1991. Kl-4; 552 pp mit 160 teils farbigen und teils ganzseitigen Abb.; Orig.-Leinen mit illustr. Schutzumschlag.  <br /><br />
+                    <span style="display: none">Vergriffen und gesucht; ein zweiter Band, der die Zeit bis 1477 behandelt, erschien 2006 und ist ebenfalls bereits vergriffen. "Nachdem eine umfassende Dokumentation des Münzwesens im alttirolischen Raum über 100 Jahre lang als Desiderat empfunden wurde, ist dieser weiße Fleck auf der Landkarte der Mittelalternumismatik dank des Werkes von R. nun zu einem vielschichtigen und farbigen Bild geworden, das die zentrale wirtschaftliche Bedeutung Tirols und dessen vermittelnde Position zwischen Nord und Süd auch im Geldwesen eindringlich erkennbar macht." (H. Mäkeler).</span>
+                    <a href='/artikel/rizzolli-helmut-1906-36.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1906-36
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-64>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/robertson-anne-s-2105-64.html'>
+                            <img class='thumb' src='/img/thumb/robertson-anne-s-2105-64.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/robertson-anne-s-2105-64.html'><strong>Robertson, Anne S.</strong></a><br /><br />
+                    Roman Imperial Coins in the Hunter Coin Cabinet, University of Glasgow. Vol. IV: Valerian I to Allectus. (Glasgow University Publications). Oxford University Press, 1978. Kl-4; CCXIV, 40 pp, 1 Bl., 64 Lichtdrucktafeln mit Münzabbildungen; Orig.-Leinen mit goldgeprägtem Rückentitel und Schutzumschlag; tadelloses Exemplar. <br /><br />
+                    <span style="display: none">Sorgfältig erstellter und illustrierter wissenschaftlicher Katalog. Die im 18. Jahrhundert von William Hunter begründete Sammlung enthält rund 2000 römische Münzen aus den Jahren 253-296 n. Chr., die hier erstmals systematisch vorgelegt und kommentiert werden; unter ihnen befinden sich etliche Seltenheiten und Unica.</span>
+                    <a href='/artikel/robertson-anne-s-2105-64.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-64
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schmiedt-giulio-hauptbearbeiter-1909-83.html'>
+                            <img class='thumb' src='/img/thumb/schmiedt-giulio-hauptbearbeiter-1909-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schmiedt-giulio-hauptbearbeiter-1909-83.html'><strong>Schmiedt, Giulio (Hauptbearbeiter)</strong></a><br /><br />
+                    Atlante aerofotografico delle sedi umane in Italia. Parte prima: L' utilizzazione delle fotografie aeree nello studio degli insediamenti. Parte seconda: Le sedi antiche scomparse. 2 Bände (von 3). Firenze, Istituto geografico militare, 1964-1970. Gr-Folio. Teil 1: Titel rot-schwarz, 45 pp italienisch-englischer Text mit zahlreichen Abb., 33 teils farbige Tafeln und Karten; goldgeprägtes Orig.-Leinen mit Schraubmechanik und metallverstärkten Ecken (etwas berieben und bestoßen); die Tafeln in einer Ecke fleckig und gewellt mit einzelnen Fehlstellen (ohne Text- oder Bildverlust). Teil 2: 11 pp (inkl. Titel rot-schwarz und 1 farb. Karte), 143 teils farbige Tafeln (mit Fotos, Zeichnungen und italienischem Text) mit gegenüberstehender Übersetzung in Deutsch, Englisch und Französisch sowie bibliographischen Hinweisen; lose in goldgeprägter Orig.-Kunstledermappe mit Druckverschluss (etwas berieben, Kanten teilweise geplatzt). <br /><br />
+                    <span style="display: none">Aufwendig produzierter archäologischer Luftbildatlas, auf schwerem Hochglanzpapier gedruckt. Der erste Teil bietet eine umfasse Einführung in Technik, Möglichkeiten und Probleme der Luftbildfotographie, der zweite Teil dokumentiert ausführlich die Topographie zahlreicher prähistorischer und antiker Siedlungsplätze Italiens sowie einiger römischer Hafenanlagen. Von dem ursprünglich auf 5 Bände angelegten Werk ist bisher nur noch ein dritter Band erschienen (La centuriazione romana, 1989). - Im Handel kaum auffindbar.</span>
+                    <a href='/artikel/schmiedt-giulio-hauptbearbeiter-1909-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1909-83
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sueton-2302-78.html'>
+                            <img class='thumb' src='/img/thumb/sueton-2302-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sueton-2302-78.html'><strong>Sueton</strong></a><br /><br />
+                    Caii Suetonii Tranquilli Caesarum XII. vitae. Ex recensione Burmanni aliorumque. Nürnberg, Riegel, 1793. In-12; gest. Frontispiz, 512 pp; Halbleder der Zeit mit geldgepr. Rückenschildchen und Rotschnitt (leicht berieben, Vorsätze etwas fleckig); Bibl.-Vermerke auf flieg. Vorsatz, Bibl.-Stempel auf Titel. - Gut erhalten und weitgehend fleckenfrei. <br /><br />
+                    <span style="display: none">Suetons bald nach 120 n. Chr. entstandene Kaiserbiographien behandeln das Leben Julius Caesars sowie der römischen Kaiser von Augustus bis Domitian. Ansprechende kleinformatige Ausgabe; das Frontispiz stammt vom Nürnberger Stecher Johann Christoph Pemsel.</span>
+                    <a href='/artikel/sueton-2302-78.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-78
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/veith-ignaz-adam-ubers-2001-90.html'>
+                            <img class='thumb' src='/img/thumb/veith-ignaz-adam-ubers-2001-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/veith-ignaz-adam-ubers-2001-90.html'><strong>[Veith, Ignaz Adam (Übers.)]</strong></a><br /><br />
+                    Außführliche Historie Des Welt-Berühmten Kriegs-Hölden Thamas Kuli-Kan Sophi in Persien; Worin Von dessen Herkommen, Thaten, und unter ihme biß auf gegenwärtige Zeit geschehenen Merckwürdigkeiten, wie auch von dises König-Reichs Situation, Grösse, und aller sich darin befindlichen Provintzen, Landschafften, Insulen, Städten, Gebürgen, Meeren, Seen, Flüssen; Ingleichen Von dessen Ursprung nebst einer Chronologischen Verzeichnuß aller deren Königen, ... und endlich Von der Ursach desß unter ihnen, und den Türcken entstandenen grossen Hasses kürtzlich gehandlet wird. Aus dem Frantzösischen ins Teusche übersetzt. Augspurg, Martin Veith, 1741. Kl-8; Titel rot-schwarz, 2 Bll., 261 pp mit gedr. Marginalien; Pgt. d. Zt. mit handschriftl. Rückentitel und grauem Sprenkelschnitt (leicht fleckig), alter Besitzvermerk auf vord. flieg. Vorsatz, einzelne kl. Rost- oder Fingerflecken, sonst sehr sauberes und frisches Exemplar. - Ohne das gest. Frontispiz (liegt in Kopie bei). <br /><br />
+                    <span style="display: none">VD18 12252522; Holzmann-Bohatta 2, 9755. - Die sehr seltene deutsche Erstausgabe der in mehreren Sprachen erschienenen zeitgenössischen Lebensbeschreibung des Nadir Shah (1688-1747), der 1736 die kurzlebige persische Dynastie der Afshariden gründete und wegen seiner militärischen Fähigkeiten als "zweiter Alexander" oder "Napoleon Persiens" galt. Er erbeutete in Indien den Pfauenthron und den Diamant Koh-i-Noor, führte Krieg gegen die Osmanen und beherrschte das Gebiet vom Kaukasus bis zum Indus und zum Südufer des Persischen Golfs. Nach Nadirs Ermordung wurde sein Sohn nach Europa gebracht, wo ihn Maria Theresia taufen und erziehen ließ; er stand als Baron von Semlin in österr. Militärdiensten und verstarb 1824 in der Wiener Leopoldstadt. - Bezüglich des Autors unseres Werks herrscht in der bibliograph. Literatur ziemliche Verwirrung. Die ausführliche Landesbeschreibung sowie die historischen Nachrichten über die Zeit vor Nadir Shah gehen vor allem auf Berichte des in Persien als Missionar tätigen polnischen Jesuiten Judas Thaddäus Krusinski (1675-1756) zurück, die von seinem Ordensbruder Jean-Antoine du Cerceau (1670-1730) bearbeitet wurden; dieser wird meist als Autor angegeben, verstarb aber bereits sechs Jahre vor der Thronbesteigung von Nadir Shah.</span>
+                    <a href='/artikel/veith-ignaz-adam-ubers-2001-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-90
+                    <br />
+                    
+                        € 950,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-95>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wurschinger-franz-1603-95.html'>
+                            <img class='thumb' src='/img/thumb/wurschinger-franz-1603-95.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wurschinger-franz-1603-95.html'><strong>Würschinger, Franz</strong></a><br /><br />
+                    Wiener Rechenpfennige und Spielmünzen im 18. und 19. Jahrhundert. Wien, Selbstverlag der Numismatischen Gesellschaft, 1943. Gr-8; 30 pp, 4 Taf. in Lasche; OKart. <br /><br />
+                    <span style="display: none">Maßgebliche Studie über die in Nadelburg bei Wiener Neustadt und Wien hergestellten Spielmarken und -münzen, die gelegentlich auch als Wertmarken und Kleingeldersatz verwendet wurden.</span>
+                    <a href='/artikel/wurschinger-franz-1603-95.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1603-95
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wurzbach-tannenberg-wolfgang-2302-86.html'>
+                            <img class='thumb' src='/img/thumb/wurzbach-tannenberg-wolfgang-2302-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wurzbach-tannenberg-wolfgang-2302-86.html'><strong>Wurzbach-Tannenberg, Wolfgang</strong></a><br /><br />
+                    Katalog meiner Sammlung von Medaillen, Plaketten und Jetons. Zugleich ein Handbuch für Sammler. 2 Bde. Hamburg, Peter Siemer, 1978. In-8; Frontispiz, Titel, XV, 1642 pp, 2 Bll., 16 Taf.; Orig.-Leinen mit goldgepr. Rückenschildchen; sehr schöne, kaum benutzte Exemplare. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 14142. - Zitierwerk. Inhaltlich unveränderter verkleinerter Reprint der 1943 als Manuskriptdruck erschienenen zweibändigen Originalausgabe.</span>
+                    <a href='/artikel/wurzbach-tannenberg-wolfgang-2302-86.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-86
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-99>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zambaur-eduard-von-2001-99.html'>
+                            <img class='thumb' src='/img/thumb/zambaur-eduard-von-2001-99.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zambaur-eduard-von-2001-99.html'><strong>Zambaur, Eduard von</strong></a><br /><br />
+                    Die Münzprägungen des Islams zeitlich und örtlich geordnet. I. Bd.: Der Westen und Osten bis zum Indus. Mit synoptischen Tabellen. Wiesbaden, Franz Steiner, 1968. In-4; Frontispiz, 286 pp, 26 Falttafeln mit Prägetabellen; Orig.-Leinen mit goldgepr. Rückentitel in orig. Pappschuber; verlagsneues Exemplar. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 5869. - Alles Erschienene, hrsg. von Peter Jaeckel nach den Druckbögen der 1942 nicht mehr zustandegekommenen Ausgabe. Immer noch nützliches Grundwerk zur islamischen Numismatik. Der österreichische Offizier und Orientalist Eduard Ritter von Zambaur (1866-1847) war während des 1. Weltkriegs in Konstantinopel tätig.</span>
+                    <a href='/artikel/zambaur-eduard-von-2001-99.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-99
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

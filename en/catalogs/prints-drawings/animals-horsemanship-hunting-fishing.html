@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik/tiere-fahren-reiten-jagd-fischerei.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Animals, Horsemanship, Hunting &amp; Fishing
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2311-113>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/affen-2311-113.html'>
+                            <img class='thumb' src='/img/thumb/affen-2311-113.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/affen-2311-113.html'><strong>Affen</strong></a><br /><br />
+                    "Le Coaita - Le Sajou". Zwei amerikanische Affenarten aus der Gattung der Klammeraffen bzw. der gehaubten Kapuzineraffen. Kupferstich von Robert Bénard nach Martinet aus der großformatigen Ausgabe von "Encyclopédie ou Dictionnaire raisonné des sciences, des arts et des métiers" von Denis Diderot und Jean Baptiste le Rond d'Alembert (Paris um 1770), 32 x 20 cm. Im Rand geringfügig fleckig. - Weitere Blätter aus dieser Serie auf Anfrage. <br /><br />
+                    <span style="display: none">Nissen 4622. - Die ab 1751 von Diderot und d'Alembert herausgegebene "Encyclopédie" gilt als eines der Hauptwerke der Aufklärung.</span>
+                    <a href='/en/articles/affen-2311-113.html'>Continue reading</a><br /><br />
+                    Order no. 2311-113
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-114>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/affen-2311-114.html'>
+                            <img class='thumb' src='/img/thumb/affen-2311-114.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/affen-2311-114.html'><strong>Affen</strong></a><br /><br />
+                    Orang-Utan. Chromolithographie von A. Haase nach Theodor Breidwiser aus "105 Wandtafeln für den naturgeschichtlichen Anschauungs-Unterricht" bei Carl Gerold's Sohn, Wien 1893, Blattgröße 62 x 82 cm. (Taf. I.). - Druckbedingte Mittelfalte. <br /><br />
+                    <span style="display: none">Theodor Breidwiser (auch Breidwieser oder Breitwieser, 1847-1930) war ein österreichischer Genre- und Militärmaler.</span>
+                    <a href='/en/articles/affen-2311-114.html'>Continue reading</a><br /><br />
+                    Order no. 2311-114
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-170>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/eisvogel-2112-170.html'>
+                            <img class='thumb' src='/img/thumb/eisvogel-2112-170.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/eisvogel-2112-170.html'><strong>Eisvogel</strong></a><br /><br />
+                    Deckfarbenmalerei in Schablonentechnik, 20 x 22 cm. <br /><br />
+                    <span style="display: none">Anonyme Arbeit, vermutlich um 1960.</span>
+                    <a href='/en/articles/eisvogel-2112-170.html'>Continue reading</a><br /><br />
+                    Order no. 2112-170
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-152>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/fische-hecht-und-zander-2012-152.html'>
+                            <img class='thumb' src='/img/thumb/fische-hecht-und-zander-2012-152.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/fische-hecht-und-zander-2012-152.html'><strong>Fische / Hecht und Zander</strong></a><br /><br />
+                    "Lucius. Höchten ... Lucioperca. Schiel ...". Kupferstich aus Luigi Ferdinando Marsigli (auch Marsili), Danubius Pannonico-Mysicus Bd. IV, Den Haag 1726 (oder Ausgabe 1744), Plattengröße 27,5 x 40 cm, Papierformat 44 x 61 cm. - Sechssprachig beschriftet. Guter fleckenfreier Abzug auf starkem Büttenpapier; leichter, kaum sichtbarer produktionsbedingter Mittelbug. <br /><br />
+                    <span style="display: none">Nissen, Schöne Fischbücher 95. - Seltenes Blatt aus dem sechsbändigen Monumentalwerk eines in österreichischen Diensten stehenden Bologneser Edelmannes über den östlichen Donaulauf. Der vierte Band des "Danubius" trägt den Titel "De piscibus in aquis Danubii viventibus" und enthält 33 Tafeln, die bereits um 1700 von verschiedenen namentlich nicht bekannten Künstlern gestochen wurden und in qualitativer Hinsicht für ihre Zeit außergewöhnlich waren.</span>
+                    <a href='/en/articles/fische-hecht-und-zander-2012-152.html'>Continue reading</a><br /><br />
+                    Order no. 2012-152
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-173>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/fischerei-2112-173.html'>
+                            <img class='thumb' src='/img/thumb/fischerei-2112-173.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/fischerei-2112-173.html'><strong>Fischerei</strong></a><br /><br />
+                    "Der Fischmarckt (Vienne) / Le marché au Poisson". Kupferstich von Jean (Johann) Passini bei Artaria, Wien um 1820, hier in einem kolorierten Abzug des 20. Jhs., Plattengröße 17 x 23 cm.  - Gerahmt. <br /><br />
+                    <span style="display: none">Nicht bei Nebehay-Wagner und Paulusch, Verzeichnis österreichischer Ansichten. - Der Wiener Fischmarkt befand sich von der Mitte des 18. bis zur Mitte des 19. Jhs. am Schanzl beim Fischertor (heute etwa Morzinplatz). Hier wurden in Bottichen Fische aus Donau, March, Leitha und dem Neusiedler See feilgeboten.</span>
+                    <a href='/en/articles/fischerei-2112-173.html'>Continue reading</a><br /><br />
+                    Order no. 2112-173
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-174>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/jagd-st-hubertus-2112-174.html'>
+                            <img class='thumb' src='/img/thumb/jagd-st-hubertus-2112-174.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/jagd-st-hubertus-2112-174.html'><strong>Jagd / St. Hubertus</strong></a><br /><br />
+                    Hinterglasbild mit Darstellung der Hubertuslegende, 2. Hälfte 20. Jh., ca. 20 x 15 cm. - Gerahmt. <br /><br />
+                    <span style="display: none">Ansprechendes Erzeugnis traditioneller, bis heute gepflegter Volkskunst.</span>
+                    <a href='/en/articles/jagd-st-hubertus-2112-174.html'>Continue reading</a><br /><br />
+                    Order no. 2112-174
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-175>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kaninchenjagd-2112-175.html'>
+                            <img class='thumb' src='/img/thumb/kaninchenjagd-2112-175.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kaninchenjagd-2112-175.html'><strong>Kaninchenjagd</strong></a><br /><br />
+                    "Ferreting Rabbits." Altkolorierte Aquatintaradierung von Thomas Sutherland nach einer Zeichnung von Samuel Alken aus "Annals of Sporting", 1823, 10 x 18 cm. - Treibjagd mit vor den Kaninchenbauen gespannten Netzen. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 32, 319.</span>
+                    <a href='/en/articles/kaninchenjagd-2112-175.html'>Continue reading</a><br /><br />
+                    Order no. 2112-175
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-160>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kutschen-1911-160.html'>
+                            <img class='thumb' src='/img/thumb/kutschen-1911-160.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kutschen-1911-160.html'><strong>Kutschen</strong></a><br /><br />
+                    "Petite calèche à col-de-cygne". Altkolorierte Lithographie von Destouches bei Baslez, Paris um 1855, Bildformat ca. 15 x 29 cm, Blattgröße 20 x 35 cm. <br /><br />
+                    <span style="display: none">Furger II, 433 f. - Nr. 493 aus der Serie "Voitures nouvelles".</span>
+                    <a href='/en/articles/kutschen-1911-160.html'>Continue reading</a><br /><br />
+                    Order no. 1911-160
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1601-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/paradiesvogel-1601-62.html'>
+                            <img class='thumb' src='/img/thumb/paradiesvogel-1601-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/paradiesvogel-1601-62.html'><strong>Paradiesvogel</strong></a><br /><br />
+                    "Der gemeine Paradiesvogel (Paradisea apoda)." Farblithographie aus L. J. F. J. Fitzinger, Bilder-Atlas zur wissenschaftlich-populären Naturgeschichte (Abt. Vögel), Wien 1864,, Bildformat ca. 21 x 18 cm. - Im weißen Rand geringfügig stockfleckig. <br /><br />
+                    <span style="display: none">Nissen 1390, IVB 319a. - Männchen und Weibchen des Großen Paradiesvogels oder Göttervogels.</span>
+                    <a href='/en/articles/paradiesvogel-1601-62.html'>Continue reading</a><br /><br />
+                    Order no. 1601-62
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-108>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/pferdekutsche-2211-108.html'>
+                            <img class='thumb' src='/img/thumb/pferdekutsche-2211-108.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/pferdekutsche-2211-108.html'><strong>Pferdekutsche</strong></a><br /><br />
+                    "Fiaker." Stahlstich von Carl Mahlknecht nach Wilhelm Böhm aus Adalbert Stifter (Hrsg.), Wien und die Wiener, in Bildern aus dem Leben, Pesth 1844, Bildformat ca. 18 x 13 cm, Blattgröße 23 x 16 cm. - Minimal fleckig und am Rand etwas knittrig. <br /><br />
+                    <span style="display: none">Ein Lohnkutscher auf seinem Zweispänner, wie er noch heute in Wien als Touristenattraktion anzutreffen ist. Das originelle Blatt ist auch hinsichtlich seiner eigenartigen graphischen Technik bemerkenswert.</span>
+                    <a href='/en/articles/pferdekutsche-2211-108.html'>Continue reading</a><br /><br />
+                    Order no. 2211-108
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/pferdekutschen-2211-109.html'>
+                            <img class='thumb' src='/img/thumb/pferdekutschen-2211-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/pferdekutschen-2211-109.html'><strong>Pferdekutschen</strong></a><br /><br />
+                    Vier Farblithographien mit Seitenansichten zweirädriger Kutschentypen aus "Album de constructeur de voitures" bei G. Mathière, Paris um 1900, Bildformat je ca. 8 x 18 cm, Blattgröße meist 23 x 30 cm. - Ein Blatt oben beschnitten, zwei Blätter lichtrandig; Mängel durch beiliegende Passepartouts problemlos abdeckbar. <br /><br />
+                    <span style="display: none">"Charrette anglaise" - "King's Cart" - "Morning-Cart" - "Derby à capote".</span>
+                    <a href='/en/articles/pferdekutschen-2211-109.html'>Continue reading</a><br /><br />
+                    Order no. 2211-109
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-155>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/reitkunst-2012-155.html'>
+                            <img class='thumb' src='/img/thumb/reitkunst-2012-155.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/reitkunst-2012-155.html'><strong>Reitkunst</strong></a><br /><br />
+                    "Gropaden." Kupferstich von Andreas Nunzer nach Engelhard Nunzer aus G. E. von Löhneysen, Neu eröffnete Hof-Kriegs- und Reitschul, Nürnberg 1729, 20 x 34 cm. - Im weißen Rand restauriert. <br /><br />
+                    <span style="display: none">Georg Engelhard von Löhneisen (1552-1622) war ein braunschweigischer Berghauptmann, Stallmeister, Verleger und Schriftsteller. Die erste Ausgabe seiner "Reitschule" erschien 1588.</span>
+                    <a href='/en/articles/reitkunst-2012-155.html'>Continue reading</a><br /><br />
+                    Order no. 2012-155
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-148>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/robbenjagd-1712-148.html'>
+                            <img class='thumb' src='/img/thumb/robbenjagd-1712-148.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/robbenjagd-1712-148.html'><strong>Robbenjagd</strong></a><br /><br />
+                    "Walrussen." Kupferstich aus der holländischen Ausgabe von Cook's Reisen, Leiden 1795-1803, 22 x 36 cm (Taf. CX). <br /><br />
+                    <span style="display: none">Die in den kalten Meeren der Nordhalbkugel lebenden Walrosse wurden von den Europäern im 18. und 19. Jh. vor allem wegen des Elfenbeins der Stoßzähne gejagt.</span>
+                    <a href='/en/articles/robbenjagd-1712-148.html'>Continue reading</a><br /><br />
+                    Order no. 1712-148
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-110>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schmetterlinge-2211-110.html'>
+                            <img class='thumb' src='/img/thumb/schmetterlinge-2211-110.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schmetterlinge-2211-110.html'><strong>Schmetterlinge</strong></a><br /><br />
+                    "Papilion. exotic. / Equit. Troi. fig. 1 Memnon. Lin. Sp. 13. fig. 2. Sarpedon. Lin. Sp. 15." Altkolorierter Kupferstich von Johann Carl Bock aus Eugen Esper, Die ausländischen ... Schmetterlinge in Abbildungen nach der Natur mit Beschreibungen, Erlangen 1785-1801, Plattengröße 24 x 18 cm. - Zwei Arten aus einer nach trojanischen Helden benannten Gattung der Ritterfalter (Papilionidae) in natürlicher Größe. <br /><br />
+                    <span style="display: none">Nissen 1317 (Taf. VIII). - Mit kombinierter Darstellung von Ober- und Unterseite der Flügel. Sorgfältig und in leuchtenden Farben koloriert.</span>
+                    <a href='/en/articles/schmetterlinge-2211-110.html'>Continue reading</a><br /><br />
+                    Order no. 2211-110
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-111>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schmetterlinge-2211-111.html'>
+                            <img class='thumb' src='/img/thumb/schmetterlinge-2211-111.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schmetterlinge-2211-111.html'><strong>Schmetterlinge</strong></a><br /><br />
+                    "Papilion exotic. / Equit. Troi. Fig. 1 mas. Fig. 2 foem. Severus." Altkolorierter Kupferstich von Johann Carl Bock aus Eugen Esper, Die ausländischen ... Schmetterlinge in Abbildungen nach der Natur mit Beschreibungen, Erlangen 1785-1801, Plattengröße 24 x 18 cm. -  Männliches und weibliches Exemplar aus einer nach trojanischen Helden benannten Gattung der Ritterfalter (Papilionidae) in natürlicher Größe. <br /><br />
+                    <span style="display: none">Nissen 1317 (Taf. XXXI). - Mit kombinierter Darstellung von Ober- und Unterseite der Flügel. Sorgfältig und in leuchtenden Farben koloriert.</span>
+                    <a href='/en/articles/schmetterlinge-2211-111.html'>Continue reading</a><br /><br />
+                    Order no. 2211-111
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-112>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schmetterlinge-2211-112.html'>
+                            <img class='thumb' src='/img/thumb/schmetterlinge-2211-112.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schmetterlinge-2211-112.html'><strong>Schmetterlinge</strong></a><br /><br />
+                    "Papil exotic. / Equ. Troi. Fig. 1 Anceus. Fig. 2 Bianor." Altkolorierter Kupferstich von Johann Carl Bock aus Eugen Esper, Die ausländischen ... Schmetterlinge in Abbildungen nach der Natur mit Beschreibungen, Erlangen 1785-1801, Plattengröße 24 x 18 cm. -  Zwei Arten aus einer nach trojanischen Helden benannten Gattung der Ritterfalter (Papilionidae) in natürlicher Größe. <br /><br />
+                    <span style="display: none">Nissen 1317 (Taf. XXXV). - Mit kombinierter Darstellung von Ober- und Unterseite der Flügel. Sorgfältig und in leuchtenden Farben koloriert.</span>
+                    <a href='/en/articles/schmetterlinge-2211-112.html'>Continue reading</a><br /><br />
+                    Order no. 2211-112
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-118>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/uhu-2311-118.html'>
+                            <img class='thumb' src='/img/thumb/uhu-2311-118.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/uhu-2311-118.html'><strong>Uhu</strong></a><br /><br />
+                    "Uhu". Lithographie von Anton Strassgschwandtner bei Franz Paterno, Wien um 1860, im Stein signiert "Tony", Blattgröße 26 x 17 cm. - Etwas beschnitten, im weißen Rand gering fleckig. <br /><br />
+                    <span style="display: none">Nr. 132 aus einer seltenen, für uns bibliographisch nicht nachweisbaren Serie. - Anton Strassgschwandtner (1826-1881), Wiener Pferde-, Militär- und Jagdmaler.</span>
+                    <a href='/en/articles/uhu-2311-118.html'>Continue reading</a><br /><br />
+                    Order no. 2311-118
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-156>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/vogel-eisvogel-baumlaufer-kleiber-2012-156.html'>
+                            <img class='thumb' src='/img/thumb/vogel-eisvogel-baumlaufer-kleiber-2012-156.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/vogel-eisvogel-baumlaufer-kleiber-2012-156.html'><strong>Vögel / Eisvogel, Baumläufer, Kleiber</strong></a><br /><br />
+                    "1. The Nuthatch. Sitta europaea. Der Blauspecht. 2. The Kingfisher. Alcedo ispida. Der gemeine Eissvogel. 3. The Creeper. Certhia familiaris. Das Baumlaeuferlein." Altkolorierter Kupferstich von J. J. Haid und Sohn nach Peter Paillou aus Thomas Pennant, Zoologia Britannica ... in das Lateinische und Deutsche übersetzt von Christoph Gottlieb von Murr, Augsburg, 1771-78, Plattengr. 40 x 29,5 cm. - Rechts etwas knapprandig, sonst ausgezeichnet erhalten. <br /><br />
+                    <span style="display: none">Nissen IVB 711; Thieme-Becker 15, 482. - Prachtvolles großes Blatt aus einem der seltensten in Deutschland gedruckten ornithologischen Werke. Der britische Maler Peter Paillou (um 1720 - um 1790) ist vor allem für seine Vogelbilder bekannt, von denen viele als Buchillustrationen Verwendung fanden. Der Maler und Kupferstecher Johann Jakob Haid (1704-1767), Schüler von Johann Elias Ridinger, gründete in Augsburg einen eigenen Verlag, der von seinem Sohn Johann Elias Haid (1739-1809) weitergeführt wurde.</span>
+                    <a href='/en/articles/vogel-eisvogel-baumlaufer-kleiber-2012-156.html'>Continue reading</a><br /><br />
+                    Order no. 2012-156
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-149>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wasservogel-1712-149.html'>
+                            <img class='thumb' src='/img/thumb/wasservogel-1712-149.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wasservogel-1712-149.html'><strong>Wasservögel</strong></a><br /><br />
+                    "Das Wasser Hun." Anonyme Gouache, vermutlich spätes 18. Jh., Blattgröße 28 x 37 cm. - Alt montiert und auf dem Trägerpapier beschriftet. <br /><br />
+                    <span style="display: none">Ansprechende Deckfarbenmalerei, wohl nach einem Stopfpräparat.</span>
+                    <a href='/en/articles/wasservogel-1712-149.html'>Continue reading</a><br /><br />
+                    Order no. 1712-149
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-150>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wasservogel-1712-150.html'>
+                            <img class='thumb' src='/img/thumb/wasservogel-1712-150.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wasservogel-1712-150.html'><strong>Wasservögel</strong></a><br /><br />
+                    "Der Morast Patsch." Anonyme Gouache, vermutlich spätes 18. Jh., Blattgröße 28 x 37 cm. - Alt montiert und auf dem Trägerpapier beschriftet. <br /><br />
+                    <span style="display: none">Ansprechende Deckfarbenmalerei, wohl nach einem Stopfpräparat.</span>
+                    <a href='/en/articles/wasservogel-1712-150.html'>Continue reading</a><br /><br />
+                    Order no. 1712-150
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

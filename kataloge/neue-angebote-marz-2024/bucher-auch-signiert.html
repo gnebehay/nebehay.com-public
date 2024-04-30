@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neue Angebote März 2024</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/new-offers-march-2024/books-signed-and-unsigned.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Neue Angebote März 2024</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bücher (auch signiert)
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/neue-angebote-marz-2024.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/neue-angebote-marz-2024/bucher-auch-signiert.html'>Bücher (auch signiert)</a></li>
+    
+        <li><a href='/kataloge/neue-angebote-marz-2024/graphik.html'>Graphik</a></li>
+    
+        <li><a href='/kataloge/neue-angebote-marz-2024/autographen-varia.html'>Autographen &amp; Varia</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2403-2>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/abraham-a-sancta-clara-2403-2.html'>
+                            <img class='thumb' src='/img/thumb/abraham-a-sancta-clara-2403-2.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/abraham-a-sancta-clara-2403-2.html'><strong>Abraham a Sancta Clara</strong></a><br /><br />
+                    Abrahamisches Bescheid-Essen Soll man wohl nicht vergessen, Er hat es hinterlassen, Mir gfallt es über die massen, Wer nicht will glauben diß, Steck Brillen auf und liß ... Aus den hinterlassenen Manuscriptis ... vorgesetzt und aufgetragen Von P. Fr. Alexandro à Latere Christi. Wien und Brünn, G. Lehmann, 1719. In-8; gest. Frontispiz, 11 Bll. (inkl. Titel rot-schw.), 616 pp, 18 Bll. Register; mit mehreren Kopfleisten und Initialen; Lederband der Zeit mit Rückenschildchen und reicher Rückenvergoldung (geringfügig berieben, Innengelenke angeplatzt); ganz vereinzelt etwas knittrig. Insgesamt sehr schönes und praktisch fleckenfreies Exemplar in einem dekorativen zeitgenössischen Ganzlederband. <br /><br />
+                    <span style="display: none">Bertsche 59, 2; Faber du Faur 1130. - Zweite Ausgabe dieser Predigtsammlung, posthum veranstaltet von einem bayrischen Mitbruder des wortgewaltigen Augustinerpaters und Barockdichters (eigentlich Ulrich Megerle, 1644-1709); die Erstausgabe erschien zwei Jahre zuvor im selben Verlag. Das Frontispiz zeigt ein höfisches Bankett mit Abraham als Speisenmeister, der - in Anlehnung an eine Episode im Alten Testament (Gen 15, 11) - drei Raubvögel von der Tafel vertreibt.</span>
+                    <a href='/artikel/abraham-a-sancta-clara-2403-2.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-2
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/arneth-joseph-2403-5.html'>
+                            <img class='thumb' src='/img/thumb/arneth-joseph-2403-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/arneth-joseph-2403-5.html'><strong>Arneth, Joseph</strong></a><br /><br />
+                    Ueber das Tauben-Orakel von Dodona. Zur Erklärung einer antiken Erz-Münze der Epiroten in der Münzsammlung des Stiftes St. Florian. Wien, Peter Rohrmann, 1840. Kl-4; Titel mit gestochener Vignette, 30 pp; bedruckte Orig.-Broschur, unbeschnitten (etwas lichtspurig und mit kleinen Läsuren); am unteren Rand durchgehend stärker knittrig. <br /><br />
+                    <span style="display: none">Der österreichische Archäologe und Numismatiker Joseph Calasanz Ritter von Arneth (1791-1863) war seit 1811 im k. k. Münz- und Antikenkabinett in Wien tätig und leitete es ab 1840. Die seltene Abhandlung ist in Form eines Briefes an seinen Bruder Michael Arneth verfasst, der als Augustiner-Chorherr von 1823 bis 1854 Propst von Stift Sankt Florian war.</span>
+                    <a href='/artikel/arneth-joseph-2403-5.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-5
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-8>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/barbier-george-vaudoyer-jean-louis-2403-8.html'>
+                            <img class='thumb' src='/img/thumb/barbier-george-vaudoyer-jean-louis-2403-8.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/barbier-george-vaudoyer-jean-louis-2403-8.html'><strong>Barbier, George - Vaudoyer, Jean-Louis</strong></a><br /><br />
+                    Album dédié a Tamar Karsavina. Paris, Collections Pierre Corrard, Mai 1914. In-4; 12 Bll. mit 3 Vignetten, 12 pochoirkolorierte Lithographien (tlw. mit kleinen Remarquen); illustrierte Originalbroschur (etwas gebräunt und mit kleinen Läsuren); die ersten Textblätter mit kleinem Fettfleck, die Tafeln nahezu tadellos. - Nr. 97 von 500 (gesamt 512) Exemplaren auf vélin d'arches, im Druckvermerk vom Verleger monogrammiert. *** 12 leaves with 3 vignettes, 12 pochoir colored lithographs (some with small remarques); illustrated original wrappers (somewhat browned and with small tears); first text leaves with small grease stain, plates almost immaculate. - No. 97 of 500 (512 in total) copies on vélin d'arches, monogrammed by the publisher in the printer's note. <br /><br />
+                    <span style="display: none">Monod 979; Carteret IV, 59; Derra de Moroda 219. - Die seltene Originalausgabe. Die in St. Petersburg geborene Tamara Platonovna Karsavina (1885-1978) wurde 1909 Mitglied der von Sergej Djagilev gegründeten Ballets Russes, die zunächst in Paris große Erfolge feierten. Das vorliegende französische Album huldigt ihren Rollen (unter anderem Sheherezade, Salome und Petruschka) in prachtvollen Kostümentwürfen des Malers, Illustrators und Art-déco-Modeschöpfers George Barbier sowie in Gedichten des Kunsthistorikers und Schriftstellers Jean-Louis Vaudoyer. *** Rare original edition. Born in St. Petersburg, Tamara Platonovna Karsavina (1885-1978) became a member of the Ballets Russes in 1909. This French album pays homage to her roles (including Sheherezade, Salome and Petrushka) in magnificent costume designs by the painter, illustrator and art deco fashion designer George Barbier and in poems by the art historian and writer Jean-Louis Vaudoyer.</span>
+                    <a href='/artikel/barbier-george-vaudoyer-jean-louis-2403-8.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-8
+                    <br />
+                    
+                        € 3600,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bedoukian-paul-z-2403-9.html'>
+                            <img class='thumb' src='/img/thumb/bedoukian-paul-z-2403-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bedoukian-paul-z-2403-9.html'><strong>Bedoukian, Paul Z.</strong></a><br /><br />
+                    Coinage of Cilician Armenia. Revised edition. Danbury, Eigenverlag, 1979. Gr-8; XXXIe, 494 pp mit einer Kartenskizze und 3 Diagrammen, 12 Tafeln; goldgepr. Orig.-Kunstleder. Neuwertig. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 7431. - Standardwerk zur mittelalterlichen Münzprägung Armeniens. Die erste Ausgabe erschien 1962 in der Serie "Numismatic Notes and Monographs".</span>
+                    <a href='/artikel/bedoukian-paul-z-2403-9.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-9
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-n-n-2403-10.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-n-n-2403-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-n-n-2403-10.html'><strong>Beethoven. - N. N.</strong></a><br /><br />
+                    Beethoven (Portfolio mit Text- und Tafelteil). Wien, Druckerei Luigard, (1927). In-folio; 8 pp mit 1 Abb., 15 lose teils farbige Tafeln; in Orig.-Kartonmappe mit montierter Deckelillustration (Mappe mit kleinen Mängeln, möglicherweise fehlt eine Umschlagklappe); Text- und Tafelteil mit leichten Gebrauchs- und Altersspuren, eine Tafel mit kleinen Druckstellen, insgesamt ordentlich. <br /><br />
+                    <span style="display: none">Seltener Privatdruck(?) mit einer anonymen Würdigung des Komponisten zum 100. Todestag und reproduzierten Bildern zu Leben, Werk und Nachwirkung. Das im Druck undeutlich monogrammierte Umschlagbild stammt von 1925.</span>
+                    <a href='/artikel/beethoven-n-n-2403-10.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-10
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-16>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/braque-mangin-nicole-s-hrsg-2403-16.html'>
+                            <img class='thumb' src='/img/thumb/braque-mangin-nicole-s-hrsg-2403-16.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/braque-mangin-nicole-s-hrsg-2403-16.html'><strong>Braque. - Mangin, Nicole S. (Hrsg.)</strong></a><br /><br />
+                    Catalogue de l'oeuvre de Georges Braque: Peintures 1942-1947 [und:] Peintures 1948-1957. 2 Bde. Paris, Maeght Éditeur, 1959-1960. Kl-4; 2 Bll. (inkl. Frontispiz),128 Tafeln (davon 12 farbig) mit rückseitigem Text, 3 Bll.; 3 Bll. (inkl. Frontispiz), 136 Tafeln (davon 9 farbig) mit rückseitigem Text, 3 Bll., 4 Tafeln Nachträge im originalen bedruckten Kartonumschlag als Beilage; Leinenbände in Spiralmechanik mit farbiger Deckelillustration; Rücken etwas gebräunt, sonst nur geringe Alters- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Arntz I, 23. - Zwei von insgesamt sieben Teilen des chronologisch aufgebauten Werkkatalogs der Gemälde. Als Frontispiz in jedem Band ein schönes Lichtdruck-Porträt des Künstlers.</span>
+                    <a href='/artikel/braque-mangin-nicole-s-hrsg-2403-16.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-16
+                    <br />
+                    
+                        € 480,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/brunner-ludwig-2403-19.html'>
+                            <img class='thumb' src='/img/thumb/brunner-ludwig-2403-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/brunner-ludwig-2403-19.html'><strong>Brunner, Ludwig</strong></a><br /><br />
+                    Eggenburg. Geschichte einer niederösterreichischen Stadt. 2 Bände. Eggenburg, Verlag der Stadtgemeinde, 1933/1939. Kl-4; XIV, 369 pp; XVI, 443 pp; mit zahlreichen teils farbigen Textabb. und Tafeln (diese teilweise gefaltet); goldgepr. Orig.-Leinenbände mit orig. Schutzumschlägen (davon einer mit leichten Gebrauchsspuren); Titelblätter gestempelt, Bibl.-Schildchen auf Innendeckel; Bd. 2 papierbedingt innen leicht gebräunt, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Gesuchtes Heimatbuch.</span>
+                    <a href='/artikel/brunner-ludwig-2403-19.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-19
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/brunner-traut-emma-brunner-hellmut-2403-20.html'>
+                            <img class='thumb' src='/img/thumb/brunner-traut-emma-brunner-hellmut-2403-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/brunner-traut-emma-brunner-hellmut-2403-20.html'><strong>Brunner-Traut, Emma - Brunner, Hellmut</strong></a><br /><br />
+                    Die ägyptische Sammlung der Universität Tübingen. 2 Bände. Mainz, Philipp von Zabern, 1981. In-4; XII, 386 Seiten mit 786 Abb.; X, 168 Tafeln (davon 10 farbig) mit 1502 fotographischen Abb.; goldgepr. Orig.-Leinenbände; leichte äußere Gebrauchsspuren, sonst neuwertig. <br /><br />
+                    <span style="display: none">Übersichtlich gegliederte wissenschaftliche Präsentation der bedeutenden Sammlung mit guten Abbildungen.</span>
+                    <a href='/artikel/brunner-traut-emma-brunner-hellmut-2403-20.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-20
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/carnuntum-2403-22.html'>
+                            <img class='thumb' src='/img/thumb/carnuntum-2403-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/carnuntum-2403-22.html'><strong>Carnuntum</strong></a><br /><br />
+                    Bericht des Vereins Carnuntum in Wien für die Jahre 1897 [bis] 1911. 9 Bände. Wien, Selbstverlag, 1899-1914. In-4; je Bd. ca. 120-330 pp mit zahlr. Abb., Taf. und Plänen; Orig.-Leinenbände mit goldgepr. Rückentitel und Deckelvignette (bis Jg. 1901 wechselnd, ab Jg. 1902 wiederholt) und dreiseitigem Rotschnitt; Einbände mit Gebrauchsspuren, innen sehr gut erhalten. <br /><br />
+                    <span style="display: none">Die Folge enthält vor allem großzügig illustrierte Ausgrabungsberichte. Der 1885 gegründete und als "Gesellschaft der Freunde Carnuntums" bis heute bestehende Verein Carnuntum legte den Grundstein für die systematische Erforschung der Römerstadt östlich von Wien und sorgte für die Errichtung des 1904 eröffneten Museums Carnuntinum. Die dekorativen Einbände imitieren Halblederbände und beinhalten zum Teil Berichte aus zwei oder drei Jahren.</span>
+                    <a href='/artikel/carnuntum-2403-22.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-22
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/edison-gesellschaft-deutsche-hrsg-2403-26.html'>
+                            <img class='thumb' src='/img/thumb/edison-gesellschaft-deutsche-hrsg-2403-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/edison-gesellschaft-deutsche-hrsg-2403-26.html'><strong>Edison Gesellschaft, Deutsche (Hrsg.)</strong></a><br /><br />
+                    Das Edison-Glühlicht und seine Bedeutung für Hygiene und Rettungswesen. Ausgegeben auf der Internationalen Elektrischen Ausstellung in Wien. Berlin, Julius Springer, 1883. Gr-8; 2 Bll., 38 pp; bedruckte Orig.-Brosch; Umschlag mit Gebrauchs- und Altersspuren, vorderer Deckel gelöst, sonst sehr gut erhalten. - Vorgebunden ein vierseitiger Bericht der Société Électrique Edison Paris über "Das erste, elektrische beleuchtete deutsche Theater" (auf rosa Papier). <br /><br />
+                    <span style="display: none">Darmstaedter 768. - Erste Ausgabe, hier im seltenen Wiener Umschlag; eine von vermutlich nur zwei erschienenen Veröffentlichungen der Deutschen Edison Gesellschaft. Erläutert die Vorzüge der elektrischen Beleuchtung gegenüber dem Gaslicht und enthält unter anderem ein Gutachten Max von Pettenkofers. Thomas Alva Edison meldete 1879 die von ihm erfundene Glühlampe zum Patent an; 1880 wurde die Edison Electric Light Company of Europe gegründet, 1883 entstand in Kooperation mit Emil Rathenau die Deutsche Edison Gesellschaft für angewandte Elektricität (später AEG).</span>
+                    <a href='/artikel/edison-gesellschaft-deutsche-hrsg-2403-26.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-26
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-27>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ehrenstein-albert-2403-27.html'>
+                            <img class='thumb' src='/img/thumb/ehrenstein-albert-2403-27.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ehrenstein-albert-2403-27.html'><strong>Ehrenstein, Albert</strong></a><br /><br />
+                    Der Selbstmord eines Katers. München und Leipzig, Georg Müller, [1912]. Kl-8; 2 Bll., 219, (1) pp, 1 Bl.; Orig.-Pappband mit goldgepr. Rückentitel und Signet des Insel Verlags auf dem Deckel; Einband mit leichten Gebrauchs- und Altersspuren, kleines Exlibris; insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Wilpert-G. 2; Raabe 62, 3; Sarkowski 428. - Erste Ausgabe in seltener Einbandvariante. Die zweite Buchveröffentlichung des als Sohn ungarischer Juden in Wien geborenen Lyrikers und Erzählers umfasst insgesamt elf Erzählungen und gilt als eines der Hauptwerke des österreichischen Expressionismus. Eine umgearbeitete Fassung erschien 1919 unter dem Titel "Bericht aus einem Tollhaus" im Insel-Verlag, der auch schon einen Teil der Druckbögen der Erstauflage mit seinem Verlagseinband versah.</span>
+                    <a href='/artikel/ehrenstein-albert-2403-27.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-27
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fitzgerald-edward-ubers-pogany-willy-illustr-2403-30.html'>
+                            <img class='thumb' src='/img/thumb/fitzgerald-edward-ubers-pogany-willy-illustr-2403-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fitzgerald-edward-ubers-pogany-willy-illustr-2403-30.html'><strong>[FitzGerald, Edward (Übers.)] - Pogany, Willy (Illustr.)</strong></a><br /><br />
+                    Rubáiyát of Omar Khayyám. Presented by Willy Pogany. London, George G. Harrap, [1909]. Kl-4; 67 Textblätter in farblithographierter Kalligraphie, 24 montierte Farbtafeln; prachtvoller zeitgenössischer roter Maroquinband (signiert Morrell) mit reicher Rücken-, Deckel- und Innenkantenvergoldung sowie Kopfgoldschnitt, zweiseitig unbeschnitten (minimale Gebrauchsspuren, eine Ecke fachgerecht restauriert); in späterem Buntpapierschuber; Schnitt etwas stockfleckig, einige Seiten leicht feuchtrandig, insgesamt sehr attraktives Exemplar. <br /><br />
+                    <span style="display: none">Schöne, in dieser Form erste Ausgabe der persischen Vierzeiler des Mathematikers, Astronomen, Philosophen und Dichters Omar Chayyam (1048-1131) in der maßgeblichen englischen Übertragung durch Edward FitzGerald (1809-1883). Die bemerkenswerte Ausstattung im orientalisierenden Jugendstil ist dem aus Ungarn stammenden Illustrator William Pogany (1882-1955) und der Londoner Buchbinderei W. J. & J. Morrell (vormals William Turner Morrell) zu verdanken.</span>
+                    <a href='/artikel/fitzgerald-edward-ubers-pogany-willy-illustr-2403-30.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-30
+                    <br />
+                    
+                        € 1750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hindemith-paul-2403-42.html'>
+                            <img class='thumb' src='/img/thumb/hindemith-paul-2403-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hindemith-paul-2403-42.html'><strong>Hindemith, Paul</strong></a><br /><br />
+                    Mathis der Maler. Oper in sieben Bildern. (Textbuch). Zürich, Albert Kunzelmann / Apollo-Verlag, 1945. In-8; 35, (1) pp; orig.-kartoniert; leichte Gebrauchs- und Altersspuren. - Auf dem Titelblatt eigenhändiger Namenszug "Paul Hindemith". <br /><br />
+                    <span style="display: none">Seltene Lizenzausgabe für die Schweiz. Trotz Ächtung des Komponisten durch die Nationalsozialisten und Aufführungsverboten in Deutschland erschienen die Werke des Komponisten zunächst noch bei Schott's Söhnen in Mainz, bevor Hindemith ins Schweizer Exil ging. Die Oper "Mathis der Maler", zu der Hindemith auch das Libretto verfasste, ist vom Isenheimer Altar inspiriert und wurde 1938 in Zürich uraufgeführt; die Vor- und Zwischenspiele entstanden bereits 1934 als gleichnamige Symphonie.</span>
+                    <a href='/artikel/hindemith-paul-2403-42.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-42
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/iltis-hugo-2403-44.html'>
+                            <img class='thumb' src='/img/thumb/iltis-hugo-2403-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/iltis-hugo-2403-44.html'><strong>Iltis, Hugo</strong></a><br /><br />
+                    Gregor Johann Mendel. Leben, Werk und Wirkung. Berlin, Julius Springer, 1924. Gr-8; VII, (III), 426 pp, 1 Bl.; mit 59 Textabb. und 12 Lichtdrucktaf.; orig. Halbpergament mit goldgepr. Rückentitel; sehr schönes Exemplar mit nur unbedeutenden Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Die seltene Originalausgabe des für Jahrzehnte maßgeblichen Standardwerks. Der aus einer alteingesessenen jüdischen Familie in Mähren stammende Autor (1882-1952) war Botaniker sowie Gründer und Leiter des Museum Mendelianum in Brünn. Kurz vor dem Überfall Hitlers auf die Tschechoslowakei konnte er 1938 mit seiner Familie und der Mendel-Sammlung in die USA emigrieren.</span>
+                    <a href='/artikel/iltis-hugo-2403-44.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-44
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-46>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiser-friedrich-2403-46.html'>
+                            <img class='thumb' src='/img/thumb/kaiser-friedrich-2403-46.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiser-friedrich-2403-46.html'><strong>Kaiser, Friedrich</strong></a><br /><br />
+                    Ein Traum - kein Traum, oder: Der Schauspielerin letzte Rolle. Posse mit Gesang in zwei Akten. Zum ersten Male aufgeführt im k. k. priv. Theater an der Wien, am 3. December 1848. Wien, Wallishausser, 1851. In-8; gestochenes Frontispiz (von Andreas Geiger), Titel, VIII, 126 pp; gold- und blindgeprägter Leinenband der Zeit mit Goldschnitt (etwas berieben); einzelne leichte Gebrauchsspuren, insgesamt schönes Exemplar. <br /><br />
+                    <span style="display: none">Wurzbach 10, 370; Slg. Mayer 5827. - Der österreichische Dramatiker und Revolutionär Friedrich Anton Kaiser (1814-1874) verfasste in Serienproduktion über 160 Stücke für das Alt-Wiener Volkstheater, vor allem für die Bühnen des Theaterdirektors Carl Carl, dem auch das vorliegende Stück gewidmet ist. Vielseitig kulturell und politisch engagiert, entging Kaiser während der Revolution von 1848 nur knapp einem gewaltsamen Tod. "In der österreichischen Literaturgeschichte steht Kaiser im Schatten von Raimund, Nestroy und Anzengruber, was seiner literarischen Leistung nicht gerecht wird" (Wikipedia).</span>
+                    <a href='/artikel/kaiser-friedrich-2403-46.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-46
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/morgenstern-georg-2403-59.html'>
+                            <img class='thumb' src='/img/thumb/morgenstern-georg-2403-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/morgenstern-georg-2403-59.html'><strong>Morgenstern, Georg</strong></a><br /><br />
+                    Sermones disertissimi contra omne[m] mu[n]di p[er]versum statum: que[m] deus gloriosus et equitas naturalis damnat. (In fine:) Nürnberg, Hieronymus Höltzel, 3. August 1503. In-8; 7 fol. (inkl. Titel), 1 Bl., LXXVII fol., 1 weißes Bl.; mit einem rot ankolorierten blattgroßen Holzschnitt (Hieronymus in der Wüste); neuerer Pappband mit zwei Bindebändern (davon eines gerissen) unter Verwendung einer Pergamenthandschrift des 15. Jhs.; etwas gebräunt und leicht fleckig, einige Feuchtigkeitsspuren in den Rändern, eine Seite mit kleinem Randriss, einzelne alte Anmerkungen in verblasster roter Tinte sowie eine kleine Kritzelei über dem Holzschnitt; insgesamt gut erhaltene Postinkunabel in attraktivem Einband. <br /><br />
+                    <span style="display: none">VD 16 M 6346. - Seinerzeit beliebte Sammlung von 18 Predigten des aus Oederan in Sachsen stammenden und in Leipzig als Doktor und Lehrer des kanonischen Rechts wirkenden Georg Morgenstern (Lebensdaten unbekannt); von 1501 bis 1515 erschienen insgesamt 8 Ausgaben an verschiedenen Druckorten. Der schöne Holzschnitt zeigt den betenden Hl. Hieronymus mit dem Löwen in der Wüste und fand auch in anderen von Höltzel verlegten Werken Verwendung.</span>
+                    <a href='/artikel/morgenstern-georg-2403-59.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-59
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pittioni-festschrift-2403-67.html'>
+                            <img class='thumb' src='/img/thumb/pittioni-festschrift-2403-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pittioni-festschrift-2403-67.html'><strong>Pittioni-Festschrift</strong></a><br /><br />
+                    Festschrift für Richard Pittioni zum siebzigsten Geburtstag. Hrsg. von Herbert Mitscha-Märheim, Herwig Friesinger und Helga Kerchler. Teil I: Urgeschichte. Teil II: Industriearchäologie und Metalltechnologie, Römerzeit, Frühgeschichte und Mittelalter, Sonstiges. 2 Bde. (Archaeologia Austriaca Beiheft 13 und 14). Wien, Deuticke, und Berger, Horn, 1976. Gr-8; XVII, 835 pp; 3 Bll., 559 pp; mit 20 teils gefalteten Tafeln und 202 bzw. 139 Abb.; goldgepr. Orig.-Leinen mit Schutzumschlag; nahezu neuwertige Exemplare. <br /><br />
+                    <span style="display: none">Enthält 93 Beiträge in deutscher, englischer, französischer oder italienischer Sprache aus zahlreichen west- und osteuropäischen Ländern und den USA sowie ein Schriftenverzeichnis des Jubilars. Der Prähistoriker Richard Pittioni (1906-1985) lehrte an der Wiener Universität. Neben seinen Arbeiten zur Ur- und Frühgeschichte befasste er sich auch mit Bergbauforschung sowie mit der Mittelalter- und Industriearchäologie Österreichs.</span>
+                    <a href='/artikel/pittioni-festschrift-2403-67.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-67
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ruf-jakob-2403-69.html'>
+                            <img class='thumb' src='/img/thumb/ruf-jakob-2403-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ruf-jakob-2403-69.html'><strong>Ruf, Jakob</strong></a><br /><br />
+                    Fragment (fol. 29-35) aus Jacobus Rueffus, De conceptu et generatione hominis, 2. Aufl., Frankfurt, Sigmund Feyerabend, 1580. In-8; 7 Blatt mit 14 lateinischen Beschreibungen von Stellungen menschlicher Embryonen im Mutterleib und dem  geburtshilflichen Umgang mit ihnen, illustriert mit 14 Holzschnitten von Jost Amman. Ohne Einband; etwas finger- oder stockfleckig, insgesamt gut erhalten. *** Unbound fragment of an early obstetric work by a Swiss physician and writer with illustrations by the artist Jost Amman. Described and shown are 14 possible positions of the human embryo, with instructions for handling them obstetrically. <br /><br />
+                    <span style="display: none">VD16 R 3582; Becker, Amman 30. - Jakob Ruf (auch Ruef, Rueff, Ryff u. ä., um 1505 - 1558) war ein Schweizer Chirurg, Geburtshelfer und Schriftsteller. Von seinem erstmals 1554 erschienenen "Trostbüchlein von den Empfängnissen und Geburten der Menschen" liegen hier die Abschnitte 1-14 des 4. Teils der lateinischen Ausgabe geschlossen vor. Der aus Zürich stammende und in Nürnberg wirkende Illustrator Jost Ammann (1539-1591) gilt als einer der bedeutendsten Zeichner und Formschneider seiner Zeit.</span>
+                    <a href='/artikel/ruf-jakob-2403-69.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-69
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/saar-ferdinand-von-2403-70.html'>
+                            <img class='thumb' src='/img/thumb/saar-ferdinand-von-2403-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/saar-ferdinand-von-2403-70.html'><strong>Saar, Ferdinand von</strong></a><br /><br />
+                    Frauenbilder. Zwei neue Novellen. Heidelberg, Georg Weiß, 1892. Kl-8; 4 Bll., 211 pp mit einigen Vignetten; goldgepr. Orig.-Leinen mit Goldschnitt und Lesebändchen (etwas berieben, bestoßen und gering fleckig); Bindung gelockert, zwei Lagen im Falz neu eingeklebt, teilweise stärker fleckig. - Auf dem Vortitel eigenhändige Widmung "Herrn und Frau D:or Sigmund Pollak in treuer Erinnerung an den Sommer 1890 und mit herzlichem Glückwunsch für das Jahr 1892. Raitz in Mähren, Dezember 1891 Ferdinand von Saar". <br /><br />
+                    <span style="display: none">Wilpert-G. 17. - Erste Ausgabe. Vierte Sammlung der Novellen, enthält die Erzählungen "Ginevra" und "Geschichte eines Wienerkindes". Die Widmungsträger Dr. Sigmund Pollak und seine Frau Emma waren enge Freunde des Dichters in Döbling, dem 19. Wiener Gemeindebezirk, wo auch Saar eine Wohnung hatte. Pollak war der Leibarzt Saars; er betreute unter anderem die Bewohner des Israelitischen Blindeninstituts in Döbling.</span>
+                    <a href='/artikel/saar-ferdinand-von-2403-70.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-70
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schroeder-rudolf-alexander-2403-73.html'>
+                            <img class='thumb' src='/img/thumb/schroeder-rudolf-alexander-2403-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schroeder-rudolf-alexander-2403-73.html'><strong>Schroeder, Rudolf Alexander</strong></a><br /><br />
+                    Elysium. Ein Buch Gedichte. Leipzig, Insel, 1906. Gr-8; (36) pp, 1 Bl. Errata beiligend; flexibles Orig.-Pergament mit goldgeprägtem Rückentitel, zweiseitig unbeschnitten; eine Seite geringfügig verfärbt. - Nr. 141 von 300 handschriftlich numerierten Exemplaren. Breitrandiger Druck mit Initialen in Rot. <br /><br />
+                    <span style="display: none">Sarkowski 1535; Wilpert-G. 12. - Erste Ausgabe. Rudolf Alexander Schröder (1878-1962) war Mitbegründer der Zeitschrift "Die Insel" und ein vielseitiger Dichter und Übersetzer, der unter anderem zur Erneuerung des evangelischen Kirchenliedes beitrug und auch erfolgreich als Architekt und Maler wirkte. Sein von der Ästhetik des Jugendstils geprägter Liederzyklus "Elysium" ist dem Andenken des Komponisten Felix von Rath gewidmet. Unser Exemplar enthält auch das oft fehlende und bei Sarkowski nicht erwähnte Druckfehlerverzeichnis.</span>
+                    <a href='/artikel/schroeder-rudolf-alexander-2403-73.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-73
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-gotthilf-heinrich-von-2403-74.html'>
+                            <img class='thumb' src='/img/thumb/schubert-gotthilf-heinrich-von-2403-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-gotthilf-heinrich-von-2403-74.html'><strong>Schubert, Gotthilf Heinrich von</strong></a><br /><br />
+                    Die Urwelt und die Fixsterne. Zweite, zum Theil umgearbeitete Auflage. Dresden und Leipzig, Arnold, 1839. In-8; 4 Bll., 298, (1) pp; Halbleinen der Zeit mit goldgepr. Titel und Adelssignet auf dem Rücken; Deckel berieben, stellenweise leicht gebräunt oder etwas knittrig. - Selten. <br /><br />
+                    <span style="display: none">Überarbeitete Fassung der 1822 erschienenen ersten Ausgabe, die mit dem Untertitel "Eine Zugabe zu den Ansichten von der Nachtseite der Naturwissenschaft" versehen war. Der deutsche Arzt, Naturforscher, Mystiker und Naturphilosoph G. H. Schubert versuchte in seinen Werken eine religiös fundierte Gesamtdeutung des Kosmos; sein 1814 erschienenes Hauptwerk "Die Symbolik des Traumes" gehörte zu den einflussreichsten Büchern seiner Zeit und wirkte noch auf Sigmund Freud und C. G. Jung.</span>
+                    <a href='/artikel/schubert-gotthilf-heinrich-von-2403-74.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-74
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/spillmann-franz-2403-76.html'>
+                            <img class='thumb' src='/img/thumb/spillmann-franz-2403-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/spillmann-franz-2403-76.html'><strong>Spillmann, Franz</strong></a><br /><br />
+                    Die Säugetiere Ecuadors im Wandel der Zeit. Quito, Universidad Central, 1931. Gr-8; Titel, 112 pp, 24 Tafeln (meist mit montierten Lichtdrucken nach Fotographien, eine Abb. handkoloriert); schlichter zeitgenössischer Leinenband mit Exlibris des amerikanischen Naturforschers Frederick Martin Brown (1903-1993). <br /><br />
+                    <span style="display: none">Seltene paläontologisch-zoologische Studie, die auch archäologische Funde miteinbezieht. Der österreichische Paläontologe Franz Spillmann (1901-1988) zog 1925 nach Ecuador, wo er zunächst Direktor des naturwissenschaftlichen Kabinetts der Universität Quito und dann Professor daselbst wurde. Später lehrte er in Peru, dazwischen und danach war er in Österreich tätig. - Kein Exemplar im österreichischen Bibliothekenverbund nachweisbar.</span>
+                    <a href='/artikel/spillmann-franz-2403-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-76
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-77>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/strauss-johann-2403-77.html'>
+                            <img class='thumb' src='/img/thumb/strauss-johann-2403-77.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/strauss-johann-2403-77.html'><strong>Strauß, Johann</strong></a><br /><br />
+                    Liebes-Lieder. Walzer für das Pianoforte. 114tes Werk. Wien, Carl Haslinger, (1852), Platten-Nr. 11516. Quer-4; 11 pp (lithographierter Umschlag mit Titel und 9 pp gestochene Noten); Orig.-Broschur mit Fadenheftung; Schäden im Falz und an den Rändern alt hinterlegt, gelegentlich etwas stockfleckig. - Auf Seite 9 ein die Noten nicht beeinträchtigender kleiner Plattenschaden. <br /><br />
+                    <span style="display: none">Weinmann 77. - Erste Ausgabe. Der Walzer war unter dem Titel "Liebesgedichte" angekündigt und am 18. Juni 1852 im Wiener Volksgarten unter dem Namen "Liebesständchen" uraufgeführt worde; der heute gebräuchliche Name "Liebeslieder" geht auf die vorliegende erste Druckversion zurück. Der immer noch beliebte Walzer gilt als eines der ersten Meisterwerke von Johann Strauß.</span>
+                    <a href='/artikel/strauss-johann-2403-77.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-77
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/tanz-2403-78.html'>
+                            <img class='thumb' src='/img/thumb/tanz-2403-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/tanz-2403-78.html'><strong>Tanz</strong></a><br /><br />
+                    Die Tanzkunst und die Tänze. Ein vollständiges Handbuch der Tanzkunst zur Erlernung aller modernen Tanzarten, sowie eines eleganten Benehmens beim Tanze. Ferner enthaltend die Nationaltänze unserer Culturvölker, ebenso die hauptsächlichsten historischen Tänze u. Volksfeste älterer u. neuerer Zeit. Nebst einem Originalbeitrag: Quadrille noblesse mit 69 Illustrationen componirt von Eduard Reisinger Inhaber eines Instituts für höhere Tanzkunst. 3. umgearb. Aufl. Wien, C. Daberkow, 1889. In-8; XII, 255, (1) pp mit 189 Abb.; orig. Halbleinen mit farbiger Deckelillustration (etwas bestoßen und angeschmutzt, hinterer Deckel wellig und stärker fleckig); stellenweise etwas gebräunt, einzelne Gebrauchsspuren, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Nicht bei Derra de Moroda und Holzmann-B. - Maßgebliche Ausgabe dieses anonym erschienenen seltenen Handbuchs, das auch heute noch zur Rekonstruktion von Tänzen des 19. Jhs. herangezogen wird.</span>
+                    <a href='/artikel/tanz-2403-78.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-78
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/vansleb-j-m-2403-82.html'>
+                            <img class='thumb' src='/img/thumb/vansleb-j-m-2403-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/vansleb-j-m-2403-82.html'><strong>Vansleb, J. M.</strong></a><br /><br />
+                    Histoire de léglise dAlexandrie, fondée par S. Marc, Que nous appelons celle des Jacobites-coptes dEgypte. Écrite au Caire même, en 1672. &1673. Paris, Clousier & Promé, 1677. Kl-8; 15 Bll., 348 pp, 10 Bll. Index, mehrere Vignetten; Lederband der Zeit mit Rücken- und Kantenvergoldung sowie Sprenkelschnitt (etwas berieben, Rücken mit leichten Wurmspuren, Vorsätze mit kleinen Mängeln); vereinzelt gering stockfleckig oder gebräunt, insgesamt gut erhalten. - Auf dem hinteren Innendeckel Exlibris des österreichischen Staatsmannes Aloys Graf Harrach (1669-1742). <br /><br />
+                    <span style="display: none">ADB 41, 159 ff. - Wichtige Quelle zur Geschichte der koptischen Kirche und ihrer Liturgie. Der in Erfurt als Sohn eines lutherischen Predigers geborene Orientalist und Reisende Johann Michael Wansleben (so sein ursprünglicher Name) bereiste zunächst im Auftrag und auf Kosten des Herzog Ernst von Gotha, später des französischen Ministers Colbert Ägypten, um dort zu forschen und orientalische Handschriften zu sammeln; zwischendurch konvertierte er in Rom zum Katholizismus und trat in den Dominikanerorden ein. Die geplante Weiterführung seiner Studien in Äthiopien scheiterte an Wanslebens ausschweifender Lebensweise und Geldverschwendung, die ihm die Unterstützung seiner Mäzene entzog. - Das vorliegende Werk ist im Handel kaum auffindbar.</span>
+                    <a href='/artikel/vansleb-j-m-2403-82.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-82
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/weidmann-franz-carl-2403-85.html'>
+                            <img class='thumb' src='/img/thumb/weidmann-franz-carl-2403-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/weidmann-franz-carl-2403-85.html'><strong>[Weidmann, Franz Carl]</strong></a><br /><br />
+                    Panorama der Oesterreichischen Monarchie, ihrer schönsten und merkwürdigsten Gegenden, ... so wie der interessantesten Donau-Ansichten. Neue Ausgabe. 3 Bde. Pesth, Hartleben, 1846. In-8; Vortitel, Titel, farblithogr. Widmungsblatt, VIII, 345 pp, 1 Bl.; 255 pp (inkl. Titel), 1 Bl.; 279 pp (inkl. Vortitel und Titel), 1 Bl.; zus. 120 Stahlstiche (inkl. gest. Titel mit Vignette); blindgepr. schwarzes Leinen der Zeit mit Romantiker-Rückenvergoldung (bestoßen, Fehlstellen im Bezug, Vorsätze erneuert, Bindungen gelockert); Text unterschiedlich stark gebräunt bzw. stockfleckig, einige Seiten im Bundsteg beschädigt, gelegentlich Anstreichungen oder Marginalien; die Ansichten (zumeist mit Seidenpapiervorsätzen) überwiegend sauber. - Ohne den Vortitel zu Bd. 2. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 814; Slg. Eckl 3, 471. - Titelauflage des klassischen Ansichtenwerks (Erstausgabe 1839-1840) mit unsystematisch angeordneten, jedoch noch heute lesenswerten Ortsbeschreibungen aus verschiedenen Regionen des Habsburgerreichs. Die Stiche (nach Zeichnungen von Thomas Ender, Jakob und Rudolf Alt u. a.) zeigen neben Landschaftsbildern vor allem Detail- und Gesamtansichten von Örtlichkeiten der Monarchie, darunter auch selten dargestellte.</span>
+                    <a href='/artikel/weidmann-franz-carl-2403-85.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-85
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ziegler-anton-2403-91.html'>
+                            <img class='thumb' src='/img/thumb/ziegler-anton-2403-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ziegler-anton-2403-91.html'><strong>Ziegler, Anton</strong></a><br /><br />
+                    Der kaiserl. könig. Polizei-Bezirk Mariahilf mit den Vorstädten Laimgrube und an der Wien, Windmühle, Mariahilf, Magdalenengrund und Gumpendorf. (Häuser-Schema der kaiserl. königl. Haupt- und Residenzstadt Wien mit Bezeichnung der Schilde, Gassen, Benennung der Hauseigentümer ... 6. verm. u. verb. Aufl.). [Wien], A. Ziegler, 1842. Kl-8; 84 pp, gefalteter Bezirksplan als Beilage; späteres Halbleinen mit aufgezogenem Orig.-Umschlag (Rücken mit kleinen Schäden); leichte Alters- und Gebrauchssspuren, Erscheinungsjahr handschriftlich korrigiert; Plan auf Leinen aufgezogen, leicht ankoloriert, etwas knapprandig und geringfügig fleckig. <br /><br />
+                    <span style="display: none">Giebisch-Gugitz 12665. - Wichtige Quelle zur Lokal-, Sozial- und Wirtschaftsgeschichte.</span>
+                    <a href='/artikel/ziegler-anton-2403-91.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-91
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

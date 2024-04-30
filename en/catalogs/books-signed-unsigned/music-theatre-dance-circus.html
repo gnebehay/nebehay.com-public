@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books (signed &amp; unsigned)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Books (signed &amp; unsigned)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Music, Theatre, Dance, Circus
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/books-signed-unsigned.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/early-printed-books.html'>Early Printed Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/local-history-and-topography.html'>Local History and Topography</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/botany-zoology-agriculture-horsemanship-hunting.html'>Botany, Zoology, Agriculture, Horsemanship, Hunting</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/geography-travel-ethnology.html'>Geography, Travel, Ethnology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/history-archeology-numismatics.html'>History, Archeology, Numismatics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/children-s-books.html'>Children&#39;s Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/gastronomy-sports-and-games-miscellaneous.html'>Gastronomy, Sports and Games, Miscellaneous</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/art-and-crafts.html'>Art and Crafts</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/literature-liguistics-books-about-books.html'>Literature, Liguistics, Books about Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/medicine-psychology-pedagogics.html'>Medicine, Psychology, Pedagogics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/militaria-and-naval-matters.html'>Militaria and Naval Matters</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/science-mathematics-technology.html'>Science, Mathematics, Technology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/philosophy-and-religion.html'>Philosophy and Religion</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/politics-law-economics.html'>Politics, Law, Economics</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2302-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/barnum-phineas-taylor-2302-9.html'>
+                            <img class='thumb' src='/img/thumb/barnum-phineas-taylor-2302-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/barnum-phineas-taylor-2302-9.html'><strong>Barnum, Phineas Taylor</strong></a><br /><br />
+                    Leben und Abenteuer P.T. Barnum's, vormaligen Theaterdirectors in New-York, seine großartigen Unternehmungen, seine Kunstfahrten mit Jenni Lind, mit Tom Thumb u. A. Von ihm selbst beschrieben. Aus dem Englischen. 3 Tle. in 1 Bd. Pest, Wien und Leipzig, Hartleben, 1855. Kl-8; 3 Titel, 192, 171, 155 pp; schlichtes Halbleinen der Zeit (berieben, unteres Kapital etwas eingerissen); stellenweise stockfleckig, einzelne kleine Papiermängel. <br /><br />
+                    <span style="display: none">Lesenswerte schillernde Autobiographie des amerikanischen Schaustellers, Museumsgründers, Zirkusunternehmers und Politikers P. T. Barnum (1810-1891), der mit teilweise höchst fragwürdigen Methoden geschäftlich überaus erfolgreich war ("König Humbug"); in der Psychologie ist der Barnum-Effekt nach ihm benannt. Eine von zwei deutschen Ausgaben im Jahr der amerikanischen Erstausgabe und wesentlich seltener als die in Leipzig unter dem Titel "Barnum der Kaufmann, Journalist und Raritätenmann" erschienene.</span>
+                    <a href='/en/articles/barnum-phineas-taylor-2302-9.html'>Continue reading</a><br /><br />
+                    Order no. 2302-9
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-2305-10.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-2305-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-2305-10.html'><strong>Beethoven, Ludwig van</strong></a><br /><br />
+                    [Wellingtons Sieg oder Die Schlacht bey Vittoria / Für das Piano-Forte]. [Wien, S. A. Steiner und Comp., 1816]. Platten-Nr. C. D. S. 2361. Quer-4; 29 pp, davon 28 pp gestochene Noten; späterer Leinenband mit altem Buntpapierbezug (dieser etwas rissig). - Geringfügig gebräunt und stellenweise etwas stock- oder fingerfleckig, eine nicht störende Klebespur im Falz; insgesamt gut erhaltenes und attraktives Exemplar. - Ohne das gestochene Titelblatt (dieses in Kopie beiliegend); auf dem vorderen Deckel herzförmiges Papierschildchen mit Bemerkung "cette musique surtout doit plaire à un anglais" von alter Hand. <br /><br />
+                    <span style="display: none">Slg. Hoboken 391. - Erstdruck des Klavierauszugs von Beethovens sinfonischem Schlachtgemälde op. 91, das den Sieg Großbritanniens über Napoleon feiert und unter anderem das patriotische Lied "Rule, Britannia!" und die britische Nationalhymne "God Save the King" verarbeitet; es wurde am 8. Dezember 1813 im Redoutensaal der Wiener Hofburg unter der Aufsicht des Komponisten mit großen Erfolg uraufgeführt. Der vorliegende Erstdruck bringt auf der ersten Seite die Pränumerations-Anzeige für "Zwey neue grosse Sinfonien (in A. und F. dur)" - Beethovens Symphonien Nr. 7 und 8; für sie bietet der Verleger Sigmund Anton Steiner neben Orchesterfassung und Klavierauszug hier gleich auch eine Reihe von Arrangements für verschiedene Instrumentalgruppen an.</span>
+                    <a href='/en/articles/beethoven-ludwig-van-2305-10.html'>Continue reading</a><br /><br />
+                    Order no. 2305-10
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-16>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/dermota-anton-sammlung-2109-16.html'>
+                            <img class='thumb' src='/img/thumb/dermota-anton-sammlung-2109-16.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/dermota-anton-sammlung-2109-16.html'><strong>Dermota, Anton (Sammlung)</strong></a><br /><br />
+                    Katalog der Sammlung Anton Dermota. Musikhandschriften und Musikerbriefe. Bearbeitet von Thomas Leibnitz und Agnes Ziffer. (Publikationen des Instituts für Österr. Musikdokumentation 12). Tutzing, Hans Schneider, 1988. Gr-8; IX (inkl. Porträt), 190 pp mit 46 Abb.; goldgeprägtes Orig.-Leinen. - Dazu als Beigaben: Herbert Zeman, Autographen aus drei Jahrhunderten. Eine Dokumentation der Sammlung Dermota, Graz - Wien - Köln 1987; Die Handschriften der Meister. Berühmte Werke der Tonkunst im Autograph, Ausstellungskat. der Gesellschaft der Musikfreunde in Wien 1966; Emanuel Winternitz, Musical Autographs from Monteverdi to Hindemith. 2 Bände. 2. Aufl., New York 1965. - Zusammen 5 Bände. <br /><br />
+                    <span style="display: none">Catalogue raisonné der bedeutenden Sammlung des großen Sängers (1910-1989), in kleiner Auflage gedruckt. Verzeichnet 612 Nummern, teilweise mit Kommentar oder Abbildung.</span>
+                    <a href='/en/articles/dermota-anton-sammlung-2109-16.html'>Continue reading</a><br /><br />
+                    Order no. 2109-16
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/egk-werner-1705-22.html'>
+                            <img class='thumb' src='/img/thumb/egk-werner-1705-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/egk-werner-1705-22.html'><strong>Egk, Werner</strong></a><br /><br />
+                    Variationen über ein karibisches Thema. Studienpartitur. Mainz, Schott, (1960). Gr-8; 2 Bll., 175, (1) pp; OKart. (geringfügig gebräunt, leichte Knickspuren). - Auf dem Titelblatt eigh. Widmung und Unterschrift des Komponisten, 16. 8. 1960. <br /><br />
+                    <span style="display: none">Das 1959 komponierte Orchesterwerk wurde am 18. 1. 1960 in Freiburg uraufgeführt; szenische Aufführungen als Ballett tragen den zusätzlichen Titel "Danza". Werner Egk (eigentlich Werner Joseph Mayer, 1901-1983) gilt als Repräsentant des deutschen Neoklassizismus und des modernen Musiktheaters.</span>
+                    <a href='/en/articles/egk-werner-1705-22.html'>Continue reading</a><br /><br />
+                    Order no. 1705-22
+                    <br />
+                    
+                        € 80,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-21>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/eysler-prosl-robert-maria-1810-21.html'>
+                            <img class='thumb' src='/img/thumb/eysler-prosl-robert-maria-1810-21.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/eysler-prosl-robert-maria-1810-21.html'><strong>Eysler. - Prosl, Robert Maria</strong></a><br /><br />
+                    Edmund Eysler. Aus Wiens zweiter klassischer Operettenzeit. Wien, K. Kühne, 1947. In-8; Porträt-Frontispiz, 119 pp, mehrere Fototaf.; OHLn. mit Deckelvignette und Rückenprägung; papierbedingt leicht gebräunt, Vorsätze mit kleinen Klebebandresten. - Numeriertes Exemplar (A 40) mit Signatur des Komponisten auf dem Titelblatt, darunter zusätzliche eigh. Notenzeile (erste 4 Takte des Walzers "Junge Mädchen tanzen gern"); auf dem Vorsatz eingeklebte Echtheitsbestätigung des Wiener Antiquars J. M. Tomanek vom 9. 6. 1947. <br /><br />
+                    <span style="display: none">Der Komponist Edmund Eysler (1874-1949) erzielte vor allem mit seinen vom Wiener Lokalokolorit geprägten Operetten große Erfolge, doch hatte er seiner jüdischen Abstammung wegen unter dem Nationalsozialismus Aufführungsverbot. Das hier von Eysler zitierte Walzerlied "Junge Mädchen tanzen gern" stammt aus seiner Operette "Der Frauenfresser" (Uraufführung 1911).</span>
+                    <a href='/en/articles/eysler-prosl-robert-maria-1810-21.html'>Continue reading</a><br /><br />
+                    Order no. 1810-21
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/fahrbach-philipp-jr-2102-24.html'>
+                            <img class='thumb' src='/img/thumb/fahrbach-philipp-jr-2102-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/fahrbach-philipp-jr-2102-24.html'><strong>Fahrbach, Philipp jr.</strong></a><br /><br />
+                    Wo man singt. Walzer für das Pianoforte ... Op. 122. Budapest, Táborszky & Parsch, Verlags-Nr. 711 (um 1880). In-4; 11, (1) pp mit Noten und orig. Papierumschlag mit dekorativer farblithograph. Deckelillustration; Umschlag mit Bugschäden, altem Besitzvermerk und etwas fleckig (der hintere Deckel stärker); innen tadellos. <br /><br />
+                    <span style="display: none">Philipp Fahrbach der Jüngere (184-1894) leitete seit 1855 die von seinem Vater gegründete Kapelle und feierte mit ihr große Triumphe bei der Weltausstellung Paris 1878. Er schrieb etwa 350 Tänze und Märsche. Während sein Vater eng mit Johann Strauß Sohn zusammenarbeitete, galt er als dessen Konkurrent.</span>
+                    <a href='/en/articles/fahrbach-philipp-jr-2102-24.html'>Continue reading</a><br /><br />
+                    Order no. 2102-24
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/goldoni-carlo-montucci-antonio-hrsg-2001-31.html'>
+                            <img class='thumb' src='/img/thumb/goldoni-carlo-montucci-antonio-hrsg-2001-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/goldoni-carlo-montucci-antonio-hrsg-2001-31.html'><strong>Goldoni, Carlo - Montucci, Antonio (Hrsg.)</strong></a><br /><br />
+                    Scelta completa di tutte le migliori commedie di Carlo Goldoni preceduta da un compendio storico del Teatro Italiano. 4 Bde. (so komplett). Lipsia (Leipzig), F. Fleischer, 1828. Kl-8; XXVIII, 1 Bl., 275 pp; 2 Bll., 308 pp; 2 Bll., 408 pp; 2 Bll.; 434 pp; dekorative Halblederbände der Zeit mit gold- und blindgeprägten Rücken sowie Sprenkelschnitt (geringfügig berieben und bestoßen); teilweise etwas gebräunt und vereinzelt stockfleckig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Hübsche, in Deutschland erschienene Auswahlausgabe der Stücke Goldonis in Originalsprache. Der Herausgeber (1762-1829) war Jurist, Sinologe und Sprachlehrer.</span>
+                    <a href='/en/articles/goldoni-carlo-montucci-antonio-hrsg-2001-31.html'>Continue reading</a><br /><br />
+                    Order no. 2001-31
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/laszlo-carl-fenkart-rolf-2309-44.html'>
+                            <img class='thumb' src='/img/thumb/laszlo-carl-fenkart-rolf-2309-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/laszlo-carl-fenkart-rolf-2309-44.html'><strong>Laszlo, Carl - Fenkart, Rolf</strong></a><br /><br />
+                    Des Geometers Hochzeit eine tragische Revue. Basel, Panderma Verlag Carl Laszlo, (1957). In-folio; 24 pp (Wiedergabe von Handschrift Carl Laszlos bzw. Notenhandschrift von Rolf Fenkart); orig.-kartoniert (leichte Gebrauchsspuren, unteres Kapital mit kleinen Schäden). - Nr. 32 einer limitierten Auflage. <br /><br />
+                    <span style="display: none">Carl Laszlo (ungarisch László Károly, 1923-2013) war ein ungarisch-schweizerischer Kunsthändler, Sammler, Psychoanalytiker und Autor, der mehrere Konzentrationslager überlebte; seine dramatischen Versuche sind von den Ideen des absurden Theaters geprägt. Rolf Fenkart (geb. 1931), ein Vertreter der Zwölftonmusik, wandte sich in der Folge der Astronomie und später der Literatur zu. Das Jean Cocteau gewidmete Dramolett "Des Geometers Hochzeit" ist im vorliegenden Heft sowohl mit seinem Text wie auch in der vertonten Fassung vertreten, weiters sind kurze Notizen zu den ersten Aufführungen beigefügt.</span>
+                    <a href='/en/articles/laszlo-carl-fenkart-rolf-2309-44.html'>Continue reading</a><br /><br />
+                    Order no. 2309-44
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/liszt-bory-robert-2003-58.html'>
+                            <img class='thumb' src='/img/thumb/liszt-bory-robert-2003-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/liszt-bory-robert-2003-58.html'><strong>Liszt. - Bory, Robert</strong></a><br /><br />
+                    La vie de Franz Liszt par l'image. Précedée d'une introduction biographique par Alfred Cortot. (Genf), Journal de Genève, 1936. In-4; 249 pp mit zahlr. Abb., 1 Bl:, Ln. m. goldgepr. Rückenschildchen, Teile der Orig.-Broschur (mit faksimilierter Signatur Liszts) miteingebunden; erstes weißes Blatt gebräunt, sonst tadellos. - Nr. 29/50 der Vorzugsausgabe auf unbeschnittenem van-Gelder-Bütten, im Druckvermerk von Bory und Cortot signiert. <br /><br />
+                    <span style="display: none">Standardwerk zur Ikonographie des Komponisten, hier in der seltenen, vom französischen Pianisten Alfred Cortot (1877-1962) mitsignierten Vorzugsausgabe.</span>
+                    <a href='/en/articles/liszt-bory-robert-2003-58.html'>Continue reading</a><br /><br />
+                    Order no. 2003-58
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/liszt-franz-1902-42.html'>
+                            <img class='thumb' src='/img/thumb/liszt-franz-1902-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/liszt-franz-1902-42.html'><strong>Liszt, Franz</strong></a><br /><br />
+                    Christus. Oratorium für Soli, Chor, Orgel und grosses Orchester. Klavierauszug. Adliswil (u. a.), Edition Kunzelmann, (nach 1979). Kl-4; 6 Bl., 241 pp Noten; OKart. <br /><br />
+                    <span style="display: none">Hrsg. von Gábor Darvas. Mit Einleitung von Klára Hamburger in Englisch und Deutsch.</span>
+                    <a href='/en/articles/liszt-franz-1902-42.html'>Continue reading</a><br /><br />
+                    Order no. 1902-42
+                    <br />
+                    
+                        € 36,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/neher-caspar-1903-32.html'>
+                            <img class='thumb' src='/img/thumb/neher-caspar-1903-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/neher-caspar-1903-32.html'><strong>Neher, Caspar</strong></a><br /><br />
+                    Johanna Balk. Oper in 3 Akten. Musik von Rudolf Wagner-Regeny. Wien, Universal-Edition, 1941. In-8; 43, (1) pp; OBrosch.; Umschlag und Textblock papierbedingt gebräunt, kleine Knickspuren und Fehlstellen. <br /><br />
+                    <span style="display: none">Der deutsch-österreichische Bühnenbilder Caspar Neher (1897-1962) ist vor allem durch die lebenslange Zusammenarbeit mit seinem Schulkollegen Bertolt Brecht bekannt. Er schrieb aber auch Libretti für Opern von Kurt Weill und Rudolf Wagner-Regeny.</span>
+                    <a href='/en/articles/neher-caspar-1903-32.html'>Continue reading</a><br /><br />
+                    Order no. 1903-32
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schonherr-karl-1708-79.html'>
+                            <img class='thumb' src='/img/thumb/schonherr-karl-1708-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schonherr-karl-1708-79.html'><strong>Schönherr, Karl</strong></a><br /><br />
+                    Erde. Eine Komödie des Lebens in drei Akten. Berlin, S. Fischer, 1908. Kl-8; 126 pp, 4 Bll.; illustr. Orig.-Leinen im Jugendstil (monogrammiert OE) mit Kopfgoldschnitt und Lesebändchen (minimal abgegriffen); Vortitel mit Farbstift-Nummer. - Auf Vortitel verso eigh. Widmung mit Unterschrift an den Schriftsteller und Redakteur Vinzenz Chiavacci und seine Frau Malvine. <br /><br />
+                    <span style="display: none">Wilpert-G.10. - Erstausgabe, hier im schönen Verlagseinband von Otto Eckmann, einem Hauptvertreter des "floralen" Jugendstils, der auch das Signet des S. Fischer Verlags entwarf. Der als Arzt und Schriftsteller tätige Karl Schönherr (1867-1943) heiratete nach dem Tod Chiavaccis (1916) dessen Witwe Malvine.</span>
+                    <a href='/en/articles/schonherr-karl-1708-79.html'>Continue reading</a><br /><br />
+                    Order no. 1708-79
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1703-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1703-79.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1703-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1703-79.html'><strong>Schubert, Franz</strong></a><br /><br />
+                    Schwanengesang. (Chant du Cygne). Deutsch und französisch. In Musik gesetzt für eine Singstimme mit Begleitung des Pianoforte. Ite [und 2te] Abteilung in 1 Bd. Wien und Leipzig, Tobias Haslinger, [1842, PN 8701-8714]. In-4; 64 gest. pp (inkl. Titel) mit Noten und Text, wiederholter Titel als Zwischentitel; prachtvoller dunkelbrauner Maroquinband derf Zeit mit reicher Romantiker-Goldprägung, Goldschnitt und Seidenmoiré-Vorsätzen, monogrammiert "A.S.", (Rücken aufgehellt, etwas berieben und fleckig); Vorsatzpapier stockfleckig, vereinzelt geringfügig gebräunt, sonst ausgezeichnet erhalten. <br /><br />
+                    <span style="display: none">Vgl. Slg. Hoboken 692 (dort nur 2. Teil). -  Der letzte Liederzyklus Schuberts (D 957/1-13), entstanden August-Oktober 1828 nach Gedichten von Ludwig Rellstab und Heinrich Heine und von Haslinger noch im selben Jahr posthum zusammen mit einem Lied nach Johann Gabriel Seidl (D 965A) unter dieser Bezeichnung erstmals veröffentlicht. Hier die erste Ausgabe mit deutsch-französischem Paralleltext in einem bemerkenswerten Einband.</span>
+                    <a href='/en/articles/schubert-franz-1703-79.html'>Continue reading</a><br /><br />
+                    Order no. 1703-79
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/strauss-johann-2205-69.html'>
+                            <img class='thumb' src='/img/thumb/strauss-johann-2205-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/strauss-johann-2205-69.html'><strong>Strauß, Johann</strong></a><br /><br />
+                    Wiener Blut. Walzer. Op. 354. (Pianoforte zweihändig). Wien, C. A. Spina's Nachfolger Friedrich Schreiber, Platten-Nr. 22959. In-4; 11 lithographierte Seiten (illustr. Umschlag mit Titel und 9 pp Noten); Fadenheftung (leichte Bugmängel, Mittelteil gelöst); Bleistiftvermerk auf Titel, etwas fingerfleckig, einzelne Randmängel. <br /><br />
+                    <span style="display: none">Vgl. Weinmann S. 100. - "Stich" (recte Lithographie) von F. Hahn. Zweiter Druck der im August 1873 erschienen ersten Ausgabe, mit zusätzlicher Verlagsangabe "Petersburg, A. Büttner"; beide Fassungen mit fehlerhafter Platten-Nr. 22459 auf dem Titelblatt. Auf diesem sind unter anderem der Stephansdom, der Kursalon im Wiener Stadtpark sowie der Große Musikvereinssaal dargestellt. Der Walzer wurde am 22. April 1873 vom Orchester der Hofoper bei einem Ball zur Vermählung von Erzherzogin Gisela mit Prinz Leopold von Bayern im Wiener Musikverein uraufgeführt.</span>
+                    <a href='/en/articles/strauss-johann-2205-69.html'>Continue reading</a><br /><br />
+                    Order no. 2205-69
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
