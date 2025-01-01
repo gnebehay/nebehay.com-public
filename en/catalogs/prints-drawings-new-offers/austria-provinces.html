@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings - New Offers</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik-neue-angebote/osterreich-bundeslander.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings - New Offers</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Austria - Provinces
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings-new-offers.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2412-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bgld-eisenstadt-2412-12.html'>
+                            <img class='thumb' src='/img/thumb/bgld-eisenstadt-2412-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bgld-eisenstadt-2412-12.html'><strong>(Bgld) Eisenstadt</strong></a><br /><br />
+                    "Eisenstadt." Chromolithographie von Georg Scheth aus "Das Pittoreske Österreich", 3. Lieferung, Wien 1840, 13 x 18 cm. - Gesamtansicht mit Schloss und Dom vom Hang des Leithagebirges aus. - Geringfügig gebräunt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 509/3/2.</span>
+                    <a href='/en/articles/bgld-eisenstadt-2412-12.html'>Continue reading</a><br /><br />
+                    Order no. 2412-12
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bgld-rust-2412-14.html'>
+                            <img class='thumb' src='/img/thumb/bgld-rust-2412-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bgld-rust-2412-14.html'><strong>(Bgld) Rust</strong></a><br /><br />
+                    "Rust am Neusiedler-See." Chromolithographie von Georg Scheth aus "Das Pittoreske Österreich", 3. Lieferung, Wien 1840, 13 x 18 cm. - Älteste gedruckte Ortsansicht. - Geringfügig gebräunt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 509/3/3.</span>
+                    <a href='/en/articles/bgld-rust-2412-14.html'>Continue reading</a><br /><br />
+                    Order no. 2412-14
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ktn-bleiburg-2412-15.html'>
+                            <img class='thumb' src='/img/thumb/ktn-bleiburg-2412-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ktn-bleiburg-2412-15.html'><strong>(Ktn) Bleiburg</strong></a><br /><br />
+                    "Pleyburg." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 13 x 17,5 cm. - Links sorgfältig angerändert. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/61.</span>
+                    <a href='/en/articles/ktn-bleiburg-2412-15.html'>Continue reading</a><br /><br />
+                    Order no. 2412-15
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-17>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ktn-villach-2412-17.html'>
+                            <img class='thumb' src='/img/thumb/ktn-villach-2412-17.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ktn-villach-2412-17.html'><strong>(Ktn) Villach</strong></a><br /><br />
+                    "Eigentlicher Grundtriß der Fürstlichen Bambergischen Statt Villach sampt ihrer gelegenheit 1649." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 28 x 31 cm. - Detailreiche Gesamtansicht der befestigten Stadt aus der Vogelschau mit vierzehnteiliger Legende. - Guter Abzug, oben und unten knapp und ungleichmäßig beschnitten. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/64.</span>
+                    <a href='/en/articles/ktn-villach-2412-17.html'>Continue reading</a><br /><br />
+                    Order no. 2412-17
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-aggsbach-dorf-gem-schonbuhel-aggsbach-2412-18.html'>
+                            <img class='thumb' src='/img/thumb/no-aggsbach-dorf-gem-schonbuhel-aggsbach-2412-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-aggsbach-dorf-gem-schonbuhel-aggsbach-2412-18.html'><strong>(Nö) Aggsbach Dorf, Gem. Schönbühel-Aggsbach</strong></a><br /><br />
+                    "Chartaus Aggspach". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15 cm. - Das 1380 gegründete und 1782 aufgehobene Kartäuserkloster mit Umfassungsmauer. - Minimal fleckig, im Unterrand von alter Hand beschriftet. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/II/3.</span>
+                    <a href='/en/articles/no-aggsbach-dorf-gem-schonbuhel-aggsbach-2412-18.html'>Continue reading</a><br /><br />
+                    Order no. 2412-18
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-arbesbach-2412-19.html'>
+                            <img class='thumb' src='/img/thumb/no-arbesbach-2412-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-arbesbach-2412-19.html'><strong>(Nö) Arbesbach</strong></a><br /><br />
+                    "Stockzahn". Signierte Radierung von Otto Neudert aus "Burgen und Städte in Niederdonau", St. Pölten 1944, 19 x 25 cm. - Breitrandiges Blatt, auf starkem Büttenpapier gedruckt. <br /><br />
+                    <span style="display: none">Blick über den Talgrund zur Ruine der mittelalterlichen Höhenburg. Der in Zwittau geborene Künstler (1906-1975) war Maler und Graphiker.</span>
+                    <a href='/en/articles/no-arbesbach-2412-19.html'>Continue reading</a><br /><br />
+                    Order no. 2412-19
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-aspang-2412-20.html'>
+                            <img class='thumb' src='/img/thumb/no-aspang-2412-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-aspang-2412-20.html'><strong>(Nö) Aspang</strong></a><br /><br />
+                    "Aspang". Kolorierte Lithographie von Fritz Koziol, um 1925, auf dem Passepartout beschriftet und signiert, 16 x 16 cm. - Der Hauptplatz mit dem Brunnen, dahinter die Pfarrkirche zum Hl. Florian. <br /><br />
+                    <span style="display: none">Der Offizier, Maler und Graphiker Fritz Koziol (um 1874 - nach 1934) schuf eine umfangreiche Reihe lithographischer Ansichten aus Österreich, die er mit Passepartouts versah und zu verschiedenen Mappen mit Titeln wie "Aus den Heimatbergen" oder "Aus Österreichs Bergen" zusammenstellte. Zumindest ein Teil dieser Mappen wurde von der "Wohlfahrtsaktion des Verbandes der Berufsmilitärgagisten Österreichs" ausgegeben, einem Sozialwerk der nach dem Zusammenbruch der Monarchie arbeitslos gewordenen Berufsoffiziere.</span>
+                    <a href='/en/articles/no-aspang-2412-20.html'>Continue reading</a><br /><br />
+                    Order no. 2412-20
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-durnstein-2412-24.html'>
+                            <img class='thumb' src='/img/thumb/no-durnstein-2412-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-durnstein-2412-24.html'><strong>(Nö) Dürnstein</strong></a><br /><br />
+                    "Stadtthor in Dürnstein." Farbholzstich nach Wilhelm Gause aus der Zeitschrift "Moderne Kunst" bei Verlag Bong, um 1890, ca. 20 x 22 cm. - Das Kremsertor mit Resten der Stadtmauer; im Hintergrund der Turm der Kunigundenkirche. <br /><br />
+                    <span style="display: none">Wilhelm Gause (1853-1916), deutsch-österreichischer Porträt- und Genremaler und Illustrator aus der Düsseldorfer Malerschule.</span>
+                    <a href='/en/articles/no-durnstein-2412-24.html'>Continue reading</a><br /><br />
+                    Order no. 2412-24
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-25>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-edlach-gem-reichenau-a-d-rax-2412-25.html'>
+                            <img class='thumb' src='/img/thumb/no-edlach-gem-reichenau-a-d-rax-2412-25.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-edlach-gem-reichenau-a-d-rax-2412-25.html'><strong>(Nö) Edlach, Gem. Reichenau a. d. Rax</strong></a><br /><br />
+                    "Beim Knappenhof". Farblithographie von Fritz Koziol, um 1925, auf dem Passepartout beschriftet und signiert, 16 x 16 cm. - Altes Gehöft an Berglehne. Aufgrund seiner Erzlagerstätten war Edlach bereits im frühen Mittelalter ein Standort der Eisenverarbeitung. <br /><br />
+                    <span style="display: none">Der Offizier, Maler und Graphiker Fritz Koziol (um 1874 - nach 1934) schuf eine umfangreiche Reihe lithographischer Ansichten aus Österreich, die er mit Passepartouts versah und zu verschiedenen Mappen mit Titeln wie "Aus den Heimatbergen" oder "Aus Österreichs Bergen" zusammenstellte. Zumindest ein Teil dieser Mappen wurde von der "Wohlfahrtsaktion des Verbandes der Berufsmilitärgagisten Österreichs" ausgegeben, einem Sozialwerk der nach dem Zusammenbruch der Monarchie arbeitslos gewordenen Berufsoffiziere.</span>
+                    <a href='/en/articles/no-edlach-gem-reichenau-a-d-rax-2412-25.html'>Continue reading</a><br /><br />
+                    Order no. 2412-25
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-gablitz-2412-26.html'>
+                            <img class='thumb' src='/img/thumb/no-gablitz-2412-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-gablitz-2412-26.html'><strong>(Nö) Gablitz</strong></a><br /><br />
+                    "Hochramalm". Signierter farbiger Homogendruck von E. Ozlberger, um 1935, 20 x 22 cm. - Sommerstimmung am beliebten Erholungsort im Wienerwald nördlich von Purkersdorf. <br /><br />
+                    <span style="display: none">Ekke Ozlberger (1891-1963), österreichischer Maler und Graphiker, Mitglied des Wiener Künstlerhauses.</span>
+                    <a href='/en/articles/no-gablitz-2412-26.html'>Continue reading</a><br /><br />
+                    Order no. 2412-26
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-27>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-heiligenkreuz-2412-27.html'>
+                            <img class='thumb' src='/img/thumb/no-heiligenkreuz-2412-27.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-heiligenkreuz-2412-27.html'><strong>(Nö) Heiligenkreuz</strong></a><br /><br />
+                    "Closter Heiligen Creyz". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15,5 cm. - Knapp beschnitten. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I/45.</span>
+                    <a href='/en/articles/no-heiligenkreuz-2412-27.html'>Continue reading</a><br /><br />
+                    Order no. 2412-27
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-klamm-gem-breitenstein-2412-28.html'>
+                            <img class='thumb' src='/img/thumb/no-klamm-gem-breitenstein-2412-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-klamm-gem-breitenstein-2412-28.html'><strong>(Nö) Klamm, Gem. Breitenstein</strong></a><br /><br />
+                    "Klamm". Signierte Radierung von Otto Neudert aus "Burgen und Städte in Niederdonau", St. Pölten 1944, 19 x 25 cm. - Breitrandiges Blatt, auf starkem Büttenpapier gedruckt. <br /><br />
+                    <span style="display: none">Der in Zwittau geborene Künstler (1906-1975) war Maler und Graphiker.</span>
+                    <a href='/en/articles/no-klamm-gem-breitenstein-2412-28.html'>Continue reading</a><br /><br />
+                    Order no. 2412-28
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-klosterneuburg-2412-29.html'>
+                            <img class='thumb' src='/img/thumb/no-klosterneuburg-2412-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-klosterneuburg-2412-29.html'><strong>(Nö) Klosterneuburg</strong></a><br /><br />
+                    "Closter Neüburg." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 19,5 x 31 cm. - Blick vom Leopoldsberg (früher "Kahlenberg") auf die Stadt mit dem Stift und die in zahlreiche Arme verzweigte Donau; im Hintergrund Korneuburg, rechts hinten der Bisamberg. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/20. - Die Stiftsanlage hier noch vor dem barocken Ausbau unter Karl VI.</span>
+                    <a href='/en/articles/no-klosterneuburg-2412-29.html'>Continue reading</a><br /><br />
+                    Order no. 2412-29
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-kreuzenstein-gem-leobendorf-2412-30.html'>
+                            <img class='thumb' src='/img/thumb/no-kreuzenstein-gem-leobendorf-2412-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-kreuzenstein-gem-leobendorf-2412-30.html'><strong>(Nö) Kreuzenstein, Gem. Leobendorf</strong></a><br /><br />
+                    "Burg Kreuzenstein". Lichtdruck nach Gemälde von C. Grefe aus "Alt-Oesterreich", Wien 1899, 24 x 31 cm. - Im Rand gestempelt. Textblatt beiliegend. <br /><br />
+                    <span style="display: none">Darstellung aus der Zeit der Wiedererrichtung der Burg unter Graf Johann Nepomuk Wilczek. Das von dem österreichischen Maler, Radierer und Lithographen Conrad Grefe (18231907) herausgegebene und verlegte Werk "Alt-Oesterreich" erschien als numerierte Loseblattsammlung und enthält vorwiegend Abbildungen bedeutender mittelalterlicher Bau- und Kunstdenkmäler.</span>
+                    <a href='/en/articles/no-kreuzenstein-gem-leobendorf-2412-30.html'>Continue reading</a><br /><br />
+                    Order no. 2412-30
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-laxenburg-2412-31.html'>
+                            <img class='thumb' src='/img/thumb/no-laxenburg-2412-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-laxenburg-2412-31.html'><strong>(Nö) Laxenburg</strong></a><br /><br />
+                    "k. k. Lust-Schloß Laxenburg." Altkolorierte Umrissradierung aus "Ansichten-Sammlung" bei Maria Geissler, Wien um 1815, 8 x 11 cm. - Der von Lucas von Hildebrandt ausgebaute sogenannte Blaue Hof kam 1762 in den Besitz von Kaiserin Maria Theresia und wurde dann von Nikolaus Pacassi nochmals großzügig erweitert. - Leicht altersfleckig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 193/10.</span>
+                    <a href='/en/articles/no-laxenburg-2412-31.html'>Continue reading</a><br /><br />
+                    Order no. 2412-31
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-laxenburg-2412-32.html'>
+                            <img class='thumb' src='/img/thumb/no-laxenburg-2412-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-laxenburg-2412-32.html'><strong>(Nö) Laxenburg</strong></a><br /><br />
+                    "Ansicht des K. K. Lustschlosses Laxenburg unweit Wien". Brauntonige Heliogravüre aus Ignaz Schwarz, Wiener Straßenbilder im Zeitalter des Rokoko, Wien 1914, Bildformat 17 x 26 cm. - Verkleinerte Wiedergabe der um 1786 bei Artaria in Wien erschienenen Umrissradierung von Johann Ziegler nach Laurenz Janscha. Separatabdruck mit Büttenrand. <br /><br />
+                    <span style="display: none">Zu Nebehay-Wagner 671/47.</span>
+                    <a href='/en/articles/no-laxenburg-2412-32.html'>Continue reading</a><br /><br />
+                    Order no. 2412-32
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-mauerbach-2412-33.html'>
+                            <img class='thumb' src='/img/thumb/no-mauerbach-2412-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-mauerbach-2412-33.html'><strong>(Nö) Mauerbach</strong></a><br /><br />
+                    "Charthauser Closter Maurbachr". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 16 cm. - Das um 1313 errichtete und 1782 aufgehobene ehemalige Kartäuser-Kloster mit dem Dorf Mauerbach im Hintergrund. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I/64.</span>
+                    <a href='/en/articles/no-mauerbach-2412-33.html'>Continue reading</a><br /><br />
+                    Order no. 2412-33
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-payerbach-2412-34.html'>
+                            <img class='thumb' src='/img/thumb/no-payerbach-2412-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-payerbach-2412-34.html'><strong>(Nö) Payerbach</strong></a><br /><br />
+                    "Payerbach". Kolorierte Lithographie von Fritz Koziol, um 1925, auf dem Passepartout beschriftet und signiert, 16 x 16 cm. - Blick auf die Kirche und einige unterhalb gelegene Häuser; im Hintergrund der Gahns. <br /><br />
+                    <span style="display: none">Der Offizier, Maler und Graphiker Fritz Koziol (um 1874 - nach 1934) schuf eine umfangreiche Reihe lithographischer Ansichten aus Österreich, die er mit Passepartouts versah und zu verschiedenen Mappen mit Titeln wie "Aus den Heimatbergen" oder "Aus Österreichs Bergen" zusammenstellte. Zumindest ein Teil dieser Mappen wurde von der "Wohlfahrtsaktion des Verbandes der Berufsmilitärgagisten Österreichs" ausgegeben, einem Sozialwerk der nach dem Zusammenbruch der Monarchie arbeitslos gewordenen Berufsoffiziere.</span>
+                    <a href='/en/articles/no-payerbach-2412-34.html'>Continue reading</a><br /><br />
+                    Order no. 2412-34
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-35>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-perchtoldsdorf-2412-35.html'>
+                            <img class='thumb' src='/img/thumb/no-perchtoldsdorf-2412-35.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-perchtoldsdorf-2412-35.html'><strong>(Nö) Perchtoldsdorf</strong></a><br /><br />
+                    "Perchtoldsdorf". Lichtdruck nach Gemälde von C. Grefe aus "Alt-Oesterreich", Wien 1899, 21,5 x 31,5 cm. - Im Rand gestempelt. - Beiliegend "Bürgerhaus in Perchtoldsdorf" aus demselben Werk sowie zwei Textblätter. <br /><br />
+                    <span style="display: none">Historische Darstellungen. Das von dem österreichischen Maler, Radierer und Lithographen Conrad Grefe (18231907) herausgegebene und verlegte Werk erschien als numerierte Loseblattsammlung und enthält vorwiegend Abbildungen bedeutender mittelalterlicher Bau- und Kunstdenkmäler.</span>
+                    <a href='/en/articles/no-perchtoldsdorf-2412-35.html'>Continue reading</a><br /><br />
+                    Order no. 2412-35
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-petronell-carnuntum-2412-36.html'>
+                            <img class='thumb' src='/img/thumb/no-petronell-carnuntum-2412-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-petronell-carnuntum-2412-36.html'><strong>(Nö) Petronell-Carnuntum</strong></a><br /><br />
+                    "Schloss Petronell mit ihren angehörigen als Mayerhoffgarten und ein theil des Thiergartens, ihro Gräfflichen Exelentz Herrn Grafen von Abensberg und Traun ... zugehörig." Kupferstich nach Clemens Beuttler aus Matthäus Merian, Topographia Provinciarum Austriacarum, 2. Anhang, Frankfurt 1656, 23 x 36 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407 Anh. II/2; Fauser 10818. - Älteste gedruckte Darstellung; eingezeichnet sind auch zahlreiche römische Mauerreste ("Fundamenter der Alten Statt Carnunta").</span>
+                    <a href='/en/articles/no-petronell-carnuntum-2412-36.html'>Continue reading</a><br /><br />
+                    Order no. 2412-36
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-pitten-2412-37.html'>
+                            <img class='thumb' src='/img/thumb/no-pitten-2412-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-pitten-2412-37.html'><strong>(Nö) Pitten</strong></a><br /><br />
+                    "Pitten". Kolorierte Lithographie von Fritz Koziol, um 1925, auf dem Passepartout beschriftet und signiert, 16 x 16 cm. - Ein Teil der ins Frühmittelalter zurückreichenden Burganlage, die den zweimaligen Angriffen der Türken widerstand und im späten 19. Jahrhundert zu einem Jagdschloss umgestaltet wurde. <br /><br />
+                    <span style="display: none">Der Offizier, Maler und Graphiker Fritz Koziol (um 1874 - nach 1934) schuf eine umfangreiche Reihe lithographischer Ansichten aus Österreich, die er mit Passepartouts versah und zu verschiedenen Mappen mit Titeln wie "Aus den Heimatbergen" oder "Aus Österreichs Bergen" zusammenstellte. Zumindest ein Teil dieser Mappen wurde von der "Wohlfahrtsaktion des Verbandes der Berufsmilitärgagisten Österreichs" ausgegeben, einem Sozialwerk der nach dem Zusammenbruch der Monarchie arbeitslos gewordenen Berufsoffiziere.</span>
+                    <a href='/en/articles/no-pitten-2412-37.html'>Continue reading</a><br /><br />
+                    Order no. 2412-37
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-38>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-purkersdorf-2412-38.html'>
+                            <img class='thumb' src='/img/thumb/no-purkersdorf-2412-38.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-purkersdorf-2412-38.html'><strong>(Nö) Purkersdorf</strong></a><br /><br />
+                    Aquarell, signiert Helga Blaas 1989, Bildausschnitt 26 x 20 cm. - Die alte Poststation mit Fassadendetail  (klassizistischer Hermes). - Gerahmt. <br /><br />
+                    <span style="display: none">Die ehemalige Fürnbergsche Poststation stammt aus dem 18. Jh. und wurde später mehrmals umgebaut.</span>
+                    <a href='/en/articles/no-purkersdorf-2412-38.html'>Continue reading</a><br /><br />
+                    Order no. 2412-38
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-39>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-raabs-a-d-thaya-2412-39.html'>
+                            <img class='thumb' src='/img/thumb/no-raabs-a-d-thaya-2412-39.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-raabs-a-d-thaya-2412-39.html'><strong>(Nö) Raabs a. d. Thaya</strong></a><br /><br />
+                    "Schloß Rabs." Kupferstich von Joseph Berkowitz nach Franz Collar aus F. X. Schweickhardt von Sickingen, Darstellung des Erzherzogthums Oesterreich unter der Ens, Wien 1831-1841, 9 x 15 cm. - Die mächtige Burganlage von Norden, vorne die Thaya. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 680/102.</span>
+                    <a href='/en/articles/no-raabs-a-d-thaya-2412-39.html'>Continue reading</a><br /><br />
+                    Order no. 2412-39
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-40>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-raxalpe-und-schneeberg-2412-40.html'>
+                            <img class='thumb' src='/img/thumb/no-raxalpe-und-schneeberg-2412-40.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-raxalpe-und-schneeberg-2412-40.html'><strong>(Nö) Raxalpe und Schneeberg</strong></a><br /><br />
+                    "Kahlmauer" - "Schneeberg v. d. Rax". Zwei Farblithographien von Fritz Koziol, um 1925, auf dem Passepartout beschriftet und signiert, je 16 x 16 cm. - Die Kahlmäuer auf der Nordseite der Rax und der Blick von dort zum Klosterwappen. <br /><br />
+                    <span style="display: none">Der Offizier, Maler und Graphiker Fritz Koziol (um 1874 - nach 1934) schuf eine umfangreiche Reihe lithographischer Ansichten aus Österreich, die er mit Passepartouts versah und zu verschiedenen Mappen mit Titeln wie "Aus den Heimatbergen" oder "Aus Österreichs Bergen" zusammenstellte. Zumindest ein Teil dieser Mappen wurde von der "Wohlfahrtsaktion des Verbandes der Berufsmilitärgagisten Österreichs" ausgegeben, einem Sozialwerk der nach dem Zusammenbruch der Monarchie arbeitslos gewordenen Berufsoffiziere.</span>
+                    <a href='/en/articles/no-raxalpe-und-schneeberg-2412-40.html'>Continue reading</a><br /><br />
+                    Order no. 2412-40
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-schallaburg-2412-41.html'>
+                            <img class='thumb' src='/img/thumb/no-schallaburg-2412-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-schallaburg-2412-41.html'><strong>(Nö) Schallaburg</strong></a><br /><br />
+                    "Schaleburg. In Unter Östreich." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, 1. Anhang, Frankfurt 1656, 13 x 17,5 cm. - Druckbedingt teilweise knapprandig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/Anh.I/10b. - Die ausgedehnte Anlage des Renaissance-Schlosses wird heute als Ausstellungszentrum des Landes Niederösterreich genutzt.</span>
+                    <a href='/en/articles/no-schallaburg-2412-41.html'>Continue reading</a><br /><br />
+                    Order no. 2412-41
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-waidhofen-a-d-ybbs-2412-44.html'>
+                            <img class='thumb' src='/img/thumb/no-waidhofen-a-d-ybbs-2412-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-waidhofen-a-d-ybbs-2412-44.html'><strong>(Nö) Waidhofen a. d. Ybbs</strong></a><br /><br />
+                    "Waidhofen". Signierte Radierung von Otto Neudert aus "Burgen und Städte in Niederdonau", St. Pölten 1944, 19 x 25 cm. - Breitrandiges Blatt, auf starkem Büttenpapier gedruckt. <br /><br />
+                    <span style="display: none">Blick über die Ybbs auf den Stadtkern. Der in Zwittau geborene Künstler (1906-1975) war Maler und Graphiker.</span>
+                    <a href='/en/articles/no-waidhofen-a-d-ybbs-2412-44.html'>Continue reading</a><br /><br />
+                    Order no. 2412-44
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-45>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-wallsee-schloss-gem-wallsee-sindelburg-2412-45.html'>
+                            <img class='thumb' src='/img/thumb/no-wallsee-schloss-gem-wallsee-sindelburg-2412-45.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-wallsee-schloss-gem-wallsee-sindelburg-2412-45.html'><strong>(Nö) Wallsee (Schloss), Gem. Wallsee-Sindelburg</strong></a><br /><br />
+                    "Wallsee". Tonlithographie aus Franz Xaver Sandmann, Donau-Reise von Linz bis Wien, um 1860, 7,5 x 11,5 cm. - Dazu als Beigabe: "Walsee." Kupferstich aus Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 9 x 17 cm. <br /><br />
+                    <span style="display: none">Nebehay-W. 596/4 und 407/51b. - Das Geschlecht der Wallseer bildete im 14. und 15. Jahrhundert eine der führenden Adelsfamilien unter den Habsburgern.</span>
+                    <a href='/en/articles/no-wallsee-schloss-gem-wallsee-sindelburg-2412-45.html'>Continue reading</a><br /><br />
+                    Order no. 2412-45
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-46>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/no-wiener-neustadt-2412-46.html'>
+                            <img class='thumb' src='/img/thumb/no-wiener-neustadt-2412-46.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/no-wiener-neustadt-2412-46.html'><strong>(Nö) Wiener Neustadt</strong></a><br /><br />
+                    "Newstatt." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 9 x 31 cm. - Gesamtansicht mit Stadtpfarrkirche und Burg von Südosten; im Himmel Stadtwappen. - Oberer Teil eines Kupferstichs mit ursprünglich zwei Ansichten. Kräftiger Abzug mit sorgfältig restaurierter Mittelfalte. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/23a; Fauser 15451; Bachmann 1522. - Älteste gedruckte Stadtansicht.</span>
+                    <a href='/en/articles/no-wiener-neustadt-2412-46.html'>Continue reading</a><br /><br />
+                    Order no. 2412-46
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-aschach-2412-47.html'>
+                            <img class='thumb' src='/img/thumb/oo-aschach-2412-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-aschach-2412-47.html'><strong>(Oö) Aschach</strong></a><br /><br />
+                    "Aschach." Kolorierter Stahlstich von W. Henshall nach Thomas Ender aus Franz Carl Weidmann, Panorama der Oesterreichischen Monarchie, 1839-1840, 10 x 16 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 814/46.</span>
+                    <a href='/en/articles/oo-aschach-2412-47.html'>Continue reading</a><br /><br />
+                    Order no. 2412-47
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-hallstatt-2412-49.html'>
+                            <img class='thumb' src='/img/thumb/oo-hallstatt-2412-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-hallstatt-2412-49.html'><strong>(Oö) Hallstatt</strong></a><br /><br />
+                    "Der Hallstätter See von Hallstatt aus in Ober-Oesterreich." Altkolorierte Lithographie nach Jakob Alt aus "Bilder aus den Alpen der Österreichischen Monarchie" bei Mansfeld & Co., Wien 1833, 17 x 23,5 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 22/5. - Schönes breitrandiges Blatt aus der sogenannten "Kleinen Ansichtenserie von Jakob Alt".</span>
+                    <a href='/en/articles/oo-hallstatt-2412-49.html'>Continue reading</a><br /><br />
+                    Order no. 2412-49
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-hallstatt-hirlatzhohle-2412-50.html'>
+                            <img class='thumb' src='/img/thumb/oo-hallstatt-hirlatzhohle-2412-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-hallstatt-hirlatzhohle-2412-50.html'><strong>(Oö) Hallstatt / Hirlatzhöhle</strong></a><br /><br />
+                    "Ansicht des Kessels bey Hallstadt nächst dem See." Altkolorierte Umrissradierung von Johann Ziegler nach Friedrich Ferdinand Runk aus "Vues de différens Bourgs et Villes de Autriche" bei F. X. Stöckl, Wien um 1810, 26,5 x 40,5 cm. - Die von Wald umgebene Karstquelle, ein bemerkenswertes Naturdenkmal zwischen Obertraun und Hallstatt. - Minimale Mängel im breiten Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 578/2. - Schönes Blatt. Der Kessel gehört zum Riesenhöhlensystem der Hirlatzhöhle im Dachsteingebirge.</span>
+                    <a href='/en/articles/oo-hallstatt-hirlatzhohle-2412-50.html'>Continue reading</a><br /><br />
+                    Order no. 2412-50
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-lambach-2412-51.html'>
+                            <img class='thumb' src='/img/thumb/oo-lambach-2412-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-lambach-2412-51.html'><strong>(Oö) Lambach</strong></a><br /><br />
+                    "Lambach." Kolorierter Stahlstich von Henry Winkles nach Jakob Alt aus Eduard Duller, Die malerischen Donauländer, Leipzig 1838-1840, 10 x 16 cm. - Blick auf das an der Traun gelegene Benediktinerstift (gegr. 1056). <br /><br />
+                    <span style="display: none">Nebehay-Wagner 151/36.</span>
+                    <a href='/en/articles/oo-lambach-2412-51.html'>Continue reading</a><br /><br />
+                    Order no. 2412-51
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-linz-2412-52.html'>
+                            <img class='thumb' src='/img/thumb/oo-linz-2412-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-linz-2412-52.html'><strong>(Oö) Linz</strong></a><br /><br />
+                    "Lintz." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649,  24 x 37 cm. - Gesamtansicht aus der Vogelperspektive mit Legende. - Links und rechts knapprandig (wie meistens). <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/18; Fauser 7822.</span>
+                    <a href='/en/articles/oo-linz-2412-52.html'>Continue reading</a><br /><br />
+                    Order no. 2412-52
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-53>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-linz-2412-53.html'>
+                            <img class='thumb' src='/img/thumb/oo-linz-2412-53.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-linz-2412-53.html'><strong>(Oö) Linz</strong></a><br /><br />
+                    "Linz." Stahlstich von J. Cousen nach W. H. Bartlett aus W. Beattie - W. H. Bartlett, The Danube, London 1842, 12 x 18,5 cm. - Gesamtansicht vom Freinberg aus. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 82/26.</span>
+                    <a href='/en/articles/oo-linz-2412-53.html'>Continue reading</a><br /><br />
+                    Order no. 2412-53
+                    <br />
+                    
+                        € 50,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-54>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-linz-kleinmunchen-2412-54.html'>
+                            <img class='thumb' src='/img/thumb/oo-linz-kleinmunchen-2412-54.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-linz-kleinmunchen-2412-54.html'><strong>(Oö) Linz / Kleinmünchen</strong></a><br /><br />
+                    "Brücke über die Traun." Tonlithographie aus J. Varoni, Ansichten der Kaiserin Elisabeth-Westbahn von Wien bis Linz, Wien um 1859, 12 x 20 cm. - Die Ende 1858 fertiggestellten Bahnstrecke vor der Einfahrt nach Linz. Links Schloss Ebelsberg, rechts Kleinmünchen. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 711/14.</span>
+                    <a href='/en/articles/oo-linz-kleinmunchen-2412-54.html'>Continue reading</a><br /><br />
+                    Order no. 2412-54
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-55>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oo-steyr-2412-55.html'>
+                            <img class='thumb' src='/img/thumb/oo-steyr-2412-55.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oo-steyr-2412-55.html'><strong>(Oö) Steyr</strong></a><br /><br />
+                    "Totalansicht von Steyr." Stahlstich von J. M. Kolb nach Ludwig Rohbock aus Anton von Ruthner, Das Kaiserthum Oesterreich in malerischen Originalansichten, 1871, 11 x 15 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 584/I/53. - Als "Stadt Steyr von der Morgenseite" auch schon in Carl August Schimmer, Das Kaiserthum Oesterreich (1842).</span>
+                    <a href='/en/articles/oo-steyr-2412-55.html'>Continue reading</a><br /><br />
+                    Order no. 2412-55
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-56>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sbg-bad-gastein-2412-56.html'>
+                            <img class='thumb' src='/img/thumb/sbg-bad-gastein-2412-56.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sbg-bad-gastein-2412-56.html'><strong>(Sbg) Bad Gastein</strong></a><br /><br />
+                    "Bad Gastein." Kolorierter Stahlstich von Johann Poppel nach Ludwig Rohbock aus C. A. Schimmer, Das Kaiserthum Oesterreich, Darmstadt 1842, 15 x11 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 635/II/38. - Nochmals verwendet in Lange, Original-Ansichten der historisch merkwürdigsten Staedte in Deutschland, Darmstadt 1851.</span>
+                    <a href='/en/articles/sbg-bad-gastein-2412-56.html'>Continue reading</a><br /><br />
+                    Order no. 2412-56
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-61>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/stmk-arnfels-2412-61.html'>
+                            <img class='thumb' src='/img/thumb/stmk-arnfels-2412-61.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/stmk-arnfels-2412-61.html'><strong>(Stmk) Arnfels</strong></a><br /><br />
+                    "M[arkt] Arnfels". Aquarellierte Wappenzeichnung von Vincenz Robert Widimsky, um 1860, Blattgröße 19 x 11,5 cm. - Adler auf Dreiberg in rotem Schild. <br /><br />
+                    <span style="display: none">Originalvorlage zu Widimskys "Städtewappen des österreichischen Kaiserstaates", Wien 1864, Teil IV, Nr. 6. Die Darstellung weicht etwas vom heutigen Gemeindewappen ab.</span>
+                    <a href='/en/articles/stmk-arnfels-2412-61.html'>Continue reading</a><br /><br />
+                    Order no. 2412-61
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/stmk-fehring-2412-62.html'>
+                            <img class='thumb' src='/img/thumb/stmk-fehring-2412-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/stmk-fehring-2412-62.html'><strong>(Stmk) Fehring</strong></a><br /><br />
+                    "Markt Fehring". Aquarellierte Wappenzeichnung von Vincenz Robert Widimsky, um 1860, Blattgröße 19 x 11,5 cm. - Gekrönter Reichsadler, auf seiner Brust Schildchen mit Baum und zwei Genien. <br /><br />
+                    <span style="display: none">Originalvorlage zu Widimskys "Städtewappen des österreichischen Kaiserstaates", Wien 1864, Teil IV, Nr. 17. Der Baum im Mittelfeld wurde als Föhre in das 2019 neu geschaffene Gemeindewappen übernommen.</span>
+                    <a href='/en/articles/stmk-fehring-2412-62.html'>Continue reading</a><br /><br />
+                    Order no. 2412-62
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/stmk-gratwein-2412-63.html'>
+                            <img class='thumb' src='/img/thumb/stmk-gratwein-2412-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/stmk-gratwein-2412-63.html'><strong>(Stmk) Gratwein</strong></a><br /><br />
+                    "Markt Gratwein". Aquarellierte Wappenzeichnung von Vincenz Robert Widimsky, um 1860, Blattgröße 19 x 11,5 cm. - Zwei Schilde in bekrönter Umrahmung: links das Stiftswappen, rechts Weinrebe auf rotem Grund. <br /><br />
+                    <span style="display: none">Originalvorlage zu Widimskys "Städtewappen des österreichischen Kaiserstaates", Wien 1864, Teil IV, Nr. 29. Die Darstellung weicht etwas vom heutigen Gemeindewappen ab.</span>
+                    <a href='/en/articles/stmk-gratwein-2412-63.html'>Continue reading</a><br /><br />
+                    Order no. 2412-63
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-64>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/stmk-mariazell-2412-64.html'>
+                            <img class='thumb' src='/img/thumb/stmk-mariazell-2412-64.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/stmk-mariazell-2412-64.html'><strong>(Stmk) Mariazell</strong></a><br /><br />
+                    Sammlung von 95 kleinformatigen Andenken-, Andachts- und Beichtbildchen in verschiedenen Techniken, überwiegend spätes 19. und 20. Jahrhundert, zumeist sehr gut erhalten. <br /><br />
+                    <span style="display: none">In modernem Album.</span>
+                    <a href='/en/articles/stmk-mariazell-2412-64.html'>Continue reading</a><br /><br />
+                    Order no. 2412-64
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-achensee-2412-66.html'>
+                            <img class='thumb' src='/img/thumb/tir-achensee-2412-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-achensee-2412-66.html'><strong>(Tir) Achensee</strong></a><br /><br />
+                    "Der Achensee in Tirol." Kolorierter Stahlstich von C. Rorich & Sohn nach Ludwig Rohbock aus A. Ruthner, Das Kaiserthum Oesterreich in malerischen Originalansichten, 1871, 11,5 x 16,5 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 584/II/56.</span>
+                    <a href='/en/articles/tir-achensee-2412-66.html'>Continue reading</a><br /><br />
+                    Order no. 2412-66
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-ambras-2412-67.html'>
+                            <img class='thumb' src='/img/thumb/tir-ambras-2412-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-ambras-2412-67.html'><strong>(Tir) Ambras</strong></a><br /><br />
+                    "Das fürstliche Schloß Umbras." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 19 x 30,5 cm. - Die im 16. Jh. von Erzherzog Ferdinand II. zu einem Prunkschloss ausgebaute Anlage an der Südostgrenze der Stadt Innsbruck mit der berühmten Kunstkammer. - Druckbedingte Mittelfalte. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/85.</span>
+                    <a href='/en/articles/tir-ambras-2412-67.html'>Continue reading</a><br /><br />
+                    Order no. 2412-67
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-innsbruck-2412-68.html'>
+                            <img class='thumb' src='/img/thumb/tir-innsbruck-2412-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-innsbruck-2412-68.html'><strong>(Tir) Innsbruck</strong></a><br /><br />
+                    "Insbruk". Kupferstich von Karl Robert Schindelmayer aus "Merkwürdigkeiten der Welt" Bd. 7, Wien 1808, 16 x 16 cm. - Seltene Gesamtansicht mit phantasievoller Gebirgskulisse. - An drei Seiten bis zum Plattenrand beschnitten. <br /><br />
+                    <span style="display: none">Adelsberger 45; vgl. Nebehay-Wagner 409. - Zu Schindelmayer (auch Schindelmeyer) siehe Thieme-Becker 30, 74.</span>
+                    <a href='/en/articles/tir-innsbruck-2412-68.html'>Continue reading</a><br /><br />
+                    Order no. 2412-68
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-innsbruck-2412-69.html'>
+                            <img class='thumb' src='/img/thumb/tir-innsbruck-2412-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-innsbruck-2412-69.html'><strong>(Tir) Innsbruck</strong></a><br /><br />
+                    "Innsbruck." Stahlstich von Adolphe und Émile Rouargue aus Xavier Marmier, Voyage pittoresque en Allemagne / Partie méridionale, Paris 1859, 12 x 17 cm. - Gesamtansicht über den Inn. <br /><br />
+                    <span style="display: none">Anders 137/217; vgl. auch Thieme-Becker 29,106. Nicht bei Nebehay-Wagner.</span>
+                    <a href='/en/articles/tir-innsbruck-2412-69.html'>Continue reading</a><br /><br />
+                    Order no. 2412-69
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-inntal-bei-zirl-2412-70.html'>
+                            <img class='thumb' src='/img/thumb/tir-inntal-bei-zirl-2412-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-inntal-bei-zirl-2412-70.html'><strong>(Tir) Inntal bei Zirl</strong></a><br /><br />
+                    "Schöner Prospect des Inthals bey S. Martins Wandt." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 19,5 x 31 cm. - Blick über das weite Inntal mit den Ortschaften Oberperfuß, Inzing, Hatting  u. a. bis Flaurling. Rechts die Martinswand, links Kirche und Schloss St. Martin sowie eine auf die Berggemsen gerichtete kleine Kanone(!). - Sorgfältig restaurierter Mittelbug. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/96.</span>
+                    <a href='/en/articles/tir-inntal-bei-zirl-2412-70.html'>Continue reading</a><br /><br />
+                    Order no. 2412-70
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-kitzbuhel-2412-71.html'>
+                            <img class='thumb' src='/img/thumb/tir-kitzbuhel-2412-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-kitzbuhel-2412-71.html'><strong>(Tir) Kitzbühel</strong></a><br /><br />
+                    "Gegen Süd-Ost." / "Gegen Westen." 2 Aquatintastiche von Beda Weinmann nach J. Meier bei J. Pirch(e)l, Kitzbühel um 1840, Bildformat je 24 x 40 cm, Blattgröße je 32 x 45 cm. Gedruckt in der Kunstanstalt J. Oberer in Salzburg; mit ausführlichen Legenden. - Das erste Blatt mit kleinen, das zweite mit größeren Randmängeln sowie einem bis in das Bild reichenden restaurierten Einriss; sonst sehr gut erhalten. - Von größter Seltenheit und bibliographisch bisher nur ungenügend erfasst. <br /><br />
+                    <span style="display: none">Blick auf die Stadt und das Tal mit der Kitzbüheler Ache sowie Ansicht aus größerer Entfernung, jeweils mit großem Gebirgspanorama im Hintergrund.</span>
+                    <a href='/en/articles/tir-kitzbuhel-2412-71.html'>Continue reading</a><br /><br />
+                    Order no. 2412-71
+                    <br />
+                    
+                        € 3600,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tir-rattenberg-2412-72.html'>
+                            <img class='thumb' src='/img/thumb/tir-rattenberg-2412-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tir-rattenberg-2412-72.html'><strong>(Tir) Rattenberg</strong></a><br /><br />
+                    "Rattenberg im Unter-Innthal in Tyrol." Kolorierter Holzstich von W. Werkmeister nach Richard Püttner aus Zeitschrift 1877, 18,5 x 23,5 cm. <br /><br />
+                    <span style="display: none">Blick auf die Stadt von der Ruine der um das Jahr 1000 errichteten Burg aus.</span>
+                    <a href='/en/articles/tir-rattenberg-2412-72.html'>Continue reading</a><br /><br />
+                    Order no. 2412-72
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/vbg-bludenz-2412-73.html'>
+                            <img class='thumb' src='/img/thumb/vbg-bludenz-2412-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/vbg-bludenz-2412-73.html'><strong>(Vbg) Bludenz</strong></a><br /><br />
+                    "Bludenz". Bleistiftzeichnung (von Franz Neuber) datiert 24. 6. 1947, 23 x 16 cm. - Rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">Fein gezeichnetes Blatt aus dem Nachlass des österreichischen Landschaftsmalers Franz Neuber (1897-1962).</span>
+                    <a href='/en/articles/vbg-bludenz-2412-73.html'>Continue reading</a><br /><br />
+                    Order no. 2412-73
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/vbg-bregenz-2412-74.html'>
+                            <img class='thumb' src='/img/thumb/vbg-bregenz-2412-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/vbg-bregenz-2412-74.html'><strong>(Vbg) Bregenz</strong></a><br /><br />
+                    "Bregentz." Kupferstich aus Matthäus Merian, Topographia Sveviae, Frankfurt 1649,  Frankfurt um 1655, 21 x 36,5 cm. - Gesamtansicht vom Bodensee aus mit 21-teiliger Legende. - Schöner sauberer Abzug. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 408/16; Fauser 1831.</span>
+                    <a href='/en/articles/vbg-bregenz-2412-74.html'>Continue reading</a><br /><br />
+                    Order no. 2412-74
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/vbg-bregenz-2412-75.html'>
+                            <img class='thumb' src='/img/thumb/vbg-bregenz-2412-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/vbg-bregenz-2412-75.html'><strong>(Vbg) Bregenz</strong></a><br /><br />
+                    "Alt-Bregenz". Bleistiftzeichnung (von Franz Neuber) datiert 18. 7. 1947, 23 x 16 cm. - Rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">Fein gezeichnetes Blatt aus dem Nachlass des österreichischen Landschaftsmalers Franz Neuber (1897-1962).</span>
+                    <a href='/en/articles/vbg-bregenz-2412-75.html'>Continue reading</a><br /><br />
+                    Order no. 2412-75
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-77>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/vbg-hohenems-2412-77.html'>
+                            <img class='thumb' src='/img/thumb/vbg-hohenems-2412-77.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/vbg-hohenems-2412-77.html'><strong>(Vbg) Hohenems</strong></a><br /><br />
+                    Bleistiftzeichnung (von Franz Neuber), rückseitig bezeichnet und datiert "Motiv aus Hohenems / Bergstraße 1946", 23 x 16 cm. - Rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">Fein gezeichnetes Blatt aus dem Nachlass des österreichischen Landschaftsmalers Franz Neuber (1897-1962).</span>
+                    <a href='/en/articles/vbg-hohenems-2412-77.html'>Continue reading</a><br /><br />
+                    Order no. 2412-77
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

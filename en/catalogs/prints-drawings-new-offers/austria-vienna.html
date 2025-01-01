@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings - New Offers</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik-neue-angebote/osterreich-wien.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings - New Offers</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Austria - Vienna
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings-new-offers.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2412-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-dominikanerviertel-2412-78.html'>
+                            <img class='thumb' src='/img/thumb/01-dominikanerviertel-2412-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-dominikanerviertel-2412-78.html'><strong>(01) Dominikanerviertel</strong></a><br /><br />
+                    "Die Gegend vom Stubenthor mit der alten Dominikaner Kirche / Nach einem Original von J. Houfnagel um das Jahr 1600." Kupferstich von J. W. Zinke aus G. A. Schimmer, Das alte Wien, Wien 1855, ca. 21 x 33 cm. - Zeigt die dicht bebaute Dominikanerbastei an der Wien mit der anschließenden Stubenbastei. - Druckbedingte leichte Faltspur. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 637/13.</span>
+                    <a href='/en/articles/01-dominikanerviertel-2412-78.html'>Continue reading</a><br /><br />
+                    Order no. 2412-78
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-freyung-2412-80.html'>
+                            <img class='thumb' src='/img/thumb/01-freyung-2412-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-freyung-2412-80.html'><strong>(01) Freyung</strong></a><br /><br />
+                    "Aussicht der Schottenkirche und des Platzes bis auf den Hof". Altkolorierte Umrissradierung (Nach der Natur gezeichnet und gestochen von C. Schütz in Wien 1790) bei Artaria, 4. Etat (von 4), Wien um 1815, 27 x 41 cm. - Blick von der Schottengasse auf die Schottenkirche, die Freyung mit dem Gartenpavillon des Palais Harrach und entlang der Herrengasse; Empirestaffage. - Etwas gebräunt und lichtrandig, insgesamt attraktives und seltenes Blatt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 671/48; Schwarz 48.</span>
+                    <a href='/en/articles/01-freyung-2412-80.html'>Continue reading</a><br /><br />
+                    Order no. 2412-80
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-hofburg-2412-82.html'>
+                            <img class='thumb' src='/img/thumb/01-hofburg-2412-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-hofburg-2412-82.html'><strong>(01) Hofburg</strong></a><br /><br />
+                    "Die K.K. Burg von Seite der Bastei die Abendpromenade und Terasse Ihrer Majestät der Kaiserinn." Altkolorierte Umrissradierung von Carl Postl nach Laurenz Janscha, Wien um 1800, 26 x 39,5 cm. - Reich belebter Blick über den heutigen Volksgarten (mit Pavillon und musizierender Kapelle) zum Leopoldinischen Trakt der Hofburg (heute Präsidentschaftskanzlei), zur Hofbibliothek und zum Palais Alberts von Sachsen-Teschen (heute Albertina). <br /><br />
+                    <span style="display: none">Vgl. Nebehay-Wagner 426/1 und Schwarz S. 77. - Im Verlagskatalog der Firma Artaria von 1805/1806 als Nr. 2 verzeichnet, kommt aber auch mit Widmungszusatz des Verlegers Tranquillo Mollo vor; die Produktion der beiden Verlage weist Überschneidungen auf und ist nicht immer sauber zu trennen.</span>
+                    <a href='/en/articles/01-hofburg-2412-82.html'>Continue reading</a><br /><br />
+                    Order no. 2412-82
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-michaelerplatz-2412-84.html'>
+                            <img class='thumb' src='/img/thumb/01-michaelerplatz-2412-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-michaelerplatz-2412-84.html'><strong>(01) Michaelerplatz</strong></a><br /><br />
+                    "1. Die Pfarrkirche zu St. Michael. 2. Das alte Michaelerhaus. 3. Das neue Michaelerhaus, in Wien." Altkolorierter Kupferstich von Gottfried Prixner aus F. C. Weidmann, Panorama von Wien, 1832, 7 x 10 cm. - Wiederabdruck einer Kupferplatte von 1796. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 816/11.</span>
+                    <a href='/en/articles/01-michaelerplatz-2412-84.html'>Continue reading</a><br /><br />
+                    Order no. 2412-84
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-minoritenplatz-2412-85.html'>
+                            <img class='thumb' src='/img/thumb/01-minoritenplatz-2412-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-minoritenplatz-2412-85.html'><strong>(01) Minoritenplatz</strong></a><br /><br />
+                    "Die Kirchen zum H. Creutz, so jetzo die PP. Minoriten besitzen ...". Kupferstich nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Zeigt die barocke Platzsituation mit Minoritenkirche und Starhembergpalais (heute Sitz des Unterrichtsministeriums). - Der breite Rand etwas fleckig und mit hinterlegtem Riss. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/7.</span>
+                    <a href='/en/articles/01-minoritenplatz-2412-85.html'>Continue reading</a><br /><br />
+                    Order no. 2412-85
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-ursulinenkirche-2412-86.html'>
+                            <img class='thumb' src='/img/thumb/01-ursulinenkirche-2412-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-ursulinenkirche-2412-86.html'><strong>(01) Ursulinenkirche</strong></a><br /><br />
+                    "Kirche und Closter der H. Ursulä ...". Kupferstich von Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Die 1673-75 erbaute Kirche mit Klostergebäude in der Johannesgasse; heute Teil der Musikunversität. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/18.</span>
+                    <a href='/en/articles/01-ursulinenkirche-2412-86.html'>Continue reading</a><br /><br />
+                    Order no. 2412-86
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-karmeliterkirche-2412-87.html'>
+                            <img class='thumb' src='/img/thumb/02-karmeliterkirche-2412-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-karmeliterkirche-2412-87.html'><strong>(02) Karmeliterkirche</strong></a><br /><br />
+                    "Kirchen und Closter der H. Theresia, in der Leopold-Statt, von Ferd. II. erbaut, und besitzen solche die PP. Carmeliter Barfüsser." Kupferstich nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Die nach italienischem Vorbild im 17. Jh. errichtete Kirche in der Taborstraße ist seit 1783 dem Hl. Josef geweiht. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/19.</span>
+                    <a href='/en/articles/02-karmeliterkirche-2412-87.html'>Continue reading</a><br /><br />
+                    Order no. 2412-87
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-leopoldstadt-2412-88.html'>
+                            <img class='thumb' src='/img/thumb/02-leopoldstadt-2412-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-leopoldstadt-2412-88.html'><strong>(02) Leopoldstadt</strong></a><br /><br />
+                    [Ansicht der Vorstadt Leopoldstadt]. Kupferstich von Anton Bogner nach J. Wett aus F. X. Schweickhardt von Sickingen, Darstellung der k. k. Haupt- und Residenzstadt Wien, 1832, 16,5 x 54 cm.  - Druckbedingte alte Faltspuren. Der zugehörige Text liegt Kopie bei. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 679/11. - Detailreicher Panoramablick von der Servitenkirche in der Roßau bis zur Einmündung der Wien in den Donaukanal; im Mittelpunkt die Ferdinandsbrücke und der Beginn der Taborstraße.</span>
+                    <a href='/en/articles/02-leopoldstadt-2412-88.html'>Continue reading</a><br /><br />
+                    Order no. 2412-88
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/04-karlskirche-2412-90.html'>
+                            <img class='thumb' src='/img/thumb/04-karlskirche-2412-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/04-karlskirche-2412-90.html'><strong>(04) Karlskirche</strong></a><br /><br />
+                    "Die Kirche St. Caroli Borromaei als eines Patroni wider die Pest, wurde von Keyser Caroli VI. als ein Gelübd vor dem Kärndtner Thor zu bauen angefangen, und Ao. 1715. d. 5. Febr. der erste Stein darzu gelegt." Kupferstich von Hieronymus Sperling nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Nicht störender restaurierter Ausriss im weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/32. - Detailgetreue Darstellung nach dem Entwurf von Johann Bernhard Fischer von Erlach. Fertiggestellt wurde die Kirche erst 1739.</span>
+                    <a href='/en/articles/04-karlskirche-2412-90.html'>Continue reading</a><br /><br />
+                    Order no. 2412-90
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/04-theresianum-2412-91.html'>
+                            <img class='thumb' src='/img/thumb/04-theresianum-2412-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/04-theresianum-2412-91.html'><strong>(04) Theresianum</strong></a><br /><br />
+                    "Theresianum." Chromolithographie aus J. Varrone - L. Petrovits, Fünfzig Ansichten von Wien und Umgebung, Wien 1891/1894, 9 x 15 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 772/13. - Die Eliteschule auf der Favoritenstraße mit Pferdestraßenbahn, Fuhrwerken und Passanten.</span>
+                    <a href='/en/articles/04-theresianum-2412-91.html'>Continue reading</a><br /><br />
+                    Order no. 2412-91
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-93>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/06-theater-an-der-wien-2412-93.html'>
+                            <img class='thumb' src='/img/thumb/06-theater-an-der-wien-2412-93.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/06-theater-an-der-wien-2412-93.html'><strong>(06) Theater an der Wien</strong></a><br /><br />
+                    "Das Theater an der Wien". Altkolorierter Kupferstich aus Ansichtenserie bei F. Neubauer, Wien um 1810, 8,5 x 14 cm. - Etwas gebräunt und fleckig. Gerahmt. <br /><br />
+                    <span style="display: none">Zeigt die Seite mit dem Papagenotor.</span>
+                    <a href='/en/articles/06-theater-an-der-wien-2412-93.html'>Continue reading</a><br /><br />
+                    Order no. 2412-93
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-94>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/07-trautsonpalais-2412-94.html'>
+                            <img class='thumb' src='/img/thumb/07-trautsonpalais-2412-94.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/07-trautsonpalais-2412-94.html'><strong>(07) Trautsonpalais</strong></a><br /><br />
+                    "Alt Wien Palais Trautsohn". Signierte kolorierte Radierung von Herta Czoernig-Gobanz (1886-1970), 17 x 26 cm. - Das 1710-1712 nach Plänen von Johann Bernhard Fischer von Erlach errichtete Palais in der Museumstraße, heute Sitz des österreichischen Justizministeriums. <br /><br />
+                    <span style="display: none">Das Palais Trautson zählt zu den prächtigsten Bauwerken des Barock in Wien und war Schauplatz zahlreicher Festlichkeiten. Kaiserin Maria Theresia erwarb es 1760 und stellte es der Ungarischen Garde zur Verfügung.</span>
+                    <a href='/en/articles/07-trautsonpalais-2412-94.html'>Continue reading</a><br /><br />
+                    Order no. 2412-94
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-98>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/10-inzersdorf-2412-98.html'>
+                            <img class='thumb' src='/img/thumb/10-inzersdorf-2412-98.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/10-inzersdorf-2412-98.html'><strong>(10) Inzersdorf</strong></a><br /><br />
+                    "Inzerstorff". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15 cm. - Das von einem Wassergraben umgebene alte Schloss mit Kirche (1965 abgerissen) auf dem Platz der heutigen Wohnhausanlage Kirchenplatz 1 / Draschestraße 9. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I/48.</span>
+                    <a href='/en/articles/10-inzersdorf-2412-98.html'>Continue reading</a><br /><br />
+                    Order no. 2412-98
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-99>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/10-sud-und-ostbahnhof-2412-99.html'>
+                            <img class='thumb' src='/img/thumb/10-sud-und-ostbahnhof-2412-99.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/10-sud-und-ostbahnhof-2412-99.html'><strong>(10) Süd- und Ostbahnhof</strong></a><br /><br />
+                    "Der Südbahnhof". Kolorierte Tonlithographie von Franz Xaver Sandmann nach Rudolf von Alt aus Wien-Album bei H. F. Müller, Wien um 1850, 7 x 11,5 cm. - Der 1840/41 errichtete Bahnhofskomplex mit den beiden Kopfbahnhöfen der Raaber Bahn (Ostbahn) und Gloggnitzer Bahn (Südbahn). Knapp östlich des heutigen Hauptbahnhofs gelegen, bestand er in dieser Form bis 1869. - Knickspur. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 46/37.</span>
+                    <a href='/en/articles/10-sud-und-ostbahnhof-2412-99.html'>Continue reading</a><br /><br />
+                    Order no. 2412-99
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/11-kaiserebersdorf-2412-100.html'>
+                            <img class='thumb' src='/img/thumb/11-kaiserebersdorf-2412-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/11-kaiserebersdorf-2412-100.html'><strong>(11) Kaiserebersdorf</strong></a><br /><br />
+                    "Prospect Ihro Röm. Keyl. und Königl. Cathol. Majest: Lust- und Jagt- Schloß Ebersdorff ohnweit Wien." Kupferstich von G. D. Heumann nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 2. Teil, Augsburg 1725, 22 x 33 cm. - Das heute als Justizanstalt genutzte Schloss erlebte unter Ferdinand II. seine Glanzzeit. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/II/6.</span>
+                    <a href='/en/articles/11-kaiserebersdorf-2412-100.html'>Continue reading</a><br /><br />
+                    Order no. 2412-100
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-101>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/11-neugebaude-2412-101.html'>
+                            <img class='thumb' src='/img/thumb/11-neugebaude-2412-101.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/11-neugebaude-2412-101.html'><strong>(11) Neugebäude</strong></a><br /><br />
+                    "Eigentliche Delineatio des Schönen Lusthaußes und Garttens das Newgebäw genandt bey Wien gelegen, Wie solches im Jahr Christi. 1649. gestanden." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649, 29 x 37 cm. - Blick von Norden auf die 1568 von Kaiser Maximilian II. in Auftrag gegebene Anlage mit ihren manieristisch gestalteten Bauten und großen Gartenflächen. - Geglätteter Mitelfalz; kleine Mängel am Rand sorgfältig restauriert. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/36; Fauser 16546.</span>
+                    <a href='/en/articles/11-neugebaude-2412-101.html'>Continue reading</a><br /><br />
+                    Order no. 2412-101
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-102>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/13-hacking-2412-102.html'>
+                            <img class='thumb' src='/img/thumb/13-hacking-2412-102.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/13-hacking-2412-102.html'><strong>(13) Hacking</strong></a><br /><br />
+                    "Hacking." Kolorierte Lithographie aus "Wiens Vorstädte und malerische Umgebung" bei J. Trentsensky, Wien um 1840, Bildformat ca. 13 x 17 cm. - Ein altes Gehöft an der Wien. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 1177a/39; abgebildet bei Czeike Bd. 3, 14. - Seltenes Blatt.</span>
+                    <a href='/en/articles/13-hacking-2412-102.html'>Continue reading</a><br /><br />
+                    Order no. 2412-102
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/13-hietzing-2412-103.html'>
+                            <img class='thumb' src='/img/thumb/13-hietzing-2412-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/13-hietzing-2412-103.html'><strong>(13) Hietzing</strong></a><br /><br />
+                    "Kirche und Kirchenplatz in Hietzing". Kolorierter Holzstich nach Johann Josef Kirchner aus Zeitschrift 1878, Bildformat 22,5 x 13,5 cm. - Auf ganzer Seite mit umgebendem Text; papierbedingt etwas gebräunt, nicht störende Randmängel. <br /><br />
+                    <span style="display: none">Die im 19. Jahrhundert umgebaute Pfarr- und Wallfahrtskirche mit dem Maximilian-Denkmal.</span>
+                    <a href='/en/articles/13-hietzing-2412-103.html'>Continue reading</a><br /><br />
+                    Order no. 2412-103
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-105>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/14-hadersdorf-2412-105.html'>
+                            <img class='thumb' src='/img/thumb/14-hadersdorf-2412-105.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/14-hadersdorf-2412-105.html'><strong>(14) Hadersdorf</strong></a><br /><br />
+                    "Haderstorff". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I/52. - Der ehemalige Sitz der Herren von Hadersdorf wurde nach der 2. Türkenbelagerung als frühbarockes Wasserschloss neu errichtet. 1779 von Feldmarschall Ernst Gideon von Laudon erworben, trägt das Schloss seither seinen Namen; es beherbergt derzeit die Verwaltungsakademie des Bundes.</span>
+                    <a href='/en/articles/14-hadersdorf-2412-105.html'>Continue reading</a><br /><br />
+                    Order no. 2412-105
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-106>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-dobling-2412-106.html'>
+                            <img class='thumb' src='/img/thumb/19-dobling-2412-106.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-dobling-2412-106.html'><strong>(19) Döbling</strong></a><br /><br />
+                    "Haus der Therese Krones Heiligenstadt". Signierte Radierung von Herta Czoernig-Gobanz (1886-1970), um 1930(?), 17 x 19 cm. - Das "Daheimhäuschen" (Hohe Warte 37), von 1824 bis 1826 Sommerwohnung der Schauspielerin Therese Krones (1801-1830). <br /><br />
+                    <span style="display: none">Das Haus wurde 1945 abgerissen.</span>
+                    <a href='/en/articles/19-dobling-2412-106.html'>Continue reading</a><br /><br />
+                    Order no. 2412-106
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-107>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-grinzing-2412-107.html'>
+                            <img class='thumb' src='/img/thumb/19-grinzing-2412-107.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-grinzing-2412-107.html'><strong>(19) Grinzing</strong></a><br /><br />
+                    "Grinzing 1918". Signierte Radierung von Herta Czoernig-Gobanz (1886-1970), 27 x 20,5 cm. - Stimmungsvoller Blick aus einem Garten auf ein zweigeschoßiges Haus, im Hintergrund angedeutet ein Bergrücken des Wienerwalds. <br /><br />
+                    <span style="display: none">Mit der von der Künstlerin selten verwendeten Signatur "Herta Gobanz-Czoernig".</span>
+                    <a href='/en/articles/19-grinzing-2412-107.html'>Continue reading</a><br /><br />
+                    Order no. 2412-107
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-108>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-grinzing-2412-108.html'>
+                            <img class='thumb' src='/img/thumb/19-grinzing-2412-108.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-grinzing-2412-108.html'><strong>(19) Grinzing</strong></a><br /><br />
+                    "Blick auf Wien v. Grinzing". Signierte Farbradierung von Herta Czoernig-Gobanz (1886-1970), Bildformat 15 x 27 cm, Blattgröße 32 x 40 cm. <br /><br />
+                    <span style="display: none">Im Vordergrund die Kaasgrabenkirche, auch Wallfahrtskirche Mariä Schmerzen genannt.</span>
+                    <a href='/en/articles/19-grinzing-2412-108.html'>Continue reading</a><br /><br />
+                    Order no. 2412-108
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-heiligenstadt-2412-109.html'>
+                            <img class='thumb' src='/img/thumb/19-heiligenstadt-2412-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-heiligenstadt-2412-109.html'><strong>(19) Heiligenstadt</strong></a><br /><br />
+                    "Ziegelöfen bei Heiligenstadt." Farblithographie von Josef Danilowatz (im Stein monogrammiert J. D., aus der Jahresmappe der Gesellschaft für vervielfältigende Kunst, Wien 1906), 39 x 50 cm. - Hinterlegter Riss im grauen Rand außerhalb des Bildes. <br /><br />
+                    <span style="display: none">Eindrucksvolle Dokumentation der noch weitgehend händisch und unter schlechten sozialen Bedingungen betriebenen Ziegelproduktion am Stadtrand von Wien um die Jahrhundertwende. Vorne Männer und Frauen beim Abbau und Abtransport des Lehms aus einem Lösshang, im Mittelgrund Trocknungsanlagen und Brennofen, hinten städtischer Bereich mit Gründerzeithäusern und Fabriksanlagen. - Der österreichische Maler und Graphiker Josef Danilowatz (1877-1945) war Schüler von William Unger und widmete sich besonders den Bereichen Technik und Karikatur.</span>
+                    <a href='/en/articles/19-heiligenstadt-2412-109.html'>Continue reading</a><br /><br />
+                    Order no. 2412-109
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-110>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/20-brigittenau-2412-110.html'>
+                            <img class='thumb' src='/img/thumb/20-brigittenau-2412-110.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/20-brigittenau-2412-110.html'><strong>(20) Brigittenau</strong></a><br /><br />
+                    "Ansicht des Jägerhauses in der Brigitten-Aue." Altkolorierte Umrissradierung aus "Ansichten-Sammlung" bei Maria Geissler, Wien um 1815, 7,5 x 11 cm. - Der alte Kern des heutigen Bezirks mit der 1650 errichteten Brigittakapelle und den benachbarten Gebäuden; hier wurde zwischen 1775 und 1848 alljährlich der beliebte Brigittakirchtag abgehalten. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 193/59.</span>
+                    <a href='/en/articles/20-brigittenau-2412-110.html'>Continue reading</a><br /><br />
+                    Order no. 2412-110
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-111>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/22-aspern-2412-111.html'>
+                            <img class='thumb' src='/img/thumb/22-aspern-2412-111.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/22-aspern-2412-111.html'><strong>(22) Aspern</strong></a><br /><br />
+                    "Das Schlachtfeld von Aspern". Stahlstich aus C. A. Schimmer, Das Kaiserthum Oesterreich, Darmstadt 1842, 6 x 8 cm. - Eine Gruppe von Veteranen und Soldaten am Platz der denkwürdigen Schlacht von 1809, dahinter die Kirche von Aspern. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 635/2/5.</span>
+                    <a href='/en/articles/22-aspern-2412-111.html'>Continue reading</a><br /><br />
+                    Order no. 2412-111
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-112>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/22-hubertusdamm-2412-112.html'>
+                            <img class='thumb' src='/img/thumb/22-hubertusdamm-2412-112.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/22-hubertusdamm-2412-112.html'><strong>(22) Hubertusdamm</strong></a><br /><br />
+                    "Am Donaudamm bei Wien". Farbiger Homogendruck von Hans Frank (1884-1948), 1923, 20 x 21 cm. - Das ehemalige Überschwemmungsgebiet mit Blick auf die Reichsbrücke, im Hintergrund der Wienerwald. <br /><br />
+                    <span style="display: none">Bezeichnung und Signatur gedruckt. Die Ansicht wurde auch für den Künstlerhaus-Kalender von 1934 verwendet.</span>
+                    <a href='/en/articles/22-hubertusdamm-2412-112.html'>Continue reading</a><br /><br />
+                    Order no. 2412-112
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-114>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/24-wien-im-19-jh-2412-114.html'>
+                            <img class='thumb' src='/img/thumb/24-wien-im-19-jh-2412-114.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/24-wien-im-19-jh-2412-114.html'><strong>(24) Wien im 19. Jh.</strong></a><br /><br />
+                    "Nieder-Oesterreich / Wien." Lithographie nach Jakob Alt aus Adolf Kunike, Donau-Ansichten, Wien 1826, 26 x 35 cm. - Blick von der Rossau entlang des Donaukanals auf die Stadt und ihre nördlichen Vorstädte. Links der Augarten, rechts das Allgemeine Krankenhaus. Schöne, seltene Gesamtansicht. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 336/118.</span>
+                    <a href='/en/articles/24-wien-im-19-jh-2412-114.html'>Continue reading</a><br /><br />
+                    Order no. 2412-114
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
