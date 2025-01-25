@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings - New Offers</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik-neue-angebote/kunstlergraphik-16-20-jh.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings - New Offers</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Fine Art Prints (16th to 20th c.)
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings-new-offers.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings-new-offers/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2412-1>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/galle-philipp-1537-1612-2412-1.html'>
+                            <img class='thumb' src='/img/thumb/galle-philipp-1537-1612-2412-1.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/galle-philipp-1537-1612-2412-1.html'><strong>Galle, Philipp (1537-1612)</strong></a><br /><br />
+                    "Cui rigor a multis artus contraxerat annis Divino mulier Christi sermone levatur". Jesus heilt am Sabbat eine verkrümmte Frau (Lk 13, 10-17). Kupferstich nach Anthonie Blocklandt van Montfoort (1533/1534 - 1583), um 1577/1579, 21 x 26 cm.  - Mit breitem Rand um die Plattenkante; geringfügig stockfleckig, an den oberen Ecken alt auf starkes Papier montiert. <br /><br />
+                    <span style="display: none">New Hollstein (Dutch & Flemish) 164.I. - Nr. 6 einer seltenen Bilderfolge über Jesus und die Frauen im Neuen Testament. "G.s beste Blätter sind ... besonders die nach Blocklandt" (Thieme-Becker 13, 105).</span>
+                    <a href='/en/articles/galle-philipp-1537-1612-2412-1.html'>Continue reading</a><br /><br />
+                    Order no. 2412-1
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-2>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/maillol-aristide-1861-1944-2412-2.html'>
+                            <img class='thumb' src='/img/thumb/maillol-aristide-1861-1944-2412-2.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/maillol-aristide-1861-1944-2412-2.html'><strong>Maillol, Aristide (1861-1944)</strong></a><br /><br />
+                    6 Holzschnitte mit Monogrammstempel, posthume zweifarbige Drucke auf handgeschöpftem Büttenpapier bei EuroArt, Wien 1976, Blattgröße 28 x 19 cm. - Rückseitig Montagespuren, ein Blatt etwas lichtrandig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Dargestellt sind Frauenakte, eine Liebesszene und Bäume. Die von mediterraner Sinnlichkeit geprägten Holzschnitte entstanden in den Jahren 1935 bis 1937 als Illustrationen zu Vergils "Georgica" und zu den Oden des Horaz.</span>
+                    <a href='/en/articles/maillol-aristide-1861-1944-2412-2.html'>Continue reading</a><br /><br />
+                    Order no. 2412-2
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/pettenkofen-august-von-1821-1889-2412-3.html'>
+                            <img class='thumb' src='/img/thumb/pettenkofen-august-von-1821-1889-2412-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/pettenkofen-august-von-1821-1889-2412-3.html'><strong>Pettenkofen, August von (1821-1889)</strong></a><br /><br />
+                    Pferdestudie. Bleistift auf bläulichem Papier, rückseitig von alter Hand bezeichnet "A. v. Pettenkofen", 19 x 25 cm. - Stehendes Pferd nach rechts. - Etwas unregelmäßig beschnitten und leicht fleckig. Rückseitig kleiner Sammlerstempel des Wiener Bankiers W. Koenig (Lugt 2653 b) sowie ein unvollständiger Stempelabdruck des Anhalter Bahnhofs in Berlin; Montagespuren. <br /><br />
+                    <span style="display: none">Der österreichische Maler und Zeichner August von Pettenkofen gehört zu den bedeutendsten Vertreten der biedermeierlichen Genremalerei der Monarchie.</span>
+                    <a href='/en/articles/pettenkofen-august-von-1821-1889-2412-3.html'>Continue reading</a><br /><br />
+                    Order no. 2412-3
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/prinz-leopold-1882-1941-2412-4.html'>
+                            <img class='thumb' src='/img/thumb/prinz-leopold-1882-1941-2412-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/prinz-leopold-1882-1941-2412-4.html'><strong>Prinz, Leopold (1882-1941)</strong></a><br /><br />
+                    "Der erste Schnee". Farbradierung um 1920, unter dem Bild mit Bleistift bezeichnet und signiert, Bildformat 18,5 x 16 cm, Blattgröße 38,5 x 30 cm. - Im breiten weißen Rand geringfügig fleckig. <br /><br />
+                    <span style="display: none">Prinz war Maler und Bildhauer und lebte in Wien.</span>
+                    <a href='/en/articles/prinz-leopold-1882-1941-2412-4.html'>Continue reading</a><br /><br />
+                    Order no. 2412-4
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schindler-carl-1821-1842-2412-5.html'>
+                            <img class='thumb' src='/img/thumb/schindler-carl-1821-1842-2412-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schindler-carl-1821-1842-2412-5.html'><strong>Schindler, Carl (1821-1842)</strong></a><br /><br />
+                    Studienblatt mit Volkstypen. Bleistift auf Papier, rückseitig von alter Hand bezeichnet "Carl Schindler", 14 x 22 cm. - In der Mitte eine fein gezeichnete Gruppe von Sängern, rechts vorne mehrere nur teilweise ausgeführte Personen und ein Hund, im Hintergrund angedeutet Gebäude. - Etwas unregelmäßig beschnitten, leichte Knickspur. Rückseitig kleiner Sammlerstempel des Wiener Bankiers W. Koenig (Lugt 2653 b) sowie ein unvollständiger Stempelabdruck des Anhalter Bahnhofs in Berlin; Montagespuren. <br /><br />
+                    <span style="display: none">Der jung verstorbene österreichische Maler Carl Schindler war Schüler von Peter Fendi und wurde vor allem durch seine Militärszenen bekannt als "Soldaten-Schindler".</span>
+                    <a href='/en/articles/schindler-carl-1821-1842-2412-5.html'>Continue reading</a><br /><br />
+                    Order no. 2412-5
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-6>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schmutzer-ferdinand-1870-1928-2412-6.html'>
+                            <img class='thumb' src='/img/thumb/schmutzer-ferdinand-1870-1928-2412-6.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schmutzer-ferdinand-1870-1928-2412-6.html'><strong>Schmutzer, Ferdinand (1870-1928)</strong></a><br /><br />
+                    "Bildhaueratelier." Radierung mit Vernis mou und Feile auf festem Velin, in der Platte signiert und datiert F. Schmutzer Paris 1900, mit gestochener Bezeichnung und Adresse im Plattenrand, Plattenformat 49 x 20 cm, Blattgröße 50 x 22 cm. - Aus der Jahresmappe 1900 der Gesellschaft für vervielfältigende Kunst in Wien; rückseitig unbedeutende Montagespuren. <br /><br />
+                    <span style="display: none">Weixlgärtner 30 V (von V). - Zeigt den mährischen Bildhauer und Medailleur Karl Korschann (1872-1943) beim Modellieren eines weiblichen Aktes in seinem temporären Pariser Atelier.</span>
+                    <a href='/en/articles/schmutzer-ferdinand-1870-1928-2412-6.html'>Continue reading</a><br /><br />
+                    Order no. 2412-6
+                    <br />
+                    
+                        € 330,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-7>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schwetz-karl-1888-1965-2412-7.html'>
+                            <img class='thumb' src='/img/thumb/schwetz-karl-1888-1965-2412-7.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schwetz-karl-1888-1965-2412-7.html'><strong>Schwetz, Karl (1888-1965)</strong></a><br /><br />
+                    Postkutsche auf einem Hügel. Signierte Sepia-Radierung, wohl um 1910, Plattenformat 23 x 29 cm, Blattgröße 42 x 30 cm. - Kuriose zeittypische Darstellung. <br /><br />
+                    <span style="display: none">Der österreichische Maler und Graphiker Karl Schwetz (1888-1965) wurde vor allem durch seine Farbradierungen sowie durch seine Postkartenentwürfe für die Wiener Werkstätte bekannt.</span>
+                    <a href='/en/articles/schwetz-karl-1888-1965-2412-7.html'>Continue reading</a><br /><br />
+                    Order no. 2412-7
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-8>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/teschner-richard-1870-1948-2412-8.html'>
+                            <img class='thumb' src='/img/thumb/teschner-richard-1870-1948-2412-8.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/teschner-richard-1870-1948-2412-8.html'><strong>Teschner, Richard (1870-1948)</strong></a><br /><br />
+                    Die Ungeborenen. Aquatintaradierung, in der Platte seitenverkehrt monogrammiert und datiert TR 1. I. [19]15, zusätzlich unter dem Bild mit Bleistift signiert "Rich. Teschner", Bildformat 27 x 22 cm, Blattgröße 40 x 32 cm. <br /><br />
+                    <span style="display: none">Unterirdischer Tempel mit Wassermann und schwebenden Frauen- und Kindergestalten. Letzter Etat des für Teschner typischen Blatts, an dem der Künstler im Dezember 1914 zu arbeiten begonnen hatte. Ein Jahr zuvor schuf Teschner sein Figurenspiel "Prinzessin und Wassermann".</span>
+                    <a href='/en/articles/teschner-richard-1870-1948-2412-8.html'>Continue reading</a><br /><br />
+                    Order no. 2412-8
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/thiemann-carl-1881-1966-2412-9.html'>
+                            <img class='thumb' src='/img/thumb/thiemann-carl-1881-1966-2412-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/thiemann-carl-1881-1966-2412-9.html'><strong>Thiemann, Carl (1881-1966)</strong></a><br /><br />
+                    Bach im Winter. Signierter Farbholzschnitt auf cremefarbenem Bütten, um 1915, 25 x 20 cm. - Das Blatt erschien auch mit typographischer Beschriftung in Jahrgang 38 (1915) der Wiener Zeitschrift "Die Graphischen Künste". <br /><br />
+                    <span style="display: none">Carl Thiemann wurde in Karlsbad geboren, studierte an der Prager Kunstakademie und lebte später als Maler und Graphiker in Dachau; 1910 wurde er Mitglied der Wiener Secession. Seine schwarz-weißen und farbigen Holzschnitte gelten als seine bedeutendste künstlerische Leistung.</span>
+                    <a href='/en/articles/thiemann-carl-1881-1966-2412-9.html'>Continue reading</a><br /><br />
+                    Order no. 2412-9
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/weirotter-franz-edmund-1730-1771-2412-10.html'>
+                            <img class='thumb' src='/img/thumb/weirotter-franz-edmund-1730-1771-2412-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/weirotter-franz-edmund-1730-1771-2412-10.html'><strong>Weirotter, Franz Edmund (1730 - 1771)</strong></a><br /><br />
+                    Aus der Umgebung von Tivoli. Zwei Radierungen aus "Erste Folge von Gegenden und Bruchstücken alter Gebäude" (Blatt 8 und 12), 1766, in der Platte jeweils bezeichnet "F. E. Weirotter fecit", Bildformat je 15 x 21 cm. - Geringfügige Altersspuren, das erste Blatt auf Plattenkante geschnitten und alt montiert. <br /><br />
+                    <span style="display: none">Nagler 4; Le Blanc 4; Winterberg 127 II und 131. - Der in Innsbruck geborene Landschaftsmaler und Radierer F. E. Weirotter wurde nach Aufenthalten in Rom und Paris 1767 als Professor des Landschaftszeichnens an die Wiener Akademie berufen, verstarb aber schon wenige Jahre später. "Als Radirer zählt er nach dem einstimmigen Urtheile von Kennern dieses Kunstgebietes zu den hervorragendsten Künstlern in demselben ..." (Wurzbach).</span>
+                    <a href='/en/articles/weirotter-franz-edmund-1730-1771-2412-10.html'>Continue reading</a><br /><br />
+                    Order no. 2412-10
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
