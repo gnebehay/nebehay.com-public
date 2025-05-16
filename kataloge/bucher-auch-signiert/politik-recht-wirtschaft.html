@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/politics-law-economics.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Politik, Recht, Wirtschaft
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2202-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/festschrift-2202-28.html'>
+                            <img class='thumb' src='/img/thumb/festschrift-2202-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/festschrift-2202-28.html'><strong>(Festschrift)</strong></a><br /><br />
+                    Deutsche Ueberseeische Bank 1886-1936. Aus Anlass des fünfzigjährigen Bestehens der Deutschen Ueberseeischen Bank ihren Mitarbeitern und Freunden gewidmet 2. Oktober 1936. (Berlin, Eigenverlag, 1936). Kl-4; 4 Bll. (inkl. Kartenblatt), 149 pp mit zahlreichen teils mehrfarbigen Diagrammen und Tabellen, 1 Bl.; 15 Tafeln nach Radierungen von Georg Fritz; Orig.-Ganzpergamentband auf fünf Bünden mit goldgepr. Rückentitel, Deckelvignette, Fileten und Kopfgoldschnitt; Erwerbungsnotiz auf Exemplarblatt, vereinzelt minimal stockfleckig, sonst tadellos. - Nr. 146 der Vorzugsausgabe, großzügig und breitrandig auf Büttenpapier gedruckt. <br /><br />
+                    <span style="display: none">Die DUB (Deutsche Überseebank, dann Deutsche Überseeische Bank) bzw. BAT (Banco Alemán Transatlántico) sollte durch ihre Präsenz in Lateinamerika ein Gegengewicht zur britischen Finanzmacht in Amerika bilden, was ihr im Wesentlichen auch gelang. Nach ihrer Enteignung im 2. Weltkrieg konnte sie besonders in Argentinien erneut Fuß fassen und bald wieder expandieren; ab 1976 wurde sie aus organisatorischen Gründen in die Deutsche Bank eingegliedert. Die vorliegende Festschrift enthält neben einer Geschichte der Bank, Bilanzen und Personalien auch statistisches Material zur Entwicklung des deutsch-südamerikanischen und deutsch-spanischen Handels sowie statistische Angaben zur Wirtschaftsentwicklung in Argentinien, Brasilien, Chile, Peru, Uruguay und Spanien. Die Tafeln zeigen Ansichten aus Berlin und Südamerika.</span>
+                    <a href='/artikel/festschrift-2202-28.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-28
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/franz-ii-2302-19.html'>
+                            <img class='thumb' src='/img/thumb/franz-ii-2302-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/franz-ii-2302-19.html'><strong>(Franz II.)</strong></a><br /><br />
+                    Gesetzbuch über Verbrechen und schwere Polizey-Uebertretungen. 2. verm. Aufl. Zwei Teile und Registerteil in 2 Bänden. Wien, Staatsdruckerei, 1815. In-8; Titel mit Wappenvignette, 7 Bll., 275 pp (erste vier röm. pagniert), 2 Bll.; 176 pp (inkl. Titel mit Wappenvignette), 2 Bll.; 339 pp; Halblederbände der Zeit mit Rückentitel (berieben, etwas bestoßen und fleckig); Vorsätze und benachbarte Seiten leimschattig, gelegentlich etwas fleckig, ein Blatt mit ausgebessertem Papierschaden; alle drei Teile mit dezentem Namensstempel auf dem Titelblatt; der erste Teil als durchschossenes Exemplar gebunden mit zahlreichen Unterstreichungen und Marginalien im Text sowie teils ausführlichen Kommentaren auf den Durchschussblättern, im zweiten Teil nur einige Marginalien und Kommentare. <br /><br />
+                    <span style="display: none">Stubenrauch 1385. - Um das Register und neue Vorschriften erweiterte zweite Ausgabe des im Geist der josephinischen Aufklärung ausgearbeiteten neuen Strafgesetzes, das unter Franz II. mit Jahresbeginn 1804 "in Unseren gesammten deutschen Erbländern in Ausübung gebracht" wurde und seinerzeit als legislatorische Meisterleistung galt. Der erste Teil wurde hauptsächlich von Mathias Wilhelm von Haan und Franz von Zeiller, der zweite von Joseph von Sonnenfels bearbeitet. Das Gesetzbuch war bis 1850 in Kraft. - Ungewöhnliches handschriftlich ergänztes Exemplar aus dem Nachlass des Advokaten, Bozener Bürgermeisters und Tiroler Landtagsabgeordneten Dr. Josef Streiter (1804-1873), der auch literarisch tätig war.</span>
+                    <a href='/artikel/franz-ii-2302-19.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-19
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hartlieb-wladimir-hrsg-1701-28.html'>
+                            <img class='thumb' src='/img/thumb/hartlieb-wladimir-hrsg-1701-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hartlieb-wladimir-hrsg-1701-28.html'><strong>Hartlieb, Wladimir (Hrsg.)</strong></a><br /><br />
+                    Der Handschuh. Heft 1-12 in 6 Heften (=alles Erschienene). Wien, Eigenverlag, 1926-1927. In-8; insgesamt 344 pp; HLdr. d. Zt. mit goldgepr. Rückenschildchen (etwas angeschmutzt und abgegriffen, die originalen Heftumschläge nicht mitgebunden). <br /><br />
+                    <span style="display: none">Vollständige Folge dieser polemischen Zeitschrift, die allein vom Herausgeber gestaltet wurde, sich als antisozialistischer und antidemokratischer "Fehdehandschuh" gegen den Zeitgeist verstand und "für den höheren Wert der ewigen Minorität" plädierte (Vorwort). Wladimir Freiherr von Hartlieb (eigentlich von Wallthor, 1887-1951) war Schriftsteller und Theaterkritiker und gehörte dem Kreis um Othmar Spann an.</span>
+                    <a href='/artikel/hartlieb-wladimir-hrsg-1701-28.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1701-28
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-39>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/katscher-leopold-2209-39.html'>
+                            <img class='thumb' src='/img/thumb/katscher-leopold-2209-39.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/katscher-leopold-2209-39.html'><strong>Katscher, Leopold</strong></a><br /><br />
+                    Konvolut von sieben Publikationen in der der Reihe "Sozialer Fortschritt. Hefte und Flugschriften für Volkswirtschaft und Sozialpolitik" (Nr. 28/29, 38/39, 51, 57/58, 91, 96 und 497/98). Leipzig (bzw. Gautzsch b. Leipzig), 1904/1914. Umfassst: Die Gewinnbeteiligung. (Mit besonderer Berücksichtigung Deutschlands) - Erwerbs- und Wirtschafts-Genossenschaften in Deutschland und Oesterreich - Die Siedlungs-Genossenschaft als Lösung der Arbeiterfrage - Einträgliche Arbeiterfreundlichkeit. Zeitgemässe Mahnrufe (als Hrsg.; 4. Tsd.) - Sozialsekretäre und Fabrikpfleger (als Hrsg.) - Das heutige britische Gewerkvereinswesen - Neue Beiträge zur Volkswohnungsfrage. Jedes Heft in-8, 12-32 pp, bedruckte Orig.-Broschur; Alters- und Gebrauchsspuren, mehrere Hefte wasserrandig, die auf brüchigem Papier gedruckten Umschläge leicht bis stärker beschädigt, die Rücken zumeist sauber überklebt. - Das erste Heft mit eigenhändiger Widmung an den deutschen Fabrikanten und Sozialreformer J. H. Epstein (1838-1919) auf dem Titelblatt. <br /><br />
+                    <span style="display: none">Zumeist Erstausgaben; das letzte Heft mit geändertem Reihentitel "Kultur und Fortschritt. Hefte für Volkswirtschaft, Sozialpolitik, Frauenfrage, Rechtspflege und Kulturinteressen." Der im Banat geborene Schriftsteller, Journalist, Ökonom, Sozialwissenschaftler und Übersetzer Leopold Katscher (1853-1939) engagierte sich als Sozialreformer und Friedensaktivist. Unter anderem verfasste er eine Biographie über Bertha von Suttner.</span>
+                    <a href='/artikel/katscher-leopold-2209-39.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-39
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/plattner-karl-hrsg-2209-72.html'>
+                            <img class='thumb' src='/img/thumb/plattner-karl-hrsg-2209-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/plattner-karl-hrsg-2209-72.html'><strong>[Plättner, Karl (Hrsg.)]</strong></a><br /><br />
+                    Friedrich Adlers politisches Bekenntnis. Friedrich Adlers Ausführungen anlässlich des Attentatsprozesses nach dem stenographischen Bericht der Wiener Arbeiter-Zeitung mit einem Vorwort. "Wien, Akademischer Verlag", 1917. Gr-8; 24 pp mit Kopfvignette; Orig.-Broschur mit Fadenheftung, unaufgeschnitten (Umschlag beschädigt, Fehlstellen und Klebeband-Reparaturen); papierbedingt gegilbt, Randmängel und Knickspuren, die letzten 4 Seiten mit Einriss im oberen Rand. <br /><br />
+                    <span style="display: none">Einzige Ausgabe der seltenen, anonym und mit einer fingierten Wiener Verlagsangabe erschienenen Untergrundpublikation; die Preisangabe (in Pfennig) weist allerdings bereits auf eine deutsche Herkunft hin. Im Vorwort reflektiert der damals in Hamburg tätige Kommunist und militante Sozialrevolutionär Karl Plättner (1893-1945) den politischen Hintergrund der Ermordung des österreichischen Ministerpräsidenten Karl Stürgkh durch den Sohn des Gründers und Vorsitzenden der Sozialdemokratischen Arbeiterpartei und ruft das deutsche Proletariat zum revolutionären Klassenkampf auf. Tatsächlich wurde die auf schlechtem Papier gedruckte Publikation unter Mitarbeit von Plättners Freund und Genossen Karl Becker in der kleinen Buchdruckerei von Otto Waldowski in Berlin hergestellt; von den 20.000 gedruckten Exemplaren konnten lediglich 8.000 verteilt werden, 12.000 wurden durch die Polizei beschlagnahmt. Siehe Volker Ullrich, Der ruhelose Rebell: Karl Plättner 1893-1945. Eine Biographie, München 2000, 41 f.</span>
+                    <a href='/artikel/plattner-karl-hrsg-2209-72.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-72
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/stirnn-johannes-2209-85.html'>
+                            <img class='thumb' src='/img/thumb/stirnn-johannes-2209-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/stirnn-johannes-2209-85.html'><strong>Stirnn, Johannes</strong></a><br /><br />
+                    Tractatio juridica de eo quod justum est circa nuptas, vom Recht der Ehe-Weiber; in celeberrima Marburgensium universitate Anno 1693. edita. Halle, Hendel, 1734. In-8; 56 pp mit drei dekorativen Vignetten; Pappband der Zeit mit Rückenbeschriftung (geringfügig fleckig, Spiegel mit kleiner Klebstelle); leichte Altersbräunung, kleines Monogramm auf Titel, insgesamt sehr gut erhalten. - Dazu als Beigabe: M. Fournel, Traité de l'Adultère, Considéré dans l'ordre judiciaire. Paris, J.-F. Bastien, 1787. Kl-8; 428 pp mit mehreren Vignetten; Lederband der Zeit mit Rückenvergoldung und -schildchen; leichte Alters- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Der lateinische Traktat des deutschen Rechtsanwalts Johannes Stirnn basiert auf seiner Magdeburger Dissertation von 1693 und behandelt in konziser Form Fragen wie rechtes Hochzeitsalter, Mitgift, Verlobung, Rollen und Rechte von Mann und Frau in der Ehe, Erbvorkehrungen, Scheidung und Wiederverheiratung. Die französische Abhandlung Fournels beleuchtet ausführlich die juristischen Aspekte des Ehebruchs und liegt hier in erster Ausgabe vor.</span>
+                    <a href='/artikel/stirnn-johannes-2209-85.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-85
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-99>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zucker-erwin-2209-99.html'>
+                            <img class='thumb' src='/img/thumb/zucker-erwin-2209-99.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zucker-erwin-2209-99.html'><strong>Zucker, Erwin</strong></a><br /><br />
+                    3 Forderungen der werktätigen Jugend. Herausgegeben von der Zentrale des Verbandes der kommunistischen Proletarierjugend Österreichs. Wien, Arbeiterbuchhandlung, (um 1924). In-8; 39, (1) pp mit einigen Abb.; illustr. Orig.-Broschur (hinterer Umschlag fleckig); leichte Knickspur, vereinzelt etwas fleckig, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Seltene Kampfschrift des damals noch jungen österreichischen Marxisten Erwin Zucker-Schilling (1903-1985), der in verschiedenen Positionen politisch und journalistisch tätig war und 1945 Chefredakteur der "Volksstimme" wurde. Fehlt in den meisten einschlägigen Bibliotheken.</span>
+                    <a href='/artikel/zucker-erwin-2209-99.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-99
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
