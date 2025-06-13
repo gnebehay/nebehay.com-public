@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neue Angebote Mai 2025</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/new-offers-may-2025/books-signed-and-unsigned.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Neue Angebote Mai 2025</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bücher (auch signiert)
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/neue-angebote-mai-2025.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/neue-angebote-mai-2025/bucher-auch-signiert.html'>Bücher (auch signiert)</a></li>
+    
+        <li><a href='/kataloge/neue-angebote-mai-2025/graphik.html'>Graphik</a></li>
+    
+        <li><a href='/kataloge/neue-angebote-mai-2025/autographen-varia.html'>Autographen &amp; Varia</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2505-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/alram-michael-2505-3.html'>
+                            <img class='thumb' src='/img/thumb/alram-michael-2505-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/alram-michael-2505-3.html'><strong>Alram, Michael</strong></a><br /><br />
+                    Nomina Propria Iranica In Nummis. Materialgrundlagen zu den iranischen Personennamen auf antiken Münzen. (Iranisches Personennamenbuch Band IV). Wien, Verlag der Österr. Akad. d. Wiss., 1986. In-folio; 347 pp, 23 Tabellen paläographischer Anhang, 47 Fototafeln (als Heft in Lasche beigelegt); Orig.-Leinenband. <br /><br />
+                    <span style="display: none">Dokumentiert die vorislamischen Münzen mit iranischen Personennamen aus der gesamten antiken Welt mit Ausnahme der chwarezmischen Prägungen.</span>
+                    <a href='/artikel/alram-michael-2505-3.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-3
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bad-gleichenberg-puff-rudolf-gustav-2505-5.html'>
+                            <img class='thumb' src='/img/thumb/bad-gleichenberg-puff-rudolf-gustav-2505-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bad-gleichenberg-puff-rudolf-gustav-2505-5.html'><strong>Bad Gleichenberg. - Puff, Rudolf Gustav</strong></a><br /><br />
+                    Erinnerung an Gleichenberg. Eine kurze historisch-topographische Skizze dieses Badeortes und seiner mahlerischen Umgebungen, als gemüthliches Andenken den allverehrten Gründern dieser Kuranstalt und den sie besuchenden Freunden der schönen Natur gewidmet. Grätz, Joseph Franz Kaiser, 1839. In-8; VIII, 76 pp, 1 lithographierte Faltkarte; späterer Pappband mit beigebundener illustrierter Orig.-Broschur (diese mit Läsuren), unbeschnitten; teilweise etwas gebräunt, stockfleckig oder feuchtrandig. - Ohne die 17 lithographierten Tafeln. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 519. - Seltene Monographie über das ab 1834 zum Kurort ausgebaute steirischen Bad und seine Umgebung, mit kurzen Gedichten literarisch ausgeschmückt. - Dazu als Beigabe: Josef Riegler, 150 Jahre Curort Bad Gleichenberg, Ausstellungskatalog 1984.</span>
+                    <a href='/artikel/bad-gleichenberg-puff-rudolf-gustav-2505-5.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-5
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bertuch-f-j-2505-9.html'>
+                            <img class='thumb' src='/img/thumb/bertuch-f-j-2505-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bertuch-f-j-2505-9.html'><strong>Bertuch, F. J.</strong></a><br /><br />
+                    Bilderbuch zum Nutzen und Vergnügen der Jugend ... Bd. 1 und 2 in 1 Bd. Wien, A. Pichler, 1813 und 1808. Kl-4; 6 Bll. (Titel und Einleitung), 50 altkolorierte Kupfertafeln mit je einem Textblatt (eine Seite deutsch, eine Seite französisch), 2 Bll. Register; 2 Bll., 50 Tafeln mit Text wie vorhin, 2 Bll. Register; Halblederband der Zeit mit zwei goldgeprägten Rückenschildchen und Buntpapiervorsätzen (berieben und bestoßen); stellenweise fleckig, von Kinderhand bekritzelt oder mit Papiermängeln, die auf sehr dünnem Papier gedruckten Textblätter teilweise stärker beschädigt (fallweise auch mit Textverlust). - Die Kupfertafeln sind teilweise mit Jacob Xaver Schmuzer (oder einer Abkürzung davon) signiert. <br /><br />
+                    <span style="display: none">Der Weimarer Unternehmer, Verleger und Philanthrop Friedrich Justin Bertuch (1747-1822) suchte mit seinem ab 1790 in monatlichen Lieferungen erschienenen "Bilderbuch" der jungen Generation zeitgenössisches Wissen in unterhaltsamer und abwechslungsreicher Form nahezubringen; der hier in den ersten zwei Bänden vorliegende Wiener Nachdruck verstand sich als wohlfeile Alternative zur Originalausgabe und sollte die Verbreitung des Werks fördern. Abgebildet und in prägnanten Kurzbeschreibungen behandelt sind hier Tiere, Pflanzen, Mineralien, Altertümer, Trachten aus aller Welt sowie Schiffstypen. - Stark gebraucht, aber komplett mit allen Tafeln und ein durchaus noch sammelwürdiges originelles Zeitdokument.</span>
+                    <a href='/artikel/bertuch-f-j-2505-9.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-9
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cochelet-charles-2505-13.html'>
+                            <img class='thumb' src='/img/thumb/cochelet-charles-2505-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cochelet-charles-2505-13.html'><strong>Cochelet, Charles</strong></a><br /><br />
+                    Naufrage du brick français La Sophie, perdu, le 30 mai 1819, sur la côte occidentale d'Afrique, et captivité d'une partie des naufragés dans le desert de Sahara, avec de nouveaux renseignemens sur la ville de Timectou. 2 Bde. in 1 Bd. Paris, P. Mongie Ainé, 1821. In-8; XVI, 348 pp; 2 Bll., 368 pp; insgesamt 10 (statt 11) meist gefaltete lithogr. Tafeln, eine lithogr. Faltkarte; zeitgenössischer Leinenband mit goldgepr. Rücken (berieben und angeschmutzt, Rücken geschossen); Text und Tafeln teilweise wasserrandig oder stockfleckig, einzelne kleine Papierschäden, insgesamt ordentlich. - Die in Bd. 2 nach S. 138 fehlende Tafel "Pavillon de l'Empereur de Maroc àTarodant" liegt in Kopie bei. <br /><br />
+                    <span style="display: none">Brunet VI, 20851; Paulitschke I, 164. - Der Autor, Schatzmeister zweier französischer Provinzen, erlitt auf einer Reise nach Brasilien Schiffbruch an der westafrikanischen Küste und wurde dort in die Sklaverei verschleppt. Er kam zu den beduinischen Oulad Delim in der Westsahara, gelangte bis vor Timbuktu und wurde schließlich in Marokko von seinem Bruder, der in Ägypten Generalkonsul war, losgekauft. In den ausführlichen Bericht über seine Abenteuer nahm er auch einige fremde Mitteilungen aus der Region auf; besonders für Marokko liefert das Werk viele Informationen. Die Tafeln zeigen Szenen von der Verschleppung, Ansichten verschiedener Örtlichkeiten (darunter Tanger), lokalen Goldschmuck und Trachten; die große Karte umfasst den Raum zwischen Gibraltar und dem Fluss Gambia, den Kanarischen Inseln und dem Gebiet von Timbuktu.</span>
+                    <a href='/artikel/cochelet-charles-2505-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-13
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/detzner-philipp-2505-19.html'>
+                            <img class='thumb' src='/img/thumb/detzner-philipp-2505-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/detzner-philipp-2505-19.html'><strong>Detzner, Philipp</strong></a><br /><br />
+                    Praktische Zahnersatzkunde. Eine Abhandlung über alle Zweige dieser Disciplin nebst einem Anhang über die Anfertigung von Gaumenobturatoren, Kieferbruchverbänden und Zahnrichtmaschinen. 3. Aufl. Berlin, C. Ash, 1905. Gr-8; XV, 480 pp mit 467 Holzschnitten; grünes Orig.-Leinen mit goldgepr. Rückentitel und Rotschnitt (etwas berieben), Stempel auf flieg. Vorsatz, kleiner Vermerk auf Titel, zwei Seiten am Rand stockfleckig, sonst sehr gut erhalten. <br /><br />
+                    <span style="display: none">Reich illustriertes Standardwerk. Der Autor war Zahnarzt in Speyer.</span>
+                    <a href='/artikel/detzner-philipp-2505-19.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-19
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/don-quixote-bibliographie-2505-20.html'>
+                            <img class='thumb' src='/img/thumb/don-quixote-bibliographie-2505-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/don-quixote-bibliographie-2505-20.html'><strong>Don Quixote (Bibliographie)</strong></a><br /><br />
+                    Bibliografía crítica de ediciones del Quijote impresas desde 1605 hasta 1917, recopiladas y descritas por Juan Suñé Benages y Juan Suñé Fonbuena. Continuada hasta 1937 por el primero de los citados autores y ahora redacta por J. D. M. Ford y C. T. Keller. Cambridge, Harvard University Press, 1939. Gr-8; XVII, 72, (1) pp; Orig.-Leinen mit goldgepr. Rückentitel und Kopfgoldschnitt. <br /><br />
+                    <span style="display: none">Seltenes Supplement zu der 1917 in Barcelona erschienenen Bibliographie, die Ausgaben des berühmten Cervantes-Romans in unzähligen Sprachen verzeichnet. In spanischer Sprache mit englischem Vorwort.</span>
+                    <a href='/artikel/don-quixote-bibliographie-2505-20.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-20
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/faure-jean-baptiste-2505-26.html'>
+                            <img class='thumb' src='/img/thumb/faure-jean-baptiste-2505-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/faure-jean-baptiste-2505-26.html'><strong>Faure, (Jean-Baptiste)</strong></a><br /><br />
+                    Au pied de l'échafaud. Souvenirs de la Roquette ... précédé d'une notice sur l'abbé Faure par L. Crouslé. Paris, Dreyfous et Dalsace, [1896]. Kl-8; 3 Bll. (inkl. Porträt-Frontispiz), 369 pp mit einigen Holzstich-Porträts und Autographenfaksimiles; dekorativer brauner Halbkalbslederband der Zeit mit Rückenschildchen, Rückenvergoldung und Buntpapiervorsätzen; Papier geringfügig altersgebräunt, erste und letzte Seiten etwas stockfleckig, sonst ausgezeichnet erhalten. <br /><br />
+                    <span style="display: none">Erinnerungen des Gefängnisgeistlichen von Grande Roquette, der 1836 in Betrieb genommenen zweiten Strafvollzugsanstalt im 11. Arrondissement von Paris. Von 1851 bis 1899 wurden hier 69 Gefangene mit der Guillotine hingerichtet; der Abbé Jean-Baptiste Faure (1833-1892) betreute sie ab 1885 als Beichtvater und zeichnete seine Begegnungen und Erlebnisse fortlaufend auf. 1900 wurde das Gefängnis abgerissen, an seiner Stelle entstanden Wohnhäuser. - Selten.</span>
+                    <a href='/artikel/faure-jean-baptiste-2505-26.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-26
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fiala-eduard-2505-28.html'>
+                            <img class='thumb' src='/img/thumb/fiala-eduard-2505-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fiala-eduard-2505-28.html'><strong>Fiala, Eduard</strong></a><br /><br />
+                    Ceske denáry. Praha, Ceská akademie císare Frantika Josefa pro vedy, slovesnost a umení, 1895. Kl-4; 3 Bll., 534 pp, 1 Falttabelle, 36 Tafeln; blind- und goldgeprägter Ganzleinenband der Zeit mit Rotschnitt (leicht berieben und angeschmutzt); flieg. Vorsatz und Titel geringfügig fleckig, Tafeln leicht randgebräunt, insgesamt ohne erkennbare Gebrauchsspuren und sehr gut erhalten. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 7009; ÖBL 1, 307 f. - Standardwerk für die mittelalterliche Münzprägung Böhmens und Mährens, hier in der von der Tschechischen Akademie der Wissenschaften verlegten seltenen Originalausgabe. Eduard Fiala (1855-1924) betreute unter anderem die Münzsammlung des im österreichischen Exil lebenden Herzogs Ernst August von Cumberland und war Mitbegründer der Numismatischen Gesellschaft in Prag.</span>
+                    <a href='/artikel/fiala-eduard-2505-28.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-28
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/goethe-2505-31.html'>
+                            <img class='thumb' src='/img/thumb/goethe-2505-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/goethe-2505-31.html'><strong>(Goethe)</strong></a><br /><br />
+                    Die Natur. Ein Hymnus. Leipzig, Insel-Verlag, 1911. Gr-8; 1 weißes Bl., 7 Bll.; grüner Orig.-Kalbslederband mit goldgepr. Rücken- und Deckeltitel, Innenkantenbordüre und Kopfgoldschnitt; der empfindliche Einband berieben, stellenweise verfärbt und mit leichten Kratzspuren; kleines Exlibris mit Signet des Insel-Verlags. - Gesetzt aus der Cicero Kleukens Antiqua; Titel und Initiale in Golddruck. Eines von nur 20 Exemplaren der Vorzugsausgabe (Gesamtauflage 100 Ex.) auf Japanpapier im Ganzledereinband. <br /><br />
+                    <span style="display: none">Stürz 74; Sarkowski 598; Rodenberg 77. - Druck der Ernst-Ludwig-Presse im Insel-Verlag, hier in zweiter Ausgabe; die erste erschien 1910 in 120 Exemplaren. Die Urheberschaft des um 1782 entstandenen und erstmals 1784 veröffentlichten Essays wurde vielfach Johann Wolfgang von Goethe zugeschrieben, doch dürfte der Text tatsächlich von dem Schweizer Pfarrer, Übersetzer und Schriftsteller Georg Christoph Tobler (1757-1812) stammen.</span>
+                    <a href='/artikel/goethe-2505-31.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-31
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hanke-johann-alois-2505-36.html'>
+                            <img class='thumb' src='/img/thumb/hanke-johann-alois-2505-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hanke-johann-alois-2505-36.html'><strong>Hanke, Johann Alois</strong></a><br /><br />
+                    Empfehlung der böhmischen Sprache und Litteratur. Wien, Baumeister, 1783. In-8; 4 Bll., 67 pp, 1 Bl. (Druckfehlerverz.); einige Vignetten; Lederband der Zeit mit Rückenvergoldung und Sprenkelschnitt (Rücken berieben, Deckel geringfügig aufgewölbt und mit minimalen Fehlstellen im Bezug, vorderer Vorsatz mit kleinen Mängeln); vereinzelt etwas fleckig, insgesamt sehr gut erhalten und frisch. <br /><br />
+                    <span style="display: none">Wurzbach 7, 317. - Enthusiastisches Engagement für das Tschechische, mit dem Entwurf eines Lehrplans zum Unterricht in tschechischer Sprache und Literatur. Das originelle schmale Bändchen zählt zu den Hauptwerken des mährischen Schriftstellers und Humanisten Jan Alois Hanke (geadelt Johann Nepomuk Aloys Hanke von Hankenstein, 1751-1806), der im späten 18. Jahrhundert einer der führenden Vertreter der Aufklärung in Mähren war. Eine von Wurzbach genannte angebliche erste Ausgabe des Buchs von 1782 dürfte auf einem Irrtum beruhen. - Selten.</span>
+                    <a href='/artikel/hanke-johann-alois-2505-36.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-36
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.html'>
+                            <img class='thumb' src='/img/thumb/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.html'><strong>Higatsberger, M. J. - Viehböck, F. P. (Hrsg.)</strong></a><br /><br />
+                    Electromagnetic Separation of Radioactive Isotopes. Proceedings of the International Symposium Held in Vienna, May 23-25, 1960. Wien, Springer-Verlag, 1961. Gr-8; VIII, 318 pp mit 168 Abb.; goldgepr. Orig.-Leinen mit Schutzumschlag. - Auf dem flieg. Vorsatz handschriftliche Widmung von M. J. Higatsberger. <br /><br />
+                    <span style="display: none">Mit zahlreichen Beiträgen in englischer Sprache zur elektromagnetischen Trennung radioaktiver Isotope. Der österreichische Physiker Michael Josef Higatsberger (1924-2004) war Mitbegründer und Geschäftsführer der Österreichischen Studiengesellschaft für Atomenergie, die  Österreich auf den Einstieg in das Atomzeitalter vorbereiten sollte, zwischen 1958 und 1960 das Reaktorzentrum Seibersdorf errichtete und das hier dokumentierte Symposium veranstaltete; die Gesellschaft ging später im Austrian Institute of Technology (AIT) auf.</span>
+                    <a href='/artikel/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-37
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-38>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hoffmann-e-t-a-truhn-hieronymus-2505-38.html'>
+                            <img class='thumb' src='/img/thumb/hoffmann-e-t-a-truhn-hieronymus-2505-38.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hoffmann-e-t-a-truhn-hieronymus-2505-38.html'><strong>Hoffmann, E. T. A. - Truhn, Hieronymus</strong></a><br /><br />
+                    E. T. A. Hoffmann als Musiker. Mit Beziehung auf die bevorstehende Herausgabe seines musikalischen Nachlasses. In: Der Freihafen. Galerie von Unterhaltungsbildern aus den Kreisen der Literatur, Gesellschaft und Wissenschaft. 2. Jg. (3. Heft, S. 66-105 und 4 pp Notenbeilage). Altona, J. F. Hammerich, 1839. In-8; VI, 248, 4 pp; VI, 269, (1) pp; marmorierter Pappband der Zeit mit Rückenschildchen (berieben und bestoßen); gebräunt und stellenweise leicht stockfleckig, Titel und Zwischentitel dezent gestempelt; Adelsexlibris. <br /><br />
+                    <span style="display: none">Erstdrucke des vom deutschen Dirigenten, Komponisten und Musikschriftsteller Friedrich Hieronymus Truhn (1811-1886) verfassten wichtigen Artikels sowie von Hoffmanns Lied "In des Irtisch weisse Fluthen". Der vorliegende Band umfasst Heft 3 und 4 und damit den gesamten zweiten Jahrgang der vom Schriftsteller Theodor Mundt (1808-1861) anonym herausgegebenen Zeitschrift "Der Freihafen", die von 1838 bis 1844 erschien. Enthalten sind in ihm unter anderem auch ein zweiteiliger Beitrag über Ludwig Tieck und die deutsche Romantik (von Rudolf Kausler) sowie eine deutsche Fassung von Hegels lateinischer Rede zur 3. Säkularfeier der Augsburger Konfession (1830).</span>
+                    <a href='/artikel/hoffmann-e-t-a-truhn-hieronymus-2505-38.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-38
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/isokrates-2505-41.html'>
+                            <img class='thumb' src='/img/thumb/isokrates-2505-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/isokrates-2505-41.html'><strong>Isokrates</strong></a><br /><br />
+                    Jsocratis Panegyricvs, Areopagiticvs, Ad Philippvm, Et Archidamvs. Cvm Jnterpretatione Latina. Ingolstadt, Sartorius, 1595. In-12; Titel mit Druckermarke, 340, (1) pp mit einigen Kopfleisten; flexibler Pergamentband mit Rotschnitt (Deckel wellig, Innendeckel schadhaft, Bindebänder fehlen); Titel angeschmutzt und knittrig, mit alten Besitzvermerken und Tintenstrichen; einige wenige Seiten mit kleinen Mängeln, insgesamt weitgehend sauber und frisch. <br /><br />
+                    <span style="display: none">VD16 I 588. - Seltene griechisch-lateinische Parallelausgabe von vier Reden des Athener Rhetors (436-338 v. Chr.), der mit seiner Entwicklung neuer literarischer Formen Vorbild für die spätere Redekunst wurde und als Gegenspieler Platons und seiner Akademie wesentlichen Einfluss auf das antike Bildungswesen nahm. Der "Panegyrikos" erschien zu den Olympischen Spielen des Jahres 380 und rief zur Einigkeit aller Griechen und zum gemeinsamen Kampf gegen die Perser unter Führung Athens auf; der "Areopagitikos" setzte sich für die Rückkehr zur solonischen Verfassung ein.</span>
+                    <a href='/artikel/isokrates-2505-41.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-41
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lanckoronska-maria-oehler-richard-2505-47.html'>
+                            <img class='thumb' src='/img/thumb/lanckoronska-maria-oehler-richard-2505-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lanckoronska-maria-oehler-richard-2505-47.html'><strong>Lanckoronska, Maria - Oehler, Richard</strong></a><br /><br />
+                    Die Buchillustration des XVIII. Jahrhunderts in Deutschland, Österreich und der Schweiz. 3 Bände. Leipzig, Insel Verlag, 1932-1934. In-4; 113 pp, 60 Taf. mit 95 Abb., 1 Bl.; 243 pp, 92 Taf. mit 253 Abb.; 156 pp, 60 Taf. mit 188 Abb.; Orig.-Pappbände mit Rücken- und Deckelschildchen, unbeschnitten; Rücken und Vorsätze sorgfältig erneuert, Deckel etwas fleckig, innen tadellos. - Eines von 300 numerierten Exemplaren dieser Ausgabe (Gesamtauflage 800). <br /><br />
+                    <span style="display: none">Sorgfältig ausgestattetes Standardwerk, reich mit Lichtdrucken illustriert. Teil 1: Die deutsche Buchillustration des Spätbarock und Rokoko. - Teil 2: Die deutsche und schweizerische Buchillustration des Vorklassizismus. - Teil 3: Die Buchillustration des XVIII. Jahrhunderts in Österreich. Die Buchillustration des Klassizismus und der Frühromantik in der Schweiz.</span>
+                    <a href='/artikel/lanckoronska-maria-oehler-richard-2505-47.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-47
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/larisch-rudolf-2505-48.html'>
+                            <img class='thumb' src='/img/thumb/larisch-rudolf-2505-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/larisch-rudolf-2505-48.html'><strong>Larisch, Rudolf</strong></a><br /><br />
+                    Unterricht in ornamentaler Schrift. 5. veränderte Aufl. Wien, Deutschösterr. Staatsdruckerei, 1919. In-8; 119, (1) pp mit zahlreichen teils ganzseitigen Abb., 8 Taf.; beigebunden vierseitiger Verlagsprospekt zur 7. Aufl.; dekorativer Halbleder-Handeinband von Fini Skarica mit Deckelbezügen aus Buntpapier, Rotschnitt und kleinem Exlibris der Künstlerin (Rücken aufgehellt); ganz vereinzelt etwas stockfleckig, zwei Tafeln mit unbedeutendem kleinen Papierschaden im Falz. Stellenweise in Rot gedruckt, auf dem Titelblatt handschriftliche Widmung des Autors. - Beiliegend ein weiterer Handeinband von Fini Skarica: in-8, weißes Ganzleder mit Goldschnitt und handschriftlichem Rückentitel in Pappschuber mit Buntpapierbezug (dieser mit Gebrauchsspuren); enthält Friedrich Pollak, Lorenzo Bernini, Stuttgart 1919. <br /><br />
+                    <span style="display: none">Hauptwerk des österreichischen Schriftgestalters und Typographen Rudolf von Larisch (1856-1934), erstmals 1905 erschienen und in der Folge mehrmals aufgelegt. Larisch unterrichtete an der Graphischen Lehr- und Versuchsanstalt sowie an der Akademie der Bildenden Künste in Wien und war Gründungsmitglied des Österreichischen Werkbundes. Seine Schülerin Fini (Josefine) Skarica verehelichte Ehrendorfer (1898-1986) betätigte sich in Wien und Graz als Schriftkünstlerin, Illustratorin und Kunsthandwerkerin. Sie war Mitglied der Wiener Frauenkunst und des Werkbundes.</span>
+                    <a href='/artikel/larisch-rudolf-2505-48.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-48
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/le-sage-lesage-alain-rene-2505-49.html'>
+                            <img class='thumb' src='/img/thumb/le-sage-lesage-alain-rene-2505-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/le-sage-lesage-alain-rene-2505-49.html'><strong>Le Sage (Lesage), (Alain René)</strong></a><br /><br />
+                    Histoire de Gil Blas de Santillane. Vignettes par Jean Gigoux. Paris, Paulin, 1836. Kl-4; Frontispiz, 972 pp mit mehreren hundert Textabbildungen und Initialen in Holzsstich, vor dem Titel ganzseitiges Holzstich-Porträt von Gil Blas auf China; prachtvoller Romantiker-Ganzledereinband mit reicher Rücken-, Deckel-, Steh- und Innenkantenvergoldung, Marmorpapiervorsätzen und Goldschnitt, auf dem Vorderdeckel Wappen der Familie Colloredo-Mansfeld; Einband geringfügig berieben, Innendeckel mit Exlibrisspuren; manche Papierlagen leicht altersgebräunt, Porträt minimal stockfleckig, sonst weitgehend fleckenfrei und frisch und insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Carteret III, 382 ff.; Vicaire V, 238 f. - Erste vollständig mit Holzstichen illustrierte Ausgabe des bekannten und auch heute noch gut lesbaren Schelmenromans, hier im verbesserten zweiten Druck und in einem attraktiven Exemplar. Gil Blas, das satirische Hauptwerk von Lesage (Autor heute meist so geschrieben, 1668-1747) erschien in vier Bänden zwischen 1715 und 1735; die nach Spanien verlegte Handlung gibt in Wahrheit zeitgenössische französische Verhältnisse wieder. Die vorliegende Ausgabe gilt als Meilenstein der französischen Buchillustration in der Epoche der Romantik.</span>
+                    <a href='/artikel/le-sage-lesage-alain-rene-2505-49.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-49
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-53>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/liszt-franz-2505-53.html'>
+                            <img class='thumb' src='/img/thumb/liszt-franz-2505-53.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/liszt-franz-2505-53.html'><strong>Liszt, Franz</strong></a><br /><br />
+                    Die Zigeuner und ihre Musik in Ungarn. Deutsch bearbeitet von Peter Cornelius [d. i. Nelly Pins]. Pesth, Gustav Heckenast, 1861. Kl-8; 2 Bll., 259, (1) pp; Halblederband der Zeit mit mit dekorativem goldgeprägtem Rücken (etwas berieben); geringfügig gebräunt, insgesamt schönes Exemplar. <br /><br />
+                    <span style="display: none">Erste deutsche Ausgabe des bis heute kontroversiell beurteilten Werks, zwei Jahre nach der Pariser Erstausgabe von "Des Bohémiens et de leur musique en Hongrie" erschienen. Liszts romantisch geprägte Vorstellungen über "Zigeunermusik", die er als einen nationalen ungarischen Stil ansah, wurden unter anderem von Belá Bartók scharf kritisiert.</span>
+                    <a href='/artikel/liszt-franz-2505-53.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-53
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mattis-carl-2505-58.html'>
+                            <img class='thumb' src='/img/thumb/mattis-carl-2505-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mattis-carl-2505-58.html'><strong>Mattis, Carl</strong></a><br /><br />
+                    Das Riesen-Gebirge und dessen merckwürdigste Parthien (Deckeltitel). 2. verb. Auflage. Schmiedeberg, Selbstverlag, um 1820. In-8; typograph. Titel, 1 Bl., 24 pp, 21 lithogr. Tafeln; OKart. mit lithogr. Deckelillustration (diese bei der Angabe im Titel mitgezählt). Ohne die gefaltete Gebirgskarte, jedoch mit einer beigehefteten weiteren lithogr. Ansicht (Mittagstein, etwas beschädigt). - Rücken fehlt, Umschlag mit Klebebandreparaturen; Stockflecken und Einrisse im Text, die Tafeln weitgehend sauber. <br /><br />
+                    <span style="display: none">Engelmann 835; vgl. Dussler 107 u. Winkler 510. - Typographischer Titel etwas abweichend "Das Riesen-Gebirge und dessen merkwürdigsten Parthieen." Inkunabel der Lithographie, mit Beschreibungen und Ansichten der Naturschönheiten und Bauwerke der malerischen Landschaft im tschechisch-polnischen Grenzgebiet.</span>
+                    <a href='/artikel/mattis-carl-2505-58.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-58
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mozart-wolfgang-amadeus-2505-59.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-2505-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mozart-wolfgang-amadeus-2505-59.html'><strong>Mozart, Wolfgang Amadeus</strong></a><br /><br />
+                    Mozart Operas in Facsimile III: Le nozze di Figaro K. 492. Facsimile of the Autograph Score. 3 Bände. Los Altos, The Packard Humanities Institute, 2006-2007. Quer-4; Faksimileteil 624 Farbtaf., 6 Bll. in 2 Bänden; Kommentarband (in Englisch und Deutsch) VII, 124 pp mit zahlr. meist farb. Abb.; Orig.-Halbleder mit goldgepr. Rückentitel; ein Titelblatt mit kleinem hinterlegtem Eckabriss, sonst fast neuwertig. <br /><br />
+                    <span style="display: none">Farbgetreue Wiedergabe des nahezu vollständig in Mozarts Handschrift erhaltenen Autographs, das heute auf mehrere Bibliotheken aufgeteilt ist; der Kommentarband mit Beiträgen von Norbert Miller und Dexter Edge. Sorgfältig erstellte und ausgestattete Edition.</span>
+                    <a href='/artikel/mozart-wolfgang-amadeus-2505-59.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-59
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mueller-von-asow-erich-h-2505-60.html'>
+                            <img class='thumb' src='/img/thumb/mueller-von-asow-erich-h-2505-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mueller-von-asow-erich-h-2505-60.html'><strong>Mueller von Asow, Erich H.</strong></a><br /><br />
+                    Richard Strauss. Thematisches Verzeichnis. 3 Bände. Wien - Wiesbaden - München, L. Doblinger (B. Herzmansky), 1959-1974. Kl-4; insges. 8 Bll., 1688 pp mit zahlreichen Notenbeispielen, 2 Porträttafeln; blaue Leinenbände mit geldgepr. Rücken (Bd. 1 etwas berieben). <br /><br />
+                    <span style="display: none">Das erste umfassende Werkverzeichnis, mit ausführlichen Quellenangaben und Kommentaren; in der Musikliteratur als AV (Asow-Verzeichnis) zitiert. Band I: Opus 1-59; Band II: Opus 60-86; Band III (hrsg. von Alfons Ott und Franz Trenner): Werke ohne Opuszahlen.</span>
+                    <a href='/artikel/mueller-von-asow-erich-h-2505-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-60
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/musil-alois-2505-62.html'>
+                            <img class='thumb' src='/img/thumb/musil-alois-2505-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/musil-alois-2505-62.html'><strong>Musil, Alois</strong></a><br /><br />
+                    Kusejr 'Amra. (Hrsg. von der kais. Akademie der Wissenschaften. Wien, Staatsdruckerei, 1907). In-folio; 183 (von insgesamt 248) pp mit 126 Textabbildungen, mitgebunden ein Konvolut leere Seiten; Orig.-Leinenband mit Rücken- und Deckelprägung. - Ohne die Beiträge weiterer Autoren zu diesem Werk, ohne die Faltkarte und ohne den Tafelteil mit 41 Tafeln. <br /><br />
+                    <span style="display: none">Der Hauptteil des Textbandes nebst wissenschaftlichem Anmerkungsapparat als Vorabdruck im originalen Verlagseinband. Nicht enthalten sind der endgültige Titel, das Vorwort von D. H. Müller, die Fachbeiträge zu Architektur und Malerei von M. Kropf, A. L. Mielich, J. Pollak, F. Menzel und F. Wickhoff sowie "Datierung und Bestimmung des Baues" von J. von Karabacek. - Das aus dem frühen 8. Jahrhundert stammende umayyadische Wüstenschloss Qusair 'Amra im heutigen Jordanien mit seinen bemerkenswerten Fresken wurde 1898 von dem aus Mähren stammenden Orientalisten und Theologen Alois Musil (1868-1944) im Zuge seiner dritten Forschungsreise wiederentdeckt und unter Mitwirkung des Malers Alphons Leopold Mielich dokumentiert; es zählt zu den bedeutendsten Beispielen frühislamischer Kunst und Architektur. Musils hier vorliegender, mit zahlreichen Fotographien und Skizzen illustrierter Beitrag enthält neben wertvollen historischen und topographischen Informationen auch anschauliche Schilderungen vom Leben der Beduinen. Komplett taucht das Werk nur sehr selten im Handel auf.</span>
+                    <a href='/artikel/musil-alois-2505-62.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-62
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sagan-francoise-2505-76.html'>
+                            <img class='thumb' src='/img/thumb/sagan-francoise-2505-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sagan-francoise-2505-76.html'><strong>Sagan, Françoise</strong></a><br /><br />
+                    Les merveilleux nuages. Paris, Julliard, 1961. In-8; 184, (1) pp, 2 Bll; Orig.-Broschur, nicht aufgeschnitten; papierbedingt etwas gebräunt, vorderer flieg. Vorsatz und Titel mit kleinen Papierschäden; Verlagsanzeige beiliegend. - Für die Autorin bestimmter Band außerhalb der 440 numerierten Exemplare der Auflage. Auf dem Vortitel eigenhändige Widmung "Pour Georges Bataille / sympathies / Françoise Sagan". <br /><br />
+                    <span style="display: none">Die Erstausgabe des sechsten Romans der französischen Autorin (1935-2004) mit einer bemerkenswerter Widmung. Georges Bataille (1897-1962) war Schriftsteller und Philosoph und gründete die Zeitschrift "Critique" (heute "Revue Critique"). Die deutsche Ausgabe des Buchs erschien 1974 unter dem Titel "Die wunderbaren Wolken".</span>
+                    <a href='/artikel/sagan-francoise-2505-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-76
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schaeffer-albrecht-2505-80.html'>
+                            <img class='thumb' src='/img/thumb/schaeffer-albrecht-2505-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schaeffer-albrecht-2505-80.html'><strong>Schaeffer, Albrecht</strong></a><br /><br />
+                    Die Saalborner Stanzen. Eine Trilogie. Leipzig, Insel-Verlag, 1922. Kl-4; 3 Bll., 34. (1) pp, 1 Bl.; Orig.-Pergamentband (signiert Heinrich & Scheffel, Leipzig) mit fünf durchgezogenen Bünden, Rücken- und Deckeltitel sowie Kopfgoldschnitt; zweifarbig gedruckt auf Büttenpapier; tadellos. - Nr. III von 30 nicht für den Handel bestimmten Exemplaren der Vorzugsausgabe (Gesamtauflage 330 Stück). Kleines Exlibris mit Signet des Insel-Verlags auf fliegendem Vorsatz. <br /><br />
+                    <span style="display: none">Rodenberg 96; Sarkowski 1427; Wilpert-G. 35. - Im September 1918 entstandene Dichtung des heute weitgehend vergessenen deutschen Schriftstellers Albrecht Schaeffer (1885-1950), an den Sigmund Freuds letzter Brief gerichtet war und dessen umfangreicher Roman "Helianth" als literarischer Geheimtipp gilt. Dritter und letzter Druck der Insel-Presse, in der Offizin Poeschel & Trepte unter Verwendung der gotischen Schrift von William Caslon hergestellt.</span>
+                    <a href='/artikel/schaeffer-albrecht-2505-80.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-80
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/senghor-leopold-sedar-2505-81.html'>
+                            <img class='thumb' src='/img/thumb/senghor-leopold-sedar-2505-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/senghor-leopold-sedar-2505-81.html'><strong>Senghor, Léopold Sédar</strong></a><br /><br />
+                    Botschaft und Anruf. Sämtliche Gedichte. Hrsg. und übertragen von Janheinz Jahn. München, Hanser, 1962. In-8; 229 pp; Orig.-Broschur (mit leichten Gebrauchsspuren und Wasserrand). Unkorrigiertes Leseexemplar der französisch-deutschen Parallelausgabe. - Auf dem Titelblatt eigenhändige Widmung "Madame Bettina Michael en hommage respectueux / L Senghor." <br /><br />
+                    <span style="display: none">Erste zweisprachige Gesamtausgabe der Lyrik des senegalesischen Dichters und Politikers (1906-2001), der von 1960 bis 1980 erster Präsident des Senegal war. Sein literarisches Werk ist sowohl von afrikanischer wie von europäischer Kultur geprägt.</span>
+                    <a href='/artikel/senghor-leopold-sedar-2505-81.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-81
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sinclair-john-2505-83.html'>
+                            <img class='thumb' src='/img/thumb/sinclair-john-2505-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sinclair-john-2505-83.html'><strong>Sinclair, John</strong></a><br /><br />
+                    Grundgesetze des Ackerbaues, nebst Bemerkungen über Gartenbau, Obstbaumzucht, Forst-Cultur und Holzpflanzung. Auf Veranlassung der k. k. Landwirthschafts-Gesellschaft in Wien aus dem Englischen übersetzt von Joseph Ritter v. Schreibers. Wien, J. G. Heubner, 1819. In-8; XIV, 1 Bl., 762 pp mit einigen Textabb., 3 Bll., 9 Falttafeln; Halblederband der Zeit mit Rückenvergoldung und Rückenschildchen (berieben und bestoßen); flieg. Vorsatz und Titel gestempelt, stellenweise etwas stockfleckig, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Erste deutsche Ausgabe des im selben Jahr erschienenen "Code of Agriculture". Der schottische Ökonom und Politiker Sir John Sinclair (1754-1835) benützte als einer der ersten den Begriff der Statistik und proponierte neue Methoden in der Landwirtschaft; der Übersetzer Joseph von Schreibers (1793-1874) war Jurist und ein engagierter Fachmann für die Landwirtschaft.</span>
+                    <a href='/artikel/sinclair-john-2505-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-83
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/steiermark-2505-84.html'>
+                            <img class='thumb' src='/img/thumb/steiermark-2505-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/steiermark-2505-84.html'><strong>Steiermark</strong></a><br /><br />
+                    Lanndhandvest. Deß Hertzogthumbs Steyer, Darinnen Desselben Kayserl. Königl. und Landsfürstliche von Zeit zu Zeit Allergnädigst und Gnädigist erhaltene Freyheiten, Statuta, Lands-Gebräuch und andere Satz- und Ordnungen nach langs begriffen. Graz, Widmanstätterische Erben, 1697. Kl-4; 10 Bll. (inkl. Titel rot-schwarz), 69 fol., 1 weißes Bl.; Wappenholzschnitt auf Titel verso, mehrere Vignetten und Initialen. - (Beigebunden:) Römischer kayserlicher, auch zu Hungarn und Böhaimb, Königl. Majestät, &c. Ertzhertzog zu Oesterreich, &c. Confirmation und Bestettigung, Deß Fürstenthumbs Steyer Berg-Rechts-Büchel. Ebenda, 1682; 6 Bll. (inkl. Titel mit Holzschnittbordüre); wiederholter Wappenholzschnitt auf Titel verso. - (Beigebunden:) Fürstlicher Durchleuchtigkeit Erzherzogen Ferdinandens ... Neuverfaste Zehend-Ordnung Im Fürstenthumb Steyer. Ebenda, 1697; 4 Bll. (davon 1 weiß); Schlussvignette. - Halblederband des 19. Jhs.; teilweise etwas gebräunt oder stockfleckig, einige Seiten mit Wasserrand. <br /><br />
+                    <span style="display: none">Schlossar 61 f.; Durstmüller 1, 166 f. - Vierte Ausgabe der steirischen Landhandfeste, der ersten gedruckten Zusammenstellung der die Steiermark betreffenden Freiheiten. Sie regelt die Beziehung der Steiermark zu ihrem Landesherrn in Wien und  bildet die Grundlage der steirischen Landesidentität; die Beibindungen enthalten die seit der Erstausgabe von 1583 hinzugekommenen Privilegien. - Schöner Druck aus der Widmannstätterschen Offizin, mit an Alt-Grazer Tradition erinnernder Federzugornamentik in Holzschnitt auf dem Haupttitel.</span>
+                    <a href='/artikel/steiermark-2505-84.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-84
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/turkenkriege-happel-eberhard-werner-2505-87.html'>
+                            <img class='thumb' src='/img/thumb/turkenkriege-happel-eberhard-werner-2505-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/turkenkriege-happel-eberhard-werner-2505-87.html'><strong>Türkenkriege. - (Happel, Eberhard Werner)</strong></a><br /><br />
+                    Der jetzo glorwurdigst-regierenden Römischen Käysers, auch Deutschen, Ungarischen und Bömischen Königs Leopoldi I. Ruhm-würdigster Lebens-Lauff und siegreiche Kriege, Belagerungen, Schlachten, entdeckte Conspirationes, Vermählungen. Und insbesonderheit Der annoch währende bluthige Ungarische Türcken-Krieg: Wie derselbe nach glücklicher Entsetzung der käyserl. Residentz-Stadt Wien den Christen so glücklich außgeschlagen ... (Hamburg, Thomas von Wiering, 1688). In-4; Titel, 112 pp mit einer Textabb., 8 (statt 9) gefaltete Kupfertafeln; einfacher Pappband wohl des 18. Jhs. mit zwei Papierschildchen und Buntpapiervorsätzen (Deckel mit kleinen Läsuren und Knicken, Bindung gelockert); teilweise etwas gebräunt oder fleckig, einzelne stärkere Papierschäden; die Paginierung stellenweise fehlerhaft, eine Tafel falsch eingebunden. - Die fehlende dritte Tafel (mit 9 Porträtmedaillons und der Darstellung der Belagerung von Wien) liegt in etwas verkleinerter Kopie bei. <br /><br />
+                    <span style="display: none">VD17 7:704489G; Sturminger 1464. - Separat paginierter und gebundener dritter Teil von "Thesaurus Exoticorum. Oder eine mit Außländischen Raritäten und Geschichten Wohlversehene Schatz-Kammer ...", einer zeitnahen Dokumentation von Weltgeschehnissen durch den deutschen Universalgelehrten, Übersetzer, Romanautor und Journalisten Eberhard Werner Happel (1647-1690). Der vorliegende Teil bringt eine kurze Biographie des regierenden Kaisers Leopold und behandelt dann ausführlich die Auseinandersetzungen mit den Osmanen vom Türkenkrieg 1663 bis zum ungarischen Feldzug 1687; den Schluss bildet ein kurzer Bericht über die Krönung von Leopolds Sohn Erzherzog Joseph zum König von Ungarn. Der Text ist lebendig und anschaulich geschrieben, die Tafeln bringen zumeist Belagerungs- oder Schlachtszenen. Der Textholzschnitt zeigt den Kaufmann und Kundschafter Georg Franz Koltschitzky, dem fälschlich die Gründung des ersten Kaffeehauses in Wien zugeschrieben wird.</span>
+                    <a href='/artikel/turkenkriege-happel-eberhard-werner-2505-87.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-87
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-95>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/weinheber-josef-2505-95.html'>
+                            <img class='thumb' src='/img/thumb/weinheber-josef-2505-95.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/weinheber-josef-2505-95.html'><strong>Weinheber, Josef</strong></a><br /><br />
+                    Selbstbildnis. Gedichte aus zwanzig Jahren. (Die Kleine Bücherei Nr. 67). München, Albert Langen - Georg Müller, 1937. Kl-8; 57, (1) pp, 3 Bll.; orig. Pappband (etwas berieben und bestoßen, Rücken repariert). - Auf dem fliegenden Vorsatz eigenhändige Widmung "Oskar Laske herzlich zugeeignet / Josef Weinheber / Kirchstetten 21. 7. 38". <br /><br />
+                    <span style="display: none">Widmungsexemplar der Erstausgabe für den Maler und Graphiker Oskar Laske (1874-1951); auf dem Titelblatt dessen kleiner Besitzerstempel.</span>
+                    <a href='/artikel/weinheber-josef-2505-95.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-95
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wimmer-g-a-2505-97.html'>
+                            <img class='thumb' src='/img/thumb/wimmer-g-a-2505-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wimmer-g-a-2505-97.html'><strong>Wimmer, G. A.</strong></a><br /><br />
+                    Neuestes Gemälde von Australien. (Schütz's allgemeine Erdkunde Bd. 30). Wien, Anton Doll, 1832. In-8; 2 Bll., 409, (1) pp, 6 Kupfertafeln; einfacher Pappband der Zeit (berieben); Titel und Reihentitel mit mehreren gelöschten Stempeln und gelöschtem Besitzvermerk, stellenweise geringfügig knittrig oder fleckig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Erste Ausgabe dieser lebendigen Schilderung von Land und Leuten. Beschrieben werden nicht nur der australische Kontinent und Neuseeland, sondern auch weitere Inseln und Archipele des Pazifiks (Marianen, Carolinen, Sandwichinseln, Fidschi, Tonga, Cook- und Gesellschaftsinseln etc.). Die ansprechend gestochenen Tafeln zeigen Hobart Town, Sydney, Neuirland (Carteret-Bai), Kindergräber auf den Salomonen, Tongatapu  und Otahiti (Tahiti). Mit ausführlichem geographischem Register.</span>
+                    <a href='/artikel/wimmer-g-a-2505-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-97
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
