@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books (signed &amp; unsigned)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Books (signed &amp; unsigned)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Science, Mathematics, Technology
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/books-signed-unsigned.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/early-printed-books.html'>Early Printed Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/local-history-and-topography.html'>Local History and Topography</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/botany-zoology-agriculture-horsemanship-hunting.html'>Botany, Zoology, Agriculture, Horsemanship, Hunting</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/geography-travel-ethnology.html'>Geography, Travel, Ethnology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/history-archeology-numismatics.html'>History, Archeology, Numismatics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/children-s-books.html'>Children&#39;s Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/gastronomy-sports-and-games-miscellaneous.html'>Gastronomy, Sports and Games, Miscellaneous</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/art-and-crafts.html'>Art and Crafts</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/literature-liguistics-books-about-books.html'>Literature, Liguistics, Books about Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/medicine-psychology-pedagogics.html'>Medicine, Psychology, Pedagogics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/militaria-and-naval-matters.html'>Militaria and Naval Matters</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/science-mathematics-technology.html'>Science, Mathematics, Technology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/philosophy-and-religion.html'>Philosophy and Religion</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/politics-law-economics.html'>Politics, Law, Economics</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1701-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/clemandot-j-s-1701-12.html'>
+                            <img class='thumb' src='/img/thumb/clemandot-j-s-1701-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/clemandot-j-s-1701-12.html'><strong>Clemandot, J. S.</strong></a><br /><br />
+                    Fabrikation des Zuckers aus Runkelrüben. Betrachtungen über die Wirkungsart der dießfällig angewendeten Klärmittel und Beantwortung der Frage: ob Krystallisirgefäße oder Zuckerhutformen in der Anwendung den Vorzug verdienen? Aus dem Französischen frey übersetzt und mit Anmerkungen versehen von J. Seitz ... Vorrede von P. T. Meißner. Wien, Gerold, 1831. In-8; X, 11-58 pp; OBrosch., unbeschnitten; überwiegend etwas stockfleckig. <br /><br />
+                    <span style="display: none">Engelmann (Bibl. mech.-techn.) 49. - Seltene Schrift zur Zuckerherstellung. Unter dem Druck der Napoleonischen Kontinentalsperre begann man im frühen 19. Jh. mit der Produktion von Rübenzucker, die bald einen industriellen Maßstab erreichte und damit das ehemalige Luxusgut Zucker allgemein erschwinglich machte.</span>
+                    <a href='/en/articles/clemandot-j-s-1701-12.html'>Continue reading</a><br /><br />
+                    Order no. 1701-12
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/edison-gesellschaft-deutsche-hrsg-2403-26.html'>
+                            <img class='thumb' src='/img/thumb/edison-gesellschaft-deutsche-hrsg-2403-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/edison-gesellschaft-deutsche-hrsg-2403-26.html'><strong>Edison Gesellschaft, Deutsche (Hrsg.)</strong></a><br /><br />
+                    Das Edison-Glühlicht und seine Bedeutung für Hygiene und Rettungswesen. Ausgegeben auf der Internationalen Elektrischen Ausstellung in Wien. Berlin, Julius Springer, 1883. Gr-8; 2 Bll., 38 pp; bedruckte Orig.-Brosch; Umschlag mit Gebrauchs- und Altersspuren, vorderer Deckel gelöst, sonst sehr gut erhalten. - Vorgebunden ein vierseitiger Bericht der Société Électrique Edison Paris über "Das erste, elektrische beleuchtete deutsche Theater" (auf rosa Papier). <br /><br />
+                    <span style="display: none">Darmstaedter 768. - Erste Ausgabe, hier im seltenen Wiener Umschlag; eine von vermutlich nur zwei erschienenen Veröffentlichungen der Deutschen Edison Gesellschaft. Erläutert die Vorzüge der elektrischen Beleuchtung gegenüber dem Gaslicht und enthält unter anderem ein Gutachten Max von Pettenkofers. Thomas Alva Edison meldete 1879 die von ihm erfundene Glühlampe zum Patent an; 1880 wurde die Edison Electric Light Company of Europe gegründet, 1883 entstand in Kooperation mit Emil Rathenau die Deutsche Edison Gesellschaft für angewandte Elektricität (später AEG).</span>
+                    <a href='/en/articles/edison-gesellschaft-deutsche-hrsg-2403-26.html'>Continue reading</a><br /><br />
+                    Order no. 2403-26
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.html'>
+                            <img class='thumb' src='/img/thumb/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.html'><strong>Higatsberger, M. J. - Viehböck, F. P. (Hrsg.)</strong></a><br /><br />
+                    Electromagnetic Separation of Radioactive Isotopes. Proceedings of the International Symposium Held in Vienna, May 23-25, 1960. Wien, Springer-Verlag, 1961. Gr-8; VIII, 318 pp mit 168 Abb.; goldgepr. Orig.-Leinen mit Schutzumschlag. - Auf dem flieg. Vorsatz handschriftliche Widmung von M. J. Higatsberger. <br /><br />
+                    <span style="display: none">Mit zahlreichen Beiträgen in englischer Sprache zur elektromagnetischen Trennung radioaktiver Isotope. Der österreichische Physiker Michael Josef Higatsberger (1924-2004) war Mitbegründer und Geschäftsführer der Österreichischen Studiengesellschaft für Atomenergie, die  Österreich auf den Einstieg in das Atomzeitalter vorbereiten sollte, zwischen 1958 und 1960 das Reaktorzentrum Seibersdorf errichtete und das hier dokumentierte Symposium veranstaltete; die Gesellschaft ging später im Austrian Institute of Technology (AIT) auf.</span>
+                    <a href='/en/articles/higatsberger-m-j-viehbock-f-p-hrsg-2505-37.html'>Continue reading</a><br /><br />
+                    Order no. 2505-37
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/iltis-hugo-2403-44.html'>
+                            <img class='thumb' src='/img/thumb/iltis-hugo-2403-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/iltis-hugo-2403-44.html'><strong>Iltis, Hugo</strong></a><br /><br />
+                    Gregor Johann Mendel. Leben, Werk und Wirkung. Berlin, Julius Springer, 1924. Gr-8; VII, (III), 426 pp, 1 Bl.; mit 59 Textabb. und 12 Lichtdrucktaf.; orig. Halbpergament mit goldgepr. Rückentitel; sehr schönes Exemplar mit nur unbedeutenden Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Die seltene Originalausgabe des für Jahrzehnte maßgeblichen Standardwerks. Der aus einer alteingesessenen jüdischen Familie in Mähren stammende Autor (1882-1952) war Botaniker sowie Gründer und Leiter des Museum Mendelianum in Brünn. Kurz vor dem Überfall Hitlers auf die Tschechoslowakei konnte er 1938 mit seiner Familie und der Mendel-Sammlung in die USA emigrieren.</span>
+                    <a href='/en/articles/iltis-hugo-2403-44.html'>Continue reading</a><br /><br />
+                    Order no. 2403-44
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.html'>
+                            <img class='thumb' src='/img/thumb/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.html'><strong>Lavoisier. - Duvee, Denis I. &amp; Klickstein, Herbert S.</strong></a><br /><br />
+                    A Bibliography of the Works of Antoine Laurent Lavoisier 1743-1794. [Und:] Supplement to A Bibliography of the Works of Antoine Laurent Lavoisier ... 2 Bände. London, Dawson and Weil bzw. Dawsons, 1954/1965. Kl-4; Frontispiz, XXIII, 491 pp, 1 Bl., 41 (von 42) Taf.; Frontispiz, XIII, 1 Bl., 171 pp, 2 Bll., 6 Taf.; goldgepr. Orig.-Leinen mit Orig.-Umschlägen (minimal bestoßen, Umschläge mit Gebrauchsspuren); jeder Band mit faksimiliertem Exlibris von Lavoisier. - Bd. 1 ohne Taf. 15. <br /><br />
+                    <span style="display: none">Erste Ausgabe. - Die detailreiche kommentierte Standardbibliographie zum Werk des großen Chemikers, der während der Französischen Revolution nach einem Schauprozess hingerichtet wurde.</span>
+                    <a href='/en/articles/lavoisier-duvee-denis-i-klickstein-herbert-s-2102-49.html'>Continue reading</a><br /><br />
+                    Order no. 2102-49
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/petrina-franz-1705-66.html'>
+                            <img class='thumb' src='/img/thumb/petrina-franz-1705-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/petrina-franz-1705-66.html'><strong>Petrina, Franz</strong></a><br /><br />
+                    Magneto-electrische Maschine von der vortheilhaftesten Einrichtung für den ärztlichen und physikalischen Gebrauch, nebst einer theoretischen Begründung, leichtfasslichen Erläuterung und Gebrauchsanweisung. Linz, Eurich, 1844. In-8; VIII, 56 pp, 1 Bl.; mit 10 Abb. in Holzstich (die letzte auf dem hinteren Umschlag); OBrosch., tlw. unaufgeschnitten (Rücken verstärkt, etwas fleckig und knittrig); vereinzelt gering stockfleckig, das letzte Blatt mit Feuchtrand. - Umschlagtitel leicht abweichend. <br /><br />
+                    <span style="display: none">ÖBL 8, 5 f. - Der Autor (1799-1855) war Physiker in Prag und Linz, verbesserte die Telegraphie und erfand neben dem hier vorgestellten Stromerzeuger auch einen Stromunterbrecher sowie die elektrische Harmonika.</span>
+                    <a href='/en/articles/petrina-franz-1705-66.html'>Continue reading</a><br /><br />
+                    Order no. 1705-66
+                    <br />
+                    
+                        € 180,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-61>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/petzval-joseph-maximilian-2109-61.html'>
+                            <img class='thumb' src='/img/thumb/petzval-joseph-maximilian-2109-61.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/petzval-joseph-maximilian-2109-61.html'><strong>Petzval, Joseph [Maximilian]</strong></a><br /><br />
+                    Integration der linearen Differentialgleichungen mit constanten und veränderlichen Coefficienten. 2 Bde. (6 Lieferungen) in 5 Heften (so komplett). Wien, Braumüller, 1853 (-1855) und Gerold, 1859. Kl-4; XVI, 1 Bl., 416 pp, 1 Bl., 1 lithogr. Taf.; 686 pp, XXX, 4 Interimstitel; Bd. 1 (Lfg. 1+2) bedruckte Orig.-Broschur, Bd. 2 (Lfg. 3-6) in den orig. Interimsumschlägen; unbeschnitten und unaufgeschnitten, die Umschläge teilweise etwas angeschmutzt bzw. fleckig, innen nur vereinzelt gering stockfleckig. <br /><br />
+                    <span style="display: none">Poggendorff 3, 1031; ÖBL 8, 18. - Eines der Hauptwerke des bedeutenden Mathematikers und Physikers (1807-1891), auf Kosten der kais. Akademie der Wissenschaften gedruckt. Diese in jahrzehntelanger Arbeit erstellte erste systematische Untersuchung der Laplace-Transformation, eines für verschiedene Einzelwissenschaften wichtigen Lösungsverfahrens,  fand allerdings zunächst kaum Beachtung - nicht zuletzt deshalb, weil gegen Petzval zu Unrecht Plagiatsvorwürfe erhoben wurden. Dem Autor selbst war bewusst, "dass ausgedehntere, einen einzigen Gegenstand im Zusammenhang verfolgende mathematische Werke ... sich nur schwer bei den Zeitgenossen Eingang schaffen und ... oft mehrere Decennien auf die ihnen gebührende Beachtung warten müssen ..." (Vorrede zu Bd. 2). - Einzelbände bzw. -lieferungen auf Anfrage.</span>
+                    <a href='/en/articles/petzval-joseph-maximilian-2109-61.html'>Continue reading</a><br /><br />
+                    Order no. 2109-61
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-61>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/poggendorff-j-c-2509-61.html'>
+                            <img class='thumb' src='/img/thumb/poggendorff-j-c-2509-61.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/poggendorff-j-c-2509-61.html'><strong>Poggendorff, J. C.</strong></a><br /><br />
+                    Biographisch-literarisches Handwörterbuch zur Geschichte der exacten Wissenschaften enthaltend Nachweisungen über Lebensverhältnisse und Leistungen von Mathematikern, Astronomen, Physikern, Chemikern, Mineralogen, Geologen usw. aller Völker und Zeiten. 4 in 6 Bänden. Amsterdam, B. M. Israel, um 1965. Gr-8; insgesamt ca. 4770 Seiten (in Spalten gedruckt und teilweise auch so paginiert); Orig.-Leinenbände mit goldgepr. Rücken und Rückenschildchen (Vorsätze leicht gebräunt); Einbände etwas berieben, Fußschnitte leicht angeschmutzt, innen ohne nennenswerte Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Reprint des erstmals 1863 veröffentlichten und später von anderen Bearbeitern bis in die Zeit um 1900 weitergeführten nützlichen biographischen Handbuchs. Dem deutschen Physiker Johann Christian Poggendorff (1796-1877) sind mehrere Entdeckungen und Erfindungen zu verdanken; die von ihm herausgegebene Zeitschrift für Physik und Chemie wurde in Europa bald zum führenden wissenschaftlichen Journal. Vier der sechs Einzelbände des Nachdrucks erschienen ursprünglich im Zentralantiquariat der DDR.</span>
+                    <a href='/en/articles/poggendorff-j-c-2509-61.html'>Continue reading</a><br /><br />
+                    Order no. 2509-61
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schreber-daniel-gottfried-hrsg-2209-82.html'>
+                            <img class='thumb' src='/img/thumb/schreber-daniel-gottfried-hrsg-2209-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schreber-daniel-gottfried-hrsg-2209-82.html'><strong>Schreber, Daniel Gottfried (Hrsg.)</strong></a><br /><br />
+                    Beschreibung der Eisenberg- und Hüttenwerke zu Eisenärz in Steyermark. [Mit:] Nikolaus Poda, Mineralogischer Versuch über die Eisensteine des Arzberges in Obersteyermark, nebst beygefügter Beschreibung der Eisenerzstufen des Graezischen Naturalien-Kabinets. Aus: Schauplatz der Künste und Handwerke, oder vollständige Beschreibung derselben, verfertiget oder gebilliget von den Herren der Academie der Wissenschaften zu Paris Bd. 11. Leipzig u. Königsberg, J. J. Kanter, 1772. Kl-4; 4 Bll. (Reihentitel und Vorrede zum Gesamtband), 138 pp, 1 Falttabelle, 1 gefaltete Kupfertaf., 2 Holzschnitt-Vignetten; moderner Pappband mit Rückenschildchen; leicht gebräunt (Reihentitel stärker), gelegentlich etwas stockfleckig. <br /><br />
+                    <span style="display: none">Schlossar 149. - Erste Ausgabe. Ausführliche Darstellung des Eisenerzer Bergbaubetriebs nach dem Bericht eines zeitgenössischen Reisenden, mit erstmaliger Beschreibung und Abbildung der zur Verhüttung verwendeten Floßöfen. Der mineralogische Teil stammt von dem Grazer Naturforscher Nicolaus Poda von Neuhaus (1723-1798), der vor allem als Entomologe bekannt wurde. Der "Schauplatz der Künste und Handwerke", den Schreber von Bd. 5 (1766) bis Bd. 13 (1775) als Herausgeber betreute, war eine vor allem auf Übersetzungen und Bearbeitungen französischer Publikationen aufgebaute Reihe zur Verbreitung gemeinnützig-praktischen Wissens.</span>
+                    <a href='/en/articles/schreber-daniel-gottfried-hrsg-2209-82.html'>Continue reading</a><br /><br />
+                    Order no. 2209-82
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-gotthilf-heinrich-von-2403-74.html'>
+                            <img class='thumb' src='/img/thumb/schubert-gotthilf-heinrich-von-2403-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-gotthilf-heinrich-von-2403-74.html'><strong>Schubert, Gotthilf Heinrich von</strong></a><br /><br />
+                    Die Urwelt und die Fixsterne. Zweite, zum Theil umgearbeitete Auflage. Dresden und Leipzig, Arnold, 1839. In-8; 4 Bll., 298, (1) pp; Halbleinen der Zeit mit goldgepr. Titel und Adelssignet auf dem Rücken; Deckel berieben, stellenweise leicht gebräunt oder etwas knittrig. - Selten. <br /><br />
+                    <span style="display: none">Überarbeitete Fassung der 1822 erschienenen ersten Ausgabe, die mit dem Untertitel "Eine Zugabe zu den Ansichten von der Nachtseite der Naturwissenschaft" versehen war. Der deutsche Arzt, Naturforscher, Mystiker und Naturphilosoph G. H. Schubert versuchte in seinen Werken eine religiös fundierte Gesamtdeutung des Kosmos; sein 1814 erschienenes Hauptwerk "Die Symbolik des Traumes" gehörte zu den einflussreichsten Büchern seiner Zeit und wirkte noch auf Sigmund Freud und C. G. Jung.</span>
+                    <a href='/en/articles/schubert-gotthilf-heinrich-von-2403-74.html'>Continue reading</a><br /><br />
+                    Order no. 2403-74
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-105>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/walcher-joseph-2409-105.html'>
+                            <img class='thumb' src='/img/thumb/walcher-joseph-2409-105.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/walcher-joseph-2409-105.html'><strong>Walcher, Joseph</strong></a><br /><br />
+                    Kurzer Inhalt der mechanischen Collegien, welche auf der Universität zu Wien in dem philosophischen Hörsaale öffentlich gehalten werden. Zum Gebrauche seiner Zuhörer zusammen gesetzt. Wien, Joseph Kurzböck, 1776. Kl-8; 219, (1) pp (inkl. Titel) mit mehreren meist gestochenen Vignetten, 2 Bll., 7 gefaltete Kupfertafeln; Lederband der Zeit mit reicher Rückenvergoldung, Rückenschildchen und rotem Sprenkelschnitt (etwas bestoßen, kleine Fehlstellen); geringfügig fleckig bzw. gebräunt, je eine Tafel etwas knittrig bzw. mit hinterlegtem Ausriss, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Wurzbach 52, 159; vgl. Poggendorf 2, 1244. - Erste Ausgabe dieser anschaulich illlustrierten Einführung in die Mechanik. Der österreichische Jesuit, Mathematiker und Physiker Joseph Walcher (1718-1803) unterrichtete an der Wiener Universität sowie am Theresianum. Er führte Untersuchungen an Gewässern und Gletschern durch und entwarf zahlreiche Wasserschutzbauten; eine seiner Hauptaufgaben war die Beseitigung des gefürchteten Donaustrudels bei Grein.</span>
+                    <a href='/en/articles/walcher-joseph-2409-105.html'>Continue reading</a><br /><br />
+                    Order no. 2409-105
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/weltausstellung-chicago-1893-2009-78.html'>
+                            <img class='thumb' src='/img/thumb/weltausstellung-chicago-1893-2009-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/weltausstellung-chicago-1893-2009-78.html'><strong>Weltausstellung Chicago 1893</strong></a><br /><br />
+                    Officieller Bericht der k.k. österr. Central-Comission für die Weltausstellung in Chicago im Jahre 1893. 4 Bände (so komplett). Wien, Verlag der k. k. Central-Comission, 1894-95. Kl-4; pro Band etwa 500 pp; insgesamt 98 Textabb. und 110 Falttafeln; prachtvolle zeitgenössische Lederbände mit reicher Goldprägung, Wappensupralibros (österreichisches Kaiserwappen), Innenkantenvergoldung, Kopfgoldschnitt, Seidenmoiré-Vorsätzen und Lesebändchen; Rücken und Kanten teilweise etwas berieben, jeder Band mit Exlibris und kleinem Bibliotheksetikett; insgesamt sehr schönes, vermutlich für das Kaiserhaus gebundenes Set. <br /><br />
+                    <span style="display: none">Gedruckt In insgesamt neun Einzelheften mit jeweils separater Paginierung. Umfangreiche Dokumentation des damaligen Standes der Technik und der industriellen Produktion mit teils reich illustrierten Beiträgen über Textilindustrie, die amerikanische Brauindustrie, Bergbau und Hüttenwesen, Eisenbahnwesen, Elektrotechnik und vieles mehr. - Wohl in sehr kleiner Auflage hergestellt und dementsprechend selten.</span>
+                    <a href='/en/articles/weltausstellung-chicago-1893-2009-78.html'>Continue reading</a><br /><br />
+                    Order no. 2009-78
+                    <br />
+                    
+                        € 2400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

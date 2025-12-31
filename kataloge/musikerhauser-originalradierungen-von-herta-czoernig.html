@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Musikerhäuser - Originalradierungen von Herta Czoernig</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/musicians-homes-original-etchings-by-herta-czoernig.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Musikerhäuser - Originalradierungen von Herta Czoernig</h1>
+    <hr />
+
+    
+
+<h2>Herta Czoernig-Gobanz</h2>
+<div style='text-align: center; margin: 20px'>
+    <a class=fancybox href='/img/Czoern_portr.jpg'>
+    <img src='/img/Czoern_portr_thumb.jpg'/><br>
+    </a>
+    Herta Czoernig<br>
+    (1886 - 1970)
+</div>
+<div class='smalltext'>
+
+<p>
+Geboren 1886 in Klagenfurt als Tochter des Finanzlandesdirektors Karl Freiherr von Czoernig,
+wollte sie schon früh Künstlerin werden. Da an der Kunstakademie in Wien damals nur männliche
+Studenten zugelassen waren, besuchte sie zunächst die Wiener Kunstschule für Frauen und
+Mädchen und studierte später an der großherzoglichen Schule in Weimar. Ihr Lehrer in der
+schwierigen Technik der Radierung war Professor Ludwig Michalek (1859-1942), mit dem sie
+eine lebenslange Freundschaft verband.
+</p>
+<p>
+Als junge Frau heiratete sie den k. k. Marineoffizier Siegfried Gobanz. Dieser wurde 1918 mit
+dem Ende der Monarchie aus seiner beruflichen Laufbahn geworfen und konnte den
+Lebensunterhalt des Paares nicht mehr alleine bestreiten. War die Kunst für Herta Czoernig
+zunächst eher Liebhaberei gewesen, so wurde sie nun zu einer Lebensaufgabe und zum
+Broterwerb.
+</p>
+<p>
+Herta Czoernig schuf neben Zeichnungen, Aquarellen und Ölbildern vor allem Radierungen (rund
+500 Stück), die sie in anstrengender Arbeit meist selbst vervielfältigte. Im Mittelpunkt standen
+dabei vorwiegend topographische Motive, unter denen die Ansichten von österreichischen, aber
+auch deutschen Musikerhäusern besonders hervorragen. Sie fing die Atmosphäre dieser Stätten
+einfühlsam ein und unterstrich ihre besondere Bedeutung in der Regel durch eine passende
+Notenzeile. Besonders oft vertreten ist der Komponist Ludwig van Beethoven, der seine
+Wohnungen sehr häufig wechselte. Die nähere Datierung dieser Radierungen ist schwierig; im
+Wesentlichen sind sie wohl den letzten zwei Jahrzehnten ihres Schaffens zuzuordnen.
+</p>
+<p>
+Wir haben nach dem Tod der Künstlerin (1970) die von ihr geätzten Kupferplatten aus ihrem
+Nachlass erworben und davon in Zusammenarbeit mit einer der letzten Kupferdruckereien 
+Wiens die hier angebotenen Blätter anfertigen lassen. Es handelt sich dabei um originale
+Druckgraphik und keineswegs um Reproduktionen. Für jeden Abzug wird die Kupferplatte
+separat eingefärbt und auf einer Handpresse gegen angefeuchtetes Büttenpapier gedrückt
+(Tiefdruckverfahren). Die Blätter werden dann von uns einzeln mit der Hand koloriert, beschriftet
+und mit der Signatur „Nachlass H. Czoernig“ versehen.
+</p>
+<p>
+
+</p>
+
+</div>
+<hr />
+
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+Versandkosten auf Anfrage
+<br>
+
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1200-709>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-709.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-709.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-709.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Baden bei Wien, Frauengasse 10. - Im Herbst 1822 mietete Beethoven für einige Tage zwei Zimmer mit Küche im "Magdalenenhof". Er suchte Baden für eine Kur auf und begann hier vermutlich mit ersten Skizzen zur Neunten Sinfonie. Die Notenzeile stammt aus dieser Sinfonie (op. 125), ebenso wie die heutige Europahymne. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 18 x 16,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-709.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-709
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-710>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-710.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-710.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-710.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Mödling, Achsenaugasse 6. - Den Sommer 1820 verbrachte Beethoven im "Christhof" in einer Gartenwohnung. Das Haus war vom 16. bis ins 18. Jahrhundert im Besitz des Augustinerordens; zur Zeit Beethovens gehörte es dem Weinhauer Anton Speer. Die Notenzeile stammt aus der Missa solemnis (op. 123), an der der Komponist von 1819 bis 1823 arbeitete - unter anderem in Mödling. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 19 x 20 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-710.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-710
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-713>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-713.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-713.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-713.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Mödling, Hauptstraße 79. - Für die Sommeraufenthalte der Jahre 1818 und 1819 wählte Beethoven das sogenannte "Hafnerhaus", einen Renaissancebau aus dem 16. Jahrhundert, der dem Hafnermeister Jakob Tuschek gehörte (heute Gedenkstätte). Hier arbeitete er an der Hammerklaviersonate, den Diabellivariationen, den Mödlinger Tänzen und der Missa solemnis. Die Notenzeile zeigt die Anfangsakkorde der Hammerklavier-Sonate Nr. 29 B-Dur op. 106, die zwischen 1817 und 1819 entstand. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 22,5 x 16,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-713.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-713
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-715>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-715.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-715.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-715.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Wien-Alsergrund, Alserkirche. - In der auch als Trinitarierkirche bekannten Kirche an der Alser Straße fand am 29. März 1827 die Trauerfeier für den Komponisten statt. Nach der Einsegnung wurde der Leichnam Beethovens auf den Währinger Ortsfriedhof überführt. Die Notenzeile stammt aus dem zweiten Satz der 3. Sinfonie (op. 55) "Eroica", dem Trauermarsch "Marcia Funebre". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 23,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-715.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-715
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-701>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-701.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-701.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-701.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Wien-Heiligenstadt, Pfarrplatz. - Im Haus Nr. 2 (damals wie heute eine Gaststätte) wohnte der Komponist im Jahr 1817, und zwar im ersten Stock des linken Haustrakts. Die Notenzeile zeigt den Beginn der 1809/1810 entstandenen Klaviersonate Nr. 26 op. 81a "Les Adieux". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 19,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-701.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-701
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-708>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-708.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-708.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-708.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Wien-Nußdorf, Kahlenberger Straße. - Im Haus Nr. 26 auf der rechten Straßenseite, einem ehemaligen Landhaus mit barocker Fassade ("Greinerhaus"), soll der Komponist den Sommer 1824 verbracht haben. Die Notenzeile stammt aus der 1802/1803 entstandenen 3. Sinfonie op. 55 "Eroica". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 21 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/beethoven-ludwig-van-1770-1827-1200-708.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-708
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-781>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/brahms-johannes-1833-1897-1200-781.html'>
+                            <img class='thumb' src='/img/thumb/brahms-johannes-1833-1897-1200-781.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/brahms-johannes-1833-1897-1200-781.html'><strong>Brahms, Johannes (1833-1897)</strong></a><br /><br />
+                    Geburtsstätte. - Das Gängeviertel in Hamburg mit seinen typischen Fachwerkhäusern. Das eigentliche Geburtshaus des Komponisten in der Caffamacherreihe wurde bei einem Bombenangriff 1943 zerstört und konnte von der Künstlerin nicht mehr dargestellt werden. Die Notenzeile stammt aus den 1892 entstandenen "Drei Intermezzi" (op. 117) und zeigt den Beginn des ersten Klavierstücks;  es ist von einem von Johann Gottfried von Herder bearbeiteten schottischen Wiegenlied inspiriert. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/brahms-johannes-1833-1897-1200-781.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-781
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-785>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bruckner-anton-1824-1896-1200-785.html'>
+                            <img class='thumb' src='/img/thumb/bruckner-anton-1824-1896-1200-785.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bruckner-anton-1824-1896-1200-785.html'><strong>Bruckner, Anton (1824-1896)</strong></a><br /><br />
+                    Ort und Stift St. Florian (Oberösterreich). - Im Augustiner Chorherrenstift wurde der junge Bruckner 1837 als Sängerknabe aufgenommen. Er war hier von 1845 bis 1855 zunächst als Hilfslehrer, dann als Stiftsorganist tägig und schrieb hier seine ersten bedeutenden Kompositionen. In der Stiftskirche ist Bruckner auch begraben. Die Notenzeile stammt aus der 4. Sinfonie "Die Romantische" (WAB 104), deren erste Fassung 1874 entstand. Sie wurde 1881 in Wien erfolgreich uraufgeführt und verschaffte Bruckner, der bis dahin eher als Organist anerkannt war, die lange ausgebliebene Wertschätzung als Komponist. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20 x 18 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/bruckner-anton-1824-1896-1200-785.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-785
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-784>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bruckner-anton-1824-1896-1200-784.html'>
+                            <img class='thumb' src='/img/thumb/bruckner-anton-1824-1896-1200-784.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bruckner-anton-1824-1896-1200-784.html'><strong>Bruckner, Anton (1824-1896)</strong></a><br /><br />
+                    Stift St. Florian. - Der Eingang des Augustiner Chorherrenstifts in Oberösterreich, in dem der junge Bruckner 1837 als Sängerknabe aufgenommen wurde und wo er von 1845 bis 1855 zunächst als Hilfslehrer, dann als Stiftsorganist tägig war und seine ersten bedeutenden Kompositionen schrieb. In der Stiftskirche befindet sich die berühmte Bruckner-Orgel, und hier ist Bruckner auch begraben. Die Notenzeile stammt aus der Messe Nr. 3 in f-Moll (WAB 28), die der Komponist viermal überarbeitete und die nach seinem Tod zu einem der beliebtesten Chorwerke der Romantik wurde. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/bruckner-anton-1824-1896-1200-784.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-784
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-737>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/haydn-joseph-1732-1809-1200-737.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-1732-1809-1200-737.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/haydn-joseph-1732-1809-1200-737.html'><strong>Haydn, Joseph (1732-1809)</strong></a><br /><br />
+                    Eisenstadt, Bergkirche (Haydnkirche). - Der Komponist war von 1761 bis 1790 Kapellmeister des Fürsten Paul Anton von Esterházy in Eisenstadt. 1820 ließ Fürst Nikolaus II., der einst die Kapelle aufgelöst und damit Haydns Rückkehr nach Wien veranlasst hatte, die Gebeine des Komponisten von Wien zurück nach Eisenstadt bringen und in der Bergkirche bestatten; 1932 entstand dort das Haydn-Mausoleum. Die Notenzeile zeigt den Beginn des selbstironischen Liedes "Der Greis" auf einen Text von Johann Wilhelm Ludwig Gleim: "Hin ist alle meine Kraft". Haydn ließ sich diese Worte auch auf seine Visitenkarte drucken. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 23 x 21 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/haydn-joseph-1732-1809-1200-737.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-737
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-738>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/haydn-joseph-1732-1809-1200-738.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-1732-1809-1200-738.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/haydn-joseph-1732-1809-1200-738.html'><strong>Haydn, Joseph (1732-1809)</strong></a><br /><br />
+                    Eisenstadt, Haydnhaus. - Der Komponist erwarb 1766 das Haus, dessen Hof hier zu sehen ist, und bewohnte es 12 Jahre lang gemeinsam mit seiner Frau Maria Anna Theresia. Heute befindet sich dort das Haydn-Museum. Die Notenzeile zeigt den Beginn des Klavierliedes "Ein kleines Haus" (Hob. XXVIa:45) aus dem Jahr 1801. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/haydn-joseph-1732-1809-1200-738.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-738
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-736>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/haydn-joseph-1732-1809-1200-736.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-1732-1809-1200-736.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/haydn-joseph-1732-1809-1200-736.html'><strong>Haydn, Joseph (1732-1809)</strong></a><br /><br />
+                    Wien, Michaelerplatz. - Der Komponist wohnte von 1751 bis 1756 in einer Dachkammer des Großen Michaelerhauses (Nr. 4) in der Wiener Innenstadt. Er war damals Kammerdiener des im selben Haus wohnenden italienischen Komponisten Nicola Porpora und gab der ebenfalls dort ansässigen späteren Sängerin, Pianistin und Komponistin Marianne Martinez gegen freie Kost Klavierunterricht. Auf dem Bild ist auch die benachbarte Michaelerkirche zu sehen, in der Haydn 1749 Orgel spielte. Die Notenzeile zeigt einen Ausschnitt aus dem Oratorium "Die Schöpfung" (Hob. XXI:2), das 1799 im alten Burgtheater in Wien uraufgeführt wurde. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 21 x 17,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/haydn-joseph-1732-1809-1200-736.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-736
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-747>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-747.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-1756-1791-1200-747.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-747.html'><strong>Mozart, Wolfgang Amadeus (1756-1791)</strong></a><br /><br />
+                    Salzburg, Mozarthaus Getreidegasse 9. - Am 27. Jänner 1756 kam Mozart in einer Wohnung im dritten Stock des sogenannten Hagenauerhauses zur Welt und verbrachte hier bis 1773 gemeinsam mit den Eltern Leopold und Anna Maria sowie der Schwester Nannerl seine Kindheit und Jugend. Heute beherbergt das Haus ein viel besuchtes Mozartmuseum. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 13 x 9 cm, Blattgröße 29 x 24 cm.</span>
+                    <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-747.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-747
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-754>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-754.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-1756-1791-1200-754.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-754.html'><strong>Mozart, Wolfgang Amadeus (1756-1791)</strong></a><br /><br />
+                    Salzburg, Mozartzimmer. - Die heute als Museum eingerichtete Wohnung Mozarts in seinem Geburtshaus (Getreidegasse 9), wo der junge Komponist mit seiner Familie bis 1773 lebte. Im Mittelpunkt Mozarts um 1782 gebautes Hammerklavier, auf dem er bei seinen öffentlichen Auftritten in Wien spielte; es wurde 1856 von seinem Sohn der Stiftung Mozarteum überlassen. Das Gemälde im Hintergrund wurde 1768 von Thaddäus Helbling gemalt und zeigt Mozarts Jugendfreund Karl Graf von Firmian. Die Notenzeile bringt den Beginn des Wiegenlieds "Schlafe, mein Prinzchen, schlaf ein" von Johann Friedrich Anton Fleischmann (1766-1798), das lange fälschlich Mozart zugeschrieben wurde (KV 350). <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 19 x 17,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-754.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-754
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-743>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-743.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-1756-1791-1200-743.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-743.html'><strong>Mozart, Wolfgang Amadeus (1756-1791)</strong></a><br /><br />
+                    Wien, Schulerstraße 8 (Detail). - Der obere Teil des Hauses, in dem das Ehepaar Mozart von 1784 bis 1787 mit seinen Kindern lebte. Das im 17. Jahrhundert errichtete Gebäude, das auch als Figaro-Haus bezeichnet wird, beherbergt heute eine Mozart-Gedenkstätte. Mozart wurde hier von seinem Vater Leopold sowie von Joseph Haydn und Ludwig van Beethoven besucht, und er schrieb hier unter anderem seine Oper "Le Nozze di Figaro" (KV 492). Aus ihr stammt auch die Notenzeile, der Beginn der Arie Cherubinos aus dem 1. Akt ("Non so più cosa son, cosa faccio") in deutscher Fassung: "Neue Freuden, neue Schmerzen". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 19 x 21 cm, Blattgröße 35 x 29 cm oder 39 x 25 cm (bei Bestellung bitte angeben).</span>
+                    <a href='/artikel/mozart-wolfgang-amadeus-1756-1791-1200-743.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-743
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-772>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-franz-1797-1828-1200-772.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-772.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-772.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Mödling, Höldrichsmühle. - Zwischen 1820 und 1826 besuchte der Komponist öfters mit Freunden den Gasthof in dem romantischen Tal Hinterbrühl bei Mödling (Niederösterreich). Der Legende nach soll hier das berühmte Lied "Der Lindenbaum" (D 911-5) aus dem Zyklus "Winterreise" (op. 89) nach Gedichten von Wilhelm Müller entstanden sein. Die Notenzeile zeigt den Beginn des 1828 veröffentlichten Liedes: "Am Brunnen vor dem Tore da steht ein Lindenbaum". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 19,5 x 18,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-772.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-772
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-765>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-franz-1797-1828-1200-765.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-765.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-765.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Wien-Alsergrund, Schuberthaus. - Der Hof des Hauses Nußdorfer Straße 54, in dem der Komponist geboren wurde und seine ersten Lebensjahre verbrachte, von der Gartenseite aus. Heute befindet sich in dem dem aus dem 18. Jahrhundert stammenden Gebäude eine Gedenkstätte. Die Notenzeile zeigt den Beginn des Liedes "Ständchen" nach einem Gedicht von Ludwig Rellstab aus Schuberts letztem, posthum erschienen Zyklus "Schwanengesang" (D 957): "Leise flehen meine Lieder durch die Nacht zu dir". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 21,5 x 17 cm, Blattgröße 29 x 24 cm.</span>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-765.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-765
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-767>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-franz-1797-1828-1200-767.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-767.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-767.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Wien-Alsergrund, Schuberthaus. - Der Hof des Hauses Nußdorfer Straße 54, in dem der Komponist geboren wurde und seine ersten Lebensjahre verbrachte, mit Blick gegen den Garten. Heute befindet sich in dem aus dem 18. Jahrhundert stammenden Gebäude eine Gedenkstätte. Die Notenzeile zeigt den Beginn des Liedes "Wohin?" aus Schuberts 1823 nach Gedichten von Wilhelm Müller komponiertem Zyklus "Die schöne Müllerin" (op. 25, D 795): "Ich hört ein Bächlein rauschen wohl aus dem Felsenquell". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-767.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-767
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-769>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-franz-1797-1828-1200-769.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-769.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-769.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Wien-Wieden, Karlsplatz. - In den Jahren 1825 und 1826 wohnte der Komponist im sogenannten Fruwirthaus neben der Karlskirche, in dem sich die Gewehrfabrik von Johann Fruwirt (auch Fruhwirt) befand. Das von der Künstlerin im Bild festgehaltene Gebäude musste 1971 einem Bürobau weichen. Schubert schrieb hier unter anderem die "Deutsche Messe" (D 872), die in der Karlskirche uraufgeführt wurde. Die Notenzeile zeigt den Beginn von "Das Wandern", des ersten Liedes im 1823 nach Gedichten von Wilhelm Müller komponiertem Zyklus "Die schöne Müllerin" (op. 25, D 795): "Das Wandern ist des Müllers Lust, das Wandern". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20 x 18,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-769.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-769
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-771>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-franz-1797-1828-1200-771.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-771.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-771.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Wien-Wieden, Schuberthof. - Der Hof des Hauses Kettenbrückengasse 6, eines für die Biedermeierzeit typischen Gebäudes mit eigenem Brunnen. Franz Schubert verbrachte in diesem Haus seine letzten Lebenswochen in der Wohnung seines Bruders Ferdinand und verstarb hier am 19. 11. 1828. Die Notenzeile zeigt den Beginn von einem seiner bekanntesten Lieder, "Die Forelle" (op. 32, D 550): "In einem Bächlein helle da schoss in froher Eil". Es entstand zwischen 1816 und 1817. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20 x 18 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-771.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-771
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-770>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schubert-franz-1797-1828-1200-770.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-770.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-770.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Wien-Wieden, Schuberthof. - Der Hof des Hauses Kettenbrückengasse 6, eines für die Biedermeierzeit typischen Gebäudes mit eigenem Brunnen. Franz Schubert verbrachte in diesem Haus seine letzten Lebenswochen in der Wohnung seines Bruders Ferdinand und verstarb hier am 19. November 1828. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 11 x 13 cm, Blattgröße 29 x 24 cm.</span>
+                    <a href='/artikel/schubert-franz-1797-1828-1200-770.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-770
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-728>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/strauss-johann-1825-1899-1200-728.html'>
+                            <img class='thumb' src='/img/thumb/strauss-johann-1825-1899-1200-728.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/strauss-johann-1825-1899-1200-728.html'><strong>Strauss, Johann (1825-1899)</strong></a><br /><br />
+                    Wien-Salmannsdorf. - Die Familie von Johann Strauss Vater hatte 1829 bis 1832 in dem damaligen Vorort im Westen Wiens ihr Sommerquartier in einem frühbiedermeierlichen Haus  (Dreimarksteingasse 13). Hier soll Johann Strauss Sohn im Alter von 6 Jahren seinen ersten Walzer "Erster Gedanke" komponiert haben. Die Notenzeile zeigt einen Ausschnitt aus dem Tanzwalzer op. 325 "Geschichten aus dem Wienerwald" mit der Textzeile "Wenn fern des Lenzes Ruf erhallt...". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20,5 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/strauss-johann-1825-1899-1200-728.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-728
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-791>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wagner-richard-1813-1883-1200-791.html'>
+                            <img class='thumb' src='/img/thumb/wagner-richard-1813-1883-1200-791.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wagner-richard-1813-1883-1200-791.html'><strong>Wagner, Richard (1813-1883)</strong></a><br /><br />
+                    Bayreuth, Festspielhaus. - Das Opernhaus wurde in den Jahren 1872 bis 1875 von Otto Brückwald nach Entwürfen von Richard Wagner im Stil der hellenistischen Romantik auf dem Grünen Hügel in Bayreuth errichtet. Am 13. August 1876 wurde es mit einer Aufführung von "Rheingold" eröffnet, seither wird hier im Rahmen der jährlicher Festspiele das musikdramatische Werk des Komponisten gepflegt. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 22 x 19 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/wagner-richard-1813-1883-1200-791.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-791
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-792>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wagner-richard-1813-1883-1200-792.html'>
+                            <img class='thumb' src='/img/thumb/wagner-richard-1813-1883-1200-792.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wagner-richard-1813-1883-1200-792.html'><strong>Wagner, Richard (1813-1883)</strong></a><br /><br />
+                    Bayreuth, Haus Wahnfried. - Der Eingangsbereich des 1872-1874 nach Vorstellungen Wagners errichteten Gebäudes am Rand des Bayreuther Hofgartens. Der Komponist wohnte hier mit seiner Familie von 1874 bis zu seinem Tod, hielt sich allerdings wegen des rauhen Klimas auch viel in Italien auf. Die Erwerbung des Grundstücks und den Bau des Hauses finanzierte größtenteils König Ludwig II. von Bayern (1845-1886), dessen jugendliche Büste vor der Villa steht. Nach seinem Tod in Venedig wurde Wagner nach Bayreuth überführt und in einer Gruft im Garten beigesetzt. <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 22,5 x 18 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/wagner-richard-1813-1883-1200-792.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-792
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-731>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wolf-hugo-1860-1903-1200-731.html'>
+                            <img class='thumb' src='/img/thumb/wolf-hugo-1860-1903-1200-731.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wolf-hugo-1860-1903-1200-731.html'><strong>Wolf, Hugo (1860-1903)</strong></a><br /><br />
+                    Perchtoldsdorf. - Der Hof des Hauses Brunner Gasse 26, in dem der Komponist viele Winter verbrachte. Es gehörte dem Ehepaar Heinrich und Marie Werner, die das Sommerhaus am Rand des Wienerwaldes in der kalten Jahreszeit nicht selbst nutzen und es dem Komponisten überließen, der ständig in Geldnot war. Wolf schuf hier nicht weniger als 116 Lieder; die Notenzeile zeigt den Beginn von "Verborgenheit", auf einen Text von Eduard Mörike: "Lass, o Welt, o lass mich sein!". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 20,5 x 18,5 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/wolf-hugo-1860-1903-1200-731.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-731
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-732>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wolf-hugo-1860-1903-1200-732.html'>
+                            <img class='thumb' src='/img/thumb/wolf-hugo-1860-1903-1200-732.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wolf-hugo-1860-1903-1200-732.html'><strong>Wolf, Hugo (1860-1903)</strong></a><br /><br />
+                    Perchtoldsdorf. - Straßenansicht des Hauses Brunner Gasse 26, in dem Hugo Wolf viele Winter verbrachte. Es beherbergt heute eine Gedenkstätte an den Komponisten, der vor allem für sein Liedschaffen bekannt ist. Die Notenzeile zeigt den Beginn von "In der Frühe", einem von Wolf vertonten Gedicht von Eduard Mörike: "Kein Schlaf noch kühlt das Auge mir". <br /><br />
+                    <span style="display: none">Handkolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur. Plattengröße 19 x 21 cm, Blattgröße 35 x 29 cm.</span>
+                    <a href='/artikel/wolf-hugo-1860-1903-1200-732.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1200-732
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

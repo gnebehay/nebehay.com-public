@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/botany-zoology-agriculture-horsemanship-hunting.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Botanik, Zoologie, Landwirtschaft, Pferd, Jagd
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1710-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/brauer-friedrich-low-franz-1710-12.html'>
+                            <img class='thumb' src='/img/thumb/brauer-friedrich-low-franz-1710-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/brauer-friedrich-low-franz-1710-12.html'><strong>Brauer, Friedrich - Löw, Franz</strong></a><br /><br />
+                    Neuroptera austriaca. Die im Erzherzogthum Oesterreich bis jetzt aufgefundenen Neuropteren nach der analytischen Methode zusammengestellt, nebst einer kurzen Charakteristik aller europäischen Neuropteren-Gattungen. Wien, Gerold, 1857. Gr-8; XXIII, 80 pp, 1Bl., 5 lithogr. Taf.; OBrosch., unaufgeschnitten; vereinzelt etwas stockfleckig. <br /><br />
+                    <span style="display: none">Hinrichs 1, 116; vgl. ÖBL 1, 108. - Monographie über die Netzflügler (Haften). Friedrich Brauer (1832-1904) war ein bedeutender österreichischer Entomologe.</span>
+                    <a href='/artikel/brauer-friedrich-low-franz-1710-12.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-12
+                    <br />
+                    
+                        € 36,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/howitt-samuel-2001-36.html'>
+                            <img class='thumb' src='/img/thumb/howitt-samuel-2001-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/howitt-samuel-2001-36.html'><strong>Howitt, [Samuel]</strong></a><br /><br />
+                    The British Sportsman. New Edition, republished. (London), F. J. Mason, 1834. Kl-4; 72 radierte Kupfertafeln (inkl. gestochener Titel); neueres rotes Halbleder im Stil der Zeit mit schöner Jagdvignetten-Rückenvergoldung (Deckel leicht gewölbt, Außengelenke und Teile der Kanten berieben); stellenweise gering fleckig, einige wenige Tafeln etwas stärker; das Titelkupfer nach Taf. 1 eingebunden. <br /><br />
+                    <span style="display: none">Vgl. Schwerdt IV 48 und Mellon Collection 75. - Vermutlich dritte Ausgabe des erstmals 1800 erschienen Albums, das neben typisch englischen Jagd-, Angel- und Pferdesportszenen auch Einzeldarstellungen von Jagdwild bringt. Zum Künstler (1756/7-1823) siehe Thieme-Becker 17, 588.</span>
+                    <a href='/artikel/howitt-samuel-2001-36.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-36
+                    <br />
+                    
+                        € 950,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/jacquin-nicolaus-joseph-2209-36.html'>
+                            <img class='thumb' src='/img/thumb/jacquin-nicolaus-joseph-2209-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/jacquin-nicolaus-joseph-2209-36.html'><strong>Jacquin, Nicolaus Joseph</strong></a><br /><br />
+                    Enumeratio stirpium plerarumque, quae sponte crescunt in agro Vindobonensi, montibusque confinibus. Accedunt observationum centuria et appendix de paucis exoticis. Wien, J. P. Kraus, 1762. Kl-8; 2 Bll., 315, (7) pp mit einigen Vignetten, 9 meist gefaltete Kupfertafeln; einfacher Pappband der Zeit mit 2 Papierschildchen am Rücken; Titel schwach gestempelt, eine Tafel leicht gebräunt, sonst nur geringe Gebrauchs- und Altersspuren und weitgehend frisch. <br /><br />
+                    <span style="display: none">Wurzbach 10, 29; Pritzel 4369; Hunt 572. - Zweite Buchveröffentlichung des aus Leiden stammenden bedeutenden Botanikers und Chemikers (1727-1817), der zunächst in Wien als Arzt praktizierte. Von 1754 bis 1759 sammelte Jacquin im Auftrag von Kaiser Franz I. Pflanzen in Westindien; 1763-1768 war er Professor in Schemnitz und ab 1769 Professor in Wien, wo er auch Direktor des Botanischen Gartens und später der kaiserlichen Gärten von Schönbrunn wurde. Der Hauptteil des Buches beschreibt die wichtigsten, heute teilweise schon verdrängten oder ausgestorbenen Pflanzen des Wiener Raums bis zum Schneeberg nach der Nomenklatur und Ordnung von Linné und mit Standortangaben. Die fein ausgeführten und einzeln einmontierten Kupfertafeln sind nach Zeichnungen des Autors gestochen.</span>
+                    <a href='/artikel/jacquin-nicolaus-joseph-2209-36.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-36
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mauchart-b-urchard-d-avid-2309-50.html'>
+                            <img class='thumb' src='/img/thumb/mauchart-b-urchard-d-avid-2309-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mauchart-b-urchard-d-avid-2309-50.html'><strong>Mauchart, B[urchard] D[avid]</strong></a><br /><br />
+                    Schönbrunn's botanischer Reichthum, ein nützliches Taschenbuch für alle, welche diesen merkwürdigen Garten besuchen und schätzen. Herausgegeben von B. D. Mauchart nach Willdenow. Wien und Triest, Joseph Geistinger, 1805. In-12; Titel, IV, 461, (1) pp; modernes Halbleinen mit handschriftlichem Rückentitel, Kopffarbschnitt und Lesebändchen (Stehkanten geringfügig berieben); Titel minimal fleckig, sonst frisches, ausgezeichnet erhaltenes Exemplar. - Mit dekorativem Exlibris von Hanna Edle Butenschøn (1905-1996). <br /><br />
+                    <span style="display: none">Pritzel 5999. - Der botanische Reichtum des Schönbrunner Gartens, der hier dem Fachkundigen in übersichtlicher Form und mit Registern der lateinischen und deutschen Pflanzennamen dargeboten wird, verdankt sich vor allem den ab 1754 in kaiserlichem Auftrag unternommenen Sammelexpeditionen. Als Grundwerk zur Klassifizierung wurde "Caroli a Linné Species plantarum" (Berlin 1797 ff.) von Carl Ludwig Willdenow herangezogen. - Selten.</span>
+                    <a href='/artikel/mauchart-b-urchard-d-avid-2309-50.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-50
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1906-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pael-recte-peall-thomas-1906-34.html'>
+                            <img class='thumb' src='/img/thumb/pael-recte-peall-thomas-1906-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pael-recte-peall-thomas-1906-34.html'><strong>Pael (recte Peall), Thomas</strong></a><br /><br />
+                    Praktische Beobachtungen über einige der gewöhnlicheren Pferdekrankheiten; nebst Bemerkungen über allgemeine Vorschriften der Diät und der gewöhnlichen Stallbehandlung dieses Thier's. Übersetzt von J. L. Wallis. Hannover, Helwing, 1820. In-8; VIII, 384 pp; Pappband der Zeit (etwas berieben und bestoßen); gelegentlich geringfügig gebräunt oder stockfleckig, Exlibris. <br /><br />
+                    <span style="display: none">Nicht in Menessier. - Das von der zeitgenössischen Kritik wohlwollend aufgenommene und auch heute noch gut lesbare Werk eines irischen Veterinärs ist sowohl in der englischen Originalfassung von 1814 wie in der vorliegenden deutschen Ausgabe selten.</span>
+                    <a href='/artikel/pael-recte-peall-thomas-1906-34.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1906-34
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-54>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/rosenzucht-2009-54.html'>
+                            <img class='thumb' src='/img/thumb/rosenzucht-2009-54.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/rosenzucht-2009-54.html'><strong>[Rosenzucht]</strong></a><br /><br />
+                    Vollständige Anweisung schöne Rosen, desgleichen auch jede Rosenart theils einzeln, theils in Verbindung mit andern auf dem nämlichen Stamme, in kurzer Zeit baumartig zu erziehen. Nebst einem auf Erfahrung gegründeten Unterricht den Goldlack zu einer aussergewöhnlichen Höhe und prachtvollen Flor zu bringen. Ulm, Ebner, 1820. Kl-8; 55 pp; Interimsbroschur (Rücken tlw. aufgeplatzt und mit Fehlstellen); etwas stockfleckig. <br /><br />
+                    <span style="display: none">Nicht in Holzmann-Bohatta. - Erste Ausgabe. Anonyme hortensische Schrift, die 1826 sowie 1830 nochmals aufgelegt wurde.</span>
+                    <a href='/artikel/rosenzucht-2009-54.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-54
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sinclair-john-2505-83.html'>
+                            <img class='thumb' src='/img/thumb/sinclair-john-2505-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sinclair-john-2505-83.html'><strong>Sinclair, John</strong></a><br /><br />
+                    Grundgesetze des Ackerbaues, nebst Bemerkungen über Gartenbau, Obstbaumzucht, Forst-Cultur und Holzpflanzung. Auf Veranlassung der k. k. Landwirthschafts-Gesellschaft in Wien aus dem Englischen übersetzt von Joseph Ritter v. Schreibers. Wien, J. G. Heubner, 1819. In-8; XIV, 1 Bl., 762 pp mit einigen Textabb., 3 Bll., 9 Falttafeln; Halblederband der Zeit mit Rückenvergoldung und Rückenschildchen (berieben und bestoßen); flieg. Vorsatz und Titel gestempelt, stellenweise etwas stockfleckig, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Erste deutsche Ausgabe des im selben Jahr erschienenen "Code of Agriculture". Der schottische Ökonom und Politiker Sir John Sinclair (1754-1835) benützte als einer der ersten den Begriff der Statistik und proponierte neue Methoden in der Landwirtschaft; der Übersetzer Joseph von Schreibers (1793-1874) war Jurist und ein engagierter Fachmann für die Landwirtschaft.</span>
+                    <a href='/artikel/sinclair-john-2505-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-83
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/spillmann-franz-2403-76.html'>
+                            <img class='thumb' src='/img/thumb/spillmann-franz-2403-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/spillmann-franz-2403-76.html'><strong>Spillmann, Franz</strong></a><br /><br />
+                    Die Säugetiere Ecuadors im Wandel der Zeit. Quito, Universidad Central, 1931. Gr-8; Titel, 112 pp, 24 Tafeln (meist mit montierten Lichtdrucken nach Fotographien, eine Abb. handkoloriert); schlichter zeitgenössischer Leinenband mit Exlibris des amerikanischen Naturforschers Frederick Martin Brown (1903-1993). <br /><br />
+                    <span style="display: none">Seltene paläontologisch-zoologische Studie, die auch archäologische Funde miteinbezieht. Der österreichische Paläontologe Franz Spillmann (1901-1988) zog 1925 nach Ecuador, wo er zunächst Direktor des naturwissenschaftlichen Kabinetts der Universität Quito und dann Professor daselbst wurde. Später lehrte er in Peru, dazwischen und danach war er in Österreich tätig. - Kein Exemplar im österreichischen Bibliothekenverbund nachweisbar.</span>
+                    <a href='/artikel/spillmann-franz-2403-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-76
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zoologie-2309-91.html'>
+                            <img class='thumb' src='/img/thumb/zoologie-2309-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zoologie-2309-91.html'><strong>Zoologie</strong></a><br /><br />
+                    Histoire naturelle. Suite du règne animal. Teilstück aus der großformatigen Ausgabe von "Encyclopédie ou Dictionnaire raisonné des sciences, des arts et des métiers" von Denis Diderot und Jean Baptiste le Rond d'Alembert. (Paris, um 1770). In-folio; 18 pp, 43 Tafeln (Taf. LI-XCIII), davon zwei gefaltet; späterer einfacher Pappband mit altem Rotschnitt; im Schnitt bzw. am Blattrand stellenweise etwas tintenfleckig, sonst weitgehend sauber und frisch. Der vorliegende Teil behandelt Fische, Krebstiere, Stachelhäuter, Schnecken und Muscheln, Hohltiere und Schwämme sowie Insekten und Spinnentiere. Die sorgfältig ausgeführten dekorativen Kupfertafeln - darunter zwei originelle dreiblattgroße Darstellungen von Floh und Laus in mikroskopischer Vergrößerung - wurden zumeist von Robert Bénard gestochen. <br /><br />
+                    <span style="display: none">Die ab 1751 von Diderot und d'Alembert herausgegebene "Encyclopédie" gilt als eines der Hauptwerke der Aufklärung.</span>
+                    <a href='/artikel/zoologie-2309-91.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-91
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

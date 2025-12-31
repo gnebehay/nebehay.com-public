@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik/berufe-technik-medizin-sport-und-spiel.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Crafts, Technology, Medicine, Sports and Games
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2112-180>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/akrobatik-2112-180.html'>
+                            <img class='thumb' src='/img/thumb/akrobatik-2112-180.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/akrobatik-2112-180.html'><strong>Akrobatik</strong></a><br /><br />
+                    "Forze d' Ercole". Anonyme Radierung bei Tommaso Fontana, Venezia 1837, 15,5 x 9,5 cm. -  Menschenpyramide am Canal Grande, daneben drei Akrobaten übereinander auf dem Bug einer Gondel. <br /><br />
+                    <span style="display: none">Die Darstellung zeigt historisches Brauchtum Venedigs am Donnerstag vor Aschermittwoch.</span>
+                    <a href='/en/articles/akrobatik-2112-180.html'>Continue reading</a><br /><br />
+                    Order no. 2112-180
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-162>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/astronomie-1911-162.html'>
+                            <img class='thumb' src='/img/thumb/astronomie-1911-162.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/astronomie-1911-162.html'><strong>Astronomie</strong></a><br /><br />
+                    "Das große Aequatorial-Teleskop auf der Sternwarte zu Greenwich." Kolorierter Holzstich nach W. B. Murray aus der Zeitschrift "Das Buch für Alle", 1881, 31 x 21,5 cm. <br /><br />
+                    <span style="display: none">Das Royal Greenwich Observatory wurde 1675 auf einem Hügel im Greenwich Park gegründet und blieb an diesem Standort bis 1948.</span>
+                    <a href='/en/articles/astronomie-1911-162.html'>Continue reading</a><br /><br />
+                    Order no. 1911-162
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-158>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/dichter-2012-158.html'>
+                            <img class='thumb' src='/img/thumb/dichter-2012-158.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/dichter-2012-158.html'><strong>Dichter</strong></a><br /><br />
+                    Altkolorierte Lithographie von Burchard Edinger nach Schmutzer aus M. R. Toma, Der Mensch und sein Beruf, Wien 1835-41, ca. 35 x 35 cm. - Etwas altersgebräunt und stellenweise minimal knittrig; achteckig zugeschnitten und gerahmt. <br /><br />
+                    <span style="display: none">Originelle und seltene humoristische Darstellung. Auf welchen der zahlreichen Künstler mit dem Namen Schmutzer das Bild zurückgeht, konnten wir nicht feststellen.</span>
+                    <a href='/en/articles/dichter-2012-158.html'>Continue reading</a><br /><br />
+                    Order no. 2012-158
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-154>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/golf-2412-154.html'>
+                            <img class='thumb' src='/img/thumb/golf-2412-154.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/golf-2412-154.html'><strong>Golf</strong></a><br /><br />
+                    Kolorierte Radierung, undeutlich signiert, um 1980(?), Plattenformat 20 x 15 cm, Blattgröße 35 x 27 cm. <br /><br />
+                    <span style="display: none">Ein im Stil des frühen 20. Jhs. gekleideter Golfer beim Abschlag.</span>
+                    <a href='/en/articles/golf-2412-154.html'>Continue reading</a><br /><br />
+                    Order no. 2412-154
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hartmann-philipp-karl-mediziner-1773-1830-2302-30.html'>
+                            <img class='thumb' src='/img/thumb/hartmann-philipp-karl-mediziner-1773-1830-2302-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hartmann-philipp-karl-mediziner-1773-1830-2302-30.html'><strong>Hartmann, Philipp Karl, Mediziner (1773-1830)</strong></a><br /><br />
+                    "Ph. Carolus Hartmann Medicinae Doctor et Professor ... Universitate C. R. Vindobonensi ...". Zeitgenössischer Stahlstich von Gustav Leybold nach Ludwig Ferdinand Schnorr von Carolsfeld, Frontispiz zur zweiten Auflage von "Theoria Morbi", Wien 1828, 12 x 9 cm. - Beiliegend: "Hartmann." Anonyme Lithographie aus "Porträt-Gallerie berühmter Ärzte", Wien 1838, ca. 15 x 13 cm. - Beide Blätter mit geringfügigen Altersspuren. <br /><br />
+                    <span style="display: none">Hartmann wurde 1811 Professor an der Wiener Universität und 1829 Vorstand der Medizinischen  Klinik im Allgemeinen Krankenhaus. Er veröffentlichte eine Reihe bedeutender medizinischer Arbeiten - sein erstmals 1814 erschienenes Handbuch "Theoria morbi, seu Pathologia generalis" galt als das beste pathologische Werk seiner Zeit - sowie die mehrfach aufgelegte populäre Aufklärungsschrift "Glückseligkeitslehre für das physische Leben des Menschen".</span>
+                    <a href='/en/articles/hartmann-philipp-karl-mediziner-1773-1830-2302-30.html'>Continue reading</a><br /><br />
+                    Order no. 2302-30
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-45>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/holzbaukasten-2202-45.html'>
+                            <img class='thumb' src='/img/thumb/holzbaukasten-2202-45.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/holzbaukasten-2202-45.html'><strong>Holzbaukasten</strong></a><br /><br />
+                    Panorama-Mosaik (der Fa. C. Brandt jr. in Lößnitz), um 1905, 29 x 40,5 cm. Ca. 150 meist zweiseitig farbig lackierte Holzteile in originaler Kartonschachtel mit farbigem Deckelbild, dazu 2 farbige Vorlagenblätter mit insgesamt 8 Legevarianten; Kartonschachtel und Vorlagenblätter mit stärkeren Gebrauchsspuren, die Holzteile komplett und wie neu. - Selten. <br /><br />
+                    <span style="display: none">Die alte Kleinstadt Lößnitz liegt im Bereich des sächsischen Erzgebirges. Nach dem Niedergang des Bergbaus in der Region entwickelte sich hier vor allem die Holzwaren- und Spielzeugherstellung.</span>
+                    <a href='/en/articles/holzbaukasten-2202-45.html'>Continue reading</a><br /><br />
+                    Order no. 2202-45
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-182>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kanufahren-2112-182.html'>
+                            <img class='thumb' src='/img/thumb/kanufahren-2112-182.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kanufahren-2112-182.html'><strong>Kanufahren</strong></a><br /><br />
+                    "Kanos van Oonalashka." Kupferstich aus einer holländischen Ausgabe der Reisebeschreibungen von James Cook, um 1785, 21,5 x 26 cm. - Breitrandig. <br /><br />
+                    <span style="display: none">Vorformen der heutigen Sportboote aus Alaska: oben zwei Männer in einem Zweisitzer mit Stechpaddeln, darunter ein Mann in einem einsitzigen Kajak mit Doppelpaddel.</span>
+                    <a href='/en/articles/kanufahren-2112-182.html'>Continue reading</a><br /><br />
+                    Order no. 2112-182
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-157>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lotterie-2412-157.html'>
+                            <img class='thumb' src='/img/thumb/lotterie-2412-157.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lotterie-2412-157.html'><strong>Lotterie</strong></a><br /><br />
+                    "Lotterie-Sucht." Altkolorierter Kupferstich von Franz Xaver Stöber nach Matthäus Loder aus Loder - Stöber - I. F. Castelli, Zerrbilder menschlicher Thorheiten und Schwächen, Wien 1818, 14 x 10 cm. - Gebräunt. Beiliegend der zugehörige zweiseitige Text. <br /><br />
+                    <span style="display: none">Hayn-G. IV, 226; Rümann 1217; Thieme-Becker 23, 311; Wilpert-G. 40. - Seltenes Blatt aus der Erstausgabe des satirischen Werks mit den epigrammatischen Erläuterungen des Wiener Dichters Ignaz Franz Castelli (1781-1862); eine veränderte Neuaugabe erschien 1913. Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/lotterie-2412-157.html'>Continue reading</a><br /><br />
+                    Order no. 2412-157
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/orient-2509-58.html'>
+                            <img class='thumb' src='/img/thumb/orient-2509-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/orient-2509-58.html'><strong>Orient</strong></a><br /><br />
+                    Vier unbezeichnete Aquarelle mit Kostümdarstellungen auf Büttenpapier, jeweils mit Einfassunglinie versehen und alt auf Papier montiert, wohl 18. Jh., je 27 x 19 cm. - Unbedeutende Altersspuren, das Trägerpapier mit einzelnen kleinen Randmängeln. <br /><br />
+                    <span style="display: none">Die Blätter zeigen einen mit Speer und Schild bewaffneten Krieger, einen Janitscharen, einen Mullah und einen Kaufmann(?).</span>
+                    <a href='/en/articles/orient-2509-58.html'>Continue reading</a><br /><br />
+                    Order no. 2509-58
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-184>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/parlamentarier-2112-184.html'>
+                            <img class='thumb' src='/img/thumb/parlamentarier-2112-184.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/parlamentarier-2112-184.html'><strong>Parlamentarier</strong></a><br /><br />
+                    "A Parliamentary Group, Seized with a sudden Drowsiness upon a prosy orator rising to speak." Altkolorierte Lithographie von John Doyle aus "HB Sketches" (No. 212) bei Thomas McLean, London 1832, 24,5 x 35 cm. <br /><br />
+                    <span style="display: none">Thieme Becker 9, 532. - Der irische Karikaturist und Maler John Doyle (1797-1868) veröffentlichte von 1829 bis 1851 unter dem Pseudonym "HB" seine berühmt gewordenen "Political Sketches", die etwa monatlich in Heften zu je 5 Blättern erschienen, von Kommentaren in der Londoner "Times" begleitet wurden und regelmäßig für Aufsehen sorgten.</span>
+                    <a href='/en/articles/parlamentarier-2112-184.html'>Continue reading</a><br /><br />
+                    Order no. 2112-184
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/pharmazie-2305-69.html'>
+                            <img class='thumb' src='/img/thumb/pharmazie-2305-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/pharmazie-2305-69.html'><strong>Pharmazie</strong></a><br /><br />
+                    "Raccomandasi ...". Werbeplakat der Farmacia Valcamonica & Introzzi di G. Introzzi in Milano, Chromolithographie bei Fratelli Tensi, Milano um 1885, ca. 60 x 40 cm. - Empfohlen werden ein unfehlbares Heilmittel gegen Schwielen an den Füßen namens "L'Ecrisontylon Zulin", weiters ein Kamillenextrakt zur Nervenberuhigung sowie das Abführmittel "Le Pillole di Celso". Als Blickfang dienen eine halbnackte orientalische Priesterin mit Insignien des Asklepios/Äskulap vor einem Altar und ein Porträtmedaillon des römischen Medizinschriftstellers Celsus. - Seitlich unbeschnitten mit erhaltenen Passmarken; Rand- und Eckmängel (Textverlust bei der Herstelleradresse), einzelne geringfügige Oberflächenmängel. <br /><br />
+                    <span style="display: none">Seltenes zeittypisches Plakat eines unbekannten Entwerfers. Die auf Lithographien spezialisierte Druckerei Tensi wurde 1867 von den Brüdern Alberto und Franceso Tensi gegründet.</span>
+                    <a href='/en/articles/pharmazie-2305-69.html'>Continue reading</a><br /><br />
+                    Order no. 2305-69
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/plakat-2409-81.html'>
+                            <img class='thumb' src='/img/thumb/plakat-2409-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/plakat-2409-81.html'><strong>Plakat</strong></a><br /><br />
+                    Großformatige Farblithographie der Druckerei Jacob Weiner, Wien um 1905, Bildformat ca. 60 x 85 cm, Blattgröße 95 x 125 cm. Probedruck vor der Schrift im sezessionistischen Flächenstil, wohl für ein Plakat des Londoner Unternehmens "Gramophone and Typewriter Ltd." oder der französischen Firma "Sydney Hebert" in Dieppe. Drei Erwachsene, ein junges Mädchen und zwei Kinder stehen mit dem Rücken zum Betrachter vor einem zeittypischem Plattenspieler und einer Lambert-Schreibmaschine. - Unrestauriert. Auf dünnem Papier gedruckt, mehrfach gefaltet, einzelne Bug- und Randschäden. <br /><br />
+                    <span style="display: none">Vgl. Durstmüller 3, 244 f. - Die 1864 gegründete Wiener Stein- und Buchdruckerei Jacob Weiner war auf die Produktion von Plakaten spezialisiert. "Für die im Flachdruckverfahren hergestellten Bildplakate zog Weiner bedeutende Künstler heran, deren Entwürfe er technisch vollendet in den Druck umsetzte. ... 1907 ... meldete man 120 Mitarbeiter und 17 Maschinen. Bildplakate ... wurden nach vielen europäischen und außereuropäischen Ländern exportiert ..." (Durstmüller). Von 1901 bis 1904 produzierte Gramophone and Typewriter Ltd. die erstmals um 1900 in den USA hergestellte Lambert-Schreibmaschine für den europäischen Markt und verkaufte dann seine Bestände und die Produktionsrechte an Sydney Hebert.</span>
+                    <a href='/en/articles/plakat-2409-81.html'>Continue reading</a><br /><br />
+                    Order no. 2409-81
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-121>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ratsel-2311-121.html'>
+                            <img class='thumb' src='/img/thumb/ratsel-2311-121.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ratsel-2311-121.html'><strong>Rätsel</strong></a><br /><br />
+                    "Wem beliebt mein Geheimniß zu errathen". Altkolorierte Federlithographie um 1830, 28 x 19 cm. 42 Silben auf der Fahne eines Ritters sind zu einem Gedicht zu ordnen, wobei sich die folgende Silbe meist in einem benachbarten Feld findet. - Knapp beschnitten, leichte Gebrauchs- und Altersspuren. - Dazu: "Ist's gefällig mein Geheimniß zu ergründen." Unkolorierte Radierung eines sehr ähnlichen, jedoch etwas schwieriger zu lösenden Rätsels mit 60 Silben, Blattgröße 33 x 21 cm, Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Auflösung des ersten Rätsels: "Unten fang zu lesen an / reihenförmig schief alsdan / und du kömst ans End verkehrt / sag ich was mein Herz verehrt / Liebe und dem Vaterland / Treue bis zum Grabesrand." Handschriftliche Auflösung des zweiten Rätsels auf dem Blatt selbst.</span>
+                    <a href='/en/articles/ratsel-2311-121.html'>Continue reading</a><br /><br />
+                    Order no. 2311-121
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/rosas-anton-von-mediziner-1791-1855-2302-67.html'>
+                            <img class='thumb' src='/img/thumb/rosas-anton-von-mediziner-1791-1855-2302-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/rosas-anton-von-mediziner-1791-1855-2302-67.html'><strong>Rosas, Anton von, Mediziner (1791-1855)</strong></a><br /><br />
+                    Lithographie auf China von Josef Kriehuber bei J. Höfelich, Wien 1843, Bildformat 26 x 20 cm, Blattgröße 38,5 x 29 cm. - Brustbild halbrechts mit lateinischem Spruch, darunter faksimilierte Unterschrift. <br /><br />
+                    <span style="display: none">Wurzbach (Kriehuber) 1854. - Rosas  leitete 1821-1853 die Wiener Augenklinik, verfasste ein dreibändiges Handbuch und trug wesentlich zum Fortschritt der Augenheilkunde bei. Schönes zeitgenössisches Porträt.</span>
+                    <a href='/en/articles/rosas-anton-von-mediziner-1791-1855-2302-67.html'>Continue reading</a><br /><br />
+                    Order no. 2302-67
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-160>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schach-1811-160.html'>
+                            <img class='thumb' src='/img/thumb/schach-1811-160.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schach-1811-160.html'><strong>Schach</strong></a><br /><br />
+                    "Siegessicher." Kolorierter Holzstich nach einem Aquarell von Paul Barthel aus Zeitschrift um 1887, 22 x 28 cm. - Klebebandspur im Schriftfeld. <br /><br />
+                    <span style="display: none">Paul Barthel (1862-1933), deutscher Genre- und Landschaftsmaler.</span>
+                    <a href='/en/articles/schach-1811-160.html'>Continue reading</a><br /><br />
+                    Order no. 1811-160
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-186>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schilanglauf-2112-186.html'>
+                            <img class='thumb' src='/img/thumb/schilanglauf-2112-186.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schilanglauf-2112-186.html'><strong>Schilanglauf</strong></a><br /><br />
+                    "Berliner Schneeschuhläufer auf dem Lande." Kolorierter Holzstich nach Ernst Hosang, 1893, 16 x 22 cm. - Aus einer von uns nicht identifizierten Zeitschrift. <br /><br />
+                    <span style="display: none">Ernst Hosang (1857-1919) wirkte als Genremaler und Illustrator in Berlin.</span>
+                    <a href='/en/articles/schilanglauf-2112-186.html'>Continue reading</a><br /><br />
+                    Order no. 2112-186
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-187>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schlosser-2112-187.html'>
+                            <img class='thumb' src='/img/thumb/schlosser-2112-187.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schlosser-2112-187.html'><strong>Schlosser</strong></a><br /><br />
+                    Altkolorierte Lithographie aus "Der Anschauungsunterricht in Bildern" bei F. Tempsky, Prag um 1860, 14 x 18 cm. - Angerändert. <br /><br />
+                    <span style="display: none">Seltenes Blatt im Stil der Schreiberschen Anschauungstafeln. Zwei 1886 erschienene Neuauflagen des gleichen Werks enthalten Chromolithographien.</span>
+                    <a href='/en/articles/schlosser-2112-187.html'>Continue reading</a><br /><br />
+                    Order no. 2112-187
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-189>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schneider-2112-189.html'>
+                            <img class='thumb' src='/img/thumb/schneider-2112-189.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schneider-2112-189.html'><strong>Schneider</strong></a><br /><br />
+                    Altkolorierte Lithographie aus "Der Anschauungsunterricht in Bildern" bei F. Tempsky, Prag um 1860, 15 x 15 cm. - Angerändert. <br /><br />
+                    <span style="display: none">Seltenes Blatt im Stil der Schreiberschen Anschauungstafeln. Zwei 1886 erschienene Neuauflagen des gleichen Werks enthalten Chromolithographien.</span>
+                    <a href='/en/articles/schneider-2112-189.html'>Continue reading</a><br /><br />
+                    Order no. 2112-189
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/spielkarten-tarock-1902-78.html'>
+                            <img class='thumb' src='/img/thumb/spielkarten-tarock-1902-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/spielkarten-tarock-1902-78.html'><strong>Spielkarten - Tarock</strong></a><br /><br />
+                    Tarockspiel "Industrie und Glück" der Firma C. Titze & Schinkay, Wien 1877/1881 (Steuerstempel). Komplettes französischfarbiges Blatt zu 54 Karten. Schablonenkolorierte Stahlstiche,  Rückseite Wiener Halbmond in Schwarz, 107 x 57 mm. - Kaum bespielt; die Tarocke mit kleinen violetten Nummern-Stempeln (zwei auch mit kleinen roten Eckmarkierungen), die Herzen und Karos teilweise mit leichten Schablonenspuren. <br /><br />
+                    <span style="display: none">Vgl. Reisinger V, 118 f. (Typus Schema V mittel). Tarock II mit Darstellung eines Tiroler Tuchhändlers auf dem Wiener Heldenplatz, Herz-As mit dekorativer Firmenmarke (Elefant).</span>
+                    <a href='/en/articles/spielkarten-tarock-1902-78.html'>Continue reading</a><br /><br />
+                    Order no. 1902-78
+                    <br />
+                    
+                        € 330,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-77>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/spielkarten-trappola-2509-77.html'>
+                            <img class='thumb' src='/img/thumb/spielkarten-trappola-2509-77.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/spielkarten-trappola-2509-77.html'><strong>Spielkarten - Trappola</strong></a><br /><br />
+                    Trappolaspiel mit italienischen Farben bei J. Glanz, Wien um 1856, komplett mit 36 Karten. Schablonenkolorierte und eiweißgehöhte Lithographien, Rückseite unregelmäßig violett strukturiert, 121 x 60 mm. Mit Adresse "Niederlage am Kohlmarkt No. 279" auf Münze X und Firmenstempel "Glanz Joseph Wien 1856" sowie Steuerstempel zu 10 Kreuzern auf Schwert II. - Mäßig bespielt, vereinzelt gering fleckig; insgesamt sehr gut erhalten, dekorativ und selten. *** Trappola deck using Italian suits, complete with 36 cards, produced around 1856 in Vienna by card manufacturer J. Glanz. Trappola is a trick-taking card game with origins in Italy. It is known since the 16th century and was popular until the first half of the 20th century. The present deck features stencil-colored lithographs, an irregular purple pattern on the reverse side, the company imprint as well as a tax stamp (on swords II) and address (on coins X). Occasionally slightly stained but generally well-preserved, decorative and rare. <br /><br />
+                    <span style="display: none">Das aus Italien stammende Trappola-Spiel ist bereits im 16. Jh. nachweisbar und war noch bis in die erste Hälfte des 20. Jhs. hinein beliebt. Josef Glanz, der auch ein bedeutender Ziseleur, Medailleur und Kunstgießer war, übernahm 1848 die Spielkartenfabrik von Max Uffenheimer in Wien-Wieden; das Verkaufslokal befand sich in der Wiener Innenstadt. Nach seinem Tod (1866) konnte sich das Unternehmen noch bis zur Jahrhundertwende halten, dann wurde es von der Firma Ferd. Piatnik und Söhne übernommen.</span>
+                    <a href='/en/articles/spielkarten-trappola-2509-77.html'>Continue reading</a><br /><br />
+                    Order no. 2509-77
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-190>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/topferei-2112-190.html'>
+                            <img class='thumb' src='/img/thumb/topferei-2112-190.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/topferei-2112-190.html'><strong>Töpferei</strong></a><br /><br />
+                    Altkolorierte Lithographie aus "Der Anschauungsunterricht in Bildern" bei F. Tempsky, Prag, um 1860, 14 x 18 cm. - Angerändert, nicht störende hinterlegte Risse. <br /><br />
+                    <span style="display: none">Seltenes Blatt im Stil der Schreiberschen Anschauungstafeln. Zwei 1886 erschienene Neuauflagen des gleichen Werks enthalten Chromolithographien.</span>
+                    <a href='/en/articles/topferei-2112-190.html'>Continue reading</a><br /><br />
+                    Order no. 2112-190
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-156>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/turnier-1712-156.html'>
+                            <img class='thumb' src='/img/thumb/turnier-1712-156.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/turnier-1712-156.html'><strong>Turnier</strong></a><br /><br />
+                    "Prospectus atrii Catadromi ... Prospect eines Turnier Saal." Guckkastenblatt, altkolorierter Kupferstich bei Georg Balthasar Probst, Augsburg um 1760, 28 x 41 cm. Mit viersprachiger Beschriftung. - Professionell restauriert. <br /><br />
+                    <span style="display: none">Blatt-Nr. 147 / Med. Fol. 38.</span>
+                    <a href='/en/articles/turnier-1712-156.html'>Continue reading</a><br /><br />
+                    Order no. 1712-156
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-191>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wasserball-2112-191.html'>
+                            <img class='thumb' src='/img/thumb/wasserball-2112-191.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wasserball-2112-191.html'><strong>Wasserball</strong></a><br /><br />
+                    "Wasserpolospiel in einer Berliner Schwimmanstalt." Kolorierter Holzstich nach Ernst Hosang, um 1895, 18 x 24 cm. - Aus einer von uns nicht identifizierten Zeitschrift. <br /><br />
+                    <span style="display: none">Ernst Hosang (1857-1919) wirkte als Genremaler und Illustrator in Berlin. Wasserball wurde in Deutschland erstmals 1894 gespielt und wurde bereits 1900 olympische Disziplin; es ist der älteste olympische Mannschaftssport.</span>
+                    <a href='/en/articles/wasserball-2112-191.html'>Continue reading</a><br /><br />
+                    Order no. 2112-191
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wiener-strassenleben-2309-86.html'>
+                            <img class='thumb' src='/img/thumb/wiener-strassenleben-2309-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wiener-strassenleben-2309-86.html'><strong>Wiener Straßenleben</strong></a><br /><br />
+                    Vier seltene originalkolorierte Aquatintaradierungen nach Georg Emanuel Opitz aus einer bei Joseph Eder erschienenen Serie von Wiener Szenen und Volksbeschäftigungen, Wien 1804/1812, Plattengröße je 35 x 28 cm. Französisch und deutsch beschriftet, gerahmt. Vorhanden sind: Nr. 8 "Der Nachtwächter" (gestochen von Ponheimer) - Nr. 15 "Eine Sicherheits-Wache, ein Lampenanzünder, und eine Obst-Verkäuferinn" - Nr. 21 "Ein Kässtecher, ein hölzerne Uhren-Verkäufer und ein Aschensammler in Wien" - "Der Salami Händler, und der Briefträger" (ohne Nr.). - Sehr gut erhaltene dekorative Blätter, farbfrisch und nahezu fleckenfrei. Einzelverkauf auf Anfrage. <br /><br />
+                    <span style="display: none">Hayn-G. VIII, 481; Thieme-Becker 26, 28; Slg. Eckl IV, 1564; Lipperheide Ebb 6 und 7; Kaut 18. - Georg Emanuel Opitz (auch Opiz und Oppitz, 1775-1841) stammte aus Prag und kam um 1801 als Wanderkünstler nach Wien, "wo er sein Talent für Darstellung charakteristischer Szenen aus dem Volksleben ausbildete" (H. Vollmer). Die vorliegende Serie kommt in einer numerierten sowie einer unnumerierten Variante vor und umfasst nach Kaut insgesamt 54 Blätter; neben dem hier genannten Ponheimer (Kilian Ponheimer d. Ä., 1757-1828) war auch Benedikt Piringer (1775-1826) als Radierer daran beteiligt.</span>
+                    <a href='/en/articles/wiener-strassenleben-2309-86.html'>Continue reading</a><br /><br />
+                    Order no. 2309-86
+                    <br />
+                    
+                        € 1850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

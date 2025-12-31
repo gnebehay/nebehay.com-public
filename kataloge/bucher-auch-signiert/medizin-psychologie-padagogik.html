@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/medicine-psychology-pedagogics.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Medizin, Psychologie, Pädagogik
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1802-8>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beck-karl-joseph-1802-8.html'>
+                            <img class='thumb' src='/img/thumb/beck-karl-joseph-1802-8.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beck-karl-joseph-1802-8.html'><strong>Beck, Karl Joseph</strong></a><br /><br />
+                    Die Krankheiten des Gehoerorganes. Ein Handbuch zum Gebrauche seiner Vorlesungen. Heidelberg & Leipzig, Karl Groos, 1827. In-8; X, 296 pp, 3 Bll.; Pp. d. Zt. mit Rückenschildchen; überwiegend stockfleckig oder gebräunt, alter Besitzvermerk auf flieg. Vorsatz. - Das Errata-Blatt am Schluss zwischen Verlagsanzeigen eingebunden. <br /><br />
+                    <span style="display: none">Vgl. Hirsch-H. 1, 408. - Beck (1794-1838) war Mediziner in Freiburg im Breisgau. Bereits mit 24 Jahren zum Hochschulprofessor ernannt, trug er zur Entwicklung neuer Operationsmethoden bei und verfasste unter anderem ein bedeutendes Handbuch zur Augenheilkunde. Das vorliegende, selten angebotene Werk bietet eine umfassende Darstellung der Ohrenheilkunde und ist durch ein Sachregister erschlossen.</span>
+                    <a href='/artikel/beck-karl-joseph-1802-8.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1802-8
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/collin-victor-1810-15.html'>
+                            <img class='thumb' src='/img/thumb/collin-victor-1810-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/collin-victor-1810-15.html'><strong>Collin, Victor</strong></a><br /><br />
+                    Die Untersuchungen der Brust zur Erkenntnis der Brustkrankheiten. Aus dem Französischen übersetzt und mit Zusätzen vorzüglich nach Lännec's Beobachtungen vermehrt von F. J. Bourel ... Mit einer Vorrede begleitet von F. Nasse. Köln, Joh. Georg Schmitz, 1828 In-8; XVI, 1 Bl., 141 pp; marmorierter Pappband der Zeit mit Papierschildchen am Rücken und Sprenkelschnitt (etwas berieben); Vorsätze geringfügig fleckig und mit altem Besitzvermerk, insgesamt ausgezeichnet erhalten. <br /><br />
+                    <span style="display: none">Engelmann 117; vgl. Waller 2072 (Ausg. 1832);  - Erste deutsche Ausgabe dieses "Klassikers der Auskultation" mit Anleitungen zum Gebrauch des Stethoskops.</span>
+                    <a href='/artikel/collin-victor-1810-15.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-15
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/heister-lorenz-2001-34.html'>
+                            <img class='thumb' src='/img/thumb/heister-lorenz-2001-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/heister-lorenz-2001-34.html'><strong>Heister, Lorenz</strong></a><br /><br />
+                    Kleine Chirurgie oder Handbuch der Wundarzney, in welcher kurzer doch deutlicher Unterricht und Begriff dieser Wissenschaft gegeben, und die nöthigsten hiezu gehörenden Werkzeuge in Kupfer vorgestellet werden. Dritte Ausgabe. Nürnberg, (G. N.) Raspe, 1767. In-8; gestochenes Porträt-Frontispiz, 7 Bll., 352 pp, 14 Bll., 8 mehrfach gefaltete Kupfertaf.; schlichter Pappband der Zeit (beschabt und bestoßen); durchgehend gebräunt und stellenweise fleckig, die Textseiten etwas mürbe, unfrisch und vereinzelt knittrig, die Tafeln auf besserem Papier gedruckt und überwiegend sauber. <br /><br />
+                    <span style="display: none">VD18 10542612. - Vereinfachte, für Wundärzte und Hebammen bestimmte Ausgabe von Heisters "großer" Chirurgie. Lorenz Heister (1683-1758) war Professor in Altdorf und Helmstadt, wirkte auch als Botaniker und gilt als Begründer der wissenschaftlichen Chirurgie in Deutschland. Sein Hauptwerk erfreute sich im 18. Jahrhundert großer Beliebtheit und erlebte zahlreiche Auflagen. Die vermutlich von Heister selbst angefertigten Kupfertafeln der vorliegenden Ausgabe zeigen chirurgische Instrumente und Operationen.</span>
+                    <a href='/artikel/heister-lorenz-2001-34.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-34
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hoefer-wolfgang-2302-32.html'>
+                            <img class='thumb' src='/img/thumb/hoefer-wolfgang-2302-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hoefer-wolfgang-2302-32.html'><strong>Hoefer, Wolfgang</strong></a><br /><br />
+                    Hercules Medicus sive locorum communium medicorum tomus primus (alles Erschienene). Wien, Johann Jakob Kürner, 1657. Kl-8; gest. Frontispiz, 11 Bll., 383 pp, 7 Bll.; mit einem Textkupfer sowie zahreichen Initialen, Kopfleisten und Schlußvignetten in Holzschnitt; Pergament der Zeit mit zwei Schließen und Farbschnitt (Bezug fleckig und mit kleinen Fehlstellen, unteres Kapital beschädigt, eine Schließe unkomplett); einige Anstreichungen, gelegentlich etwas fleckig, insgesamt sehr gut erhalten und selten. <br /><br />
+                    <span style="display: none">Mayer (Wiens Buchdrucker-Geschichte) I, 275; Krieg MNE 1, 328; Hirsch-H. 3, 248 (mit abweichender Titelangabe); Fischer (Geschichte der Geburtshilfe in Wien) 25 ff. - Erste Ausgabe (von vier). Umfassendes, wenn auch unvollendet gebliebenes medizinisches Kompendium, "ein für die damalige Zeit ganz ausgezeichnetes Buch ... weil es vor allem die praktischen Bedürfnisse des Arztes im Auge behält und stets die eigenen Erfahrungen berücksichtigt ...". Der aus Bayern stammende Autor praktizierte erfolgreich in Straubing, Linz und Raab, bevor er sich als "Sacrae Caes. Majest. Aulae medicus" in Wien niederließ. Der als Frontispiz dienende Kupferstich stammt von Gerard Bouttats, der ebenfalls den letzten Abschnitt seines kurzen Lebens in Wien verbrachte.</span>
+                    <a href='/artikel/hoefer-wolfgang-2302-32.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-32
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hovorka-von-zderas-oskar-1710-44.html'>
+                            <img class='thumb' src='/img/thumb/hovorka-von-zderas-oskar-1710-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hovorka-von-zderas-oskar-1710-44.html'><strong>Hovorka von Zderas, Oskar</strong></a><br /><br />
+                    Die aeussere Nase. Eine anatomisch-anthropologische Studie. Wien, Hölder, 1893. Gr-8; VIII, 154 pp mit 46 Textabb.; HLdr. der Zeit mit goldgepr. Rückentitel und marmor. Schnitt (Rücken und Kanten berieben, 3 kleine Bibl.-Etiketten, Vorsätze etwas leimschattig); einzelne Anstreichungen mit Kugelschreiber, Farb- und Bleistift. <br /><br />
+                    <span style="display: none">Fischer 1, 664 f; ÖBL 2, 435. - Erste Ausgabe. - Der Verfasser (1866-1930) war Primararzt an der Anstalt für epileptische Kinder in Gugging und Medizinhistoriker.</span>
+                    <a href='/artikel/hovorka-von-zderas-oskar-1710-44.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-44
+                    <br />
+                    
+                        € 135,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-39>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hussian-raphael-ferdinand-2003-39.html'>
+                            <img class='thumb' src='/img/thumb/hussian-raphael-ferdinand-2003-39.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hussian-raphael-ferdinand-2003-39.html'><strong>Hussian, Raphael Ferdinand</strong></a><br /><br />
+                    Der Mensch als Kind, oder Darstellung einer, auf naturgemäße Grundsätze gestützten, phisisch-moralischen Pflege des Kindes von der Geburt bis zu den Jahren der Pubertät. 2 Bde. Wien, Franz Tendler, 1832. In-8; lith. Frontispiz, XVIII, 377, (1) pp; 2 Bll., 372, (1) pp; dekorative Halblederbände der Zeit mit goldgepr. Rücken und Farbschnitt (leicht berieben, Innengelenke angeplatzt, Vorsätze leimschattig); innen weitgehend frisch und fleckenfrei, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Lesky (Jos. Bibl.) 326; Hirsch-H. 3, 351; vgl. ÖBL 3, 18. - Erste Ausgabe dieser für damalige Verhältnisse durchaus fortschrittlichen medizinisch-pädagogischen Schrift, die neben Schwangerschaft, Säuglingspflege, kindgerechter Ernährung usw. auch Themen wie Zahnpflege und Unfallverhütung behandelt und psychologische Ratschläge gibt. Sie ist vom Verfasser "Deutschland's liebevollen Müttern" gewidmet. Hussian (1801-1869) gehörte "zu den beliebtesten und gesuchtesten Geburtshelfern Wiens, war Arzt des Hofes, der höchsten Aristokratie und des reichen Bürgerstandes; er starb jedoch in Noth und Elend ..." (Hirsch-H.). - Selten; eine zweite Ausgabe mit geändertem Titel erschien 1847 (nicht 1842) in Graz.</span>
+                    <a href='/artikel/hussian-raphael-ferdinand-2003-39.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-39
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/klein-johann-wilhelm-2209-42.html'>
+                            <img class='thumb' src='/img/thumb/klein-johann-wilhelm-2209-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/klein-johann-wilhelm-2209-42.html'><strong>Klein, Johann Wilhelm</strong></a><br /><br />
+                    Beschreibung eines mit einem neunjährigen Knaben angestellten Versuchs, blinde Kinder zur bürgerlichen Brauchbarkeit zu bilden. Wien, J. Geistinger, 1806. Kl-8; gestochenes Frontispiz (von Joh. Boehm, 1805), 26 pp; Buntpapierbroschur der Zeit; leicht gebräunt, minimale Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Vgl. Wurzbach 12, 53; ÖBL 3, 382; NDB 11, 743 (teilweise mit ungenauen oder problematischen Angaben). - Vermutlich zweiter Druck der äußerst seltenen ersten Ausgabe. Der aus Bayern stammende Jurist J. W. Klein (1765-1848) bekleidete seit 1803 unentgeltlich das Amt eines Armen-Bezirks-Direktors in Wien. 1804 begann er den 9-jährigen blinden Knaben Jakob Braun aus Bruck a. d. Leitha erfolgreich im Lesen einer erhabenen Schrift, im Schreiben und Rechnen sowie auf verschiedenen anderen Gebieten zu unterrichten. Die von Klein entwickelten Methoden (Stachelschrift, Rechenschnur) wurden zur praktischen Grundlage eines systematischen Blindenunterrichts, und auf Kleins Initiative hin entstanden in Wien die bis heute bestehende erste Blindenschule im deutschen Sprachraum sowie in mehreren Städten weitere ähnliche Institutionen. Das vorliegende Werk wurde bis 1822 in vier Ausgaben mit teilweise etwas voneinander abweichenden Titeln gedruckt, auch mit zusätzlicher oder alleiniger Kennzeichnung als im Eigenverlag publiziert. Wurzbach gibt 1804 als erstes Erscheinungsjahr an, was schon aus inhaltlichen Gründen unwahrscheinlich ist; tatsächlich belegbar dürfte erst eine Ausgabe von 1805 ohne Nennung von Ort und Verlag sein. Eine erweiterte zweite Ausgabe - sie ist als solche deklariert - erschien 1807.</span>
+                    <a href='/artikel/klein-johann-wilhelm-2209-42.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-42
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pfab-joseph-vinzenz-2209-71.html'>
+                            <img class='thumb' src='/img/thumb/pfab-joseph-vinzenz-2209-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pfab-joseph-vinzenz-2209-71.html'><strong>Pfab, Joseph Vinzenz</strong></a><br /><br />
+                    Dissertatio inauguralis medico-practica sistens morbos infantum. [Wien], Gerold, [1782]. Kl-8; 106 pp, 2 Bll.; einige Vignetten; einfache Kartonierung der Zeit; Titel mit altem Stempel, durchgehend gering bis stärker feuchtrandig und leicht altersgebräunt, Marginalien von alter Hand. <br /><br />
+                    <span style="display: none">Birett (Inaugural-Diss.) 890; Meissner (Pädiatrik) 3; Heinsius 3, 163. - Seltene frühe pädiatrische Dissertation an der Universität Wien. Behandelt u. a. das Stillen und das Zahnen, den Umgang mit Hernien, die Behandlung von Geschwulsten und Krämpfen, Missbildungen bei Neugeborenen u. a. Der Autor stammte aus Botenwald (Butonice) bei Stauding (Studénka) in Mähren.</span>
+                    <a href='/artikel/pfab-joseph-vinzenz-2209-71.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-71
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/roback-c-w-2209-75.html'>
+                            <img class='thumb' src='/img/thumb/roback-c-w-2209-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/roback-c-w-2209-75.html'><strong>Roback, C. W.</strong></a><br /><br />
+                    The Mysteries of Astrology, and the Wonders of Magic: Including a History of the Rise and Progress of Astrology, and the Various Branches of Necromancy; Together with Valuable Directions and Suggestions Relative to the Casting of Nativities, and Predictions by Geomancy, Chiromancy, Physiognomy, &c. Also, Highly Interesting Narratives, Anecdotes, &c. Illustrative of the Marvels of Witchcraft, Spiritual Phenomena, and the Results of Supernatural Influence. London, Sampson Low, und Boston, Eigenverlag, 1854. In-8; XIV (inkl. Porträt-Frontispiz und Titel), [15]-236, [CCXXXVII]-CCXXXVIII pp mit einigen teils ganzseitigen Holzstich-Abb., 1 Bl. Anzeigen; gold- und blindgepr. Orig.-Leinen mit Deckelillustration und Goldschnitt (etwas berieben, fleckig und lichtspurig, Vorsätze teils stärker stockfleckig); Titel und eine Seite dezent gestempelt, zwei kaum sichtbare Spuren gelöschter Stempel, gelegentlich leicht stock- oder fingerfleckig, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Waller 20184; vgl. Sabin 71720 und Gardner 1101. - Britische Ausgabe, im selben Jahr und mit der gleichen Einbandgestaltung wie die vom Autor allein verlegte amerikanische Ausgabe erschienen. Welche der beiden Ausgaben als tatsächliche Erstausgabe anzusehen ist, scheint unklar; die vorliegende ist jedenfalls seltener. Charles W. Roback (1811-1867?) wurde in Schweden als Carl Johan Nilsson geboren, floh in den 1840er-Jahren vor seinen Gläubigern in die Vereinigten Staaten und war hier nach mehrmaligem Namenswechsel als selbsternannter Arzt, Heilmittelproduzent, Astrologe und Lebensberater tätig. Von 1855 bis 1860 gab er einen "Scandinavian Almanac" heraus. Laut seinen Angaben auf dem Titelblatt war Roback Präsident des Astrologischen College von Schweden und Gründer der Society of the Magi in London, Paris und St. Petersburg. Das mit einer fragwürdigen Autobiographie beginnende Buch ist dem amerikanischen Volk gewidmet, "a nation neither skeptical nor credulous, but ever ready to hear, read, and investigate - ever willing to recognise and bow to truth, in whatever guise she may appear ...". Der Einband zeigt auf dem Rücken einen Magier, auf den Deckeln die schwedische Sommerresidenz von Robacks Familie.</span>
+                    <a href='/artikel/roback-c-w-2209-75.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-75
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/skoda-joseph-von-1710-83.html'>
+                            <img class='thumb' src='/img/thumb/skoda-joseph-von-1710-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/skoda-joseph-von-1710-83.html'><strong>Skoda, Joseph (von)</strong></a><br /><br />
+                    Abhandlung über Perkussion und Auskultation. Wien, Mösle & Braumüller, 1839. In-8; XVIII, 1 Bl., 271, (1) pp; Hldr. der Zeit mit goldgepr. Rücken und marmor. Deckelbezügen (berieben und bestoßen, Rücken etwas restauriert); flieg. Vorsatz mit Blindstempel, Titel mit Blindstempel und zwei dezenten Namensstempeln, teilweise etwas gebräunt oder stockfleckig, einzelne Bleistiftanstreichungen; insgesamt gutes Exemplar in zeittypischem Einband. <br /><br />
+                    <span style="display: none">Garrison-Morton 2676; Waller 8978; Darmstaedter 442; Hirsch-H. 5, 429. - Erste Ausgabe von einem der wichtigsten Werke der Zweiten Wiener Medizinischen Schule. Skoda stellt darin die bis heute angewendete diagnostische Methode des Abhörens und Abklopfens des menschlichen Körpers auf eine wissenschaftliche Basis und entwickelt sie weiter.</span>
+                    <a href='/artikel/skoda-joseph-von-1710-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-83
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sprengel-kurt-1705-84.html'>
+                            <img class='thumb' src='/img/thumb/sprengel-kurt-1705-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sprengel-kurt-1705-84.html'><strong>Sprengel, Kurt</strong></a><br /><br />
+                    Kurt Sprengel's Handbuch der Pathologie. (Auserlesene Medizinische Bibliothek Tl. 70-72). 3 Bde. Dritte viel veränderte Auflage. Wien, A. Doll, 1811. In-8; Vortitel, XIX, 649 pp; XVI, 494 pp; VIII, 520 pp; Pappbände der Zeit mit Rückenschildchen (Rücken stärker, Deckel gering fleckig, 2 Bll. im Inhaltsverz. von Bd. 3 verbunden); Vortitel von Bd. 1 mit Resten des OUmschlags, alle Vortitel und Titel gestempelt, alle Nachsätze mit Exlibris, einige Bll. mit Randmängeln, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Josefinische Bibliothek 626; vgl. Hirsch-H. 5, 374 und Engelmann 551. - Geschätztes umfassendes Werk. Der vielseitige und auch philologisch gebildete Botaniker, Arzt und Medizinhistoriker Kurt Sprengel (1766-1833) stand unter anderem mit Goethe in Kontakt, mit dem er mikroskopierte und diskutierte.</span>
+                    <a href='/artikel/sprengel-kurt-1705-84.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1705-84
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/swieten-gerard-van-1902-83.html'>
+                            <img class='thumb' src='/img/thumb/swieten-gerard-van-1902-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/swieten-gerard-van-1902-83.html'><strong>Swieten, Gerard van</strong></a><br /><br />
+                    Oratio de morte dubia habita VI. April. anno MDCCLXVII. Wien, Trattner, 1778. In-8; 33 von 35 pp (ohne Widmungsblatt). - [Vorgebunden:] Meckel, Johann Friedrich, Tractatus de morbo hernioso congenito singulari & complicato feliciter curato. Berlin, F. Nicolai, 1772; 4 Bll., 148 pp. - [Vorgebunden:] Crantz, Heinrich (Johann) Nepomuk, Solutiones difficultatum circa cordis irritabilitatem. Wien, J. P. Kraus, 1761; 76, (2) pp mit 2 Vignetten, 1 Kupfertafel; schlichter Pp. d. Zt. mit handschriftl. Rückenschildchen und Rotschnitt (beschabt und bestoßen, Rückenbeschriftung abgerieben); innen frisch, fliegender Vorsatz mit Vermerk von alter Hand, erster Titel mit dekorativem altem Stempel, einzelne unbedeutende Papiermängel. <br /><br />
+                    <span style="display: none">Giese 1613; Hirsch-H. 4, 144; Waller 6409 und 2199. - Van Swietens seltene Vorlesung über den Scheintod (mit Bezügen zu biblischen Texten), hier begleitet von einer Studie des bedeutenden deutschen Anatomen Meckel über Bruchleiden sowie einer seltenen Abhandlung über Herzkrankheiten von H. J. Crantz, einem "der fähigsten Schüler van Swieten's" (Hirsch). Eine der darin enthaltenen gestochenen Vignetten - von dem Wiener Arzt und Amateurkupferstecher Augustin Cipps - zeigt einen Forscher (van Swieten?) bei der Sektion eines Herzens.</span>
+                    <a href='/artikel/swieten-gerard-van-1902-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-83
+                    <br />
+                    
+                        € 480,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-56>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/vering-joseph-ritter-von-2005-56.html'>
+                            <img class='thumb' src='/img/thumb/vering-joseph-ritter-von-2005-56.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/vering-joseph-ritter-von-2005-56.html'><strong>Vering, Joseph (Ritter) von</strong></a><br /><br />
+                    Der Arzt und Bildner der Jugend. Wien, Mechitaristen-Congregation, 1843. In-8; 10 Bll., 222 pp, 1 weißes Bl.; roter Maroquinband der Zeit mit reicher Deckel-, Rücken-, Steh- und Innenkantenvergoldung sowie dreifachem Goldschnitt (geringfügig fleckig und bestoßen, Vorsätze etwas leimschattig, Innengelenke geplatzt, Bindung fest); Text sauber und frisch, insgesamt sehr attraktives Exemplar in schönem Biedermeier-Einband. - Exlibris Georg Eckl. <br /><br />
+                    <span style="display: none">Hirsch-H. 5, 733; Wurzbach 50, 126; ÖBL 15, 237. - Vor allem für Mütter geschriebene medizinisch-pädagogische Abhandlung. Die Empfehlungen zur physischen und psychischen Gesundheit der Heranwachsenden beginnen bei Zeugung und Schwangerschaft und behandeln ausführlich die einzelnen Lebensalter bis zur Volljährigkeit. Der Verfasser (1793-1862) betrieb seit 1816 eine Praxis in Wien und genoss als Konsiliararzt hohes Ansehen. Er verfasste zwei Bücher über die Quecksilbertherapie bei Syphilis und behandelte Franz Schubert in seinen letzten Lebenstagen.</span>
+                    <a href='/artikel/vering-joseph-ritter-von-2005-56.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2005-56
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/weller-carl-heinrich-2309-83.html'>
+                            <img class='thumb' src='/img/thumb/weller-carl-heinrich-2309-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/weller-carl-heinrich-2309-83.html'><strong>Weller, Carl Heinrich</strong></a><br /><br />
+                    Diätetik für gesunde und schwache Augen, oder was hat man zu thun, um sein Gesicht bis in's hohe Alter möglichst zu erhalten. Ein Handbuch für Aerzte und gebildete Nichtärzte. Berlin, Schüppel, 1821. In-8; XV, 266 pp, 2 Tafeln (1 gefaltet und koloriert); Halbleder der Zeit (berieben und bestoßen); einzelne leichte Gebrauchsspuren, insgesamt innen gut erhalten und frisch. <br /><br />
+                    <span style="display: none">Hirsch-H. 5, 890. - Der Verfasser (1794-1854) war Arzt in Dresden und veröffentlichte mehrere Bücher über Augenheilkunde.</span>
+                    <a href='/artikel/weller-carl-heinrich-2309-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-83
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-96>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wells-thomas-spencer-2102-96.html'>
+                            <img class='thumb' src='/img/thumb/wells-thomas-spencer-2102-96.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wells-thomas-spencer-2102-96.html'><strong>Wells, (Thomas) Spencer</strong></a><br /><br />
+                    Diagnose und chirurgische Behandlung der Unterleibs-Geschwülste (Tumoren). Auf Wunsch des Verfassers uebersetzt von Dr. Wilh. von Vragassy. Wien, Braumüller, 1886. In-8; XIV (inkl. Titel), 507 pp mit 55 Abb.; späterer unbeschrifteter Pappband mit Buntpapierbezug; schönes, frisches Exemplar. <br /><br />
+                    <span style="display: none">Hirsch-H. 5, 893. - Autorisierte Übersetzung der ein Jahr zuvor in London erschienenen Erstausgabe. Wells (1818-1897), Leibarzt von Queen Victoria und ihrer Familie, entwickelte die Ovariotomie entscheidend weiter und rettete durch die Einführung antiseptischer Operationsmethoden das Leben vieler Frauen. Das vorliegende illustrierte Werk fasst seine Erfahrungen aus 25 Jahren Abdominalchirurgie zusammen. Wells wurde 1883 zum Baron und 1886 zum Mitglied der Leopoldina ernannt.</span>
+                    <a href='/artikel/wells-thomas-spencer-2102-96.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-96
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zimmermann-i-c-e-1701-97.html'>
+                            <img class='thumb' src='/img/thumb/zimmermann-i-c-e-1701-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zimmermann-i-c-e-1701-97.html'><strong>Zimmermann, I. C. E.</strong></a><br /><br />
+                    Beobachtungen der berühmtesten Wundärzte neuerer Zeit zur Erläuterung der sichersten Behandlungsarten eingeklemmter Brüche. Zur Belehrung für angehende praktische Aerzte und Wundärzte gesammelt und mit Zusätzen aus eigener Erfahrung vermehrt. Leipzig, Wilhelm Lauffer, 1832. In-folio; IV, 36 pp, 8 altkolor. lithogr. Tafeln; OBrosch. (hinterer Umschlag mit sauber hinterlegtem Riss); leichte Gebrauchs- und Altersspuren, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Nicht in Hirsch-H. - Seltenes Werk mit ausführlichen Beschreibungen operativer Eingriffe und sorgfältig kolorierten plastischen Abbildungen (lithographiert von A. Kneisel nach Zeichnungen des Autors). Der Verfasser war Wundarzt in Leipzig.</span>
+                    <a href='/artikel/zimmermann-i-c-e-1701-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1701-97
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

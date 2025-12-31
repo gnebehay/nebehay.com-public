@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik/musik-theater-tanz-zirkus.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Music, Theatre, Dance, Circus
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2403-17>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bruckner-anton-komponist-1824-1896-2403-17.html'>
+                            <img class='thumb' src='/img/thumb/bruckner-anton-komponist-1824-1896-2403-17.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bruckner-anton-komponist-1824-1896-2403-17.html'><strong>Bruckner, Anton, Komponist (1824-1896)</strong></a><br /><br />
+                    Signierte Radierung auf China von Jakob Groh (1855-1917) mit Notenzeile als Remarque, Wien um 1890, Bildformat 40 x 30 cm, Plattengröße 48 x 35 cm, Blattgröße 63 x 48,5 cm. Erschienen im Kunstverlag V. A. Heck; auch in unsignierter Variante mit typographischer Künstler- und Verlagsadresse bekannt. - Im Unterrand minimal stockfleckig, insgesamt ausgezeichnet erhalten und frisch. <br /><br />
+                    <span style="display: none">Grasberger 177 (mit irriger Angabe zur Vorlage). - Großformatiges zeitgenössisches Porträt nach einer um 1890 gemachten fotographischen Aufnahme von Anton Paul Huber. Die Notenzeile gibt den Beginn von Bruckners 3. Symphonie wieder, der Violinschlüssel ist seitenverkehrt.</span>
+                    <a href='/en/articles/bruckner-anton-komponist-1824-1896-2403-17.html'>Continue reading</a><br /><br />
+                    Order no. 2403-17
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/corelli-arcangelo-komponist-und-geiger-1653-1713-1903-11.html'>
+                            <img class='thumb' src='/img/thumb/corelli-arcangelo-komponist-und-geiger-1653-1713-1903-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/corelli-arcangelo-komponist-und-geiger-1653-1713-1903-11.html'><strong>Corelli, Arcangelo, Komponist und Geiger  (1653-1713)</strong></a><br /><br />
+                    "A. Corelli." Punktierstich von Lambert, wohl aus einem französischen Werk des frühen 19. Jhs., Plattengröße 18 x 13 cm, Blattformat 27 x 17,5 cm. <br /><br />
+                    <span style="display: none">Nicht im APK. - Der italienische Barockkomponist Corelli trug wesentlich zur Entwicklung der Kammermusik und des Concerto grosso bei. Sein virtuoser Musizierstil wurde zur Grundlage der Violintechnik des 18. und 19. Jahrhunderts und beeinflusste zahlreiche Komponisten. </span>
+                    <a href='/en/articles/corelli-arcangelo-komponist-und-geiger-1653-1713-1903-11.html'>Continue reading</a><br /><br />
+                    Order no. 1903-11
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/czerny-carl-komponist-1791-1857-2001-15.html'>
+                            <img class='thumb' src='/img/thumb/czerny-carl-komponist-1791-1857-2001-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/czerny-carl-komponist-1791-1857-2001-15.html'><strong>Czerny, Carl, Komponist (1791-1857)</strong></a><br /><br />
+                    "Carl Czerny". Stahlstich von Carl Mayer (Nürnberg) aus August Gathy, Musikalisches Conversations-Lexicon, 2. Aufl., Hamburg 1840, Plattengröße 16 x 12 cm. - Brustbild, in Wolken schwebend. Etwas fleckig. <br /><br />
+                    <span style="display: none">Originelles zeitgenössisches Porträt. Der Komponist und Klavierpädagoge war Schüler Beethovens und Lehrer Liszts.</span>
+                    <a href='/en/articles/czerny-carl-komponist-1791-1857-2001-15.html'>Continue reading</a><br /><br />
+                    Order no. 2001-15
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-124>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/die-braut-lotterie-la-fiancee-en-loterie-2311-124.html'>
+                            <img class='thumb' src='/img/thumb/die-braut-lotterie-la-fiancee-en-loterie-2311-124.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/die-braut-lotterie-la-fiancee-en-loterie-2311-124.html'><strong>Die Braut-Lotterie (La Fiancée en Loterie)</strong></a><br /><br />
+                    22 Blatt Kostümentwürfe zu einer deutschsprachigen Inszenierung der Vaudeville-Operette von C. de Roddaz und Alfred Douane (Musik: André Messager), wohl Wien um 1920, je 27 x 19 cm. Kolorierte Tuschzeichnungen (teilweise mit Ergänzungen in Bleistift), alle mit ausführlichen Anmerkungen versehen und signiert von F. Moser. - Dekorative Serie. Beiliegend 3 weitere signierte Kostümentwürfe Mosers. <br /><br />
+                    <span style="display: none">Die Operette wurde 1896 uraufgeführt. Näheres zum Kostümbildner konnte von uns leider nicht ermittelt werden.</span>
+                    <a href='/en/articles/die-braut-lotterie-la-fiancee-en-loterie-2311-124.html'>Continue reading</a><br /><br />
+                    Order no. 2311-124
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1703-23>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/duncan-isadora-tanzerin-und-choreographin-1877-1927-1703-23.html'>
+                            <img class='thumb' src='/img/thumb/duncan-isadora-tanzerin-und-choreographin-1877-1927-1703-23.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/duncan-isadora-tanzerin-und-choreographin-1877-1927-1703-23.html'><strong>Duncan, Isadora, Tänzerin und Choreographin (1877-1927)</strong></a><br /><br />
+                    Unsignierte Porträtpostkarte des Weltpostvereins (ungelaufen), um 1900. - Dreiviertelfigur sitzend in antikisierender Tunika. <br /><br />
+                    <span style="display: none">Die Wegbereiterin des modernen Ausdruckstanzes orientierte sich in ihrem Körper- und Bewegungsempfinden am griechischen Schönheitsideal und versuchte als Gegnerin des klassischen Ballets den Tanz der Antike wiederzubeleben. - Selten.</span>
+                    <a href='/en/articles/duncan-isadora-tanzerin-und-choreographin-1877-1927-1703-23.html'>Continue reading</a><br /><br />
+                    Order no. 1703-23
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/dussek-johann-ladislaus-komponist-und-pianist-1760-1812-2003-15.html'>
+                            <img class='thumb' src='/img/thumb/dussek-johann-ladislaus-komponist-und-pianist-1760-1812-2003-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/dussek-johann-ladislaus-komponist-und-pianist-1760-1812-2003-15.html'><strong>Dussek, Johann Ladislaus, Komponist und Pianist (1760-1812)</strong></a><br /><br />
+                    "Dussek". Lithographie von Guillet nach Gustave Janet, um 1850, Bildformat ca. 10 x 10 cm, Blattgröße 27 x 17 cm. - Nicht störende kleine Mängel im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 18, 384. - Der aus Böhmen stammende Johann Ladislaus (auch Johann Ludwig) Dussek unternahm als erfolgreicher Virtuose zahlreiche Tourneen durch Europa; von seinen Kompositionen werden vor allem seine frühromantischen Klavierwerke bis heute geschätzt. Er war unter anderem Lehrer, Freund und Zechkumpan des hochmusikalischen Prinzen Louis Ferdinand von Preußen, lebte zeitweise in London und verbrachte seine letzten Lebensjahre als Kapellmeister des französischen Staatsmannes Talleyrand in Paris.</span>
+                    <a href='/en/articles/dussek-johann-ladislaus-komponist-und-pianist-1760-1812-2003-15.html'>Continue reading</a><br /><br />
+                    Order no. 2003-15
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gallmeyer-josefine-schauspielerin-1838-1884-2302-20.html'>
+                            <img class='thumb' src='/img/thumb/gallmeyer-josefine-schauspielerin-1838-1884-2302-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gallmeyer-josefine-schauspielerin-1838-1884-2302-20.html'><strong>Gallmeyer, Josefine, Schauspielerin (1838-1884)</strong></a><br /><br />
+                    Ovales Brustbild, Öl auf Karton, um 1871, 17 x 13 cm, alt gerahmt. - Rollenbild als Regine in der Operette "Die Prinzessin von Trapezunt" von Jacques Offenbach. Nach zwei rückseitig aufgeklebten Etiketten (beschädigt) stammt das Bild von dem als Landschafts- und Blumenmaler bekannten Franz Anton Feilhammer (Brünn 1817-1888) und dürfte auf der auch in Brünn gezeigten 3. Int. Ausstellung für Theater und Musik (Wien 1892) zu sehen gewesen sein. - Beigaben: M. Waldstein, Aus Wiens lustiger Theaterzeit. Erinnerungen an Josefine Gallmeyer, Berlin 1885 (unbeschnittene Orig.-Broschur) sowie ein Bibliotheksexemplar von B. Glossy - G. Berger, Josefine Gallmeyer. Wiens größte Volksschauspielerin, Wien (1954). <br /><br />
+                    <span style="display: none">Provenienz: ehem. Besitz Gerhard Bronner. - Die 1869 entstandene "Prinzessin von Trapezunt" kam im Frühjahr 1871 an das Wiener Carltheater und die populäre Josefine Gallmeyer feierte darin als Regine monatelang Triumphe. Als Vorlage für das Bild dürfte eine damals entstandene Fotographie von Fritz Luckhardt gedient haben; der Name "Bresher" auf einer der rückseitigen Etiketten dürfte den seinerzeitigen Leihgeber für die Ausstellung bezeichnen.</span>
+                    <a href='/en/articles/gallmeyer-josefine-schauspielerin-1838-1884-2302-20.html'>Continue reading</a><br /><br />
+                    Order no. 2302-20
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-169>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/geige-2012-169.html'>
+                            <img class='thumb' src='/img/thumb/geige-2012-169.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/geige-2012-169.html'><strong>Geige</strong></a><br /><br />
+                    Geiger und Geigerin. Zwei Aquarelle mit Tuschrand, signiert Rud. Krizek, Blattgröße je 28 x 18 cm. <br /><br />
+                    <span style="display: none">Wohl um 1920.</span>
+                    <a href='/en/articles/geige-2012-169.html'>Continue reading</a><br /><br />
+                    Order no. 2012-169
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gernsheim-friedrich-komponist-und-dirigent-1839-1916-2009-22.html'>
+                            <img class='thumb' src='/img/thumb/gernsheim-friedrich-komponist-und-dirigent-1839-1916-2009-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gernsheim-friedrich-komponist-und-dirigent-1839-1916-2009-22.html'><strong>Gernsheim, Friedrich, Komponist und Dirigent (1839-1916)</strong></a><br /><br />
+                    Großformatiges Brustbild nach Fotographie mit faksimilierter Unterschrift. Heliogravüre auf China mit beiliegendem Textblatt aus "Musicalisches Deutschland. Gallerie von Zeitgenossen auf dem Gebiete der Musik" bei Adolf Eckstein, Berlin-Charlottenburg um 1903, Plattengröße 30 x 20 cm, Papierformat 46 x 30 cm. <br /><br />
+                    <span style="display: none">Der aus einer angesehenen jüdischen Familie in Worms stammende Musiker war zu Lebzeiten gleichermaßen als Pianist und Dirigent wie als Musikpädagoge und spätromantischer Komponist geschätzt; er war mit Brahms befreundet und musikalisch von ihm beeinflusst. Während seine Werke in der Zeit des Nationalsozialismus nicht mehr gespielt wurden, erfreuen sich manche von ihnen heute wieder zunehmender Beliebtheit.</span>
+                    <a href='/en/articles/gernsheim-friedrich-komponist-und-dirigent-1839-1916-2009-22.html'>Continue reading</a><br /><br />
+                    Order no. 2009-22
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gluck-christoph-willibald-komponist-1714-1787-2505-30.html'>
+                            <img class='thumb' src='/img/thumb/gluck-christoph-willibald-komponist-1714-1787-2505-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gluck-christoph-willibald-komponist-1714-1787-2505-30.html'><strong>Gluck, Christoph Willibald, Komponist (1714-1787)</strong></a><br /><br />
+                    Signierte Radierung von Jakob Groh (1855-1917), Wien um 1890, Bildformat 36 x 29,5 cm. Gute Wiedergabe des 1776 entstandenen Gemäldes von Joseph Siffred Duplessis (1725-1802). - Auf Plattengröße beschnitten. <br /><br />
+                    <span style="display: none">Erschienen im Kunstverlag V. A. Heck; auch in unsignierter Variante mit typographischer Künstler- und Verlagsadresse bekannt.</span>
+                    <a href='/en/articles/gluck-christoph-willibald-komponist-1714-1787-2505-30.html'>Continue reading</a><br /><br />
+                    Order no. 2505-30
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/grisi-giulia-sangerin-1811-1869-2505-33.html'>
+                            <img class='thumb' src='/img/thumb/grisi-giulia-sangerin-1811-1869-2505-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/grisi-giulia-sangerin-1811-1869-2505-33.html'><strong>Grisi, Giulia, Sängerin (1811-1869)</strong></a><br /><br />
+                    "Giuletta Grisi. La Norma." Stahlstich von William Henry Mote nach Vidal aus Porträtwerk um 1845, Bildformat 16 x 11 cm, mit floraler Bordüre. - Im weißen Rand etwas fleckig und mit Heftungsspuren (nicht störend). <br /><br />
+                    <span style="display: none">Schönes zeitgenössisches Porträt der großen italienischen Operndiva in einer ihrer bekanntesten Rollen, der keltischen Oberpriesterin in Vincenzo Bellinis "Norma". Hier in einer Fassung mit Variante des Vornamens.</span>
+                    <a href='/en/articles/grisi-giulia-sangerin-1811-1869-2505-33.html'>Continue reading</a><br /><br />
+                    Order no. 2505-33
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-171>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/handel-georg-friedrich-komponist-1685-1759-1911-171.html'>
+                            <img class='thumb' src='/img/thumb/handel-georg-friedrich-komponist-1685-1759-1911-171.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/handel-georg-friedrich-komponist-1685-1759-1911-171.html'><strong>Händel, Georg Friedrich, Komponist (1685-1759)</strong></a><br /><br />
+                    "J.(!) Fried. Händel". Kupferstich von Joseph Kovatsch bei Artaria & Comp., Wien um 1830, Porträtmedaillon 14 x 11 cm, Blattgröße 23 x 17 cm. - Beschnitten (Berührung der Verlagsadresse) und leicht angeschmutzt, eine Ecke mit leichten Knickspuren. <br /><br />
+                    <span style="display: none">Vgl. Wurzbach 13, 68; nicht im APK. - Seltenes Porträt mit fehlerhafter Beschriftung. Joseph Kovatsch (1799-1839), ausgebildet in der Kupferstecherschule der Wiener Akademie, fertigte für den Wiener Musikverleger und Kunsthändler Artaria mehrere Blätter an.</span>
+                    <a href='/en/articles/handel-georg-friedrich-komponist-1685-1759-1911-171.html'>Continue reading</a><br /><br />
+                    Order no. 1911-171
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/haydn-joseph-komponist-1732-1809-2105-37.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-komponist-1732-1809-2105-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/haydn-joseph-komponist-1732-1809-2105-37.html'><strong>Haydn, Joseph, Komponist (1732-1809)</strong></a><br /><br />
+                    "Joseph Haydn". Lithographie von Andreas Ziegler bei Anton Diabelli & Comp., gedruckt in Ludwig Försters artistischer Anstalt, Wien um 1840, Bildformat ca. 17 x 14 cm, Blattgröße 39 x 28 cm. - Brustbild nach links mit faksimilierter Unterschrift. - Im breiten weißen Rand restauriert und etwas fleckig. <br /><br />
+                    <span style="display: none">Vermutlich Kopie nach der ebenfalls bei Diabelli erschienenen Lithographie von Franz Eybl (Wurzbach 8, 130, Nr. 13). Diese geht wiederum auf ein 1803 entstandenes lebensnahes Wachsmedaillon von Sebastian Irrwoch zurück (Somfai 350) bzw. auf einen danach angefertigten Stich von David Weiss, der 1810 in Wien erschien (Somfai Bildnachtrag d). - Sehr selten; als ungesehen erwähnt bei Joseph Muller, Haydn Portraits, The Musical Quarterly 18 (1932) 282-298.</span>
+                    <a href='/en/articles/haydn-joseph-komponist-1732-1809-2105-37.html'>Continue reading</a><br /><br />
+                    Order no. 2105-37
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/klaviermusik-2102-41.html'>
+                            <img class='thumb' src='/img/thumb/klaviermusik-2102-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/klaviermusik-2102-41.html'><strong>Klaviermusik</strong></a><br /><br />
+                    "Léopold de Meyer". Lithographie von Charles Parsons bei G. & W. Endicott, New York um 1860, Bildformat 33 x 26 cm, mit faksimiliertem Notenzitat. - Angeschmutzt und außerhalb des Bildes etwas stockfleckig, unbedeutende kleine Randmängel. <br /><br />
+                    <span style="display: none">Vgl. Wurzbach 18, 159 (dort nicht erwähnt). - Seltenes satirisches Porträt des österreichischen Pianisten und Salonkomponisten Leopold von Meyer (1816-1883) an einem Érard-Flügel. Meyer erhielt seine pianistische Ausbildung bei Carl Czerny und Joseph Fischhof, war ein brillianter Techniker und feierte auf ausgedehnten Tourneen in Europa und in den USA glänzende Erfolge. Das Notenzitat stammt aus seinem Opus 22 "Marche Marocaine", das ursprünglich den Titel "Machmudier: Air guerrier des Turques" trug. Der aus England stammende Künstler Charles Parsons (1821-1910) war lange in New York tätig.</span>
+                    <a href='/en/articles/klaviermusik-2102-41.html'>Continue reading</a><br /><br />
+                    Order no. 2102-41
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-116>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/klavierunterricht-2211-116.html'>
+                            <img class='thumb' src='/img/thumb/klavierunterricht-2211-116.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/klavierunterricht-2211-116.html'><strong>Klavierunterricht</strong></a><br /><br />
+                    Altkolorierter Stahlstich nach Héloïse Leloir aus "L'Iris. Moniteur des Modes", 11. Jg., 1864, ca. 21 x 14 cm. - In leuchtenden Farben koloriert. <br /><br />
+                    <span style="display: none">Héloïse Leloir (hier "Leloire"), eigentlich Héloïse Suzanne Colin (1819-1873), arbeitete als Malerin und Illustratorin im 2. Französischen Kaiserreich.</span>
+                    <a href='/en/articles/klavierunterricht-2211-116.html'>Continue reading</a><br /><br />
+                    Order no. 2211-116
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-53>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kreutzer-conradin-komponist-1780-1840-1802-53.html'>
+                            <img class='thumb' src='/img/thumb/kreutzer-conradin-komponist-1780-1840-1802-53.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kreutzer-conradin-komponist-1780-1840-1802-53.html'><strong>Kreutzer, Conradin, Komponist (1780-1840)</strong></a><br /><br />
+                    Lithographie auf China von Josef Kriehuber bei Tobias Haslinger, Wien 1837, 30 x 21,5 cm, Gesamtgr. 48,5 x 37 cm. - Das Trägerpapier etwas stockfleckig und mit nicht störenden kleinen Randmängeln, insgesamt sehr schönes Exemplar des seltenen Porträts. <br /><br />
+                    <span style="display: none">Wurzbach 1133. - Der aus Süddeutschland stammende Kreutzer war in Wien als Kapellmeister zunächst für das Kärntnertortheater, später für das Theater in der Josefstadt tätig. Er vertonte an Stelle von Beethoven Grillparzers Drama "Melusina" und schrieb unter anderem die Oper "Das Nachtlager in Granada" sowie die Bühnenmusik zu Raimunds "Verschwender" mit dem "Hobellied".</span>
+                    <a href='/en/articles/kreutzer-conradin-komponist-1780-1840-1802-53.html'>Continue reading</a><br /><br />
+                    Order no. 1802-53
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-159>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lanner-kapelle-2412-159.html'>
+                            <img class='thumb' src='/img/thumb/lanner-kapelle-2412-159.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lanner-kapelle-2412-159.html'><strong>Lanner-Kapelle</strong></a><br /><br />
+                    "Haimbach". Lithographiertes Umschlagbild zu Joseph Lanner, Die Haimbacher. Erinnerungs-Walzer für das Pianoforte. 112tes Werk. Wien, Pietro Mechetti (1837), Bildformat ca. 17 x 29 cm. - Festkonzert von Lanner und seiner Kapelle im Hainbacher Park (heute Wien XIV.) mit der kaiserlichen Familie. - Unbedeutende kleine Mängel im weißen Rand. <br /><br />
+                    <span style="display: none">Seltene zeitgenössische Konzertdarstellung, gedruckt in der 1829 gegründeten lithographischen Anstalt von Ludwig Förster. Haimbach (heute Hainbach), ein im Wienerwald an der Grenze zum niederösterreichen Ort Mauerbach gelegener Teil des heutigen Bezirks Penzing, bildete in der Biedermeierzeit einen beliebten Ausflugsort der Wiener.</span>
+                    <a href='/en/articles/lanner-kapelle-2412-159.html'>Continue reading</a><br /><br />
+                    Order no. 2412-159
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/legong-tanzerin-bali-1606-90.html'>
+                            <img class='thumb' src='/img/thumb/legong-tanzerin-bali-1606-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/legong-tanzerin-bali-1606-90.html'><strong>Legong-Tänzerin (Bali)</strong></a><br /><br />
+                    Farblithographie von Roland Strasser (1892-1974) aus der Vorzugsausgabe der Jahresmappe der Gesellschaft für vervielfältigende Kunst, Wien 1928, rechts unten mit Tinte signiert, Blattgröße 44 x 34 cm. - Auf Büttenpapier gedruckt.  <br /><br />
+                    <span style="display: none">Strasser studierte in Wien und München, war im 1. Weltkrieg als Kriegsmaler tätig und unternahm anschließend mehrere Studienreisen durch Asien. Das Blatt kann bei uns auch in der unsignierten Normalausgabe auf Velinpapier mit typographischer Beschriftung erworben werden (Preis 85,-).</span>
+                    <a href='/en/articles/legong-tanzerin-bali-1606-90.html'>Continue reading</a><br /><br />
+                    Order no. 1606-90
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-125>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/liszt-franz-1811-1896-2311-125.html'>
+                            <img class='thumb' src='/img/thumb/liszt-franz-1811-1896-2311-125.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/liszt-franz-1811-1896-2311-125.html'><strong>Liszt, Franz (1811-1896)</strong></a><br /><br />
+                    Radierung auf China von Ferdinand Schirnböck bei V. A. Heck, Wien um 1890, Plattengröße 21,5 x 15,5 cm, Gesamtgröße 55 x 41 cm. - Brustbild in älteren Jahren mit Kollar, darunter faksimilierter Namenszug. - Im breiten weißen Rand etwas stockfleckig. <br /><br />
+                    <span style="display: none">Der österreichische Kupferstecher Ferdinand Schirnböck (1859-1930) begründete gemeinsam mit Koloman Moser den Ruf der österreichischen Briefmarkenkunst.</span>
+                    <a href='/en/articles/liszt-franz-1811-1896-2311-125.html'>Continue reading</a><br /><br />
+                    Order no. 2311-125
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-192>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/liszt-franz-komponist-1811-1886-2112-192.html'>
+                            <img class='thumb' src='/img/thumb/liszt-franz-komponist-1811-1886-2112-192.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/liszt-franz-komponist-1811-1886-2112-192.html'><strong>Liszt, Franz, Komponist (1811-1886)</strong></a><br /><br />
+                    Signierte Radierung auf China von Wilhelm Woernle mit Remarque unter dem Bild, um 1905, Bildformat 39 x 30 cm, Blattgröße 64 x 49 cm. - Prachtvolles großes Altersporträt, wohl nach einer Fotographie (gegenüber dieser seitenverkehrt). Im breiten weißen Rand minimal stockfleckig. <br /><br />
+                    <span style="display: none">Der deutsch-österreichische Maler und Graphiker Wilhelm Woernle (1849-1916) war Schüler von William Unger und wurde vor allem als Reproduktionsradierer bekannt. Der Wiener Kunstverlag V. A. Heck beauftragte ihn zwischen 1901 und 1905 mit der Anfertigung großformatiger Originalradierungen von Musikern und Dichtern.</span>
+                    <a href='/en/articles/liszt-franz-komponist-1811-1886-2112-192.html'>Continue reading</a><br /><br />
+                    Order no. 2112-192
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/macbeth-und-die-hexen-2309-47.html'>
+                            <img class='thumb' src='/img/thumb/macbeth-und-die-hexen-2309-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/macbeth-und-die-hexen-2309-47.html'><strong>Macbeth und die Hexen</strong></a><br /><br />
+                    Radierung von Georg Heinrich Busse nach Joseph Anton Koch, Rom 1836, 22 x 32 cm. - Illustration zur dritten Szene des ersten Akts von Shakespeares Drama: Auf der Rückkehr von einer Schlacht trifft Macbeth mit seinem Freund Banquo auf drei Hexen; sie prophezeien ihm, dass er bald König sein werde. - Mit schmalem Rand um die Bildkante, die ursprüngliche Beschriftung "Macbeth. / Das Original-Gemälde befindet sich im Ferdinandeum in Innsbruck" weggeschnitten; aufgezogen. <br /><br />
+                    <span style="display: none">Andresen III, 245 f., Nr. 22. - Der aus Tirol stammende Joseph Anton Koch (1768-1839) konnte sich in Italien mit Hilfe eines Stipendiums weiterbilden und wurde in Rom zu einer der herausragenden Persönlichkeiten im Künstlerkreis der sogenannten Lukasbrüder (später als Nazarener bezeichnet). Das 1829 entstandene Gemälde Kochs, hier radiert von dem damals ebenfalls in Italien lebenden und von Koch stark beeinflussten deutschen Künstler Georg Heinrich Busse (1810-1868), gibt mit seiner Gewitterstimmung meisterhaft die dramatische Spannung der Szene wieder.</span>
+                    <a href='/en/articles/macbeth-und-die-hexen-2309-47.html'>Continue reading</a><br /><br />
+                    Order no. 2309-47
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-193>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mendelssohn-bartholdy-felix-komponist-1809-1847-2112-193.html'>
+                            <img class='thumb' src='/img/thumb/mendelssohn-bartholdy-felix-komponist-1809-1847-2112-193.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mendelssohn-bartholdy-felix-komponist-1809-1847-2112-193.html'><strong>Mendelssohn Bartholdy, Felix, Komponist (1809-1847)</strong></a><br /><br />
+                    Signierte Radierung auf China von Ludwig Michalek mit Remarque unter dem Bild, um 1890, Bildformat 39 x 30 cm, Blattgröße 64 x 48,5 cm. - Im breiten weißen Rand stockfleckig, das Porträt selbst sauber. <br /><br />
+                    <span style="display: none">Der österreichische Maler, Kupferstecher und Radierer Ludwig Michalek (1859-1942) schuf bereits 1884 ein Porträt des Komponisten in Pastell. Die vorliegende Radierung - nach einem Gemälde von Eduard Magnus (1846) - entstand im Auftrag des Wiener Kunstverlags V. A. Heck; es sind davon auch unsignierte Exemplare mit typographischer Beschriftung bekannt. Die Remarque zeigt ein kleines Porträt von Robert Schumann.</span>
+                    <a href='/en/articles/mendelssohn-bartholdy-felix-komponist-1809-1847-2112-193.html'>Continue reading</a><br /><br />
+                    Order no. 2112-193
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/patti-adelina-sopran-1843-1919-2009-48.html'>
+                            <img class='thumb' src='/img/thumb/patti-adelina-sopran-1843-1919-2009-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/patti-adelina-sopran-1843-1919-2009-48.html'><strong>Patti, Adelina, Sopran (1843-1919)</strong></a><br /><br />
+                    "Madame Adelina Patti. Prima donna." Farblithographie bei Riddle & Couchman nach einer Fotographie von Elliott & Fry, London um 1900, Bildformat 31,5 x 24 cm, Blattgröße 37 x 28 cm. - Minimal stockfleckig, vermutlich etwas beschnitten, geglättete Mittelfalte, unbedeutende Randmängel. <br /><br />
+                    <span style="display: none">Die spanische Opernsängerin italienischer Abstammung galt als eine der ganz großen Koloratursopranistinnen ihrer Zeit und bekam für ihre Auftritte astronomisch hohe Gagen. Ihren Lebensabend verbrachte sie in Wales. Das vorliegende Porträt ist selten.</span>
+                    <a href='/en/articles/patti-adelina-sopran-1843-1919-2009-48.html'>Continue reading</a><br /><br />
+                    Order no. 2009-48
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-197>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/raimund-ferdinand-theaterdichter-und-schauspieler-1790-1836-2112-197.html'>
+                            <img class='thumb' src='/img/thumb/raimund-ferdinand-theaterdichter-und-schauspieler-1790-1836-2112-197.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/raimund-ferdinand-theaterdichter-und-schauspieler-1790-1836-2112-197.html'><strong>Raimund, Ferdinand, Theaterdichter und Schauspieler (1790-1836)</strong></a><br /><br />
+                    "Ferdinand Raimund, Regisseur des k: k: priv. Theaters in der Leopoldstadt." Zeitgenössischer Kupferstich von Johann Passini nach einem Ölgemälde von Christoph Frank aus Adolf Bäuerles Allg. Theaterzeitung, Wien, 10. 3. 1827, Bildformat 9 x 7 cm, Plattengröße 18,5 x 11 cm. <br /><br />
+                    <span style="display: none">Wurzbach 24, 275, Nr. 2; Schobloch 111. - Mit anderer Beschriftung ("Schauspieler" statt "Regisseur") erstmals im Taschenbuch des Leopoldstädter Theaters für 1821 erschienen.</span>
+                    <a href='/en/articles/raimund-ferdinand-theaterdichter-und-schauspieler-1790-1836-2112-197.html'>Continue reading</a><br /><br />
+                    Order no. 2112-197
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/rossini-gioacchino-komponist-1792-1868-1701-68.html'>
+                            <img class='thumb' src='/img/thumb/rossini-gioacchino-komponist-1792-1868-1701-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/rossini-gioacchino-komponist-1792-1868-1701-68.html'><strong>Rossini, Gioacchino, Komponist (1792-1868)</strong></a><br /><br />
+                    Zeitgenössischer Stahlstich von Pierre François Bertonnier nach einem 1828 entstandenen Ölgemälde von Antoinette C. H. Lescot, Paris(?) um 1830, Bildformat 9,5 x 9,5 cm, Plattengröße 25 x 18 cm. <br /><br />
+                    <span style="display: none">Rossini hatte 1824 den Posten des Leiters der italienischen Oper in Paris angenommen und wurde zwei Jahre später königlicher Hofkomponist und Generalinspekteur des Gesangs in Frankreich; 1829 schrieb er mit "Guillaume Tell" seine letzte Oper. 1830 verlor er im Zug der Julirevolution seine Ämter, bekam jedoch gerichtlich eine lebenslange Rente bewilligt.</span>
+                    <a href='/en/articles/rossini-gioacchino-komponist-1792-1868-1701-68.html'>Continue reading</a><br /><br />
+                    Order no. 1701-68
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tanz-rassenfosse-armand-2403-79.html'>
+                            <img class='thumb' src='/img/thumb/tanz-rassenfosse-armand-2403-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tanz-rassenfosse-armand-2403-79.html'><strong>Tanz. - Rassenfosse, Armand</strong></a><br /><br />
+                    7 (von 15) pochoirkolorierte Lichtdrucke auf Bütten aus Pierre de Querlon, La Maison de la Petite Livia, Paris 1924, je ca. 23,5 x 16 cm. - Darstellungen unbekleideter oder leicht bekleideter Tänzerinnen in verschiedenen Posen aus einem in 420 Exemplaren erschienenen Werk. Ränder teils unbeschnitten, teillweise auch unterschiedlich beschnitten; zwei Blätter mit rotem Monogramm des Künstlers, das dabei zusätzlich auch rückseitig aufgestempelt ist. <br /><br />
+                    <span style="display: none">Der belgische Graphiker und Maler Armand Rassenfosse (1862-1934) arbeitete viel mit Daniel Rops zusammen, von dem er künstlerisch  weitgehend abhängig blieb; als sein Hauptwerk gelten die Illustrationen zu einer 1899 erschienenen Ausgabe von Baudelaires "Les Fleurs du Mal". Die vorliegenden Blätter wurden nach seinen Pastellvorlagen von Paul Vigier reproduziert und von Ferrariello koloriert.</span>
+                    <a href='/en/articles/tanz-rassenfosse-armand-2403-79.html'>Continue reading</a><br /><br />
+                    Order no. 2403-79
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-165>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/theater-kostumentwurfe-1811-165.html'>
+                            <img class='thumb' src='/img/thumb/theater-kostumentwurfe-1811-165.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/theater-kostumentwurfe-1811-165.html'><strong>Theater - Kostümentwürfe</strong></a><br /><br />
+                    "La Bruyeré(!) des Alpes". Mischtechnik auf Karton, signiert A. Choubrac, Paris um 1895/1900, Bildformat ca. 22 x 13 cm, Blattgröße 32 x 25 cm. - Mit zusätzlicher späterer deutscher Beschriftung. Leichte Alters- und Gebrauchsspuren im Randbereich. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 6, 529. - Die Figurine einer "Schneeheide". Der Maler, Designer und Kostümzeichner Alfred Choubrac (1853-1902) ist vor allem durch seine Plakate für die Varieté-Theater der "Belle Époque" bekannt.</span>
+                    <a href='/en/articles/theater-kostumentwurfe-1811-165.html'>Continue reading</a><br /><br />
+                    Order no. 1811-165
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-167>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/theater-kostumentwurfe-1811-167.html'>
+                            <img class='thumb' src='/img/thumb/theater-kostumentwurfe-1811-167.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/theater-kostumentwurfe-1811-167.html'><strong>Theater - Kostümentwürfe</strong></a><br /><br />
+                    "Ondine". Mischtechnik auf Karton, Zuschreibung Alfred Choubrac, Paris um 1895/1900, Bildformat ca. 20 x 9 cm, Blattgröße 32 x 24,5 cm. - Mit zusätzlicher späterer deutscher Beschriftung. Leichte Alters- und Gebrauchsspuren im Randbereich.  <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 6, 529. - Fein ausgeführter Entwurf. Der Maler, Designer und Kostümzeichner Alfred Choubrac (1853-1902) ist vor allem durch seine Plakate für die Varieté-Theater der "Belle Époque" bekannt.</span>
+                    <a href='/en/articles/theater-kostumentwurfe-1811-167.html'>Continue reading</a><br /><br />
+                    Order no. 1811-167
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-168>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/theater-kostumentwurfe-1811-168.html'>
+                            <img class='thumb' src='/img/thumb/theater-kostumentwurfe-1811-168.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/theater-kostumentwurfe-1811-168.html'><strong>Theater - Kostümentwürfe</strong></a><br /><br />
+                    Unbetitelte Mischtechnik auf Karton, signiert Minon, Paris um 1895/1900, Bildformat ca. 24 x 15 cm, Blattgröße 32 x 24 cm. - Mit Stempel "A. Lichtenstein - Maquettes Parisiennes pour costumes de théatre". Im Randbereich stellenweise etwas fleckig. <br /><br />
+                    <span style="display: none">Arthur Minon (Daten unbekannt), französischer Kostümbildner der "Belle Èpoque".</span>
+                    <a href='/en/articles/theater-kostumentwurfe-1811-168.html'>Continue reading</a><br /><br />
+                    Order no. 1811-168
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-161>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/verdi-giuseppe-komponist-1813-1901-2412-161.html'>
+                            <img class='thumb' src='/img/thumb/verdi-giuseppe-komponist-1813-1901-2412-161.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/verdi-giuseppe-komponist-1813-1901-2412-161.html'><strong>Verdi, Giuseppe, Komponist (1813-1901)</strong></a><br /><br />
+                    Signierte Radierung auf China von Wilhelm Woernle mit Remarque unter dem Bild, um 1905, Bildformat 39 x 30 cm, Blattgröße 64 x 48 cm. - Prachtvolles großes Altersporträt, wohl nach einer Fotographie. <br /><br />
+                    <span style="display: none">Der deutsch-österreichische Maler und Graphiker Wilhelm Woernle (1849-1916) war Schüler von William Unger und wurde vor allem als Reproduktionsradierer bekannt. Der Wiener Kunstverlag V. A. Heck beauftragte ihn zwischen 1901 und 1905 mit der Anfertigung großformatiger Originalradierungen von Musikern und Dichtern.</span>
+                    <a href='/en/articles/verdi-giuseppe-komponist-1813-1901-2412-161.html'>Continue reading</a><br /><br />
+                    Order no. 2412-161
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

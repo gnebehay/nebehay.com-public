@@ -1,0 +1,2720 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Graphik</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/prints-drawings/europe.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Graphik</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Europa
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/graphik.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/graphik/kunstlergraphik-16-20-jh.html'>Künstlergraphik (16.-20. Jh.)</a></li>
+    
+        <li><a href='/kataloge/graphik/osterreich-bundeslander.html'>Österreich - Bundesländer</a></li>
+    
+        <li><a href='/kataloge/graphik/osterreich-wien.html'>Österreich - Wien</a></li>
+    
+        <li><a href='/kataloge/graphik/europa.html'>Europa</a></li>
+    
+        <li><a href='/kataloge/graphik/aussereuropa.html'>Außereuropa</a></li>
+    
+        <li><a href='/kataloge/graphik/landkarten.html'>Landkarten</a></li>
+    
+        <li><a href='/kataloge/graphik/pflanzen-und-pilze.html'>Pflanzen und Pilze</a></li>
+    
+        <li><a href='/kataloge/graphik/tiere-fahren-reiten-jagd-fischerei.html'>Tiere, Fahren &amp; Reiten, Jagd &amp; Fischerei</a></li>
+    
+        <li><a href='/kataloge/graphik/berufe-technik-medizin-sport-und-spiel.html'>Berufe, Technik, Medizin, Sport und Spiel</a></li>
+    
+        <li><a href='/kataloge/graphik/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/graphik/geschichte-portrats-kaiserhaus-militaria.html'>Geschichte, Porträts, Kaiserhaus, Militaria</a></li>
+    
+        <li><a href='/kataloge/graphik/religion-mythologie-jahreszeiten-varia.html'>Religion, Mythologie, Jahreszeiten, Varia</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2112-120>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/al-durres-2112-120.html'>
+                            <img class='thumb' src='/img/thumb/al-durres-2112-120.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/al-durres-2112-120.html'><strong>(AL) Durrës</strong></a><br /><br />
+                    "Durazzo." Tonlithographie ohne Künstlerangabe, Druck der k. k. Hof- u. Staatsdruckerei, um 1860, 12 x 9 cm. - Etwas lichtrandig und im weißen Rand gebräunt. <br /><br />
+                    <span style="display: none">Aus einer seltenen, bei Nebehay-Wagner nicht verzeichneten Serie von Ansichten adriatischer Hafenorte vom Meer aus. Die nach einer wechselvollen Geschichte zuletzt osmanische Stadt - das antike Dyrrachium - bildete von 1913 bis 1920 die Hauptstadt des  Fürstentums Albanien.</span>
+                    <a href='/artikel/al-durres-2112-120.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-120
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-108>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/b-brussel-2012-108.html'>
+                            <img class='thumb' src='/img/thumb/b-brussel-2012-108.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/b-brussel-2012-108.html'><strong>(B) Brüssel</strong></a><br /><br />
+                    "Place de Saint Michel à Bruxelles. - Forum Sancti Michaelis Bruxellis". Kupferstich von Ambrogio Orio nach Bernard Auguste Ridderbusch, ohne Verlagsadresse, um 1782, 34 x 47 cm. - Sauber und breitrandig. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 26, 46 und 32, 562. - Schöne großformatige Vedute aus der heutigen europäischen Hauptstadt.</span>
+                    <a href='/artikel/b-brussel-2012-108.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-108
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/b-brussel-2012-109.html'>
+                            <img class='thumb' src='/img/thumb/b-brussel-2012-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/b-brussel-2012-109.html'><strong>(B) Brüssel</strong></a><br /><br />
+                    "Place Royale à Bruxelles. - Forum Regium Bruxellis 1782". Kupferstich von Gaetano Tortolini nach Bernard Auguste Ridderbusch, ohne Verlagsadresse, 34 x 47 cm. - Sauber und breitrandig, unbedeutende Quetschfalten, eine Ecke im weißen Rand ergänzt. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 28, 306 und 32, 562. - Schöne großformatige Vedute aus der heutigen europäischen Hauptstadt.</span>
+                    <a href='/artikel/b-brussel-2012-109.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-109
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-110>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/b-brussel-2012-110.html'>
+                            <img class='thumb' src='/img/thumb/b-brussel-2012-110.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/b-brussel-2012-110.html'><strong>(B) Brüssel</strong></a><br /><br />
+                    "Vue du Parcq à Bruxelles. - Prospectus Vivarii Bruxellensis vulgo il Parco". Kupferstich von Ambrogio Orio nach Bernard Auguste Ridderbusch, ohne Verlagsadresse, um 1782, 34 x 47 cm. - Sauber und breitrandig. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 26, 46 und 32, 562. - Schöne großformatige Vedute aus der heutigen europäischen Hauptstadt.</span>
+                    <a href='/artikel/b-brussel-2012-110.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-110
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-99>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ch-brienzersee-1911-99.html'>
+                            <img class='thumb' src='/img/thumb/ch-brienzersee-1911-99.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ch-brienzersee-1911-99.html'><strong>(CH) Brienzersee</strong></a><br /><br />
+                    "Vue du Village et du Lac de Brienz, Canton de Berne Bailliage d'Interlachen, à l'endroit ou étoit le Village de Kienholz que les Lavanges ont détruit." Kupferstich von François Denis Née nach Le Barbier aus B. Zurlauben, Tableaux ... de la Suisse Bd. 1, Paris 1780, 21 x 34,5 cm. <br /><br />
+                    <span style="display: none">Guter Abzug, im breiten weißen Rand geringfügig fleckig.</span>
+                    <a href='/artikel/ch-brienzersee-1911-99.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-99
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-116>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ch-genf-1811-116.html'>
+                            <img class='thumb' src='/img/thumb/ch-genf-1811-116.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ch-genf-1811-116.html'><strong>(CH) Genf</strong></a><br /><br />
+                    "Vue de la ville de Geneve du côté des Paquis." Kolorierter Kupferstich (1777) von D. Née nach N. Perignon aus J.-B. Laborde & B.-F. Zurlauben, Tableaux topographiques ... de la Suisse, Paris 1780-88, 21 x 35 cm. - Rückseitig gebräunt, Rand stellenweise mit Klebeband verstärkt. <br /><br />
+                    <span style="display: none">De Loës 160. - Blick vom heutigen Vergnügungsviertel Pâquis (ehemals Grünland) auf das alte Stadtzentrum. Nicolas Perignon (1726-1782), franz. Landschafts- und Blumenmaler; François Denis Née (1732-1817), franz. Zeichner und Kupferstecher.</span>
+                    <a href='/artikel/ch-genf-1811-116.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1811-116
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ch-interlaken-1712-97.html'>
+                            <img class='thumb' src='/img/thumb/ch-interlaken-1712-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ch-interlaken-1712-97.html'><strong>(CH) Interlaken</strong></a><br /><br />
+                    "Hôtel de la Jungfrau à Interlachen." Altkolorierte Lithographie von Eugène Cicérie aus "La Suisse et la Savoie", Berlin/Paris/London 1859-1865, 26,5 x 39 cm. - Randlos mit rückseitig aufgezogener Beschriftung. <br /><br />
+                    <span style="display: none">Nr. 24 der Serie. - Das bis heute unter dem Namen "Sonnenhof" bestehende, allerdings an einen anderen Standort versetzte Chalet, davor eine Gruppe Touristen. Der Künstler (1813-1890) nutzte für die detailgetreuen Landschaftsbilder dieser Serie Aufnahmen des französischen Hoffotographen Martens. - Selten.</span>
+                    <a href='/artikel/ch-interlaken-1712-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-97
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-115>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ch-interlaken-2412-115.html'>
+                            <img class='thumb' src='/img/thumb/ch-interlaken-2412-115.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ch-interlaken-2412-115.html'><strong>(CH) Interlaken</strong></a><br /><br />
+                    "Souvenir von Interlaken". Stahlstich von C. Mayer nach Rüdisühli bei Chr. Krüsi, Basel um 1865, 17 x 23 cm. - Die 11 Teilansichten des Souvenirblatts zeigen die historischen Hotels Jungfrau, Victoria, Ritschard, Belvédère, Interlaken, Jungfrauenblick, das Hotel des Alpes, die Pension Ober, den Schweizerhof sowie das Casino. <br /><br />
+                    <span style="display: none">Interlaken erlebte in der zweiten Hälfte des 19. Jahrhunderts einen bedeutenden Aufschwung als Fremdenverkehrsort.</span>
+                    <a href='/artikel/ch-interlaken-2412-115.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-115
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1601-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ch-lauterbrunnental-1601-50.html'>
+                            <img class='thumb' src='/img/thumb/ch-lauterbrunnental-1601-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ch-lauterbrunnental-1601-50.html'><strong>(CH) Lauterbrunnental</strong></a><br /><br />
+                    "Aus dem Lauterbrunnen-Thal. Blatt 2." Tonlithographie von C. Heyn aus der von M. Auer hrsg. Zeitschrift "Faust", Leipzig, G. H. Friedlein, um 1858, 18 x 27 cm. <br /><br />
+                    <span style="display: none">Der Ortsrand von Lauterbrunnen im Berner Oberland mit dem Staubbachfall.</span>
+                    <a href='/artikel/ch-lauterbrunnental-1601-50.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1601-50
+                    <br />
+                    
+                        € 125,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ch-rheinfall-1712-100.html'>
+                            <img class='thumb' src='/img/thumb/ch-rheinfall-1712-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ch-rheinfall-1712-100.html'><strong>(CH) Rheinfall</strong></a><br /><br />
+                    "La Chute du Rhin." Altkolorierter und gehöhter Farbaquatintastich von  Jakob Suter bei H. Fuessli, Zürich um 1830, 14 x 20 cm. - Luxusausgabe des üblicherweise einfärbigen Aquatintablattes mit Zusatz "A.22." unter der Künstlersignatur. <br /><br />
+                    <span style="display: none">Der berühmte Wasserfall unterhalb von Schaffhausen in prachtvollem Kolorit. Jakob Suter (1805-1874) war in der Kunsthandlung Heinrich Fuessli & Co. seit 1816 als Lehrling, seit 1821 als Kolorierer und Ätzer und 1827/33 als Oberaufseher tätig.</span>
+                    <a href='/artikel/ch-rheinfall-1712-100.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-100
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-121>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cz-bechyne-bechin-2112-121.html'>
+                            <img class='thumb' src='/img/thumb/cz-bechyne-bechin-2112-121.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cz-bechyne-bechin-2112-121.html'><strong>(CZ) Bechyne / Bechin</strong></a><br /><br />
+                    "Ansicht der Kreis-Stadt Bechin in Böhmen. Vue de la ville de Bechin en Bohème." Altkolorierte Umrissradierung von Carl Postl nach Laurenz Janscha aus "Collection des vues les plus interessantes et pittoresques de la Boheme" bei Artaria, Wien um 1810, 29 x 42 cm. - Sehr gut erhalten, mit schmalem Rändchen um die Plattenkante. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 276/22. - Schöne Gesamtansicht der alten südböhmischen Stadt am Zusammenfluss von Smutná und Lainsitz.</span>
+                    <a href='/artikel/cz-bechyne-bechin-2112-121.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-121
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-101>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cz-brno-brunn-1712-101.html'>
+                            <img class='thumb' src='/img/thumb/cz-brno-brunn-1712-101.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cz-brno-brunn-1712-101.html'><strong>(CZ) Brno / Brünn</strong></a><br /><br />
+                    "Brünn". Signierte Radierung von Otto Neudert aus "Burgen und Städte in Niederdonau", St. Pölten 1944, 19 x 25 cm. - Auf starkem Büttenpapier gedruckt. <br /><br />
+                    <span style="display: none">Blick auf die Stadt aus größerer Entfernung. Der in Zwittau geborene Künstler (1906-1975) war Maler und Graphiker.</span>
+                    <a href='/artikel/cz-brno-brunn-1712-101.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-101
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cz-olmutz-olomouc-2311-88.html'>
+                            <img class='thumb' src='/img/thumb/cz-olmutz-olomouc-2311-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cz-olmutz-olomouc-2311-88.html'><strong>(CZ) Olmütz / Olomouc</strong></a><br /><br />
+                    "Dominikanerkirche Olmütz". Signierte Radierung auf China von Ivo Saliger, wohl um 1930, Bildformat 17 x 12 cm. - Teilansicht der spätgotischen Klosterkirche mit angebauter barocker Kapelle. Einzelne Flecken im breiten weißen Rand durch Passepartout abgedeckt. <br /><br />
+                    <span style="display: none">Der aus Schlesien stammende österreichische Künstler Ivo Saliger (1894-1987) studierte in Wien und Paris und ist vor allem für seine Landschaftsbilder und Aktdarstellungen bekannt.</span>
+                    <a href='/artikel/cz-olmutz-olomouc-2311-88.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-88
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cz-olmutz-olomouc-1911-100.html'>
+                            <img class='thumb' src='/img/thumb/cz-olmutz-olomouc-1911-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cz-olmutz-olomouc-1911-100.html'><strong>(CZ) Olmütz / Olomouc</strong></a><br /><br />
+                    "Olmütz." Kupferstich von Jakob Hyrtl, Wien 1843, 20 x 43 cm. - Gesamtansicht von Südwesten mit einem Selbstporträt des Künstlers links vorne. - Minimal knittrig und fleckig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 979/11; nicht bei Wurzbach 9, 462 f. - Seltener Separatabdruck (daher ohne Querfalten) aus K. A. Schimmer (Hrsg.), Geschichts- und Erinnerungs-Kalender auf das Jahr 1844. Dieser von etwa 1834 bis 1844 erschienene Kalender enthielt jeweils eine europäische Städteansicht als gefaltetes Frontispiz. Der Wiener Kupferstecher Jakob Hyrtl (1799-1868) war der Bruder des bekannten Anatomen Joseph Hyrtl.</span>
+                    <a href='/artikel/cz-olmutz-olomouc-1911-100.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-100
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-122>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cz-prag-2112-122.html'>
+                            <img class='thumb' src='/img/thumb/cz-prag-2112-122.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cz-prag-2112-122.html'><strong>(CZ) Prag</strong></a><br /><br />
+                    "Wahrer Abriss der beyden Königlichen Haubt, Alt Und Newstatt Prag, Wie dieselben von des Königl: Schwedischen Generalissimi ... Carl Gustawo Pfaltz-Graffen bey Rhein Hertzogen in Bayern, Den 5 Octobris Belägert, mit Approcci, Minen, Canoniren Und Stürmben starckh betrangt, Unnd dann am 2 Novembris 1648. Wiederumben Verlassen Und Quittiert worden." Kupferstich von Matthäus Merian nach Karel Skréta aus "Theatrum Europaeum" Bd. 6, Frankfurt 1652, 30 x 58 cm. - Auf zwei zusammengeklebten Blättern gedruckt mit druckbedingten Faltspuren. An drei Seiten angerändert, unbedeutende kleine Flecken, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 404/6/18; Fauser 11217. - Seltene große Gesamtansicht vom heutigen Viertel Vinohrady aus während der Belagerung durch die Schweden am Ende des Dreißigjährigen Kriegs; in den Ecken Porträtmedaillons der Stadtverteidiger Rudolf Colloredo und Innocentio Guadagnoli. Der tschechische Barockmaler Karel Skreta (1610-1674) zählte zu den führenden Persönlichkeiten der Prager Kunst und des öffentlichen Lebens.</span>
+                    <a href='/artikel/cz-prag-2112-122.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-122
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cz-vranov-nad-dyji-frain-1712-103.html'>
+                            <img class='thumb' src='/img/thumb/cz-vranov-nad-dyji-frain-1712-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cz-vranov-nad-dyji-frain-1712-103.html'><strong>(CZ) Vranov nad Dyjí / Frain</strong></a><br /><br />
+                    "Frain". Signierte farbige Offset-Lithographie von Max Neuböck aus der Mappe "Kunst der Gegenwart", 1943, 25 x 25 cm. <br /><br />
+                    <span style="display: none">Der dem niederösterreichischen Marchegg benachbarte Ort an der Thaya mit der beherrschenden Schlossanlage. Max Neuböck (1893-1960) war Mitglied des Wiener Künstlerhauses.</span>
+                    <a href='/artikel/cz-vranov-nad-dyji-frain-1712-103.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-103
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1609-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-berlin-1609-9.html'>
+                            <img class='thumb' src='/img/thumb/d-berlin-1609-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-berlin-1609-9.html'><strong>(D) Berlin</strong></a><br /><br />
+                    "Das Universitätsgebäude in Berlin." Lithographie von Ludwig Erhard Lütke aus Album bei E. H. Schroeder, Berlin um 1840, 13 x 20 cm. Mit Trockenstempel des Verlags. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 23, 452. - Der Hauptsitz der 1809 gegründeten traditionsreichen Eliteuniversität, 1748-1753 von Friedrich II. als Palais für seinen Bruder Heinrich errichtet.</span>
+                    <a href='/artikel/d-berlin-1609-9.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1609-9
+                    <br />
+                    
+                        € 180,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-104>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-dinkelsbuhl-1712-104.html'>
+                            <img class='thumb' src='/img/thumb/d-dinkelsbuhl-1712-104.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-dinkelsbuhl-1712-104.html'><strong>(D) Dinkelsbühl</strong></a><br /><br />
+                    "Dinkelsbühl". Aquarellierte Tuschfederzeichnung, monogrammiert und datiert TH 20. 7. 1970, Bildformat ca. 26 x 35 cm. <br /><br />
+                    <span style="display: none">Altstadtstraße, im Hintergrund das Segringer Tor.</span>
+                    <a href='/artikel/d-dinkelsbuhl-1712-104.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-104
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-hamburg-2211-80.html'>
+                            <img class='thumb' src='/img/thumb/d-hamburg-2211-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-hamburg-2211-80.html'><strong>(D) Hamburg</strong></a><br /><br />
+                    Bei den Mühren. Unbetitelte Farbradierung von Luigi Kasimir, originalsigniert, um 1920, Bildformat 29,5 x 25 cm, Blattgröße 45 x 38 cm. - Malerisches Altstadthaus auf der Cremon-Insel im Hamburger Hafendistrikt. - Im breiten weißen Rand minimal fleckig und knittrig. <br /><br />
+                    <span style="display: none">Der vor allem für seine Farbradierungen bekannte österreichische Künstler Luigi Kasimir (1881-1962) hielt zahlreiche Hamburger Motive im Bild fest. Die vorliegende Ansicht ist selten.</span>
+                    <a href='/artikel/d-hamburg-2211-80.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2211-80
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-105>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-hamburg-1712-105.html'>
+                            <img class='thumb' src='/img/thumb/d-hamburg-1712-105.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-hamburg-1712-105.html'><strong>(D) Hamburg</strong></a><br /><br />
+                    Farbradierung von Tanna Kasimir-Hoernes (1887-1972) mit Nachlass-Signatur, 30 x 45 cm. <br /><br />
+                    <span style="display: none">Blick vom Boulevard "Schöne Aussicht" auf der Uhlenhorst über die Außenalster zur Altstadt.</span>
+                    <a href='/artikel/d-hamburg-1712-105.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-105
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-117>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-koblenz-stolzenfels-2412-117.html'>
+                            <img class='thumb' src='/img/thumb/d-koblenz-stolzenfels-2412-117.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-koblenz-stolzenfels-2412-117.html'><strong>(D) Koblenz / Stolzenfels</strong></a><br /><br />
+                    "Ruine von Stolzenfels." Signierte Bleistiftzeichnung von Anton Schiffer, datiert 24. November 1838, Blattgröße 17,5 x 22,5 cm. - Die im 13. Jh. als kurtrierische Zollburg errichtete Anlage in Koblenz am Rhein zu Beginn ihrer historistischen Wiederherstellung als preußische Sommerresidenz unter Friedrich Wilhelm IV. (1836-1842). <br /><br />
+                    <span style="display: none">Anton Schiffer (1811-1876),  österreichischer Landschaftsmaler.</span>
+                    <a href='/artikel/d-koblenz-stolzenfels-2412-117.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-117
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-106>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-konigssee-1712-106.html'>
+                            <img class='thumb' src='/img/thumb/d-konigssee-1712-106.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-konigssee-1712-106.html'><strong>(D) Königssee</strong></a><br /><br />
+                    "Koenig-See". Sepia-Aquatinta von Wilhelm Friedrich Schlotterbeck aus "Mahlerische Reise durch das Herzogthum Salzburg" bei T. Mollo, Wien 1808, 22 x 31 cm. - Unbedeutende kleine Mängel im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 645/15. - Der See im Berchtesgadener Land von St. Bartholomä talauswärts gesehen. Der aus der Schweiz stammende Zeichner und Stecher W. F. Schlotterbeck (1777-1819) unternahm im Aufttrag seines Verlegers Mollo eine Reise nach Salzburg und in die österreichischen Alpenländer, als deren Ergebnis 60 Ansichten im Druck erschienen.</span>
+                    <a href='/artikel/d-konigssee-1712-106.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-106
+                    <br />
+                    
+                        € 480,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-konigssee-2211-81.html'>
+                            <img class='thumb' src='/img/thumb/d-konigssee-2211-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-konigssee-2211-81.html'><strong>(D) Königssee</strong></a><br /><br />
+                    "Königsee. [1]841." Unsignierte Bleistiftzeichnung aus einem Skizzenbuch von Louis von Pereira-Arnstein, 20 x 26 cm. - Stimmungsvolle, fein gezeichnete Ansicht vom nördlichen Seeende mit Blick auf den Grünstein. - Minimal fleckig. <br /><br />
+                    <span style="display: none">Ludwig (Louis) Freiherr von Pereira-Arnstein (1803-1858) war ein künstlerisch begabter österreichischer Bankier. Er war Schüler von Julius Schnorr von Carolsfeld.</span>
+                    <a href='/artikel/d-konigssee-2211-81.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2211-81
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-laufen-salzach-2311-90.html'>
+                            <img class='thumb' src='/img/thumb/d-laufen-salzach-2311-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-laufen-salzach-2311-90.html'><strong>(D) Laufen (Salzach)</strong></a><br /><br />
+                    "Lauffen." Kupferstich auf ganzer Buchseite (mit vollständigem zugehörigem Text und Wappenholzschnitt) aus Franz Dückher von Hasslau zu Winckl, Saltzburgische Chronica, Salzburg 1666, 8 x 18 cm. - Die Stadt an der Salzach im Berchtesgadener Land. - Leicht gebräunt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 150/3; nicht bei Fauser. - Älteste gedruckte Ortsansicht, vermutlich nach einer eigenen Zeichnung Dückhers.</span>
+                    <a href='/artikel/d-laufen-salzach-2311-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-90
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-102>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-loreley-1911-102.html'>
+                            <img class='thumb' src='/img/thumb/d-loreley-1911-102.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-loreley-1911-102.html'><strong>(D) Loreley</strong></a><br /><br />
+                    "Vue du Rocher dit Lurley et de la Pêche de Saumon." Altkolorierte Aquatinta von Anton Radl nach Christian Georg Schütz II.  bei Friedrich Wilmans, Frankfurt 1809, 42 x 59 cm. - Mit gestochener Widmung an den Großherzog von Hessen. Im Unterrand beschnitten (Verlust des untersten Teil des Widmungswappens) sowie etwas knittrig und fleckig; insgesamt prachtvolle farbfrische Darstellung. <br /><br />
+                    <span style="display: none">Wurzbach 24, 203. - Aus einer Serie von 12 großformatigen Rheinansichten. Der berühmte Schieferfelsen am rechten Rheinufer bei Goarshausen, auf dem Fluss ein Lachsfischer mit Salmenwaage (Daubel). </span>
+                    <a href='/artikel/d-loreley-1911-102.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-102
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-lubeck-1911-103.html'>
+                            <img class='thumb' src='/img/thumb/d-lubeck-1911-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-lubeck-1911-103.html'><strong>(D) Lübeck</strong></a><br /><br />
+                    "Lubec. / Lubeca urbs imperialis libera, civitatum wandalicarum, et inclytae hanseaticae societatis caput." Kupferstich aus G. Braun & F. Hogenberg, Civitates Orbis Terrarum, Köln 1572-1617, 15 x 47,5 cm. - Rückseitig lateinischer Text. <br /><br />
+                    <span style="display: none">Fauser 8054. - Detailreiche Gesamtansicht mit der Trave im Vordergrund.</span>
+                    <a href='/artikel/d-lubeck-1911-103.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-103
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-53>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-monschau-nordrhein-westfalen-1701-53.html'>
+                            <img class='thumb' src='/img/thumb/d-monschau-nordrhein-westfalen-1701-53.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-monschau-nordrhein-westfalen-1701-53.html'><strong>(D) Monschau (Nordrhein-Westfalen)</strong></a><br /><br />
+                    "Monschau: Rotes Haus - Scheibler-Museum". Signierte Radierung von Adolf Gebhard (1887-1974), um 1925, 33 x 23 cm. - Etwas gebräunt und an den Blatträndern leicht stockfleckig. <br /><br />
+                    <span style="display: none">Das Rote Haus wurde 1752 als Wohn- und Geschäftshaus von dem Tuchmacher und Kaufmann Johann Heinrich Scheibler erbaut, der sich mit verbesserten Methoden zur Tuchherstellung ein Vermögen erwirtschaftete und 4000 Mitarbeiter beschäftigte. Monschau (bis 1918 Montjoie) in der Eifel gehörte im 18. Jh. zu den führenden Textilzentren Europas.</span>
+                    <a href='/artikel/d-monschau-nordrhein-westfalen-1701-53.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1701-53
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-118>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-munchen-1811-118.html'>
+                            <img class='thumb' src='/img/thumb/d-munchen-1811-118.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-munchen-1811-118.html'><strong>(D) München</strong></a><br /><br />
+                    5 Stahlstiche aus Meyer's Universum, Hildburghausen um 1840, je ca. 10 x 15 cm. <br /><br />
+                    <span style="display: none">Gesamtansicht - Bavaria - Erzgießerei - Glyptothek und Pinakothek - Industrie-Ausstellungsgebäude.</span>
+                    <a href='/artikel/d-munchen-1811-118.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1811-118
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-118>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-munchen-2412-118.html'>
+                            <img class='thumb' src='/img/thumb/d-munchen-2412-118.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-munchen-2412-118.html'><strong>(D) München</strong></a><br /><br />
+                    Farbige Aquatintaradierung von Luigi Kasimir (1881-1962), in der Platte signiert, zusätzlich eigenhändig signiert und nummeriert "24/50", wohl um 1920, 30 x 23 cm. - Mit kleiner Remarque unter dem Bild. <br /><br />
+                    <span style="display: none">Stimmungsvolle Seitenansicht des ehemaligen Standesamtes am Petersbergl. - Selten.</span>
+                    <a href='/artikel/d-munchen-2412-118.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-118
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-107>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-munchen-1712-107.html'>
+                            <img class='thumb' src='/img/thumb/d-munchen-1712-107.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-munchen-1712-107.html'><strong>(D) München</strong></a><br /><br />
+                    Residenzhof. Signierte Radierung von Luigi Kasimir (1881-1962), um 1920(?), 15 x 11 cm. <br /><br />
+                    <span style="display: none">Auf dünnem Papier mit Wasserzeichen "Urania Bank" gedruckt.</span>
+                    <a href='/artikel/d-munchen-1712-107.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-107
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-108>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-nurnberg-1712-108.html'>
+                            <img class='thumb' src='/img/thumb/d-nurnberg-1712-108.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-nurnberg-1712-108.html'><strong>(D) Nürnberg</strong></a><br /><br />
+                    Farbradierung von Luigi Kasimir (1881-1962) mit Nachlass-Signatur, in der Platte datiert 26. Mai 1937, Abzug um 1980, 54 x 41 cm. <br /><br />
+                    <span style="display: none">Der belebte Hauptmarkt mit dem Schönen Brunnen und der Frauenkirche.</span>
+                    <a href='/artikel/d-nurnberg-1712-108.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-108
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-119>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-nurnberg-trachten-2412-119.html'>
+                            <img class='thumb' src='/img/thumb/d-nurnberg-trachten-2412-119.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-nurnberg-trachten-2412-119.html'><strong>(D) Nürnberg / Trachten</strong></a><br /><br />
+                    Kupferstich von Julius Goltzius aus Abraham de Bruyn, Omnium pene Europae, Asiae, Aphricae atque Americae gentium habitus / Trachtenbuch: Der Furnembsten Nationen und Volcker kleydungen, Antwerpen 1581, 20 x 29 cm. Etwas fleckig, rückseitig unbedeutende Montagespuren. - Beiliegend ein weiterer Kupferstich mit acht Nürnberger Trachtendarstellungen aus dem 18. Jahrhundert. <br /><br />
+                    <span style="display: none">Lipperheide Aa 23.</span>
+                    <a href='/artikel/d-nurnberg-trachten-2412-119.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-119
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-rhein-1712-109.html'>
+                            <img class='thumb' src='/img/thumb/d-rhein-1712-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-rhein-1712-109.html'><strong>(D) Rhein</strong></a><br /><br />
+                    Bilderbogen mit 12 altkolorierten Federlithographien bei G. N. Renner, Nürnberg um 1840, Blattgr. 34 x 42 cm. - Einzelne Knitter- und Schmutzspuren, kleine Randrisse. <br /><br />
+                    <span style="display: none">Teil- und Gesamtansichten von zwölf am Rhein gelegenen Örtlichkeiten (Andernach, Bacharach, Bad Ems, Godesberg, Lahneck, Oberwesel, Rüdesheim, Seckingen u. a.)</span>
+                    <a href='/artikel/d-rhein-1712-109.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-109
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-weimar-2311-92.html'>
+                            <img class='thumb' src='/img/thumb/d-weimar-2311-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-weimar-2311-92.html'><strong>(D) Weimar</strong></a><br /><br />
+                    "Goethehaus Weimar Frauenplan". Signierte Farbradierung von Herta Czoernig-Gobanz (1886-1970), Bildformat 15 x 20 cm, Plattengröße 19 x 21 cm. <br /><br />
+                    <span style="display: none">Das Wohn- und Sterbehaus des Dichters (heute Museum und Teil des UNESCO-Welterbes), davor der Goethe-Brunnen.</span>
+                    <a href='/artikel/d-weimar-2311-92.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-92
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-105>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-weimar-1911-105.html'>
+                            <img class='thumb' src='/img/thumb/d-weimar-1911-105.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-weimar-1911-105.html'><strong>(D) Weimar</strong></a><br /><br />
+                    "Weimar, Goethehaus". Kolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, 17 x 18 cm. <br /><br />
+                    <span style="display: none">Die Gartenseite des zu Beginn des 18. Jhs. erbauten Hauses am Frauenplan, in dem Goethe mehrere Jahrzehnte bis zu seinem Tod wohnte.</span>
+                    <a href='/artikel/d-weimar-1911-105.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-105
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/dk-kronborg-2211-82.html'>
+                            <img class='thumb' src='/img/thumb/dk-kronborg-2211-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/dk-kronborg-2211-82.html'><strong>(DK) Kronborg</strong></a><br /><br />
+                    "Kronborg Slot". Farbradierung von Luigi Kasimir (1881-1962) mit Nachlass-Signatur, in der Platte betitelt und datiert 1919, hier Abzug um 1975, Plattengröße 46 x 59 cm. - Die zur Stadt Helsingor gehörende Festung auf der dänischen Insel Seeland. <br /><br />
+                    <span style="display: none">Eindrucksvolles großes Blatt. Kronborg bewachte ursprünglich die Einfahrt in den Öresund. Das Schloss war vom späten 16. bis zum späten 18. Jh. auch königlicher Wohnsitz; William Shakespeare siedelte hier die Handlung seines Dramas "Hamlet" an.</span>
+                    <a href='/artikel/dk-kronborg-2211-82.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2211-82
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-93>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/es-aranjuez-2311-93.html'>
+                            <img class='thumb' src='/img/thumb/es-aranjuez-2311-93.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/es-aranjuez-2311-93.html'><strong>(ES) Aranjuez</strong></a><br /><br />
+                    "View of the palace plaisans of Reyn Hongres / Vue d'une Maison de plaisance de la Reine d'Hongrie a six lieues de Vienne"[!]. Guckkastenblatt, altkolorierter Kupferstich bei Basset, Paris um 1770, Plattengröße 26 x 40 cm. - Kleine Mängel im Randbereich, Rückseite fleckig. <br /><br />
+                    <span style="display: none">Das kuriose Blatt zeigt den Palacio Real von Aranjuez bei Madrid, die fehlerhafte Beschriftung bezieht sich aber auf ein Lustschloss Kaiserin Maria Theresias (Laxenburg?) in der Nähe von Wien.</span>
+                    <a href='/artikel/es-aranjuez-2311-93.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-93
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-94>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/f-avignon-2311-94.html'>
+                            <img class='thumb' src='/img/thumb/f-avignon-2311-94.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/f-avignon-2311-94.html'><strong>(F) Avignon</strong></a><br /><br />
+                    "Avignon". Kupferstich aus Georg Braun & Franz Hogenberg, Civitates Orbis Terrarum (deutsche Ausgabe) Bd. 2, Köln um 1575, 31 x 47 cm. - Planansicht aus der Vogelschau mit rückseitiger Stadtbeschreibung. - Im weißen Rand geringfügig fleckig. <br /><br />
+                    <span style="display: none">Fauser 936.</span>
+                    <a href='/artikel/f-avignon-2311-94.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-94
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-106>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/f-fontainebleau-1911-106.html'>
+                            <img class='thumb' src='/img/thumb/f-fontainebleau-1911-106.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/f-fontainebleau-1911-106.html'><strong>(F) Fontainebleau</strong></a><br /><br />
+                    "Eigentliche Abbildung des Königlichen Lust Schloß De Fontaine Belleau." Doppelblattgroßer Kupferstich aus Merian, Topographia Galliae Tl. I, Frankfurt 1655, 21 x 31 cm. - Vogelschaublick auf die prachtvolle Renaissanceanlage südlich von Paris mit ausführlicher Legende und zwei Wappen. <br /><br />
+                    <span style="display: none">Fauser 3964 var.</span>
+                    <a href='/artikel/f-fontainebleau-1911-106.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-106
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-108>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/f-paris-1911-108.html'>
+                            <img class='thumb' src='/img/thumb/f-paris-1911-108.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/f-paris-1911-108.html'><strong>(F) Paris</strong></a><br /><br />
+                    "Ansicht von Paris." Kupferstich von János (Johann) Blaschke aus Joseph Baptist Schütz, Allgemeine Erdkunde, Wien 1808, 8 x 14 cm. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 4, 102.</span>
+                    <a href='/artikel/f-paris-1911-108.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-108
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-95>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/f-paris-2311-95.html'>
+                            <img class='thumb' src='/img/thumb/f-paris-2311-95.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/f-paris-2311-95.html'><strong>(F) Paris</strong></a><br /><br />
+                    "Paris nôtre dame". Signierte Radierung auf China von Herta Czoernig-Gobanz (1886-1970), 21 x 20 cm. - Blick vom Seineufer mit den Bouquinistes auf die Kathedrale.  <br /><br />
+                    <span style="display: none">Wohl um 1930.</span>
+                    <a href='/artikel/f-paris-2311-95.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-95
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/f-rouen-1911-109.html'>
+                            <img class='thumb' src='/img/thumb/f-rouen-1911-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/f-rouen-1911-109.html'><strong>(F) Rouen</strong></a><br /><br />
+                    "Rouen. Vue prise du cours." Altkolorierte Aquatintaradierung von Thales Fielding nach Johann Heinrich Luttringshausen bei Dumont, Paris um 1820, 21 x 29 cm. - Leichte Flecken und Wischspuren im weißen Rand, sonst tadellos. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 23, 483 f. - Gesamtansicht vom Ufer der Seine aus.</span>
+                    <a href='/artikel/f-rouen-1911-109.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-109
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-120>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/f-versailles-2412-120.html'>
+                            <img class='thumb' src='/img/thumb/f-versailles-2412-120.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/f-versailles-2412-120.html'><strong>(F) Versailles</strong></a><br /><br />
+                    "Vue génerale de Versailles prise du bassin d'Apollon." Altkolorierte Tonlithographie von Th. Muller nach Nicolas-Marie-Joseph Chapuy aus "Environs de Paris" bei Lemière, Paris um 1850, 19 x 27 cm. <br /><br />
+                    <span style="display: none">Nicolas-Marie-Joseph Chapuy (1790-1858) war ein französischer Offizier, Architekt, Architekturmaler, Zeichner und Lithograph. Die schöne Vogelschauansicht ist auch in einer großformatigen Ausführung bekannt.</span>
+                    <a href='/artikel/f-versailles-2412-120.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-120
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-121>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/gb-oxford-2412-121.html'>
+                            <img class='thumb' src='/img/thumb/gb-oxford-2412-121.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/gb-oxford-2412-121.html'><strong>(GB) Oxford</strong></a><br /><br />
+                    "A View of part of St. Marys Church, of Oxford ... Gesicht eines theils der St. Marien Kirche zu Oxford." Altkolorierter Guckkasten-Kupferstich von G. G. Winckler bei Georg Balthasar Probst, Augsburg um 1770, 27 x 39 cm. Viersprachig beschriftet. - Bis zum Plattenrand beschnitten und etwas angeschmutzt, einzelne kleine Papierschäden alt hinterlegt. <br /><br />
+                    <span style="display: none">Blick entlang der hauptsächlich von Studenten belebten High Street von der gotischen Universitätskirche bis zum Carfax Tower.</span>
+                    <a href='/artikel/gb-oxford-2412-121.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-121
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-114>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/gbz-gibraltar-2012-114.html'>
+                            <img class='thumb' src='/img/thumb/gbz-gibraltar-2012-114.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/gbz-gibraltar-2012-114.html'><strong>(GBZ) Gibraltar</strong></a><br /><br />
+                    "Gibraltar sampt dem Hafen, und negst angelegener Gegend." Kupferstich von Johann Stridbeck jun. aus "Curioses Staats und Kriegs Theatrum Dermahliger Begebenheiten in Hispanien ...", Augsburg um 1700, hier im Wiederabdruck mit nebenstehenden Text aus Gabriel Bodenehr, Anderer Theil des Tractats, so betitelt Force d'Europe, Augsburg um 1730, 15 x 16,5 cm. <br /><br />
+                    <span style="display: none">Fauser 4628. - Der begleitende Text bezieht sich auf damals aktuelle Ereignisse (erfolglose Belagerung durch die Truppen Philipps V. im Englisch-Spanischen Krieg von 1727-1729) und enthält zwei kuriose Deutungsversuche des Namens Gibraltar.</span>
+                    <a href='/artikel/gbz-gibraltar-2012-114.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-114
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-111>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/gbz-gibraltar-1911-111.html'>
+                            <img class='thumb' src='/img/thumb/gbz-gibraltar-1911-111.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/gbz-gibraltar-1911-111.html'><strong>(GBZ) Gibraltar</strong></a><br /><br />
+                    "The North View of Gibraltar." Kupferstich von Warren aus Percival Barlow, The General History of Europe, London um 1780, 18,5 x 13 cm. <br /><br />
+                    <span style="display: none">Einzelne meist papierbedingte und kaum störende kleine Flecken.</span>
+                    <a href='/artikel/gbz-gibraltar-1911-111.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-111
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-112>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/gr-korfu-1911-112.html'>
+                            <img class='thumb' src='/img/thumb/gr-korfu-1911-112.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/gr-korfu-1911-112.html'><strong>(GR) Korfu</strong></a><br /><br />
+                    "Die Villa der Kaiserin von Oesterreich auf Korfu." Holzstich von H. Nisle nach einer Fotographie von Alois Beer aus "Ueber Land und Meer", 1892, 23 x 32 cm. - Das Achilleion an der Ostküste Korfus. <br /><br />
+                    <span style="display: none">Die ursprünglich venezianische Villa wurde von Kaiserin Elisabeth als Zufluchtsort vom Wiener Hof genutzt. 1907 kaufte Kaiser Wilhelm II. den Besitz als Urlaubsdomizil.</span>
+                    <a href='/artikel/gr-korfu-1911-112.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-112
+                    <br />
+                    
+                        € 45,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-113>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/h-budapest-1911-113.html'>
+                            <img class='thumb' src='/img/thumb/h-budapest-1911-113.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/h-budapest-1911-113.html'><strong>(H) Budapest</strong></a><br /><br />
+                    "Pesth und Ofen". Anonyme Kreidelithographie 1842, 15 x 20 cm. - Blick vom rechten Donauufer auf Ofen (Buda) und Pest. - Taf. XVI eines von uns nicht identifizierten Werkes. <br /><br />
+                    <span style="display: none">Nicht in Nebehay-Wagner. Als Vorlage für das seltene Blatt diente offensichtlich eine ähnliche Lithographie von Adolph von Kunike nach Jakob Alt aus "Zwey hundert vier und sechzig Donau-Ansichten", Wien 1826 (Nebehay-Wagner 336/146).</span>
+                    <a href='/artikel/h-budapest-1911-113.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-113
+                    <br />
+                    
+                        € 185,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-116>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/h-odenburg-sopron-2012-116.html'>
+                            <img class='thumb' src='/img/thumb/h-odenburg-sopron-2012-116.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/h-odenburg-sopron-2012-116.html'><strong>(H) Ödenburg / Sopron</strong></a><br /><br />
+                    "Sz. Mihály temploma Sopronyban. Die St. Michaelskirche in Oedenburg. (Ungarn)". Stahlstich von G. Heß nach L. Rohbock aus Ludwig Rohbock - Johann Hunfalvy, Ungarn und Siebenbürgen in malerischen Original-Ansichten, Darmstadt 1857-1864, 14,5 x 11,5 cm. - Spezialabzug auf Chinapapier (um 1870) ohne Verlagsadresse. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 571/127 und 584//II/48. - Blick von einem Weinberg auf den die Stadt überragenden gotischen Kirchenbau.</span>
+                    <a href='/artikel/h-odenburg-sopron-2012-116.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-116
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1806-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/h-plattensee-balaton-1806-71.html'>
+                            <img class='thumb' src='/img/thumb/h-plattensee-balaton-1806-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/h-plattensee-balaton-1806-71.html'><strong>(H) Plattensee / Balaton</strong></a><br /><br />
+                    "Von(!) Plattensee." Radierung auf aufgewalztem China von Lorenz Schön, 1850, 16 x 27 cm. - Aus einer 1847-1851 gemeinsam mit Conrad Grefe veröffentlichten Serie von Radierungen. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 663/17. - Künstlerisch anspruchsvolle Darstellung. Der österreichische Maler, Radierer und Lithograph Lorenz Schön (1817-1889) war Inhaber einer Zeichenschule in Wien. </span>
+                    <a href='/artikel/h-plattensee-balaton-1806-71.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1806-71
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-114>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/h-visegrad-1911-114.html'>
+                            <img class='thumb' src='/img/thumb/h-visegrad-1911-114.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/h-visegrad-1911-114.html'><strong>(H) Visegrád</strong></a><br /><br />
+                    "Vicegrad." Kupferstich von J. Peeters aus Jacobus Peeters, Hongariae Caes. Maj. Leopoldo, has Turcis ereptas, et eripiendas Hongariae civitates, aliasque Turcias d(elineavit), Antwerpen um 1685, 10 x 26,5 cm. - Leichte Altersbräunung. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 481/6 var.; nicht in Fauser. - Die historisch bedeutende Stadt am nordungarischen Donauknie; im Vordergrund türkische Soldaten.</span>
+                    <a href='/artikel/h-visegrad-1911-114.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-114
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-115>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hr-brioni-brijuni-1911-115.html'>
+                            <img class='thumb' src='/img/thumb/hr-brioni-brijuni-1911-115.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hr-brioni-brijuni-1911-115.html'><strong>(HR) Brioni / Brijuni</strong></a><br /><br />
+                    Brauntonige Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, 21 x 16 cm. <br /><br />
+                    <span style="display: none">Reste der frühchristlichen Basilika Santa Madonna in seitenverkehrter Darstellung. Die Inselgruppe vor der Küste Istriens mit ihrer bewegten Geschichte diente ab 1947 dem jugoslawischen Staatspräsidenten Tito als bevorzugte Residenz und wurde 1980 kroatischer Nationalpark.</span>
+                    <a href='/artikel/hr-brioni-brijuni-1911-115.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-115
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-116>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hr-cres-stadt-1911-116.html'>
+                            <img class='thumb' src='/img/thumb/hr-cres-stadt-1911-116.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hr-cres-stadt-1911-116.html'><strong>(HR) Cres (Stadt)</strong></a><br /><br />
+                    "Cherso." Tonlithographie ohne Künstlerangabe, Druck der k. k. Hof- u. Staatsdruckerei, um 1860, 12 x 9 cm. <br /><br />
+                    <span style="display: none">Aus einer seltenen, bei Nebehay-Wagner nicht verzeichneten Serie von Ansichten adriatischer Hafenorte vom Meer aus. Die Insel Cres stand jahrhundertelang unter venezianischer Herrschaft; später gehörte sie zur österreichischen Reichshälfte der Donaumonarchie.</span>
+                    <a href='/artikel/hr-cres-stadt-1911-116.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-116
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-117>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hr-korcula-stadt-1911-117.html'>
+                            <img class='thumb' src='/img/thumb/hr-korcula-stadt-1911-117.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hr-korcula-stadt-1911-117.html'><strong>(HR) Korcula (Stadt)</strong></a><br /><br />
+                    "Curzola." Tonlithographie ohne Künstlerangabe, Druck der k. k. Hof- u. Staatsdruckerei, um 1860, 9 x 12 cm. <br /><br />
+                    <span style="display: none">Aus einer seltenen, bei Nebehay-Wagner nicht verzeichneten Serie von Ansichten adriatischer Hafenorte vom Meer aus. Die Insel Korcula stand jahrhundertelang unter venezianischer Herrschaft; später gehörte sie zur österreichischen Reichshälfte der Donaumonarchie.</span>
+                    <a href='/artikel/hr-korcula-stadt-1911-117.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-117
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-118>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hr-krk-stadt-1911-118.html'>
+                            <img class='thumb' src='/img/thumb/hr-krk-stadt-1911-118.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hr-krk-stadt-1911-118.html'><strong>(HR) Krk (Stadt)</strong></a><br /><br />
+                    "Veglia." Tonlithographie ohne Künstlerangabe, Druck der k. k. Hof- u. Staatsdruckerei, um 1860, 12 x 9 cm. - Nicht störende Flecken im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Aus einer seltenen, bei Nebehay-Wagner nicht verzeichneten Serie von Ansichten adriatischer Hafenorte vom Meer aus. Die Insel Krk stand jahrhundertelang unter venezianischer Herrschaft; später gehörte sie zur österreichischen Reichshälfte der Donaumonarchie.</span>
+                    <a href='/artikel/hr-krk-stadt-1911-118.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-118
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hr-trogir-2311-97.html'>
+                            <img class='thumb' src='/img/thumb/hr-trogir-2311-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hr-trogir-2311-97.html'><strong>(HR) Trogir</strong></a><br /><br />
+                    "Traù." Tonlithographie ohne Künstlerangabe, Druck der k. k. Hof- u. Staatsdruckerei, um 1860, 12 x 9 cm. - Im breiten weißen Rand etwas stockfleckig. <br /><br />
+                    <span style="display: none">Aus einer seltenen, bei Nebehay-Wagner nicht verzeichneten Serie von Ansichten adriatischer Hafenorte vom Meer aus. Blick auf den historischen Kern der 1797-1918 zu Österreich gehörenden dalmatinischen Stadt.</span>
+                    <a href='/artikel/hr-trogir-2311-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-97
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-98>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hr-vukovar-2311-98.html'>
+                            <img class='thumb' src='/img/thumb/hr-vukovar-2311-98.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hr-vukovar-2311-98.html'><strong>(HR) Vukovar</strong></a><br /><br />
+                    "Syrmien. Markt Vukovar." Lithographie von und bei Adolph Kunike, Donau-Ansichten, Wien 1826, 26 x 36 cm. - Gesamtansicht vom gegenüberliegenden Donauufer, im Vordergrund eine "Ulmer Schachtel". <br /><br />
+                    <span style="display: none">Nebehay-Wagner 336/160. - Die historische Stadt an der Grenze zu Serbien wurde im Kroatienkrieg 1991-95 weitgehend zerstört.</span>
+                    <a href='/artikel/hr-vukovar-2311-98.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-98
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-120>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-ancona-1811-120.html'>
+                            <img class='thumb' src='/img/thumb/i-ancona-1811-120.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-ancona-1811-120.html'><strong>(I) Ancona</strong></a><br /><br />
+                    "Ancona civitas Piceni celeberrima, ad mare Adriaticum posita, nobilißimo portu est ornata, quo non extat in tota Italia commodior neq[ue] capacior ..." Altkolorierter Kupferstich aus G. Braun und F. Hogenberg, Civitates Orbis Terrarum, Köln 1572-1617, 33,5 x 48 cm. - Mittelfalz etwas leimschattig, stellenweise geringfügig fleckig, einzelne unbedeutende Randmängel, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Vogelschauansicht der alten Hafenstadt an der italienischen Adriaküste, mit reicher Schiffsstaffage und ausführlicher Legende. Rückseitig lateinischer Text.</span>
+                    <a href='/artikel/i-ancona-1811-120.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1811-120
+                    <br />
+                    
+                        € 460,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-123>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-atzwang-campodazzo-gem-ritten-2412-123.html'>
+                            <img class='thumb' src='/img/thumb/i-atzwang-campodazzo-gem-ritten-2412-123.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-atzwang-campodazzo-gem-ritten-2412-123.html'><strong>(I) Atzwang / Campodazzo, Gem. Ritten</strong></a><br /><br />
+                    "Vue d'Atzwangen près de Kollmann en Tirol." Kolorierte Aquatintaradierung von F. Frich nach Pietro Marchioretto aus "Große Ansichten von Tirol" bei V. Zanna & Comp., Augsburg um 1820, 29,5 x 40,5 cm. - Etwas unregelmäßig beschnitten, leichte Altersspuren, eine Ecke etwas knittrig, einzelne restaurierte Randrisse; insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Nebehay/Wagner 391/2; vgl. auch Thieme-Becker 24, 70. - Seltenes Landschaftsblatt aus dem Südtiroler Eisacktal. Die gezeigte Brücke über den Fluss besteht in ähnlicher Form heute noch.</span>
+                    <a href='/artikel/i-atzwang-campodazzo-gem-ritten-2412-123.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-123
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-129>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-julische-alpen-2112-129.html'>
+                            <img class='thumb' src='/img/thumb/i-julische-alpen-2112-129.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-julische-alpen-2112-129.html'><strong>(I) Julische Alpen</strong></a><br /><br />
+                    "Der Montatsch vom Luschari Berge. (Kärnthen)." Stahlstich von G. Heisinger nach Ludwig Rohbock aus Anton von Ruthner, Das Kaiserthum Oesterreich in malerischen Originalansichten, 1871, 12 x 17 cm. - Der Montasch oder Montatsch (auch Montagie, Jôf di Montasio, Poliki pik, Bramkofel) ist mit 2754 m der höchste Gipfel der nach ihm benannten Gebirgsgruppe, an der im 1. Weltkrieg die österreichisch-italienische Front verlief;  der Monte Lussari (Luschariberg) ist vor allem für seine Wallfahrtskirche im Dreiländereck Österreich - Slowenien - Italien bekannt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 584/I/93. - Breitrandiger Wiederabdruck aus einem etwas späteren Mappenwerk ohne Text.</span>
+                    <a href='/artikel/i-julische-alpen-2112-129.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-129
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-milano-mailand-2311-100.html'>
+                            <img class='thumb' src='/img/thumb/i-milano-mailand-2311-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-milano-mailand-2311-100.html'><strong>(I) Milano / Mailand</strong></a><br /><br />
+                    "Interno del duomo di Milano ...". Aquatinta von Ladislaus Rupp aus L. Rupp, Chiese principali d' Europa, 1824-1831, 33 x 44,5 cm. - Das Innere des Mailänder Doms, dessen Bau 1386 begonnen und erst im 19. Jh. fertiggestellt wurde. <br /><br />
+                    <span style="display: none">Ladislaus Rupp (1793-1854), aus Wien stammender Architekturzeichner und -stecher, war als Schüler von Giacomo Raffaelli in Mailand tätig.</span>
+                    <a href='/artikel/i-milano-mailand-2311-100.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-100
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-101>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-pisa-2311-101.html'>
+                            <img class='thumb' src='/img/thumb/i-pisa-2311-101.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-pisa-2311-101.html'><strong>(I) Pisa</strong></a><br /><br />
+                    "Veduta interna del duomo di Pisa". Altkolorierte Aquatinta von Ladislaus Rupp nach Carlo Gilio aus L. Rupp, Chiese principali d' Europa, 1824-1831, 33 x 44,5 cm. - Prachtvolle, hervorragend kolorierte Innenansicht des Doms mit der vergoldeten Kassettendecke aus dem 17. Jh. und der Kanzel von Giovanni Pisano. - Im breiten weißen Rand stellenweise minimal fleckig. <br /><br />
+                    <span style="display: none">Carlo Gilio Rimoldi (1787-1841) war Architekturmaler und Graphiker; Ladislaus Rupp (1793-1854), ein aus Wien stammender Architekturzeichner und -stecher, war als Schüler von Giacomo Raffaelli in Mailand tätig.</span>
+                    <a href='/artikel/i-pisa-2311-101.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-101
+                    <br />
+                    
+                        € 330,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-130>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-pozzuoli-2112-130.html'>
+                            <img class='thumb' src='/img/thumb/i-pozzuoli-2112-130.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-pozzuoli-2112-130.html'><strong>(I) Pozzuoli</strong></a><br /><br />
+                    "Vue du Temple de Jupiter Serapis à Pouzol. Imaginée et desinée d'apres les restes de ce monument." Anonyme Aquatintaradierung um 1820/1825, 21 x 28 cm. <br /><br />
+                    <span style="display: none">Künstlerische Rekonstruktion des sogenannten Serapeions nach dem 1750 gemachten Fund einer Skulptur der ägyptischen Gottheit Serapis. Tatsächlich stammen die am Fundort erhaltenen Baureste vom Lebensmittelmarkt (macellum) der römischen Stadt Puteoli, die in republikanischer Zeit Roms wichtigster Hafen war.</span>
+                    <a href='/artikel/i-pozzuoli-2112-130.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-130
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-119>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-rom-2012-119.html'>
+                            <img class='thumb' src='/img/thumb/i-rom-2012-119.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-rom-2012-119.html'><strong>(I) Rom</strong></a><br /><br />
+                    "Capitolii Romani vera imago ut nunc est." Kupferstich mit Adresse "in Roma per Gio: Jacomo Roßi alla Pace", 1650, 37 x 54 cm. - Unten vollrandig, sonst mit schmalem Rändchen um die Plattenkante; stellenweise geringfügige Druckschwächen, kleiner Fleck am unteren Bildrand; leichte Quetschfalten, geglättete Falt- und Knitterspuren (teilweise etwas gebräunt, ein winziges Bugloch); der linke Rand hinterlegt mit kleinen Läsuren. <br /><br />
+                    <span style="display: none">Der kapitolinische Hügel mit Palazzo Nuovo, Senatoren- und Konservatorenpalast und dem Reiterstandbild Marc Aurels. Trotz einiger Mängel attraktives großes Blatt des römischen Kupferstechers und Druckers Giovanni Giacomo de Rossi (1627-1691), der die 1633 von seinem Vater gegründete Presse erfolgreich weiterführte; sie wurde zur Grundlage der heutigen Calcografia Nazionale.</span>
+                    <a href='/artikel/i-rom-2012-119.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-119
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-131>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-rom-2112-131.html'>
+                            <img class='thumb' src='/img/thumb/i-rom-2112-131.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-rom-2112-131.html'><strong>(I) Rom</strong></a><br /><br />
+                    "Der Titusbogen in Rom". Radierung auf China von William Unger nach Rudolf von Alt bei Gesellschaft für vervielfältigende Kunst, Wien 1902, 20 x 27 cm. <br /><br />
+                    <span style="display: none">Die Bildvorlage entstand im Dezember 1872 auf einer Italienreise Rudolfs von Alt.</span>
+                    <a href='/artikel/i-rom-2112-131.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-131
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-120>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-rom-2012-120.html'>
+                            <img class='thumb' src='/img/thumb/i-rom-2012-120.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-rom-2012-120.html'><strong>(I) Rom</strong></a><br /><br />
+                    "Veduta della Piazza del Popolo nel mezzo della quale si vede un grande Obelisco Egizio, e lateralmente due belle Chiese uniformi che l'adornano." Kupferstich von Pietro Ruga nach Francesco Morel bei Agapito Franzetti, Rom um 1800, Bildformat 31 x 44,5 cm. Blattgröße 46 x 59 cm. <br /><br />
+                    <span style="display: none">Schöner Blick über den berühmten Platz mit dem Obelisken und den Kirchen Santa Maria in Monte Santo und Santa Maria dei Miracoli zum Corso, wo der Verleger seine Offizin hatte. Der Platz erhielt zwischen 1811 und 1822 durch den Architekt Giuseppe Valadier seine heutige Gestaltung im neoklassizistischen Stil.</span>
+                    <a href='/artikel/i-rom-2012-120.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-120
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-133>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-venedig-2112-133.html'>
+                            <img class='thumb' src='/img/thumb/i-venedig-2112-133.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-venedig-2112-133.html'><strong>(I) Venedig</strong></a><br /><br />
+                    "Canal Grando zu Venedig wa die Gondoli al Fresco fahren". Radierung von und bei Melchior Küsel nach Johann Wilhelm Baur aus "Iconographia", Augsburg um 1670, 13 x 20 cm. - Alt montiert mit schmalem Rändchen um die Bildkante. <br /><br />
+                    <span style="display: none">Seriennummer 12; auch mit abweichender Beschriftung bekannt. Der aus Straßburg stammende Maler und Radierer J. W. Baur (1607-1640) arbeitete 1631-1637 in Italien und verstarb als Hofmaler von Kaiser Ferdinand III. in jungen Jahren in Wien. Viele seiner Arbeiten wurde von Melchior Küsel (1626-1684) erworben, in Kupfer gestochen und unter dem Sammeltitel "Iconographia" verlegt; weitere Ausgaben veranstaltete später sein Schwiegersohn Johann Ulrich Kraus. Die figurale Staffage ist deutlich von Callot beeinflusst.</span>
+                    <a href='/artikel/i-venedig-2112-133.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-133
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-124>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-venedig-1911-124.html'>
+                            <img class='thumb' src='/img/thumb/i-venedig-1911-124.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-venedig-1911-124.html'><strong>(I) Venedig</strong></a><br /><br />
+                    "Solenitá nel giorno dell'Assensione che si fá anualmente dal Se[renissi]mo Prencipe di Venetia nel Bucintoro." Kupferstich mit Radierung bei Giovanni Antonelli, Venedig um 1750, 17 x 27 cm. - Der 1729 gebaute Bucintoro, die letzte und prächtigste von vermutlich vier seit dem Mittelalter gebauten Staatsbarken, bei der jährlichen symbolischen Vermählung Venedigs mit dem Meer zum Fest Christi Himmelfahrt. - Mehrfach gefaltet, kleine Quetschfalten und leichte Altersspuren. <br /><br />
+                    <span style="display: none">Mit ausführlicher Legende im Himmel. Wohl aus einem Stadtführer oder einem ähnlichen Werk und äußerst selten.</span>
+                    <a href='/artikel/i-venedig-1911-124.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-124
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-121>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/i-volterra-2012-121.html'>
+                            <img class='thumb' src='/img/thumb/i-volterra-2012-121.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/i-volterra-2012-121.html'><strong>(I) Volterra</strong></a><br /><br />
+                    "Veduta del' Palazzo dè Priorj della Città di Volterra". Aquatinta von Giuseppe Pera nach Antonio Terreni aus Francesco Fontani, Il Viaggio Pittorico della Toscana, vol. 2, Firenze 1802, 23 x 34 cm. - Mit schmalem Rand um die Plattenkante. <br /><br />
+                    <span style="display: none">Der älteste erhaltene Kommunalpalast der Toskana im historischen Zentraum der Stadt, erbaut in der ersten Hälfte des 13. Jahrhunderts.</span>
+                    <a href='/artikel/i-volterra-2012-121.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-121
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pl-breslau-wroclaw-2205-5.html'>
+                            <img class='thumb' src='/img/thumb/pl-breslau-wroclaw-2205-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pl-breslau-wroclaw-2205-5.html'><strong>(PL) Breslau / Wroclaw</strong></a><br /><br />
+                    Vier altkolorierte Guckkasten-Kupferstiche nach Friedrich Bernhard Werner bei Georg Balthasar Probst, Augsburg um 1760, Bildformat je ca. 26,5 x 41,5 cm. Mit viersprachiger Beschriftung und zusätzlicher spiegelverkehrter französischer Beschriftung am oberen Bildrand. Nr. 244, 245, 247 und 249 einer Serie, links unten Zusatz  "Med. Fol. No. 60." bzw. "Med. Fol. No. 61."  - Teilweise etwas fingerfleckig oder mit kleinen Randmängeln, einzelne alt hinterlegte Risse im Rand oder Schriftfeld (zumeist ohne Bildberührung); insgesamt gut erhalten, farbfrisch und dekorativ. *** Four vues d'optique of the Polish town of Wroclaw (former Breslau) in strong perspective view with vivid street life. <br /><br />
+                    <span style="display: none">Originell belebte perspektivische Blätter in kräftigem Kolorit nach Zeichnungen des abenteuerlustigen Künstlers, Schreibers und Technikers F. B. Werner (1690-1776), der in der heute zu Polen gehörenden Stadt von 1746 bis zu seinem Tod lebte. Umfasst: "Prospect einer Seiten von dem Ring oder Plaz, gegen der Evangel: Luth: Haupt Kirch zu S. Elisabeth, zu Breslau." - "Prospect der zweyten Seite des Rings oder Marckt=Platz zu Breslau." - "Der Saltz Ring, oder Plaz in Breslau, gegen Mittag anzusehen." - "Prospect des Rath=Hauß von vornen zu Breßlau."</span>
+                    <a href='/artikel/pl-breslau-wroclaw-2205-5.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-5
+                    <br />
+                    
+                        € 1650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pl-klodzko-glatz-1606-33.html'>
+                            <img class='thumb' src='/img/thumb/pl-klodzko-glatz-1606-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pl-klodzko-glatz-1606-33.html'><strong>(PL) Klodzko / Glatz</strong></a><br /><br />
+                    "Glatz." Stahlstich von W. C. Wrankmore nach F. Koska bei O. B. Schuhmann, Breslau um 1850, 8 x 14 cm. <br /><br />
+                    <span style="display: none">Seltenes Blatt; zum Zeichner Ferdinand Koska siehe Thieme-Becker 21, 332 f. - Gesamtansicht vom Ufer der Neisse aus. Die heute zu Polen gehörende Hauptstadt der ehemaligen Grafschaft Glatz stand zeitweise unter österreichischer Herrschaft und fiel 1763 im Hubertusburger Frieden an Preußen.</span>
+                    <a href='/artikel/pl-klodzko-glatz-1606-33.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1606-33
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-126>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pl-krakau-krakow-1911-126.html'>
+                            <img class='thumb' src='/img/thumb/pl-krakau-krakow-1911-126.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pl-krakau-krakow-1911-126.html'><strong>(PL) Krakau / Kraków</strong></a><br /><br />
+                    "Krakau." Kupferstich (von Jakob Hyrtl), Wien um 1840, 21 x 42,5 cm. - Gesamtansicht vom Ufer der Weichsel aus. - Im breiten weißen Rand gering stockfleckig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 979/10; nicht bei Wurzbach 9, 462 f. - Seltener Separatabdruck (daher ohne Querfalten) aus K. A. Schimmer (Hrsg.), Geschichts- und Erinnerungs-Kalender ... Dieser von etwa 1834 bis 1844 erschienene Kalender enthielt jeweils eine europäische Städteansicht als gefaltetes Frontispiz. Der Wiener Kupferstecher Jakob Hyrtl (1799-1868) war der Bruder des bekannten Anatomen Joseph Hyrtl.</span>
+                    <a href='/artikel/pl-krakau-krakow-1911-126.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-126
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-124>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pl-krakau-krakow-2412-124.html'>
+                            <img class='thumb' src='/img/thumb/pl-krakau-krakow-2412-124.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pl-krakau-krakow-2412-124.html'><strong>(PL) Krakau / Kraków</strong></a><br /><br />
+                    "Krakau St. Barbara Okt. 1915." Signierte Farblithographie von Luigi Kasimir (1881-1962), 22 x 17 cm. - Auf Japanpapier gedruckt und alt montiert, das Untersatzpapier mit Randmängeln und gebräunt. <br /><br />
+                    <span style="display: none">Stimmungsvolle Straßenszene aus der Krakauer Altstadt. Auch unsigniert erschienen in Kasimirs während des 1. Weltkriegs entstandenen und in Wien veröffentlichten Künstlertagebuch "Galizien 1915".</span>
+                    <a href='/artikel/pl-krakau-krakow-2412-124.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-124
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pl-przemysl-galizien-1606-31.html'>
+                            <img class='thumb' src='/img/thumb/pl-przemysl-galizien-1606-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pl-przemysl-galizien-1606-31.html'><strong>(PL) Przemysl (Galizien)</strong></a><br /><br />
+                    "Przemysl nad rzeka Sanem (Galicya)". Tonlithographie (von A. Misierowicz) nach Napoleon Orda bei M. Fajans aus "Album widoków przedstawiajacych miejsca historyczne Królestwa, Galicyi i Ziem Krakowskich", Warszawa um 1880, 20 x 29 cm. - Unbedeutender Eckknick im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 1121/19. - Blick über den Fluss San auf Altstadt und Schlossberg mit Erläuterungstext in Polnisch und Französisch. Die polnische Stadt an der Grenze zur Ukraine kam 1772 nach der ersten Teilung Polens zur Habsburgermonarchie und wurde in den Jahrzehnten vor dem Ersten Weltkrieg zu einer Festung gegen das Russische Reich ausgebaut. Der polnische Komponist, Pianist und Maler Napoleon Orda (1807-1883) schuf  zahlreiche polnische Ansichten, von denen 260 für das aus acht Serien bestehenden "Album widoków historycnich Polski" lithographiert wurden.</span>
+                    <a href='/artikel/pl-przemysl-galizien-1606-31.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1606-31
+                    <br />
+                    
+                        € 180,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-125>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pl-tarnow-2412-125.html'>
+                            <img class='thumb' src='/img/thumb/pl-tarnow-2412-125.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pl-tarnow-2412-125.html'><strong>(PL) Tarnów</strong></a><br /><br />
+                    "Tarnow 18. Sept. 1915." Signierte Farblithographie von Luigi Kasimir (1881-1962), 22 x 17 cm. - Auf Japanpapier gedruckt und alt unter Passepartout montiert; wie üblich mit Farbspuren am unteren Bildrand, das Passepartout gebräunt. <br /><br />
+                    <span style="display: none">Szene aus dem jüdischen Milieu am historischen Ring- oder Marktplatz (Rynek). Auch unsigniert erschienen in Kasimirs während des 1. Weltkriegs entstandenen und in Wien veröffentlichten Künstlertagebuch "Galizien 1915".</span>
+                    <a href='/artikel/pl-tarnow-2412-125.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-125
+                    <br />
+                    
+                        € 185,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-127>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ro-herkulesbad-baile-herculane-1911-127.html'>
+                            <img class='thumb' src='/img/thumb/ro-herkulesbad-baile-herculane-1911-127.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ro-herkulesbad-baile-herculane-1911-127.html'><strong>(RO) Herkulesbad / Baile Herculane</strong></a><br /><br />
+                    "Ansicht des Augen und Francisci Bades im Hercules Bade naechst Mehadia." - "Uibersicht der Badgebaeude im Hercules Bade naechst Mehadia von der Tököly Anlage." - "Ansicht des Platzes im Hercules Bade naechst Mehadia." - "Ansicht des eigentlichen Hercules Bades und der Fussbaeder in den Baedern naechst Mehadia." Folge von vier altkolorierten Lithographien von Josef Kriehuber nach F. Neumann, um 1830, jeweils 21 x 27,5 cm. - Stellenweise etwas angeschmutzt, einzelne alt hinterlegte Risse im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 449. - Seltene komplette Serie. Das inmitten einer romantischen Berglandschaft gelegene Heilbad im rumänischen Banat wurde schon von den Römern geschätzt.</span>
+                    <a href='/artikel/ro-herkulesbad-baile-herculane-1911-127.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-127
+                    <br />
+                    
+                        € 950,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-119>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ro-oradea-nagyvarad-grosswardein-1712-119.html'>
+                            <img class='thumb' src='/img/thumb/ro-oradea-nagyvarad-grosswardein-1712-119.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ro-oradea-nagyvarad-grosswardein-1712-119.html'><strong>(RO) Oradea / Nagyvárad / Großwardein</strong></a><br /><br />
+                    "Gross-Wardein". Stahlstich-Souvenirblatt bei A. H. Payne, Leipzig und Dresden um 1850, 17 x 25 cm. <br /><br />
+                    <span style="display: none">Gesamtansicht umgeben von acht Einzelansichten.</span>
+                    <a href='/artikel/ro-oradea-nagyvarad-grosswardein-1712-119.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-119
+                    <br />
+                    
+                        € 50,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-124>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/s-drottningholm-1811-124.html'>
+                            <img class='thumb' src='/img/thumb/s-drottningholm-1811-124.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/s-drottningholm-1811-124.html'><strong>(S) Drottningholm</strong></a><br /><br />
+                    "Das Aussehen des Königlichen Schlosses Drottingholm(!) gegen Morgen." Kupferstich aus Johann Georg Gölgel, Historisch-Politisch- und Geographische Beschreibung des Königreichs Schweden, 2. Ausgabe, 1. Teil, Regensburg 1708, 14 x 18 cm. - Bis zum Bildrand beschnitten (Textverlust unter Beschriftung) und sorgfältig angerändert. <br /><br />
+                    <span style="display: none">Holzmann-Bohatta 1, 5977a (gibt Frankfurt und Leipzig als Verlagsorte an); nicht bei Fauser. - Seltene frühe Darstellung  aus der anonym erschienenen Landesbeschreibung eines Regensburger Juristen und Ratsmitgliedes (1669-1732). Das frühbarocke Lustschloss in der Nähe von Stockholm wird gerne als "schwedisches Versaille" bezeichnet und dient neben seiner musealen Nutzung der schwedischen Königsfamilie als privater Wohnsitz.</span>
+                    <a href='/artikel/s-drottningholm-1811-124.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1811-124
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1510-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/s-stockholm-1510-12.html'>
+                            <img class='thumb' src='/img/thumb/s-stockholm-1510-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/s-stockholm-1510-12.html'><strong>(S) Stockholm</strong></a><br /><br />
+                    "Stockholm". Radierung von Herta Czoernig-Gobanz (1886-1970), signiert "H. Gobanz", wohl um 1910, 32 x 22 cm. <br /><br />
+                    <span style="display: none">Blick über ein Hafenbecken auf den alten Stadtteil Norrmalm mit der Klarakirche.</span>
+                    <a href='/artikel/s-stockholm-1510-12.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1510-12
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-127>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/slo-kanal-ob-soci-canale-d-isonzo-2412-127.html'>
+                            <img class='thumb' src='/img/thumb/slo-kanal-ob-soci-canale-d-isonzo-2412-127.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/slo-kanal-ob-soci-canale-d-isonzo-2412-127.html'><strong>(SLO) Kanal ob Soci / Canale d&#39;Isonzo</strong></a><br /><br />
+                    "Canale 1909". Signierte Farbradierung auf gewalztem Japan von Herta Czoernig-Gobanz (1886-1970), Bildformat 39 x 17 cm, Blattgröße 46 x 35 cm. - Das felsige Flussufer des Isonzo mit steil aufragenden Häusern. In den Schlachten des 1. Weltkriegs wurde der an der Grenze zu Italien liegende Ort stark zerstört. <br /><br />
+                    <span style="display: none">Ursprünglich als einfarbige Radierung in der Jahresmappe 1911 des Radiervereins zu Weimar erschienen, wurde das Blatt von der Künstlerin später neu bearbeitet.</span>
+                    <a href='/artikel/slo-kanal-ob-soci-canale-d-isonzo-2412-127.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-127
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-126>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/slo-kranj-krainburg-1811-126.html'>
+                            <img class='thumb' src='/img/thumb/slo-kranj-krainburg-1811-126.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/slo-kranj-krainburg-1811-126.html'><strong>(SLO) Kranj / Krainburg</strong></a><br /><br />
+                    "Crainburg." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum., Frankfurt 1649, 19,5 x 30,5 cm. - Druckbedingte Mittelfalte. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/74.- Schöne Gesamtansicht der für das Herzogtum Krain namengebenden Stadt an der Save (heute viertgrößte Stadt Sloweniens).</span>
+                    <a href='/artikel/slo-kranj-krainburg-1811-126.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1811-126
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-102>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/srb-weisskirchen-im-banat-bela-crkva-2311-102.html'>
+                            <img class='thumb' src='/img/thumb/srb-weisskirchen-im-banat-bela-crkva-2311-102.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/srb-weisskirchen-im-banat-bela-crkva-2311-102.html'><strong>(SRB) Weißkirchen im Banat / Bela Crkva</strong></a><br /><br />
+                    "Weißkirchen." Altkolorierte Lithographie um 1850, 6 x 24 cm. - Gesamtansicht der serbischen Kleinstadt am Fuß der Karpaten. - Alt ausgeschnitten, montiert und auf dem Trägerpapier beschriftet; kaum sichtbare Knickspuren. <br /><br />
+                    <span style="display: none">Vermutlich Ausschnitt aus einem größeren Panoramablatt. - Selten.</span>
+                    <a href='/artikel/srb-weisskirchen-im-banat-bela-crkva-2311-102.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-102
+                    <br />
+                    
+                        € 115,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1510-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/tr-dardanellen-1510-14.html'>
+                            <img class='thumb' src='/img/thumb/tr-dardanellen-1510-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/tr-dardanellen-1510-14.html'><strong>(TR) Dardanellen</strong></a><br /><br />
+                    Altkolorierter dreiteiliger Kupferstich aus Friedrich Justin Bertuch, Bilderbuch für Kinder, um 1815, 19 x 13 cm. <br /><br />
+                    <span style="display: none">Die Meerenge zwischen Ägäis und Marmarameer mit den osmanischen Festungen auf europäischer und asiatischer Seite.</span>
+                    <a href='/artikel/tr-dardanellen-1510-14.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1510-14
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-129>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/tr-istanbul-1911-129.html'>
+                            <img class='thumb' src='/img/thumb/tr-istanbul-1911-129.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/tr-istanbul-1911-129.html'><strong>(TR) Istanbul</strong></a><br /><br />
+                    "Bujuckdere. Sommeraufenthalt der Franken aus Constantinopel." Kupferstich von Andrej Kasatschinsky nach Sergeeff (Sergejev) bei J. I. Koschkin aus Heinrich von Reimers, Reise der Russisch-Kaiserlichen ausserordentlichen Gesandtschaft an die Othomanische Pforte im Jahr 1793, St. Petersburg 1803, 29,5 x 51 cm. - Seitlich angerändert und etwas angeschmutzt, mehrere alte Randrisse restauriert. <br /><br />
+                    <span style="display: none">Thieme-Becker 19, 579 und 21, 329. - Einer von 6 Kupferstichen zum Bericht des estnischen Diplomaten und Schriftstellers Heinrich Christoph von Reimers (1768-1812) über die ein Jahr nach dem Vertrag von Jassy erfolgte Gesandschaftsreise. Die großformatigen Blätter - davon nur zwei von Kasatschinsky - wurden in der um 1800 gegründeten Petersburger Offizin des Kupferstechers Jelissej Iwanowitsch Koschkin (1761-1836) angefertigt. Büyükdere ("Großer Bach") im Istanbuler Stadtteil Sariyer liegt an der europäischen Seite des Bosporus und dient wegen seiner angenehmen Lage und seines gemäßigten Klimas seit langem als beliebter Sommeraufenthalt für wohlhabende Eliten.</span>
+                    <a href='/artikel/tr-istanbul-1911-129.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-129
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-124>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/tr-istanbul-2012-124.html'>
+                            <img class='thumb' src='/img/thumb/tr-istanbul-2012-124.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/tr-istanbul-2012-124.html'><strong>(TR) Istanbul</strong></a><br /><br />
+                    "Constantinopel." Kreidelithographie aus "Landschaften für die Optik No. VI" im Verlag der Trentsensky'schen Kunsthandlung in Wien, um 1850, 31 x 43 cm. - Leicht gebräunt, die linke obere Ecke mit Knickspur, der etwas knappe untere Rand mit kleinen Mängeln. <br /><br />
+                    <span style="display: none">Malerischer Blick von Üsküdar (Scutari) auf den europäischen Teil der Stadt mit dem Goldenen Horn. Der Verlag Trentsensky produzierte zahlreiche, heute vielfach verlorene Blätter für die damals beliebten Papiertheater; die "optische Reise" stellte eine technische Weiterentwicklung des Guckkastens dar. - Selten.</span>
+                    <a href='/artikel/tr-istanbul-2012-124.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-124
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

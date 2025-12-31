@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autographen &amp; Varia</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/autographs-misc/music.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Autographen &amp; Varia</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Musik
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/autographen-varia.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/autographen-varia/geschichte.html'>Geschichte</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/kunst.html'>Kunst</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/literatur.html'>Literatur</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/musik.html'>Musik</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/theater-film-tanz-zirkus.html'>Theater, Film, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/wissenschaft-technik-sport.html'>Wissenschaft, Technik, Sport</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2003-1>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/abbado-claudio-dirigent-1933-2014-2003-1.html'>
+                            <img class='thumb' src='/img/thumb/abbado-claudio-dirigent-1933-2014-2003-1.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/abbado-claudio-dirigent-1933-2014-2003-1.html'><strong>Abbado, Claudio, Dirigent (1933-2014)</strong></a><br /><br />
+                    Privates Porträtfoto mit eigh. Signatur auf der Bildseite (Kugelschreiber), ohne Ort und Datum (um 1980), 15 x 11 cm. <br /><br />
+                    <span style="display: none">Der aus Mailand stammende Abbado studierte unter anderem bei Hans Swarowsky in Wien. Er war ständiger Gastdirigent der Wiener Philharmoniker sowie Chefdirigent der Mailänder Scala, des Londoner Sinfonieorchesters, der Wiener Staatsoper und der Berliner Philharmoniker. </span>
+                    <a href='/artikel/abbado-claudio-dirigent-1933-2014-2003-1.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-1
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-7>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bartok-bela-komponist-1881-1945-1710-7.html'>
+                            <img class='thumb' src='/img/thumb/bartok-bela-komponist-1881-1945-1710-7.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bartok-bela-komponist-1881-1945-1710-7.html'><strong>Bartók, Béla, Komponist (1881-1945)</strong></a><br /><br />
+                    Kleines Albumblatt mit eigh. Namenszug, zusammen mit reproduziertem Fotoporträt (11 x 9 cm) unter Passepartout montiert. <br /><br />
+                    <span style="display: none">Bartók war auch als Pianist und Musikethnologe tätig und gilt als einer der bedeutendsten Vertreter der Moderne.</span>
+                    <a href='/artikel/bartok-bela-komponist-1881-1945-1710-7.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-7
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bayreuth-2309-4.html'>
+                            <img class='thumb' src='/img/thumb/bayreuth-2309-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bayreuth-2309-4.html'><strong>Bayreuth</strong></a><br /><br />
+                    "Bayreuth 1939." Anonymes Typoskript eines Musik-Enthusiasten und profunden Wagner-Kenners, 20 DIN A4-Seiten, mit ausführlichen kritischen Beschreibungen der Aufführungen vom 16. bis 24. August (Holländer, Tristan, Parsifal und kompletter Ring). - Mit einigen handschriftlichen Korrekturen des wohl diktierten Textes; gefaltet, die letzte Seite mit kleinen Bugmängeln. <br /><br />
+                    <span style="display: none">Vermutlich ungedruckt. Der von uns nicht identifizierte Verfasser geht vor allem auf die Details der Inszenierungen ein und erst an zweiter Stelle auf Orchester und Gesang; er äußerst sich aber auch immer wieder eingehend zum Werk selbst. Für die Deutung der Parsifal-Stelle "Ich schreite kaum - doch wähn' ich mich schon weit" zitiert er einen eigenen diesbezüglichen Beitrag in den Bayreuther Blättern 1916, der jedoch für uns nicht nachweisbar ist. Zur "Götterdämmerung" am 24. August schreibt er: "Die Aufführung stand für die Zuschauer (und wohl auch für die Darsteller) schon im Schatten der politischen Ereignisse; so ist es vielleicht unbillig, eine gewisse Hast der Tempi und leichte Nervosität des Spiels der Darsteller kritisch zu vermerken ...". An diesem Tag schloss Hitler mit Stalin einen Nichtangriffspakt mit einem geheimen Zusatzprotokoll zur Teilung Polens.</span>
+                    <a href='/artikel/bayreuth-2309-4.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-4
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bittner-julius-komponist-1874-1939-2403-13.html'>
+                            <img class='thumb' src='/img/thumb/bittner-julius-komponist-1874-1939-2403-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bittner-julius-komponist-1874-1939-2403-13.html'><strong>Bittner, Julius, Komponist (1874-1939)</strong></a><br /><br />
+                    Eigenhändige Notenzeile mit Unterschrift auf der Rückseite einer Bildkarte des Schreinzer-Quartetts, in Bleistift, 3 Takte, Wien, 12. 4. 1924. - Minimal fleckig, leichte Klammer- und Montagespuren. Beiliegend eine zugehörige Sammlernotiz sowie ein Zeitschriftenausschnitt von 1923 mit einem faksimilierten Notenzitat Bittners. <br /><br />
+                    <span style="display: none">Bittners spätromantische Opern ("Die rote Gred" u. a.) wurden zunächst viel gespielt, nach dem 2. Weltkrieg geriet der in der Nachfolge Wagners stehende Komponist aber allmählich in Vergessenheit. Karl Schreinzer war Mitglied der Wiener Philharmoniker und begründete zusammen mit Karl Machek (ebenfalls Philharmoniker), Franz Kriwanek und Josef Mikulas eine eigene Gattung des Schrammel-Quartetts.</span>
+                    <a href='/artikel/bittner-julius-komponist-1874-1939-2403-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-13
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/blacher-boris-komponist-1903-1975-1802-13.html'>
+                            <img class='thumb' src='/img/thumb/blacher-boris-komponist-1903-1975-1802-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/blacher-boris-komponist-1903-1975-1802-13.html'><strong>Blacher, Boris, Komponist (1903-1975)</strong></a><br /><br />
+                    Eigh. unsigniertes Musikmanuskript mit zwei Klavierskizzen zu einem Bühnenwerk, 2 Seiten auf Notenpapier, in-4. - Kleiner Randeinriss unterlegt. <br /><br />
+                    <span style="display: none">Ca. 60 Takte in 12 Systemen. Der vielseitige Komponist deutsch-baltischer Herkunft schrieb unter anderem 14 Opern und 9 Ballettmusiken und gehörte im Nachkriegsdeutschland zu den einflussreichsten und am meisten aufgeführten zeitgenössischen Komponisten.</span>
+                    <a href='/artikel/blacher-boris-komponist-1903-1975-1802-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1802-13
+                    <br />
+                    
+                        € 440,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1601-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bohm-karl-dirigent-1894-1981-1601-10.html'>
+                            <img class='thumb' src='/img/thumb/bohm-karl-dirigent-1894-1981-1601-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bohm-karl-dirigent-1894-1981-1601-10.html'><strong>Böhm, Karl, Dirigent (1894-1981)</strong></a><br /><br />
+                    Unsigniertes Fotoporträt um 1955, 24 x 18 cm. <br /><br />
+                    <span style="display: none">Aufnahme Foto Fayer, Wien.</span>
+                    <a href='/artikel/bohm-karl-dirigent-1894-1981-1601-10.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1601-10
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bresgen-cesar-komponist-1913-1988-2305-13.html'>
+                            <img class='thumb' src='/img/thumb/bresgen-cesar-komponist-1913-1988-2305-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bresgen-cesar-komponist-1913-1988-2305-13.html'><strong>Bresgen, Cesar, Komponist (1913-1988)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Notenzitat und Unterschrift, 1 Seite, kl-4, Grossgmain bei Salzburg (Briefkopf), 11. 1. 1968. - An einen Autographensammler. "... wenn ich auch gerade kein Foto zur Hand habe, so sollen es diese paar Noten tun ...". Es folgen die ersten drei Takte des Liedes "O du stille Zeit, kommst eh wir's gedacht ..." mit unterlegtem Text (nach Joseph von Eichendorff). <br /><br />
+                    <span style="display: none">Bresgen war ab 1939 (mit Unterbrechungen) Professor für Komposition am Salzburger Mozarteum. Das Lied entstand 1938.</span>
+                    <a href='/artikel/bresgen-cesar-komponist-1913-1988-2305-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-13
+                    <br />
+                    
+                        € 185,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-6>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/britten-benjamin-komponist-1913-1976-2205-6.html'>
+                            <img class='thumb' src='/img/thumb/britten-benjamin-komponist-1913-1976-2205-6.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/britten-benjamin-komponist-1913-1976-2205-6.html'><strong>Britten, Benjamin, Komponist (1913-1976)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift "Ben", 4 Seiten, quer-8, Aldeburgh (Briefkopf), 25. 7. 1960. - (An James Lawrie.) "My dear Jimmie, Awfully sorry that I can't get up to the meeting of the Opera School tomorrow. I am under severe doctors' order for 2 or 3 months, & severely rationed as to my London visits. I am sorry there is this crisis - but I feel rather unable to comment since I know so little of the facts (of course I realise there is a financial problem, but I fear I don't know whether this is worse than usual, & if there is less hope than usual of over-coming it). I have written to Sanderson asking to see a copy of the Bridges report, wanting of course to see the references to the School; but so far, no reaction, so I can't comment on their comments. But how seriously do people, does the Arts Council, take this report? The only person I know who has had connection [with] the report has been George Christie, & he hasn't much to off[er], & of course must be somewhat biased. Otherwise I know of no one ever who has given evidence - certainly none of us has (which is abit odd considering we do play some part of the operatic biz!). All this is just to question the actual or future importance of the Report; need we take much notice of it, unless, of course it prevents the School getting the money it needs -? Excuse scribble, but I wanted to send personal apologies for non-attendance, & all good wishes [for] the future of the School, if you decide to continue, & of course congratulations to Joan & Anne for their wonderful work. Yours ever Ben." - Kleine Heftspuren, seitliche Lochung unterlegt (geringer Buchstabenverlust). <br /><br />
+                    <span style="display: none">James Haldane Lawrie (1907-1997) war ein opernbegeisterter englischer Unternehmer, Filmproduzent und Theatermanager und leitete einige Zeit die Künstlervereinigung "English Opera Group" (E. O. G.), die Kammeropern von Britten und anderen Komponisten zur Aufführung verhelfen sollte. Britten lebte seit 1947 in Aldeburgh, wo er im folgenden Jahr das jährliche Festival mitbegründete. George Christie übernahm 1962 als Manager die Glyndebourne Opera.</span>
+                    <a href='/artikel/britten-benjamin-komponist-1913-1976-2205-6.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-6
+                    <br />
+                    
+                        € 800,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-2>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/d-albert-eugen-komponist-1864-1932-2505-2.html'>
+                            <img class='thumb' src='/img/thumb/d-albert-eugen-komponist-1864-1932-2505-2.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/d-albert-eugen-komponist-1864-1932-2505-2.html'><strong>d&#39;Albert, Eugen, Komponist (1864-1932)</strong></a><br /><br />
+                    Eigenhändiges musikalisches Albumblatt mit Unterschrift, in-8, Prag, 4. 5. 1884. - "Tempo di Gavotte". Anfang des 4. Satzes (3 Takte) aus der Suite in fünf Sätzen für Klavier zweihändig in d-moll (op. 1). - In Bleistift auf bräunlichem Papier. <br /><br />
+                    <span style="display: none">Frühes Notenzitat des Komponisten aus seinem ersten veröffentlichten Werk (1883), nach Angaben eines Vorbesitzers für die Sängerin Ruzena Vykoulova geschrieben. 1884 ließ sich d'Albert in Eisenach nieder, wo er sich ein exzentrisches Gartenhaus erbauen ließ.</span>
+                    <a href='/artikel/d-albert-eugen-komponist-1864-1932-2505-2.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-2
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/dostal-nico-komponist-1895-1981-1708-18.html'>
+                            <img class='thumb' src='/img/thumb/dostal-nico-komponist-1895-1981-1708-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/dostal-nico-komponist-1895-1981-1708-18.html'><strong>Dostal, Nico, Komponist (1895-1981)</strong></a><br /><br />
+                    Porträtfotografie auf geprägtem Karton (Brustbild mit Zigarre, 15 x 10,5 cm) mit eigh. Notenzeile, Widmung und Unterschrift auf dem Untersatzkarton (Gesamtgröße 31,5 x 21 cm), Salzburg, Oktober 1971. - 6 Takte "Heimatland!" aus der Operette "Monika" (Uraufführung 1937, verfilmt 1939 unter dem Titel "Heimatland"). - Beiliegend eigh. Kuvert. <br /><br />
+                    <span style="display: none">Melodie auf die Verse "Heimatland, Heimatland, Dein gedenk' ich immerdar ..." von Hermann Hermecke. Der vor allem für seine Operetten und Filmmusik bekannte österreichische Komponist schrieb auch Kirchenmusik. Seit 1954 lebte er in Salzburg.</span>
+                    <a href='/artikel/dostal-nico-komponist-1895-1981-1708-18.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-18
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-25>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/egk-werner-komponist-1901-1983-2409-25.html'>
+                            <img class='thumb' src='/img/thumb/egk-werner-komponist-1901-1983-2409-25.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/egk-werner-komponist-1901-1983-2409-25.html'><strong>Egk, Werner, Komponist (1901-1983)</strong></a><br /><br />
+                    Eigenhändiges Notenzitat mit Unterschrift auf Kartonblatt in Postkartengröße mit montiertem Zeitungsporträt. - Dazu ein maschinschriftlicher Brief mit Unterschrift an Egon Seefehlner, Unterkulm, 25. 7. 1973, mit Paraphe des Empfängers. <br /><br />
+                    <span style="display: none">Egon Seefehlner (1912-1997) war damals Generalintendant der Deutschen Oper in Westberlin. 1976 wurde er Direktor der Wiener Staatsoper.</span>
+                    <a href='/artikel/egk-werner-komponist-1901-1983-2409-25.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-25
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/einem-gottfried-von-komponist-1918-1996-2202-24.html'>
+                            <img class='thumb' src='/img/thumb/einem-gottfried-von-komponist-1918-1996-2202-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/einem-gottfried-von-komponist-1918-1996-2202-24.html'><strong>Einem, Gottfried von, Komponist (1918-1996)</strong></a><br /><br />
+                    Musikalisches Albumblatt mit eigenhändiger Notenzeile, Widmung und Unterschrift, quer-8, Wien, 6. 8. 1983. - Leichte Faltspur. <br /><br />
+                    <span style="display: none">Vier Takte aus der 1964 uraufgeführten Oper "Der Zerrissene" (Text von Boris Blacher nach Johann Nestroy).</span>
+                    <a href='/artikel/einem-gottfried-von-komponist-1918-1996-2202-24.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-24
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/eysler-edmund-komponist-1874-1949-2409-29.html'>
+                            <img class='thumb' src='/img/thumb/eysler-edmund-komponist-1874-1949-2409-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/eysler-edmund-komponist-1874-1949-2409-29.html'><strong>Eysler, Edmund, Komponist (1874-1949)</strong></a><br /><br />
+                    Kleines Billet (7,5 x 14 cm) mit eigenhändiger Notenzeile, Widmung und flüchtiger Unterschrift, Februar 1929. - "Zur frdl. Erinnerung! ...". 4 Takte aus "Der fidele Geiger". - Beiliegend unsignierte Porträtpostkarte (Aufnahme J. Weitzmann, Wien 1919). Albuminabzug mit leichten Silberausblühungen. <br /><br />
+                    <span style="display: none">Der österreichische Komponist Edmund Eysler war vor allem mit seinen Operetten und Wiener Melodien sehr erfolgreich. "Der fidele Geiger" (nach einem Libretto von Louis Taufstein und Hans Herling) wurde 1919 uraufgeführt.</span>
+                    <a href='/artikel/eysler-edmund-komponist-1874-1949-2409-29.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-29
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-17>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/flotow-friedrich-von-komponist-1812-1883-2005-17.html'>
+                            <img class='thumb' src='/img/thumb/flotow-friedrich-von-komponist-1812-1883-2005-17.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/flotow-friedrich-von-komponist-1812-1883-2005-17.html'><strong>Flotow, Friedrich von, Komponist (1812-1883)</strong></a><br /><br />
+                    Eigenhändiges musikalisches Albumblatt mit Notenzeile und Unterschrift, 1 Seite, quer-8, Wien, 7. 2. 1847. - 4 Takte aus dem 2. Akt seiner Oper "Alessandro Stradella": "Tief in den Abruzzen, da lauert im Moos". Links unten biographische Notiz von fremder Hand. <br /><br />
+                    <span style="display: none">Flotows Oper war 1844 unter tosendem Beifall in Hamburg uraufgeführt worden; in Wien wurde sie im Jahr darauf sowohl im Theater an der Wien wie auch im Kärntnertortheater gespielt. Am 29. Jänner 1847 leitete der Komponist persönlich eine Aufführung im Kärntnertortheater, einige Monate später wurde ebenda die eigens für Wien komponierte "Martha" in Anwesenheit Flotows aus der Taufe gehoben.</span>
+                    <a href='/artikel/flotow-friedrich-von-komponist-1812-1883-2005-17.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2005-17
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fuchs-robert-komponist-1847-1927-1708-29.html'>
+                            <img class='thumb' src='/img/thumb/fuchs-robert-komponist-1847-1927-1708-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fuchs-robert-komponist-1847-1927-1708-29.html'><strong>Fuchs, Robert, Komponist (1847-1927)</strong></a><br /><br />
+                    Eigh. Widmung auf dem Umschlag seiner "Drei Clavierstücke" op. 24 (Leipzig, Kistner, um 1879, in-4, 15 pp, OBrosch.), Wien, 7. 11. 1879. (Für Fräulein Caroline Gröber, der das Werk im Druck zugeeignet ist.) "D[er] O[bigen] zur freundlichen Erinnerung an Rob. Fuchs ...". - Das Notenheft mit Alters- und Gebrauchsspuren sowie Rand- und Falzverstärkungen. <br /><br />
+                    <span style="display: none">Fuchs war Schüler von Anton Bruckner und Lehrer von Gustav Mahler, Erich Wolfgang Korngold, Jean Sibelius, Richard Strauss u. a. </span>
+                    <a href='/artikel/fuchs-robert-komponist-1847-1927-1708-29.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-29
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/glasunow-alexander-komponist-1865-1936-1705-30.html'>
+                            <img class='thumb' src='/img/thumb/glasunow-alexander-komponist-1865-1936-1705-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/glasunow-alexander-komponist-1865-1936-1705-30.html'><strong>Glasunow, Alexander, Komponist (1865-1936)</strong></a><br /><br />
+                    Eigh. musikalisches Albumblatt mit Unterschrift "Alexandre Glazounow", 1 Seite, quer-kl-8, Paris, 1. 11. 1929. - Auf beschnittenem Notenpapier mit kaum sichtbarem Mittelbug. <br /><br />
+                    <span style="display: none">Incipit (2 Takte) seiner 1901 entstandenen Klaviersonate Nr. 1 in b-moll (op. 74), hier abweichend vom Druck mit "Moderato" (statt mit "Allegro moderato") bezeichnet und auf nur einem System notiert.</span>
+                    <a href='/artikel/glasunow-alexander-komponist-1865-1936-1705-30.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1705-30
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/gounod-charles-komponist-1818-1893-1810-33.html'>
+                            <img class='thumb' src='/img/thumb/gounod-charles-komponist-1818-1893-1810-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/gounod-charles-komponist-1818-1893-1810-33.html'><strong>Gounod, Charles, Komponist (1818-1893)</strong></a><br /><br />
+                    Unsigniertes eigenhändiges Musikmanuskript auf bräunlichem Notenpapier, 1 Seite, in-4 (Doppelblatt), ohne Ort und Datum. - Stimmenauszug der ersten Bässe in 8 Notenzeilen aus der Introduktion des Chorwerks "L'hôtellerie de la Reine" mit unterlegtem Text. - Kleine Randmängel. <br /><br />
+                    <span style="display: none">Provenienz: Sotheby's London 18. 5. 1995, ex Nr. 248. - Das unveröffentlichte Chorwerk (CG 225), von dem ein 40seitiges Manuskript bekannt ist, entstand vermutlich 1848/1849 nach einem anonymen französischen Text: "Dans cette belle hôtellerie le vin d'Espagne est vraiment bon, oui! et l'on y trouve, oui l'on y trouve au gré de son envie ..."</span>
+                    <a href='/artikel/gounod-charles-komponist-1818-1893-1810-33.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-33
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hellmesberger-joseph-komponist-1855-1907-2009-28.html'>
+                            <img class='thumb' src='/img/thumb/hellmesberger-joseph-komponist-1855-1907-2009-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hellmesberger-joseph-komponist-1855-1907-2009-28.html'><strong>Hellmesberger, Joseph, Komponist (1855-1907)</strong></a><br /><br />
+                    Eigenhändige acht Zeilen mit Unterschrift auf der gedruckten Visitkarte seiner Gattin, ohne Ort und Datum. "Verehrte Gnädige Frau! Ich glaube nicht, daß das vorgeschlagene Stück in Pest passend wäre - auch habe ich noch keine Rückantwort über die Componisten Gestaltung unseres Programmes[.] Ich bitte daher nur um kurze Frist bis aus Pest Nachricht eingetroffen[.] Mit echter Verehrung dankbarst J. Hellmesberger". In flüchtiger Schrift.  - Ansprechend unter Passepartout gerahmt (Gesamtgröße 16 x 20 cm). <br /><br />
+                    <span style="display: none">Provenienz: Sammlung Gerhard Bronner. - Joseph ("Pepi") Hellmesberger junior, Sohn des gleichnamigen Violinisten und Dirigenten (1828-1893), wurde 1890 erster Hofkapellmeister der Wiener Hofkapelle und wirkte als Komponist, Geiger und Dirigent; er schrieb unter anderem 22 Operetten. Als Nachfolger von Gustav Mahler leitete er von 1901 bis 1903 die Philharmonischen Konzerte.</span>
+                    <a href='/artikel/hellmesberger-joseph-komponist-1855-1907-2009-28.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-28
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1510-43>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kabalewski-kabalevsky-dmitri-b-komponist-1904-1987-1510-43.html'>
+                            <img class='thumb' src='/img/thumb/kabalewski-kabalevsky-dmitri-b-komponist-1904-1987-1510-43.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kabalewski-kabalevsky-dmitri-b-komponist-1904-1987-1510-43.html'><strong>Kabalewski (Kabalevsky), Dmitri B., Komponist (1904-1987)</strong></a><br /><br />
+                    Eigh. Notenzeile (4 Takte) mit kurzer Widmung in russ. Sprache und Unterschrift (kyrillisch) auf Karton in Postkartengröße, Moskau, 14. 5. [19]72. <br /><br />
+                    <span style="display: none">Zitat aus der Ouvertüre zu seiner 1937 entstandenen und 1968 überarbeiteten Oper "Cola(s) Breugnon" (op.24). Mit eigh. Briefkuvert (dieses mit Sammlervermerken).</span>
+                    <a href='/artikel/kabalewski-kabalevsky-dmitri-b-komponist-1904-1987-1510-43.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1510-43
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-46>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kagel-mauricio-komponist-1931-2008-1909-46.html'>
+                            <img class='thumb' src='/img/thumb/kagel-mauricio-komponist-1931-2008-1909-46.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kagel-mauricio-komponist-1931-2008-1909-46.html'><strong>Kagel, Mauricio, Komponist (1931-2008)</strong></a><br /><br />
+                    Billet 16 x 9 cm mit aufgezogenem kleinem Zeitungsporträt und eigh. Namenszug, ohne Ort und Datum (um 1975). <br /><br />
+                    <span style="display: none">Der vielseitige argentinisch-deutsche Komponist, Dirigent, Librettist und Regisseur leistete mit seinen unkonventionellen Werken einen wichtigen Beitrag zur Musikästhetik der zweiten Hälfte des 20. Jahrhunderts.</span>
+                    <a href='/artikel/kagel-mauricio-komponist-1931-2008-1909-46.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1909-46
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/klebe-giselher-komponist-1925-2009-2509-44.html'>
+                            <img class='thumb' src='/img/thumb/klebe-giselher-komponist-1925-2009-2509-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/klebe-giselher-komponist-1925-2009-2509-44.html'><strong>Klebe, Giselher, Komponist (1925-2009)</strong></a><br /><br />
+                    Billet mit zwei eigenhändigen Notenzeilen, Widmung und Unterschrift, quer-12, um 1980. -  7 Takte aus "Der jüngste Tag" (Vorspiel, Largo sostenuto). <br /><br />
+                    <span style="display: none">Klebe unterrichtete Komposition und Musiktheorie der Nordwestdeutschen Musikakademie Detmold. Seine Oper "Der Jüngste Tag" (nach dem gleichnamigen Schauspiel von Ödön von Horváth) wurde 1980 am Nationaltheater Mannheim uraufgeführt.</span>
+                    <a href='/artikel/klebe-giselher-komponist-1925-2009-2509-44.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-44
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/koschat-thomas-komponist-1845-1914-2202-52.html'>
+                            <img class='thumb' src='/img/thumb/koschat-thomas-komponist-1845-1914-2202-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/koschat-thomas-komponist-1845-1914-2202-52.html'><strong>Koschat, Thomas, Komponist (1845-1914)</strong></a><br /><br />
+                    Korrespondenzkarte mit Porträts und bildseitigen Bleistiftunterschriften aller Mitglieder des Koschat-Quintetts (Thomas Koschat, Rudolf Traxler, Walter Fournes, Clemens Fochler, Hans Neubauer und Georg Haan), ohne Ort und Jahr (um 1900). Dazu 3 bildseitig beschriebene eigenhändige Ansichtskarten (u. a. Gruppenfoto des Klagenfurter Männergesangvereins "Frohsinn") mit Unterschrift "Thomas", Poststempel Heilbronn 14. 8. 1902, Wien 2. 3. 1903 und Leipzig 3. 7. 1903; Kurzmitteilungen an seine Schwester Katharina Kopeinig in Viktring, zumeist von Konzertauftritten. "... Das gestrige Concert ist grossartig ausgefallen. Über 3000 Menschen waren da. - Ich erhielt Lorbeerkränze ..." / "... Gestern beim Concert waren 1400 Menschen. Das war glänzend ...". <br /><br />
+                    <span style="display: none">In Viktring bei Klagenfurt geboren und in Wien als Sänger und Chorleiter tätig, machte Koschat das Kärntner Lied weit über seine Heimat hinaus bekannt und populär. Mit seinem aus Mitgliedern der Wiener Hofoper bestehenden Koschat-Quintett unternahm er erfolgreiche Touren durch Europa und Amerika.</span>
+                    <a href='/artikel/koschat-thomas-komponist-1845-1914-2202-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-52
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-45>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kraus-alfredo-sanger-1927-1999-2505-45.html'>
+                            <img class='thumb' src='/img/thumb/kraus-alfredo-sanger-1927-1999-2505-45.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kraus-alfredo-sanger-1927-1999-2505-45.html'><strong>Kraus, Alfredo, Sänger (1927-1999)</strong></a><br /><br />
+                    Reproduziertes Porträtfoto, bildseitig mit Filzstift signiert "Alfredo Kraus 1968", 23 x 18 cm. <br /><br />
+                    <span style="display: none">Der Sohn einer spanischen Mutter und eines österreichischen Vaters galt als einer der besten Tenöre des späten 20. Jahrhunderts. Er sang an vielen internationalen Bühnen, unter anderem auch in Salzburg und Wien (wo nach Angabe des Vorbesitzers das Foto signiert wurde).</span>
+                    <a href='/artikel/kraus-alfredo-sanger-1927-1999-2505-45.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-45
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/krenek-ernst-komponist-1900-1991-2403-52.html'>
+                            <img class='thumb' src='/img/thumb/krenek-ernst-komponist-1900-1991-2403-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/krenek-ernst-komponist-1900-1991-2403-52.html'><strong>Krenek, Ernst, Komponist (1900-1991)</strong></a><br /><br />
+                    Eigenhändiges musikalisches Albumblatt mit Unterschrift, kl-quer-8, (Palm Springs), 27. 3. 1985. - Drei Takte aus seinem "Klavierstück in elf Teilen op. 197 (1967)". - Mit eigh. Briefkuvert. <br /><br />
+                    <span style="display: none">Krenek wuchs in Wien auf, wo er bei Franz Schreker Komposition studierte. In den 1920er Jahren erlebte seinen größten Publikumserfolg mit der Oper "Jonny spielt auf", ab 1937 lebte er in den USA. Sein Schaffen umfasst fast alle musikalischen Stilrichtungen des 20. Jahrhunderts.</span>
+                    <a href='/artikel/krenek-ernst-komponist-1900-1991-2403-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-52
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lehmann-lilli-sangerin-1848-1929-2505-52.html'>
+                            <img class='thumb' src='/img/thumb/lehmann-lilli-sangerin-1848-1929-2505-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lehmann-lilli-sangerin-1848-1929-2505-52.html'><strong>Lehmann, Lilli, Sängerin (1848-1929)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 2 Seiten, gr-8, Berlin (Briefkopf), 17. 1. 1920. - An den Musikschriftsteller Paul Stefan (laut Angabe der Vorbesitzerin). "Hochverehrter lieber Herr Professor, die Noten sind schon eine ganze Weile da, Ihr l[ieber] Br[ief] kam gestern, für beides herzlichst Dank. Ich stehe grade vor m[einem] I[.] Liederabend der am 20ten ist, worin ich 3 Beethoven Adelaide, 2 Clärchenlieder, 9 R. Franze, 5 Löwe singe, 7 für mich ganz neue Lieder, an denen ich seit fast 3 Monaten übe. Dazu viele Stunden - so können Sie sich denken welche Zeit mir verbleibt mir etwas anzusehen. Die Noten sind auch so klein geschrieben, daß ich einen günstigen Tag abwarten muß der hell und nicht zu übervoll an Arbeit ist, bis ichs mir u Ihnen leisten kann, die Lieder anzusehen. Also Geduld, edler Gralsritter! Haben Sie 70 Jahre gewartet können Sie auch noch ein bisl länger warten. Es ist mit den Liedern wie mit Hüten, es steht einem nicht Jeder. Wie lange sucht man bis man so recht was gefunden hat, das einem Stimmung giebt, in Stimme liegt, zum eignen Herzen spricht u die 1000 Qualitäten besitzt die einem zum Studium u Aufbau hinreißen können. Selbst unter den besten Meistern ist die Auswahl nur eine ganz persönliche. Ich bin ja nur noch klassisch fast. Das Moderne ist mir meist ein Dorn im Ohre, ich mußte mir nach möglicher Prüfung immer wieder sagen: Nett, oder ganz netter Art. Warum soll ich mir das noch antun? So gehe ich mit meinem Alter, großen Meistern Arm in Arm - da weiß ich bin ich sicher. Ich habe alle Schubertlieder in großer Härtel Ausgabe, worin auch alle Skizzen sind. Darin sind so kostbare Stücke, man muß vor Freude laut auflachen, über die Einfachheit u diese Schönheit. Ich singe in m[einem] 2[.] Liederabend nur Schubert u Schumann, u für mich diesmal 5-6 neue Lieder die niemand singt u kennt. Welch eine reine Freude ist das! Für Ihre Artikel habe ich mich sofort nach Erhalt per Karte bedankt, ich hoffe Sie erhielten sie? Es hat mich sehr erfreut; ich danke herzlich. Maurel sagte mir oft, dass ich ihn an sie erinnere. Weniger erfreut hat mich ein Artikel in dem Blatt das mir zugesandt wurde, über Rosa Papier u deren Singstunden: 'Nur nicht mit die Muskeln singen (- hat sie gesagt -) o ja, das ist so schädlich!' Sie können sich denken was die für Stunden giebt: 'Sie i bitt' Sie, hängens des Bild grad! - Sie, i bitt Sie gehen's in die Küche u sagens, das Essen soll früher fertig sein. - oder: i bitt Sie, i geh nur an Brief schreiben, i komm glei wieder, singens derweil mit der Begleitrin - u s.w. / also: sobald ich mir die Lieder angesehen, Ihren Fleiß u Ihr Talent, so schreibe ich wieder. Bis dahin seien Sie herzlich gegrüßt von Ihrer sehr in Anspruch genommenen Lilli Lehmann." - Geschrieben auf einem alten Briefvordruck (geöffnetes und gedrehtes Doppelblatt), der gedruckte Kopf "Königliche Schauspiele / Der Erste Dramaturg" mit der aktuellen Adresse der Sängerin überstempelt. <br /><br />
+                    <span style="display: none">Origineller und inhaltsreicher Brief der damals 71-jährigen deutschen Operrnsängerin (Sopran), die zu den bedeutendsten Wagner- und Mozartinterpretinnen ihrer Zeit gehörte und auch als Gesangspädagogin tätig war. "Adelaide": Beethovens Lied op. 46; "Clärchenlieder": Goethes Gedicht "Klärchens Lied" (aus "Egmont") wurde unter anderem von Johann Friedrich Reichardt und von Franz Schubert vertont; "Franze": Lieder des deutschen Komponisten und Dirigenten Robert Franz (1815-1892); "Löwe": der deutsche Komponist Carl Loewe (1796-1869), der über 400 Balladen vertonte; "Maurel": der französische Bariton Victor Maurel (1848-1923), der mit Lilli Lehmann befreundet war und mit ihr in regem Briefverkehr stand. Die hier von Lehmann etwas abfällig beurteilte österreichische Opernsängerin und Gesangspädagogin Rosa Papier (Mezzosopran, 1858-1932) war an der Wiener Hofoper tätig und brillierte hier ebenfalls als Wagner-Interpretin; sie gehörte zum Freundeskreis Gustav Mahlers, setzte sich für seine Berufung als Wiener Operndirektor ein und war die Mutter des Dirigenten Bernhard Paumgartner. Der Briefempfänger Paul Stefan (1879-1943) zählte zu den bemerkenswertesten und vielseitigen Musikhistorikern, Schriftstellern und Kritikern seiner Zeit; er schrieb auch Gedichte und verfasste unter anderem mehrere Bücher über Gustav Mahler.</span>
+                    <a href='/artikel/lehmann-lilli-sangerin-1848-1929-2505-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-52
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/martin-frank-komponist-1890-1974-2409-70.html'>
+                            <img class='thumb' src='/img/thumb/martin-frank-komponist-1890-1974-2409-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/martin-frank-komponist-1890-1974-2409-70.html'><strong>Martin, Frank, Komponist (1890-1974)</strong></a><br /><br />
+                    Eigenhändige Widmung mit Spruch, Notenzeile und Unterschrift auf dem Titelblatt von R. Klein, Frank Martin. Sein Leben und Werk (Wien 1960), Juli 1964. "... Ce qui fait la différence fondamentale entre la musique et et les mathematiques, c'est qu'en musique la reússite est beauté, en mathématique vérité ...". Die Notenzeile mit 4 Takten aus "Notre Dame - Mystère de la Nativité" mit unterlegtem Text. <br /><br />
+                    <span style="display: none">Schönes Widmungsexemplar. Die Monographie über den Schweizer Komponisten (gr-8, 72 pp, englische Broschur) erschien als Sonderband der Österreichischen Musikzeitschrift in deren Verlag. Der nicht besonders attraktive Schutzumschlag wurde mit einem ansprechenderen Fotoporträt überklebt und damit aufgewertet.</span>
+                    <a href='/artikel/martin-frank-komponist-1890-1974-2409-70.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-70
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-54>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/martin-frank-komponist-1890-1974-2305-54.html'>
+                            <img class='thumb' src='/img/thumb/martin-frank-komponist-1890-1974-2305-54.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/martin-frank-komponist-1890-1974-2305-54.html'><strong>Martin, Frank, Komponist (1890-1974)</strong></a><br /><br />
+                    Musikalisches Albumblatt mit eigenhändiger Notenzeile und unterlegtem Text, Widmung und Unterschrift, 1/2 Seite, kl-4, Mai 1973; dazu eigenhändiges Briefkuvert mit Adress-Stempel Naarden. - 3 Takte aus Martins 1972 entstandenem Requiem. <br /><br />
+                    <span style="display: none">Beginn der Antiphon "In Paradisum deducant te Angeli" (das "te" hier verschrieben zu "le"). Im Mittelalter bildete diese Antiphon einen Teil der Sterbeliturgie.</span>
+                    <a href='/artikel/martin-frank-komponist-1890-1974-2305-54.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-54
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-56>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mascagni-pietro-komponist-1863-1945-2505-56.html'>
+                            <img class='thumb' src='/img/thumb/mascagni-pietro-komponist-1863-1945-2505-56.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mascagni-pietro-komponist-1863-1945-2505-56.html'><strong>Mascagni, Pietro, Komponist (1863-1945)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 1/2 Seiten auf Doppelblatt mit Briefkopf "Hotel Plaza", in-8, Rom, 17. 6. 1929. - An einen Freund in Deutschland  über eine retournierte Postsendung. "Mio caro Carletto, ti scrissi una lunga lettera: ti mandai una lettera di presentazione e di raccomandazione per l'editore Bock: ti mandai anche una fotografia con dedica al Professore Waiz. Il tutto fu spedito da me all'indirizzo che tu mi desti, cioè: Hotel Central - Berlin. Ma mi è stato tutto respinto a Roma. Ora, Umberto mi dice che tu sei a Düsseldorf; ed io ti prego di scrivermi una cartolina qui, al Plaza, per farmi sapere se posso ripeterti la spedizione di tutto all'indirizzo di Düsseldorff. Intanto ti faccio tutti gli auguri e ti abbraccio con affetto. Tuo P. Mascagni". - Kleine Einrisse unterlegt. <br /><br />
+                    <span style="display: none">Im deutschen Musikverlag Bote & Bock erschienen mehrere Notenausgaben zu Mascagnis bekannester Oper "Cavalleria rusticana".</span>
+                    <a href='/artikel/mascagni-pietro-komponist-1863-1945-2505-56.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-56
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-57>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/massenet-jules-komponist-1842-1912-2505-57.html'>
+                            <img class='thumb' src='/img/thumb/massenet-jules-komponist-1842-1912-2505-57.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/massenet-jules-komponist-1842-1912-2505-57.html'><strong>Massenet, Jules, Komponist (1842-1912)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 3 Seiten, kl-8, Paris, 26. 1. 1885. - An eine Dame in London über seine Oper "Manon" und ihre geplante Aufführung ebenda. "Voilà une tres agréable surprise que votre lettre datée de Londres! - Vous pensez à moi & vous vous interéssez à 'Manon'. - Il est juste d'ajouter que Madame Marie Roze est absolument charmante. - Qu'il me tarde de l'entendre moi, qui me suis entouré de ses portraits à Paris! - Je ne sais quand Manon passera à Londres - c'est alors que j'irai - Pourvu que vous y soyez encore et que je puisse profiter de l'intéressante invitation dont vous me parlez - je serai avec vous comme je suis toujours bien à vous de coeur J. Massenet". <br /><br />
+                    <span style="display: none">Die Oper "Manon", neben "Werther" das populärste Werk Massenets, war 1884 in der Pariser Opéra-Comique uraufgeführt worden; die Titelrolle gehörte zu den großen Partien der französischen Sopranistin Marie Roze (1846-1926).</span>
+                    <a href='/artikel/massenet-jules-komponist-1842-1912-2505-57.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-57
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/meyerbeer-giacomo-komponist-1791-1864-2409-72.html'>
+                            <img class='thumb' src='/img/thumb/meyerbeer-giacomo-komponist-1791-1864-2409-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/meyerbeer-giacomo-komponist-1791-1864-2409-72.html'><strong>Meyerbeer, Giacomo, Komponist (1791- 1864)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 3/4 Seite, in-8, (Berlin), "Donnerstag" (30. 5. 1861). - An die Sängerin Pauline Lucca. "Geehrtes Fräulein! Es ist mir so eben der Befehl ertheilt worden daß Sie im heutigen Hofconcert 3maal singen. - Haben Sie daher die Güte auch die Romanze der Jüdinn (im 2t. Akt) zu singen u. auch Ihre Parthie mitzubringen / Genehmigen Sie den Ausdruck meiner vollkommensten Hochachtung Meyerbeer." - Mit blindgeprägtem Monogramm. <br /><br />
+                    <span style="display: none">Die aus Wien stammende Pauline Lucca (1841-1908) sang zunächst an der Wiener Hofoper, dann in Olmütz und Prag; 1861 wurde sie von Meyerbeer, der seit 1842 Generalmusikdirektor in Berlin war, an die dortige Königliche Hofoper geholt. Meyerbeer unterrichtete die Sängerin auch noch weiterhin und erreichte für sie ein Engagement auf Lebenszeit. Zu ihren Bewunderern und Unterstützern zählten unter anderem König Wilhelm I. und Otto von Bismarck. Halévys Oper "La Juive" (Die Jüdin) wurde 1835 an der Pariser Oper uraufgeführt. - Gedruckt in S. Henze-Döhring (Hrsg.), Giacomo Meyerbeer: Briefwechsel und Tagebücher Bd. 8 (2006). Wir danken Frau Henze-Döhring für die Identifizierung der Adressatin und die Feststellung des Datums.</span>
+                    <a href='/artikel/meyerbeer-giacomo-komponist-1791-1864-2409-72.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-72
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/meyerbeer-giacomo-komponist-1791-1864-2202-62.html'>
+                            <img class='thumb' src='/img/thumb/meyerbeer-giacomo-komponist-1791-1864-2202-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/meyerbeer-giacomo-komponist-1791-1864-2202-62.html'><strong>Meyerbeer, Giacomo, Komponist (1791-1864)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift und eigh. Adressblatt, 1 Seite, in-8, "Montag" [Berlin, 3. 5. 1858]. - An James Hirschfeld in der Schlesingerschen Musikhandlung. "Hochgeehrter Herr! Mit dem besten Dank schicke ich Ihnen anbei die geliehenen Musikstücke zurück, nämlich Antigone, Jubelouverture Maria und ihr Genius. Sie würden mich sehr verbinden wenn Sie mir auf 1 Stunde einen französischen und italiänischen Klavierauszug der Hugenotten durch den Überbringer dieses schicken könnten, da ich dessen in diesem Augenblick bedarf. Genehmigen Sie die Versicherungen meiner vollkommensten Hochachtung Meyerbeer". - Geringfügig fleckig. <br /><br />
+                    <span style="display: none">Gedruckt in S. Henze-Döhring (Hrsg.), Giacomo Meyerbeer. Briefwechsel und Tagebücher Bd. 7 (2004), 302. - "Antigone": Schauspielmusik von Mendelssohn (1841); "Maria und ihr Genius": Kantate Meyerbeers zur Feier der Silbernen Hochzeit der Prinzessin und des Prinzen Carl von Preußen (1852). Meyerbeers bekannteste Oper "Les Huguenots" wurde 1836 uraufgeführt. Der renommierte Berliner Musikverlag Schlesinger bestand bis 1864.</span>
+                    <a href='/artikel/meyerbeer-giacomo-komponist-1791-1864-2202-62.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-62
+                    <br />
+                    
+                        € 500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/millocker-carl-komponist-1842-1899-2409-73.html'>
+                            <img class='thumb' src='/img/thumb/millocker-carl-komponist-1842-1899-2409-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/millocker-carl-komponist-1842-1899-2409-73.html'><strong>Millöcker, Carl, Komponist (1842-1899)</strong></a><br /><br />
+                    Eigenhändiges Notenzitat mit unterlegtem Text und Unterschrift auf Kartonblatt in Postkartengröße, Wien, 28. 11. 1898. - 4 Takte aus der Operette "Gasparone" auf die Worte "Anzo-letto sang: Komm mia bella! Unterm Fenster der holden Estrel-la etc." - Minimal fleckig. <br /><br />
+                    <span style="display: none">"Gasparone" (nach einem Libretto von Friedrich Zell und Richard Genée) wurde am 26. 1. 1884 am Theater an der Wien uraufgeführt und zählt zu den populärsten Werken des Komponisten.</span>
+                    <a href='/artikel/millocker-carl-komponist-1842-1899-2409-73.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-73
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-55>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/moscheles-ignaz-pianist-und-komponist-1773-1830-2509-55.html'>
+                            <img class='thumb' src='/img/thumb/moscheles-ignaz-pianist-und-komponist-1773-1830-2509-55.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/moscheles-ignaz-pianist-und-komponist-1773-1830-2509-55.html'><strong>(Moscheles, Ignaz, Pianist und Komponist, 1773-1830)</strong></a><br /><br />
+                    Brief eines Musikliebhabers an Moscheles, 1 Seite, gr-8, Schlan (Böhmen) 7. 9. 1816. - "Sie erhalten werther Orpheus, anmit das besprochene russische Vaterunser wie ich selbes von dem russischen Generalen Engelhard bekam, und ich bin sehr begierig ob und welchen Gebrauch Sie von dieser Pièce zu machen fänden,  welche einfach und feierlich von dem andächtigen Gesange der Russen begleitet vielleicht selbst den grossen Haydn angesprochen hätte. - Um Dienstags des Vergnügens Sie wiederzusehen, und Ihr liebes bewundernswerthes Spiel auf meinem Stolz werdenden prager Piano zu hören, gewiß theilhaft zu werden, ersuche ich Sie lieber Moscheles, mir womöglich morgen noch hieher zuschreiben zu wollen, wann Sie in Prag ankommen, und wann ich also - allenfalls selbst Mittwochs früh - Sie bei mir erwarten kann. - Ihrem lieben Herrn und Frau von Haus, und Ihnen, empfiehlt sich mit unverlöschlicher froher Rückerinnerung auf den gestrigen Abend - Ihr ergebenster Philipp G. Hartmann". - Gebräunt, etwas knittrig und fleckig. - Beiliegend ein Stahlstich-Porträt von Carl Meyer, Nürnberg um 1830, Bildformat ca. 9 x 9 cm. <br /><br />
+                    <span style="display: none">Schöner zeittypischer Brief an den damals erst 22-jährigen Musiker. In Prag geboren, studierte Moscheles zunächst am dortigen Konservatorium und dann in Wien bei Johann Georg Albrechtsberger und Antonio Salieri, dem er 1816 seine Fantaisie heroique (op. 13) widmete. Der hervorragende Klavierpädagoge war später Lehrer von Felix Mendelssohn Bartholdy und stand mit seinem großen Vorbild Beethoven in freundschaftlichem Kontakt. Die ehemalige Königsstadt Schlan (Slaný) liegt etwa 25 km nordwestlich von Prag. Das erwähnte "russische Vaterunser" liegt nicht bei.</span>
+                    <a href='/artikel/moscheles-ignaz-pianist-und-komponist-1773-1830-2509-55.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-55
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/penderecki-krysztof-komponist-1933-2020-2309-62.html'>
+                            <img class='thumb' src='/img/thumb/penderecki-krysztof-komponist-1933-2020-2309-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/penderecki-krysztof-komponist-1933-2020-2309-62.html'><strong>Penderecki, Krysztof, Komponist (1933-2020)</strong></a><br /><br />
+                    Fotoporträt mit eigenhändigem Namenszug (blauer Faserstift) auf der Bildseite, 17 x 13 cm, ohne Ort und Datum (um 1990). <br /><br />
+                    <span style="display: none">Ohne Fotographenangabe. Mit seinen Klangkompositionen zählt der polnische Komponist zu den bedeutendsten Vertreten der neueren Musik; er erwarb sich auch durch sein christlich-humanistisches Engagement internationale Anerkennung.</span>
+                    <a href='/artikel/penderecki-krysztof-komponist-1933-2020-2309-62.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-62
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/puccini-giacomo-komponist-1858-1924-2202-76.html'>
+                            <img class='thumb' src='/img/thumb/puccini-giacomo-komponist-1858-1924-2202-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/puccini-giacomo-komponist-1858-1924-2202-76.html'><strong>Puccini, Giacomo, Komponist (1858-1924)</strong></a><br /><br />
+                    Eigenhändiges Brieffragment (Schluss mit Unterschrift fehlt), 4 Seiten, kl-8, Torre del Lago (Briefkopf), 14. 11. 1913. - An seinen Verleger Tito Ricordi. "Caro Tito, non so perché tu aspettassi un mio pentimento postumo dopo quanto ti scrissi. Se lo feci, credimi non fu per un impulsivo sfogo nervoso, ma perché l'episodio viennese ha fortemente scossa la mia sensibilità. Tu sai - o meglio non sai, perché i nostri temperamenti sono e saranno sempre troppo diversi - che spesso le piccole cose acquistano una grande importanza e basta un movimento brusco a distruggere anche un'infinità di opere belle e buone = Di questi - dirò cosi - scarti è tua consuetudine abusare ...". - Leichte Bug- und Randmängel, kleiner Eckabriss mit minimalem Textverlust, Tintenstrich auf der zweiten Seite. Vollständige Transkription und Übersetzung sowie ein ausführlicher Kommentar liegen bei. <br /><br />
+                    <span style="display: none">Tito Ricordi (1865-1933) hatte im Jahr zuvor nach dem Tod seines Vaters Giulio dessen Musikverlag übernommen. Puccini berührt in seinem Brief verschiedene Unstimmigkeiten und Spannungen, zu denen es vor allem im Zuge seines Wien-Aufenthalts im Oktober 1913 - der Komponist bereitete hier die Erstaufführung seiner Oper "La fanciulla del West" vor - gekommen war. Erwähnt werden unter anderem Ricordis führender Mitarbeiter Carlo Clausetti, eine gescheiterte Zusammenarbeit mit dem Dichter Gabriele d'Annunzio sowie Puccinis musikalische Bearbeitung von Didier Golds einaktigem Drama "La Houppelande".</span>
+                    <a href='/artikel/puccini-giacomo-komponist-1858-1924-2202-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-76
+                    <br />
+                    
+                        € 1400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ravel-maurice-komponist-1875-1937-2505-73.html'>
+                            <img class='thumb' src='/img/thumb/ravel-maurice-komponist-1875-1937-2505-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ravel-maurice-komponist-1875-1937-2505-73.html'><strong>Ravel, Maurice, Komponist (1875-1937)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 4 Seiten, kl-8, Montfort l'Amaury (Briefkopf mit Monogramm), 17. 12. 1922. - An die Geigerin Hélène Jourdan-Morhange (1888-1961). Hat die Uraufführung seiner "Berceuse sur le nom de Gabriel Fauré" mit ihr als Interpretin unglückseligerweise versäumt, berichtet von Schwierigkeiten mit dem Telefon und vom Einbau einer neuen Heizung in seinem Haus. "Chère amie, vouz avez été bien gentille de téléphoner l'autre matin. Mon état n'était pas grave : quand je vous ai téléphoné, je ne tenais pas debout. J'ai la malheureuse faculté de pouvoir me passer de dormir pendant assez longtemps. Mais au bout de quelque temps, je tombe. Il est fâcheux que la crise ait coincidé avec le concert. Comme on a dû vous le dire, j'ai essayé de vous téléphoner. Vers 3h, où l'on m'avait dit que vous passeriez chez vous, impossible d'avoir la communication : silence, erreurs, 'pas libre', etc. Je n'ai pu partir que le lendemain. Naturellement, pas un moment pour aller vous voir, m'excuser, avoir des nouvelles de la 'Berceuse'. Vous me raconterez ça bientôt. On ne manquera pas de se voir vers le nouvel an. Pas ici, sûrement : les radiateurs sont dans le jardin depuis 4 jours. Dieu sait quand ils vont être installés ! En attendant, il ne fait pas chaud. Alors, je fais comme Pussy : je dors. A bientôt, et l'affectueux souvenir de votre Maurice Ravel". <br /><br />
+                    <span style="display: none">"Pussy": Ravels Katze. - Der Komponist hatte das Talent von Hélène Jourdan-Morhange bereits 1917 entdeckt, sie wurde zu seiner Vertrauten und bevorzugten Interpretin. Das Auftragswerk "Berceuse sur le nom de Gabriel Fauré" für Violine und Klavier zu Ehren seines Lehrers Fauré schrieb Ravel im September 1922 in einem Tag. Wie Hélène Jourdan-Morhange in ihren Erinnerungen berichtet, hätte er zur Uraufführung am 13. Dezember selbst den Klavierpart übernehmen sollten, probte noch am Abend zuvor mit ihr und verschlief dann das Konzert nach Einnahme von Schlafmitteln in seinem Hotel; Caroline Alice Morhange-Charpentier, die Schwester der Geigerin, sprang für ihn ein.</span>
+                    <a href='/artikel/ravel-maurice-komponist-1875-1937-2505-73.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-73
+                    <br />
+                    
+                        € 2750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ridderbusch-karl-bass-1932-1998-1909-79.html'>
+                            <img class='thumb' src='/img/thumb/ridderbusch-karl-bass-1932-1998-1909-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ridderbusch-karl-bass-1932-1998-1909-79.html'><strong>Ridderbusch, Karl, Bass (1932-1998)</strong></a><br /><br />
+                    Großes farbiges Rollenfoto (25,5 x 20,5 cm) als Hans Sachs mit eigenhändiger Widmung und Unterschrift im weißen Seitenrand, Oktober 1977. - "Mit allen guten Wünschen herzlichst Ihr Ridderbusch ...". <br /><br />
+                    <span style="display: none">Der deutsche Sänger debütierte 1967 in Bayreuth und sang hier bis 1977 alle großen Bassrollen. Er war Stammgast in allen großen Opernhäusern der Welt und trat ab 1968 sowohl an der Wiener Staatsoper wie bei den Salzburger Osterfestspielen auf.</span>
+                    <a href='/artikel/ridderbusch-karl-bass-1932-1998-1909-79.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1909-79
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/rodzinski-artur-dirigent-1892-1958-2105-66.html'>
+                            <img class='thumb' src='/img/thumb/rodzinski-artur-dirigent-1892-1958-2105-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/rodzinski-artur-dirigent-1892-1958-2105-66.html'><strong>Rodzinski, Artur, Dirigent (1892-1958)</strong></a><br /><br />
+                    Großfoto 58 x 38 cm mit eigenhändiger bildseitiger Widmung und Unterschrift, ohne Ort, 1948. - "To my very - very dear friend Frantzl with thanks from the bottom of my soul for Everything Artur Rodzinsky ...". - Auf Karton montiert, Schrift etwas geblasst, Restaurierungs- und Rahmungsspuren. <br /><br />
+                    <span style="display: none">Schönes Porträt vor Notenhintergrund in ungewöhnlich großem Format. Rodzinski war der Sohn eines österreichisch-ungarischen Militärarztes und einer polnischen Musikerin, wuchs in Lemberg auf und studierte in Wien Komposition bei Joseph Marx und Franz Schreker. Er lebte ab 1926 in den USA und leitete dort als Chefdirigent namhafte Orchester, zuletzt (1947-1948) das Chicago Symphony Orchestra. Rodzinski verhalf Leonard Bernstein zu einem ersten Durchbruch und brachte 1944 in der New Yorker Carnegie Hall Arnold Schönbergs "Ode to Napoleon Buonaparte" zur Uraufführung. Gewidmet ist das Porträtfoto dem österreichisch-amerikanische Violinist Franz Polesny, der drei Jahrzehnte lang 2. Geiger des Chicago Symphony Orchestra war.</span>
+                    <a href='/artikel/rodzinski-artur-dirigent-1892-1958-2105-66.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-66
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ruzitska-anton-bratschist-1871-1933-2305-79.html'>
+                            <img class='thumb' src='/img/thumb/ruzitska-anton-bratschist-1871-1933-2305-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ruzitska-anton-bratschist-1871-1933-2305-79.html'><strong>Ruzitska, Anton, Bratschist (1871-1933)</strong></a><br /><br />
+                    Brauntoniges Porträtfoto des Ateliers d'Ora (d. i. Dora Kallmus), signiert "d'Ora 1915", Bildformat 20 x 16 cm, Gesamtgröße 38 x 25 cm, mit eigenhändiger Notenzeile, Widmung und Unterschrift auf dem weißen Unterlagskarton, Wien, 1. 1. 1920. - Drei Takte aus dem 5. Satz von Beethovens 13. Streichquartett op. 130 (Cavatina / Adagio molto espressivo), darunter "Zur Erinnerung an die schönen Abende in Lans u. Wien von Ihrem ergebensten Anton Ruzitska". - Gerahmt. <br /><br />
+                    <span style="display: none">Der in Ungarn geborene Anton Ruzitska (auch Ruschitzka) studierte in Wien, erhielt hier schon in jungen Jahren Engagements beim Hofopernorchester und bei den Philharmonikern und stieg 1903 zum Solo-Bratschisten auf. Von 1901 bis 1930 war er Mitglied des Rosé-Quartetts und wirkte hier bei zahlreichen Uraufführungen mit, unter anderem von Schönbergs "Verklärter Nacht". Ruzitska galt als einer der führenden Bratschisten seiner Zeit, stellte eine populäre Persönlichkeit im Wiener Musikleben dar und war außerdem für seinen Humor bekannt. - Das schöne Foto ist mit dem Prägestempel des Ateliers d'Ora versehen und zusätzlich auf dem Unterlagskarton mit Bleistift signiert und datiert "d'Ora 1915".</span>
+                    <a href='/artikel/ruzitska-anton-bratschist-1871-1933-2305-79.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-79
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schonberg-arnold-komponist-1874-1951-2105-72.html'>
+                            <img class='thumb' src='/img/thumb/schonberg-arnold-komponist-1874-1951-2105-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schonberg-arnold-komponist-1874-1951-2105-72.html'><strong>Schönberg, Arnold, Komponist (1874-1951)</strong></a><br /><br />
+                    Eigh. Brief mit Namensstampiglie und Unterschrift, 2 Seiten, kl-8, Wien (Stempel), 29. 12. (1910). - An seinen Schüler Rudolf  Weirich. "Lieber Weyrich, bitte beruhigen Sie Ihre w[e]r[ten] Eltern. Ich kann leider augenblicklich so wenig, wie je, meine Schuld tilgen. Aber ich glaube bestimmt, daß ich es im Jänner werde tun können. Es geht mir recht miserabel. Große Enttäuschungen! Kalamitäten ohne Ende! Bitte, sagen Sie Ihrem Herrn Papa, ich lasse ihn um etwas Geduld bitten. Das geht doch hoffentlich! / Warum lassen Sie nicht öfters, was von sich hören. Webern schreibt mir sehr oft. Auch Jalowetz und Horwitz! Nur Heim[?] und Karger[?] nicht! - / Meine Pelleas Aufführung in Berlin hatte sehr großen Erfolg. Jetzt sind dort bei Kassierer[!] sechs Bilder von mir ausgestellt. In Prag wurde mein erstes Streichquartett, in München das Sextett mit großem Erfolg aufgeführt. Jetzt - am 2. Jänner ist in München ein Kompositions-Abend von mir. Aber ich kann nicht hinfahren! / Die Kurse an der Akademie sind mäßig besucht. Fürs erste Jahr nicht schlecht, aber für mich. Meine Harmonielehre soll bald heraus. Mitte Februar soll mit dem Druck begonnen werden! Aber ich habe bis dahin noch viel daran zu arbeiten. In Wien soll die Kammersinfonie oder die Orchesterlieder aufgeführt werden. Sonst ist augenblicklich wenig los. / Schreiben Sie mir einmal was Aufrichtiges[?], wie es Ihnen beim Dirigieren geht? Wie Sie im Theater stehen; was für Chancen fürs nächste Jahr, und so weiter. Herzl[iche] Grüße, Prosit Neujahr, Ihr Arnold Schönberg." <br /><br />
+                    <span style="display: none">Inhaltsreicher Brief aus einer Zeit, die für Schönberg noch durch finanzielle Nöte gekennzeichnet war und künstlerisch für ihn den Übergang von der tonalen zur atonalen Musik bedeutete. Erwähnt werden eine Reihe seiner Schüler, wichtige Werke aus den ersten zehn Jahren seines kompositorischen Schaffens sowie Schönbergs Betätigung als Maler. Der Briefempfänger Rudolf Weirich (1886-1963), Sohn des Wiener Domkapellmeisters August Weirich, studierte bis zum Jahr 1910 bei Schönberg Komposition, wurde dann Korrepetitor und Kapellmeister an verschiedenen Bühnen, Mitarbeiter der RAVAG und zuletzt Studienleiter an der Wiener Staatsoper. Anton von Webern (1883-1945) war einer der ersten Schüler Schönbergs und gehörte mit Alban Berg zum inneren Kreis der Wiener Schule. Heinrich Jalowetz (1882-1946) studierte sowohl bei Arnold Schönberg wie bei Alexander von Zemlinsky und dirigierte später mehrere Werke des Schönberg-Kreises. Karl Horwitz (1884-1925) nahm bis 1908 Privatunterricht bei Schönberg und wurde 1911 von Zemlinsky als Kapellmeister am Deutschen Landestheater in Prag engagiert. - Schönbergs 1902/1903 komponierte symphonische Dichtung "Pelleas und Melisande" stieß bei der Wiener Uraufführung unter der Leitung des Komponisten (1905) zunächst auf Unverständnis. Bei dem erwähnten "ersten Streichquartett" handelt es sich vermutlich um das 1904/1905 entstandene Quartett in d-moll (op. 7), nicht um das bereits 1898 aufgeführte Frühwerk in D-Dur ohne Opuszahl; das Sextett (op. 4, 1899) wurde von Richard Dehmels Gedicht "Verklärte Nacht" inspiriert und ist eines der bekanntesten Werke des Komponisten. Schönbergs Harmonielehre, von ihm als "Handwerkslehre" verstanden, erschien wie geplant im folgenden Jahr. Die Kammersymphonie für fünfzehn Soloinstrumente (op. 9) war im Februar 1907 in Wien durch das Rosé-Quartett und Mitglieder des Hofopernorchesters uraufgeführt worden und bewirkte einen kleinen Skandal; bei einer weiteren Aufführung im März 1913 kam es zu tumultartigen Szenen ("Watschenkonzert"). Die Sechs Orchesterlieder (op. 8) entstanden in den Jahren 1903-1905, wurden aber erst 1913 von Schönberg nochmals revidiert und zur Drucklegung freigegeben. - Die im Stempel angeführte Wohnung auf der Hietzinger Hauptstraße hatte Schönberg im Februar 1910 mit seiner Familie bezogen. Er nutzte sie auch als Atelier - das Malen war ihm damals gleich wichtig wie das Komponieren - und schuf hier in den folgenden Monaten eine Reihe von Selbstporträts, Porträts, Nachtstücken und anderes. Im Juni versuchte er in der renommierten Wiener Galerie Miethke eine Einzelausstellung zu bekommen, was jedoch nicht gelang. Der Buchhändler, Verleger und Konzertveranstalter Hugo Heller ermöglichte Schönberg schließlich im Oktober 1910 seine erste Ausstellung mit rund 40 Bildern und Zeichnungen. Paul Cassirer (so die korrekte Schreibung) war ein bedeutender Verleger, Kunsthändler und Galerist in Berlin, wo Schönberg in den Jahren 1901 bis 1903 als Kapellmeister und Theorielehrer tätig war.</span>
+                    <a href='/artikel/schonberg-arnold-komponist-1874-1951-2105-72.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-72
+                    <br />
+                    
+                        € 6500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schultze-norbert-komponist-1911-2002-2309-74.html'>
+                            <img class='thumb' src='/img/thumb/schultze-norbert-komponist-1911-2002-2309-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schultze-norbert-komponist-1911-2002-2309-74.html'><strong>Schultze, Norbert, Komponist (1911-2002)</strong></a><br /><br />
+                    Porträtpostkarte (Foto Röhert, Berlin) mit eigenhändiger Widmung und Unterschrift im weißen Unterrand, 24. 3. 1968. <br /><br />
+                    <span style="display: none">Schultze wurde vor allem durch den 1938 komponierten und 1941 erstmals von Radio Belgrad ausgestrahlten Welterfolg "Lili Marleen" bekannt, schrieb aber auch eine Reihe von Bühnenwerken (darunter die Märchenoper "Schwarzer Peter"), Musicals und Filmmusik.</span>
+                    <a href='/artikel/schultze-norbert-komponist-1911-2002-2309-74.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-74
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-77>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sibelius-jean-komponist-1865-1957-2105-77.html'>
+                            <img class='thumb' src='/img/thumb/sibelius-jean-komponist-1865-1957-2105-77.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sibelius-jean-komponist-1865-1957-2105-77.html'><strong>Sibelius, Jean, Komponist (1865-1957)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift in deutscher Sprache, 1 Seite, kl-4, Järvenpää, 5. 9. 1921. - An den Musikverleger Robert Heinrich Lienau. "Lieber Herr Lienau, Bitte gütigst das Geld, das ich bei Ihnen habe an meinen[!] Tochter zu senden, unter Adresse: Fräulein Katarina Sibelius / Adr: Oberstleutnant Bazing, Hohenstaufenstr. 21. Stuttgart. / Anbei ein Papier mit meiner Unterschrift, das als Quittung zu ergänzen und zu brauchen ist. Mit den herzlichsten Grüssen, Ihr ergebener Jean Sibelius". Ohne die Beilage. - Geschrieben auf Terwakoski-Büttenpapier mit Wasserzeichen Elchkopf; Bleistiftvermerke des Empfängers. Gelocht, minimale Mängel am rechten Rand. <br /><br />
+                    <span style="display: none">Robert Heinrich Lienau (1866-1949) leitete seit 1898 den deutschen Musikverlag Robert Lienau in Erzhausen und übernahm 1905 von Sibelius dessen Werke op. 46-56 in seinen Verlag. Aus der 1892 geschlossenen Ehe des Komponisten mit Aino Järnefelt gingen neben Katarina (1903-1984) noch fünf weitere Töchter hervor.</span>
+                    <a href='/artikel/sibelius-jean-komponist-1865-1957-2105-77.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-77
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/slezak-leo-tenor-1873-1946-2403-75.html'>
+                            <img class='thumb' src='/img/thumb/slezak-leo-tenor-1873-1946-2403-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/slezak-leo-tenor-1873-1946-2403-75.html'><strong>Slezak, Leo, Tenor (1873-1946)</strong></a><br /><br />
+                    Beidseitig eigenhändig beschriebene Porträtpostkarte (Rollenbild als Alfonso in Wolfgang Korngolds Oper "Violanta") mit Unterschrift, Wien, 20. 12. 1927. - "Lieber Herr College, ich danke Ihnen herzlich für die Marken, Sie haben mir eine große Freude damit gemacht. - Ich bin ganz traurig, daß Sie diese herrliche Sammlung hergeben wollen -  seien Sie mir nicht leichtsinnig und wenn schon - dann womöglich nicht verschleudern. Herzliche Grüße und beste Weihnacht von Ihrem  Slezak". <br /><br />
+                    <span style="display: none">Slezak war leidenschaftlicher Briefmarkensammler. In "Wortbruch", einem seiner autobiographischen Bücher, beschreibt er humorvoll eine damit verbundene Episode aus seinem Leben.</span>
+                    <a href='/artikel/slezak-leo-tenor-1873-1946-2403-75.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-75
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/slezak-leo-tenor-1873-1946-2202-86.html'>
+                            <img class='thumb' src='/img/thumb/slezak-leo-tenor-1873-1946-2202-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/slezak-leo-tenor-1873-1946-2202-86.html'><strong>Slezak, Leo, Tenor (1873-1946)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 3 1/2 Seiten, kl-8, Tegernsee, 30. 7. 1902. - (An den Intendanten des Prinzregententheaters in München). "Euer Wolgeboren! Teile Ihnen ergebenst mit, daß ich mich hier in Tegernsee aufhalte, falls Sie mich zu Proben brauchen sollten. - Auch bitte ich Sie, die Güte zu haben mir mitzutheilen, wann Einer der Herrn Correpititoren[!] in München ist, der mit mir eine oder zwei Soloproben vom Tannhäuser halten könnte, da ich denselben seit 2 Jahren nicht in pariser Bearbeitung gesungen habe; sollte eine Probe nicht möglich sein so möchte ich gerne die Rolle = privatim = bei einem der Herrn durchnehmen. Ich bitte Sie, die Güte zu haben mir auf einem Kärtchen das mitzutheilen, weil ich dann so bald als möglich nach München zur Probe käme. - Auch stünde ich da zu einer eventuellen Costümprobe zur Verfügung. - Indem ich Sie bitte meine Belastigung[!] gütigst zu entschuldigen auch mir ehemöglichst Nachricht zukommen zu lassen, zeichne ich mit dem Ausdrucke der vorzüglichsten Hochachtung ergebenst Slezak Leo". <br /><br />
+                    <span style="display: none">Das Prinzregententheater in München-Bogenhausen wurde in den Jahren 1900-1901 von Max Littmann nach dem Vorbild des Bayreuther Festspielhauses errichtet. Bereits 1863 hatten Richard Wagner und der Bayernkönig König Ludwig II. ein eigenes Festspielhaus für München geplant, das von Gottfried Semper gebaut werden sollte. Das Projekt scheiterte aber und geriet in Vergessenheit. Der Bau des Prinzregententheaters, gegen den Wagners Witwe Cosima zunächst heftig opponierte, holte seine Verwirklichung Jahrzehnte später nach und leitete eine glanzvolle Ära sommerlicher Opernfestspiele in München ein. Wagners fünfte vollendete Oper "Tannhäuser und der Sängerkrieg auf Wartburg" wurde 1845 in Dresden uraufgeführt und vom Komponisten später mehrfach umgeändert; die sogenannte Pariser Fassung entstand 1861. Die Titelpartie zählte zu den Glanzrollen von Leo Slezak.</span>
+                    <a href='/artikel/slezak-leo-tenor-1873-1946-2202-86.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-86
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/stolz-robert-komponist-1880-1975-2102-83.html'>
+                            <img class='thumb' src='/img/thumb/stolz-robert-komponist-1880-1975-2102-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/stolz-robert-komponist-1880-1975-2102-83.html'><strong>Stolz, Robert, Komponist (1880-1975)</strong></a><br /><br />
+                    Zwei maschinschriftliche Briefe (einer davon als Durchschlag) mit eigenhändiger Unterschrift, jeweils 1 Seite, kl-4, Wien, 21. 6. und 3. 8. 1972. - An den Schriftsteller und Übersetzer Max Knight in Berkeley, der sich für seine englische Bearbeitung von Nestroys "Der Talisman" Musik von Stolz wünschte. "... werde ich Ihnen in den nächsten Tagen einige Manuskripte schicken, mit der Anmerkung, für welche Stellen im TALISMANN[!] ich mir diese Kompositionen denke. Es dürfte nicht schwer sein für Sie und Ihren Freund und Mitarbeiter Joe Fabry diese Kompositionen zu textieren. Wie ich aus den mir eingesandten Texten ersehe, haben Sie beide eine große Erfahrung und beherrschen vollkommen Sprache und Reimtechnik. Wo sich die Möglichkeit ergibt, werde ich vielleicht einen Ihrer Texte komponieren, aber für mich ist es viel leichter, wenn ich Ihnen die Musik für den jeweiligen musikalischen Komplex schicke und Sie den Text dazu dichten. Wie Sie wissen, es gibt nur 7 Ganztöne und 5 Halbtöne, während die englische sprache mindestens 8000 Worte umfasst ...". - Der Durchschlag unregelmäßig beschnitten, etwas knittrig und seitlich mehrfach gelocht. - Beiliegend zwei bildgleiche eigh. Grußkarten von Robert Stolz an Max Knight vom August 1972, zusätzlich unterschrieben von seiner Frau Einzi. <br /><br />
+                    <span style="display: none">Der als Max Eugen Kühnel geborene Briefempfänger (1909-1993) floh nach dem Anschluss über London und China in die USA, wo er Werke deutschsprachiger Schriftsteller wie Christian Morgenstern, Bertolt Brecht, Karl Kraus und Johann Nestroy in kongenialer Weise ins Englische übersetzte. Seine gemeinsam mit dem ebenfalls aus Österreich emigrierten Joseph Fabry (eigentlich Josef Epstein) erstellte Talisman-Bearbeitung erschien bereits 1967 in New York im Druck.</span>
+                    <a href='/artikel/stolz-robert-komponist-1880-1975-2102-83.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-83
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/strawinsky-igor-komponist-1882-1971-2009-70.html'>
+                            <img class='thumb' src='/img/thumb/strawinsky-igor-komponist-1882-1971-2009-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/strawinsky-igor-komponist-1882-1971-2009-70.html'><strong>Strawinsky, Igor, Komponist (1882-1971)</strong></a><br /><br />
+                    Kartonblatt mit aufgezogenem Originalfoto und eigenhändigem Namenszug, 30 x 20,5 cm. <br /><br />
+                    <span style="display: none">Nach Angabe des Vorbesitzers zeigt das Foto den russischen Komponisten mit George Manzau, Orchesterwart der Hamburger Symphoniker, bei einer Konzertprobe 1962 in Hamburg.</span>
+                    <a href='/artikel/strawinsky-igor-komponist-1882-1971-2009-70.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-70
+                    <br />
+                    
+                        € 580,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-98>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/terschak-adolf-flotist-und-komponist-1832-1901-2409-98.html'>
+                            <img class='thumb' src='/img/thumb/terschak-adolf-flotist-und-komponist-1832-1901-2409-98.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/terschak-adolf-flotist-und-komponist-1832-1901-2409-98.html'><strong>Terschak, Adolf, Flötist und Komponist (1832-1901)</strong></a><br /><br />
+                    Vollständiges Musikmanuskript mit eigenhändiger Widmung "Souvenir d'amitié" und Unterschrift, 2 Seiten, in-4, Kronstadt, 12. 3. 1856. - "The last rose of summer" für Flöte mit Klavierbegleitung, auf mechanisch vorgezogenen Notenzeilen notiert. Mit einzelnen Korrekturen. - Leichte Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Selten. Der in Prag geborene und in Hermannstadt aufgewachsene Musiker Adolf Terschak studierte am Wiener Konservatorium und unternahm zahlreiche ausgedehnte Konzertreisen, die ihn bis nach China und Japan führten. Seine Flötenkompositionen wurden vielfach als Übungsstücke benutzt. - Provenienz: Nachlass des Wiener Antiquars Heinrich Hinterberger (Originalumschlag beiliegend).</span>
+                    <a href='/artikel/terschak-adolf-flotist-und-komponist-1832-1901-2409-98.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-98
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-101>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/toscanini-arturo-dirigent-1867-1957-2409-101.html'>
+                            <img class='thumb' src='/img/thumb/toscanini-arturo-dirigent-1867-1957-2409-101.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/toscanini-arturo-dirigent-1867-1957-2409-101.html'><strong>Toscanini, Arturo, Dirigent (1867-1957)</strong></a><br /><br />
+                    "A Armin Tyroler / Cordialmente / Arturo Toscanini ...". Originalfoto von einer Orchesterprobe (Aufnahme Atelier Ellinger, Salzburg), 17 x 22 cm, auf Karton montiert und dort mit eigenhändiger Widmung und Unterschrift versehen, Wien, 29. 11. 1936. - Zeitgenössisch gerahmt, leichte Altersspuren. <br /><br />
+                    <span style="display: none">Der Widmungsträger Armin Tyroler (1873-1944) war Oboist und langjähriges Mitglied der Wiener Philharmoniker, unterrichtete auch am Wiener Konservatorium und engagierte sich in verschiedenen Standesvertretungen. Obwohl evangelisch getauft, wurde er als Jude 1942 mit seiner Frau nach Theresienstadt deportiert und mit ihr 1944 in Auschwitz ermordet; er gehört zu den sieben in der Shoah umgekommenen Philharmonikern. Die fotographische Aufnahme stammt vermutlich von Anton Steinhart (1889-1964), der Mitbesitzer des Ateliers Ellinger und einer der führenden Salzburger Porträtfotographen der Zwischenkriegszeit war. Sie zeigt wohl eine Probe im Rahmen der Salzburger Festspiele, die Toscanini in den Jahren 1934 bis 1937 als Dirigent prägte.</span>
+                    <a href='/artikel/toscanini-arturo-dirigent-1867-1957-2409-101.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-101
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/violinvirtuosen-2505-90.html'>
+                            <img class='thumb' src='/img/thumb/violinvirtuosen-2505-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/violinvirtuosen-2505-90.html'><strong>Violinvirtuosen</strong></a><br /><br />
+                    3 Autographen: Yehudi Menuhin (1916-1999), reproduziertes farbiges Fotoporträt (15 x 10,5 cm) mit rückseitiger Widmung in deutscher Sprache von 1991; Isaac Stern (1920-2001), Fotoporträt (18 x 13 cm) mit englischer Widmung im weißen Unterrand von 1989; Pinchas Zukerman (geb. 1948), Fotoporträt der ICM Artists Ltd. (25 x 20 cm) mit undatierter Signatur im weißen Unterrand. <br /><br />
+                    <span style="display: none">Das Porträt Menuhins ist als Briefmarke gestaltet, ausgegeben von einer fiktiven "République de la Lyre universelle", und erschien zum 75. Geburtstag des unermüdlich für den Welfrieden engagierten Künstlers.</span>
+                    <a href='/artikel/violinvirtuosen-2505-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-90
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wagner-richard-komponist-1813-1883-2205-76.html'>
+                            <img class='thumb' src='/img/thumb/wagner-richard-komponist-1813-1883-2205-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wagner-richard-komponist-1813-1883-2205-76.html'><strong>Wagner, Richard,  Komponist (1813-1883)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite auf Doppelblatt, in-8, ohne Ort und Datum (nach Bleistiftvermerk eines Vorbesitzers Paris, 26. 6. 1860). An seinen Pariser Musikverleger und Freund Gustave-Alexandre Flaxland (1821-1895). "Ach, mein verehrtester Herr Flaxland! Da komme ich wieder mit einer Plage. Ich bin heute übermässig beschäftigt, mein Diener ist sehr dumm und weiss nicht Französisch. Andrerseits weiss ich, dass der Empfang von Musikalien, wie die beiliegend angezeigten, mit Chicanen verknüpft ist; jedenfalls aber haben Sie Jemand, der so etwas gut besorgt. Also -: haben Sie doch die grosse Güte, mir schnell die angekommene Musik (ich hoffe, die sehnlichst erwartete Partitur von Tannh.) auslösen zu lassen, damit ich sie heute vor Abend noch bekomme. Seien Sie mir nicht böse! - Ich hoffe Sie noch zu sehen, und bleibe jedenfalls Ihr sehr ergebener Richard Wagner." Geschrieben auf dünnem rosafarbenem Papier; hinten am Falz des Bogens ist eine handschriftliche Übersetzung des Briefs ins Englische angeheftet. <br /><br />
+                    <span style="display: none">Richard Wagner, Sämtliche Briefe Bd. 12, Nr. 169 (dort etwas gekürzt und datiert "Juni 1860"). - 1859 musste Wagner aus politischen Gründen Venedig verlassen. Nach einem Zwischenaufenthalt in Luzern begab er sich zusammen mit seiner ersten Frau Minna nach Paris, wo er bereits in den Jahren 1840-1842 unter ärmlichen Bedingungen gelebt hatte. Hier schloss er im Jänner 1860 mit Flaxland einen Vertrag über die Publikation seiner älteren Opern. Flaxland brachte im folgenden Jahr die französische Fassung des "Tannhäuser" als Klavierauszug und in Einzelstücken heraus; ihre Einstudierung durch Wagner an der Opéra Garnier in Paris wurde allerdings ein Misserfolg und der Komponist zog sein Werk zurück.</span>
+                    <a href='/artikel/wagner-richard-komponist-1813-1883-2205-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-76
+                    <br />
+                    
+                        € 6800,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wagner-richard-liszt-eduard-von-jurist-1817-1879-2509-86.html'>
+                            <img class='thumb' src='/img/thumb/wagner-richard-liszt-eduard-von-jurist-1817-1879-2509-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wagner-richard-liszt-eduard-von-jurist-1817-1879-2509-86.html'><strong>[Wagner, Richard.] - Liszt, Eduard von, Jurist (1817-1879)</strong></a><br /><br />
+                    "Abschrift meines Briefes an R. Wagner." Schreiben von Sekretärshand mit eigenhändiger Überschrift, eigenhändigen Korrekturen und Unterschrift Liszts, 14 1/4 Seiten in-8, Wien, 14. 5. 1864. "Verehrter Freund! Es war nach dem 20. Februar d. J., daß Sie mir mündlich und schriftlich die Nothlage eröffneten, welche durch bevorstehende Wechselzahlungen, für welche Sie keine Deckung hatten, für Sie hereinzubrechen drohte. Weder Doctor Standhartner, noch Cornelius, noch ein anderer Mensch wußte Rath, besonders da für Ihre Gläubiger  eine Summe von mehr als 15000 fl: nothwendig war ... Ich schlug damals vor, an die Frau Alexander von Schöller zu gehen, welche mit der Liebe für Ihre Kunst auch reiche Geldmittel verbinde ... mir aber gelang es ... im Subscriptions-Wege 1200 fl: für Sie aufzubringen, welche freilich nicht einmal für die ersten Wechsel-Accepte ausreichten. meinen und Dr: Standhardners[!]  Bemühungen bei Fürst Esterhazy, Lichtenstein, Baron Sina, Rothschild und anderen blieben völlig erfolglos ..." (Beschreibt den vergeblichen Versuch, eine Verlängerung des am 20. März fälligen Wechsels von Postelberger in der Höhe von 3900 fl: zu erreichen.) "Der Gläubiger wollte nicht, und Sie reisten am 23. April von Penzing ab. Sie wissen, wie viele Schritte ich damals im Stillen machte, um Ihren Ruf zu schonen, und sie vor der Überraschung eines Wechselarrestes zu bewahren. ich constatire hier blos, daß Sie hier nicht bleiben konnten ... Kaum waren Sie fort, meldete sich sofort ein neuer Wechselgläubiger ..." (Es folgen ausführliche Informationen zu den Forderungen weiterer Gläubiger, darunter Wagners Näherin mit mehr als 1300 fl: "für Kleider[,] Unterröcke und andere Frauensachen".) "Mein Bureau und mein Quartier war zu jener Zeit von Ihren Gläubigern förmlich belagert. Unter diesen sehr misslichen Umständen schickten Sie aus der Gegend von Zürich zwar mehrmals Weisungen und Aufträge, aber kein Geld ..." (Schildert die Schwierigkeiten, unter denen der Mietvertrag für Wagners Wohnung in Penzing aufgelöst werden musste; sie wurde auch von seiner Haushälterin Marie Völkl mitbenutzt.) "Ihr Hausherr both uns für die ganze vorhandene Einrichtung 300 fl: an ... Auch in dieser Noth fand ich einen Retter ... " (Berichtet von erfolgreichen Verhandlungen mit Gläubigern.) "Könnte man gegen eine Theilzalung von 1000 fl: noch eine Prolongirung der Glauber'schen Wechsel erwirken, so stand Ihrer beliebigen Rückkehr nach Wien nichts mehr im Wege. Diese Rückkehr zu ermöglichen und jede Publicität in Ihrer Angelegenheit zu verhüten, darauf war unser Augenmerk unverrückt gerichtet ... erwarteten wir die Nachricht von der Prolongirung ... um Ihnen sodann gleich einen triumphierenden Generalbericht zu übersenden. Die Sache kam anders ... Sie sollten durch die öffentlichen Blätter mittelst gerichtlichen Edictes ... zur Verantwortung aufgefordert werden ... Endlich am 10. Mai kamen Sie selbst auf 2 Tage nach Wien, benachrichtigten mich weder von Ihrer Ankunft, noch verlangten Sie mich zu sehen, und reisten wieder ab ... daß Sie Herrn Rebel zum Advocaten Trotter" (der Liszt Bemühungen äußerst negativ beurteilte) "einladen ließen, und ihn, der sich durchaus als Ehrenmann im strengsten Sinne des Wortes benommen hatte ... wie einen Handelsjuden behandelten, das muß ich ernstlich rügen ... Diese gedrängte Darstellung glaubte ich Ihnen, noch mehr aber mir schuldig zu sein. An meiner hohen Bewunderung Ihrer Werke haben die Erfahrungen der jüngsten Zeit nichts geändert ... Ihr ergebener Dr. Ed. Liszt". <br /><br />
+                    <span style="display: none">Ausführliche Informationen zu Wagners Verschuldung in Wien, die zur Flucht vor seinen Gläubigern führte. Eduard Liszt, Onkel des Komponisten Franz Liszt, vertrat zusammen mit dem Arzt Josef Standthartner (1818-1892) Wagners Interessen in Wien, womit der Komponist aber letzten Endes nicht glücklich war, vor allem wegen des ohne sein Wissen abgewickelten Verkaufs seines Hausrats und seines Érard-Flügels. Nachdem sich Wagner Unterstützung vom Wiener Rechtsanwalt Victor Trotter (1829-1909) geholt hatte und König Ludwig II. von Bayern die Begleichung von Wagners Schulden übernommen hatte, kam auch das gespannte Verhältnis zu Liszt wieder ins Lot. In einem Brief vom 23. 5. 1864 dankt Wagner Liszt ausdrücklich für seine Bemühungen ("Somit Friede, Vergebung und Verzeihung!"), moniert aber auch, dass er auf sein letztes Schreiben an Liszt (vermutlich ist damit ein erschlossener Brief vom 2. 5. 1864 gemeint) keine Antwort erhalten habe. Das lässt wohl die Möglichkeit offen, dass die Reinschrift des vorliegenden Briefs Wagner nicht abgeschickt wurde oder Wagner nicht erreicht hat. - Siehe M. Dürrer (Hrsg.), Richard Wagner: Sämtliche Briefe. Band 16:  Briefe des Jahres 1864, besonders Nr. 99 und 149 sowie S. 409-416.</span>
+                    <a href='/artikel/wagner-richard-liszt-eduard-von-jurist-1817-1879-2509-86.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-86
+                    <br />
+                    
+                        € 950,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wagner-winifred-schwiegertochter-richard-wagners-leiterin-der-bayreuther-festspiele-1897-1980-2505-92.html'>
+                            <img class='thumb' src='/img/thumb/wagner-winifred-schwiegertochter-richard-wagners-leiterin-der-bayreuther-festspiele-1897-1980-2505-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wagner-winifred-schwiegertochter-richard-wagners-leiterin-der-bayreuther-festspiele-1897-1980-2505-92.html'><strong>Wagner, Winifred, Schwiegertochter Richard Wagners, Leiterin der Bayreuther Festspiele (1897-1980)</strong></a><br /><br />
+                    Maschinschriftlicher Brief mit Unterschrift, 1 Seite, quer-8, Bayreuth (Briefkopf), 26. 1. 1943. An einen Hern von Senden, dem sie für den Fall des Stattfindens der Festspiele Zutritt zu den Proben in Aussicht stellt. - Seitlich gelocht, Falt- und leichte Knitterspuren. <br /><br />
+                    <span style="display: none">Winifred Wagner geb. Williams übernahm 1930 nach dem Tod ihres Mannes Siegfried Wagner die Leitung der Bayreuther Spiele. Sie wurden in der NS-Zeit staatlich finanziert und von Adolf Hitler als Freund der Familie regelmäßig besucht. Von 1940 bis 1944 fanden sie auf seine Anordnung hin als sogenannte "Kriegsfestspiele" statt, die entsprechend propagandistisch genutzt wurden und bei denen vor allem verwundete Soldaten mit ihrem Pflegepersonal sowie Rüstungsarbeiter Karten erhielten.</span>
+                    <a href='/artikel/wagner-winifred-schwiegertochter-richard-wagners-leiterin-der-bayreuther-festspiele-1897-1980-2505-92.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-92
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wagner-wolfgang-regisseur-1919-2010-2009-74.html'>
+                            <img class='thumb' src='/img/thumb/wagner-wolfgang-regisseur-1919-2010-2009-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wagner-wolfgang-regisseur-1919-2010-2009-74.html'><strong>Wagner, Wolfgang, Regisseur (1919-2010)</strong></a><br /><br />
+                    Porträtfoto 18 x 12,5 cm (Aufnahme Lauterwasser, Bildarchiv Bayreuther Festspiele) mit eigenhändiger Widmung und Unterschrift, Bayreuth 1984. - Beiliegend maschinschriftlicher Brief mit eigenhändiger Unterschrift, 1/2 Seite, kl-4, Bayreuth (Briefkopf der Festspiele), 24. 5. 1967. - Dankt einem Intendanten für  die Freigabe einer Tänzerin. "... Ich hoffe sehr, Sie in diesem Jahr einmal in Bayreuth zu sehen ...". <br /><br />
+                    <span style="display: none">Der Opernregisseur und Bühnenbildner Wolfgang Wagner war das dritte Kind von Siegfried und Winifred Wagner und ein Enkel von Richard Wagner. Er leitete die Bayreuther Festspiele von 1951 bis 1967 gemeinsam mit seinem Bruder Wieland und von 1967 bis 2008 allein, wobei er sie auf eine neue künstlerische und organisatorische Grundlage stellen konnte.</span>
+                    <a href='/artikel/wagner-wolfgang-regisseur-1919-2010-2009-74.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-74
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/webern-anton-von-komponist-1883-1945-2302-81.html'>
+                            <img class='thumb' src='/img/thumb/webern-anton-von-komponist-1883-1945-2302-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/webern-anton-von-komponist-1883-1945-2302-81.html'><strong>Webern, Anton (von), Komponist (1883-1945)</strong></a><br /><br />
+                    Eigenhändige Postkarte mit Unterschrift, Maria Enzersdorf, 16. 10. 1933. - An Rudolf Weirich in Wien. "Lieber Herr Dr., ich muß auf par[!] Tage weg u. bitte Sie u. Bittner vielmals, mich ja am 18. (Mittwoch) u. Samstag, d. 21. zu vertreten! Haben Sie die Güte u. seien Sie so lieb, sich mit Hofrat Bittner wegen der Aufteilung zu besprechen! Die Ravag verständige ich. Schönsten Dank im voraus! Immer Ihr Webern". <br /><br />
+                    <span style="display: none">Webern, einer der ersten Schüler von Arnold Schönberg, gehörte zum inneren Kreis der "Wiener Schule" und gilt auch als Vorläufer der seriellen Musik. Er war seit 1927 als Dirigent und seit 1930 als Fachberater, Lektor und Zensor bei der RAVAG, der ersten österreichischen Rundfunkgesellschaft, tätig. 1945 wurde er von einem amerikanischen Soldaten versehentlich erschossen. Der Jurist Rudolf Weirich (1886-1963), ebenfalls ein Schönberg-Schüler, arbeite als Korrepetitor und Kapellmeister an verschiedenen Bühnen, wurde 1928 Direktor der Wiener Volksoper und 1930 so wie Webern Mitarbeiter der RAVAG. "Hofrat Bittner": der Wiener Komponist und Schriftsteller Julius Bittner (1874-1939), ursprünglich Beamter im Justizministerium und in der Zwischenkriegszeit ebenfalls beim Rundfunk tätig.</span>
+                    <a href='/artikel/webern-anton-von-komponist-1883-1945-2302-81.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-81
+                    <br />
+                    
+                        € 1650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wolf-ferrari-ermanno-komponist-1876-1948-1902-97.html'>
+                            <img class='thumb' src='/img/thumb/wolf-ferrari-ermanno-komponist-1876-1948-1902-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wolf-ferrari-ermanno-komponist-1876-1948-1902-97.html'><strong>Wolf-Ferrari, Ermanno, Komponist (1876-1948)</strong></a><br /><br />
+                    Eigenhändiges Albumblatt mit Unterschrift (aus dem Gästebuch des Ehepaares Baron von Stranz), Altaussee, 24. 12. 1943. "Ricorderò sempre il bel Natale in casa della Baronessa e del Barone v. Strantz al Alt Aussee, dove non ci sono bonbons nè anglesi nè americani ...". <br /><br />
+                    <span style="display: none">Der deutsch-italienische Komponist, der als Erneuerer der Opera buffa gilt ("Die vier Grobiane"), erhielt 1939 eine Professur für Komposition am Salzburger Mozarteum und ließ sich in der Folge in Altaussee nieder. Nach dem Krieg übersiedelte er nach Zürich, sein letztes Lebensjahr verbrachte er in Venedig.</span>
+                    <a href='/artikel/wolf-ferrari-ermanno-komponist-1876-1948-1902-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-97
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/yun-isang-komponist-1917-1995-2403-90.html'>
+                            <img class='thumb' src='/img/thumb/yun-isang-komponist-1917-1995-2403-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/yun-isang-komponist-1917-1995-2403-90.html'><strong>Yun, Isang, Komponist (1917-1995)</strong></a><br /><br />
+                    Eigenhändige Notenzeile (3 Takte) auf Notenpapier mit Unterschrift, quer-8, Berlin, 15. 12. 1989. - Leichte Faltspur. <br /><br />
+                    <span style="display: none">Der in Südkorea aufgewachsene Isang Yun (eigentlich Yun I-sang) studierte in Paris und Berlin und erlangte mit seinen Kompositionen, in denen er fernöstliche Traditionen mit Techniken der westlichen Avantgarde verschmolz, internationale Anerkennung. 1967 wurde er nach einem Besuch Nordkoreas vom südkoreanischen Geheimdienst aus Deutschland entführt und wegen angeblichen Landesverrats in Südkorea zu lebenslanger Haft verurteilt. Nach internationalen Protesten im Februar 1969 wieder freigelassen, kehrte er nach Deutschland zurück und erhielt 1971 gemeinsam mit seiner Frau die deutsche Staatsbürgerschaft.</span>
+                    <a href='/artikel/yun-isang-komponist-1917-1995-2403-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-90
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-111>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zimmermann-udo-komponist-und-dirigent-1943-2021-2409-111.html'>
+                            <img class='thumb' src='/img/thumb/zimmermann-udo-komponist-und-dirigent-1943-2021-2409-111.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zimmermann-udo-komponist-und-dirigent-1943-2021-2409-111.html'><strong>Zimmermann, Udo, Komponist und Dirigent (1943-2021)</strong></a><br /><br />
+                    Musikalisches Billet mit eigenhändiger Notenzeile, Widmung und Unterschrift, 10 x 14,5 cm, Wien, 1. 2. 1987.  3 Takte aus seiner Oper "Die weiße Rose" auf die Worte "Gib Licht meinen Augen". - Zusammen mit einem kleinen Zeitungsporträt provisorisch auf Karton montiert. <br /><br />
+                    <span style="display: none">Der in Dresden geborene Musiker widmete sich vor allem dem Musiktheater und war auch als Dirigent und Intendant vielfach engagiert. Seine 1967 in Erstfassung und 1968 in erweiterter Fassung uraufgeführte Oper "Die weiße Rose" behandelt die letzten Stunden der Geschwister Scholl und zählt zu den meistgespielten zeitgenössischen Opern.</span>
+                    <a href='/artikel/zimmermann-udo-komponist-und-dirigent-1943-2021-2409-111.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-111
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

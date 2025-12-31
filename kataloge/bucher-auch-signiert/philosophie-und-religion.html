@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/philosophy-and-religion.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Philosophie und Religion
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2007-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bossuet-jacques-benigne-2007-4.html'>
+                            <img class='thumb' src='/img/thumb/bossuet-jacques-benigne-2007-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bossuet-jacques-benigne-2007-4.html'><strong>Bossuet, Jacques Bénigne</strong></a><br /><br />
+                    Super reunione Protestantium cum Ecclesia Catholica tractatus inter Jacobum Benignum Bossuetum Episcopum Meldensem et D. Molanum Abbatem in Lokkum. Wien, Sonnleithner, 1783. Gr-8; Titel, 3 Bll. (Erlass Kaiser Leopold I. vom 20. 3. 1691), 247 pp; mehreren Holzschnittvignetten; neuer Pappband mit goldgeprägtem Rückentitel in dekorativem Pappschuber; Titel restauriert, vereinzelt geringfügig fleckig oder feuchtrandig. <br /><br />
+                    <span style="display: none">Der französische Bischof, Geschichtsphilosoph und bedeutende Kanzelredner Bossuet (1627-1704) kämpfte aktiv gegen den Protestantismus. Das vorliegende Werk fußt auf den gegen Ende seines Lebens versuchten erfolglosen Einigungsverhandlungen mit dem Lutheraner Gerhard Walter Molanus, Konsistorialdirektor in Hannover und Abt von Loccum. - Schöner breitrandiger Wiener Druck, selten.</span>
+                    <a href='/artikel/bossuet-jacques-benigne-2007-4.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2007-4
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fischer-karl-philipp-2202-29.html'>
+                            <img class='thumb' src='/img/thumb/fischer-karl-philipp-2202-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fischer-karl-philipp-2202-29.html'><strong>Fischer, Karl Philipp</strong></a><br /><br />
+                    Die Freiheit des menschlichen Willens im Fortschritte ihrer Momente dargestellt. Tübingen, Osiander, 1833. In-8; XVI, 62 pp; durchschossenes Exemplar in interimistischem Kartonumschlag der Zeit, unbeschnitten; Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Eisler 182. - Die erste größere Veröffentlichung des deutschen Philosophen (1807-1865), der mit Christian Hermann Weiße und Immanuel Hermann von Fichte zu den Gründern der neueren Theistenschule zählt. - Selten.</span>
+                    <a href='/artikel/fischer-karl-philipp-2202-29.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-29
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/glatz-wenrich-johann-georg-1708-32.html'>
+                            <img class='thumb' src='/img/thumb/glatz-wenrich-johann-georg-1708-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/glatz-wenrich-johann-georg-1708-32.html'><strong>Glatz. - Wenrich, Johann Georg</strong></a><br /><br />
+                    Jakob Glatz, eine biographische Skizze. Wien, J. G. Heubner, 1834. Kl-8; lithogr. Porträtfrontispiz, VIII, 328, XI pp; bedruckte OBrosch. (etwas abgegriffen und fleckig); stellenweise leicht feuchtrandig, vereinzelt stärker wasserfleckig, eine Anzeichnung. <br /><br />
+                    <span style="display: none">ÖBL 2, 5. - Einzige Ausgabe, enthält auch Teile des Briefwechsels. Jakob Glatz (1776-1831), evangelischer Schriftsteller, Theologe und Pädagoge, verfasste zahlreiche Kinder- und Jugendschriften und war maßgeblich an der Gründung der evang.-theolog. Lehranstalt in Wien beteiligt.</span>
+                    <a href='/artikel/glatz-wenrich-johann-georg-1708-32.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-32
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/guntherode-karl-maria-von-2102-28.html'>
+                            <img class='thumb' src='/img/thumb/guntherode-karl-maria-von-2102-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/guntherode-karl-maria-von-2102-28.html'><strong>[Güntherode, Karl Maria von]</strong></a><br /><br />
+                    Korrespondenz der Heiligen aus dem Mittelalter; und Briefe der Narren aus den neueren Zeiten. Erstes Paket (von 3). Leipzig, Weygand, 1787. Kl-8; X (recte XII, inkl. Frontispiz), 2 Bll., 272 pp; späterer einfacher Halbleinenband (Kanten berieben, Innengelenke geringfügig angeplatzt); etwas gebräunt oder unfrisch, Frontispiz und Titel angeschmutzt und leicht knittrig, vereinzelt fleckig, alter Eintrag auf Spiegel. - Das Frontispiz gestochen von Georg Friedrich Jonas Frentzel (1754-1799). <br /><br />
+                    <span style="display: none">VD18 80514782; Holzmann-Bohatta 7, 5959; Hayn-G. 3, 609; vgl. auch Wurzbach 6, 15 f. - Anonyme satirisch-aufklärerische Schrift gegen Auswüchse der Religion, die an Schärfe und derbem Witz nichts zu wünschen übrig lässt und unter anderem auch Wiener Verhältnisse zum Thema hat. Sie wurde mit Verbot belegt und ist sehr selten; die 1787-1788 erschienenen Teile 2 und 3 sind seit Jahrzehnten auf keiner deutschen Auktion mehr aufgetaucht. Der Verfasser (1740-1795, auch Güntherod, Günderrode u. ä. geschrieben) trat achtzehnjährig in den Servitenorden in Innsbruck ein und unterrichtete später Rhetorik, Logik, Metaphysik und Theologie an der dortigen Hochschule. Wegen seiner nicht immer kirchenkonformen Lehrmeinungen entzog man ihm jedoch mehrere Male die Lehrbefugnis und verbannte ihn zeitweise in ein Kloster außerhalb von Innsbruck, später nach Gradiska. Auf der Reise dorthin kam er nach Wien, wo er vom Fürsten Esterhazy als Bibliothekar aufgenommen wurde. Von seinen Feinden denunziert und von der Polizei verfolgt, wurde er vom Fürsten nach Eisenstadt gebracht, dort aber auf Befehl der ungarischen Hofkanzlei 1794 festgenommen und zu den Serviten in Wien überstellt. Er wandte sich hilfesuchend an Kaiser Joseph II. und wurde rehabilitert, starb aber kurz darauf. - Eine Gegenschrift des Geistlichen, Historikers und Schriftstellers Franz Xaver Jann (1750-1828) erschien bereits 1788 unter dem Titel "Ist der Verfasser der Korrespondenz der Heiligen aus dem Mittelalter und der Briefe der Narren aus den neueren Zeiten nicht der ehrloseste Pasquillant?" in Augsburg. Güntherode selbst ließ im selben Jahr noch einen Nachtrag in Leipzig erscheinen: "Beiträge zur Correspondenz der Heiligen und Briefe der Narren sammt fünf und vierzig Preisfragen".</span>
+                    <a href='/artikel/guntherode-karl-maria-von-2102-28.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-28
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-39>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/indien-philosophie-2509-39.html'>
+                            <img class='thumb' src='/img/thumb/indien-philosophie-2509-39.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/indien-philosophie-2509-39.html'><strong>Indien / Philosophie</strong></a><br /><br />
+                    Acht Publikationen zur indischen Philosophie. Autoren: Erich Frauwallner (2), Gerhard Oberhammer, Lambert Schmithausen (2), Ernst Steinkellner und Tilmann Vetter (2); Titel siehe Abbildungen. Wien, Verlag der Österreichischen Akademie der Wissenschaften, 1965-1973. Alle Bände in-8; jeweils ca. 70 bis ca. 270 pp (insgesamt über 1200 pp); Orig.-Broschuren; zwei Bände am Rücken beschriftet, drei Bände mit leichten äußeren Lagerspuren. <br /><br />
+                    <span style="display: none">Veröffentlichungen der Kommission für Sprachen und Kulturen Süd- und Ostasiens (bzw. Südasiens) Heft 6-12, eine Publikation ohne Reihentitel; erschienen in den Sitzungsberichten der philosophisch-historischen Klasse. Abhandlungen über philosophische Themen der hinduistischen und buddhistischen Traditionen Indiens.</span>
+                    <a href='/artikel/indien-philosophie-2509-39.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-39
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/jordan-sylv-1710-48.html'>
+                            <img class='thumb' src='/img/thumb/jordan-sylv-1710-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/jordan-sylv-1710-48.html'><strong>Jordan, Sylv.</strong></a><br /><br />
+                    Die Jesuiten und der Jesuitismus. (Erweiterter Sonderabdruck aus dem von C. von Rotteck und C. Welcker hrsg. Staatslexikon). Altona & Leipzig, Hammerich, 1839. In-8; IV, 179, (1) pp. - [Beigebunden:] Friedrich Kortüm, Die Entstehungsgeschichte des Jesuiten-Ordens, nebst einem Schlußwort über die neuen Jesuiten. Nach den Quellen dargestellt. Mannheim, Bassermann, 1843. VII, 94, pp, 1 Bl.; schlichtes Ln. d. Zt. mit unbeschriftetem Papierschildchen (etwas berieben und fleckig); der unbeschnittene Buchblock tlw. leicht knittrig oder fleckig. - Die Vorsätze von alter Hand vollständig beschrieben mit Exzerpten und Kommentaren zum Thema. <br /><br />
+                    <span style="display: none">Zwei Studien mit liberal-antijesuitischer Tendenz. Der in Tirol geborene Jurist Franz Sylvester Jordan (1792-1861) betätigte sich bereits im Vormärz auch als Politiker und war zeitweise inhaftiert.</span>
+                    <a href='/artikel/jordan-sylv-1710-48.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-48
+                    <br />
+                    
+                        € 80,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-35>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kant-immanuel-pseud-2205-35.html'>
+                            <img class='thumb' src='/img/thumb/kant-immanuel-pseud-2205-35.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kant-immanuel-pseud-2205-35.html'><strong>Kant, [Immanuel] (Pseud.)</strong></a><br /><br />
+                    Antwortsschreiben des Professors Kant in Königsberg an den Abt Sieyes in Paris 1796. Aus dem lateinischen Originale übersetzt. Ohne Ort und Verlag, 1797. Gr-8; 112 pp; schlichter Pappband der Zeit (angeschmutzt und bestoßen); breitrandiger Druck auf unten unbeschnittenem Bütten; mäßige Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">VD 18 10687017; nicht bei Weller. - Der fingierte Brief wurde dem Philosophen noch zu seinen Lebzeiten (1724-1804) unterschoben und ist vermutlich in Basel oder Frankfurt/M. erschienen. Er befasst sich kritisch mit der Französischen Revolution und entwirft für die republikanische Zukunft eine neue ideale Lebensordnung auf der Grundlage von Aufklärung und christlicher Religion; zum Schluss deutet der unbekannte Verfasser die Namensfälschung selbst an. Der Priester und Staatsmann Emmanuel Joseph Sieyès (1748-1836) war einer der Haupttheoretiker der Revolution und der Ära des Französischen Konsulats; er veröffentlichte 1789 die bis heute auflagenstärkste politische Flugschrift "Quest-ce que le Tiers État?" (Was ist der Dritte Stand?).</span>
+                    <a href='/artikel/kant-immanuel-pseud-2205-35.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-35
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/radl-em-2209-74.html'>
+                            <img class='thumb' src='/img/thumb/radl-em-2209-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/radl-em-2209-74.html'><strong>Rádl, Em.</strong></a><br /><br />
+                    Geschichte der biologischen Theorien seit dem Ende des siebzehnten Jahrhunderts. 2 Teile in 1 Bd. Leipzig, Engelmann, 1905-1909. Gr-8; VII, 320 pp; X, 604 pp; einfacher Halbleinenband der Zeit mit goldgepr. Rückentitel. <br /><br />
+                    <span style="display: none">ÖBL 8, 378. - Erste Ausgabe. Der aus Böhmen stammende Philosoph Emanuel Radl (1873-1942) fand zunächst von den Naturwissenschaften zur Naturphilosophie. Als Schüler Masaryks vertrat er dessen Realismus und engagierte sich auch politisch. Das vorliegende frühe Werk ist durch zwei Register erschlossen und erschien auch auf Tschechisch und Englisch.</span>
+                    <a href='/artikel/radl-em-2209-74.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-74
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/stundenbuch-2105-84.html'>
+                            <img class='thumb' src='/img/thumb/stundenbuch-2105-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/stundenbuch-2105-84.html'><strong>Stundenbuch</strong></a><br /><br />
+                    Uffizio della B. V. Maria Secondo la Volgata Edizione / Glossa Latina / Parafrasi Italiana e dissertazione Liturgica di Saverio Mattei. Siena, Pazzini Carli, 1777. Kl-8; gestochenes Frontispiz, gest. Titel, 2 Bll., XLVIII, 345 pp, 8 Kupfertafeln; prachtvoller dunkelgrüner Maroquinband der Zeit mit reicher Rücken- und Deckelvergoldung, Wappensupralibros auf beiden Deckeln, Goldfileten, Steh- und Innenkantenvergoldung, Buntpapiervorsätzen, Goldschnitt und zwei Lesebändchen (minimal berieben); Titel mit blauem adeligem Wappenstempel, gelegentlich leicht stockfleckig (zumeist im Schnitt), winzige Erwerbungsvermerke auf Vorsätzen, weißes Schlussblatt und hinterer flieg. Vorsatz etwas wurmspurig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Schönes lateinisch-italienisches marianisches Stundenbuch mit einer Einführung des Literaten, Juristen und Musikwissenschaftlers Saverio Mattei (1742-1795), der einige Jahre zuvor die hebräischen Psalmen ins Italienische übertragen hatte. Mit doppelblattgroßer gedruckter Widmung der Gebrüder Pazzini an Maria Ludovica von Spanien (1745-1792), die durch ihre Heirat mit dem späteren Kaiser Leopold II. österreichische Erzherzogin und Großherzogin der Toscana wurde. Die mit "Typis Pazzini Carli" bezeichneten Tafeln zeigen überwiegend Szenen aus dem Leben Marias.</span>
+                    <a href='/artikel/stundenbuch-2105-84.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-84
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/taufritualbuch-osterr-kaiserhaus-2009-71.html'>
+                            <img class='thumb' src='/img/thumb/taufritualbuch-osterr-kaiserhaus-2009-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/taufritualbuch-osterr-kaiserhaus-2009-71.html'><strong>Taufritualbuch (österr. Kaiserhaus)</strong></a><br /><br />
+                    Liber Baptismalis (Deckeltitel). 3 Teile in 1 Band. Wien,Trattner, 1750. In-4. Umfasst: Ritus baptismalis parvulo serenissimo Archi-Duci in Aula Caesarea solemniter conferendus (2 Bll., 26 pp) - Ritus baptismalis parvulae serenissimae Archi-Duci in Aula Caesarea solemniter conferendus (26 pp) - Functio ad introductionem post partum augustissimae Imperatricis solemniter peragenda (10 pp). Durchgehend rot-schwarz gedruckt mit Zierbordüre; mit zahlreichen oft wiederholten Holzschnitt-Vignetten sowie zwei Notenzeilen; rotbrauner Lederband der Zeit mit reicher, jetzt weitgehend verblasster Goldprägung (auf beiden Deckeln Kaiserwappen als Supralibros und Bordüre mit Eckfleurons) sowie dreiseitigem Goldschnitt; der Einband leicht berieben und vermutlich etwas restauriert, im Text gelegentlich leichte Druckabklatsche; stellenweise etwas stock- oder wachsfleckig, einzelne unbedeutende Farbstriche, insgesamt wohlerhalten und frisch. <br /><br />
+                    <span style="display: none">Katholisches Formularbuch zur Taufe neugeborener Erzherzöge und Erzherzoginnen. Ihre Taufe stellte eine Staatsangelegenheit dar und wurde vom apostolischen Nuntius oder in seiner Vertretung vom Wiener Erzbischof vorgenommen, wobei auch die "Musica Caesarea" in die Anweisungen miteinbezogen ist. Den Abschluss bildet die rituelle "Aussegnung" der kaiserlichen Wöchnerin; sie war mit dem ersten Kirchgang nach der Geburt verbunden und geht auf das jüdische Reinigungsritual nach einer Geburt zurück. Bemerkenswert ist das Buch vor allem durch die piktogrammartigen bildlichen Erläuterungen, die den lateinischen Text ergänzen und heute unfreiwillig komisch wirken. - Sicherlich nur in kleinster Auflage gedruckt und sehr selten.</span>
+                    <a href='/artikel/taufritualbuch-osterr-kaiserhaus-2009-71.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-71
+                    <br />
+                    
+                        € 1100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
