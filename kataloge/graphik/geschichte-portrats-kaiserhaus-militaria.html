@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Graphik</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Graphik</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Geschichte, Porträts, Kaiserhaus, Militaria
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/graphik.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/graphik/kunstlergraphik-16-20-jh.html'>Künstlergraphik (16.-20. Jh.)</a></li>
+    
+        <li><a href='/kataloge/graphik/osterreich-bundeslander.html'>Österreich - Bundesländer</a></li>
+    
+        <li><a href='/kataloge/graphik/osterreich-wien.html'>Österreich - Wien</a></li>
+    
+        <li><a href='/kataloge/graphik/europa.html'>Europa</a></li>
+    
+        <li><a href='/kataloge/graphik/aussereuropa.html'>Außereuropa</a></li>
+    
+        <li><a href='/kataloge/graphik/landkarten.html'>Landkarten</a></li>
+    
+        <li><a href='/kataloge/graphik/pflanzen-und-pilze.html'>Pflanzen und Pilze</a></li>
+    
+        <li><a href='/kataloge/graphik/tiere-fahren-reiten-jagd-fischerei.html'>Tiere, Fahren &amp; Reiten, Jagd &amp; Fischerei</a></li>
+    
+        <li><a href='/kataloge/graphik/berufe-technik-medizin-sport-und-spiel.html'>Berufe, Technik, Medizin, Sport und Spiel</a></li>
+    
+        <li><a href='/kataloge/graphik/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/graphik/geschichte-portrats-kaiserhaus-militaria.html'>Geschichte, Porträts, Kaiserhaus, Militaria</a></li>
+    
+        <li><a href='/kataloge/graphik/religion-mythologie-jahreszeiten-varia.html'>Religion, Mythologie, Jahreszeiten, Varia</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1911-176>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/andersen-hans-christian-1805-1875-1911-176.html'>
+                            <img class='thumb' src='/img/thumb/andersen-hans-christian-1805-1875-1911-176.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/andersen-hans-christian-1805-1875-1911-176.html'><strong>Andersen, Hans Christian (1805-1875)</strong></a><br /><br />
+                    Zeitgenössisches Porträt mit faksimilierter Unterschrift. Anonymer Kupferstich auf China, um 1840, Plattengröße 17 x 12 cm, Blattformat 33 x 24 cm. - Außerhalb des Bildes etwas stockfleckig. <br /><br />
+                    <span style="display: none">Der dänische Dichter wurde vor allem durch seine Kunstmärchen bekannt, die mittlerweile zur Weltliteratur zählen.</span>
+                    <a href='/artikel/andersen-hans-christian-1805-1875-1911-176.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-176
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/anschluss-1938-2202-3.html'>
+                            <img class='thumb' src='/img/thumb/anschluss-1938-2202-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/anschluss-1938-2202-3.html'><strong>Anschluss 1938</strong></a><br /><br />
+                    Unbetitelte Farbradierung von Herta Czoernig-Gobanz (1886-1970), signiert H. Czoernig, Plattengröße 25 x 31,5 cm. - Wehrmachtssoldaten unter Hakenkreuzfahnen im März 1938 vor dem Wiener Parlament; im Hintergrund Rathaus, Universität und Votivkirche. <br /><br />
+                    <span style="display: none">Bemerkenswertes künstlerisches Zeitdokument. - Unsignierte Exemplare des gleichen Blattes (mit kleinen Varianten in der Platte) auf Anfrage.</span>
+                    <a href='/artikel/anschluss-1938-2202-3.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-3
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bayern-ludwig-ii-1845-1886-2105-11.html'>
+                            <img class='thumb' src='/img/thumb/bayern-ludwig-ii-1845-1886-2105-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bayern-ludwig-ii-1845-1886-2105-11.html'><strong>Bayern / Ludwig II. (1845-1886)</strong></a><br /><br />
+                    "Ludwig II. Koenig von Bayern etc. etc." Lithographie von J. Schönig bei Karl Stuecker, München 1880, Bildformat ca. 20 x 20 cm, Blattgröße 45 x 32 cm. - Alters- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Brustbild in ordensgeschmückter Generalsuniform mit Kroninsignien und Wahlspruch, erschienen zum 700-jährigen Regierungsjubiläum des Hauses Wittelsbach. Trotz des nicht tadellosen Erhaltungszustandes attraktiv und selten.</span>
+                    <a href='/artikel/bayern-ludwig-ii-1845-1886-2105-11.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-11
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beust-friedrich-ferdinand-graf-von-staatsmann-1809-1886-2102-10.html'>
+                            <img class='thumb' src='/img/thumb/beust-friedrich-ferdinand-graf-von-staatsmann-1809-1886-2102-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beust-friedrich-ferdinand-graf-von-staatsmann-1809-1886-2102-10.html'><strong>Beust, Friedrich Ferdinand (Graf) von, Staatsmann (1809-1886)</strong></a><br /><br />
+                    "Austria". Farblithographie von Carlo Pellegrini (Pseudonym "Ape") aus der britischen Wochenzeitschrift "Vanity Fair", 28. 8. 1875, 31 x 18,5 cm. - Karikatur als österreichischer Botschafter in London. <br /><br />
+                    <span style="display: none">Nachdem Beust zunächst für das Königreich Sachsen tätig war, trat er nach der Schlacht von Königggrätz in österreichische Dienste; wurde Außenminister und Mininisterpräsident und führte den Ausgleich mit Ungarn durch. 1871 ging er als Botschafter nach London, später nach Paris.</span>
+                    <a href='/artikel/beust-friedrich-ferdinand-graf-von-staatsmann-1809-1886-2102-10.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-10
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-163>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/britische-militaruniformen-2412-163.html'>
+                            <img class='thumb' src='/img/thumb/britische-militaruniformen-2412-163.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/britische-militaruniformen-2412-163.html'><strong>Britische Militäruniformen</strong></a><br /><br />
+                    Drei fein kolorierte und gehöhte Lithographien auf getöntem Karton, wohl frühes 20. Jh., je 14 x 10 cm. <br /><br />
+                    <span style="display: none">Die Rückseiten flüchtig mit Bleistift beschriftet und teilweise gestempelt.</span>
+                    <a href='/artikel/britische-militaruniformen-2412-163.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-163
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-177>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/durer-albrecht-1471-1528-1911-177.html'>
+                            <img class='thumb' src='/img/thumb/durer-albrecht-1471-1528-1911-177.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/durer-albrecht-1471-1528-1911-177.html'><strong>Dürer, Albrecht (1471-1528)</strong></a><br /><br />
+                    Radierung von V. Jasper auf aufgewalztem China aus Moriz Thausing, Dürer, Leipzig 1876, Bildformat 15 x 10 cm. <br /><br />
+                    <span style="display: none">Nach dem Selbstbildnis im Allerheiligenaltar von 1511. Gedruckt bei F. Kargl in Wien.  </span>
+                    <a href='/artikel/durer-albrecht-1471-1528-1911-177.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-177
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-127>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/feuerwerk-1760-2311-127.html'>
+                            <img class='thumb' src='/img/thumb/feuerwerk-1760-2311-127.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/feuerwerk-1760-2311-127.html'><strong>Feuerwerk 1760</strong></a><br /><br />
+                    "Vue et perspective du feu fait par ordre de la Cour de Vienne à l'occasion du Mariage de l'Archiduc Joseph avec Mademoiselle Elizabeth de Parme". Radierung bei Jacques François Chererau (Paris), 21 x 44 cm, Variante mit zusätzlicher Verlegerangabe Wichnyther (London) und englischem Druckprivileg von 1761. - Phantasievolle Darstellung des Feuerwerks-Arrangements anlässlich der aufwendig gefeierten Hochzeit von Maria Theresias Sohn Erzherzog Josef (später Kaiser Josef II.) mit Isabella von Bourbon-Parma in Wien im Oktober 1760. - Stellenweise leicht knittrig, unbedeutende kleine Randmängel. <br /><br />
+                    <span style="display: none">Koloriert gerne als Guckkastenblatt verwendet. Die Darstellung der Gebäude im Hintergrund dürfte von der Architektur des Pariser Louvre inspiriert sein.</span>
+                    <a href='/artikel/feuerwerk-1760-2311-127.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-127
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/frankreich-napoleon-ii-1811-1832-2409-31.html'>
+                            <img class='thumb' src='/img/thumb/frankreich-napoleon-ii-1811-1832-2409-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/frankreich-napoleon-ii-1811-1832-2409-31.html'><strong>Frankreich / Napoleon II. (1811-1832)</strong></a><br /><br />
+                    "Napolleon[!] Franz Karl Joseph, Herzog von Reichstadt." Lithographie von J. J. Honegger nach Caspar Scheuchzer, um 1832, Bildformat ca. 31 x 26 cm, Blattgröße 54 x 37 cm. -  Großformatiges Porträt des französischen Kronprinzen in österreichischer Uniform, gestaltet nach einem Aquarell von Moritz Michael Daffinger. - Unbedeutende Altersspuren. <br /><br />
+                    <span style="display: none">Das Kind  aus der zweiten Ehe Napoleons I. mit Marie-Louise von Österreich war der einzige legitime Sohn Napoleons und verstarb bereits in jungen Jahren. Sein Großvater, der österreichische Kaiser Franz II., verlieh ihm den Titel "Herzog von Reichstadt".</span>
+                    <a href='/artikel/frankreich-napoleon-ii-1811-1832-2409-31.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-31
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/franzosische-revolution-und-empire-2403-36.html'>
+                            <img class='thumb' src='/img/thumb/franzosische-revolution-und-empire-2403-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/franzosische-revolution-und-empire-2403-36.html'><strong>Französische Revolution und Empire</strong></a><br /><br />
+                    "Ste. Suzanne." - "Lecourbe." Zwei altkolorierte Punktierstiche von Gabriel Fiesinger bzw. Barthélemy Roger nach Jean Guerin, Paris 1801/1802 (datiert nach dem Revolutionskalender), Plattengröße je 32,5 x 24 cm. - Porträts der Generäle Gilles Joseph Martin Bruneteau, Vicomte de Sainte-Suzanne (1760-1830), und Claude Jacques Lecourbe (1759-1815). - Das Porträt von Sainte-Suzanne breitrandig (mit zwei unbedeutenden kleinen Randrissen), das Porträt von Lecourbe an drei Seiten bis zum Plattenrand beschnitten und geringfügig knittrig. <br /><br />
+                    <span style="display: none">Thieme-Becker 11, 547; 15, 224; 28, 511. - Hervorragend kolorierte seltene Blätter aus einer Serie von lebensnahen Porträts der berühmtesten Generäle der französischen Armee. Die beiden hier Dargestellten kämpften in den napoleonischen Kriegen auch gegen die Österreicher; ihre Namen sind am Pariser Arc de Triomphe verewigt.</span>
+                    <a href='/artikel/franzosische-revolution-und-empire-2403-36.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-36
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fugger-johann-jakob-kaufherr-1516-1575-1710-32.html'>
+                            <img class='thumb' src='/img/thumb/fugger-johann-jakob-kaufherr-1516-1575-1710-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fugger-johann-jakob-kaufherr-1516-1575-1710-32.html'><strong>Fugger, Johann Jakob, Kaufherr (1516-1575)</strong></a><br /><br />
+                    "Ioh. Iacob' Fugger' Comes et Consil. Caesar." Früher, wohl zeitgenössischer Kupferstich, 7,5 x 4 cm. - Brustbild en face. Bis zum Bildrand beschnitten und alt montiert, der Montagekarton mit kleinen Mängeln. <br /><br />
+                    <span style="display: none">Als Mitglied der mächtigen Augsburger Familie förderte Johann Jakob Künste und Wissenschaften. 1565 zog er sich aus dem Handelsgeschäft zurück und trat in die Dienste des Herzogs Albrecht V. von Bayern, dem er in der Folge auch seine bedeutende Bibliothek verkaufte. Sie bildete den Grundstock für die Bayerische Staatsbibliothek.</span>
+                    <a href='/artikel/fugger-johann-jakob-kaufherr-1516-1575-1710-32.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-32
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/galilei-galileo-mathematiker-und-philosoph-1564-1642-2505-29.html'>
+                            <img class='thumb' src='/img/thumb/galilei-galileo-mathematiker-und-philosoph-1564-1642-2505-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/galilei-galileo-mathematiker-und-philosoph-1564-1642-2505-29.html'><strong>Galilei, Galileo, Mathematiker und Philosoph (1564-1642)</strong></a><br /><br />
+                    "Galileo Galilei". Kupferstich von Fortuné de Fournier nach einem Gemälde von Justus Sustermans aus Luigi Bardi, L' Imperiale e reale Galleria Pitti Bd. 1, Firenze 1837, Bildformat 16 x 14 cm, Blattgröße 46 x 34,5 cm. - Im breiten weißen Rand geringfügig knittrig und angeschmutzt. <br /><br />
+                    <span style="display: none">Das zwischen 1636 und 1640 entstandenen Gemälde wurde von Carlo della Porta für den Stich umgezeichnet.</span>
+                    <a href='/artikel/galilei-galileo-mathematiker-und-philosoph-1564-1642-2505-29.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-29
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/jone-hildegard-1891-1963-1712-3.html'>
+                            <img class='thumb' src='/img/thumb/jone-hildegard-1891-1963-1712-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/jone-hildegard-1891-1963-1712-3.html'><strong>Jone, Hildegard (1891-1963)</strong></a><br /><br />
+                    "Hildegard Jone". Porträtlithographie von Josef Humplik (1888-1958), im Stein monogrammiert und datiert "H 1919" aus der Mappe "Neue Vereinigung" der Gesellschaft für vervielfältigende Kunst, Wien 1919, Bildgröße 38 x 34 cm, Blattgröße 54 x 40 cm. <br /><br />
+                    <span style="display: none">Die Lyrikerin und Künstlerin Hildegard Jone war Humpliks Privatschülerin und spätere Ehefrau. Sie setzte sich intensiv mit den Ideen des österreichischen Philosophen Ferdinand Ebner (1882-1931) auseinander, gab Schriften von ihm heraus und arbeitete an der von Ludwig von Ficker begründeten Kulturzeitschrift "Der Brenner" mit. Anton Webern vertonte in seinem Spätwerk ausschließlich Gedichte von Hildegard Jone.</span>
+                    <a href='/artikel/jone-hildegard-1891-1963-1712-3.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-3
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/joseph-ii-romisch-deutscher-kaiser-1741-1790-2509-41.html'>
+                            <img class='thumb' src='/img/thumb/joseph-ii-romisch-deutscher-kaiser-1741-1790-2509-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/joseph-ii-romisch-deutscher-kaiser-1741-1790-2509-41.html'><strong>Joseph II., römisch-deutscher Kaiser (1741-1790)</strong></a><br /><br />
+                    Bossiertes farbiges Wachsporträt auf schwarzem Karton, verglast in metallüberzogenem Rahmen, Gesamtgröße 20 x 17 cm. - Altersspuren, zwei unrestaurierte Schäden (Druckstelle bei den Schläfenlocken, Farbabsplitterung am Zopf), der Rahmen mit kleinen Mängeln. <br /><br />
+                    <span style="display: none">Originelles Porträt, wohl zur Regierungszeit des reformfreudigen Herrschers (1780-1790) oder bald danach angefertigt und gerahmt. Wachsbossierungen erfreuten sich besonders im 18. Jahrhundert großer Beliebtheit.</span>
+                    <a href='/artikel/joseph-ii-romisch-deutscher-kaiser-1741-1790-2509-41.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-41
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-120>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kastner-abraham-gotthelf-mathematiker-und-epigrammdichter-1719-1800-2211-120.html'>
+                            <img class='thumb' src='/img/thumb/kastner-abraham-gotthelf-mathematiker-und-epigrammdichter-1719-1800-2211-120.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kastner-abraham-gotthelf-mathematiker-und-epigrammdichter-1719-1800-2211-120.html'><strong>Kästner, Abraham Gotthelf, Mathematiker und Epigrammdichter (1719-1800)</strong></a><br /><br />
+                    "Abraham Gotthelf Kaestner". Kupferstich von Johann David Schleuen d. Ä. nach einem 1771 entstandenen Porträt von Johann Heinrich Tischbein d. J. aus "Allgemeine Deutsche Bibliothek", Berlin 1772, 15 x 9 cm. - An drei Seiten auf Plattenkante beschnitten, rückseitig Stempel und Montagespuren. <br /><br />
+                    <span style="display: none">APK 13250.</span>
+                    <a href='/artikel/kastner-abraham-gotthelf-mathematiker-und-epigrammdichter-1719-1800-2211-120.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2211-120
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-175>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-2012-175.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-2012-175.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-2012-175.html'><strong>Kaiserhaus</strong></a><br /><br />
+                    "Familien-Vereinigung des oestreichischen Kaiserhauses im Herbst 1834." Altkolorierter Kupferstich von Johann Passini nach einem Gemälde von Peter Fendi bei L. T. Neumann, Wien um 1835, 38 x 53 cm. Kaiser Franz I. mit seiner vierten Gemahlin und umgeben von seiner Großfamilie. Mit gestochener Widmung Passinis an Kaiserin Carolina Augusta und Kaiserwappen. - Leichte Altersspuren, mehrere teils unsachgemäß hinterlegte Risse im weißen Rand. In Holzrahmen um 1910 mit kleinen Fehlstellen. <br /><br />
+                    <span style="display: none">Thieme-Becker 26, 286; zum Originalbild siehe Ausstellungskatalog "Wiener Aquarell 1780-1880" der Albertina (Wien 1973), Nr. 138. - Peter Fendi malte das historisch bedeutsame Bild im Auftrag der Kaiserin wenige Wochen vor dem Tod von Franz I. Der Maler wurde dazu am 21. Oktober 1834 in die Hofburg geladen, wo die kaiserliche Familie zusammenkam; die lebhaften Kinder wurden so gut es ging zu spielenden Gruppen arrangiert und am nächsten Tag Fendi nochmals einzeln vorgeführt, um eine möglichst große Porträtähnlichkeit zu erreichen. Die Ausführung des heute in Artstetten aufbewahrten Aquarells dauerte dann noch bis in das nächste Jahr hinein. Es ist hier von Passini in Originalgröße im Stich wiedergegeben.</span>
+                    <a href='/artikel/kaiserhaus-2012-175.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-175
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-121>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-albrecht-erzherzog-1817-1895-2211-121.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-albrecht-erzherzog-1817-1895-2211-121.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-albrecht-erzherzog-1817-1895-2211-121.html'><strong>Kaiserhaus / Albrecht, Erzherzog (1817-1895)</strong></a><br /><br />
+                    Unbeschriftete anonyme Lithographie auf China, um 1855, Bildformat ca. 30 x 22 cm, Blattgröße 51,5 x 38 cm. - Kniestück in Generalsuniform. - Restaurierspuren, unterer Blattrand stockfleckig, insgesamt schönes und seltenes Porträt. <br /><br />
+                    <span style="display: none">Der älteste Sohn von Erzherzog Karl Albrecht wurde nach der Schlacht von Custozza Feldmarschall und Generalinspektor der österreichisch-ungarischen Armee und bestimmte als einflussreicher konservativer Habsburger auch die Politik mit.</span>
+                    <a href='/artikel/kaiserhaus-albrecht-erzherzog-1817-1895-2211-121.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2211-121
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-177>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-franz-joseph-und-elisabeth-2012-177.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-franz-joseph-und-elisabeth-2012-177.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-franz-joseph-und-elisabeth-2012-177.html'><strong>Kaiserhaus / Franz Joseph und Elisabeth</strong></a><br /><br />
+                    "Die Ankunft des Kaisers Franz Joseph und seiner Gemahlin Elisabeth zu Pesth am 4. Mai." Doppelblattgroßer anonymer Holzstich aus "Illustrirte Zeitung" vom 30. 5. 1857, 35 x 51,5 cm. - Der Empfang des Paares an der festlich geschmückten Anlegestelle der ungarischen Hauptstadt an der Donau. - Druckbedingte Mittelfalte, kleine Mängel im weißen Rand. <br /><br />
+                    <span style="display: none">Die 1857 unternommene Ungarnreise des Kaiserpaares war so wie die vorangegangene Italienreise vor allem innenpolitisch motiviert und sollte das im Gefolge der revolutionären Ereignisse von 1848/1849 beeinträchtigte Vertrauensverhältnis der Bevölkerung zur Habsburgerdynastie wieder verbessern.</span>
+                    <a href='/artikel/kaiserhaus-franz-joseph-und-elisabeth-2012-177.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-177
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-176>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-franz-karl-erzherzog-1802-1878-2012-176.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-franz-karl-erzherzog-1802-1878-2012-176.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-franz-karl-erzherzog-1802-1878-2012-176.html'><strong>Kaiserhaus / Franz Karl, Erzherzog  (1802-1878)</strong></a><br /><br />
+                    Lithographie von Josef Kriehuber bei Pietro Mechetti, Wien (1836), Bildformat 33 x 24 cm, Blattgröße 43 x 32,5 cm. - Abzug auf China, dieses aufgewalzt auf bräunlichem Trägerpapier. - Geringfügig stockfleckig, das Trägerpapier mit kleinen Randmängeln. <br /><br />
+                    <span style="display: none">Wurzbach 613. - Der dritte Sohn von Kaiser Franz II. (I.) war der Bruder von Kaiser Ferdinand und der Vater von Kaiser Franz Joseph. In der Öffentlichkeit trat er ganz hinter seiner Gemahlin Sophie zurück.</span>
+                    <a href='/artikel/kaiserhaus-franz-karl-erzherzog-1802-1878-2012-176.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-176
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-178>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-karl-erzherzog-1771-1847-2012-178.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-karl-erzherzog-1771-1847-2012-178.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-karl-erzherzog-1771-1847-2012-178.html'><strong>Kaiserhaus / Karl, Erzherzog (1771-1847)</strong></a><br /><br />
+                    "Charles-Louis, Archiduc d'Autriche ...". Kupferstich in Punktiermanier nach Marie Thérèse Noireterre (1814) von und bei Philipp Velyn, Paris um 1815, Bildformat 13 x 13 cm, Plattengröße 23 x 14 cm. <br /><br />
+                    <span style="display: none">Der Sieger von Aspern und bedeutende Militärschriftsteller mit dem Maria-Theresien- und Stephansorden sowie dem Orden der Ehrenlegion.</span>
+                    <a href='/artikel/kaiserhaus-karl-erzherzog-1771-1847-2012-178.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-178
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-129>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-karl-vi-1685-1740-2311-129.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-karl-vi-1685-1740-2311-129.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-karl-vi-1685-1740-2311-129.html'><strong>Kaiserhaus / Karl VI. (1685-1740)</strong></a><br /><br />
+                    "Numini. Maiestatique. Vindobonae. quae. Caroli. VI. ... S. P. Q. Vindobonensis. D. D. Vot. XV." Kupferstich von Hieronymus Sperling nach Johann Andreas Thelot aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 2. Teil, Augsburg 1725, 22 x 33 cm. - Detailreiches, fein ausgeführtes Widmungsblatt des Wiener Magistrats zu einem Werk über die Wiener Palast- und Gartenarchitektur. Der von allegorischen Darstellungen umgebene thronende Kaiser wird von Fama mit Lorbeer bekränzt. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 32, 592. - Der Augsburger Goldschmied, Zeichner und Kupferstecher Johann Andreas Thelot (auch Thelott, 1655-1734) schuf eine Reihe von antikisierenden, mythologischen und allegorischen Darstellungen.</span>
+                    <a href='/artikel/kaiserhaus-karl-vi-1685-1740-2311-129.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-129
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-179>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-karl-vi-1685-1740-1911-179.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-karl-vi-1685-1740-1911-179.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-karl-vi-1685-1740-1911-179.html'><strong>Kaiserhaus / Karl VI. (1685-1740)</strong></a><br /><br />
+                    "Wie Seine Kayserliche Majestät unter dem Zelt empfangen worden seynd." Kupferstich von I. H. Störcklin nach I. I. Florer aus G. J. v. Deyerlsperg, Erb-Huldigung, Welche ... Carolo Dem Sechsten ... Als Hertzogen in Steyer, Von denen gesamten Steyrischen Land-Ständen Den sechsten Julii 1728 ... abgeleget ..., Graz, Widmanstätterische Erben, (1740). 39 x 59,5 cm. - Professionell restauriert, links und rechts angerändert. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 144/3. - Unter einem großen Zelt Kaiser Karl VI. mit seiner Gemahlin Elisabeth Christine und der noch jugendlichen Erzherzogin Maria Theresia, die Huldigung der zahlreich versammelten steirischen Stände entgegennehmend; im Hintergrund Gebirgskulisse mit der angedeuteten Stadt Graz. Prachtvolles großformatiges Blatt, selten.</span>
+                    <a href='/artikel/kaiserhaus-karl-vi-1685-1740-1911-179.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-179
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-179>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-ludwig-erzherzog-1784-1864-2012-179.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-ludwig-erzherzog-1784-1864-2012-179.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-ludwig-erzherzog-1784-1864-2012-179.html'><strong>Kaiserhaus / Ludwig, Erzherzog (1784-1864)</strong></a><br /><br />
+                    "Ludwig Erzherzog von Oesterreich". Lithographie von Josef Kriehuber bei Johann Höfelich, Wien um 1840, Blattgröße 28,5 x 22 cm. - Alt beschnitten und auf Blatt mit gemaltem Zierrahmen und kalligraphierter Beschriftung (anstelle der weggeschnittenen typographischen) montiert. Links oben retuschierter Leimschatten, das Trägerpapier etwas fleckig und knittrig. <br /><br />
+                    <span style="display: none">Der an ökonomischen, naturwissenschaftlichen und technischen Fragen interessierte Ludwig wurde 1835 Vorsitzender der Staatskonferenz, die für den regierungsunfähigen Kaiser Ferdinand I. die eigentlichen Geschäfte führte. Kriehuber porträtierte Ludwig mehrfach, die vorliegende Variante ist bei Wurzbach allerdings nicht verzeichnet; vgl. dort Nr. 1330-1332.</span>
+                    <a href='/artikel/kaiserhaus-ludwig-erzherzog-1784-1864-2012-179.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-179
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-rudolf-erzherzog-1858-1889-2403-47.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-rudolf-erzherzog-1858-1889-2403-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-rudolf-erzherzog-1858-1889-2403-47.html'><strong>Kaiserhaus / Rudolf, Erzherzog (1858-1889)</strong></a><br /><br />
+                    "Jagd des Kronprinzen Rudolf am Langbathsee" -  "Kronprinz Rudolf führt dem Kaiser das Infanterie Regiment No. 36 vor". Zwei Heliogravüren auf China nach 1881 entstandenen Federzeichnungen von Franz von Pausinger bzw. Sigmund l'Allemand aus Oskar Berggruen, Kronprinz-Album, Wien 1883, 20 x 29 und 20 x 28 cm. <br /><br />
+                    <span style="display: none">Unbedeutende kleine Randmängel. Zugehörige Textblätter beiliegend.</span>
+                    <a href='/artikel/kaiserhaus-rudolf-erzherzog-1858-1889-2403-47.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-47
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-131>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kollonitz-sigismund-graf-1677-1751-erzbischof-von-wien-2311-131.html'>
+                            <img class='thumb' src='/img/thumb/kollonitz-sigismund-graf-1677-1751-erzbischof-von-wien-2311-131.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kollonitz-sigismund-graf-1677-1751-erzbischof-von-wien-2311-131.html'><strong>Kollonitz, Sigismund Graf (1677-1751), Erzbischof von Wien</strong></a><br /><br />
+                    "Celsissimo et Reverendissimo Principi ac Domino ... Sigismundo ... de Kollonits ...". Kupferstich von Georg Daniel Heumann nach Nikolaus Bruno Belau aus S. Kleiner und J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22,5 x 33,5 cm. - Widmungsblatt zu einem Werk über die Kirchen und Klöster Wiens und seiner Vorstädte. Der Erzbischof umgeben von allegorischen Figuren, vor ihm eine Ansicht des Stephansdoms. - Im weißen Rand leicht fleckig. <br /><br />
+                    <span style="display: none">Sigismund Graf Kollonitz von Kollógrad (auch Kollonitsch, Kollonich, Kollonics, Collonicz) wurde 1716 Wiener Fürstbischof, taufte am 13. Mai 1717 Maria Theresia und wurde 1723 der erste Fürsterzbischof von Wien. Eng mit dem Schulorden der Piaristen verbunden, erhielt er 1747 von Kaiser Franz I. den Titel Protector Germaniae.</span>
+                    <a href='/artikel/kollonitz-sigismund-graf-1677-1751-erzbischof-von-wien-2311-131.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-131
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-55>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kuglmayr-gotthard-benediktiner-1754-1825-1810-55.html'>
+                            <img class='thumb' src='/img/thumb/kuglmayr-gotthard-benediktiner-1754-1825-1810-55.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kuglmayr-gotthard-benediktiner-1754-1825-1810-55.html'><strong>Kuglmayr, Gotthard, Benediktiner (1754-1825)</strong></a><br /><br />
+                    "Gotthard Praelat zu Admont in Steyermark". Lithographie von Wachtl bei J. Trentsensky, Wien um 1820, Bildformat ca. 17 x 16 cm, Blattgröße 43 x 31,5 cm. - Etwas knittrig, leichte Altersspuren. <br /><br />
+                    <span style="display: none">Seltenes Porträt des 56. Abtes des Benediktinerstifts Admont. Kugelmayr vertrat als steiermärkischer Abgeordneter die Interessen des Landes gegenüber dem Kaiser, förderte den Bergbau und das Sparkassenwesen und gründete im Stift ein Naturalienkabinett. - Der Maler und Lithograph Johann Wachtl (1778 - um 1839) war in den 1820er und 1830er Jahren der gesuchteste Porträtmaler in Graz.</span>
+                    <a href='/artikel/kuglmayr-gotthard-benediktiner-1754-1825-1810-55.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-55
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lenclos-ninon-de-1620-1705-1902-41.html'>
+                            <img class='thumb' src='/img/thumb/lenclos-ninon-de-1620-1705-1902-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lenclos-ninon-de-1620-1705-1902-41.html'><strong>Lenclos, Ninon de (1620-1705)</strong></a><br /><br />
+                    Kupferstich von Johann Christoph Sysang (1703-1757) aus "Leben der Madem. Ninon von Lenclos" bei Weidmann, Leipzig 1754, 14 x 7 cm. - Bis zum Bildrand beschnitten und alt montiert; Untersatzpapier gebräunt. <br /><br />
+                    <span style="display: none">APK 14947 (mit unrichtigen biogr. Daten). - Mit irriger Todesangabe "in 90. Jahr ihres Alters" und vierzeiligem Spruch. Ninon (eigentlich Anne) de Lenclos war eine französische Kurtisane und geistvolle Salonnière und gilt in Frankreich als eine der bemerkenswertesten Frauen des 17. Jahrhunderts.</span>
+                    <a href='/artikel/lenclos-ninon-de-1620-1705-1902-41.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-41
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-133>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/marine-2311-133.html'>
+                            <img class='thumb' src='/img/thumb/marine-2311-133.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/marine-2311-133.html'><strong>Marine</strong></a><br /><br />
+                    "Szt. Istvan am Stapel Jänner 1914". Signierte Radierung von Herta Czoernig-Gobanz (1886-1970) auf gewalztem China mit Remarque unter dem Bild, 43 x 35 cm. - SMS Szent István der k. u. k. Kriegsmarine. Großformatige künstlerische Dokumentation des Stapellaufs in Bergudi bei Fiume am 17. Jänner 1914, wenige Monate vor dem Beginn des 1. Weltkriegs. - Das Trägerpapier mit kleinen Mängeln im breiten weißen Rand. Beiliegend ein Ausstellungsprospekt mit einem Foto des Stapellaufs. <br /><br />
+                    <span style="display: none">Der Stapellauf des Schiffs, dessen Bau ein Prestigeprojekt der ungarischen Industrie darstellte, stand unter keinem guten Stern und forderte wegen des Ausschlagens einer Ankerkette einen Toten und einen Schwerverletzten. In Dienst gestellt wurde das Schlachtschiff vom Typ Dreadnought erst im November 1915; es lag dann wegen der alliierten Kontrolle der Straße von Otranto die meiste Zeit in Pola vor Anker. Während der Juni-Offensive 1918 wurde die Szent István von zwei italienischen Torpedos getroffen und sank, wobei 89 Seeleute ums Leben kamen; der Untergang wurde von einem Kriegspresse-Kamerateam mitgefilmt. Ein großer Teil des Schiffsiniventars wurde ab 1995 systematisch geborgen. - Seltenes zeitgeschichtliches Dokument. Die Künstlerin Herta Czoernig war selbst mit einem österreichischen Marineoffizier verheiratet.</span>
+                    <a href='/artikel/marine-2311-133.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2311-133
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-165>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleon-2412-165.html'>
+                            <img class='thumb' src='/img/thumb/napoleon-2412-165.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleon-2412-165.html'><strong>Napoleon</strong></a><br /><br />
+                    "Tombeau de Napoléon 1er. aux Invalides." Farblithographie von Louis Aubrun aus Ansichtenwerk bei Ledot Jeune, Paris um 1865, 23 x 16 cm. - Nr. 37 einer in Buchform erschienenen Serie. <br /><br />
+                    <span style="display: none">Die 1861 fertiggestellte Krypta Napoleons im Pariser Invalidendom. Des Kaiser wünschte an den Ufern der Seine bestattet zu werden, seine sterblichen Überreste konnten aber erst nach langwierigen Verhandlungen mit England von St. Helena nach Frankreich überführt werden.</span>
+                    <a href='/artikel/napoleon-2412-165.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2412-165
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleon-i-1769-1821-und-josephine-1763-1814-2403-63.html'>
+                            <img class='thumb' src='/img/thumb/napoleon-i-1769-1821-und-josephine-1763-1814-2403-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleon-i-1769-1821-und-josephine-1763-1814-2403-63.html'><strong>Napoleon I. (1769-1821) und Josephine (1763-1814)</strong></a><br /><br />
+                    "Grand Habit de sa Majesté l'Empereur Napoléon 1.er le jour du Couronnement. - Grand Habit de sa Majesté l'Emperatrice Josephine le jour du Couronnement." Zwei kolorierte Radierungen  von Louis Pauquet nach Jean-Baptiste Isabey, Paris um 1805, je 32 x 23 cm. Repräsentative Darstellungen des Kaiserpaares vom Tag der Krönung (2. 12. 1804). - Bis zum Plattenrand beschnitten, kaum sichtbare Papierschäden, geringfügig fleckig, insgesamt dekorativ und selten. - Provenienz: Sammlung des österreichischen Mediziners Adam Politzer. <br /><br />
+                    <span style="display: none">Thieme-Becker 26, 316. - Napoleon krönte sich in der Pariser Kathedrale Notre-Dame in Anwesenheit von Papst Pius VII. selbst zum Kaiser der Franzosen, setzte sich dann statt der Krone einen goldenen Lorbeerkranz auf den Kopf und krönte schließlich seine vor ihm knieende erste Gattin Josephine, die er erst in der Nacht zuvor kirchlich geheiratet hatte. Mit der Krönung erreichte sein Aufstieg vom bürgerlichen Soldaten zum Begründer einer neuen imperialen Dynastie seinen Höhepunkt.</span>
+                    <a href='/artikel/napoleon-i-1769-1821-und-josephine-1763-1814-2403-63.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-63
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-180>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleon-st-helena-2012-180.html'>
+                            <img class='thumb' src='/img/thumb/napoleon-st-helena-2012-180.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleon-st-helena-2012-180.html'><strong>Napoleon / St. Helena</strong></a><br /><br />
+                    "Tombe de N. Bonaparte ou les derniers adieux." Anonyme Aquatinta ohne Orts- und Verlagsangabe, um 1821, 18,5 x 25 cm. - Napoleons erste Grabstätte auf der Insel St. Helena mit Besuchern. Nach dem erläuternden französischen Text sind hier der Divisionsgeneral und Oberhofmarschall Henri-Gatien Bertrand mit Frau (und Sohn) sowie ein Monsieur de Montenault zu sehen. - Im breiten weißen Rand etwas knittrig und fleckig. <br /><br />
+                    <span style="display: none">Collection De Vinck 10370. - General Bertrand (1773-1844) war einer der engsten Vertrauen Napoleons. Mit seiner Familie folgte er dem Kaiser in die Verbannung und blieb bis zu seinem Tod bei ihm, ehe er nach Frankreich zurückkehrte. 1840 wurde er zur Abholung der sterblichen Überreste Napoleons nochmals nach St. Helena entsandt.</span>
+                    <a href='/artikel/napoleon-st-helena-2012-180.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-180
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-204>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-2112-204.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-2112-204.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-2112-204.html'><strong>Napoleonische Kriege</strong></a><br /><br />
+                    "Oesterreichische Gefechte / No. 6." Kolorierte Kreidelithographie nach Johann N. Hoechle bei Joseph Trentsensky, Wien um 1830, 32 x 42 cm. - Ein österreichische Artilleriestellung schlägt angreifende französische Dragoner in die Flucht. - Kleine Mängel im weißen Rand, linke obere Bildecke übermalt. <br /><br />
+                    <span style="display: none">De Ridder 225/6. - Letztes Blatt einer sechsteiligen Serie. Joseph Trentsensky zeichnete von 1819 bis 1832 aus formalen Gründen für die Firma seines älteren Bruders Matthäus verantwortlich; der tatsächliche Lithograph des Blattes dürfte Joseph Kriehuber gewesen sein.</span>
+                    <a href='/artikel/napoleonische-kriege-2112-204.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-204
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-61>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-schlacht-bei-altenburg-1606-61.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-schlacht-bei-altenburg-1606-61.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-schlacht-bei-altenburg-1606-61.html'><strong>Napoleonische Kriege / Schlacht bei Altenburg</strong></a><br /><br />
+                    "Der Hetmann Platow attaquirt mit 16. Pulks Cosaken den General Lefebore-Desnouette, welcher die Cavallerie der Kaiserl: Garde führt, bey Alternburg den 28n September 1813. und schlägt ihn." Altkolorierte Umrissradierung bei Anton Tessaro, Wien um 1820(?), 15 x 21 cm. - Altersgebräunt und leicht fleckig. <br /><br />
+                    <span style="display: none">Seltenes Blatt. - Matwej Iwanowitsch Platow (1751-1818) war General der russischen Armee und Ataman der Donkosaken und erwarb sich während der Befreiungskriege in Europa große Popularität. Durch die Auftritte des Don Kosaken Chors Serge Jaroff in den 1920er und 1930er Jahren wurde er in Deutschland dann noch ein zweites Mal populär.</span>
+                    <a href='/artikel/napoleonische-kriege-schlacht-bei-altenburg-1606-61.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1606-61
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-64>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-wien-1809-2403-64.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-wien-1809-2403-64.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-wien-1809-2403-64.html'><strong>Napoleonische Kriege / Wien 1809</strong></a><br /><br />
+                    "Dernier Pont de la Lob-au et retour du Duc de Montebello blessé." - "Entrée de la têtê de Pont dans la Lob-au." Zwei Aquatintastiche von Benedikt Piringer nach Mayer aus A. de Laborde, Précis Historique de la Guerre entre la France et l'Autriche en 1809, Paris 1822, jeweils 18 x 29 cm. - Detailreiche Darstellungen französischer Truppenteile in den Donauauen bei Wien. Gut erhaltene breitrandige Blätter. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 349/16 und 23.</span>
+                    <a href='/artikel/napoleonische-kriege-wien-1809-2403-64.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-64
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/nurnberg-1792-2305-62.html'>
+                            <img class='thumb' src='/img/thumb/nurnberg-1792-2305-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/nurnberg-1792-2305-62.html'><strong>Nürnberg 1792</strong></a><br /><br />
+                    "Die auf die Wach ziehende Frau. In der Freyen Reichs Stadt Nürnberg d 16. 7ber: 1792." Kupferstich eines Monogrammisten "H", Ende 18. Jh., Plattengr. 17 x 12 cm. - Die Nürnberger Drahtzieherwitwe Barbara Helena Körndlein mit Gewehr und Säbel. In Nürnberg hatten die Bürger damals etwa alle eineinhalb Monate Wachdienst zu leisten, konnten diese Aufgabe aber gegen Bezahlung einer Gebühr an sogenannte Mittelsmänner delegieren. Für Frauen, die den Handwerksbetrieb ihres verstorbenen Gatten weiterführten, war diese Gebühr reduziert. Barbara Helena Körndlein (auch Körnleinin genannt) wollte sich jedoch nicht wie üblich freikaufen und sorgte im September 1792 für entspechendes Aufsehen, als sie den Wachdienst selbst als bewaffnete Frau antrat. - Mit beidseitigem dezentem Sammlerstempel "SP"; etwas unregelmäßig beschnitten, rückseitig unbedeutende Montagespuren. - Selten. <br /><br />
+                    <span style="display: none">Zum Nürnberger Bürgermilitär und zu dem durch Körndleins Dienstantritt entstandenen Spektakel siehe Zeitschrift für Heereskunde Ausgabe 447 (Januar/März 2013). Unter anderem fand die Begebenheit ihren Niederschlag auch in Liedflugschriften.</span>
+                    <a href='/artikel/nurnberg-1792-2305-62.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-62
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-167>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/osterreichische-armee-1712-167.html'>
+                            <img class='thumb' src='/img/thumb/osterreichische-armee-1712-167.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/osterreichische-armee-1712-167.html'><strong>Österreichische Armee</strong></a><br /><br />
+                    "Deutsche Grenadiere." Altkolorierte und gehöhte Lithographie aus M. Trentsensky (Hrsg.), K. k. Oesterr. Armée nach der neuen Adjustirung, Wien 1837-1853, Bildformat ca. 26 x 28 cm, Blattgröße 47 x 33 cm. - Geringfügig fleckig. <br /><br />
+                    <span style="display: none">De Ridder 88 (Abt. II, No. 2).</span>
+                    <a href='/artikel/osterreichische-armee-1712-167.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1712-167
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-206>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/osmanen-mustafa-iii-1717-1774-2112-206.html'>
+                            <img class='thumb' src='/img/thumb/osmanen-mustafa-iii-1717-1774-2112-206.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/osmanen-mustafa-iii-1717-1774-2112-206.html'><strong>Osmanen / Mustafa III. (1717-1774)</strong></a><br /><br />
+                    "Mustapha III." Zeitgenössisches Kupferstichporträt von und bei Johann Elias Nilson, Augsburg 1771, 23 x 16 cm. - Etwas ungleichmäßig auf Plattenkante beschnitten, rechts oben von alter Hand numeriert, oberer Rand mit leichter Farbspur, rückseitig Montagereste und kleiner Sammlerstempel. <br /><br />
+                    <span style="display: none">APK 26595; Schuster 339 (mit unkritisch übernommenen Angaben). - Porträtmedaillon mit allegorischer Staffage, Vergil-Zitat, Geburtsdatum (unrichtig) und Tag der Thronbesteigung. In die Herrschaftszeit dieses Sultans fällt der Russisch-Türkische Krieg von 1786-1774, der die osmanische Herrschaft schwächte und erst nach dem Tod Mustafas seinen Abschluss fand. Die über dem Porträt angedeutete Mondfinsternis (mit irriger Angabe "1880" in arabischen Ziffern) bezieht sich auf die große militärische Niederlage der Osmanen in der Seeschlacht von Çesme im Juli 1770.</span>
+                    <a href='/artikel/osmanen-mustafa-iii-1717-1774-2112-206.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-206
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-207>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/revolution-1848-2112-207.html'>
+                            <img class='thumb' src='/img/thumb/revolution-1848-2112-207.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/revolution-1848-2112-207.html'><strong>Revolution 1848</strong></a><br /><br />
+                    ["Ich sehe noch immer keine Ungarn."] Satirische Lithographie von Anton Zampis aus "Erinnerungs-Bilder aus Wiens October-Tagen 1848" bei J. Höfelich, Wien 1848, Blattgröße 38 x 28 cm. - Aufgezogen, Titel fehlt durch Beschnitt. <br /><br />
+                    <span style="display: none">Im Stein monogrammiert AZ. Der Autodidakt Anton Zampis (1820-1883) hielt das Wiener Volksleben des Vormärz und der Revolutionszeit humorvoll und mit großer kulturhistorischer Treue in Zeichnungen und Lithographien fest.</span>
+                    <a href='/artikel/revolution-1848-2112-207.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2112-207
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/russland-militaria-2509-67.html'>
+                            <img class='thumb' src='/img/thumb/russland-militaria-2509-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/russland-militaria-2509-67.html'><strong>Russland / Militaria</strong></a><br /><br />
+                    "Die europäischen Armeen. Rußland." (Rückentitel des Schubers). 135 (von 144?) lithographierte Uniformtafeln in originalem und teils eiweißgehöhtem Altkolorit aus H. A. Eckert (Hrsg.), Les armées d'Europe représentées en groupes charactéristiques ... bei Christian Weiß, Würzburg um 1840, dazu ein lithographiertes Widmungsblatt "... dédiées à Sa Majesté Impériale et Royale ... Nicolaus Ier Autocrate de tous les Russes ...", Blattgröße je 36 x 26 cm (mit einzelnen geringen Abweichungen); in zeitgenössischer Flügelmappe und dekorativem Halblederschuber mit Goldprägung. Die Tafeln umfassen 29 teilweise numerierte Schemata ("Aperçus") und 106 montierte Darstellungen von Uniformen bzw. Szenen aus dem Soldatenleben (ohne Numerierung); sie sind durchwegs französisch beschriftet und weisen alle einen Trockenstempel des Verlags (in zwei Varianten) auf. Das Widmungsblatt gebräunt und gering fleckig, 6 Tafeln mit hinterlegten Randrissen, einzelne Leimspuren, Flecken und unbedeutende Rand- oder Eckmängel, der Schuber mit Gebrauchsspuren und zwei Reparaturstellen; insgesamt sehr gut erhaltene, farbfrische und ungewöhnlich umfangreiche Serie von Uniformdarstellungen der zaristischen Armee. <br /><br />
+                    <span style="display: none">Colas 935; Hiler 261; Lipperheide 2120 (Qc 26). - Das von H. A. Eckert und D. Monten 1838 begonnene große Uniformwerk erschien in Lieferungen und sollte die Soldaten aller europäischen Armeen in lebensnahen Darstellungen zeigen. Die Tafeln wurden in unterschiedlichen Ausführungen auf den Markt gebracht, einzelne Blätter wurden während der Produktion ausgetauscht, und nach dem Ableben der Herausgeber wurde das Projekt 1843 abgebrochen; wie viele Tafeln ingesamt von der vorliegende Serie erschienen, ist nicht mit Sicherheit zu entscheiden. Unser Exemplar ist jedenfalls eines der umfangreichsten, die jemals im Handel angeboten wurden.</span>
+                    <a href='/artikel/russland-militaria-2509-67.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-67
+                    <br />
+                    
+                        € 9500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schoffel-josef-politiker-1832-1910-2409-90.html'>
+                            <img class='thumb' src='/img/thumb/schoffel-josef-politiker-1832-1910-2409-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schoffel-josef-politiker-1832-1910-2409-90.html'><strong>Schöffel, Josef, Politiker (1832-1910)</strong></a><br /><br />
+                    "Josef Schöffel Reichsraths-Abgeordneter (Niederösterreich)." Lithographie von Adolf Dauthage aus A. Eckstein, Das Parlament, Wien 1879, Bildformat ca. 18 x 17 cm, Blattgröße 42 x 29 cm. - Der "Retter des Wienerwalds" in einem lebensnahen Porträt. <br /><br />
+                    <span style="display: none">Der aus einer österreichischen Bergbeamtenfamilie stammende Josef Schöffel unternahm in den Jahren 1870-1872 eine journalistische Kampagne gegen die damals vom Finanzministerium beabsichtigte teilweise Privatisierung und Schlägerung des Wienerwalds und sah sich deshalb heftigen Anfeindungen ausgesetzt. Sein Engagement führte zum Einlenken der Regierung, und der Börsenkrach von 1873 beendete die im Hintergrund des Privatisierungsprojekts stehende überhitzte Baukonjunktur. Schöffel wurde daraufhin Mitglied des Reichsrats und Bürgermeister von Mödling und erwarb sich in beiden Funktionen große Verdienste.</span>
+                    <a href='/artikel/schoffel-josef-politiker-1832-1910-2409-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-90
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schriftsteller-portrats-2109-76.html'>
+                            <img class='thumb' src='/img/thumb/schriftsteller-portrats-2109-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schriftsteller-portrats-2109-76.html'><strong>Schriftsteller-Porträts</strong></a><br /><br />
+                    Acht zeitgenössische (oder zumindest zeitnahe) Stahlstich-Porträts aus den ersten fünf Jahrgängen der "Galerie der Zeitgenossen" bei Bibliograph. Institut, Hildburghausen 1829/1834, Bildformat je ca. 10 x 8 cm (oder etwas größer), Blattgröße je 29 x 21 cm. - Im breiten weißen Rand teilweise stockfleckig. <br /><br />
+                    <span style="display: none">Vertreten sind Ludwig Börne (1786-1837), Lord Byron (1788-1824), Chateaubriand (1768-1848), Göthe (sic!, 1749-1832), Thomas Moore (1779-1852), Sir Walter Scott (1771-1832), L. Tieck (1773-1853) und Uhland (1784-1862); an Stechern werden C. Barth, Hyrtl, Fr. Stöber, Zumpe und J. Serz angeführt. Die hier in Erstausgaben vorliegenden Porträts fanden später auch in Meyer's Conversations-Lexicon Verwendung.</span>
+                    <a href='/artikel/schriftsteller-portrats-2109-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-76
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/seidl-johann-gabriel-schriftsteller-1804-1875-2305-84.html'>
+                            <img class='thumb' src='/img/thumb/seidl-johann-gabriel-schriftsteller-1804-1875-2305-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/seidl-johann-gabriel-schriftsteller-1804-1875-2305-84.html'><strong>Seidl, Johann Gabriel, Schriftsteller (1804-1875)</strong></a><br /><br />
+                    Porträtlithographie von Adolf Dauthage bei Joseph Bermann, Wien 1856, Bildformat 26 x 21 cm, Blattgröße 54 x 36 cm. Gedruckt auf China, unter dem Bild faksimilierter Namenszug. - Leichte Alters- und Gebrauchsspuren im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Als "Inbegriff des österr. Biedermeierdichters" (H. Lengauer) blieb Seidl der Nachwelt vor allem mit seinen Texten zu 16 Schubert-Liedern im Gedächtnis; auch verfasste er die österreichische Volkshymne "Gott erhalte, Gott beschütze", die von 1854 bis zum Untergang der Monarchie in Gebrauch war. Daneben war der vielseitige und fleißige Schriftsteller unter anderem auch archäologisch tätig und leitete einige Zeit die kaiserliche Schatzkammer.</span>
+                    <a href='/artikel/seidl-johann-gabriel-schriftsteller-1804-1875-2305-84.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-84
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-182>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/turkenkriege-2012-182.html'>
+                            <img class='thumb' src='/img/thumb/turkenkriege-2012-182.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/turkenkriege-2012-182.html'><strong>Türkenkriege</strong></a><br /><br />
+                    "Die Belagerung von Orsova unter Comando des G:F:M: Baron v: Loudon. in Nov. 1789". Altkolorierter Kupferstich von Hieronymus Löschenkohl um 1789, 27,5 x 40 cm. - Altschäden fachgerecht restauriert. <br /><br />
+                    <span style="display: none">Ausst.-Kat. Hist. Mus. Wien (1959) Nr. 135. - Szene aus dem Zweiten Österreichisch-Russischen Türkenkrieg (1787-1792); im Mittelpunkt die oberhalb des Eisernen Tors gelegene, heute durch einen Stausee überflutete Donauinsel Ada Kahle (Neu-Orschowa), deren Besitz mehrfach zwischen Österreich und dem Osmanenreich wechselte. Nach Orschowa eroberte der damals schon greise General Laudon auch Belgrad; im 1791 geschlossenen Separatfrieden von Swischtow (Sistowa) gab Leopold II. allerdings die eroberten Gebiete wieder preis und behielt nur den am Donauufer gelegenen Teil von Orschowa (Alt-Orsowa). Der geschäftstüchtige Wiener Stecher und Verleger Hieronymus Löschenkohl (1753-1807) hielt in großem Maßstab Zeitgenossen und aktuelle Ereignisse im Bild fest; seine meist sehr selten gewordenen Blätter werden heute vor allem ihres kulturhistorischen Wertes wegen geschätzt. Das vorliegende Blatt ist nicht namentlich bezeichnet, jedoch im Nachlassinventar Löschenkohls angeführt.</span>
+                    <a href='/artikel/turkenkriege-2012-182.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2012-182
+                    <br />
+                    
+                        € 1750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-182>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/washington-george-1732-1799-1911-182.html'>
+                            <img class='thumb' src='/img/thumb/washington-george-1732-1799-1911-182.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/washington-george-1732-1799-1911-182.html'><strong>Washington, George (1732-1799)</strong></a><br /><br />
+                    "Washington." - Lithographie auf China von Rudolf Hoffmann nach Gilbert Stuart bei F. Paterno, Wien um 1840, Bildfomat 27,5 x 23 cm, Blattgröße 51 x 36 cm. - Im breiten weißen Rand geringfügig stockfleckig und minimal knittrig. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 32, 224. - Gute Wiedergabe von einem der drei Porträts, die der amerikanische Bildnismaler Gilbert Stuart (1755-1828) vom ersten Präsidenten der Vereinigten Staaten anfertigte.</span>
+                    <a href='/artikel/washington-george-1732-1799-1911-182.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1911-182
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-94>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wickenburg-matthias-constantin-von-1797-1880-1708-94.html'>
+                            <img class='thumb' src='/img/thumb/wickenburg-matthias-constantin-von-1797-1880-1708-94.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wickenburg-matthias-constantin-von-1797-1880-1708-94.html'><strong>Wickenburg, Matthias Constantin von (1797-1880)</strong></a><br /><br />
+                    Porträt als Gouverneur des Herzogtums Steiermark. Lithographie auf China von Franz Empfinger, Graz um 1845, Bildformat 27 x 20,5 cm, Gesamtgröße 39,5 x 29 cm. - Das Trägerpapier mit unbedeutenden kleinen Mängeln. <br /><br />
+                    <span style="display: none">Matthias Constantin Capello Graf von Wickenburg machte in Wien rasch Karriere im Staatsdienst, wurde 1835 zum Gouverneur in Steiermark ernannt und entwickelte in dieser Funktion eine segensreiche Tätigkeit. Unter seiner Leitung wurden das durch Brand zerstörte Judenburg wieder aufgebaut, in Graz zwei Brücken über die Mur errichtet und der Kurort Bad Gleichenberg gegründet.</span>
+                    <a href='/artikel/wickenburg-matthias-constantin-von-1797-1880-1708-94.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-94
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-96>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wildgans-anton-schriftsteller-1881-1932-1705-96.html'>
+                            <img class='thumb' src='/img/thumb/wildgans-anton-schriftsteller-1881-1932-1705-96.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wildgans-anton-schriftsteller-1881-1932-1705-96.html'><strong>Wildgans, Anton, Schriftsteller (1881-1932)</strong></a><br /><br />
+                    "Anton Wildgans". Signierte Porträtradierung von Rudolf Paul Hirschenhauser, um 1925, Bildformat 27,5 x 24 cm. -  Unbedeutende kleine Mängel im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Der 1882 in Mödling geborene Künstler Rudolf Paul Hirschenhauser emigrierte 1938 nach London. Er gestaltete Buchschmuck und Einband für Wildgans' Versepos "Kirbisch" (1927).</span>
+                    <a href='/artikel/wildgans-anton-schriftsteller-1881-1932-1705-96.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1705-96
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

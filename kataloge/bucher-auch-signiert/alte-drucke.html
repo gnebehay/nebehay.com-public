@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/early-printed-books.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Alte Drucke
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2509-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/apuleius-2509-4.html'>
+                            <img class='thumb' src='/img/thumb/apuleius-2509-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/apuleius-2509-4.html'><strong>Apuleius</strong></a><br /><br />
+                    L. Apuleii Madaurensis opera omnia quae exstant, Emendata & aucta: Curâ Petri Colvi Brugensis; cum eiusdem ad omnia uberioribus notis. 2 Teile in 1 Bd. Leiden, Plantin / Raphengelius, 1588. Kl-8; 12 Bll. (inkl. Titel mit Druckermarke); 431 (inkl. Titel mit Druckermarke), 298 (recte 296) pp; ohne die 19 Bll. Register am Schluss. - [Beigebunden:] Gottschalk Stewech, In L. Apuleii opera omnia quaestiones et coniecturae. Antwerpen, Christoph Plantin, 1586; 212 pp (inkl. Titel mit Druckermarke), 5 Bll.; Lederband der Zeit mit goldgepr. Rückentitel (geringfügig berieben und bestoßen); leicht gebräunt und stellenweise schwach fleckig, ein Blatt mit kleinem Eckabriss, einzelne Einträge und Marginalien von alter Hand. <br /><br />
+                    <span style="display: none">USTC 422673; Adams A 1368 (nur Tl. 1); Graesse I, 171; Schweiger II 1, 9. - Von Petrus Colvius (1564-1594) besorgte Ausgabe, die erstmals die Schrift "Peri hermeneías" enthält und von den Zeitgenossen hoch geschätzt wurde. - Beibindung: USTC 406754; Adams S 1861; Voet 2262. - Der römisch-numidische Schriftsteller und Philosoph Lucius Apuleieus (2. Jh. n. Chr.) verdankt seinen bleibenden Ruhm dem lateinischen Roman "Metamorphosen" (auch "Der goldene Esel"), der zur Weltliteratur gezählt wird und bis heute anregend auf die Literatur und Kunst gewirkt hat. Die 1555 von Christophe Plantin (Christoffel Plantijn) in Antwerpen gegründete Offizin war eine der größten ihrer Zeit und gilt als die erste industrielle Buchdruckerei; 1582 erfolgte die Gründung einer Filiale in Leiden, die drei Jahre später von Plantins Schwiegersohn Franciscus Raphelengius (Frans van Ravelingen) übernommen wurde.</span>
+                    <a href='/artikel/apuleius-2509-4.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-4
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/biblia-hebraica-2102-11.html'>
+                            <img class='thumb' src='/img/thumb/biblia-hebraica-2102-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/biblia-hebraica-2102-11.html'><strong>Biblia Hebraica</strong></a><br /><br />
+                    ['Esrim ve-'arba' sifre ha-kodesh Sive Biblia Hebraica: Ex Aliqvot Manvscriptis Et Complvribvs Impressis Codicibvs, Item Masora Tam Edita, Qvam Manvscripta, Aliisque Hebraeorvm Criticis Diligenter Recensita. ... Cvra Ac Stvdio Io. Heinr. Michaelis ...] Teil III: Prophetae posteriores [und] Teil IV: Hagiographa. 2 Teile (von 4) in 1 Bd. [Halle/Saale, Waisenhausdruckerei, 1720.] Kl-4; 16 pp, 136 fol. (hebr.), 4 pp, 179 fol. (hebr.), 2 Bll.; 198 fol. (hebr.), 2 Bll.; einige Vignetten; Kalbsleder der Zeit mit goldgeprägtem Rückentitel, reicher Rückenvergoldung, Goldfileten, Eckfleurons, Stehkantenvergoldung, Buntpapiervorsätzen und punziertem Goldschnitt (etwas berieben und mit leichten Kratzspuren); seitlicher Randabriss des ersten Zwischentitels fachgerecht ergänzt, zwei Namenseinträge (davon der erste mit Kugelschreiber) auf flieg. Vorsatz und erstem Blatt, einige wenige Seiten stock- oder braunfleckig; insgesamt sehr schönes, breitrandiges Exemplar. - Der hier nicht mitgebundene Haupttitel in Kopie beiliegend. <br /><br />
+                    <span style="display: none">VD18 90710320 (Teil III), VD18 90710339 (Teil IV); Darlow-Moule 5143. - Teilausgabe der hebräischen Bibel (Tanach, christlich Altes oder Erstes Testament) nach der hebräischen Einteilung mit kritischem lateinischem Kommentar. Die vierteilige Edition, hier in erster Ausgabe und Quarto-Fassung vorliegend, gilt als Hauptwerk des evangelischen Theologen und Philologen Johann Heinrich Michaelis (1668-1738), Leiter des theologischen Kollegiums der orientalischen Sprachen in Halle. Unser attraktiv gebundener Teilband enthält die sogenannten Hinteren Propheten (Neviim Acharonim) mit Jesaja, Jeremia, Ezechiel usw. sowie die Heiligen Schriften (Ketuvim) mit den Psalmen, Hohelied, Weisheitsbüchern u. a.</span>
+                    <a href='/artikel/biblia-hebraica-2102-11.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-11
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/censorinus-2509-13.html'>
+                            <img class='thumb' src='/img/thumb/censorinus-2509-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/censorinus-2509-13.html'><strong>Censorinus</strong></a><br /><br />
+                    De die natali. Henricus Lindenbrogius recensuit, et notis illustravit. Quibus etiam accedunt Nunnesius in fragmentum notae, cum spicilegio annotationum doctissimorum virorum Salmasii, Scaligeri, &c. Cambridge, J. Hayes für T. Dawson jun., 1695. Kl-8; 8 Bll., 212 pp mit 5 kleinen und einem größeren Holzschnitt, 1 astronomische Falttafel, 22 Bll. Index; zeitgenössischer Pergamentband mit händischer Rückenbeschriftung und Sprenkelschnitt (vorderer fliegender Vorsatz fehlt, hinterer Vorsatz mit kleinen Mängeln); vereinzelt geringfügig gebräunt oder fleckig, insgesamt frisches, attraktives Exemplar. - Auf dem Innendeckel montiert ein Porträtkupfer (Brustbild) des deutschen Verwaltungsjuristen, Rittergutbesitzers und Bücherliebhabers Christoph Thoellden (1686-1752) aus dem 1753 in Leipzig gedruckten Katalog seiner Bibliothek; es wurde 1753 von Johann Martin Bernigeroth gestochen. <br /><br />
+                    <span style="display: none">Graesse 101. - Der im 3. Jh. n. Chr. lebende römische Grammatiker und Schriftsteller Censorinus befasst sich in diesem Werk ("Über den Tag der Geburt") mit der Natur des Menschen und dem Einfluss der Gestirne und Genien auf ihn, ebenso mit Fragen der Zeit und ihrer Periodisierung sowie mit Musik und Mathematik; im Anhang ein pseudo-censorinisches Fragment. Erste in England gedruckte Ausgabe, mit dem geschätzten Kommentar von Heinrich Lindenbrog (1570-1642).</span>
+                    <a href='/artikel/censorinus-2509-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-13
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fabricius-lactantius-1803-18.html'>
+                            <img class='thumb' src='/img/thumb/fabricius-lactantius-1803-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fabricius-lactantius-1803-18.html'><strong>Fabricius, Lactantius</strong></a><br /><br />
+                    Ware Abconterfeytung vnnd vergleichung des Bapstumbs/ Mit andern grössesten Ketzereien. Ohne Ort, Verlag und Jahr [Marburg, Andreas Kolbe, um 1550]. In-8; 35 Bll.; 1 neunzeilige figürliche Holzschnitt-Initiale (sign. "Boos"); mod. Pp.; durchgehend wasserrandig, Marginalien von alter Hand, ein Blatt mit minimaler Randläsur; unten unbeschnitten, breitrandig. <br /><br />
+                    <span style="display: none">Graesse 7, 292; VD16 ZV 11186. - Die polemische Schrift vergleicht das nachantike Papsttum mit berühmten "Ketzereien" von Simon Magus bis Mohammed und identifiziert es zuletzt mit dem Antichrist, der "Babylonischen Hure" der Apokalypse; auch die Dekrete der ersten Tagungsperiode des Konzils von Trient (1545-1547) werden scharf verurteilt. Den Abschluss bildet ein elfstrophiges Kirchenlied nach dem 79. Psalm. Wer sich hinter dem Namen des Verfassers (mit dem Zusatz "Rhoenanus") verbirgt, scheint noch nicht endgültig geklärt; die Zuschreibung von Weller (Pseud. 187) und ihm folgend Hayn-G. (6, 29) an Ruprecht von Mosheim (Mosham) ist schon aus chronologischen Gründen nicht haltbar.</span>
+                    <a href='/artikel/fabricius-lactantius-1803-18.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1803-18
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-25>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/freymund-christian-pseud-1708-25.html'>
+                            <img class='thumb' src='/img/thumb/freymund-christian-pseud-1708-25.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/freymund-christian-pseud-1708-25.html'><strong>Freymund, Christian (Pseud.)</strong></a><br /><br />
+                    Entdecktes Wienerisches Cabinet, Darinnen Die ietzige hochdringliche Gefahr des Käyserlichen Hofes, benebens denen Mitteln, wie solchen zu begegnen, und dem Käyser so wohl, als dem gantzen Reiche, die gewündschte Wohlfahrt wieder herzu bringen sey: vorgestellet wird durch Christian Freymunden. Ohne Ort, 1683. In-8; 4 Bll., davon Bl. 2 und 3 in der Bindung vertauscht; moderne Kartonierung mit Buntpapierbezug und aufgezogenem Deckeltitel "Wien 1683"; wie üblich gebräunt bzw. braunfleckig, das erste Blatt etwas restauriert, einzelne unbedeutende Wurmspuren. <br /><br />
+                    <span style="display: none">Vgl. VD17 56:737213C; Sturminger 1303 (ungenau); Weller 213. - Politische Flugschrift in einer im VD17 bisher nicht verzeichneten Variante, jedoch satzgleich mit einem Exemplar in der Österreichischen Nationalbibliothek (http://data.onb.ac.at/rec/AC09874864). Der nicht identifizierte Verfasser rät in der gegenwärtigen Bedrängnis durch die Osmanen und Frankreich zu einem allgemeinen Toleranzedikt, um die religiösen Spannungen im Reich zu beenden und es damit militärisch zu stärken. Als polemische Replik auf diese Flugschrift erschien im selben Jahr "Der Verdrossene und unverschämte Freymund, Verstummet durch Wahrmund, Uber das falsch entdeckte Wiennerische Cabinet", ebenfalls ohne Ortsangabe und von einem unbekannten Verfasser.</span>
+                    <a href='/artikel/freymund-christian-pseud-1708-25.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-25
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-36>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/inkunabel-gratianus-2102-36.html'>
+                            <img class='thumb' src='/img/thumb/inkunabel-gratianus-2102-36.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/inkunabel-gratianus-2102-36.html'><strong>Inkunabel - Gratianus</strong></a><br /><br />
+                    Decretum. Venedig, Baptista de Tortis, 30. März 1496. In-folio; 2 Bll. Inhaltsverzeichnis, 335 fol. (gelegentlich falsch numeriert), 1 Bl. Lagenverzeichnis "Registrum" mit großer roter Druckermarke; zweispaltiger 71-zeiliger Druck umgeben von 82-zeiligem Kommentar unter Verwendung der gotischen Typen 10:82G, 12:95G und 14:185G; Druck rot-schwarz mit eingemalten blauen (selten auch mehrfarbigen) Initialen; blindgeprägter Kalbslederband der Zeit über Holzdeckeln; Vorderdeckel mit großem floralen Mittelfeld aus Ranken und Pinienzapfen (ähnl. dem Augsburger Pyr) umgeben von mehreren floralen Rollen und einer Rolle mit Jagdszene (Hirsch, Reh und Hund), handschriftlich betitelt "Decretum"; Hinterdeckel mit großem Mittelfeld mit Pyr-, Adler- und Drachenstempeln zwischen diagonalen vierfachen Streicheisenlinien umgeben von einem Band aus einzelnen Drachenstempeln und einer Jagdrolle; ziselierte Messingbeschläge mit Buckel (8 Eck- u. 2 Mittelstücke) und 2 Schließenbleche (Schließenbänder fehlen); Einband stellenweise restauriert (der Rücken großflächig), Deckel und Vorsätze wurmstichig, 1 Blatt lose; Papier teilweise etwas randfleckig und auf den letzten Seiten wurmspurig, einige wenige Randrisse; alte Marginalien. - Insgesamt sehr gut erhaltene schöne Inkunabel. Auf dem Spiegel alter Besitzvermerk "Ad ecclesia[m] S[an]cti Martini in Ernsprunn" (Ernstbrunn im niederösterreichischen Weinviertel). <br /><br />
+                    <span style="display: none">Goff G-388; Gesamtkatalog der Wiegendrucke 11382 (Variante a); zum Einband vgl. Mazal, Europäische Einbandkunst, Abb.47. - Das Decretum Gratiani oder Concordia discordantium canonum ist eine Sammlung kanonischen Rechts, zusammengestellt vom Bologneser Juristen und Kamaldulensermönch Gratian (gest. 1158), der als Vater der Kanonistik gilt. Es bildet den ersten Teil einer Sammlung von sechs Rechtsbüchern, die im Corpus Iuris Canonici zusammengefasst sind und über Jahrhunderte eine Basis der europäischen Rechtswissenschaft bildeten. Hier mit der Glossa ordinaria von Johannes Teutonicus in der Bearbeitung von Bartholomaeus Brixiensis aus dem 13. Jh. Große kommentierte Ausgaben wie die vorliegende wurden im 15. Jh. vor allem in Venedig gedruckt. Der Einband unseres Exemplars stammt vermutlich aus der Buchbinderei des Kartäuserklosters Gaming in Niederösterreich.</span>
+                    <a href='/artikel/inkunabel-gratianus-2102-36.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-36
+                    <br />
+                    
+                        € 12000,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/isokrates-2505-41.html'>
+                            <img class='thumb' src='/img/thumb/isokrates-2505-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/isokrates-2505-41.html'><strong>Isokrates</strong></a><br /><br />
+                    Jsocratis Panegyricvs, Areopagiticvs, Ad Philippvm, Et Archidamvs. Cvm Jnterpretatione Latina. Ingolstadt, Sartorius, 1595. In-12; Titel mit Druckermarke, 340, (1) pp mit einigen Kopfleisten; flexibler Pergamentband mit Rotschnitt (Deckel wellig, Innendeckel schadhaft, Bindebänder fehlen); Titel angeschmutzt und knittrig, mit alten Besitzvermerken und Tintenstrichen; einige wenige Seiten mit kleinen Mängeln, insgesamt weitgehend sauber und frisch. <br /><br />
+                    <span style="display: none">VD16 I 588. - Seltene griechisch-lateinische Parallelausgabe von vier Reden des Athener Rhetors (436-338 v. Chr.), der mit seiner Entwicklung neuer literarischer Formen Vorbild für die spätere Redekunst wurde und als Gegenspieler Platons und seiner Akademie wesentlichen Einfluss auf das antike Bildungswesen nahm. Der "Panegyrikos" erschien zu den Olympischen Spielen des Jahres 380 und rief zur Einigkeit aller Griechen und zum gemeinsamen Kampf gegen die Perser unter Führung Athens auf; der "Areopagitikos" setzte sich für die Rückkehr zur solonischen Verfassung ein.</span>
+                    <a href='/artikel/isokrates-2505-41.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-41
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/putter-johann-stephan-1902-60.html'>
+                            <img class='thumb' src='/img/thumb/putter-johann-stephan-1902-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/putter-johann-stephan-1902-60.html'><strong>Pütter, Johann Stephan</strong></a><br /><br />
+                    Conspectus rei iudiciariae imperii, sigillatim iurium ac praxeos amborum supremorum imperii tribunalium ... - Continuatio conspectus ... 2 Tle. in 1 Bd. Göttingen, I. G. Schmidt, 1748-1749. Gr-8; Titel rot-schwarz mit gestochener Vignette, 7 Bll., 356 pp, 1 Zwischentitel mit Vignette, 1 + 11 Bll.; Ldr. der Zeit mit Rückenschildchen und reicher Rückenvergoldung, goldgepr. Wappen-Supralibros auf Vorder- und Rückendeckel, Buntpapiervorsätzen und Rotschnitt (etwas berieben, kleine Wurmlöcher, vorderes Innengelenk geplatzt); einige wenige Seiten stockfleckig, Vorsätze mit kleinen Reparaturstellen.      <br /><br />
+                    <span style="display: none">ADB 26, 749. - Abhandlung zum Prozessrecht des alten Reichs. Frühes Werk Pütters, einer der bekanntesten Juristen der Aufklärung (1725-1807). Seiner sprachlichen Form wegen wurde das Buch von Pütters Zeitgenossen Johann Jacob Moser kritisiert ("will der Verfasser sich nützen und der Universität Zugang von jungen Staatspersonen, Deductionen und Acten in causis illustribus verschaffen, so muß er sich in guten teutschen Schriften sehen lassen"), der 2. Teil enthält allerdings auch reichlich deutsche Quellentexte. Das schöne Supralibros zeigt das Wappen des österreichischen Adelsgeschlechts Trautson mit Mitra und Bischofsstab und ist dem Wiener Fürsterzbischof Johann Joseph von Trautson (1707-1757) zuzuordnen.</span>
+                    <a href='/artikel/putter-johann-stephan-1902-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-60
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2007-43>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/scherer-georg-sj-2007-43.html'>
+                            <img class='thumb' src='/img/thumb/scherer-georg-sj-2007-43.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/scherer-georg-sj-2007-43.html'><strong>Scherer, Georg SJ</strong></a><br /><br />
+                    Lob vnd Danck Predig, Wegen Glückseliger vnd Ritterlicher Eroberung der Haubtvöstung Raab, gehalten zu Wienn in Osterreich, in der Thumb Kirchen bey S. Stephan den 2. tag Aprilis, Anno 1598. Augsburg, Michael Manger, 1598. In-8; 16 Bll. mit Schlussvignette (das letzte weiß mit kleiner Metallmarkierung am Rand); moderner Kartoneinband. - Titel angeschmutzt, die ersten Blätter unten feuchtrandig, sonst weitgehend fleckenfrei und frisch; Druck teilweise etwas durchschlagend, einzelne minimale Papiermängel. <br /><br />
+                    <span style="display: none">VD16 S 2711; Apponyi I, 623, Göllner 2340. - Erzherzog Maximilian gewidmete, von katholischem Glaubenseifer erfüllte Dankpredigt. Die in der Nacht des 29. März 1589 erfolgte Rückeroberung der 1594 von den Türken eingenommenen Festung Raab (heute Györ) durch die kaiserlichen Truppen unter Adolf von Schwarzenberg gelang durch die Sprengung des Stadttores mit Hilfe einer Petarde (was hier der Hilfe Gottes zugeschrieben wird) und stellte einen bedeutenden Etappensieg gegen die osmanischen Eroberer dar. Aus Dankbarkeit errichtete man dem Feldherrn im ganzen Land steinerne Gedenksäulen mit seinem Namen ("Raaberkreuze"), von denen einige noch existieren. Die Predigt wurde im selben Jahr auch in Wien, Konstanz und Ingolstadt gedruckt.</span>
+                    <a href='/artikel/scherer-georg-sj-2007-43.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2007-43
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/turkenkriege-niederosterreich-1556-2509-82.html'>
+                            <img class='thumb' src='/img/thumb/turkenkriege-niederosterreich-1556-2509-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/turkenkriege-niederosterreich-1556-2509-82.html'><strong>Türkenkriege / Niederösterreich 1556</strong></a><br /><br />
+                    Newe hilff unnd Bewilligung der Römischen Ku: Mt: unnserm aller genedigisten Herrn, von den Ständen ainer Ersamen Landschaft des Ertzhertzogthumbs Osterreich under der Enns, auf das Tausend Fünfhundert und Sibenundfünfzigst Jar, neben anderer Irer hilff, Irer May. und dem Vatterland zu nutz und wolfart gehorsamblich bewilligt. Wien, ohne Druckerangabe, 10. 11. 1556. In-folio; Titel mit Holzschnittvignette, 3 Bll. mit Initialen in Holzschnitt; neu kartoniert mit aufgezogener Kopie des Titelblatts; etwas stockfleckig, erstes und letztes Blatt oben feuchtrandig, sonst gut erhalten. <br /><br />
+                    <span style="display: none">VD16 N 1666; vgl. auch Denis 552 und Mayer 224. - Interessante, gut lesbare Steuerbewilligung ("Türkenhilfe") der niederösterreichischen Stände unter Ferdinand I. (hier als "römische künigliche Majestät" angesprochen) im Kampf gegen die Türkennot. Verhängt werden Konsumsteuern auf alkoholische Getränke, Lebensmittel, Textilien, Geschirr und Schmuck, Ausführsteuern für Pferde, Abgaben für Handwerker und Unterhaltungskünstler sowie Umsatzsteuern für ausländische Händler. Die Bewilligung ist in verschiedenen Varianten aus demselben Jahr bekannt, worunter sich auch eine mit der Druckerangabe Hans Singriener findet. Unser Exemplar entspricht jenem der Bayerischen Staatsbibliothek und wird von VD 16 der Wiener Offizin von Raphael Hoffhalter und Kaspar Kraft zugewiesen.</span>
+                    <a href='/artikel/turkenkriege-niederosterreich-1556-2509-82.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-82
+                    <br />
+                    
+                        € 580,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik/landkarten.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Maps
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2412-129>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/agypten-2412-129.html'>
+                            <img class='thumb' src='/img/thumb/agypten-2412-129.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/agypten-2412-129.html'><strong>Ägypten</strong></a><br /><br />
+                    "Charte von Aegypten". Kupferstichkarte mit altem Grenzkolorit bei Johann Walch, Augsburg um 1820, 19 x 23 cm. - Etwas angeschmutzt, Altersspuren. <br /><br />
+                    <span style="display: none">Zeigt Ägypten und Nubien unter osmanischer Herrschaft. Johann Walch (1757-1815) war Maler, Kupferstecher, Kartograph und Verleger.</span>
+                    <a href='/en/articles/agypten-2412-129.html'>Continue reading</a><br /><br />
+                    Order no. 2412-129
+                    <br />
+                    
+                        € 80,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-132>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/azoren-madeira-kanaren-2012-132.html'>
+                            <img class='thumb' src='/img/thumb/azoren-madeira-kanaren-2012-132.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/azoren-madeira-kanaren-2012-132.html'><strong>Azoren - Madeira - Kanaren</strong></a><br /><br />
+                    "Tabula Portuum Barbariae, junctis Insulis Canariensibus". Kupferstich-Seekarte nach Blaeu aus J. A. Werdenhagen, De rebus publicis Hanseaticis tractatus, Frankfurt, M. Merian, 1641, 26 x 35 cm. - Der Atlantik vor Marokko mit Teilen der portugiesischen und spanischen Küste. - Alte Bugschäden sorgfältig restauriert. <br /><br />
+                    <span style="display: none">Broeckema, Maps of the Canary Islands, Nr. 139; Wüthrich II/56/171.</span>
+                    <a href='/en/articles/azoren-madeira-kanaren-2012-132.html'>Continue reading</a><br /><br />
+                    Order no. 2012-132
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-104>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/baltikum-2311-104.html'>
+                            <img class='thumb' src='/img/thumb/baltikum-2311-104.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/baltikum-2311-104.html'><strong>Baltikum</strong></a><br /><br />
+                    "Ducatuum Livoniae et Curlandiae cum vicinis Insulis". Altkolorierte Kupferstichkarte bei Johann Baptist Homann, Nürnberg um 1720, 49 x 58 cm. - Dekorative farbfrische Karte mit barocker Titelkartusche. Zeigt den baltischen Raum zwischen Liepaja (Libau) und St. Petersburg, mit den Inseln Hiiumaa (Dagö) und Saaremaa (Ösel). - Rechts oben von alter Hand numeriert. <br /><br />
+                    <span style="display: none">Mit dem kaiserlichen Druckprivileg von 1715.</span>
+                    <a href='/en/articles/baltikum-2311-104.html'>Continue reading</a><br /><br />
+                    Order no. 2311-104
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-131>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/deutschland-dithmarschen-1811-131.html'>
+                            <img class='thumb' src='/img/thumb/deutschland-dithmarschen-1811-131.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/deutschland-dithmarschen-1811-131.html'><strong>Deutschland - Dithmarschen</strong></a><br /><br />
+                    "Thietmarsia". Kupferstichkarte aus Petrus Bertius, Tabularum geographicarum contractarum libri, Amsterdam um 1600, 8,5 x 12 cm. <br /><br />
+                    <span style="display: none">Dekorative kleine Karte der Landschaft in Schleswig-Holstein. Rückseitig Teil eines lateinischen Gedichts des Humanisten Helius Eobanus Hessus (1488-1540) für den Landgrafen Philipp von Hessen.</span>
+                    <a href='/en/articles/deutschland-dithmarschen-1811-131.html'>Continue reading</a><br /><br />
+                    Order no. 1811-131
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-131>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/galizien-und-lodomerien-2412-131.html'>
+                            <img class='thumb' src='/img/thumb/galizien-und-lodomerien-2412-131.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/galizien-und-lodomerien-2412-131.html'><strong>Galizien und Lodomerien</strong></a><br /><br />
+                    Drei Kupferstichkarten mit zartem zeitgenössischem Kolorit aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 1. Band, Wien 1789, Nr. 35-37, je ca. 21 x 27 cm. - Die westlichen, mittleren und östlichen Bezirke des 1772 bei der ersten Teilung Polens an das Haus Habsburg gelangten historischen Gebiets, das als Königreich Galizien und Lodomerien dem Kaisertum Österreich angegliedert wurde und in der Folge eines der Kronländer der Donaumonarchie bildete. <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Dekorative und für die Zeit relativ genaue Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/galizien-und-lodomerien-2412-131.html'>Continue reading</a><br /><br />
+                    Order no. 2412-131
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-143>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/griechenland-2112-143.html'>
+                            <img class='thumb' src='/img/thumb/griechenland-2112-143.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/griechenland-2112-143.html'><strong>Griechenland</strong></a><br /><br />
+                    Holzschnittkarte auf ganzer Buchseite aus Sebastian Münster, Cosmographia, deutsche Ausgabe um 1580, 12 x 13 cm. <br /><br />
+                    <span style="display: none">Zeigt das griechische Festland und die griechischen Inseln sowie die Gegend um das Marmarameer.</span>
+                    <a href='/en/articles/griechenland-2112-143.html'>Continue reading</a><br /><br />
+                    Order no. 2112-143
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-132>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/griechenland-chios-2412-132.html'>
+                            <img class='thumb' src='/img/thumb/griechenland-chios-2412-132.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/griechenland-chios-2412-132.html'><strong>Griechenland - Chios</strong></a><br /><br />
+                    "Scio". Kupferstichkarte von Jodocus Hondius oder Pieter van der Keere aus "Chaert-Tresoor", Ausgabe Amsterdam um 1602 oder 1606, 8,5 x 12,5 cm. Mit rückseitigem lateinischem Text von Petrus Bertius. - Kleine teils hinterlegte Wurmspuren. <br /><br />
+                    <span style="display: none">Zacharakis 1219. - West-Ost-orientiert, mit kleinem Seeungeheuer am unteren Bildrand. Chios war bis 1566 eine genuesische Kolonie, danach gehörte die Insel zum osmanischen Reich.</span>
+                    <a href='/en/articles/griechenland-chios-2412-132.html'>Continue reading</a><br /><br />
+                    Order no. 2412-132
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-132>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/grossbritannien-england-1811-132.html'>
+                            <img class='thumb' src='/img/thumb/grossbritannien-england-1811-132.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/grossbritannien-england-1811-132.html'><strong>Großbritannien - England</strong></a><br /><br />
+                    "Spezialkarte von dem Königreiche England." Kupferstichkarte mit altem Grenz- und Flächenkolorit aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 1. Band, Wien 1789, Nr. 79, 21 x 27,5 cm.  <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Dekorative und für die Zeit relativ genaue Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/grossbritannien-england-1811-132.html'>Continue reading</a><br /><br />
+                    Order no. 1811-132
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-144>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/grossbritannien-schottland-2112-144.html'>
+                            <img class='thumb' src='/img/thumb/grossbritannien-schottland-2112-144.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/grossbritannien-schottland-2112-144.html'><strong>Großbritannien - Schottland</strong></a><br /><br />
+                    "Nova et accurata totius Regni Scotiae, Secundum omnes Provincias et adjacentes Insulas, exquisito studio determinatae, Delineatio ...". Kupferstichkarte mit originalem Flächenkolorit von Andreas Silbereisen bei Matthäus Seutter, Augsburg um 1740, 57,5 x 49 cm. - Rechts unten von alter Hand numeriert. <br /><br />
+                    <span style="display: none">Detailreiche und dekorative große Schottlandkarte mit allegorischen Darstellungen zu den Landesprodukten.</span>
+                    <a href='/en/articles/grossbritannien-schottland-2112-144.html'>Continue reading</a><br /><br />
+                    Order no. 2112-144
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/italien-2211-92.html'>
+                            <img class='thumb' src='/img/thumb/italien-2211-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/italien-2211-92.html'><strong>Italien</strong></a><br /><br />
+                    "L'Italie divisée suivant l'estendue de toutes ses Souverainetés ...". Kupferstichkarte nach Nicolas Sanson bei Petrus Schenk aus "Atlas Contractus", Amsterdam um 1700, 47 x 58 cm. Mit zwei allegorischen Kartuschen. - Mittelfalte leicht gebräunt, kleine Bugschäden hinterlegt, rechts oben von alter Hand numeriert. <br /><br />
+                    <span style="display: none">Seltene Ausgabe von Sansons Italien-Karte. Die Titelkartusche ist fehlerhaft gestochen ("distinguee juivant l'estendiie" statt "divisée suivant l'estendue").</span>
+                    <a href='/en/articles/italien-2211-92.html'>Continue reading</a><br /><br />
+                    Order no. 2211-92
+                    <br />
+                    
+                        € 480,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/italien-piemont-und-ligurien-1603-37.html'>
+                            <img class='thumb' src='/img/thumb/italien-piemont-und-ligurien-1603-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/italien-piemont-und-ligurien-1603-37.html'><strong>Italien - Piemont und Ligurien</strong></a><br /><br />
+                    "Pedemontium Monsferratus et Liguria". Kupferstichkarte (gestochen von G. Porro) aus G. A. Magini, Geographiae Universae ..., lateinische Ausgabe bei P. Keschedt, Köln 1597, 12,5 x 17 cm. <br /><br />
+                    <span style="display: none">Koeman III 7050:381, ed. 381:01. - Gut erhaltene Miniaturkarte Nordwestitaliens.</span>
+                    <a href='/en/articles/italien-piemont-und-ligurien-1603-37.html'>Continue reading</a><br /><br />
+                    Order no. 1603-37
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-135>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kapverdische-inseln-1811-135.html'>
+                            <img class='thumb' src='/img/thumb/kapverdische-inseln-1811-135.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kapverdische-inseln-1811-135.html'><strong>Kapverdische Inseln</strong></a><br /><br />
+                    "Die Inseln von Capo Verde." Kupferstichkarte mit dreidimensionaler Schiffs-Staffage von Alain Manesson-Mallet, hier (mit zusätzlicher deutscher Beschriftung) aus J. A. Jung, Beschreibung des ganzen Welt-Kreisses, Frankfurt 1719, 14,5 x 10 cm. - Stellenweise etwas unsauber gedruckt. <br /><br />
+                    <span style="display: none">Erstmals in Manesson-Mallets "Description de l'Univers" (Paris 1683) erschienen.</span>
+                    <a href='/en/articles/kapverdische-inseln-1811-135.html'>Continue reading</a><br /><br />
+                    Order no. 1811-135
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-134>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kroatien-korcula-1911-134.html'>
+                            <img class='thumb' src='/img/thumb/kroatien-korcula-1911-134.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kroatien-korcula-1911-134.html'><strong>Kroatien - Korcula</strong></a><br /><br />
+                    "Curciola Insula." Kupferstichkarte aus Jacob von Sandrart, Kurtze und vermehrte Beschreibung Von Dem Ursprung, Aufnehmen, Gebiete, und Regierung der Weltberühmten Republick Venedig ... Wie auch eine Beschreibung von Griechenland, dem Archipelago und der vornehmsten Griechischen Provintz ..., Nürnberg um 1687, 7 x 11 cm. - Unten angerändert, minimal gebräunt. <br /><br />
+                    <span style="display: none">Seltene S-N-orientierte Miniaturkarte der kroatischen Insel vor der Küste Süddalmatiens.</span>
+                    <a href='/en/articles/kroatien-korcula-1911-134.html'>Continue reading</a><br /><br />
+                    Order no. 1911-134
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-135>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/luxemburg-1911-135.html'>
+                            <img class='thumb' src='/img/thumb/luxemburg-1911-135.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/luxemburg-1911-135.html'><strong>Luxemburg</strong></a><br /><br />
+                    "Ducatus Lutzenburgensis Nova et accurata Descriptio." Kupferstichkarte von Jan Jansson mit originalem Kolorit, deutsche Ausgabe um 1660, 39 x 50,5 cm. Mit Titelkartusche; rückseitig Landesbeschreibung. - Leicht gebräunt bzw. fleckig. <br /><br />
+                    <span style="display: none">Das noch ungeteilte Herzogtum unter der Herrschaft der spanischen Habsburger; 1659 fiel der Süden des Landes im sogenannten Pyrenäenfrieden an Frankreich.</span>
+                    <a href='/en/articles/luxemburg-1911-135.html'>Continue reading</a><br /><br />
+                    Order no. 1911-135
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-136>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/naher-osten-2012-136.html'>
+                            <img class='thumb' src='/img/thumb/naher-osten-2012-136.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/naher-osten-2012-136.html'><strong>Naher Osten</strong></a><br /><br />
+                    "Deserta Aegypti, Thebaidis, Arabiae, Syriae etc. ubi accurate notata sunt loca inhabitata per Sanctos Patres Anachoretas." Altkolorierte Kupferstichkarte von Matthäus Seutter, Augsburg um 1735, hier Ausgabe mit Druckprivileg von 1741, 49 x 56,5 cm. - Mit allegorischer Titelkartusche von Gottfried Rogg. Mittelbug gebräunt, sonst sehr gut erhalten und mit schönem Kolorit. <br /><br />
+                    <span style="display: none">Zeigt das östliche Mittelmeergebiet mit Zypern und Palästina sowie Teilen Syriens, der Arabischen Halbinsel und Ägyptens; Orientierung NW-SO. Die Rückzugsgebiete der frühchristlichen Einsiedler (Anachoreten, Wüstenväter) sind detailreich eingetragen und mit kleinen Szenen, Figuren und Symbolen originell illustriert.</span>
+                    <a href='/en/articles/naher-osten-2012-136.html'>Continue reading</a><br /><br />
+                    Order no. 2012-136
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-142>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/niederlande-zeeland-1911-142.html'><strong>Niederlande - Zeeland</strong></a><br /><br />
+                    "Zelandia inferioris Germaniae pars magno circumdata Oceano plurimis insulis est disterminata ... " Altkolorierte Kupferstichkarte aus Gerard de Jode, Speculum Orbis Terrarum, Antwerpen 1578 (hier aus der zweiten Ausgabe von 1593), 36 x 48 cm. Mit Titelkartusche und Wappen; rückseitig lateinische Landesbeschreibung. - Mittelbug geringfügig leimschattig, mit unbedeutenden kleinen Schabstellen und unrestauriertem Wurmloch, ein kleiner Tintenfleck im Bild und kleine Tintenspuren im Rand; insgesamt gut erhalten und dekorativ. <br /><br />
+                    <span style="display: none">Van der Krogt 3600:32; Van Ortroy 118. - Seltene frühe Karte der niederländischen Provinz, gestochen von Jan van Doetichum. Obwohl von hoher Qualität, konnte sich de Jodes Atlas gegen die Kartenwerke von Abraham Ortelius nicht durchsetzen; von der ersten Ausgabe des "Speculum" haben sich nur rund zwölf Exemplare erhalten.</span>
+                    <a href='/en/articles/niederlande-zeeland-1911-142.html'>Continue reading</a><br /><br />
+                    Order no. 1911-142
+                    <br />
+                    
+                        € 0,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-139>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/norwegen-1811-139.html'>
+                            <img class='thumb' src='/img/thumb/norwegen-1811-139.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/norwegen-1811-139.html'><strong>Norwegen</strong></a><br /><br />
+                    "Das Königreich Norwegen." Kupferstichkarte mit zartem altem Grenzkolorit aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 1. Band, Wien 1789, Nr. 75, 23 x 28 cm.  <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Dekorative und für die Zeit relativ genaue Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/norwegen-1811-139.html'>Continue reading</a><br /><br />
+                    Order no. 1811-139
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-138>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/norwegen-2012-138.html'>
+                            <img class='thumb' src='/img/thumb/norwegen-2012-138.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/norwegen-2012-138.html'><strong>Norwegen</strong></a><br /><br />
+                    "Regnum Norwegiae accurata et novissima Delineatione juxta V. Praefecturas Generales Aggerhusiensem, Bergensem, Nidrosiens. Wardhusiens. et Bahus." Altkolorierte Kupferstichkarte von Matthäus Seutter, Augsburg um 1735, 58 x 50 cm. Mit Nebenkarte, heraldischer Kartusche und Fischfangszene. - Einzelne kaum störende Quetschfalten, Mittelbug geringfügig gebräunt, im weißen Rand von alter Hand numeriert. <br /><br />
+                    <span style="display: none">Dekorative große Karte im ersten Etat (vor dem 1741 verliehenen kaiserlichen Druckprivileg).</span>
+                    <a href='/en/articles/norwegen-2012-138.html'>Continue reading</a><br /><br />
+                    Order no. 2012-138
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-106>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-2311-106.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-2311-106.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-2311-106.html'><strong>Österreich</strong></a><br /><br />
+                    "Der oestreichische Kreis." Kupferstichkarte mit altem Grenzkolorit aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 2. Band, Wien 1791, Nr. 118, 20 x 25 cm. - Die österreichischen Stammlande mit den ehemaligen habsburgischen Besitzungen in Süddeutschschland. Breitrandig und frisch. <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Dekorative Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/osterreich-2311-106.html'>Continue reading</a><br /><br />
+                    Order no. 2311-106
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-130>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-atlas-1712-130.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-atlas-1712-130.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-atlas-1712-130.html'><strong>Österreich (Atlas)</strong></a><br /><br />
+                    Oesterreichischer Post u. Reise-Atlas  entworfen von K. I. Kipferling , und revidirt von den k. k. Ober-Postämtern. Ein nothwendiger Anhang zu Hrn. Krusius Oesterreichischem Postlexikon. (2. Ausg.) Wien, Kunst- u. Industrie-Comptoir, 1808. Quer-folio; gest. Titel, 15 gestochene Karten; modernes Leinen mit eingebundenem Originalumschlag; Titel gestempelt, vereinzelt gering fleckig, insgesamt ausgezeichnet erhaltenes, frisches Exemplar des seltenen Werks. <br /><br />
+                    <span style="display: none">Atlantes Austriaci I/1, 55 (dort nur ein Beleg angeführt). Erstmals 1804 erschienen, musste der Atlas nach dem Frieden von Preßburg mit seinen territorial-politisch bedingten Veränderungen (Verlust von Tirol und Venetien) aktualisiert werden. Enthält unter anderem drei Karten von Galizien.</span>
+                    <a href='/en/articles/osterreich-atlas-1712-130.html'>Continue reading</a><br /><br />
+                    Order no. 1712-130
+                    <br />
+                    
+                        € 1750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-146>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-burgenland-2112-146.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-burgenland-2112-146.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-burgenland-2112-146.html'><strong>Österreich - Burgenland</strong></a><br /><br />
+                    "Moson Vármegye (Comitatus Mosoniensis)". - Das Komitat Moson (Wieselburg). Kupferstichkarte 1796 mit altem Grenzkolorit aus Demeter von Görög, Magyar Átlás, Wien 1802-1811, 22 x 29 cm. - Das Gebiet südlich von Preßburg mit dem Seewinkel bis Pamhagen und einem Teil von Nordwestungarn mit Wieselburg und Ungarisch-Altenburg. Ortsnamen teilweise zweisprachig; Windrose mit kleinem Wappen. <br /><br />
+                    <span style="display: none">Ulbrich 26/3; Atlantes Austriaci I, 36. - Entworfen von J. Kováts, verkleinert von M. Votésky, gestochen von J. Berken. Zeigt unter anderem die Ortschaften Mörbisch, Rust, Donnerskirchen, Purbach, Breitenbrunn, Neusiedl, Kittsee, Weiden, Podersdorf, Illmitz und Apetlon. Maßstab ca. 1 : 265.000, gedruckte Widmung für Graf György Festetits.</span>
+                    <a href='/en/articles/osterreich-burgenland-2112-146.html'>Continue reading</a><br /><br />
+                    Order no. 2112-146
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-139>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-karnten-2012-139.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-karnten-2012-139.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-karnten-2012-139.html'><strong>Österreich - Kärnten</strong></a><br /><br />
+                    "Carinthia Ducatus distincta in Superiorem et Inferior. ...". Kupferstichkarte von Matthäus Seutter mit originalem Grenz- und Flächenkolorit, Augsburg um 1735, 48,5 x 58 cm. - Kleine Mängel am unteren Rand, insgesamt gut erhalten und dekorativ. <br /><br />
+                    <span style="display: none">Zeigt Kärnten mit den damaligen salzburgischen und bambergischen Enklaven. Oben Ansicht von Klagenfurt (13 x 37 cm) mit Legende sowie heraldische Kartusche mit Darstellung des Loiblpasses, allegorischen Figuren und Tieren.</span>
+                    <a href='/en/articles/osterreich-karnten-2012-139.html'>Continue reading</a><br /><br />
+                    Order no. 2012-139
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-107>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-karnten-2311-107.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-karnten-2311-107.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-karnten-2311-107.html'><strong>Österreich - Kärnten</strong></a><br /><br />
+                    "Mittel Kaernten." Kupferstichkarte mit zeitgenössischem Kolorit aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 2. Band, Wien 1791, Nr. 138, 24,5 x 35 cm. - Mit Klagenfurt und der Kärntner Seenplatte. Breitrandig und frisch. <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Dekorative und für die Zeit relativ genaue Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/osterreich-karnten-2311-107.html'>Continue reading</a><br /><br />
+                    Order no. 2311-107
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-140>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-niederosterreich-2012-140.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-niederosterreich-2012-140.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-niederosterreich-2012-140.html'><strong>Österreich - Niederösterreich</strong></a><br /><br />
+                    "Des Ertzhertzogtumbs Unter Osterreich, Erstes Viertl Unter Wienner Wald." Kupferstichkarte aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 26 x 37 cm; Titelkartusche mit Wappen und Sinnspruch. - Links und rechts bis zum Plattenrand beschnitten, einzelne kleine Papier- und Randmängel, insgesamt gut erhalten und dekorativ. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I; vgl. auch den Kommentar von A. L. Schuller im Nachdruck der Topographie (1976), 29. - Eine von vier "Viertelkarten" Vischers. Zeigt das Industrieviertel mit eingetragenen Ortschaften sowie die Fläche des Nordburgenlands mit dem Neusiedlersee.</span>
+                    <a href='/en/articles/osterreich-niederosterreich-2012-140.html'>Continue reading</a><br /><br />
+                    Order no. 2012-140
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-140>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-niederosterreich-industrieviertel-1811-140.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-niederosterreich-industrieviertel-1811-140.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-niederosterreich-industrieviertel-1811-140.html'><strong>Österreich - Niederösterreich / Industrieviertel</strong></a><br /><br />
+                    "Des Landes unter der Enns Viertel unter dem Wiener Walde." Altkolorierte Kupferstichkarte aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 2. Band, Wien 1791, Nr. 124, 26 x 30 cm. - Professionell restauriert. <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Zeigt das Industrieviertel mit dem nördlichen Burgenland. Dekorative und für die Zeit relativ genaue Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/osterreich-niederosterreich-industrieviertel-1811-140.html'>Continue reading</a><br /><br />
+                    Order no. 1811-140
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-96>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-steiermark-2211-96.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-steiermark-2211-96.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-steiermark-2211-96.html'><strong>Österreich - Steiermark</strong></a><br /><br />
+                    "Stiria Ducatus juxta recentissimas observationes et accuratissimas mappas ... usui publico destinatus". Altkolorierte Kupferstichkarte von Matthäus Seutter, Augsburg um 1735, 49 x 56 cm. Mit zwei allegorischen Kartuschen. - Kleine Bugmängel, rechts oben von alter Hand numeriert; insgesamt sehr gut erhalten, kräftig gedruckt und farbfrisch. <br /><br />
+                    <span style="display: none">Zeigt die heutige Steiermark mit der ehemaligen Untersteiermark (heute Slowenien) sowie Teile von Kärnten, Kroatien und Westungarn nach der topographischen Aufnahme durch Georg Matthäus Vischer. Die dekorativen Kartuschen stellen die landestypische Ökonomie vor - Bergbau und Schmiedehandwerk, Fischerei und Handel, Acker- und Weinbau.</span>
+                    <a href='/en/articles/osterreich-steiermark-2211-96.html'>Continue reading</a><br /><br />
+                    Order no. 2211-96
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-133>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreich-tirol-1712-133.html'>
+                            <img class='thumb' src='/img/thumb/osterreich-tirol-1712-133.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreich-tirol-1712-133.html'><strong>Österreich - Tirol</strong></a><br /><br />
+                    "Umgebungen von Imst, Landeck und Ried." Kupferstichkarte (Teilblatt Nr. 7) aus der vom k. k. Generalquartiermeisterstab hrsg. "Karte der gefürsteten Grafschaft Tyrol nebst Vorarlberg und dem angrenzenden Souverainen Fürstenthum Liechtenstein ...", Wien 1823, Bildformat 27 x 39,5 cm, Plattengr. 33,5 x 46 cm. (Austria Picta 73.3). <br /><br />
+                    <span style="display: none">Spezialkarte des Oberinntals im  Maßstab 1:144.000 auf der Grundlage der Franziszeischen Landesaufnahme. Selten.</span>
+                    <a href='/en/articles/osterreich-tirol-1712-133.html'>Continue reading</a><br /><br />
+                    Order no. 1712-133
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-140>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/polen-ukraine-galizien-1911-140.html'>
+                            <img class='thumb' src='/img/thumb/polen-ukraine-galizien-1911-140.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/polen-ukraine-galizien-1911-140.html'><strong>Polen / Ukraine - Galizien</strong></a><br /><br />
+                    "Galizien". Kupferstichkarte mit originalem Grenzkolorit aus "Atlas der neuen Geographie zum Gebrauche der Schulen in den österreichisch kaiserl. königl. deutschen Erbstaaten", Wien 1813, 29 x 39,5 cm. - Leicht gebräunt und etwas fleckig. <br /><br />
+                    <span style="display: none">Atlantes Austriaci Bd. I/1, 141, Nr. 11. - Herausgegeben von der K. k. Schulbücher-Verschleiß-Administration.</span>
+                    <a href='/en/articles/polen-ukraine-galizien-1911-140.html'>Continue reading</a><br /><br />
+                    Order no. 1911-140
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-134>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/preussen-2412-134.html'>
+                            <img class='thumb' src='/img/thumb/preussen-2412-134.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/preussen-2412-134.html'><strong>Preußen</strong></a><br /><br />
+                    "Preussen". Altkolorierte Kupferstichkarte aus Johann Walch, Allgemeiner Atlas, Augsburg 1803, 18 x 22 cm. - Um die Plattenkante knapprandig; Anmerkung und Nummer von alter Hand im weißen Rand. <br /><br />
+                    <span style="display: none">Zeigt die territorialen Verhältnisse zwischen der 3. Teilung Polens (1795) und der Errichtung des kurzlebigen Herzogtums Warschau durch Napoleon (1807). Johann Walch (1757-1815) war Maler, Kupferstecher, Kartograph und Verleger.</span>
+                    <a href='/en/articles/preussen-2412-134.html'>Continue reading</a><br /><br />
+                    Order no. 2412-134
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-135>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/russland-2412-135.html'>
+                            <img class='thumb' src='/img/thumb/russland-2412-135.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/russland-2412-135.html'><strong>Russland</strong></a><br /><br />
+                    "Eur. Russland nördl. Theil / Eur. Russland südl. Theil". Zwei grenzkolorierte Stahlstichkarten von F. Biller aus Atlas um 1850, je 20 x 24 cm. - Das zweite Blatt minimal stockfleckig. <br /><br />
+                    <span style="display: none">Vgl. Tooley I, 138. - Die Wiener Stecherfamilie Biller arbeitete für mehrere Verlage und stellte auch Globen her.</span>
+                    <a href='/en/articles/russland-2412-135.html'>Continue reading</a><br /><br />
+                    Order no. 2412-135
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-136>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/skandinavien-2412-136.html'>
+                            <img class='thumb' src='/img/thumb/skandinavien-2412-136.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/skandinavien-2412-136.html'><strong>Skandinavien</strong></a><br /><br />
+                    "Schweden und Norwegen". Altkolorierte Kupferstichkarte aus Johann Walch, Allgemeiner Atlas, Augsburg 1803, 23 x 18 cm. <br /><br />
+                    <span style="display: none">Johann Walch (1757-1815) war Maler, Kupferstecher, Kartograph und Verleger.</span>
+                    <a href='/en/articles/skandinavien-2412-136.html'>Continue reading</a><br /><br />
+                    Order no. 2412-136
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/spanien-galicien-2211-100.html'>
+                            <img class='thumb' src='/img/thumb/spanien-galicien-2211-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/spanien-galicien-2211-100.html'><strong>Spanien - Galicien</strong></a><br /><br />
+                    "Gallaecia Regnum". Altkolorierte Kupferstichkarte von Gerard Mercator bei Jodocus Hondius, Amsterdam um 1610, 36 x 41 cm. Mit Rollwerkkartusche und Schiffsstaffage; rückseitig lateinischer Text mit altkolorierter figuraler Initiale. - Kleine Mängel im breiten weißen Rand, rückseitig teilweise stärker angeschmutzt. <br /><br />
+                    <span style="display: none">Dekorative Karte der historischen Region im Nordwesten Spaniens mit dem Wallfahrtsort Santiago de Compostela. Das mittelalterliche Königreich Galicien war zumeist mit dem benachbarten Königreich León wie auch dem Königreich Kastilien-León in Personalunion assoziiert und wurde 1833 formell aufgelöst. Heute gehört Galicien zu den Autonomen Gemeinschaften Spaniens.</span>
+                    <a href='/en/articles/spanien-galicien-2211-100.html'>Continue reading</a><br /><br />
+                    Order no. 2211-100
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/spanien-katalonien-1802-50.html'>
+                            <img class='thumb' src='/img/thumb/spanien-katalonien-1802-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/spanien-katalonien-1802-50.html'><strong>Spanien - Katalonien</strong></a><br /><br />
+                    "Das Fürstenthum Catalonien." Kupferstichkarte mit originalem Grenzkolorit aus F. J. Reilly, Schauplatz der fünf Theile der Welt, 3. Band, Wien 1791, Nr. 575, 21,5 x 27 cm. <br /><br />
+                    <span style="display: none">Atlantes Austriaci I, 84 ff. - Dekorative und für die Zeit relativ genaue Karte aus dem umfangreichen, allerdings unvollendet gebliebenen Atlas des Wiener Verlegers, Kartographen und Schriftstellers Franz Johann Joseph von Reilly (1766-1820).</span>
+                    <a href='/en/articles/spanien-katalonien-1802-50.html'>Continue reading</a><br /><br />
+                    Order no. 1802-50
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-135>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sudasien-1712-135.html'>
+                            <img class='thumb' src='/img/thumb/sudasien-1712-135.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sudasien-1712-135.html'><strong>Südasien</strong></a><br /><br />
+                    Gestochenes Frontispiz von Joseph à Montalegre nach Johannes Degler aus Heinrich Scherer, "Atlas Novus", München 1698-1710, 24 x 19 cm. - Frischer, fleckenfreier Abzug, rechts druckbedingt etwas knapprandig. <br /><br />
+                    <span style="display: none">Zeigt den Raum zwischen der Arabischen Halbinsel, Indien und dem Kaspisee mit reichem Tierleben (darunter einem Einhorn) sowie dem Garten Eden mit kleinen Figuren von Adam und Eva; im Indischen Ozean Seeungeheuer aller Art, ringsum der Tierkreis, in den Ecken Putti als Symbole der vier Elemente mit lateinischen Psalmversen, oben die Geisttaube. Der Jesuit Heinrich Scherer (1628-1704) schuf mit seinem "Atlas Novus" nicht einen Atlas im modernen Sinn, sondern ein stark von theologischen Aspekten geprägtes geographisches Handbuch.</span>
+                    <a href='/en/articles/sudasien-1712-135.html'>Continue reading</a><br /><br />
+                    Order no. 1712-135
+                    <br />
+                    
+                        € 580,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-137>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sudtirol-alto-adige-2412-137.html'>
+                            <img class='thumb' src='/img/thumb/sudtirol-alto-adige-2412-137.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sudtirol-alto-adige-2412-137.html'><strong>Südtirol / Alto Adige</strong></a><br /><br />
+                    "Territorium Tridentinum". Kupferstichkarte bei Jan Janssonius, Amsterdam um 1640, 37 x 49 cm. - Mittelbug teilweise geplatzt und sauber hinterlegt, im breiten weißen Rand geringfügig fleckig; insgesamt gutes Exemplar. <br /><br />
+                    <span style="display: none">Mit rückseitigem deutschem Text "Beschreibung des Fürstenthumbs Trient".</span>
+                    <a href='/en/articles/sudtirol-alto-adige-2412-137.html'>Continue reading</a><br /><br />
+                    Order no. 2412-137
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/syrien-2003-88.html'>
+                            <img class='thumb' src='/img/thumb/syrien-2003-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/syrien-2003-88.html'><strong>Syrien</strong></a><br /><br />
+                    "Syriae sive Soriae descriptio". Kupferstichkarte von Philipp Clüver aus "Introductio in universam geographiam", Ausgabe Leiden um 1700, 20 x 24,5 cm. <br /><br />
+                    <span style="display: none">Die antike syrische Kulturlandschaft. Mit dekorativer Elefantenkartusche.</span>
+                    <a href='/en/articles/syrien-2003-88.html'>Continue reading</a><br /><br />
+                    Order no. 2003-88
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

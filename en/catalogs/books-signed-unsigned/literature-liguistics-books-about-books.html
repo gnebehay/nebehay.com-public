@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books (signed &amp; unsigned)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Books (signed &amp; unsigned)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Literature, Liguistics, Books about Books
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/books-signed-unsigned.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/early-printed-books.html'>Early Printed Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/local-history-and-topography.html'>Local History and Topography</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/botany-zoology-agriculture-horsemanship-hunting.html'>Botany, Zoology, Agriculture, Horsemanship, Hunting</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/geography-travel-ethnology.html'>Geography, Travel, Ethnology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/history-archeology-numismatics.html'>History, Archeology, Numismatics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/children-s-books.html'>Children&#39;s Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/gastronomy-sports-and-games-miscellaneous.html'>Gastronomy, Sports and Games, Miscellaneous</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/art-and-crafts.html'>Art and Crafts</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/literature-liguistics-books-about-books.html'>Literature, Liguistics, Books about Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/medicine-psychology-pedagogics.html'>Medicine, Psychology, Pedagogics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/militaria-and-naval-matters.html'>Militaria and Naval Matters</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/science-mathematics-technology.html'>Science, Mathematics, Technology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/philosophy-and-religion.html'>Philosophy and Religion</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/politics-law-economics.html'>Politics, Law, Economics</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2509-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bahr-hermann-2509-5.html'>
+                            <img class='thumb' src='/img/thumb/bahr-hermann-2509-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bahr-hermann-2509-5.html'><strong>Bahr, Hermann</strong></a><br /><br />
+                    Der Franzl. Fünf Bilder eines guten Mannes. (Wien), Wiener Verlag, 1901. In-8; 4 Bll., 375 pp; etwas späterer privater Halbleinenband; Vorsätze sowie erstes und letztes Blatt leicht gebräunt, vereinzelt etwas fingerfleckig. - Auf dem vignettengeschmückten Vorblatt eigenhändige Widmung "Herrn Arnold Hagenauer mit den besten Grüßen Hermann Bahr 8/10 1900". <br /><br />
+                    <span style="display: none">Zweite, vom Verlag etwas vordatierte Auflage des Werks, das erstmals 1900 sowohl als Buch wie als Bühnenmanuskript erschien. Bahr erzählt in dem in Mundart verfassten Stück vom Leben des Schriftstellers Franz Stelzhamer (1802-1874) und trug damit wesentlich zu dessen Popularisierung als oberösterreichischer Heimatdichter bei. Vorangestellt ist die gedruckte Zueignung "Der Oberösterreicher Jugend / denen vom Pan / die vollenden sollen / sei / dies Denkmal eines guten Mannes / anvertraut." Die handschriftliche Widmung bezieht sich auf den Schriftsteller und Kritiker Arnold Hagenauer (1871-1918), der zuletzt als Bohemien und Sonderling in der Wiener Josefstadt lebte und nach einem Heurigenbesuch tödlich verunglückte.</span>
+                    <a href='/en/articles/bahr-hermann-2509-5.html'>Continue reading</a><br /><br />
+                    Order no. 2509-5
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bode-august-2102-14.html'>
+                            <img class='thumb' src='/img/thumb/bode-august-2102-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bode-august-2102-14.html'><strong>Bode, August</strong></a><br /><br />
+                    Burlesken. Leipzig, Junius bzw. Eurich, 1804. Kl-8; 1 Bl., X, 1 Bl., 257 pp (inkl. 6 Zwischentitel), 4 kolorierte Kupfertafeln, davon eine undeutlich im Druck signiert "C. Kolbe fecit"; marmorierter Pappband der Zeit mit Farbschnitt (etwas berieben und bestoßen); teilweise gering fleckig, einige wenige Seiten eselsohrig, auf Vor- und Haupttitel dezenter alter Namenszug, die Seiten vor den Tafeln jeweils mit leichten Farbabklatschen; insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Goedeke 7, 416, 7; Hayn-G. 1, 405; Kosch 1, 634. - Sammlung von sechs burlesken Theaterstücken: Der Hauptmann Copernikus - Das unterbrochne Opferfest - Der verliebte Don Quixote - Däumling - Die Erfindung der Kunst - Das Concert. August Bode (1778-1804) lebte als Schriftsteller und Übersetzer in Weimar und schrieb unter anderem eine Satire über die Gebrüder Schlegel. Die originellen Bilder stammen vom Chodowiecki-Schüler Carl Wilhelm Kolbe d. J. (1781-1853), der vor allem Werke romantischer Dichter illustrierte. Das von der Juniusschen Buchhandlung herausgebrachte Werk ist auch mit dem Untertitel "Ein Neujahrsgeschenk für frohe Zirkel" sowie mit einem Kalendarium bekannt; unser Exemplar weist zusätzlich zum Haupttitel einen Vortitel des Verlags Johann Christian Eurich auf.</span>
+                    <a href='/en/articles/bode-august-2102-14.html'>Continue reading</a><br /><br />
+                    Order no. 2102-14
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/capek-karel-2001-13.html'>
+                            <img class='thumb' src='/img/thumb/capek-karel-2001-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/capek-karel-2001-13.html'><strong>Capek, Karel</strong></a><br /><br />
+                    Povetron. 6. & 7. Tsd. (Spisy bratrí Capku XXXIV). Praha, Fr. Borový, 1934. In-8; dunkelgrüner Orig.-Lederband auf 5 Bünden mit Rücken- und Deckelvergoldung, Kopfgoldschnitt und Lesebändchen; auf Van-Gelder-Bütten gedruckt, zweiseitig unbeschnitten; hinterer flieg. Vorsatz minimal stockfleckig, sonst tadellos. - Nr. 21 von 50 Exemplaren der Vorzugsausgabe, auf Vorblatt mit Verlagssignet eigh. signiert "Karel Capek". <br /><br />
+                    <span style="display: none">Fortgeführter Druck der ersten Ausgabe. Capeks Roman (zu deutsch "Der Meteor") erhielt noch im Erscheinungsjahr den Staatspreis.</span>
+                    <a href='/en/articles/capek-karel-2001-13.html'>Continue reading</a><br /><br />
+                    Order no. 2001-13
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/daubler-theodor-1701-14.html'>
+                            <img class='thumb' src='/img/thumb/daubler-theodor-1701-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/daubler-theodor-1701-14.html'><strong>Däubler, Theodor</strong></a><br /><br />
+                    Die Treppe zum Nordlicht. Leipzig, Insel-Verlag, 1920. Gr-8; 53, (1) pp, 1 Bl.; orig. Klappenbroschur mit goldgepr. Deckeltitel. - Auf Vorblatt mit Verlagssignet Widmung von Däublers Schwester Elena, die in 2. Ehe mit dem Maler Willi Nowak verheiratet war. Sehr schönes Exemplar. <br /><br />
+                    <span style="display: none">Pfäfflin 14; Raabe 55, 14; Sarkowski 357. - Erste Ausgabe dieser "Symphonie in Versen", in schönem zweifarbigem Druck. Der österreichisch-deutsche Schriftsteller (1876-1934), unsteter Wanderer und Schöpfer einer gnostischen Erlösungslehre, wurde vor allem für sein großes Versepos "Nordlicht" (1910) von den Vertretern des frühen literarischen Expressionismus enthusiastisch gefeiert.</span>
+                    <a href='/en/articles/daubler-theodor-1701-14.html'>Continue reading</a><br /><br />
+                    Order no. 1701-14
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-16>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/de-backer-augustin-de-1909-16.html'>
+                            <img class='thumb' src='/img/thumb/de-backer-augustin-de-1909-16.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/de-backer-augustin-de-1909-16.html'><strong>De Backer, Augustin de</strong></a><br /><br />
+                    Bibliothèque des écrivains de la Compagnie de Jésus ... Avec la collaboration d'Alois de Backer et de Charles Sommervogel. Nouvelle édition refondue et considérablement augmentée. 3 Bde. Liège u. a., Eigenverlag, 1869-1876. In-folio; Titel, 2352 Spalten, 2 Bll.; 2214 Sp.; 2520, (3), LXIII Sp.; restaurierte Halblederbände der Zeit mit Buntpapiervorsätzen und späteren Deckelbezügen (berieben und bestoßen, Reste von Papierschildchen); zwei Titelblätter knittrig, einzelne Gebrauchs- und Altersspuren, insgesamt gut erhalten. - Eines von 200 Exemplaren, die Bände 1 und 2 von Augustin de Backer im Druckvermerk signiert. <br /><br />
+                    <span style="display: none">Zweite Ausgabe der üblicherweise als "De Backer - Sommervogel" zitierten umfangreichen Jesuitenbibliographie. Verzeichnet Druckwerke und Manuskripte von der Gründung des Ordens (1540) bis 1875 und enthält auch biographische Angabe sowie Literatur über die Jesuiten.</span>
+                    <a href='/en/articles/de-backer-augustin-de-1909-16.html'>Continue reading</a><br /><br />
+                    Order no. 1909-16
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/defoe-daniel-janthur-richard-illustr-2309-10.html'>
+                            <img class='thumb' src='/img/thumb/defoe-daniel-janthur-richard-illustr-2309-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/defoe-daniel-janthur-richard-illustr-2309-10.html'><strong>Defoe, Daniel - Janthur, Richard (Illustr.)</strong></a><br /><br />
+                    Das Leben und die ganz ungemeinen Begebenheiten des weltberühmten Engelländers Robinson Crusoe. Mit 31 Steinzeichnungen von Richard Janthur. Leipzig, Insel-Verlag, 1922. In-4; 104 pp, 1 Bl., 31 farbige Lithotafeln; Orig.-Halbpergament mit Deckelvignette und Kopfgoldschnitt (angeschmutzt und berieben, Lesebändchen abgerissen); papierbedingt geringfügig gebräunt, jedoch durchgehend sauber. <br /><br />
+                    <span style="display: none">Sarkowski 363 A. - Der vom Expressionismus geprägte deutsche Graphiker und Illustrator Richard Janthur (1883-1956) galt in der NS-Zeit als entartet; viele seiner Werke wurden beschlagnahmt, die meisten davon vernichtet.</span>
+                    <a href='/en/articles/defoe-daniel-janthur-richard-illustr-2309-10.html'>Continue reading</a><br /><br />
+                    Order no. 2309-10
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/denis-michael-2305-22.html'>
+                            <img class='thumb' src='/img/thumb/denis-michael-2305-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/denis-michael-2305-22.html'><strong>[Denis, Michael]</strong></a><br /><br />
+                    Zurückerinnerungen. Wien, Ignaz Alberti, 1794. In-8; 6 Bll., 155 pp, 2 Bll.; etwas späteres Halbleder mit goldgepr. Rückentitel (etwas berieben und bestoßen); sehr gut erhaltenes, nahezu fleckenfreies Exemplar. <br /><br />
+                    <span style="display: none">Goedeke IV/1, 196, (9), 36; Wurzbach 3, 242; De Backer-S. II, 1923, 71; Holzmann-B. 1, 13723. -  Erste und einzige Ausgabe, anonym erschienen. "C'est un art pratique du bon goût, appuyé sur les belles pensées d'auteurs anciens et modernes" (De Backer-S.). Nichts Autobiographisches, wie es der Titel vermuten ließe, sondern "ästhetische Reflexionen, mit Beispielen aus alten und neuen Autoren belegt; z. B. über Wahrheit, Neuheit, Erhabenheit der Gedanken; über Rührung, Anmuth, Witz in den Gedanken und dergleichen mehr" (Wurzbach) mit einem Index der zitierten Schriftsteller. Der österreichische Jesuit, Schriftsteller, Übersetzer, Bibliothekar und Zoologe Michael Denis (1729-1800) war ab 1784 Kustos der Wiener Hofbibliothek. - Selten.</span>
+                    <a href='/en/articles/denis-michael-2305-22.html'>Continue reading</a><br /><br />
+                    Order no. 2305-22
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/diol-giacomo-2205-12.html'>
+                            <img class='thumb' src='/img/thumb/diol-giacomo-2205-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/diol-giacomo-2205-12.html'><strong>Diol, Giacomo</strong></a><br /><br />
+                    De' sonetti apologici. Centuria terza. Rom, Barbiellini, 1754. In-8; gestochenes gefaltetes Frontispiz (unten typographisch überdruckt), 4 Bll., 110 pp mit Zierleisten sowie einigen Vignetten und Initialen; Halbpergament der Zeit mit Sprenkelschnitt und Rückenbeschriftung (einzelne kleine Mängel im Falz); leicht bis etwas stärker stockfleckig, das Frontispiz links hart beschnitten und angerändert; insgesamt gut erhalten und selten. <br /><br />
+                    <span style="display: none">Hundert Tierfabeln in Sonettform. In sich abgeschlossener dritter und letzter Teil einer Sammlung von 300 Gedichten, deren ersten zwei Teile (1749 und 1751 erschienen) aus "sonetti giocosi" bestehen. Der römische Dichter, Maler und Zeichner Giacomo Diol (auch Jacopo Diol, 1690-1759) war unter dem Schäfernamen Cleante Corintiense Mitglied der 1690 gegründeten Accademia dell'Arcadia (Gesellschaft der Arkadier), deren Panflöte-Emblem das Titelblatt schmückt. Im Anhang zwei weitere Gedichte des Autors, darunter eine Stanze über seinen im Alter von 42 Jahren erlittenen Schlaganfall; sie ist im "dialetto romanesco" verfasst und mit kurzen linguistischen Anmerkungen versehen. Das Buch ist dem kunstbegeisterten Kardinal Alessandro Albani (1692-1779) gewidmet, der ein Neffe von Papst Clemens XI. war und mit einem Teilverkauf seiner Antikensammlung den Bau seiner Villa an der Via Salaria finanzierte.</span>
+                    <a href='/en/articles/diol-giacomo-2205-12.html'>Continue reading</a><br /><br />
+                    Order no. 2205-12
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/don-quixote-bibliographie-2505-20.html'>
+                            <img class='thumb' src='/img/thumb/don-quixote-bibliographie-2505-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/don-quixote-bibliographie-2505-20.html'><strong>Don Quixote (Bibliographie)</strong></a><br /><br />
+                    Bibliografía crítica de ediciones del Quijote impresas desde 1605 hasta 1917, recopiladas y descritas por Juan Suñé Benages y Juan Suñé Fonbuena. Continuada hasta 1937 por el primero de los citados autores y ahora redacta por J. D. M. Ford y C. T. Keller. Cambridge, Harvard University Press, 1939. Gr-8; XVII, 72, (1) pp; Orig.-Leinen mit goldgepr. Rückentitel und Kopfgoldschnitt. <br /><br />
+                    <span style="display: none">Seltenes Supplement zu der 1917 in Barcelona erschienenen Bibliographie, die Ausgaben des berühmten Cervantes-Romans in unzähligen Sprachen verzeichnet. In spanischer Sprache mit englischem Vorwort.</span>
+                    <a href='/en/articles/don-quixote-bibliographie-2505-20.html'>Continue reading</a><br /><br />
+                    Order no. 2505-20
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/duhamel-georges-1810-19.html'>
+                            <img class='thumb' src='/img/thumb/duhamel-georges-1810-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/duhamel-georges-1810-19.html'><strong>Duhamel, Georges</strong></a><br /><br />
+                    Délibérations. Paris, Les Cahiers de Paris, 1925. In-8; 114 pp (inkl. Titel mit Vignette), 3 Bll.; englische Broschur mit Vignette, zweiseitig unbeschnitten; leichte Gebrauchs- und Altersspuren. - Nr. XCVII von 1500 Exemplaren. Auf dem Vortitel eigenhändige Widmung "Au Dr. Wilhelm Friedmann en amical souvenir G. Duhamel Fevrier [19]29". <br /><br />
+                    <span style="display: none">Erste Ausgabe dieser Sammlung von Essays, erschienen als erstes Heft der ersten Serie von "Les Cahiers de Paris". Enthält: L'écrivain et l'événement - Les intellectuels et la reconstruction du monde - Jeunesse d'une république (Prague, 1921). - Wilhelm Friedmann (1884-1942) war ein deutsch-österreichischer Romanist und Literaturwissenschaftler, der bis 1929 als Lektor für Romanische Philologie in Leipzig tätig war. Von den Nationalsozialisten verfolgt ging er 1933 nach Paris, wurde dort 1942 von der Gestapo verhaftet und wählte den Freitod.</span>
+                    <a href='/en/articles/duhamel-georges-1810-19.html'>Continue reading</a><br /><br />
+                    Order no. 1810-19
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/einband-lombardei-um-1830-2205-15.html'>
+                            <img class='thumb' src='/img/thumb/einband-lombardei-um-1830-2205-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/einband-lombardei-um-1830-2205-15.html'><strong>Einband Lombardei um 1830</strong></a><br /><br />
+                    Roter Maroquinband mit reicher Goldprägung, 30,5 x 22 cm. Auf den beiden gleich gestalteten Deckeln das große österreichische kaiserliche Wappen umgeben von einer reichen ornamentalen Bordüre; goldgepr. Rücken mit zwei Titelfeldern, Steh- und Innenkantenvergoldung, dreiseitiger Goldschnitt. Gebrauchsspuren (etwas berieben und bestoßen, stellenweise geringfügig fleckig), die fliegenden Vorsätze teilweise stärker leimschattig. - Inhalt: Atti della distribuzione dei premj d'industria fattasi nel dì 4 ottobre 1826, Milano, Imperiale Regia Stamperia, 1826, 68 pp. <br /><br />
+                    <span style="display: none">Prachtvoller Einband aus der letzten Phase der österreichischen Herrschaft in Oberitalien, wohl aus einer Mailänder Werkstatt. Die Verleihung der Gewerbepreise erfolgte zum Namenstag von Kaiser Franz I.</span>
+                    <a href='/en/articles/einband-lombardei-um-1830-2205-15.html'>Continue reading</a><br /><br />
+                    Order no. 2205-15
+                    <br />
+                    
+                        € 1750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/farkas-henrik-oszter-lajos-redaktion-2509-20.html'>
+                            <img class='thumb' src='/img/thumb/farkas-henrik-oszter-lajos-redaktion-2509-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/farkas-henrik-oszter-lajos-redaktion-2509-20.html'><strong>Farkas, Henrik - Oszter, Lajos (Redaktion)</strong></a><br /><br />
+                    Megfagyott muzsikus 1912. Budapest, Nyugat Irodalmi és Nyomdai Részvénytársaság, 1912. In-4; 86 pp, 5 Bll. Anzeigen; durchgehend lithographisch illustriert; illustr. Orig.-Kartonierung (der ursprünglich vorstehende Umschlag auf Buchblockgröße beschnitten, etwas gedunkelt und geringfügig berieben, der hintere Deckel mit einem kleinen und einem etwas größeren Einriss); innen tadellos. - Dazu als Beigabe: Diszitö müvészet 1914/1. Einzelheft der ungarischen Zeitschrift für dekorative Kunst, stärker beschädigt und unkomplett. <br /><br />
+                    <span style="display: none">Humoristisches studentisches Jahrbuch im ungarischen Jugendstil, illustriert von Jenö Jeney, Gyula Köszeghy, Jószef Makoldy, Bálint Szeghalmy u. a. Megfagyott muzsikus ("Gefrorener Musikant") wurde von Architekturstudenten an der Königlich-Ungarischen Joseph-Universität für Technik und Wirtschaftswissenschaften in Budapest herausgegeben und erschien erstmals 1898. Ursprünglich auf das Studenten- und Universitätsleben konzentriert, erweiterte das Periodikum in der Zwischenkriegszeit seine Thematik und wurde allmählich zu einer Art Forum für progressive Architektur. - Selten.</span>
+                    <a href='/en/articles/farkas-henrik-oszter-lajos-redaktion-2509-20.html'>Continue reading</a><br /><br />
+                    Order no. 2509-20
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/forster-cornelia-1902-19.html'>
+                            <img class='thumb' src='/img/thumb/forster-cornelia-1902-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/forster-cornelia-1902-19.html'><strong>[Forster, Cornelia]</strong></a><br /><br />
+                    Cornelia. Poésie graphique. Vorwort von Manuel Gasser Zürich, Amstutz & Herdeg, 1941. In-4; 125 pp mit zahlr. teils farbigen oder getönten Tafeln; unbeschrifteter orig. Pappband mit bedrucktem orig. Umschlag (dieser beschädigt und geschossen). - Auf unterschiedlichen Papiersorten und typographisch uneinheitlich gedruckt; Nr. 117 von 350 Exemplaren. <br /><br />
+                    <span style="display: none">Vgl. Vollmer II, 134. - Ungewöhnlich gestaltetes Buch mit deutschen und französischen Texten und damit verschmelzenden Bildern der ebenso vielseitigen wie eigenwilligen Schweizer Künstlerin (1906-1990). "Was uns hier ... dargeboten wird, sind lauter Bruchstücke, sind jene Teile des Ganzen, die durch das Mittel der graphischen Wiedergabe erfaßt werden konnten. Das Ganze aber ist Cornelias ungewöhnliche Existenz." (Vorwort).</span>
+                    <a href='/en/articles/forster-cornelia-1902-19.html'>Continue reading</a><br /><br />
+                    Order no. 1902-19
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/freiligrath-ferdinand-ubers-1803-22.html'>
+                            <img class='thumb' src='/img/thumb/freiligrath-ferdinand-ubers-1803-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/freiligrath-ferdinand-ubers-1803-22.html'><strong>Freiligrath, Ferdinand (Übers.)</strong></a><br /><br />
+                    Englische Gedichte aus neuerer Zeit. Nach Felicia Hemans, L. E. Landon, Robert Southey, Alfred Tennyson, Henry W. Longfellow und Anderen. Mit dem Bildnisse der Mrs. Hemans in Stahlstich. Stuttgart und Tübingen, Cotta, 1846. In-8; X (inkl. Frontispiz), 415 pp; Ln. d. Zt. mit marmor. Rücken und Sprenkelschnitt; stellenweise stockfleckig, überwiegend jedoch sauber und frisch. <br /><br />
+                    <span style="display: none">Wilpert-G. 17. - Erste Ausgabe. Der deutsche Lyriker und Übersetzer (1810-1876) beteiligte sich an den revolutionären Strömungen seiner Zeit, verzichtete auf eine Pension des preußischen Königs und lebte zeitweise im Ausland. 1848/49 arbeite er als Redakteur für die "Neue Rheinische Zeitung" von Karl Marx und Friedrich Engels, später schloss er sich der nationalen Begeisterungswelle an und begrüßte mit patriotischen Gedichten den Krieg gegen Frankreich und die Reichsgründung von 1871.</span>
+                    <a href='/en/articles/freiligrath-ferdinand-ubers-1803-22.html'>Continue reading</a><br /><br />
+                    Order no. 1803-22
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/goethe-2505-31.html'>
+                            <img class='thumb' src='/img/thumb/goethe-2505-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/goethe-2505-31.html'><strong>(Goethe)</strong></a><br /><br />
+                    Die Natur. Ein Hymnus. Leipzig, Insel-Verlag, 1911. Gr-8; 1 weißes Bl., 7 Bll.; grüner Orig.-Kalbslederband mit goldgepr. Rücken- und Deckeltitel, Innenkantenbordüre und Kopfgoldschnitt; der empfindliche Einband berieben, stellenweise verfärbt und mit leichten Kratzspuren; kleines Exlibris mit Signet des Insel-Verlags. - Gesetzt aus der Cicero Kleukens Antiqua; Titel und Initiale in Golddruck. Eines von nur 20 Exemplaren der Vorzugsausgabe (Gesamtauflage 100 Ex.) auf Japanpapier im Ganzledereinband. <br /><br />
+                    <span style="display: none">Stürz 74; Sarkowski 598; Rodenberg 77. - Druck der Ernst-Ludwig-Presse im Insel-Verlag, hier in zweiter Ausgabe; die erste erschien 1910 in 120 Exemplaren. Die Urheberschaft des um 1782 entstandenen und erstmals 1784 veröffentlichten Essays wurde vielfach Johann Wolfgang von Goethe zugeschrieben, doch dürfte der Text tatsächlich von dem Schweizer Pfarrer, Übersetzer und Schriftsteller Georg Christoph Tobler (1757-1812) stammen.</span>
+                    <a href='/en/articles/goethe-2505-31.html'>Continue reading</a><br /><br />
+                    Order no. 2505-31
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/goethe-johann-wolfgang-von-2001-30.html'>
+                            <img class='thumb' src='/img/thumb/goethe-johann-wolfgang-von-2001-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/goethe-johann-wolfgang-von-2001-30.html'><strong>Goethe, (Johann Wolfgang von)</strong></a><br /><br />
+                    Mahomet. Trauerspiel in fünf Aufzügen nach Voltaire. Tübingen, ohne Verlagsangabe, 1802. Kl-8; 87 pp; späterer Halblederband mit goldgepr. Rückenschildchen (hinterer Vorsatz leimschattig); Titel im Falz restauriert und mit durchschlagender Rückseite, anfangs und gegen Ende etwas fleckig, Papier mürbe, die letzte Seite mit kleinem Eckabriss. <br /><br />
+                    <span style="display: none">Goedeke IV 3, 356.87; Hagen 278; Slg. Kippenberg 614. - Seltener erster Nachdruck der im selben Jahr bei Cotta erschienenen Erstausgabe. Voltaires im Geist der Aufklärung geschriebenes Versdrama "Le fanatisme ou Mahomet le Prophète" erlebte 1741 seine Uraufführung in Lille, wurde aber im folgenden Jahr durch die Zensur von der Bühne verbannt und blieb bis 1751 verboten. Die erste französische Ausgabe datiert von 1742; bevor Goethe den Stoff bearbeitete, erschienen zwischen 1748 und 1768 bereits drei (meist anonyme) deutsche Übersetzungen.</span>
+                    <a href='/en/articles/goethe-johann-wolfgang-von-2001-30.html'>Continue reading</a><br /><br />
+                    Order no. 2001-30
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gottlieb-theodor-hrsg-2509-31.html'>
+                            <img class='thumb' src='/img/thumb/gottlieb-theodor-hrsg-2509-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gottlieb-theodor-hrsg-2509-31.html'><strong>Gottlieb, Theodor (Hrsg.)</strong></a><br /><br />
+                    K. k. Hofbibliothek. Bucheinbände. Auswahl von technisch und geschichtlich bemerkenswerten Stücken. Einleitung und Tafelteil. Wien, Anton Schroll, (1910). Gr-folio; Einleitung 2 Bll., 80 Sp., S. 81-84; flexibles Orig.-Leinen; Tafelteil 1 Bl., 100 teils farbige lose Tafeln in Licht- und Steindruck; zusammen in goldgepr. Orig.-Leinenmappe mit Bindebändern in blindgepr. Orig.-Pappschuber; Schuber leicht beschädigt, ein Bindeband gerissen, sonst sehr schönes Exemplar mit nur unbedeutenden Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Sorgfältig produziertes repräsentatives Werk mit ausgewählten Beispielen der Buchbindekunst von der Spätantike bis zum frühen 19. Jahrhundert aus der Sammlung der Österreichischen Nationalbibliothek.</span>
+                    <a href='/en/articles/gottlieb-theodor-hrsg-2509-31.html'>Continue reading</a><br /><br />
+                    Order no. 2509-31
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-38>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/grillparzer-franz-2202-38.html'>
+                            <img class='thumb' src='/img/thumb/grillparzer-franz-2202-38.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/grillparzer-franz-2202-38.html'><strong>(Grillparzer, Franz)</strong></a><br /><br />
+                    Jahrbuch der Grillparzer-Gesellschaft. Wien, Carl Konegen / Amalthea / Moritz Perles / Anton Schroll / Bergland, 1891-1980. Herausgegeben von Carl Glossy, Reinhold Backmann u. a. Jahrgang 1-32 (1890/91-1933), Neue Folge 2 und 4 (1942/1944) sowie 3. Folge 1-14 (1953-1980) in insgesamt 46 Bänden. In-8 und gr-8; die ersten 25 Jgg. goldgepr. Orig.-Leinen mit Rotschnitt, Jg. 26-29 (in 2 Bänden) priv. Leinen, Jg. 30-32 Orig.-Broschur, Neue Folge Orig.-Pappbände, 3. Folge goldgepr. Orig.-Leinen; die broschierten Bände (Jg. 30-32) mit Einbandmängeln, die priv. Leinenbände etwas stockfleckig, sonst bis auf wenige Altersspuren sehr gut erhalten. - Dazu 4 Beigaben: Grillparzers Ahnen. Eine Festgabe zu August Sauers 60. Geburtstage hrsg. vom Literarischen Verein in Wien (1915); Grillparzer über sich selbst. Ein Aktenfaszikel zusammengestellt von R. Payer zum Thurn (1921); O. Katann (Hrsg.), Grillparzer-Studien (1924); Zu Adolf Wilbrandts 100. Geburtstag (Beig. zum 34. Jg. des Jahrbuchs). <br /><br />
+                    <span style="display: none">Vgl. Diesch 3707. - Umfangreiche Folge der mit Unterbrechungen bis heute fortgeführten germanistischen Zeitschrift. Die 1890 gegründete Grillparzer Gesellschaft mit Sitz in Wien gehört zu den ältesten literarischen Gesellschaften Österreichs. Sie widmet sich der Biographie und den Werken des Dichters und seiner Zeitgenossen mit Verbindungen bis herauf zur Gegenwart.</span>
+                    <a href='/en/articles/grillparzer-franz-2202-38.html'>Continue reading</a><br /><br />
+                    Order no. 2202-38
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gross-hoffinger-a-j-hrsg-2003-28.html'>
+                            <img class='thumb' src='/img/thumb/gross-hoffinger-a-j-hrsg-2003-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gross-hoffinger-a-j-hrsg-2003-28.html'><strong>Gross-Hoffinger, A. J. (Hrsg.)</strong></a><br /><br />
+                    Der Adler. Welt- und National Chronik, Unterhaltungsblatt, Literatur- und Kunstzeitung für die Oesterreichischen Staaten. Jahrgang 1838. Erstes [-viertes] Quartal. Wien, gedr. bei den Ghelen'schen Erben, 1838. In-4; 2 Bll., 1240 pp (273 Ausgaben, gelegentlich fehlerhaft paginiert); einf. Ln. d. Zt. (Kanten berieben, Rücken unschön mit Leder verstärkt); Titel alt restauriert, tlw. stock- oder feuchtfleckig, einzelne kleine Papiermängel. - Ohne die fakultativ zu abonnierenden wöchentlichen lithographischen Bildbeilagen. <br /><br />
+                    <span style="display: none">Wurzbach 5, 368; ÖBL 2, 76. - Textlich kompletter erster Jahrgang der 5-6mal wöchentlich erscheinenden Zeitung, die 1841 ihren Titel auf "Vindobona" änderte und 1844 ihr Erscheinen einstellte; enthält u. a. zahlreiche Berichte über das Wiener Theater- und Musikleben. Anton Johann Gross-Hoffinger (1808 - nach 1873) betätigte sich als Journalist, Erzähler und Lyriker und wurde vor allem durch seine Wiener Sittenschilderungen bekannt.</span>
+                    <a href='/en/articles/gross-hoffinger-a-j-hrsg-2003-28.html'>Continue reading</a><br /><br />
+                    Order no. 2003-28
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/haas-rudolf-1903-18.html'>
+                            <img class='thumb' src='/img/thumb/haas-rudolf-1903-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/haas-rudolf-1903-18.html'><strong>Haas, Rudolf</strong></a><br /><br />
+                    Michel Blank und seine Liesel. 1.-15. Tsd. Leipzig, Staackmann, 1919. In-8; 376 pp; goldgeprägtes OHLdr. mit Rückenvergoldung, Rückenschild und Kopfgoldschnitt (leicht berieben); Besitzvermerk auf weißem Blatt, Exlibris. - Nr. 15 von nur 25 Ex. der Vorzugsausgabe. <br /><br />
+                    <span style="display: none">Kosch 7, 15; Giebisch-G. 131. - Erstausgabe. Seinerzeit erfolgreicher Roman des aus dem Egerland stammenden, später dem Nationalsozialismus nahestehenden Kärntner Schriftstellers (1877-1943). </span>
+                    <a href='/en/articles/haas-rudolf-1903-18.html'>Continue reading</a><br /><br />
+                    Order no. 1903-18
+                    <br />
+                    
+                        € 45,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hammer-purgstall-joseph-frh-von-2003-31.html'>
+                            <img class='thumb' src='/img/thumb/hammer-purgstall-joseph-frh-von-2003-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hammer-purgstall-joseph-frh-von-2003-31.html'><strong>[Hammer-Purgstall, Joseph Frh. von]</strong></a><br /><br />
+                    Italia in Hundert und Einem Ständchen besungen von einem Morgenländer. Leipzig, C. W. Leske, 1830. Gr-8; Titel mit Vignette, 1 Bl., 314 pp, 1 Bl. Errata; OKart. mit vereinfachter Titelangabe und Vignette auf hinterem Deckel, unaufgeschnitten und unbeschnitten (geringfügig fleckig, Rücken etwas brüchig); überwiegend leicht, vereinzelt stärker stockfleckig, insgesamt gutes Exemplar. <br /><br />
+                    <span style="display: none">Holzmann-Bohatta 2, 11345; Brieger 958; Goedecke VII, 766, 79; Wurzbach 7, 278. - Erste Ausgabe dieser in Distichen abgefassten Reisebeschreibung des österreichischen Orientalisten (1774-1856), die von der zeitgenössischen Kritik wenig wohlwollend aufgenommen wurde. Hammer schrieb im März 1830 an die Brockhaus-Redaktion in Leipzig: '"Indem ich hier eine Correspondenznachricht für Ihre Blätter [für Litterarische Unterhaltung] beischließe, bitte ich die geehrte Redakzion daß wenn dieselbe von dem bei Leske erschienenen Gedichte Italia besungen in hundert einem Ständchen von einem Morgenländer Notiz nehmen sollte, je doch nicht auf mich als Verfasser gerathen werden möge ..., da ich sehr triftige Gründe habe ... die Nennung meines Namens vermieden zu sehen ...''. Allerdings machten es die in dem Werk enthaltenen zahlreichen Bezugnahmen auf den Orient leicht, den Verfasser zu identifizieren. - Selten.</span>
+                    <a href='/en/articles/hammer-purgstall-joseph-frh-von-2003-31.html'>Continue reading</a><br /><br />
+                    Order no. 2003-31
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-30>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hauptmann-gerhart-2309-30.html'>
+                            <img class='thumb' src='/img/thumb/hauptmann-gerhart-2309-30.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hauptmann-gerhart-2309-30.html'><strong>Hauptmann, Gerhart</strong></a><br /><br />
+                    Und Pippa tanzt! Ein Glashüttenmärchen in vier Akten. Berlin, S. Fischer, 1906. In-8; 109 pp; Orig.-Halbpergament mit goldgepägtem Rückentitel und Kopfgoldschnitt, unbeschnitten (geringfügig fleckig, kleine Fehlstelle auf hinterem Deckel); papierbedingt leicht gebräunt, vereinzelt im oberen Rand fleckig, Exlibris und drei handschriftliche Besitzvermerke auf Spiegel. - Auf weißem Blatt vor dem Vortitel eigenhändiger Namenszug "Gerhart Hauptmann / Blankenese 14. 7. 06" mit Bleistift. <br /><br />
+                    <span style="display: none">Wilpert-G. 26. - Die erste Ausgabe in einem dekorativ gebundenen signierten Exemplar. Hauptmann bekannte nach der Uraufführung des Märchendramas am 19. 1. 1906 im Berliner Lessingtheater, dass er das schwierige Stück schon selbst nicht mehr verstehe.</span>
+                    <a href='/en/articles/hauptmann-gerhart-2309-30.html'>Continue reading</a><br /><br />
+                    Order no. 2309-30
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hohenemser-paul-2003-37.html'>
+                            <img class='thumb' src='/img/thumb/hohenemser-paul-2003-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hohenemser-paul-2003-37.html'><strong>Hohenemser, Paul</strong></a><br /><br />
+                    Flugschriftensammlung Gustav Freytag. Frankfurt a. M., Societäts-Druckerei, 1925. Kl-4; XIX, 510 pp mit 2 Porträts und 13 Taf.; Orig.-Leinen mit Kopffarbschnitt (etwas abgegriffen und fleckig, kleine Etikettreste); leichte Alters- und Gebrauchsspuren. - Nr. 227 von 400 Ex. <br /><br />
+                    <span style="display: none">Die gesuchte Erstausgabe, hrsg. von der Stadtbibliothek Frankfurt am Main. Durch ein ausführliches Register erschlossener Katalog der 6265 Nummern umfassenden Sammlung von Gelegenheitsschriften vor allem des 16. und 17. Jahrhunderts, die Freytag als Quelle für seine "Bilder aus der deutschen Vergangenheit" dienten. Seine Sammlung dieser nur spärlich erhaltenen Verbrauchsliteratur zählt zu den bedeutendsten Beständen dieser Art.</span>
+                    <a href='/en/articles/hohenemser-paul-2003-37.html'>Continue reading</a><br /><br />
+                    Order no. 2003-37
+                    <br />
+                    
+                        € 115,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kinderfreund-carl-jos-1810-47.html'>
+                            <img class='thumb' src='/img/thumb/kinderfreund-carl-jos-1810-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kinderfreund-carl-jos-1810-47.html'><strong>Kinderfreund, Carl Jos.</strong></a><br /><br />
+                    Album für Geist und Herz. Wien, Eigenverlag, 1852. In-8; VI, 2 Bll., 381 pp, 1 Bl., 2 gefaltete Musikbeilagen, 10 Taf. mit Seidenhemdchen; Ln. der Zeit mit Romantiker-Blindprägung und Sprenkelschnitt (leicht berieben, kl. Bibl.-Etikett am Rücken); teilweise etwas stockfleckig. - Ohne das weiße Blatt vor dem Titel. <br /><br />
+                    <span style="display: none">Vgl. Wurzbach 11, 265 f.; Slg. Mayer 5877. - Enthält patriotisch gefärbte Skizzen über zeitgenössische Persönlichkeiten vor allem des österreichischen Hochadels, Reiseberichte aus Böhmen und Dalmatien, eine Studie über Magnetismus etc. Die Tafeln zeigen neben Porträts (Franz Joseph und andere Mitglieder des Kaiserhauses, Eleonore von Windisch-Grätz, Friedrich von Schwarzenberg, Zar Nikolaus I. u. a.) auch Ansichten von Spalato, Ragusa und Cattaro in Tonlithographie.</span>
+                    <a href='/en/articles/kinderfreund-carl-jos-1810-47.html'>Continue reading</a><br /><br />
+                    Order no. 1810-47
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/klinger-friedrich-maximilian-2302-41.html'>
+                            <img class='thumb' src='/img/thumb/klinger-friedrich-maximilian-2302-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/klinger-friedrich-maximilian-2302-41.html'><strong>Klinger, Friedrich Maximilian</strong></a><br /><br />
+                    Geschichte Giafars des Barmeciden in fünf Büchern. Ein Seitenstück zu Fausts Leben Thaten und Höllenfahrt. Neue verbeßerte und vermehrte Ausgabe mit Kupfern. 2 Bde. Ohne Ort und Verlag, 1810. In-8; gest. Frontispiz, 254 pp (inkl. gest. Titel mit Vignette, die ersten Seiten römisch paginiert); 173 pp (inkl. gest. Frontispiz), 1 Kupfertafel; Pappbände der Zeit mit Rückenschildchen (etwas berieben und bestoßen); vereinzelt stockfleckig, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Goedeke IV.1, 809, 26e. - Österreichischer(?) Nachdruck der 1799 in Leipzig erschienenen zweiten Ausgabe des 1792-1794 entstandenen Romans, mit Kupferstichen des in Wien tätigen Franz Weber (1760-1818). Das Werk schließt an Klingers 1791 veröffentlichten Faust-Roman an und behandelt das Schicksal des Wesirssohnes Dscha'far b. Yahya aus der persischen Beamtendynastie der Barmakiden. Dscha'far wurde im Jahr 803 vom abbasidischen Kalifen Harun ar-Rashid hingerichtet - der Legende nach wegen seiner Liebe zu Haruns Schwester Abbasa. Der Stoff wurde mehrfach künstlerisch behandelt. Klinger, der zunächst von Goethe gefördert wurde, lebte später in Dorpat und wurde mit seinem Drama "Sturm und Drang" namengebend für die literarische Strömung der Zeit.</span>
+                    <a href='/en/articles/klinger-friedrich-maximilian-2302-41.html'>Continue reading</a><br /><br />
+                    Order no. 2302-41
+                    <br />
+                    
+                        € 115,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kolb-annette-marktl-edgar-2409-58.html'>
+                            <img class='thumb' src='/img/thumb/kolb-annette-marktl-edgar-2409-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kolb-annette-marktl-edgar-2409-58.html'><strong>Kolb, Annette - Marktl, Edgar</strong></a><br /><br />
+                    Aufbruch aus dem Gestern. Die Romane Annette Kolbs. Dissertation zur Erlangung des Doktorgrades an der Geisteswissenschaftlichen Fakultät der Universität Wien (Typoskript-Kopie). Wien, 1985. Kl-4; IV, 227, (1) pp; Bibl.-Halbleinen. - Mit mehrzeiliger Widmung des Verfassers auf dem Vorsatz. <br /><br />
+                    <span style="display: none">Ungedruckte Studie zum Werk der deutschen Schriftstellerin (1870-1967); enthält auch Abschriften und Kopien aus dem in München aufbewahrten Nachlass, an dessen Sichtung und Ordnung der Autor maßgeblich mitarbeitete.</span>
+                    <a href='/en/articles/kolb-annette-marktl-edgar-2409-58.html'>Continue reading</a><br /><br />
+                    Order no. 2409-58
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kosch-wilhelm-begr-1701-42.html'>
+                            <img class='thumb' src='/img/thumb/kosch-wilhelm-begr-1701-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kosch-wilhelm-begr-1701-42.html'><strong>Kosch, Wilhelm (Begr.)</strong></a><br /><br />
+                    Deutsches Literatur-Lexikon. Das 20. Jahrhundert. Biographisch-bibliographisches Handbuch begr. von Wilhelm Kosch hrsg. von Carl Ludwig Lang. Bd. I-XIII (von bisher 27 erschienenen Bänden). Bern & München, K. G. Saur, 2000-09. Gr-8; je Band ca. 600-700 Spalten; königsblaue goldgeprägte orig. Leinenbände mit Rückenschildchen und Schutzumschlag; neuwertig. <br /><br />
+                    <span style="display: none">Fortführung, Ergänzung und Erweiterung der dritten Auflage des bekannten Deutschen Literaturlexikons, ab Bd. II hrsg. von Konrad Feilchenfeldt. Aufgenommen sind hier auch Verfasser von Reise-, Trivial-, Kinder- und Jugendliteratur, Übersetzer, Sachbuchautoren etc. Die Einträge der vorliegenden Bände reichen von Aab bis Hallwig; die hier noch nicht enthaltenen Folgebände (zuletzt erschienen Band 27 Kelter - Kirsch) können über uns zu den regulären Ladenpreisen erworben werden.</span>
+                    <a href='/en/articles/kosch-wilhelm-begr-1701-42.html'>Continue reading</a><br /><br />
+                    Order no. 1701-42
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-27>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lamberg-hugo-graf-1903-27.html'>
+                            <img class='thumb' src='/img/thumb/lamberg-hugo-graf-1903-27.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lamberg-hugo-graf-1903-27.html'><strong>Lamberg, Hugo (Graf)</strong></a><br /><br />
+                    Bergkräuteln. Gedichte in österreichisch-deutscher Gebirgs-Mundart. Illustrirt und den Reinertrag für Schulzwecke in St. Wolfgang gewidmet von Bertha Gräfin Lamberg-Stolberg. Salzburg, Heinrich Dieter, 1879. In-4; Titel rot-schwarz, 45, (1) pp mit zahlr. Illustrationen und Vignetten in Holzstich sowie roter Bordüre; illustr. OHLn. (angeschmutzt und geringfügig bestoßen); Buchblock mit leichten Alters- und Gebrauchsspuren, insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Vgl. ÖBL 4, 411. - Die seltene illustrierte Auswahlausgabe im Großformat, im selben Verlag wie die zweibändige Kleinoktav-Ausgabe von 1879/1881 erschienen. Lamberg war Verwaltungsbeamter und wurde 1872 Landeshauptmann von Salzburg. "1880 zog er sich aus dem polit. Leben zurück und widmete sich ganz seiner aus einem starken Naturgefühl schöpfenden Dialektdichtung, der auch volkskundlicher Wert zukommt" (Josef Gassner).</span>
+                    <a href='/en/articles/lamberg-hugo-graf-1903-27.html'>Continue reading</a><br /><br />
+                    Order no. 1903-27
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lanckoronska-maria-oehler-richard-2505-47.html'>
+                            <img class='thumb' src='/img/thumb/lanckoronska-maria-oehler-richard-2505-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lanckoronska-maria-oehler-richard-2505-47.html'><strong>Lanckoronska, Maria - Oehler, Richard</strong></a><br /><br />
+                    Die Buchillustration des XVIII. Jahrhunderts in Deutschland, Österreich und der Schweiz. 3 Bände. Leipzig, Insel Verlag, 1932-1934. In-4; 113 pp, 60 Taf. mit 95 Abb., 1 Bl.; 243 pp, 92 Taf. mit 253 Abb.; 156 pp, 60 Taf. mit 188 Abb.; Orig.-Pappbände mit Rücken- und Deckelschildchen, unbeschnitten; Rücken und Vorsätze sorgfältig erneuert, Deckel etwas fleckig, innen tadellos. - Eines von 300 numerierten Exemplaren dieser Ausgabe (Gesamtauflage 800). <br /><br />
+                    <span style="display: none">Sorgfältig ausgestattetes Standardwerk, reich mit Lichtdrucken illustriert. Teil 1: Die deutsche Buchillustration des Spätbarock und Rokoko. - Teil 2: Die deutsche und schweizerische Buchillustration des Vorklassizismus. - Teil 3: Die Buchillustration des XVIII. Jahrhunderts in Österreich. Die Buchillustration des Klassizismus und der Frühromantik in der Schweiz.</span>
+                    <a href='/en/articles/lanckoronska-maria-oehler-richard-2505-47.html'>Continue reading</a><br /><br />
+                    Order no. 2505-47
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/le-sage-lesage-alain-rene-2505-49.html'>
+                            <img class='thumb' src='/img/thumb/le-sage-lesage-alain-rene-2505-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/le-sage-lesage-alain-rene-2505-49.html'><strong>Le Sage (Lesage), (Alain René)</strong></a><br /><br />
+                    Histoire de Gil Blas de Santillane. Vignettes par Jean Gigoux. Paris, Paulin, 1836. Kl-4; Frontispiz, 972 pp mit mehreren hundert Textabbildungen und Initialen in Holzsstich, vor dem Titel ganzseitiges Holzstich-Porträt von Gil Blas auf China; prachtvoller Romantiker-Ganzledereinband mit reicher Rücken-, Deckel-, Steh- und Innenkantenvergoldung, Marmorpapiervorsätzen und Goldschnitt, auf dem Vorderdeckel Wappen der Familie Colloredo-Mansfeld; Einband geringfügig berieben, Innendeckel mit Exlibrisspuren; manche Papierlagen leicht altersgebräunt, Porträt minimal stockfleckig, sonst weitgehend fleckenfrei und frisch und insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Carteret III, 382 ff.; Vicaire V, 238 f. - Erste vollständig mit Holzstichen illustrierte Ausgabe des bekannten und auch heute noch gut lesbaren Schelmenromans, hier im verbesserten zweiten Druck und in einem attraktiven Exemplar. Gil Blas, das satirische Hauptwerk von Lesage (Autor heute meist so geschrieben, 1668-1747) erschien in vier Bänden zwischen 1715 und 1735; die nach Spanien verlegte Handlung gibt in Wahrheit zeitgenössische französische Verhältnisse wieder. Die vorliegende Ausgabe gilt als Meilenstein der französischen Buchillustration in der Epoche der Romantik.</span>
+                    <a href='/en/articles/le-sage-lesage-alain-rene-2505-49.html'>Continue reading</a><br /><br />
+                    Order no. 2505-49
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lessing-gotthold-ephraim-2209-51.html'>
+                            <img class='thumb' src='/img/thumb/lessing-gotthold-ephraim-2209-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lessing-gotthold-ephraim-2209-51.html'><strong>Lessing, Gotthold Ephraim</strong></a><br /><br />
+                    Trauerspiele. Miß Sara Sampson. Philotas. Emilia Galotti. Berlin, Christian Friedrich Voß, 1772. Kl-8; Titel, 394 pp, 2 weiße Bll.; mehrere Vignetten; restaurierter Halblederband der Zeit mit goldgepr. Rücken und Rotschnitt; stellenweise leicht gebräunt und vereinzelt fleckig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Seifert 84; Lachmann 432; Goedeke IV.1, 421/123; Wilpert-G. 768, 54. - Enthält die Erstausgabe von "Emilia Galotti", die in diesem Jahr in Braunschweig zur Uraufführung gelangte und zu den bedeutendsten deutschen Dramen des 18. Jhs. zählt. "Miss Sara Sampson" wurde bereits 1755 veröffentlicht; "Philotas" liegt hier im zweiten, gegenüber der Erstausgabe von 1759 etwas verbesserten Druck vor.</span>
+                    <a href='/en/articles/lessing-gotthold-ephraim-2209-51.html'>Continue reading</a><br /><br />
+                    Order no. 2209-51
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/longos-2509-52.html'>
+                            <img class='thumb' src='/img/thumb/longos-2509-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/longos-2509-52.html'><strong>Longos</strong></a><br /><br />
+                    Les amours pastorales de Daphnis et Chloé, par Longus. Double Traduction du Grec en François, de Mr. Amiot et d'un anonime (d. i. Le Camus), mises en paralelle, Et ornées des Estampes originales du fameux B. Audran, gravées aux dépens du feu Duc d'Orléans, Régent de France, Sur les Tableaux inventés et peints de la main de ce grand Prince, avec un Frontispice de Coypel & autres vignettes & culs de lampe, gravées par D. Focke sur les desseins de Cochin & de Eysen. Paris, Imprimées pour les curieux, 1757. In-8; VIII, 269, (1) pp, 1 weißes Bl.; mit gestochenem Frontispiz, 28 (statt 29) Kupfertafeln nach Philippe d'Orléans und 16 teils wiederholten Vignetten. Lederband der Zeit mit Rückenvergoldung, Rotschnitt und Lesebändchen (etwas berieben, Rücken und Vorsätze mit Wurmspuren, Bindung etwas gelockert); vereinzelt geringfügig fleckig, insgesamt schönes Exemplar. - Exlibris Comte Charles Palffy; die fehlende Tafel XVIII in Kopie beiliegend. <br /><br />
+                    <span style="display: none">Cohen-de Ricci 653; Reynoud 317; Sander 1226; Brunet III, 1158. - Schöne Ausgabe des berühmten antiken Hirtenromans mit fein ausgeführten Stichen nach Bildern des kunstsinnigen und bibliophilen Herzogs Philippe von Orléans, der während der Jugendjahre Ludwigs XV. als Regent Herrscher von Frankreich war. Unter den Illustrationen erstmals die dezente Darstellung eines Liebesakts im Wald ("Les petits pieds", Taf. XXII). Der Text stellt die klassische Übersetzung von Jacques Amyot derjenigen von Antoine Le Camus gegenüber, die hier erstmals vorliegt; über den griechischen Autor Longos von Lesbos (um 200 n. Chr.) ist wenig bekannt.</span>
+                    <a href='/en/articles/longos-2509-52.html'>Continue reading</a><br /><br />
+                    Order no. 2509-52
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1609-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/madjera-wolfgang-1609-68.html'>
+                            <img class='thumb' src='/img/thumb/madjera-wolfgang-1609-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/madjera-wolfgang-1609-68.html'><strong>Madjera, Wolfgang</strong></a><br /><br />
+                    Valerie. Ein Totenopfer. Wien, Österr. Schulbücherverlag, um 1920. Gr-8; 49 pp mit Frontispiz, illustr. Titel, 2 illustr. Zwischentiteln und zahlr. Vignetten; OHLn.; geringfügige Gebrauchsspuren, insgesamt sehr schönes Exemplar. <br /><br />
+                    <span style="display: none">Kosch 10, 206; ÖBL 5, 401. - Aufwendig gestaltete, von der Österr. Staatsdruckerei gedruckte Lyriksammlung des Wiener Juristen und Schriftstellers W. Madjera (1868-1926) mit zeitypischem lithograph. Buchschmuck von Herbert Schimkowitz.</span>
+                    <a href='/en/articles/madjera-wolfgang-1609-68.html'>Continue reading</a><br /><br />
+                    Order no. 1609-68
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mann-thomas-2109-47.html'>
+                            <img class='thumb' src='/img/thumb/mann-thomas-2109-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mann-thomas-2109-47.html'><strong>Mann, Thomas</strong></a><br /><br />
+                    Bekenntnisse des Hochstaplers Felix Krull. Buch der Kindheit. Wien, Rikola Verlag, 1922. In-4; 65 pp, 6 signierte Orig.-Farblithographien von Oskar Laske; blauer Orig.-Interims-Pappband mit Deckel- und Rückenschildchen (Kapitale geringfügig berieben, Rücken und hinterer Deckel lichtspurig, Rückenschildchen mit kleinen Fehlstellen); zweiseitig unbeschnitten, Lagen bindungsbedingt locker, vereinzelt gering wellig, zwei dezente Exlibris; Papier fleckenfrei und frisch. - Nr. 111 von 500 Exemplaren, auf feingeripptem Bütten in ansprechender Typographie gedruckt. Ohne Schuber. <br /><br />
+                    <span style="display: none">Wilpert-G. 22: Bürgin I 21; Potempa D 12.1.1. - Erste Ausgabe der ersten Fassung, geschrieben in den Jahren 1910 bis 1913 und mit der Vorbemerkung "An den Leser" versehen. Thomas Mann plante mit diesem humorvollen Werk eine Parodie auf Goethes Autobiographie "Dichtung und Wahrheit", konnte den Roman aber trotz mehrerer Anläufe nie vollenden; erweiterte Fassungen erschienen 1937 und 1954. Obwohl der Druckvermerk nur die ersten 100 Nummern der Ausgabe als vom Autor und Künstler signiert ausweist, sind bei unserem Exemplar alle sechs Lithographien von Oskar Laske signiert.</span>
+                    <a href='/en/articles/mann-thomas-2109-47.html'>Continue reading</a><br /><br />
+                    Order no. 2109-47
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/martini-friedrich-heinrich-wilhelm-hrsg-1902-50.html'>
+                            <img class='thumb' src='/img/thumb/martini-friedrich-heinrich-wilhelm-hrsg-1902-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/martini-friedrich-heinrich-wilhelm-hrsg-1902-50.html'><strong>[Martini, Friedrich Heinrich Wilhelm (Hrsg.)]</strong></a><br /><br />
+                    Neue Mannigfaltigkeiten. Eine gemeinnützige Wochenzeitschrift mit Kupfern. Des ersten Jahrgangs Erstes (Zweytes) Vierteljahr. 26 Wochenhefte (Mai - November 1773) und Inhaltsverzeichnis des 1. Jgs. in 1 Bd. Berlin, Bossen, (1773). In-8; gest. Porträtfrontispiz, VIII, 416 pp mit mehreren Vignetten, einem Textholzschnitt und 4 Kupfertaf.; Ldr. d. Zt. mit Rückenvergoldung und Rotschnitt (Rücken stark berieben, Kapitale lädiert, Fehlstellen im Bezug, Bindung etwas gelockert); etwas gebräunt, stellenweise feuchtrandig, einzelne Papierschäden und Stockflecken, zwei Besitzvermerke auf Vorsatz. - Das am Rand stärker beschädigte Frontispiz (von C. B. Glassbach nach D. Chodowiecki) zeigt den preußischen Jurist, Autor und Dichter Johann Wilhelm Bernhard von Hymmen (17251787). <br /><br />
+                    <span style="display: none">Diesch 793 (dort irrig "1774" für 1. Jg.); vgl. Holzmann-Bohatta 3, 3614 und 3623 sowie ADB 20, 509. - Originelle Wochenschrift eines Berliner Arztes (1729-1778), der sich im Geist der Aufklärung unermüdlich für die Verbreitung naturwissenschaftlicher Kenntnisse einsetzte. Die Texte umfassen ein breites Spektrum literarischer, unterhaltsamer und belehrender Beiträge (u. a. über die Bräuche und Spiele exotischer Völker, über Polenta und Ginseng); die Tafeln zeigen Säugetiere und Vögel.</span>
+                    <a href='/en/articles/martini-friedrich-heinrich-wilhelm-hrsg-1902-50.html'>Continue reading</a><br /><br />
+                    Order no. 1902-50
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/moliere-d-i-poquelin-jean-baptiste-2305-60.html'>
+                            <img class='thumb' src='/img/thumb/moliere-d-i-poquelin-jean-baptiste-2305-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/moliere-d-i-poquelin-jean-baptiste-2305-60.html'><strong>Molière [d. i. Poquelin, Jean-Baptiste]</strong></a><br /><br />
+                    Oeuvres de Molière. Précédées d'une notice sur sa vie et ses ouvrages par M. Sainte-Beuve. Vignettes par Tony Johannot. 2 Bde. Paris, Paulin, 1835-36. Gr-8; Porträt-Frontispiz, 768, (1) pp; 895, (1) pp; mit 2 gestochenen Titelblättern und rund 800 Holzstichen im Text; dunkelbraunes Leder der Zeit mit reicher historistischer Goldprägung, Steh- u. Innenkantenvergoldung, marmorierten Vorsätzen und Goldschnitt (Rücken etwas aufgehellt, geringfügig berieben, Exlibrisspuren); wechselnde Papierqualität, stellenweise leicht gebräunt oder etwas stockfleckig. - Supralibros mit Wappen der Familie Colloredo-Mannsfeld. <br /><br />
+                    <span style="display: none">Carteret III, 410; Sander 481; Vicaire V, 919. - Erste Ausgabe mit den Illustrationen von Johannot, hier in prachtvollen Einbänden einer altösterreichischen Adelsbibliothek.</span>
+                    <a href='/en/articles/moliere-d-i-poquelin-jean-baptiste-2305-60.html'>Continue reading</a><br /><br />
+                    Order no. 2305-60
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/oeser-therese-holtei-karl-von-hrsg-2409-76.html'>
+                            <img class='thumb' src='/img/thumb/oeser-therese-holtei-karl-von-hrsg-2409-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/oeser-therese-holtei-karl-von-hrsg-2409-76.html'><strong>[Oeser, Therese] - Holtei, Karl von (Hrsg.)</strong></a><br /><br />
+                    Briefe und Blätter von Frau Therese. Hamburg & Leipzig, Richter, 1868. In-8; XXV, 268 pp; Halbleinenband der Zeit mit goldgepr. Rückentitel; gelegentlich leicht fleckig. <br /><br />
+                    <span style="display: none">Kosch 11, 601. - Die seltene Erstausgabe. Therese Oeser (Pseudonym für Therese Schröer, 1804-1885) stammte aus einer Preßburger Fleischhauerfamilie und zeigte früh musikalische und literarische Begabung; sie wurde von Karl von Holtei zum Schreiben ermuntert und darin gefördert. Der vorliegende Band mit Texten zu verschiedenen Themen lag bereits 1847 druckfertig vor, konnte aber erst verzögert erscheinen. "Innerhalb des folgenden Dezenniums ist sie jedoch unter ihren Ps[eudonymen] mit einer dem weibl. Klischee jener Zeit inhärenten literar. Gattung (Brief) auf dem Büchermarkt präsent, wobei sich aber ihr durchaus eigenständiger, ungeschult ursprüngl. Ton von dem künstlichen der übl. Nipptischliteratur deutl. abhob" (E. Streitfeld). Vor allem ihre Schriften zu Ehe und Mutterschaft wurden später von der anthroposophischen Bewegung wiederentdeckt.</span>
+                    <a href='/en/articles/oeser-therese-holtei-karl-von-hrsg-2409-76.html'>Continue reading</a><br /><br />
+                    Order no. 2409-76
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1806-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/osterreichische-bucherei-1806-69.html'>
+                            <img class='thumb' src='/img/thumb/osterreichische-bucherei-1806-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/osterreichische-bucherei-1806-69.html'><strong>Österreichische Bücherei</strong></a><br /><br />
+                    9 Bändchen der Reihe, thematisch gruppiert in 3 goldgepr. orig. Pappschubern. Wien, Hartleben, [1925-1926]. Kl-8, jeweils ca. 100 pp, orig. englische Broschur. - Einzelne geringfügige Gebrauchsspuren, insgesamt sehr gut erhalten. In dieser Ausstattung selten. <br /><br />
+                    <span style="display: none">Umfasst: "Österreichische Novellen" (Bd. 2 Lothar, Triumph des Gefühls - Bd. 11 Filek, Vom Glück der armen Teufel - Bd. 17 Berger, Der alte Herr), "Aus Wien's Vergangenheit" (Bd. 3 Glossy, Cajetan Felder - Bd. 6 Auernheimer, Das ältere Wien - Bd. 14 Orel, Wiener Musikerbriefe) und "Von Bergen und Menschen" (Bd. 4 Ertl, Irrgarten des Lebens - Bd. 13 Renker, Kärntner Novellen - Bd. 23 Fraungruber, Salzkammergut).</span>
+                    <a href='/en/articles/osterreichische-bucherei-1806-69.html'>Continue reading</a><br /><br />
+                    Order no. 1806-69
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-57>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/orientalistik-2105-57.html'>
+                            <img class='thumb' src='/img/thumb/orientalistik-2105-57.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/orientalistik-2105-57.html'><strong>Orientalistik</strong></a><br /><br />
+                    Zeitschrift der Deutschen Morgenländischen Gesellschaft. Hrsg. von den Geschäftsführern. Bd. 29 - 39 mit Supplementen in 12 Bänden. Leipzig, Brockhaus, 1876-1885. In-8; je Bd. ca. 700-800 pp, zahlreiche Tafeln und Falttafeln; einfache, farblich nicht ganz einheitliche Halbleinenbände der Zeit mit blindgeprägter Rückenbeschriftung und Sprenkelschnitt (teilweise etwas berieben und bestoßen); innen weitgehend sauber und frisch. <br /><br />
+                    <span style="display: none">Repräsentative Folge dieser international renommierten Zeitschrift mit ihren thematisch breit gestreuten Beiträgen. Die 1845 in Darmstadt gegründete Deutsche Morgenländische Gesellschaft (DMG) ist die älteste wissenschaftliche Vereinigung deutscher Orientalisten. Die Forschungsgebiete ihrer Mitglieder umfassen Altorientalistik, Semitistik, Judaistik, Arabistik, Islamwissenschaft, den christlichen Orient, Iranistik, Indologie, Turkologie, Zentralasienkunde, Indogermanistik, Mongolistik, Tibetologie, Sinologie, Japanologie, Südostasienkunde, Afrikanistik und verwandte Gebiete.</span>
+                    <a href='/en/articles/orientalistik-2105-57.html'>Continue reading</a><br /><br />
+                    Order no. 2105-57
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1510-64>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/perkins-g-c-1510-64.html'>
+                            <img class='thumb' src='/img/thumb/perkins-g-c-1510-64.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/perkins-g-c-1510-64.html'><strong>Perkins, G. C.</strong></a><br /><br />
+                    Expressionismus. Eine Bibliographie zeitgenössischer Dokumente 1910-1925. Zürich, Verlag für Bibliographie, 1971. Gr-8; XIX, 144 pp, 12 Taf.; OKart.; papierbedingt leicht gebräunt. <br /><br />
+                    <span style="display: none">Kommentiertes Zitierwerk. Umfasst Bücher, Sammelwerke, Almanache und Jahrbücher, Schriftenreihen, Zeitschriften und Zeitschriftenliteratur.</span>
+                    <a href='/en/articles/perkins-g-c-1510-64.html'>Continue reading</a><br /><br />
+                    Order no. 1510-64
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-35>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/petzold-alfons-1903-35.html'>
+                            <img class='thumb' src='/img/thumb/petzold-alfons-1903-35.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/petzold-alfons-1903-35.html'><strong>Petzold, Alfons</strong></a><br /><br />
+                    Krieg. Wien, Anzengruber-Verlag Brüder Suschitzky, 1914. In-8; 12 pp; OKart. - Auf Titel verso eigh. Widmung "Dem alten Soldaten und deutschen Dichter Franz C. Ginzkey mit Invalidengruß Alfons Petzold". - Druckstellen am Unterrand. <br /><br />
+                    <span style="display: none">Exenberger 43; Wilpert-G. 8. - Erste Ausgabe dieses zu Beginn des 1. Weltkriegs erschienenen Gedichtbandes mit einer bemerkenswerter Widmung. Der Sozialist Alfons Petzold (1882-1923) rückte aus gesundheitlichen Gründen nicht ein, begeisterte sich aber durchaus für den Krieg und verfasste entsprechende militant-nationale Verse. Ein zweiter Band mit Kriegslyrik erschien 1916 unter dem Titel "Der stählerne Schrei".</span>
+                    <a href='/en/articles/petzold-alfons-1903-35.html'>Continue reading</a><br /><br />
+                    Order no. 1903-35
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/preuss-j-d-e-2509-62.html'>
+                            <img class='thumb' src='/img/thumb/preuss-j-d-e-2509-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/preuss-j-d-e-2509-62.html'><strong>Preuß, J. D. E.</strong></a><br /><br />
+                    Friedrich der Große als Schriftsteller. Vorarbeit zu einer echten und vollständigen Ausgabe seiner Werke. Berlin, Veit & Comp., 1837. In-8; X, 359 pp; etwas späterer Leinenband mit goldgepr. Rückentitel (berieben, oberes Kapital leicht beschädigt, Bibl.-Schildchen); einzelne unbedeutende Gebrauchsspuren. <br /><br />
+                    <span style="display: none">ADB 26, 582 ("wichtiges Buch"). - Johann David Erdmann Preuß (1785-1868) war Initiator und Herausgeber der gesammelten Werke des preußischen Monarchen, die er von 1846 bis 1856 in 30 Bänden veröffentlichte. Ein Ergänzungsheft zum vorliegenden Band erschien 1838.</span>
+                    <a href='/en/articles/preuss-j-d-e-2509-62.html'>Continue reading</a><br /><br />
+                    Order no. 2509-62
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/rabenlechner-michael-maria-1705-71.html'>
+                            <img class='thumb' src='/img/thumb/rabenlechner-michael-maria-1705-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/rabenlechner-michael-maria-1705-71.html'><strong>Rabenlechner, Michael Maria</strong></a><br /><br />
+                    Streifzüge eines Bibliophilen durch die deutsche Dichtung Österreichs der letzten hundertfünfzig Jahre. / Neue Streifzüge eines Bibliophilen. 2 Bde. Wien, Wiener Bibliophilengesellschaft, 1931-35. Kl-4; insges. 7 Bll., 392 pp, mehrere weiße Blätter, 13 Faksimiles im Text und auf 6 Taf.; privates Ln. unter Verwendung von Teilen der Orig.-Einbände; auf starkem Papier gedruckt, unbeschnitten. - Auf Vorsatz von Bd. 2 mehrzeilige Widmung des Verfassers mit Unterschrift, Wien, Oktober 1935. <br /><br />
+                    <span style="display: none">Originalausgabe. - Rabenlechner (1868-1952) war Literaturhistoriker und Lyriker sowie Mitbegründer der "Wiener Bibliophilen-Gesellschaft".</span>
+                    <a href='/en/articles/rabenlechner-michael-maria-1705-71.html'>Continue reading</a><br /><br />
+                    Order no. 1705-71
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/renaissance-einband-2302-66.html'>
+                            <img class='thumb' src='/img/thumb/renaissance-einband-2302-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/renaissance-einband-2302-66.html'><strong>Renaissance-Einband</strong></a><br /><br />
+                    Lederband auf 6 Bünden mit reicher ornamentaler Vergoldung und goldgeprägten Wappen-Supralibros der Freiherrn zu Gruenpüchel (Grünbühel) und Strechau auf beiden Deckeln. Süddeutsch(?), um 1580. Inhalt: (Estienne, Robert), Thesaurus linguae Latinae (4. Ausg.) Bd. 4, Lyon 1573; gr-folio; Titel mit Holzschnitt-Vignette, 1 Bl., 449 pp, 17 Bll.; kleine Einbandmängel sorgfältig restauriert, Schließen fehlen; innen mäßige Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Zur Provenienz vgl. H. P. Naschenweg in Zschr. Histor. Verein f. Steiermark 88 (1997) 101-171; zum Wappen ebda. 164; zum Buch siehe Graesse 2, 509. - Nach einer späteren Notiz auf dem Innendeckel stammt das Buch aus dem Besitz von Ferdinand Hoffman Freiherr zu Gruenpüchel und Strechau (1540-1607), dessen Vater Hans Hoffman (eigentlich Hanns Hofman) einer der wichtigsten Mitarbeiter von Kaiser Ferdinand I. war und 1535 zum Freiherrn erhoben wurde. Ferdinand Hoffman war Oberster Erblandhofmeister in Steiermark, Oberster Erblandmarschall in Österreich und Steiermark, Burggraf zu Steyr, Hauptmann zu Wiener Neustadt, kaiserlicher Hofkammerpräsident und Geheimrat. Die wohlhabende und einflussreiche Familie der Grünbühel und Strechau - auch als "Könige des Ennstals" tituliert - wurde unter Ferdinand II. wegen ihrer Sympathie für den Protestantismus zur Auswanderung und zum Verkauf ihrer Burg Strechau gezwungen.</span>
+                    <a href='/en/articles/renaissance-einband-2302-66.html'>Continue reading</a><br /><br />
+                    Order no. 2302-66
+                    <br />
+                    
+                        € 3600,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-64>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ritter-ernst-d-i-binzer-emilie-von-2509-64.html'>
+                            <img class='thumb' src='/img/thumb/ritter-ernst-d-i-binzer-emilie-von-2509-64.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ritter-ernst-d-i-binzer-emilie-von-2509-64.html'><strong>Ritter, Ernst [d. i. Binzer, Emilie von]</strong></a><br /><br />
+                    Erzählungen. 2 Bde. in 1 Bd. Pesth, G. Heckenast, 1850. In-8; 4 Bll., 215, (1) pp; 2 Bll., 202, (1) pp; insges. 417 pp, späteres Halbleinen (Buchblock gebrochen); die ersten Seiten mit abnehmendem Braunfleck, sonst nur vereinzelt etwas stockfleckig. <br /><br />
+                    <span style="display: none">Weller 481; Kosch 1, 519. - Erste Ausgabe. Die als Emilie Henriette Adelheid von Gerschau geborenen Autorin (1801-1891) war mit dem deutschen Schriftsteller  August Daniel von Binzer (1793-1868) verheiratet. Sie führte einen Salon in Wien und später in Linz; mit Grillparzer und Zedlitz stand sie in freundschaftlicher Verbindung. Ihr 1847 errichtetes Sommerdomizil in Altaussee wurde später zum "Parkhotel" umgebaut. - Selten, nicht in der Österreichischen Nationalbibliothek.</span>
+                    <a href='/en/articles/ritter-ernst-d-i-binzer-emilie-von-2509-64.html'>Continue reading</a><br /><br />
+                    Order no. 2509-64
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sabin-joseph-u-a-2105-70.html'>
+                            <img class='thumb' src='/img/thumb/sabin-joseph-u-a-2105-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sabin-joseph-u-a-2105-70.html'><strong>Sabin, Joseph u. a.</strong></a><br /><br />
+                    Bibliotheca Americana - A Dictionary of Books relating to America. From its discovery to the present time. 29 Teile in 15 Bänden. Amsterdam, N. Israel, 1961-1962. In-8; insgesamt ca. 17000 pp; goldgepr. Orig-Leinen mit Rückenschildchen; sehr schönes Set. <br /><br />
+                    <span style="display: none">Unveränderter Nachdruck der Erstausgabe New York 1868. Die grundlegende Amerika-Bibliographie mit 106.413 Einträgen.</span>
+                    <a href='/en/articles/sabin-joseph-u-a-2105-70.html'>Continue reading</a><br /><br />
+                    Order no. 2105-70
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sagan-francoise-2505-76.html'>
+                            <img class='thumb' src='/img/thumb/sagan-francoise-2505-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sagan-francoise-2505-76.html'><strong>Sagan, Françoise</strong></a><br /><br />
+                    Les merveilleux nuages. Paris, Julliard, 1961. In-8; 184, (1) pp, 2 Bll; Orig.-Broschur, nicht aufgeschnitten; papierbedingt etwas gebräunt, vorderer flieg. Vorsatz und Titel mit kleinen Papierschäden; Verlagsanzeige beiliegend. - Für die Autorin bestimmter Band außerhalb der 440 numerierten Exemplare der Auflage. Auf dem Vortitel eigenhändige Widmung "Pour Georges Bataille / sympathies / Françoise Sagan". <br /><br />
+                    <span style="display: none">Die Erstausgabe des sechsten Romans der französischen Autorin (1935-2004) mit einer bemerkenswerter Widmung. Georges Bataille (1897-1962) war Schriftsteller und Philosoph und gründete die Zeitschrift "Critique" (heute "Revue Critique"). Die deutsche Ausgabe des Buchs erschien 1974 unter dem Titel "Die wunderbaren Wolken".</span>
+                    <a href='/en/articles/sagan-francoise-2505-76.html'>Continue reading</a><br /><br />
+                    Order no. 2505-76
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sannens-fr-iedrich-karl-1909-81.html'>
+                            <img class='thumb' src='/img/thumb/sannens-fr-iedrich-karl-1909-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sannens-fr-iedrich-karl-1909-81.html'><strong>Sannens, Fr(iedrich) Karl</strong></a><br /><br />
+                    Asterkränzchen als Nachtrag zu den poetischen Launen. Wien, Eigenverlag, 1828. Kl-8; gestochenes Frontispiz (von Johann Blaschke), gestochener Titel, XXVII, 204 pp, 1 Kupfertafel (Perger del., J. Enderle sculp.); restaurierte OBrosch. (angeschmutzt und fleckig); Titel mit Stempelspuren, durchgehend leicht bis stärker stockfleckig und insgesamt unfrisch. <br /><br />
+                    <span style="display: none">Wurzbach 28, 196; Slg. Mayer 6633. - Erste Ausgabe dieser Sammlung zeittypischer Gedichte, die sowohl tagesaktuelle wie auch satirische Elemente enthalten; eine zweite Ausgabe erschien im folgenden Jahr. Der Autor (1751-1850) hieß eigentlich Friedrich-Carl Sanenz von Sensenstein und war ein aus Böhmen stammender Schauspieler und Bühnendichter. Das Subskribentenverzeichnis des seltenen Bandes bietet einen interessanten Querschnitt durch die Wiener Gesellschaft.</span>
+                    <a href='/en/articles/sannens-fr-iedrich-karl-1909-81.html'>Continue reading</a><br /><br />
+                    Order no. 1909-81
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schiller-friedrich-2309-71.html'>
+                            <img class='thumb' src='/img/thumb/schiller-friedrich-2309-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schiller-friedrich-2309-71.html'><strong>Schiller, [Friedrich]</strong></a><br /><br />
+                    Theater. 5 Bände. Tübingen, J. G. Cotta, 1805-1807. In-8; je Band ca. 400-600 pp, insgesamt 4 (statt 5) gestochene Frontispize; marmorierte braune Pappbände der Zeit mit goldgepr. Rückenschildchen (etwas berieben, ein Rücken angeplatzt, ohne fliegende Vorsätze, Schildchen verblasst und teilweise beschädigt, letzter Band ohne Schildchen); teilweise leicht gebräunt und gelegentlich etwas stockfleckig, einzelne Wurmspuren und kleine Mängel; insgesamt ordentliche Exemplare. - Es fehlt das Frontispiz zu Band 2 (Porträt des Fiesko). <br /><br />
+                    <span style="display: none">Goedeke V, 151, 2; Marcuse 271, 278, 280, 284, 285; Slg. Borst 1016. - Von Schiller noch selbst konzipierte Ausgabe seiner dramatischen Werke, jedoch erst nach seinem Tod im Mai 1805 veröffentlicht. Enthält unter anderem die aus dem Nachlass herausgegebenen Erstdrucke von "Der Parasit" und "Der Neffe als Onkel". Die Bände 1 und 5 jeweils mit Vorrede des Verlegers.</span>
+                    <a href='/en/articles/schiller-friedrich-2309-71.html'>Continue reading</a><br /><br />
+                    Order no. 2309-71
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schroder-rudolf-alexander-2409-92.html'>
+                            <img class='thumb' src='/img/thumb/schroder-rudolf-alexander-2409-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schroder-rudolf-alexander-2409-92.html'><strong>Schröder, Rudolf Alexander</strong></a><br /><br />
+                    Die Zwillingsbrüder. Sonette. Leipzig, W. Drugulin, 1908. Kl-4; 4 Bll., XVII pp, 1 Bl.; Orig.-Halbpergament mit goldgepr. Autorenmonogramm auf dem Rücken, zweiseitig unbeschnitten (minimale Gebrauchsspuren); vereinzelt gering fleckig (wohl papierbedingt), kleines Exlibris. <br /><br />
+                    <span style="display: none">Wilpert-G. 17. - Erste Ausgabe, im Auftrag von Alfred Walter von Heymel in einhundert Exemplaren auf starkem Bütten gedruckt. Rudolf Alexander Schröder (1878-1962) war Mitbegründer der Zeitschrift "Die Insel" und ein vielseitiger Dichter und Übersetzer, der unter anderem zur Erneuerung des evangelischen Kirchenliedes beitrug und auch erfolgreich als Architekt und Maler wirkte.</span>
+                    <a href='/en/articles/schroder-rudolf-alexander-2409-92.html'>Continue reading</a><br /><br />
+                    Order no. 2409-92
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/senghor-leopold-sedar-2505-81.html'>
+                            <img class='thumb' src='/img/thumb/senghor-leopold-sedar-2505-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/senghor-leopold-sedar-2505-81.html'><strong>Senghor, Léopold Sédar</strong></a><br /><br />
+                    Botschaft und Anruf. Sämtliche Gedichte. Hrsg. und übertragen von Janheinz Jahn. München, Hanser, 1962. In-8; 229 pp; Orig.-Broschur (mit leichten Gebrauchsspuren und Wasserrand). Unkorrigiertes Leseexemplar der französisch-deutschen Parallelausgabe. - Auf dem Titelblatt eigenhändige Widmung "Madame Bettina Michael en hommage respectueux / L Senghor." <br /><br />
+                    <span style="display: none">Erste zweisprachige Gesamtausgabe der Lyrik des senegalesischen Dichters und Politikers (1906-2001), der von 1960 bis 1980 erster Präsident des Senegal war. Sein literarisches Werk ist sowohl von afrikanischer wie von europäischer Kultur geprägt.</span>
+                    <a href='/en/articles/senghor-leopold-sedar-2505-81.html'>Continue reading</a><br /><br />
+                    Order no. 2505-81
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/shakespeare-william-2509-75.html'>
+                            <img class='thumb' src='/img/thumb/shakespeare-william-2509-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/shakespeare-william-2509-75.html'><strong>Shakespeare, William</strong></a><br /><br />
+                    Der Sturm. Deutsch von Richard Schaukal. Mit Originallithographien von Oskar Laske. Wien, Verlag der Österreichischen Staatsdruckerei, 1925. Kl-4; 114, (1) pp mit zahlreichen farbigen Abbildungen, davon drei ganzseitig; handgebundener orig. Ganzlederband mit Goldprägung, farblithographiertem Schutzumschlag, illustrierten Vorsätzen, Kopfgoldschnitt und Lesebändchen in Kartonschuber. - Nr. I von 50 Exemplaren der Ausgabe auf Büttenpapier (Gesamtauflage 350), im Druckvermerk vom Übersetzer und vom Illustrator signiert. - Schutzumschlag minimal altersfleckig, sonst tadellos; kleines Exlibris auf der vorderen Klappe des Schutzumschlags. <br /><br />
+                    <span style="display: none">Sennewald 25, 3. - Die von der Staatsdruckerei initiierte Bebilderung von Shakespeares vermutlich letztem vollendeten Stück (Uraufführung 1611) durch den österreichischen Architekten, Maler und Graphiker Oskar Laske (1874-1951) gab auch den Anstoß zu einer textlichen Neufassung des Werks. Der Dichter, Kritiker und Übersetzer Richard Schaukal (1874-1942) wollte zunächst die Schlegelsche Übersetzung bearbeiten, schuf dann aber eine vollständig neue Übertragung. Entstanden ist ein anspruchsvoll produziertes und höchst originelles Buch, das auch nach hundert Jahren nichts von seiner Frische verloren hat.</span>
+                    <a href='/en/articles/shakespeare-william-2509-75.html'>Continue reading</a><br /><br />
+                    Order no. 2509-75
+                    <br />
+                    
+                        € 1350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-83>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/skarica-fini-2003-83.html'>
+                            <img class='thumb' src='/img/thumb/skarica-fini-2003-83.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/skarica-fini-2003-83.html'><strong>Skarica, Fini</strong></a><br /><br />
+                    Handeinband. Inhalt: Arthur Roessler, Schwarze Fahnen. Ein Künstlertotentanz. Wien - Leipzig, Konegen, 1922. In-8; 261, (2) pp, 1 Bl., 50 Taf.; zeitgenössischer Halbpergamentband mit kalligraphierter Rückenbeschriftung und Deckelbezügen aus Kleisterpapier sowie Goldschnitt (Ecken und Kanten etwas berieben, Deckel leicht aufgewölbt und stellenweise gebräunt, hinterer Deckel mit kleiner Fehlstelle im Bezug); auf dem Spiegel kleines Exlibris der Künstlerin. <br /><br />
+                    <span style="display: none">Fini (Josefine) Skarica verehelichte Ehrendorfer (1898-1986) war Schülerin des Typographen und Schriftgestalters Rudolf von Larisch und betätigte sich in Wien und Graz als Schriftkünstlerin, Illustratorin und Kunsthandwerkerin. Sie war Mitglied der Wiener Frauenkunst und des Werkbundes.</span>
+                    <a href='/en/articles/skarica-fini-2003-83.html'>Continue reading</a><br /><br />
+                    Order no. 2003-83
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-89>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/teuscher-friedrich-2003-89.html'>
+                            <img class='thumb' src='/img/thumb/teuscher-friedrich-2003-89.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/teuscher-friedrich-2003-89.html'><strong>Teuscher, Friedrich</strong></a><br /><br />
+                    Saladdin. Romantisches Gedicht in vier Gesängen. Preisgedicht aus der Urania 1819. (Besonderer Abdruck.) Leipzig, F. A. Brockhaus, 1819. Kl-8; Vortitel, gest. Frontispiz, Titel, 123, (1) pp, 3 Kupfertafeln mit Seidenhemdchen; goldgepr. Halbleder der Zeit mit 2 Rückenschildchen und Rotschnitt (etwas berieben, Vorsätze geringfügig leimschattig, mit Exlibris und Bibl.-Nr.); die Tafeln tlw. im Rand leicht fleckig, sonst sauber und frisch. <br /><br />
+                    <span style="display: none">Kosch 22, 152. - Erste Veröffentlichung des deutschen Erzählers und Dramatikers (1791-1865); die hübschen Kupfer gestochen von Martin Esslinger nach Georg Opiz.</span>
+                    <a href='/en/articles/teuscher-friedrich-2003-89.html'>Continue reading</a><br /><br />
+                    Order no. 2003-89
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/thummel-moritz-august-von-2209-87.html'>
+                            <img class='thumb' src='/img/thumb/thummel-moritz-august-von-2209-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/thummel-moritz-august-von-2209-87.html'><strong>Thümmel, [Moritz August von]</strong></a><br /><br />
+                    Die Inoculation der Liebe. Wien, J. V. Degen, 1802. Kl-8; Titel, 45 pp; Pappband der Zeit mit kleinem Papierschildchen (leicht berieben und bestoßen, Bezug geschossen); etwas stockfleckig (Vorsätze und Titel stärker), anfangs Wurmspuren im Falz. - Breitrandig in Antiqua auf unbeschnittenem Velin gedruckt. <br /><br />
+                    <span style="display: none">Goedeke IV.1, 582; Hayn-G. 7, 648. - Erstmals 1771 erschienene galant-erotische Verserzählung in Rokoko-Manier; das Thema der (Blattern-)Impfung dient hier als Aufhänger für eine Liebesgeschichte. Moritz August von Thümmel (1738-1817) war ein seinerzeit viel gelesener und gut bezahlter Schriftsteller, der aber bald nach seinem Tod in Vergessenheit geriet und erst im frühen 20. Jh. wiederentdeckt wurde. Ansprechender kleiner Druck des Wiener Verlagsbuchhändlers und Typographen Joseph Vinzenz Degen (1762-1827).</span>
+                    <a href='/en/articles/thummel-moritz-august-von-2209-87.html'>Continue reading</a><br /><br />
+                    Order no. 2209-87
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/van-de-velde-henry-2509-85.html'>
+                            <img class='thumb' src='/img/thumb/van-de-velde-henry-2509-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/van-de-velde-henry-2509-85.html'><strong>Van de Velde, Henry</strong></a><br /><br />
+                    Amo. (Auszug aus einem Essay über die vernunftgemässe Schönheit). Leipzig, Insel-Verlag, 1909. In-8; 1 weißes Blatt, 7 Bll.; zweifarbig gedruckt auf Büttenpapier, teilweise unbeschnitten; Orig.-Halbpergamentband mit Kordelheftung und Deckelvignette; Rücken etwas angeschmutzt, minimale Altersspuren, kleines Exlibris. - Einbandentwurf von H. van de Velde, der auch die Initialen zeichnete. Eines von 130 (Gesamtauflage 150) Exemplaren. Auf dem fliegenden Vorsatz montiert eine Visitkarte des Autors (Adresse Ehringsdorf-Weimar, Haus "Hohe Pappeln") mit eigenhändigem Zusatz "avec l'lexpression ... de mes voeux d'an nouveau à Mme. et Mr. Ernst Hardt". <br /><br />
+                    <span style="display: none">Sarkowski 1808; Brinks, van de Velde 87; Schauer II, 16; vgl. Rodenberg 148. - Schönes Widmungsexemplar der ersten Ausgabe dieses Vorabdrucks. Eine französische Fassung von "Amo" erschien 1915 als Druck der Cranach-Presse, ein Nachdruck der vorliegenden Ausgabe 1963 im Verlag der Henry van de Velde-Gesellschaft in Hagen; auch in die Insel-Bücherei wurde der hymnische Text bereits 1912 aufgenommen. - Der bedeutende belgische Architekt und Designer Henry van de Velde (1863-1957) wurde 1902 auf Initiative von Graf Harry Kessler und Elisabeth Förster-Nietzsche nach Weimar berufen und gründete hier die Großherzoglich Sächsische Kunstgewerbeschule, die später zur Keimzelle des Bauhauses werden sollte. Mit dem ab 1907 ebenfalls in Weimar lebenden Schriftsteller Ernst Hardt (1876-1947) stand van de Velde in engem Kontakt und beschenkte ihn mehrmals mit eigenen Arbeiten; siehe dazu ausführlich Tilo Grabach in KulturGut: aus der Forschung des Germanischen Nationalmuseums, Nr. 77 (2023) 8-12.</span>
+                    <a href='/en/articles/van-de-velde-henry-2509-85.html'>Continue reading</a><br /><br />
+                    Order no. 2509-85
+                    <br />
+                    
+                        € 1750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1609-95>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/verwey-albert-1609-95.html'>
+                            <img class='thumb' src='/img/thumb/verwey-albert-1609-95.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/verwey-albert-1609-95.html'><strong>Verwey, Albert</strong></a><br /><br />
+                    Gedichte. Übertragen von Paul Cronheim. Leipzig, Insel-Verlag, 1917. Kl-4; 173 pp, 1 Bl.; illustr. OPp. (gebräunt und etwas bestoßen, Rücken geklebt, Innengelenk angeplatzt); Vorsätze mit Knickspuren, sonst innen gutes Exemplar, auf Bütten gedruckt. - Eines von 1050 Ex. des 3. Kriegsdrucks der Cranach-Presse. <br /><br />
+                    <span style="display: none">Sarkowski 1834; Rodenberg 148. - Erste deutsche Ausgabe, mit dem Einbandentwurf von E. R. Weiß. Der holländische Dichter, Kritiker und Literaturhistoriker Albert Verwey (1865-1937) spielte im späten 19. und frühen 20. Jh. eine bedeutende Rolle im literarischen Leben der Niederlande. Im deutschen Sprachraum wurde er vor allem durch Stefan George bekannt, der ihn nach München in den sogenannten Kosmikerkreis einlud und seine Gedichte auch selbst übersetzte.</span>
+                    <a href='/en/articles/verwey-albert-1609-95.html'>Continue reading</a><br /><br />
+                    Order no. 1609-95
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/vogt-carl-1603-82.html'>
+                            <img class='thumb' src='/img/thumb/vogt-carl-1603-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/vogt-carl-1603-82.html'><strong>Vogt, Carl</strong></a><br /><br />
+                    Untersuchungen über Thierstaaten. Frankfurt am Main, Literarische Anstalt (J. Rütten), 1851. In-8; XVI, 248 pp, 3 lithograph. Taf. (inkl. Frontispiz); HLdr. d. Zt. mit goldgepr. Rücken und goldgepr. Namensstempel auf Vorderdeckel; Vorsätze stockfleckig, sonst gut erhaltenes, frisches Exemplar.  <br /><br />
+                    <span style="display: none">ADB 40, 185. - Erste Ausgabe der berühmten Schrift des Anarchisten und Naturforschers (1817-1895), der u. a. mit Marx und Bakunin in engem Kontakt stand. Vogt wurde 1847 Professor für Zoologie in Gießen und 1848 Mitglied des Frankfurter Parlaments, wurde zum Reichsregenten gewählt, musst aber bereits nach 12 Tagen in die Schweiz fliehen. "Einem Theile seines Unmuthes über den Ausgang der deutschen Bewegung konnte er ... in seinen 'Untersuchungen über Thierstaaten' Luft machen. Seine humoristischen Vergleiche solcher Thierstaaten mit Menschenstaaten ... machten das Buch zu jener Zeit der politischen Reaction zu einer beißenden Satire auf staatliche Zustände in Deutschland" (ADB). Die Tafeln zeigen den "Bienenstaat", "Heuschrecken und verwandtes Gesindel" sowie "Blasenträger".</span>
+                    <a href='/en/articles/vogt-carl-1603-82.html'>Continue reading</a><br /><br />
+                    Order no. 1603-82
+                    <br />
+                    
+                        € 180,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-95>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/weinheber-josef-2505-95.html'>
+                            <img class='thumb' src='/img/thumb/weinheber-josef-2505-95.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/weinheber-josef-2505-95.html'><strong>Weinheber, Josef</strong></a><br /><br />
+                    Selbstbildnis. Gedichte aus zwanzig Jahren. (Die Kleine Bücherei Nr. 67). München, Albert Langen - Georg Müller, 1937. Kl-8; 57, (1) pp, 3 Bll.; orig. Pappband (etwas berieben und bestoßen, Rücken repariert). - Auf dem fliegenden Vorsatz eigenhändige Widmung "Oskar Laske herzlich zugeeignet / Josef Weinheber / Kirchstetten 21. 7. 38". <br /><br />
+                    <span style="display: none">Widmungsexemplar der Erstausgabe für den Maler und Graphiker Oskar Laske (1874-1951); auf dem Titelblatt dessen kleiner Besitzerstempel.</span>
+                    <a href='/en/articles/weinheber-josef-2505-95.html'>Continue reading</a><br /><br />
+                    Order no. 2505-95
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-93>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wildgans-anton-2305-93.html'>
+                            <img class='thumb' src='/img/thumb/wildgans-anton-2305-93.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wildgans-anton-2305-93.html'><strong>Wildgans, Anton</strong></a><br /><br />
+                    Gedichte um Pan. Wien und Leipzig, F. G. Speidel, 1928. Kl-4; 1 Bl., 65, (1) pp (inkl. Frontispiz), 1 weißes Bl., 2 Bll.; Ganzpergamentband mit goldgepr. Rückentitel und Kopfgoldschnitt, zweiseitig unbeschnitten (Deckel wie üblich etwas aufgewölbt, Kanten mit leichten Gebrauchsspuren, Vorsätze geringfügig gebräunt); innen frisch und fleckenfrei. - Nr. 6 von 30 Exemplaren der Vorzugsausgabe in Pergament, unter dem Frontispiz vom Dichter signiert. Schöner breitrandiger Druck auf handgeschöpftem Bütten. <br /><br />
+                    <span style="display: none">Wilpert-G. 28. - Erstausgabe. Einbandentwurf Rudolf Junk, Porträtfrontispiz nach einem Lichtbild von Rudolf Koppitz.</span>
+                    <a href='/en/articles/wildgans-anton-2305-93.html'>Continue reading</a><br /><br />
+                    Order no. 2305-93
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-98>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wolff-o-l-b-hrsg-2209-98.html'>
+                            <img class='thumb' src='/img/thumb/wolff-o-l-b-hrsg-2209-98.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wolff-o-l-b-hrsg-2209-98.html'><strong>Wolff, O. L. B. (Hrsg.)</strong></a><br /><br />
+                    Neues elegantestes Conversations-Lexicon für Gebildete aus allen Ständen. Herausgegeben im Verein mit einer Gesellschaft von Gelehrten. 2. Aufl. 4 Bände. Leipzig, Ch. E. Kollmann, 1837. Kl-4; insgesamt 1895 pp mit einigen Notenbeispielen, 78 (statt 80) Stahlstichtafeln mit Seidenhemdchen; dekorative Halblederbände der Zeit mit goldgepr. Rücken und Buntpapiervorsätzen (etwas berieben und bestoßen, einzelne kleine Mängel im Falz); tlw. stockfleckig bzw. gebräunt (vereinzelt stärker), ein kleiner Ausriss unterlegt; die den Tafeln vorgebundenen Seidenhemdchen meist gebräunt und nicht mehr vollständig vorhanden. - In den Bänden 1 und 3 fehlt jeweils das Frontispiz. <br /><br />
+                    <span style="display: none">Grundwerk von A-Z, ohne den erst 1841 erschienenen Supplementband; enthält auch etliche heute nicht mehr gebräuchliche Stichworte. Der vielseitig tätige Herausgeber Oskar Ludwig Bernhard Wolff (1799-1851) war Professor in Jena und stand unter anderem mit Goethe, Heine, Liszt und Wagner in Kontakt. Die vom Kunstverlag W. Creuzbauer in Karlsruhe übernommenen Tafeln zeigen Porträts und Ortsansichten.</span>
+                    <a href='/en/articles/wolff-o-l-b-hrsg-2209-98.html'>Continue reading</a><br /><br />
+                    Order no. 2209-98
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/zeit-echo-2205-81.html'>
+                            <img class='thumb' src='/img/thumb/zeit-echo-2205-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/zeit-echo-2205-81.html'><strong>Zeit-Echo</strong></a><br /><br />
+                    Ein Kriegs-Tagebuch der Künstler. (Erster Jahrgang). Heft 3, 8, 9, 10, 14 und 16. Zusammen 6 Hefte (von 24). München, Graphik-Verlag, 1914/1915. Gr-8; je Heft meist 8 Bll., mit meist ganzseitigen Illustrationen (teilweise Originalgraphiken); Orig.-Broschur mit Fadenheftung und aufgezogenen Titelschildchen; mäßige Gebrauchs- und Altersspuren. - Heft 14 als numerierte Sonderausgabe. <br /><br />
+                    <span style="display: none">Raabe 22. - Die zunächst von Otto Haas-Heye hrsg. expressionistische Zeitschrift erschien bis 1917 und brachte in jedem Heft Beiträge namhafter zeitgenössischer Schriftsteller und Künstler, wobei auf den Weltkrieg auch von Autoren wie Thomas Mann zunächst überwiegend mit nationalistischem Pathos reagiert wurde. Die vorliegende kleine Auswahl enthält unter anderem Texte von Max Brod, Martin Buber, Theodor Däubler, Albert Ehrenstein, Hugo von Hofmannsthal, Mechtild Lichnowsky, Ina Seidel und Franz Werfel, weiters eine reproduzierte Zeichnung von Oskar Kokoschka (siehe Abb.) sowie 20 Orig.-Lithographien und 4 Orig.-Holzschnitte verschiedener Künstler. In Heft 14 findet sich ein von der Universal-Edition autorisierter Vorabdruck von Arnold Schönbergs op. 22 Nr. 2, dem Orchesterlied "Alle, welche dich suchen ..." (nach Rilke). Der in Particellform auf 3 Systemen wiedergegebene Druck ist noch mit zahlreichen Fehlern behaftet; im Inhaltsverzeichnis ist das Lied mit dem Widmungsvermerk "Meinem lieben Anton von Webern" versehen, der in allen weiteren Druckfassungen weggelassen wurde.</span>
+                    <a href='/en/articles/zeit-echo-2205-81.html'>Continue reading</a><br /><br />
+                    Order no. 2205-81
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

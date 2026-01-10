@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/geography-travel-ethnology.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Geographie, Reisen, Ethnologie
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2505-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cochelet-charles-2505-13.html'>
+                            <img class='thumb' src='/img/thumb/cochelet-charles-2505-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cochelet-charles-2505-13.html'><strong>Cochelet, Charles</strong></a><br /><br />
+                    Naufrage du brick français La Sophie, perdu, le 30 mai 1819, sur la côte occidentale d'Afrique, et captivité d'une partie des naufragés dans le desert de Sahara, avec de nouveaux renseignemens sur la ville de Timectou. 2 Bde. in 1 Bd. Paris, P. Mongie Ainé, 1821. In-8; XVI, 348 pp; 2 Bll., 368 pp; insgesamt 10 (statt 11) meist gefaltete lithogr. Tafeln, eine lithogr. Faltkarte; zeitgenössischer Leinenband mit goldgepr. Rücken (berieben und angeschmutzt, Rücken geschossen); Text und Tafeln teilweise wasserrandig oder stockfleckig, einzelne kleine Papierschäden, insgesamt ordentlich. - Die in Bd. 2 nach S. 138 fehlende Tafel "Pavillon de l'Empereur de Maroc àTarodant" liegt in Kopie bei. <br /><br />
+                    <span style="display: none">Brunet VI, 20851; Paulitschke I, 164. - Der Autor, Schatzmeister zweier französischer Provinzen, erlitt auf einer Reise nach Brasilien Schiffbruch an der westafrikanischen Küste und wurde dort in die Sklaverei verschleppt. Er kam zu den beduinischen Oulad Delim in der Westsahara, gelangte bis vor Timbuktu und wurde schließlich in Marokko von seinem Bruder, der in Ägypten Generalkonsul war, losgekauft. In den ausführlichen Bericht über seine Abenteuer nahm er auch einige fremde Mitteilungen aus der Region auf; besonders für Marokko liefert das Werk viele Informationen. Die Tafeln zeigen Szenen von der Verschleppung, Ansichten verschiedener Örtlichkeiten (darunter Tanger), lokalen Goldschmuck und Trachten; die große Karte umfasst den Raum zwischen Gibraltar und dem Fluss Gambia, den Kanarischen Inseln und dem Gebiet von Timbuktu.</span>
+                    <a href='/artikel/cochelet-charles-2505-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-13
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/combi-carlo-hrsg-2305-19.html'>
+                            <img class='thumb' src='/img/thumb/combi-carlo-hrsg-2305-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/combi-carlo-hrsg-2305-19.html'><strong>[Combi, Carlo (Hrsg.)]</strong></a><br /><br />
+                    Saggio di bibliografia istriana. Pubblicato a spese di una Società Patria. Capodistria, Tipografia di Giuseppe Tondelli, 1864. Gr-8; VII, 484 pp; schlichtes Bibl.-Leinen der Zeit mit goldgepr. Rückentitel und Sprenkelschnitt (etwas berieben, oberes Kapital leicht beschädigt, erste und letzte Lage gelockert); geringfügig gebräunt und gelegentlich etwas stock- oder braunfleckig; insgesamt gut erhalten. <br /><br />
+                    <span style="display: none">Pagliaini 597. - Anonym erschienen. Die seltene Originalausgabe dieser maßgeblichen frühen Istrien-Bibliographie mit 3060 teilweise kommentierten Einträgen. Geordnet nach Sachgebieten (und innerhalb dieser chronologisch), durch ein Inhaltsverzeichnis und zwei Register erschlossen.</span>
+                    <a href='/artikel/combi-carlo-hrsg-2305-19.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-19
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-17>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/courcier-a-hrsg-1705-17.html'>
+                            <img class='thumb' src='/img/thumb/courcier-a-hrsg-1705-17.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/courcier-a-hrsg-1705-17.html'><strong>Courcier, A. (Hrsg.)</strong></a><br /><br />
+                    Paysages du Nord. Illustré de douze dessins d'après nature par L. Morel-Fatio. Paris, A. Courcier, (um 1856). Kl-4; 2 Bll., IV, 388 pp, 12 Taf. in Tonlithographie mit Seidenhemdchen; farbillustr. Orig.Leinen mit Goldschnitt (etwas berieben und bestoßen, Bezug stellenweise geplatzt, Vorsätze fleckig und mit Erwerbungsvermerk); Text teilweise stockfleckig, die Tafeln überwiegend sauber. <br /><br />
+                    <span style="display: none">Erste Ausgabe. Beschreibung der nordwesteuropäischen, skandinavischen und baltischen Länder durch verschiedene Autoren, mit  Ansichten von Amsterdam, Kiel, Stockholm, dem "Hamletschloss" Kronborg etc. und Szenen aus dem nordischen Volksleben. Im schönen Verlagseinband.</span>
+                    <a href='/artikel/courcier-a-hrsg-1705-17.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1705-17
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/denis-ferdinand-famin-c-2109-15.html'>
+                            <img class='thumb' src='/img/thumb/denis-ferdinand-famin-c-2109-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/denis-ferdinand-famin-c-2109-15.html'><strong>Denis, Ferdinand - Famin, C.</strong></a><br /><br />
+                    L'univers. Histoire et description de tous les peuples: Brésil, Colombie et Guyanes. Paris, Firmin Didot, 1837. In-8; Vortitel, Titel, 1 doppelblattgroße gestochene Karte, 384 pp, 92 Stahlstichtafeln; 1 doppelblattgroße gestochene Karte, 32 pp, 2 Bll., 8 Stahlstichtafeln; Halbleder der Zeit mit reicher Rückenvergoldung und Sprenkelschnitt (Rücken gebrochen, berieben, Vorsätze leimschattig, erste Lage etwas gelockert); papierbedingt teilweise leicht bis stärker stockfleckig. - Die Tafeln springend numeriert, jedoch in korrekter Reihenfolge eingebunden. <br /><br />
+                    <span style="display: none">De Moraes 1, 218; Sabin 19541. - Reich illustrierte Landeskunde von Brasilien, franz. Guyana und Kolumbien. Erster Band der Amerika betreffenden Werke in der Serie "L'univers, ou historie et description de tous les peuples, de leurs religions, moeurs, coutumes, etc."</span>
+                    <a href='/artikel/denis-ferdinand-famin-c-2109-15.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-15
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/holwell-j-z-2209-34.html'>
+                            <img class='thumb' src='/img/thumb/holwell-j-z-2209-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/holwell-j-z-2209-34.html'><strong>Holwell, J. Z.</strong></a><br /><br />
+                    Evénemens historiques intéressans, relatifs aux Provinces de Bengale et à l'Empire de l'Indostan. On y a joint la Mythologie, la Cosmogonie, les Fêtes et les Jeunes des Gentous qui suivent le Shastah, et une Dissertation sur la Métempsycose, dont on attribue faussement le Dogme à Pythagore. 2 Tle. in 1 Bd. Amsterdam, Arkstée et Merkus, 1768. In-8; XXVIII, 2 Bll., 208 pp, 4 gefaltete Karten; 2 Bll., 184 pp, 5 gefaltete Tafeln; Halbpergamentband der Zeit mit goldgepr. Rückenschildchen und rotem Sprenkelschnitt (etwas berieben, bestoßen und angeschmutzt, erste und letzte Lage im Falz gelockert); insgesamt gut erhalten mit nur geringen Alters- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Erste französische Ausgabe von "Interesting Historical Events Relative to the Provinces of Bengal, and the Empire of lndostan" (London 1765-1767) des englischen Arztes und Gouverneurs von Bengalen John Zephaniah Holwell (1711-1789). Der erste Teil beschreibt unter anderem die verlustreichen Kämpfe der Engländer gegen den Nawab von Bengalen, der zweite behandelt Mythologie und Religion, Feste und Geheimbünde der Hindus. Die reizvollen Kupfertafeln zeigen mythologische Gestalten und Szenen.</span>
+                    <a href='/artikel/holwell-j-z-2209-34.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-34
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/jung-karl-emil-1710-49.html'>
+                            <img class='thumb' src='/img/thumb/jung-karl-emil-1710-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/jung-karl-emil-1710-49.html'><strong>Jung, Karl Emil</strong></a><br /><br />
+                    Der Weltteil Australien. 4 Bde. Leipzig, Freytag - Prag, Tempsky, 1882-1883. Kl-8; je Bd. ca. 270-300 pp mit zahlreichen Abb.; blind- und goldgepr. Orig.-Leinen mit Rotschnitt (kleine Einbandmängel); papierbedingt gebräunt, einzelne Farbstiftanstreichungen, einige spätere Einklebungen. <br /><br />
+                    <span style="display: none">Reich illustrierte geographisch-ethnologische Beschreibung des Kontinents (einschließlich der zugehörigen Inseln) aus der Reihe "Das Wissen der Gegenwart". Der Autor (1833-1902) war Lehrer und Schulinspektor der deutschen Kolonie in Australien. </span>
+                    <a href='/artikel/jung-karl-emil-1710-49.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1710-49
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-46>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kirchhoff-theodor-2003-46.html'>
+                            <img class='thumb' src='/img/thumb/kirchhoff-theodor-2003-46.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kirchhoff-theodor-2003-46.html'><strong>Kirchhoff, Theodor</strong></a><br /><br />
+                    Eine Reise nach Hawaii. Mit einer Karte der Sandwich-Inseln und dem Bilde des Königs Kalakaua. Altona, Schlüter & New York, E. Steiger, 1890. Gr-8; XII, 199 pp, auf Karton montiertes Porträt als Frontispiz, 1 Karte; Orig.-Halbleinen mit farb. Deckelbezug (berieben und mit Kratzspuren), zweiseitig unbeschnitten; mäßige Altersspuren, Vorsätze und Vortitel sowie eine Doppelseite stärker gebräunt. <br /><br />
+                    <span style="display: none">ADB 51, 163. - Der deutsch-amerikanische Schriftsteller Theodor Kirchhoff (1828-1899) kämpfte während der Schleswig-Holsteinischen Erhebung in Wasners Freicorps und wanderte 1851 in die Vereinigten Staaten aus, wo er ein unstetes Abenteurerleben führte; sein hier vorliegender Reisebericht nimmt in der deutschsprachigen Literatur über Hawaii "eine Ehrenstelle ein" (ADB). Kalakaua (1836-1891) war der letzte männliche Monarch des hawaiischen Königreiches und regierte von 1874 bis zu seinem Tod. Er besuchte 1881 im Rahmen einer Weltreise auch Wien.</span>
+                    <a href='/artikel/kirchhoff-theodor-2003-46.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-46
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kubinyi-franz-von-vahot-emerich-von-2003-51.html'>
+                            <img class='thumb' src='/img/thumb/kubinyi-franz-von-vahot-emerich-von-2003-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kubinyi-franz-von-vahot-emerich-von-2003-51.html'><strong>Kubinyi, Franz von - Vahot, Emerich von</strong></a><br /><br />
+                    Ungarn und Siebenbürgen in Bildern. Erster Band (mehr nicht erschienen). Pest, Gustav Emich, 1854. Kl-4; gefaltetes Frontispiz, 2 Bll., 150 pp mit zahlr. Textabb., Vignetten und Initialen, 1 Bl. Errata, 9 teils gefaltete Tafeln (zumeist Lithographien oder Tonlithographien), 1 Notenbeilage; Leinen der Zeit mit goldgepr. Rücken (berieben und bestoßen, einige Lagen im Falz gelockert, Tafeln z. T. hart beschnitten); gelegentlich leicht stockfleckig (Titel und Inhaltsverzeichnis etwas stärker), Frontispiz mit sauber hinterlegten Einrissen, eine Tafel mit Einriss im Falz. - Die Tafel "Kecskeméter Volkstrachten" durch ein (identes?) Faksimile auf altem Papier ersetzt. <br /><br />
+                    <span style="display: none">Wurzbach 13, 290 f.; Nebehay-Wagner 323; Krieg MNE I, 393. - Unvollständig gebliebene deutsche Ausgabe des 1853-1854 erschienenen vierbändigen Werks "Magyarország ès Erdély képekben" (Nebehay-Wagner 322) mit verschiedenen landeskundlichen Beiträgen, Ortsansichten etc.; einen Schwerpunkt der Darstellung bildet Kecskemét. - Ansprechendes, im Handel kaum auffindbares Hungaricum.</span>
+                    <a href='/artikel/kubinyi-franz-von-vahot-emerich-von-2003-51.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-51
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/laing-samuel-1903-26.html'>
+                            <img class='thumb' src='/img/thumb/laing-samuel-1903-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/laing-samuel-1903-26.html'><strong>Laing, Samuel</strong></a><br /><br />
+                    Reise in Norwegen. Nach dem Englischen bearbeitet mit Zusätzen, Anmerkungen und einem Anhange: Geschichte des norwegischen Grundgesetzes, von Wilhelm Adolf Lindau. (Samuel Laing, Reisen in Schweden und Norwegen 2. Teil). Dresden, Arnold, 1843 In-8; 2 Bll., , XVI (inkl. lithogr. Titel), 457, (1) pp; Leinen der Zeit mit goldgeprägtem Adelssignet auf dem Deckel (dieses auf Titelblatt als Stempel wiederholt) und ornamentaler Rückenvergoldung; Bibl.-Schildchen auf Spiegel, einige wenige Seiten gebräunt, stockfleckig oder mit Mängeln im Falz. <br /><br />
+                    <span style="display: none">Bearbeitung der 1837 erschienenen 2. Ausgabe von "Journal of a residence in Norway during the years 1834, 1835, and 1836". Das Werk des schottischen Reiseschriftstellers (1780-1868) beschäftigt sich vor allem mit den politischen und ökonomischen Verhältnissen Norwegens.</span>
+                    <a href='/artikel/laing-samuel-1903-26.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1903-26
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/maffei-giovan-pietro-2105-48.html'>
+                            <img class='thumb' src='/img/thumb/maffei-giovan-pietro-2105-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/maffei-giovan-pietro-2105-48.html'><strong>Maffei, Giovan Pietro</strong></a><br /><br />
+                    Joannis Petri Maffaeii Bergomatis e societate Jesu historiarum indicarum libri XVI. [Mit:] Selectarum epistolarum ex India libri quatuor, Joanne Petro Maffeio interprete. 2 Tle. in 1 Bd. Wien, Trattner, 1751. In-4; gest. gefaltetes Frontispiz (Porträt Hl. Franz Xaver), 4 Bll. (inkl. Titel rot-schwarz ), 366, (10) pp; 2 Bll., 157, (5) pp; mehrere Vignetten und Initialen; dunkelroter Lederband der Zeit auf 6 hohen Bünden mit Deckel- und Rückenvergoldung, Buntpapiervorsätzen und Goldschnitt (etwas berieben, Vergoldung teilweise geblasst, Rücken und hinterer Deckel mit kleinen Wurmspuren); leicht gebräunt, vereinzelt gering fleckig, alte Bibl.-Nr. auf flieg. Vorsatz, insgesamt gut erhalten. - Vorgebunden ein Grazer theologisches Thesenprogramm (von P. M. G. Comper), Wien, Trattner, 1755, 2 Bll. mit Vignetten. <br /><br />
+                    <span style="display: none">Graesse 4, 334. - Schöne Wiener Ausgabe des erstmals 1588 in Florenz erschienenen klassischen Werks zu den portugiesischen Entdeckungen und der jesuitischen Mission in Indien, Südostasien, Japan und Amerika; durch zwei Indices erschlossen. Der Humanist und Jesuit Giovan Pietro Maffei (1536-1603), Rhetoriker und Sekretär der Republik Genua, stützt sich darin auf die Briefe aus den Missionsstationen als Primärquellen.</span>
+                    <a href='/artikel/maffei-giovan-pietro-2105-48.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-48
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/national-maritime-museum-2209-62.html'>
+                            <img class='thumb' src='/img/thumb/national-maritime-museum-2209-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/national-maritime-museum-2209-62.html'><strong>National Maritime Museum</strong></a><br /><br />
+                    Catalogue of the Library. 5 Teile in 7 Bänden (alles Erschienene). London, Her Majesty's Stationery Office, 1968-1976. Gr-8; insgesamt ca. 4000 pp, 46 teils gefaltete Tafeln; goldgepr. blaues Orig.-Leinen mit Deckelillustration in illustr. Schutzumschlägen; einzelne Gebrauchsspuren, insgesamt ausgezeichnet erhalten. <br /><br />
+                    <span style="display: none">Vollständiges Set der Originalausgabe. Das National Maritime Museum in Greenwich (London) gilt mit seinen etwa zwei Millionen Exponaten aus dem Bereich der Seefahrt als weltgrößtes Museum für Seefahrtsgeschichte. Der vorliegende kommentierte Katalog seiner Bibliotheksbestände ist zum Teil chronologisch aufgebaut und umfasst die Bereiche Voyages & Travel - Biography - Atlases & Cartography - Piracy & Privateering - Naval History. Wichtiges Referenzwerk.</span>
+                    <a href='/artikel/national-maritime-museum-2209-62.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-62
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/palastina-2302-60.html'>
+                            <img class='thumb' src='/img/thumb/palastina-2302-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/palastina-2302-60.html'><strong>(Palästina)</strong></a><br /><br />
+                    Die klassischen Stellen des gelobten Landes und seiner nähern Umgebungen. Nach englischen Originalen dargestellt ... Mit einem Vorwort von Albert Knapp. Stuttgart, L. F. Rieger, 1838. In-8; 24 unnumerierte Stahlstich-Tafeln, 58 pp; schlichter Pappband der Zeit mit eingebundenem Orig.-Umschlag der ersten Lieferung (berieben und bestoßen, Vorsätze leimschattig und mit kleinen Papiermängeln); die breitrandigen Tafeln leicht gebräunt und gelegentlich etwas fleckig (zumeist außerhalb des Bildes), der Text stärker stockfleckig. - Mit Ansichten und Beschreibungen von Jerusalem, Nazareth, Bethlehem, Jericho, Sichem, Tiberias, Damaskus, Ninive (Mosul), Karnak u. a. <br /><br />
+                    <span style="display: none">Kayser 8, 402; Röhricht 1891. - Ausgegeben in sechs Lieferungen ohne Angabe eines Bearbeiters. Das auf dem Umschlag vermerkte Vorwort des deutschen Pfarrers, Dichters und Tierschutzpioniers Albert Knapp fehlt bei allen uns bekannten Nachweisen und dürfte nicht erschienen sein.</span>
+                    <a href='/artikel/palastina-2302-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-60
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/reilly-franz-johann-joseph-von-2205-60.html'>
+                            <img class='thumb' src='/img/thumb/reilly-franz-johann-joseph-von-2205-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/reilly-franz-johann-joseph-von-2205-60.html'><strong>Reilly, Franz Johann Joseph von</strong></a><br /><br />
+                    Grosser deutscher Atlas. (Wien, Selbstverlag, 1794-1796). Gr-folio (62 x 43 cm); gestochener doppelblattgr. Titel (von Karl Schütz nach Zeichnung von Vinzenz Georg Kininger), gestochenes doppelblattgr. "Erklärungs und Verzeichniss Blatt", 37 gest. altkolor. Haupt- und Nebenkarten sowie ein gest. altkolor. Diagramm auf 28 Doppelblättern; alle Kartenblätter mit teils figural gestalteten Titelkartuschen; schlichter Halblederband der Zeit (stärker berieben und bestoßen, Bindung gelockert, Innengelenke überklebt); die Kartenblätter teilweise etwas stock- oder fingerfleckig (zumeist im Randbereich), einige unten im Falz leicht gebräunt oder mit hinterlegten Bugrissen, einige unten knapprandig; handschriftliches Griffregister (dieses angeschmutzt und mit Gebrauchsspuren); insgesamt gutes und komplettes Exemplar. <br /><br />
+                    <span style="display: none">Phillips 686; Atlantes Austriaci I/1, 110, Rei D; ausführlicher Kommentar bei Dörflinger, Österr. Karten des 18. Jhs., 237-250. - Einzige Ausgabe dieses österreichischen Weltatlas, dessen etwas irreführender Titel sich lediglich auf die Sprache der Beschriftungen bezieht. Der Wiener Verleger, Kartograph und Schriftsteller Franz Johann Joseph von Reilly (1766-1820) konzipierte ihn als kompakteres und einheitlicher gestaltetes Konkurrenzwerk zu dem ebenfalls in Wien verlegten "Allgemeinen grossen Atlass" von Franz Anton Schrämbl. Der Atlas enthält u. a.: Weltkarte, Europa, Asien, Afrika, Amerika, Australien (hier "Ulimaroa") mit Polynesien, eine Reihe west- und nordeuropäischer Länder, Italien, Schweiz, Deutschland, Böhmen, Österreich, Ungarn, Südosteuropa, Russland und Polen. Der schöne gestochene Titel wurde von Reilly selbst entworfen.</span>
+                    <a href='/artikel/reilly-franz-johann-joseph-von-2205-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-60
+                    <br />
+                    
+                        € 4500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ritter-carl-lagai-heinrich-hrsg-2001-68.html'>
+                            <img class='thumb' src='/img/thumb/ritter-carl-lagai-heinrich-hrsg-2001-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ritter-carl-lagai-heinrich-hrsg-2001-68.html'><strong>(Ritter, Carl) - Lagai, Heinrich (Hrsg.)</strong></a><br /><br />
+                    Ritter's Geographisch-statistisches Lexikon über die Erdtheile, Länder, Meere, Buchten, Häfen, Seen, Flüsse, Inseln, Gebirge, Staaten, Städte, Flecken, Dörfer, Weiler, Bäder, Bergwerke, Kanäle, Eisenbahnen etc. 7. verm. u. verb. Aufl. 2 Bände. Leipzig, Wigand, 1883. Kl-4; 1 Bl., 910 pp; V, (III), 992 pp; blindgepr. Hldr. d. Zt. mit Rückenschildchen, dekorativen Buntpapiervorsätzen und Rotschnitt (berieben, obere Kapitale etwas beschädigt); innen frisch. <br /><br />
+                    <span style="display: none">"Für Post-Bureaux, Behörden, Gerichtsämter, Comptoirs, Expeditionen, Kaufleute, Fabrikanten, Zeitungsleser, Reisende, überhaupt für das correspondirende Publikum." Immer noch nützliches Nachschlagewerk, das auch kleine Ortschaften verzeichnet.</span>
+                    <a href='/artikel/ritter-carl-lagai-heinrich-hrsg-2001-68.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-68
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schmidl-adolf-1606-76.html'>
+                            <img class='thumb' src='/img/thumb/schmidl-adolf-1606-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schmidl-adolf-1606-76.html'><strong>Schmidl, Adolf</strong></a><br /><br />
+                    Die Grotten und Höhlen von Adelsberg, Lueg, Planina und Laas. Mit Beiträgen von Alois Pokorny, J. Schiner u. Wilhelm Zippe. (Zur Höhlenkunde des Karstes). Wien, Braumüller, 1854. Gr-8; VIII, 316, (1) pp, 2 Diagramm-Tafeln; bedruckte OBrosch., unbeschnitten und unaufgeschnitten; geringfügige Lager- und Altersspuren. - Ohne den zugehörigen Tafelband. <br /><br />
+                    <span style="display: none">ÖBL 10, 321. - Umfassende Dokumentation der bekannten Karsthöhlen, auch in faunistischer und floristischer Hinsicht. Der österr. Geograph und Schriftsteller Adolf Schmidl (1802-1863) begründete mit diesem und anderen Werken die Speläologie als eigene wissenschaftliche Disziplin.</span>
+                    <a href='/artikel/schmidl-adolf-1606-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1606-76
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schonbein-christian-friedrich-2409-91.html'>
+                            <img class='thumb' src='/img/thumb/schonbein-christian-friedrich-2409-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schonbein-christian-friedrich-2409-91.html'><strong>[Schönbein, Christian Friedrich]</strong></a><br /><br />
+                    Mittheilungen aus dem Reisetagebuche eines deutschen Naturforschers. England. Basel, Schweighauser, 1842. In-8; XVI, 476 pp; dekorativer Maroquinband der Zeit mit ornamentaler Rücken-, Kanten-, und Stehkantenvergoldung sowie Goldschnitt (geringfügig berieben, kleine Kratzspuren); weitgehend fleckenfrei und frisch, leicht durchschlagender Bibliotheksstempel auf Titel verso, insgesamt schönes breitrandiges Exemplar. <br /><br />
+                    <span style="display: none">Holzmann-Bohatta 5016; ADB 32, 2561; vgl. Poggendorf 3, 1205. - Origineller und detailreicher, heute noch lesenswerter Reisebericht des vielseitig interessierten deutschen Chemikers Christian Friedrich Schönbein (1799-1868), der unter anderem das Ozon und das Prinzip der Brennstoffzelle entdeckte.</span>
+                    <a href='/artikel/schonbein-christian-friedrich-2409-91.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-91
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wimmer-g-a-2505-97.html'>
+                            <img class='thumb' src='/img/thumb/wimmer-g-a-2505-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wimmer-g-a-2505-97.html'><strong>Wimmer, G. A.</strong></a><br /><br />
+                    Neuestes Gemälde von Australien. (Schütz's allgemeine Erdkunde Bd. 30). Wien, Anton Doll, 1832. In-8; 2 Bll., 409, (1) pp, 6 Kupfertafeln; einfacher Pappband der Zeit (berieben); Titel und Reihentitel mit mehreren gelöschten Stempeln und gelöschtem Besitzvermerk, stellenweise geringfügig knittrig oder fleckig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Erste Ausgabe dieser lebendigen Schilderung von Land und Leuten. Beschrieben werden nicht nur der australische Kontinent und Neuseeland, sondern auch weitere Inseln und Archipele des Pazifiks (Marianen, Carolinen, Sandwichinseln, Fidschi, Tonga, Cook- und Gesellschaftsinseln etc.). Die ansprechend gestochenen Tafeln zeigen Hobart Town, Sydney, Neuirland (Carteret-Bai), Kindergräber auf den Salomonen, Tongatapu  und Otahiti (Tahiti). Mit ausführlichem geographischem Register.</span>
+                    <a href='/artikel/wimmer-g-a-2505-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-97
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

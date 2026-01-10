@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autographs &amp; Misc.</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/autographen-varia/literatur.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Autographs &amp; Misc.</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Literature
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/autographs-misc.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/autographs-misc/history.html'>History</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/arts.html'>Arts</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/literature.html'>Literature</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/music.html'>Music</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/theatre-film-dance-circus.html'>Theatre, Film, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/science-technology-sports.html'>Science, Technology, Sports</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2403-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/altenberg-peter-schriftsteller-1859-1919-2403-4.html'>
+                            <img class='thumb' src='/img/thumb/altenberg-peter-schriftsteller-1859-1919-2403-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/altenberg-peter-schriftsteller-1859-1919-2403-4.html'><strong>Altenberg, Peter, Schriftsteller (1859-1919)</strong></a><br /><br />
+                    Eigenhändiges Manuskriptblatt ohne Unterschrift, 1 Seite, kl-4, Wien (Briefpapier des Graben-Hotels), um 1915. - "Abgesehen vom Talent, könnte ich alle dieselben Sachen schreiben wie dieser Peter Altenberg. Wenn ich nämlich ebenso unverschämt wäre, und dieses ununterbrochene und überflüssige Bedürfnis hätte, die Menschen über irgend etwas aufzukären! Ich bin direkt froh, dass Sie "irre gehen". Wer hat mich aufgeklärt?! Etsch!" - - - Meine Mama sagte immer zu mir noch in den sogenannt guten Zeiten: 'Wenn wir die 20000 Kronen hätten, die wir jährlich ausgeben, so hättest Du ein Recht, uns Vorwürfe zu machen, dass wir sie ganz ausgeben! Da wir sie aber nicht haben und dennoch ausgeben, ist es eine Taktlosigkeit von Dir!'" -  Auf dünnem Papier mit Faltspuren. <br /><br />
+                    <span style="display: none">Leicht abweichend gedruckt in "Fechsung" (Berlin 1915, 166), dort zusammen mit anderen Kurztexten unter der Überschrift "Splitter". Für Altenberg typische Skizzen in seiner charakteristischen Handschrift. Der Dichter, einer der wichtigsten Vertreter der sogenannten Kaffeehausliteratur der Wiener Moderne, lebte von 1913 bis zu seinem Tod im Graben-Hotel.</span>
+                    <a href='/en/articles/altenberg-peter-schriftsteller-1859-1919-2403-4.html'>Continue reading</a><br /><br />
+                    Order no. 2403-4
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1606-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/anouilh-jean-dramatiker-1910-1987-1606-3.html'>
+                            <img class='thumb' src='/img/thumb/anouilh-jean-dramatiker-1910-1987-1606-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/anouilh-jean-dramatiker-1910-1987-1606-3.html'><strong>Anouilh, Jean, Dramatiker (1910-1987)</strong></a><br /><br />
+                    Blatt mit eigh. Widmung für den österr. Schauspieler Erik Frey (1908-1988) und Unterschrift, 1 Seite, kl-4,  [Wien], 26. 3. 1964. "Pour Erik Frey qui ferait - comme moi - le plus beau metier du monde - si c'en était un. Le jour de la bataille sympathiqement Jean Anouilh." - Faltspuren. <br /><br />
+                    <span style="display: none">"Bataille" bezieht sich auf die Premiere von Anouilhs schwarzer Komödie "Ardèle oder Das Gänseblümchen" (Ardèle ou la Marguerite) im Theater in der Josefstadt am Tag der Widmung.</span>
+                    <a href='/en/articles/anouilh-jean-dramatiker-1910-1987-1606-3.html'>Continue reading</a><br /><br />
+                    Order no. 1606-3
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bauer-wolfgang-osterr-schriftsteller-1941-2005-2205-3.html'>
+                            <img class='thumb' src='/img/thumb/bauer-wolfgang-osterr-schriftsteller-1941-2005-2205-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bauer-wolfgang-osterr-schriftsteller-1941-2005-2205-3.html'><strong>Bauer, Wolfgang, österr. Schriftsteller (1941-2005)</strong></a><br /><br />
+                    Farbiges Fotoporträt (19 x 13 cm, wohl um 1995) mit eigenhändigem Namenszug auf der Bildseite. - Foto mit unbedeutender Schadstelle. <br /><br />
+                    <span style="display: none">Wolfgang Bauer gilt als einer der bedeutendsten österreichischen Dramatiker der Nachkriegszeit.</span>
+                    <a href='/en/articles/bauer-wolfgang-osterr-schriftsteller-1941-2005-2205-3.html'>Continue reading</a><br /><br />
+                    Order no. 2205-3
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-6>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bechstein-ludwig-schriftsteller-1801-1860-2209-6.html'>
+                            <img class='thumb' src='/img/thumb/bechstein-ludwig-schriftsteller-1801-1860-2209-6.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bechstein-ludwig-schriftsteller-1801-1860-2209-6.html'><strong>Bechstein, Ludwig, Schriftsteller (1801-1860)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 1/2 Seiten, in-8, Leipzig, 24. 3. 1830. - "Theuerster Freund! Kurz vor meiner Abreise in die Heimath beeile ich mich, Ihnen mit tausendfachem Dank den gütigst geliehenen Todtentanz zu remittiren. Sie haben mir eine sehr große Gefälligkeit erzeigt; der Lohn soll ein Ex. meines Gedichts seyn, wenn es erschienen. Es ist vollendet, vollendet in 4 Wochen! Noch ist nicht darüber entschieden, wem ich es in Verlag gebe. / Ich weiß nicht, ob Sie das Morgenblatt lesen, im Literaturblatt hat Wolfgang Menzel meine Libussa beifällig angezeigt. / Vor kurzem war Prof. Wolff, früher in Weimar, jetzt in Jena, hier; da ich Abends mit bei Hartmanns war, hörte ich ihn auch improvisiren; es ist dieß eine wunderbare Gabe, räthselhaft und geheimnisvoll; ich wäre es nicht im Stande. Neues weiß ich nichts, Sie erfahren das auch besser aus dem ... [?]. Vielleicht sprechen wir uns zur Buchhändlermesse, es wäre mir doch sehr lieb, bis dahin sind auch meine Haimonskinder fertig. Wagner hat auch eine recht hübsche Vignette dazu gestochen. Ich lege sie Ihnen bei. / Leben Sie wohl, mein guter theurer Freund, und haben Sie nochmals freundlichen Dank. Den Baseler Todtentanz habe ich dem Buchhändler zur Besorgung gegeben. Hoffentlich ist er abgesendet. Von der ... [?] hör und sehe ich nichts. Käuflich ist wohl von seltenen Holzschnitten um billige Preise nichts in Prag? - Behalten Sie lieb Ihren treuen Freund L. Bechstein." - Empfängernotizen und Sammlervermerk. Gebräunt. <br /><br />
+                    <span style="display: none">Nach einer mehrjährigen Tätigkeit als Apotheker studierte Bechstein ab 1829 Philosophie, Geschichte und Literatur in Leipzig und München, danach wurde er Bibliothekar und Archivar in Meiningen. Als Schriftsteller ist er heute noch vor allem noch durch seine Märchensammlungen bekannt, mit deren Herausgabe er bereits in jungen Jahren begann. Sein historisches Gemälde "Die Weissagung der Libussa" wurde 1829 in Stuttgart publiziert, "Die Haimons-Kinder. Ein Gedicht aus dem Sagenkreise Karls des Grossen in vier Sängen" folgte 1830 bei Hartmann in Leipzig (vgl. "bei Hartmanns" im vorliegenden Brief). Der Literaturkritiker, Literaturhistoriker und Schriftsteller Wolfgang Menzel (1798-1873) war Redakteur des Literatur-Blattes zu Cottas "Morgenblatt für gebildete Stände" in Stuttgart; Bernhard Wolff (1799-1851) war hauptberuflich als Pädagoge und daneben als reisender Improvisator tätig.</span>
+                    <a href='/en/articles/bechstein-ludwig-schriftsteller-1801-1860-2209-6.html'>Continue reading</a><br /><br />
+                    Order no. 2209-6
+                    <br />
+                    
+                        € 480,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/billinger-richard-schriftsteller-1890-1965-2105-14.html'>
+                            <img class='thumb' src='/img/thumb/billinger-richard-schriftsteller-1890-1965-2105-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/billinger-richard-schriftsteller-1890-1965-2105-14.html'><strong>Billinger, Richard, Schriftsteller (1890-1965)</strong></a><br /><br />
+                    Eigenhändiges Gedicht "Der Athlet (Für Gerhart Hauptmann)" mit Unterschrift "Richard Billinger" und Kreuzchen, 3/4 Seite auf Transparentpapier, kl-4, ohne Ort, (1932). - Zwei Strophen mit insgesamt 9 Zeilen. "Ich bau am Leib mit milder Hand, / ich bin ein Kind und lerne. / Schon längst verfault ist mein Gewand. / Ich wuchs aus frommer Bürger Land / tiefein in alle Sterne. // Ich schreite sacht. Die Sohle glänzt. / Ich heb mich still von hinnen. / Und Ruhm, so eitel Stirnen kränzt, / will ich nicht nicht mehr gewinnen." - Leichte Faltspuren und geringfügig knittrig. <br /><br />
+                    <span style="display: none">Beiliegend eine undatierte hektographierte Autographenliste des Wiener Antiquars Heinrich Hinterberger (1892-1970), in der das Gedicht zusammen mit drei weiteren, ebenfalls Gerhart Hauptmann gewidmeten Gedichten Billingers angeboten wird; Hinterberger datiert alle Stücke in das Jahr 1932. Tatsächlich schrieb Hauptmann am 6. 4. 1932 an den oberösterreichischen Schriftsteller: "Sie haben mir ein schönes Gedicht geschenkt - ich sage: ein schönes Gedicht, und das ist wohl viel! Es ist eine edle Gabe, für die ich Ihnen herzlich danke. Mit vielen Wünschen für Ihren dichterischen Aufstieg ...". Thematisch ist das vorliegende Gedicht insofern bemerkenswert, als der zwei Meter große und überaus kräftige Billinger ursprünglich Zirkusathlet und Boxer werden wollte. Er war vor allem als Dramatiker überaus erfolgreich, ehe er nach dem 2. Weltkrieg weitgehend in Vergessenheit geriet.</span>
+                    <a href='/en/articles/billinger-richard-schriftsteller-1890-1965-2105-14.html'>Continue reading</a><br /><br />
+                    Order no. 2105-14
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-12>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/billinger-richard-schriftsteller-1890-1965-2403-12.html'>
+                            <img class='thumb' src='/img/thumb/billinger-richard-schriftsteller-1890-1965-2403-12.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/billinger-richard-schriftsteller-1890-1965-2403-12.html'><strong>Billinger, Richard, Schriftsteller (1890-1965)</strong></a><br /><br />
+                    Ganzseitiges Gedichtfaksimile mit gedruckter Danksagung für Glückwünsche zum 70. Geburtstag und eigenhändiger Unterschrift, 1 Seite, kl-4, 2. 7. 1960. - "Was ist ein Jubilar? / Verehrt von einer Schar / von Freunden, die sich darüber freuen / jünger zu sein als der gefeierte Alte, / ihm gerne den Weihrauch streuen / und ihm singen das 'Gott erhalte!' / Was kann ein Jubilar? / Nichts, als in Geduld sich fassen, / aus den schimmernden Gelassen / seines Selbst, seines Ichs, seines Herzens / die Träne keltern des Verschmerzens / der Jugendsonnenstärke, / ausruhen auf seinem Werke, / das ihm gar nicht unsterblich dünkt, / warten, bis die Tür zuklinkt, / er den Würmern gehört und den Maden, / ein grabgeschirmter Düngerfladen. / Was ist ein Jubilar? / Ein Kinderspott! Ein alter Narr! / Einer, der die Bettlersuppe trinkt, / hinter dem vollen Erntewagen / zu den Stoppeln des geleerten Ackers hinkt." <br /><br />
+                    <span style="display: none">Der einstmals gefeierte, nach dem Krieg jedoch in Vergessenheit geratene homosexuelle Lyriker, Dramatiker und Erzähler verbrachte seinen Lebensabend alkoholkrank in Linz, wo er in Kaffee- und Gasthäusern ein meist verständnisloses Publikum mit seinen Texten konfrontierte.</span>
+                    <a href='/en/articles/billinger-richard-schriftsteller-1890-1965-2403-12.html'>Continue reading</a><br /><br />
+                    Order no. 2403-12
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/blasco-ibanez-vicente-schriftsteller-und-politiker-1867-1928-2505-10.html'>
+                            <img class='thumb' src='/img/thumb/blasco-ibanez-vicente-schriftsteller-und-politiker-1867-1928-2505-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/blasco-ibanez-vicente-schriftsteller-und-politiker-1867-1928-2505-10.html'><strong>Blasco Ibáñez, Vicente, Schriftsteller und Politiker (1867-1928)</strong></a><br /><br />
+                    Gedruckte vierseitige Menükarte in illustriertem Kartonumschlag mit Kordelbindung für ein Galadiner zu seinen Ehren am 21. 2. 1920 in Washington D.C., in-8, mit eigenhändiger Widmung und Unterschrift auf dem Umschlag; dazu eine Porträtpostkarte mit eigenhändiger Widmung und Unterschrift, Menton 1926. - Beide Widmungen in spanischer Sprache, die erste für den Generaldirektor der Pan-American Union, John Barrett (so die korrekte Schreibung). Die Menükarte enthält auch eine Gästeliste sowie ein Werkverzeichnis des Schriftstellers. <br /><br />
+                    <span style="display: none">Blasco Ibáñez wurde in Valencia geboren, führte ein unruhiges Leben zwischen Spanien, Argentinien und Frankreich und verstarb in Menton. Als vielseitiger erfolgreicher Schriftsteller war er stark vom französischen Naturalismus beeinflusst; etliche seiner Werke wurden in Hollywood und anderswo verfilmt, unter anderem mit Rudolph Valentino (Die vier Reiter der Apokalypse, 1921; Blut und Sand, 1922).</span>
+                    <a href='/en/articles/blasco-ibanez-vicente-schriftsteller-und-politiker-1867-1928-2505-10.html'>Continue reading</a><br /><br />
+                    Order no. 2505-10
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/brecht-bertolt-schriftsteller-1898-1956-2509-11.html'>
+                            <img class='thumb' src='/img/thumb/brecht-bertolt-schriftsteller-1898-1956-2509-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/brecht-bertolt-schriftsteller-1898-1956-2509-11.html'><strong>Brecht, Bertolt, Schriftsteller (1898-1956)</strong></a><br /><br />
+                    Eigenhändiger Brief in Bleistiftschrift mit Paraphe, 1 Seite auf Doppelblatt, in-8, ohne Ort und Datum (Berlin, wohl um 1948). - An Caspar Neher über dessen bevorstehende Reise nach Berlin. "lieber Cas, lass doch durch das Schauspielhausbüro Jakob Geis anrufen (476352), er weiß bescheid über den Autobusverkehr Hof-Leipzig-Berlin. Vielleicht nimmst du gleich fahrkarten bis nach Berlin? Geis hat auch die papiere mit der russischen aufenthaltserlaubnis, die Du vielleicht hinter Leipzig brauchst wenn ihr nicht durchfahrt, geh bitte zum Kulturbund. Mein telefon in Berlin: zu Hause: 560393 büro (Luisenstr. 18): 421968. Ich freue mich auf deine Ankunft. b." - Seitliche Lochspuren unterlegt (kein Textverlust). <br /><br />
+                    <span style="display: none">Der deutsch-österreichische Bühnenbildner und Librettist Caspar Neher (1897-1962) war Brechts Mitschüler und Freund und arbeitete bereits vor dem 2. Weltkrieg mit ihm zusammen. Seit 1948 österreichischer Staatsbürger, war er in der Nachkriegszeit bei den Salzburger Festspielen sowie in Zürich, München und Berlin engagiert. Jacob Geis (1890-1972) war ein deutscher Dramaturg, Regisseur und Drehbuchautor; er führte unter anderem bei der Uraufführung von Bertolt Brechts Stück "Mann ist Mann" in Darmstadt Regie.</span>
+                    <a href='/en/articles/brecht-bertolt-schriftsteller-1898-1956-2509-11.html'>Continue reading</a><br /><br />
+                    Order no. 2509-11
+                    <br />
+                    
+                        € 2400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/cardenal-ernesto-dichter-und-politiker-1925-2020-2003-9.html'>
+                            <img class='thumb' src='/img/thumb/cardenal-ernesto-dichter-und-politiker-1925-2020-2003-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/cardenal-ernesto-dichter-und-politiker-1925-2020-2003-9.html'><strong>Cardenal, Ernesto, Dichter und Politiker (1925-2020)</strong></a><br /><br />
+                    Reproduziertes Fotoporträt in Postkartengröße mit eigh. bildseitiger Widmung und Unterschrift, ohne Ort und Datum (um 1990). - "Para Wolfgang. Ernesto Cardenal". <br /><br />
+                    <span style="display: none">Der zum Kreis der lateinamerikanischen Befreiungstheologen zählende nicaraguanische Priester und bedeutende Lyriker verstand sich gleichermaßen als Christ wie als Marxist, engagierte sich für die sandinistische Revolution und war von 1979 bis 1987 Kulturminister Nicaraguas. 1980 erhielt er den Friedenspreis des Deutschen Buchhandels.</span>
+                    <a href='/en/articles/cardenal-ernesto-dichter-und-politiker-1925-2020-2003-9.html'>Continue reading</a><br /><br />
+                    Order no. 2003-9
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/corti-egon-caesar-conte-schriftsteller-1886-1953-2509-15.html'>
+                            <img class='thumb' src='/img/thumb/corti-egon-caesar-conte-schriftsteller-1886-1953-2509-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/corti-egon-caesar-conte-schriftsteller-1886-1953-2509-15.html'><strong>Corti, Egon Caesar Conte, Schriftsteller (1886-1953)</strong></a><br /><br />
+                    6 maschinschriftliche Briefe mit Unterschrift und einzelnen handschriftlichen Ergänzungen und Korrekturen, insgesamt 6 Seiten, kl-4, dazu eine eigenhändige Ansichtskarte, meist Salzburg, 6. 2. bis 21. 8. 1953. - An die Internationale Literarische Agentur Geisenheyner & Crone in Stuttgart über die Herausgabe einiger seiner Werke im französischen und englischen Sprachraum sowie über Raubdrucke und fehlerhafte Übersetzungen. Besonders verärgert ist Corti wegen eines englischen Raubdrucks seines Pompeji-Buches. "...  Der wie Sie richtig sagen 'Piratenverlag' Routledge and Kegan Paul hat ... gänzlich ohne mein Wissen und ohne es mir mitzuteilen einen Vertrag über das Buch abgeschlossen, der völlig über mich hinweggeht. Das Buch erschien dann ... in katastrophaler Aufmachung ... Einsprüche der Regierung, mein Protest, Bemühungen der österr. Botschaft und des britischen High Commissioner wurde dilatorisch behandelt. Der einzige, der ein Herz dafür hatte, war Churchill, der von der Sache erfuhr, mir schreiben liess und wenigstens erfahren hat, dass Routledge und Kegan eben eine Piratengesellschaft ist ...". - Einige Empfängervermerke, alle Stücke seitlich gelocht, von der Karte die Briefmarken entfernt. <br /><br />
+                    <span style="display: none">Corti, ursprünglich Berufsoffizier, wurde vor allem durch seine Biographien über Persönlichkeiten aus der europäischen Aristokratie bekannt, für die er auch schwer zugängliche Quellen auswerten konnte. In der hier vorliegenden Korrespondenz geht es um seine Werke "Maximilian von Mexiko", "Das Haus Rothschild", "Elisabeth", "Untergang und Auferstehung von Pompeji und Herculaneum" sowie um "Metternich und die Frauen".</span>
+                    <a href='/en/articles/corti-egon-caesar-conte-schriftsteller-1886-1953-2509-15.html'>Continue reading</a><br /><br />
+                    Order no. 2509-15
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/dahn-felix-schriftsteller-1834-1912-2409-22.html'>
+                            <img class='thumb' src='/img/thumb/dahn-felix-schriftsteller-1834-1912-2409-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/dahn-felix-schriftsteller-1834-1912-2409-22.html'><strong>Dahn, Felix, Schriftsteller (1834-1912)</strong></a><br /><br />
+                    Eigenhändiger Spruch mit Unterschrift "Das höchste Gut des Mannes ist sein Volk" aus dem Schauspiel "Deutsche Treue", in-8, geringfügig fleckig, dazu eine Porträtpostkarte der Firma Rotophot Berlin (Gebrauchs- und Altersspuren). - Beiliegend ein weiterer signierter Spruch "Pflicht macht stark", je drei 3 Briefe und Postkarten aus den Jahren 1875 bis 1901 an verschiedene Empfänger sowie eine gedruckte und eine handgeschriebenen Visitkarte. <br /><br />
+                    <span style="display: none">Der deutsche Jurist und Historiker Felix Dahn wurde vor allem durch seine historischen Romane ("Ein Kampf um Rom" u. a.) zu einem überaus populären Schriftsteller; sein umfangreiches Oeuvre umfasst rund 30.000 Druckseiten. Aufgrund seiner völkischen Grundeinstellung wurde er oft als Wegbereiter des Nationalsozialismus gesehen, was jedoch in dieser undifferenzierten Form kaum aufrechtzuerhalten ist. Auch war Dahn kein Antisemit und hatte jüdische Freunde.</span>
+                    <a href='/en/articles/dahn-felix-schriftsteller-1834-1912-2409-22.html'>Continue reading</a><br /><br />
+                    Order no. 2409-22
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/de-bosis-adolfo-schriftsteller-und-ubersetzer-1863-1924-2505-18.html'>
+                            <img class='thumb' src='/img/thumb/de-bosis-adolfo-schriftsteller-und-ubersetzer-1863-1924-2505-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/de-bosis-adolfo-schriftsteller-und-ubersetzer-1863-1924-2505-18.html'><strong>De Bosis, Adolfo, Schriftsteller und Übersetzer (1863-1924)</strong></a><br /><br />
+                    Konvolut von 16 eigenhändigen Briefen in italienischer Sprache mit Unterschrift "Adolfo de Bosis", "Adolfo de B." oder "Adolfo", dazu ein Brieffragment, insgesamt 49 Seiten, in-8, wohl meist Rom, 1898/1914(?) und undatiert, dazu 9 eigenhändige, meist postalisch gelaufene Kuverts. - Amicale, vielfach in zeittypischem Pathos geschriebene Briefe an den dalmatinisch-italienischen Politiker und Übersetzer Antonio Cippico (1877-1935), mit Empfängeradressen in Paris, Zara, Graz und Wien. Über Tagesereignisse, literarische Aktivitäten, Reisen, persönliche Krisen und anderes. In schwungvoller Schrift, teilweise auf Briefpapier der von De Bosis geleiteten "Società italiana del carburo di calcio" in Rom. - Einzelne Wischspuren und Tintenflecke, auf der Rückseite eines Schreibens ein maschinschriftliches Gedicht von De Bosis. <br /><br />
+                    <span style="display: none">Die von De Bosis gegründete Zeitschrift "Il convito" erschien von 1895 bis 1907 und wurde zum Sammelbecken der ästhetisierenden Dichtung des Fin de siècle in Italien. Sie brachte unter anderem zahlreiche Erstdrucke von Gabriele d'Annunzio, mit dem De Bosis ebenso befreundet war wie mit einer Reihe von anderen Literaten und Kritikern. Auch mit Eleonara Duse standen er und seine Frau Lilian geb. Vernon in freundschaftlicher Verbindung. - Antonio Cippico übersetzte Shakespeare und Nietzsche ins Italienische, unterrichtete in London italienische Literatur, wurde später von Mussolini zum Senator ernannt und gehörte zu den Vertretern des italienischen Irredentismus.</span>
+                    <a href='/en/articles/de-bosis-adolfo-schriftsteller-und-ubersetzer-1863-1924-2505-18.html'>Continue reading</a><br /><br />
+                    Order no. 2505-18
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1510-17>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/dor-milo-schriftsteller-1923-2005-1510-17.html'>
+                            <img class='thumb' src='/img/thumb/dor-milo-schriftsteller-1923-2005-1510-17.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/dor-milo-schriftsteller-1923-2005-1510-17.html'><strong>Dor, Milo, Schriftsteller (1923-2005)</strong></a><br /><br />
+                    Porträtpostkarte mit eigh. Widmung und Unterschrift, Wien, 10. 12. 1977. <br /><br />
+                    <span style="display: none">Pressefoto Horowitz, Wien.</span>
+                    <a href='/en/articles/dor-milo-schriftsteller-1923-2005-1510-17.html'>Continue reading</a><br /><br />
+                    Order no. 1510-17
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-27>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/fussenegger-gertrud-schriftstellerin-1912-2009-2305-27.html'>
+                            <img class='thumb' src='/img/thumb/fussenegger-gertrud-schriftstellerin-1912-2009-2305-27.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/fussenegger-gertrud-schriftstellerin-1912-2009-2305-27.html'><strong>Fussenegger, Gertrud, Schriftstellerin (1912-2009)</strong></a><br /><br />
+                    Eigenhändiges Gedicht "Wind" mit Widmung und Unterschrift, 1 Seite, kl-4, Leonding (Briefkopf), um 1990. - "Wind streicht durchs Haus, / der Atem der Ferne ist nah, / er leckt uns die Schläfe, / er weht unsern Schlaf entzwei, / er macht uns hellwach. // Der Atem der Ferne ist nah. / Wer möchte sein ohne ihn? ..." - Leichte Falt- und Knitterspuren. <br /><br />
+                    <span style="display: none">Gertrud Fusseneggers umfangreiches Werk umfasst vor allem Romane, Erzählungen und Essays; in ihren späteren Lebensjahren wandte sich die Dichterin verstärkt auch der Lyrik zu.</span>
+                    <a href='/en/articles/fussenegger-gertrud-schriftstellerin-1912-2009-2305-27.html'>Continue reading</a><br /><br />
+                    Order no. 2305-27
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/goethekreis-bottiger-karl-august-philologe-archaologe-und-schriftsteller-1760-1835-2202-37.html'>
+                            <img class='thumb' src='/img/thumb/goethekreis-bottiger-karl-august-philologe-archaologe-und-schriftsteller-1760-1835-2202-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/goethekreis-bottiger-karl-august-philologe-archaologe-und-schriftsteller-1760-1835-2202-37.html'><strong>Goethekreis - Böttiger, Karl August, Philologe, Archäologe und Schriftsteller (1760-1835)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite, in-8, ohne Ort (wohl Dresden), 18. 1. 1825. - "Hochzuverehrender Herr Oberconsistorialrath! Meinem Versprechen gemäß sende ich Ihnen, was mir von Hofrath Munkes Schriftstellerei zum Theil aus Gilberts Annalen, deren Mitarbeiter er war, bekannt worden ist. Wen[n] Ihnen etwas über Kleinschrodts in Würzburg Leben u. Schriften bekannt wurde; so würden Sie durch Mittheilung desselben zu großem Dank verpflichten Ihren hochachtungsvoll ergebenen Böttiger." Mit Teil des Adressblatts (Empfängername abgeschnitten). - Geringfügig fleckig. <br /><br />
+                    <span style="display: none">Böttiger kam 1791 auf Vermittlung Herders nach Weimar. Hier unterstützte er Christoph Martin Wieland bei der Herausgabe der Literaturzeitschrift "Der Neue Teutsche Merkur", wurde Logenbruder Goethes in der Freimaurerloge "Amalia" und beriet mehrmals den Dichter - Goethe gab ihm etwa das Manuskript seines Versepos "Hermann und Dorothea" vor der Veröffentlichung zur Durchsicht. Allerdings kam es nach einiger Zeit zum Zerwürfnis zwischen beiden. 1804 verließ Böttiger Weimar wieder und übersiedelte nach Dresden, wo er Studiendirektor der Ritterakademie wurde, Vorlesungen über die Antike hielt und Theaterkritiken schrieb. - Georg Wilhelm Munke (auch Muncke, 1772-1847) war Professor der Physik in Marburg und später in Heidelberg. "Gilberts Annalen", von 1799 bis 1824 unter diesem Titel erschienen, bildeteten den ersten Block der bedeutenden und bis heute erscheinenden Fachzeitschrift "Annalen der Physik". Gallus Aloys Kleinschrod (1762-1824) war Rechtsgelehrter in Würzburg; ihm wurde 1813 die Revision des österreichischen Strafrechts übertragen.</span>
+                    <a href='/en/articles/goethekreis-bottiger-karl-august-philologe-archaologe-und-schriftsteller-1760-1835-2202-37.html'>Continue reading</a><br /><br />
+                    Order no. 2202-37
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/goethekreis-carl-august-grossherzog-von-sachsen-weimar-1757-1828-2205-18.html'>
+                            <img class='thumb' src='/img/thumb/goethekreis-carl-august-grossherzog-von-sachsen-weimar-1757-1828-2205-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/goethekreis-carl-august-grossherzog-von-sachsen-weimar-1757-1828-2205-18.html'><strong>Goethekreis - Carl August, Großherzog von Sachsen-Weimar (1757-1828)</strong></a><br /><br />
+                    Eigenhändiges Billet mit Paraphe "C. A.", 1 Seite, quer-kl-8, ohne Ort und Datum (wohl Weimar um 1785). "Da sich Bode selbst dafür intereßirt so möchte wohl hier eine Ausnahme zu machen seyn, der Herzog von Gotha giebt mir gerne. / Wegen Papenheim kan[n] frey quartier gesezt werden, die erfüllung wie wird sich schon finden." - Mit gedruckter Zierbordüre. <br /><br />
+                    <span style="display: none">Bode: vermutlich der vielseitige Verleger, Schriftsteller, Übersetzer, Musiker, Aufklärer und Freimaurer Johann Joachim Christoph Bode (1720-1793), der bereits 1776 in Weimar Carl August und dessen Freund Goethe kennengelernt hatte. Er wurde 1778 als Geschäftsführer der Gräfin Bernstorff in Weimar tätig, betrieb dort eine Druckerei und begleitete wiederholt Gesellschaften des Weimarer, Gothaer oder Meininger Hofes auf Reisen. - Herzog von Gotha: Ernst II. Ludwig von Sachsen-Gotha-Altenburg (1745-1804), der von 1772 bis zu seinem Tod Landesfürst des thüringischen Herzogtums war. Als liberaler und aufgeklärter Herrscher war er vielseitig künstlerisch und wissenschaftlich interessiert und machte Gotha zu einem kulturellen Zentrum, das auch von Goethe mehrfach besucht wurde. Er war ebenfalls Freimaurer sowie Mitglied der Illuminaten.</span>
+                    <a href='/en/articles/goethekreis-carl-august-grossherzog-von-sachsen-weimar-1757-1828-2205-18.html'>Continue reading</a><br /><br />
+                    Order no. 2205-18
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gottsched-johann-christoph-schriftsteller-und-gelehrter-1700-1766-2001-32.html'>
+                            <img class='thumb' src='/img/thumb/gottsched-johann-christoph-schriftsteller-und-gelehrter-1700-1766-2001-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gottsched-johann-christoph-schriftsteller-und-gelehrter-1700-1766-2001-32.html'><strong>Gottsched, Johann Christoph, Schriftsteller und Gelehrter (1700-1766)</strong></a><br /><br />
+                    Eigh. Schriftstück mit Unterschrift als Rektor der Leipziger Universität, 1/2 Seite, in-4, Leipzig, 24. 10. 1740. -  Lateinisches Empfehlungsschreiben für seinen Studenten Johann Hieronymus Christoph Begen aus Wolfenbüttel. "Fide praesentium testor, Virum iuvenem nobilissimum et praestantissimum, Joannem Hieronymum Christ. Begium, Guelferbytanum, Praelectiones meas proximo et praesenti anno, cum Philosophicas tum rhetoricas sedulo frequentasse, et praeterea exercitiis disputoriis, exercendis ingeniis excellentioribus destinatis, quantum doctrina valeret saepius demonstrasse. Quare, ut a Maecenatibus et Litterarum Patronis, in stadio eruditionis strenue pergens, porro sablevetur Begius noster, ex animo precor ...". Am Oberrand zeitgenössischer Vermerk von anderer Hand. - Beiliegend kleines Holzstichporträt des 19. Jhs. von C. Laufer mit faksimilierter Unterschrift. <br /><br />
+                    <span style="display: none">Im Vorfeld der Aufklärung engagierte sich Gottsched als Sprach- und Literaturreformer, geriet dabei allerdings zusehends in ein autoritäres Fahrwasser und handelte sich die heftige Gegnerschaft zeitgenössischer Literaten ein. Das von ihm propagierte lutherische Sächsisch als überregionale Schriftnorm des Deutschen setzte sich freilich im Zuge der politischen Entwicklung durch: Nach dem Siebenjährigen Krieg wurde auch in Österreich mit der Einführung der allgemeinen Schulpflicht das Gottsched'sche Deutsch als offizieller Standard festgelegt.</span>
+                    <a href='/en/articles/gottsched-johann-christoph-schriftsteller-und-gelehrter-1700-1766-2001-32.html'>Continue reading</a><br /><br />
+                    Order no. 2001-32
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gurschner-alice-pseud-paul-althof-1869-1944-2309-28.html'>
+                            <img class='thumb' src='/img/thumb/gurschner-alice-pseud-paul-althof-1869-1944-2309-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gurschner-alice-pseud-paul-althof-1869-1944-2309-28.html'><strong>Gurschner, Alice (Pseud. Paul Althof, 1869-1944)</strong></a><br /><br />
+                    "Erlöschen". Eigenhändiges Gedicht, 9 Zeilen mit Unterschrift, in-8, ohne Ort und Datum (um 1902). - "In unsern Herzen war es kühl und still, / Uns blieb nur die Erinnerung nach Jahren / An jenes Thal, im strahlenden April, / Wo wir uns liebten, wo wir selig waren ...". Mit eigenhändigen Korrekturen. - Manuskriptvorlage für den Abdruck in der Anthologie "Schwarz auf Weiss. Humor und Satyre beliebter Autoren und Künstler", Leipzig, Blömer, [1902], S. 14. Vermerke von fremder Hand, Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Die als Alice Pollak in einer großbürgerlichen jüdischen Wiener Familie aufgewachsene Schriftstellerin heiratete 1897 den Bildhauer und Mitbegründer der Wiener Secession Gustav Gurschner, konvertierte 1905 zum Katholizismus und war Mitglied im Verein der Schriftstellerinnen und Künstlerinnen in Wien. Unter dem Pseudonym Paul Althof verfasste sie Gedichte, Erzählungen und Dramen sowie Feuilletons und andere Texte für österreichische und deutsche Zeitungen und Zeitschriften.</span>
+                    <a href='/en/articles/gurschner-alice-pseud-paul-althof-1869-1944-2309-28.html'>Continue reading</a><br /><br />
+                    Order no. 2309-28
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-21>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hartling-peter-schriftsteller-1933-2017-2205-21.html'>
+                            <img class='thumb' src='/img/thumb/hartling-peter-schriftsteller-1933-2017-2205-21.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hartling-peter-schriftsteller-1933-2017-2205-21.html'><strong>Härtling, Peter, Schriftsteller (1933-2017)</strong></a><br /><br />
+                    Illlustriertes Faltbillet in Postkartengröße mit gedrucktem Kopf, eigenhändigem Spruch "Zwischen den Altern", Widmung und Unterschrift, 14. 11. 1985. - "Lauf, hol Dich ein / und sieh dir ins Gesicht / Du warst es lange nicht. / Jetzt kannst du's sein ...". <br /><br />
+                    <span style="display: none">Härtling war Lyriker und Erzähler und verfasste auch Kinderbücher.</span>
+                    <a href='/en/articles/hartling-peter-schriftsteller-1933-2017-2205-21.html'>Continue reading</a><br /><br />
+                    Order no. 2205-21
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/halm-friedrich-schriftsteller-1806-1871-1802-41.html'>
+                            <img class='thumb' src='/img/thumb/halm-friedrich-schriftsteller-1806-1871-1802-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/halm-friedrich-schriftsteller-1806-1871-1802-41.html'><strong>Halm, Friedrich, Schriftsteller (1806-1871)</strong></a><br /><br />
+                    Albumblatt mit eigh. Gedicht und Unterschrift, 4 Zeilen, quer-12, Wien, 7. 3. 1868. - "Ob Deine Wangen blühen / Ob meine fahl und bleich, / Wenn gleich die Seelen glühen / Sind Jung und Alt sich gleich." - Minimal fleckig; in Zierpassepartout montiert. <br /><br />
+                    <span style="display: none">Friedrich Halm (eigentlich Eligius Franz Joseph Freiherr von Münch-Bellinghausen) war Lyriker, Novellist und Dramatiker und leitete die Wiener Hoftheater als Generalintendant .</span>
+                    <a href='/en/articles/halm-friedrich-schriftsteller-1806-1871-1802-41.html'>Continue reading</a><br /><br />
+                    Order no. 1802-41
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1703-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/halm-friedrich-schriftsteller-1806-1871-1703-34.html'>
+                            <img class='thumb' src='/img/thumb/halm-friedrich-schriftsteller-1806-1871-1703-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/halm-friedrich-schriftsteller-1806-1871-1703-34.html'><strong>Halm, Friedrich, Schriftsteller (1806-1871)</strong></a><br /><br />
+                    Albumblatt mit eigh. Gedicht und Unterschrift, 4 Zeilen, quer-8, Wien, 20. 5. 1859. - "Als Glück der Armuth pries man jüngst mir sehr: / Wer Nichts besitze, könn' nichts mehr verlieren! / O welches Glück erfroren seyn, denn wer / Bereits erfror, der kann nicht mehr erfrieren!" - Leichte Faltspuren. <br /><br />
+                    <span style="display: none">Friedrich Halm (eigentlich Eligius Franz Joseph Freiherr von Münch-Bellinghausen) war Lyriker, Novellist und Dramatiker und leitete die Wiener Hoftheater als Generalintendant .</span>
+                    <a href='/en/articles/halm-friedrich-schriftsteller-1806-1871-1703-34.html'>Continue reading</a><br /><br />
+                    Order no. 1703-34
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hochwalder-fritz-schriftsteller-1911-1986-2309-33.html'>
+                            <img class='thumb' src='/img/thumb/hochwalder-fritz-schriftsteller-1911-1986-2309-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hochwalder-fritz-schriftsteller-1911-1986-2309-33.html'><strong>Hochwälder, Fritz, Schriftsteller (1911-1986)</strong></a><br /><br />
+                    Porträtfoto (15 x 10,5 cm) mit eigenhändigem Namenszug im weißen Unterrand, zusammen mit einem eigenhändigen Widmungsbillet (Zürich 13. 4. 1982) auf Karton montiert. <br /><br />
+                    <span style="display: none">In Wien geboren und als Schriftsteller Autodidakt, musste Hochwälder 1938 als Jude und bekennender Linker in die Schweiz flüchten. Mit seinem dort 1943 uraufgeführten Schauspiel "Das heilige Experiment" gelang ihm nach dem Krieg der internationale Durchbruch als Dramatiker. In den 1950er-Jahren wurden seine Stücke vor allem in Wien viel gespielt, später ging das Interesse an seinen Werken zurück.</span>
+                    <a href='/en/articles/hochwalder-fritz-schriftsteller-1911-1986-2309-33.html'>Continue reading</a><br /><br />
+                    Order no. 2309-33
+                    <br />
+                    
+                        € 115,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-39>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hohlbaum-robert-schriftsteller-1886-1955-2505-39.html'>
+                            <img class='thumb' src='/img/thumb/hohlbaum-robert-schriftsteller-1886-1955-2505-39.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hohlbaum-robert-schriftsteller-1886-1955-2505-39.html'><strong>Hohlbaum, Robert, Schriftsteller (1886-1955)</strong></a><br /><br />
+                    Eigenhändiges Gedicht "Heimat!" mit Unterschrift, 1 Seite, in-8, Wien, April 1933. "Nie war ich dir inniger verbunden / als in diesen schwarzen, dunklen Stunden, / da verschlossen mir dein gastlich Tor, / da dein Wappen trägt den schwarzen Flor, / Heimat. // Nie fühlt' ich das Wehen deines Windes / mit des Muttersehnsucht eines Kindes, / das im letzten bangen Angstgebet / fürchtet, daß ihr Atem stille steht, / Heimat! // Deine Berge waren nie so nah, / als ich sie mit sattem Auge sah. / Deine Wälder rauschten nie so sacht, / wie in meine ferne Sehnsuchtnacht, / Heimat!" - Leichte Wisch- und Abklatschspuren. - Beiliegend drei eigenhändige Briefe an einen nicht identifizierten Empfänger, dem Hohlbaum unter anderem für Ermutigung und Rat beim Schreiben dankt; zusammen 3 1/2 Seiten, kl-4, Wien, Februar bis Juli 1922. <br /><br />
+                    <span style="display: none">Das Gedicht mit kleinen Abweichungen gedruckt in der 1921 im Böhmerland Verlag Eger erschienenen Sammlung "Über alles in der Welt! Gedichte eines Sudetendeutschen". - Hohlbaum kam in Jägerndorf (damals österreichisch-Schlesien) zur Welt. Er studierte in Graz und Wien Germanistik, wurde Bibliothekar an der Wiener Universitätsbibliothek und machte den 1. Weltkrieg als Offizier mit. Vom Zusammenbruch der Monarchie schwer betroffen, schloss er sich der Großdeutschen Volkpartei an und avancierte in der Zwischenkriegszeit zu einem der führenden Vertreter der rechtsliberalen Literatur in Österreich. In der NS-Zeit unterstützte er aktiv die Kulturpolitik des Dritten Reichs und wurde deutscher Staatsbürger; 1951 konnte er unter Schwierigkeiten nach Österreich zurückkehren.</span>
+                    <a href='/en/articles/hohlbaum-robert-schriftsteller-1886-1955-2505-39.html'>Continue reading</a><br /><br />
+                    Order no. 2505-39
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/karnten-volkspoesie-2509-42.html'>
+                            <img class='thumb' src='/img/thumb/karnten-volkspoesie-2509-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/karnten-volkspoesie-2509-42.html'><strong>Kärnten / Volkspoesie</strong></a><br /><br />
+                    "'n Mensch'n sán Herz is, / Wierá Zidán, voll Klang ...". Gedicht von A. Kenner in Kärntner Mundart mit 7 Strophen zu je 4 Zeilen, 2 Seiten auf Blatt in-8, die erste Seite kalligraphiert und von aquarellierter Bleistiftzeichnung umrahmt, die zweite Seite (kopfstehend angelegt) in sauberer Kursivschrift. - Leicht gebräunt, ein Rand etwas beschädigt. - Beiliegend ein anonymes Kärntner Mundartgedicht "Dá Napfátzá" von anderer Hand mit 50 vierzeiligen Strophen in gut lesbarer Kursivschrift, 8 1/2 Seiten auf 3 Doppelblättern in-8, stellenweise etwas fleckig und mit durchgehender leichter Knickspur. <br /><br />
+                    <span style="display: none">Hübsche Beispiele österreichischer Mundartdichtung, wohl erstes Viertel 20. Jh.</span>
+                    <a href='/en/articles/karnten-volkspoesie-2509-42.html'>Continue reading</a><br /><br />
+                    Order no. 2509-42
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.html'>
+                            <img class='thumb' src='/img/thumb/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.html'><strong>Kerner, Justinus, Schriftsteller und Arzt (1786-1862)</strong></a><br /><br />
+                    Gedicht "Ein Rath" von anderer Hand mit eigenhändiger Unterschrift und kleinen eigenhändigen Korrekturen, 1 Seite, in-8, ohne Ort und Datum (um 1860). "Hast Du ein Herz in's Herz genommen, / So schließe bald Dein Herze zu, / Laß Wenige nur dahin kommen, / Die Menge stört des Herzens Ruh. / Ein Herz nur kannst du dir erwählen, / Das mit dir durch die Leiden geht; / Willst du auf viele Herzen zählen, / Die kommen alle dir zu spät! / O! denke, wie in enger Kammer / Oft bange schlägt ein gutes Herz / Und stille trägt unsel'gen Jammer, / Betrog'ner Freundschaft bittern Schmerz. / Der, welcher setzt nur sein Vertrauen / Auf Menschenhülfe, baut auf Glas:/ "Auf Gott nur kannst du Felsen bauen!" / Ein alter wahrer Spruch ist das." <br /><br />
+                    <span style="display: none">Mit kleinen Interpunktsabweichungen gedruckt in "Winterblüthen", Stuttgart 1859. - Zwölf Gedichte Kerners wurden von Robert Schumann vertont. Als Arzt behandelte er unter anderem Nikolaus Lenau, auch ist ihm die erste klinische Beschreibung des Botulismus zu verdanken.In vorgerücktem Alter litt Kerner aufgrund einer Starerkrankung an starker Sehschwäche und schrieb kaum mehr eigenhändig.</span>
+                    <a href='/en/articles/kerner-justinus-schriftsteller-und-arzt-1786-1862-2403-49.html'>Continue reading</a><br /><br />
+                    Order no. 2403-49
+                    <br />
+                    
+                        € 250,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-41>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kernstock-ottokar-schriftsteller-1848-1928-2209-41.html'>
+                            <img class='thumb' src='/img/thumb/kernstock-ottokar-schriftsteller-1848-1928-2209-41.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kernstock-ottokar-schriftsteller-1848-1928-2209-41.html'><strong>Kernstock, Ottokar, Schriftsteller (1848-1928)</strong></a><br /><br />
+                    Zwei eigenhändige Gedichte ohne Unterschrift, 1 1/4 Seiten und 1/2 Seite auf Doppelblatt, gr-8, ohne Ort und Datum. - 1. "Frau Charitas", 7 Strophen zu 4 Zeilen: "Was wird das neue Jahr uns bringen? / Was jedes bringt ohn' Unterlass: / Um Sieg und Herrschaft werden ringen / Das Elend und Frau Charitas. // Krieg führen wird mit gift'gen Pfeilen / Der Klassenhass, der Rassenhass, und furchtlos wird die Wunden heilen / Der wilden Schlacht, Frau Charitas ... ". Eine Zeile korrigiert. - 2. Ohne Titel, 2 Strophen zu 4 Zeilen: "Verholn in waldiger Wildnis ragt / Ein Schloss mit Turm und Wall. / Dort lockt und jauchzt und schluchzt und klagt / Eine einsame Nachtigall. // Sie singt ohn' Kunst und fragt nicht viel / Um Lob und Lohn der Welt. / Sie singt nicht, weil sie gefallen will, / Sie singt, weil's ihr gefällt." Fleckig und knittrig, kleine Faltenrisse. - Beiliegend eine von fremder Hand geschriebene Ansichtskarte mit eigenhändigem Namenszug Kernstocks auf der Bildseite, Festenburg 11. 8. 1928. <br /><br />
+                    <span style="display: none">Kernstock war Augustiner-Chorherr und zunächst Archivar und Bibliothekar des Stiftes Vorau, ab 1889 Pfarrer von Festenburg in der Oststeiermark. Als steirischer Volksdichter war er für einige Zeit ähnlich populär wie sein Freund Peter Rosegger. Nach 1945 wurde der Schriftsteller zunehmend vergessen; seine oftmals deutschnational-chauvinistisch geprägten Texte führten während der letzten Jahrzehnte zu mehreren Umbenennungen von nach ihm benannten Straßen und Plätzen. Kernstock verfasste unter anderem den Text zur Bundeshymne der Ersten Republik.</span>
+                    <a href='/en/articles/kernstock-ottokar-schriftsteller-1848-1928-2209-41.html'>Continue reading</a><br /><br />
+                    Order no. 2209-41
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-54>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.html'>
+                            <img class='thumb' src='/img/thumb/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.html'><strong>Lavater, Johann Caspar, Schriftsteller und Theologe (1741-1801)</strong></a><br /><br />
+                    Blatt mit eigenhändiger Sentenz "An einen Freund nach meinem Tode" und Paraphe "L", 13 x 9 cm, ohne Ort, 3. 10. 1794. - "Laß dich nicht zu leicht, zu dem, was dich lüstet, bereden. Aber laß Dich bereden - zur schweren Pflicht - und zur Treue an dem erkannten Recht und an dem Gott, der ein Mensch ist." - Mit gestochener Bordüre und farbiger Umrahmung; verso leichte Montagespuren. <br /><br />
+                    <span style="display: none">Dekoratives Autograph. - Der reformierte Schweizer Pastor verfasste eine Reihe von philosophischen, religiösen und poetischen Schriften und wurde vor allem durch seine Theorie der Physiognomik bekannt. Blätter wie das vorliegende verschenkte er zu verschiedenen Anlässen an Freunde.</span>
+                    <a href='/en/articles/lavater-johann-caspar-schriftsteller-und-theologe-1741-1801-2403-54.html'>Continue reading</a><br /><br />
+                    Order no. 2403-54
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-27>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2005-27.html'>
+                            <img class='thumb' src='/img/thumb/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2005-27.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2005-27.html'><strong>Lenau, Nikolaus (d. i. Nikolaus Franz Niembsch Edler von Strehlenau), Schriftsteller (1802-1850)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite, kl-8, ohne Ort (Stuttgart), 26. 7. 1834. - An seinen Verleger Johann Georg Freiherr Cotta von Cottendorf (1796-1863). "Verehrtester Herr und Freund! Ich bin sehr erfreut über den Eifer, mit welchem Sie sich meiner faustischen Angelegenheit annehmen. Heute Abend 8 Uhr werde ich zuverlässig mit meinem Manuscripte mich bei Ihnen einfinden. Wollen Sie gütigst Herrn Zellner auf diese Stunde zu sich bestellen, so kann die Sache bald eingeleitet sein. Indem ich Ihnen für Ihre gütige Bemühung danke / mit ausgezeichneter Hochachtung Ihr ergebenster v. Niembsch". - Unregelmäßig beschnitten, leichte Knickspuren, links unten kleiner Empfängervermerk. - Beiliegend ein Stahlstichporträt aus Carl Mayer's Kunstanstalt, Nürnberg um 1850, 12 x 9 cm. <br /><br />
+                    <span style="display: none">Provenienz: Sammlung Max Warburg; nicht in der historisch-kritischen Gesamtausgabe. - Lenau hatte 1832 seinen ersten Gedichtband im Stuttgarter Verlag Cotta publiziert. Von einem Aufenthalt in Nordamerika enttäuscht, war er 1833 nach Europa zurückgekehrt, lebte nun abwechselnd in Stuttgart und Wien und arbeitete an seinem dramatischen Gedicht "Faust". Im Frühjahr 1834 arrangierte er sich mit Cotta wegen der zweiten Auflage seiner Gedichte und las in dessen Haus erstmals einer illlustren Gesellschaft eine Szene aus dem "Faust" vor, womit er großen Eindruck machte. Gedruckt erschien ein erstes Bruchstück der Dichtung 1835 in dem von Lenau hrsg. "Frühlingsalmanach"; 1836 brachte Cotta schließlich das fertige Werk heraus.</span>
+                    <a href='/en/articles/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2005-27.html'>Continue reading</a><br /><br />
+                    Order no. 2005-27
+                    <br />
+                    
+                        € 2400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2305-48.html'>
+                            <img class='thumb' src='/img/thumb/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2305-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2305-48.html'><strong>Lenau, Nikolaus (d. i. Nikolaus Franz Niembsch Edler von Strehlenau), Schriftsteller (1802-1850)</strong></a><br /><br />
+                    Porträtfoto mit faksimilierter Unterschrift (Albuminabzug im Format carte-de-visite) bei Sophus Williams, Berlin um 1880. - Leichte Alters- und Gebrauchsspuren, rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">Nach einem 1876 entstandenen Gemälde des Berliner Porträt- und Genremalers Ernst Hader (Thieme-Becker 15, 419).</span>
+                    <a href='/en/articles/lenau-nikolaus-d-i-nikolaus-franz-niembsch-edler-von-strehlenau-schriftsteller-1802-1850-2305-48.html'>Continue reading</a><br /><br />
+                    Order no. 2305-48
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1609-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mailer-norman-schriftsteller-1923-2007-1609-69.html'>
+                            <img class='thumb' src='/img/thumb/mailer-norman-schriftsteller-1923-2007-1609-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mailer-norman-schriftsteller-1923-2007-1609-69.html'><strong>Mailer, Norman, Schriftsteller (1923-2007)</strong></a><br /><br />
+                    Farbiges Fotoporträt mit eigh. Namenszug auf der Bildseite, 25 x 20 cm. <br /><br />
+                    <span style="display: none">Wohl um 1990.</span>
+                    <a href='/en/articles/mailer-norman-schriftsteller-1923-2007-1609-69.html'>Continue reading</a><br /><br />
+                    Order no. 1609-69
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-55>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mauthner-fritz-schriftsteller-und-sprachphilosoph-1849-1923-2209-55.html'>
+                            <img class='thumb' src='/img/thumb/mauthner-fritz-schriftsteller-und-sprachphilosoph-1849-1923-2209-55.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mauthner-fritz-schriftsteller-und-sprachphilosoph-1849-1923-2209-55.html'><strong>Mauthner, Fritz, Schriftsteller und Sprachphilosoph (1849-1923)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 1/2 Seiten auf Doppelblatt, kl-8, ohne Ort [Berlin], 16. 2. 1887. - "Geehrter Herr Rosenfeld! Um der Forderung der 'Londoner Zeitung, Hermann', gerecht zu werden, bestätige ich Ihnen noch schriftlich, daß Sie von mir befugt sind, Ersatzansprüche bezüglich des unberechtigten Nachdrucks meiner Schriften zu erheben. Ich erkläre, daß Sie die einzige Person sind, die meine Rechte hierin wahrzunehmen hat, u. daß ich mich Ihrer Abmachung unterwerfe. Jedoch scheint es mir, daß das Anerbieten von 300 Mark dem Umfange des Romans auch dann nicht entspräche, wenn der Abdruck ein rechtlich erworbener wäre. In vorzüglicher Hochachtung Fritz Mauthner". - Tinte stellenweise etwas verfärbt. <br /><br />
+                    <span style="display: none">Die Londoner Zeitung "Hermann" war ein von Exilanten der Revolution 1848/49 initiiertes deutschsprachiges Wochenblatt, das von 1859 bis 1914 erschien. Mauthner, damals Theaterkritiker am "Berliner Tageblatt", hatte 1886 den umfangreichen Roman "Quartett" als ersten Teil seiner Trilogie "Berlin W." veröffentlicht.</span>
+                    <a href='/en/articles/mauthner-fritz-schriftsteller-und-sprachphilosoph-1849-1923-2209-55.html'>Continue reading</a><br /><br />
+                    Order no. 2209-55
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mayer-louise-marie-schriftstellerin-und-widerstandskampferin-1882-1944-2209-58.html'>
+                            <img class='thumb' src='/img/thumb/mayer-louise-marie-schriftstellerin-und-widerstandskampferin-1882-1944-2209-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mayer-louise-marie-schriftstellerin-und-widerstandskampferin-1882-1944-2209-58.html'><strong>Mayer, Louise Marie, Schriftstellerin und Widerstandskämpferin (1882-1944)</strong></a><br /><br />
+                    Autogrammkärtchen im Visitkartenformat mit eigenhändigem Namenszug, ohne Ort und Datum (wohl Wien, um 1932). - Minimal fleckig, rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">Louise Marie Mayer geb. Gottlieb war in der Zwischenkriegszeit als Mitautorin einiger erfolgreicher Lustspiele, als Feuilletonistin beim "Neuen Wiener Tagblatt" und bei der "Neuen Freien Presse" sowie als Übersetzerin tätig. Nach dem März 1938 fand sie Anschluss an die monarchistisch orientierten Widerstandskreise um Otto Habsburg, und ihr Wiener Salon in der Wiener Floragasse wurde zum Treffpunkt von Oppositionellen. 1939 zusammen mit anderen Persönlichkeiten der Gruppe von der Gestapo verhaftet, wurde sie 1944 als Jüdin nach Auschwitz deportiert und dort ermordet. - Sehr selten.</span>
+                    <a href='/en/articles/mayer-louise-marie-schriftstellerin-und-widerstandskampferin-1882-1944-2209-58.html'>Continue reading</a><br /><br />
+                    Order no. 2209-58
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-55>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/muller-einigen-hans-schriftsteller-1882-1950-2309-55.html'>
+                            <img class='thumb' src='/img/thumb/muller-einigen-hans-schriftsteller-1882-1950-2309-55.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/muller-einigen-hans-schriftsteller-1882-1950-2309-55.html'><strong>Müller-Einigen, Hans, Schriftsteller (1882-1950)</strong></a><br /><br />
+                    Eigenhändiges Billet mit Grußzeile, aufgezogenem Zeitungsporträt, fünf Gedichtzeilen aus "Anbetung der Mädchen" und Unterschrift "Hans Müller", Wien, 9. 12. 1908. "... In manchen Mädchen ist so keusche Blüte, / Und also rein glüht ihre erste Lust, / Daß du, mit dankbar seligem Gemüte, / Vor ihrem Aug der Schöpfung tiefste Güte / Und alles Lebens Deutung trinken mußt ...". - Beiliegend eigenhändige Postkarte mit aufgezogenem Zeitungsporträt, Zitat aus dem Drama "Die Sterne" und gleicher Unterschrift, Wien, Mai 1925. "Man sollte einen Menschen haben - zwischen Mutter und Tod einen Menschen! ...". <br /><br />
+                    <span style="display: none">Müller-Einigen wurde als Hanns Müller in eine jüdische Familie in Brünn geboren, studierte in Wien Jus und gehörte in den ersten zwei Jahrzehnten des 20. Jahrhunderts - von Karl Kraus scharf attackiert - zu den meistgespielten Autoren des Wiener Burgtheaters. Er arbeitete auch als Drehbuchautor und Regisseur in Hollywood und Berlin, war Mitautor der Operetten "Ein Walzertraum" von Oscar Straus und "Im weißen Rößl" von Ralph Benatzky und schrieb die Libretti zu den Opern "Violanta" und "Das Wunder der Heliane" von Erich Wolfgang Korngold. Den Künstlernamen "Müller-Einigen" führte er ab 1930 nach seinem Wohnort in der Schweiz; der Schriftsteller und Regisseur Ernst Lothar war sein Bruder.</span>
+                    <a href='/en/articles/muller-einigen-hans-schriftsteller-1882-1950-2309-55.html'>Continue reading</a><br /><br />
+                    Order no. 2309-55
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ompteda-georg-von-schriftsteller-1863-1931-2309-58.html'>
+                            <img class='thumb' src='/img/thumb/ompteda-georg-von-schriftsteller-1863-1931-2309-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ompteda-georg-von-schriftsteller-1863-1931-2309-58.html'><strong>Ompteda, Georg von, Schriftsteller (1863-1931)</strong></a><br /><br />
+                    Zwei eigenhändige Billets jeweils mit Spruch und Unterschrift, Innichen 13. 6. 1900 bzw. Mendel 12. 6. 1904. "'Arbeit adelt' - auch erst den deutschen Adel!" - "Sprich vom Unglück, sprich vom Jammer, / Daß bei Dir das Leid gegastet: / Aber nur in stillster Kammer, / Daß bei Dir auch Glück gerastet!" - In schöner Kalligraphie. <br /><br />
+                    <span style="display: none">Der Sohn des letzten Hofmarschalls von Georg V., des letzten Königs von Hannover, lebte nach einer kurzen militärischen Dienstzeit als freier Schriftsteller teils in Deutschland, teils in Südtirol und schrieb vor allem über Verarmung und Verfall des deutschen Adels. Der Mendelpass oder die Mendel bildete um die Jahrhundertwende einen beliebten Kurort für Kaiser und Adelige.</span>
+                    <a href='/en/articles/ompteda-georg-von-schriftsteller-1863-1931-2309-58.html'>Continue reading</a><br /><br />
+                    Order no. 2309-58
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/orient-occident-2309-59.html'>
+                            <img class='thumb' src='/img/thumb/orient-occident-2309-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/orient-occident-2309-59.html'><strong>Orient-Occident</strong></a><br /><br />
+                    Maschinschriftlicher Brief der Gesellschaft zur Förderung osteuropäischer Literatur mit gedrucktem Briefkopf und eigenhändigen Unterschriften der Autoren Lew Kopelew (1912-1997) und Heinrich Böll (1917-1985), 2 Seiten, Hamburg, 21. 3. 1983. - An Rolf Keller von der Franckh'schen Verlagshandlung in Stuttgart. Einladung zum Beitritt. <br /><br />
+                    <span style="display: none">Kopelew, in Kiew geboren und mit der deutschen Sprache und Kultur schon in jungen Jahren eng verbunden, wurde 1981 als Dissident aus der Sowjetunion ausgebürgert und übersiedelte nach Köln, in die Heimatstadt seines Freundes Heinrich Böll. Im folgenden Jahr gründete er mit Böll die gemeinnützige Gesellschaft "Orient-Occident".</span>
+                    <a href='/en/articles/orient-occident-2309-59.html'>Continue reading</a><br /><br />
+                    Order no. 2309-59
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/priestley-john-boynton-schriftsteller-und-journalist-1894-1984-1710-70.html'>
+                            <img class='thumb' src='/img/thumb/priestley-john-boynton-schriftsteller-und-journalist-1894-1984-1710-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/priestley-john-boynton-schriftsteller-und-journalist-1894-1984-1710-70.html'><strong>Priestley, John Boynton, Schriftsteller und Journalist (1894-1984)</strong></a><br /><br />
+                    Billet in Postkartengröße mit aufgezogenem reproduziertem Porträtfoto und eigh. Namenszug. - Auf Karton montiert. <br /><br />
+                    <span style="display: none">Die Aufnahme entstand wohl um 1950.</span>
+                    <a href='/en/articles/priestley-john-boynton-schriftsteller-und-journalist-1894-1984-1710-70.html'>Continue reading</a><br /><br />
+                    Order no. 1710-70
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-65>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/roda-roda-m-d-i-marie-rosenfeld-schriftstellerin-1875-1935-2105-65.html'>
+                            <img class='thumb' src='/img/thumb/roda-roda-m-d-i-marie-rosenfeld-schriftstellerin-1875-1935-2105-65.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/roda-roda-m-d-i-marie-rosenfeld-schriftstellerin-1875-1935-2105-65.html'><strong>Roda Roda, M. (d. i. Marie Rosenfeld), Schriftstellerin (1875-1935)</strong></a><br /><br />
+                    Eigh. Postkarte mit Unterschrift, (Naice), 4. 4. 1893. - An die Redaktion der Literaturzeitschrift "Die Gesellschaft" in München. "Einer Löbl. Red. der Gesellschaft München / sandte ich am 11/4 92 ein Feuilleton 'Kunstmännchen'. Ich bitte dasselbe entweder zu acceptiren oder zu retourniren. Porto lag bei. Ergebenst M. Roda Roda / Adresse jetzt: Naice Slavonien". - Lochspuren hinterlegt, Empfängervermerk. <br /><br />
+                    <span style="display: none">Vgl. Kosch 16, 122. - Die Schwester des bekannten Satirikers und Publizisten Alexander Roda Roda (eigentlich Sándor Friedrich Rosenfeld, 1872-1945) wuchs so wie ihr Bruder auf einem Gut in der Nähe von Naice auf und war schon in jungen Jahren teils gemeinsam mit ihm, teils selbständig literarisch tätig (Romane, Lustspiele u. a.); später veröffentlichte sie auch unter ihrem Ehenamen Marie Liebermann. Die 1885 von Michael Georg Conrad gegründete naturalistische Literaturzeitschrift "Die Gesellschaft" prägte das geistige Klima der Münchner Moderne entscheidend mit. - Selten.</span>
+                    <a href='/en/articles/roda-roda-m-d-i-marie-rosenfeld-schriftstellerin-1875-1935-2105-65.html'>Continue reading</a><br /><br />
+                    Order no. 2105-65
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sachs-nelly-dichterin-1891-1970-1603-63.html'>
+                            <img class='thumb' src='/img/thumb/sachs-nelly-dichterin-1891-1970-1603-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sachs-nelly-dichterin-1891-1970-1603-63.html'><strong>Sachs, Nelly, Dichterin (1891-1970)</strong></a><br /><br />
+                    Eigh. Ansichtskarte, Stockholm, 14. 7. 1952. - "Lieber Freund Oskar Scherer! Für Ihren lieben Brief meinen Herzens Dank. Welchen Rosenduft trug er. War ein wenig krank darum heute nur diesen Gruß und Dank. Sende bald etwas von meinen Dingen. Besitzen Sie Sternverdunkelung. Alles erdenkliche Gute. Ihre Nelly Sachs". <br /><br />
+                    <span style="display: none">Oskar Scheerer war Gartengestalter in Zweibrücken. Nelly Sachs war 1939 nach Schweden geflohen; ihr Gedichtband "Sternverdunkelung" erschien 1949. 1965 erhielt sie den Friedenspreis des Deutschen Buchhandels, ein Jahr später zusammen mit Samuel Joseph Agnon den Literaturnobelpreis.</span>
+                    <a href='/en/articles/sachs-nelly-dichterin-1891-1970-1603-63.html'>Continue reading</a><br /><br />
+                    Order no. 1603-63
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/szczypiorski-andrzej-schriftsteller-1928-2000-2001-85.html'>
+                            <img class='thumb' src='/img/thumb/szczypiorski-andrzej-schriftsteller-1928-2000-2001-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/szczypiorski-andrzej-schriftsteller-1928-2000-2001-85.html'><strong>Szczypiorski, Andrzej, Schriftsteller (1928-2000)</strong></a><br /><br />
+                    Farbfoto in Postkartengröße mit rückseitiger eigh. Widmung in deutscher Sprache und Unterschrift, 10. 2. 1995 (irrig für 1996). - Beiliegend maschinschriftliches Begleitschreiben in deutscher Sprache mit gedrucktem Briefkopf und Unterschrift, Warschau 14. 2. 1996, an den Widmungsträger. <br /><br />
+                    <span style="display: none">Der politisch engagierte polnische Autor nahm 1944 als Jugendlicher am Warschauer Aufstand teil, engagierte sich in der Solidarnosc-Bewegung und setzte sich für die deutsch-polnische Aussöhnung ein.</span>
+                    <a href='/en/articles/szczypiorski-andrzej-schriftsteller-1928-2000-2001-85.html'>Continue reading</a><br /><br />
+                    Order no. 2001-85
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-93>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/walser-martin-schriftsteller-1927-2023-2505-93.html'>
+                            <img class='thumb' src='/img/thumb/walser-martin-schriftsteller-1927-2023-2505-93.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/walser-martin-schriftsteller-1927-2023-2505-93.html'><strong>Walser, Martin, Schriftsteller (1927-2023)</strong></a><br /><br />
+                    Fotoporträt in Postkartengröße mit eigenhändigem Namenszug auf der Bildseite. <br /><br />
+                    <span style="display: none">Wohl um 1990.</span>
+                    <a href='/en/articles/walser-martin-schriftsteller-1927-2023-2505-93.html'>Continue reading</a><br /><br />
+                    Order no. 2505-93
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/werner-zacharias-schriftsteller-1769-1823-2509-88.html'>
+                            <img class='thumb' src='/img/thumb/werner-zacharias-schriftsteller-1769-1823-2509-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/werner-zacharias-schriftsteller-1769-1823-2509-88.html'><strong>Werner, Zacharias, Schriftsteller (1769-1823)</strong></a><br /><br />
+                    Eigenhändiges Schriftstück mit Unterschrift ("Werner"), Wien, 3. 4. 1818 (korrigiert aus "1817"), 1 Seite,  quer-8. - "Herrn Buchhändler Wallishauser ersuche ich ganz ergebenst der Überbringerin dieses das Lese- und Gebet-Buch für katholische Christen von Schmidt Wien bey Anton Doll 1817 vorabfolgen zu lassen. Den Preis werde ich nachher berichtigen." Angeheftet eine satirische Notiz von der Hand des Juristen und ersten Goethe-Bibliographen Alfred Nicolovius (1806-1890): "Handschrift von Zacharias Werner. / 'Den Lorbeerkranz sich zu erwerben, / Gelang Herrn Werner nicht so ganz; / Um doch nicht ohne Kranz zu sterben, / Nahm er den Rosenkranz.'" (Abwandlung eines Spottgedichtes auf den Dichter und Übersetzer Friedrich Leopold Graf zu Stolberg). - Falt- und leichte Knitterspuren. <br /><br />
+                    <span style="display: none">Der deutsche romantische Dichter war 1814 katholischer Priester und Prediger geworden und lebte anschließend mit Unterbrechungen in Wien. Seine merkwürdige Erscheinung zog bereits während des Wiener Kongresses viele Zuhörer an.</span>
+                    <a href='/en/articles/werner-zacharias-schriftsteller-1769-1823-2509-88.html'>Continue reading</a><br /><br />
+                    Order no. 2509-88
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wilder-thornton-schriftsteller-1897-1975-2005-59.html'>
+                            <img class='thumb' src='/img/thumb/wilder-thornton-schriftsteller-1897-1975-2005-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wilder-thornton-schriftsteller-1897-1975-2005-59.html'><strong>Wilder, Thornton, Schriftsteller (1897-1975)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift "Thornton", 2/3 Seite, kl-4, Washington DC, 11. 4. 1943. - "Dear Mrs. Wilkins: ... and with a schoolmasters's professional promptness at seven ...". - Falt- und leichte Knitterspuren, Sammlervermerke in Bleistift. <br /><br />
+                    <span style="display: none">Thornton Wilder unterrichtete von 1930 bis 1937 an der Universität von Chicago. Er erhielt 1928, 1938 und 1943 den Pulitzer-Preis für seinen Roman "The Bridge of San Luis Rey" und seine Stücke "Our Town" und "The Skin of Our Teeth". Während des Krieges meldete er sich freiwillig zum Kriegsdienst, war in Afrika und Italien im Einsatz und erreichte er in der U.S. Army Air Force Intelligence den Rang eines Oberstleutnants; 1945 kehrte er wieder in seinen akademischen Beruf zurück.</span>
+                    <a href='/en/articles/wilder-thornton-schriftsteller-1897-1975-2005-59.html'>Continue reading</a><br /><br />
+                    Order no. 2005-59
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-89>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wildgans-anton-schriftsteller-1881-1932-2309-89.html'>
+                            <img class='thumb' src='/img/thumb/wildgans-anton-schriftsteller-1881-1932-2309-89.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wildgans-anton-schriftsteller-1881-1932-2309-89.html'><strong>Wildgans, Anton, Schriftsteller (1881-1932)</strong></a><br /><br />
+                    Gelaufene Porträtpostkarte mit eigenhändigem Namenszug auf der Bildseite, Poststempel Mödling 17. 11. 1919. - Kleine Bildmängel. <br /><br />
+                    <span style="display: none">Aufnahme des Amateurfotographen Friedrich Viktor Spitzer im Postkartenvelag Brüder Kohn.</span>
+                    <a href='/en/articles/wildgans-anton-schriftsteller-1881-1932-2309-89.html'>Continue reading</a><br /><br />
+                    Order no. 2309-89
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-93>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wildgans-anton-schriftsteller-1881-1932-1603-93.html'>
+                            <img class='thumb' src='/img/thumb/wildgans-anton-schriftsteller-1881-1932-1603-93.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wildgans-anton-schriftsteller-1881-1932-1603-93.html'><strong>Wildgans, Anton, Schriftsteller (1881-1932)</strong></a><br /><br />
+                    Montierte brauntonige Originalfotographie (Bromsilberabzug) um 1930, vom Fotographen Hermann Brühlmeyer (1892-1966) auf dem Trägerkarton signiert, Bildformat 22 x 17 cm, Gesamtgröße 39,5 x 29,5 cm. <br /><br />
+                    <span style="display: none">Rückseitig Firmenetikett des von etwa 1925 bis 1957 in Baden bei Wien tätigen Atelierfotographen. Dieses Porträt des für den Nobelpreis nominierten Dichters diente auch als Vorlage für eine zum 25. Todestag erschienene Briefmarke.</span>
+                    <a href='/en/articles/wildgans-anton-schriftsteller-1881-1932-1603-93.html'>Continue reading</a><br /><br />
+                    Order no. 1603-93
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-99>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/zeno-apostolo-dichter-und-gelehrter-1668-1750-2109-99.html'>
+                            <img class='thumb' src='/img/thumb/zeno-apostolo-dichter-und-gelehrter-1668-1750-2109-99.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/zeno-apostolo-dichter-und-gelehrter-1668-1750-2109-99.html'><strong>Zeno, Apostolo, Dichter und Gelehrter (1668-1750)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift "A. Z.", 1/2 Seite auf Doppelblatt, gr-8, Venedig, 25. 8. 1733. - Nach Angabe eines Vorbesitzers auf der Rückseite des Bogens an den Architekten Marchese Polini. Schreibt über seinen verstorbenen gelehrten Freund, den Abate Antonio Viotti aus Parma, der sich längere Zeit in Venedig aufhielt und dort in enger Verbindung mit den Dichtern Giuseppe und Pietro Durli stand. "... Ho ricevuto con una vostra il libro  che mi avete rimandato; e ve ne ringrazio. LAbate Antonio Viotti, Parmigiano, è stato molti anni in Venezia, e ha conversato con quanti uomini di lettura allor vi fiorivano, e in particolare coi Sigg. fratelli Durli, Giuseppe e Pietro, il secondo de' quali ancor vive. Ogni sera capitava alla botega del Purini, librajo  speciale nel campo della Guerra. Era uomo assai versato ne' buoni studj, e in particolare nella filosofia, e aveva sapere anche nella mattematica  Egli è stato mio familiariss[im]o amico, ed un meritevole  State sano, e amatemi come io vi amo ". - Geringfügig gebräunt und am Unterrand etwas knittrig, eine Unterstreichung von fremder Hand. <br /><br />
+                    <span style="display: none">Apostolo Zeno stammte aus einer venezianischen Adelsfamilie und kam 1718 als Hofdichter und Historiker nach Wien. Er betreute hier die kaiserliche Münzsammlung, erwarb für den Hof eine Reihe griechischer Manuskripte und ließ an den Wänden der Hofbibliothek römische Inschriften aus Siebenbürgen anbringen. 1729 kehrte er nach Venedig zurück und widmete sich fortan nur noch der Numismatik. Sein umfangreiches schriftstellerisches Werk umfasst unter anderem 60 dramatische Werke, darunter zahlreiche Librettis für Opern und Oratorien. Autographen Zenos sind von größter Seltenheit.</span>
+                    <a href='/en/articles/zeno-apostolo-dichter-und-gelehrter-1668-1750-2109-99.html'>Continue reading</a><br /><br />
+                    Order no. 2109-99
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.html'>
+                            <img class='thumb' src='/img/thumb/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.html'><strong>Zschokke, Heinrich, Schriftsteller und Pädagoge (1771-1848)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift,  in-8, 1 Seite auf Doppelblatt, B[lumenhalde] 3. 6. 1844. - "Guten Morgen, Lieber, wenn es auch draussen ein wenig neblicht um Aarau hängt. Hier send' ich Dir das Mspt. der achten Rechenschaft unsrer Taubstummen-Anstalt. Auch das dabei Liegende gilt, als Manuskript, wo es nicht abgeändert ist. Herr Burkhardt-Horosen wird dir morgen ... die dazu gehörige Rechnung schikken. Es sollen wieder davon, wie sonst, 1500 Ex. gedrukt und geheftet werden. Aber wieder, wie sonst, drängt, wegen Versendung der Ex. durch den Kanton, die Zeit, und darum bitt' ich Dich dringend wieder im Namen der Gesellschaft, wenn immer möglich, noch bis Ende der Woche uns den Bogen zur Versendung vollenden zu lassen. Gern würd' ich noch die Korrektur besorgen. Dein H. Zschokke". - Geringfügig knittrig und fleckig, Bearbeitungsvermerk in Rötel am linken Rand. <br /><br />
+                    <span style="display: none">Aus einer Magdeburger Tuchmacherfamilie stammend, ließ sich Zschokke 1796 in der Schweiz nieder. Er übernahm dort zahlreiche politische Ämter, wirkte als liberaler Vorkämpfer und Volksaufklärer und wurde zu einem der meistgelesenen deutschsprachigen Schriftsteller seiner Zeit. Die Villa Blumenhald in Aarau, wo er von 1818 bis zu seinem Tod lebte, entstand nach seinen eigenen Entwürfen.</span>
+                    <a href='/en/articles/zschokke-heinrich-schriftsteller-und-padagoge-1771-1848-2403-92.html'>Continue reading</a><br /><br />
+                    Order no. 2403-92
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

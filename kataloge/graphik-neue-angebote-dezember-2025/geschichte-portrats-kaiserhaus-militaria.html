@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Graphik - neue Angebote Dezember 2025</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/prints-drawings-new-offers-december-2025/history-portraits-house-of-habsburg-militaria.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Graphik - neue Angebote Dezember 2025</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Geschichte, Porträts, Kaiserhaus, Militaria
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/kunstlergraphik-16-20-jh.html'>Künstlergraphik (16.-20. Jh.)</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/osterreich-bundeslander.html'>Österreich - Bundesländer</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/osterreich-wien.html'>Österreich - Wien</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/europa.html'>Europa</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/aussereuropa.html'>Außereuropa</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/landkarten.html'>Landkarten</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/pflanzen-und-pilze.html'>Pflanzen und Pilze</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/tiere-fahren-reiten-jagd-fischerei.html'>Tiere, Fahren &amp; Reiten, Jagd &amp; Fischerei</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/berufe-technik-medizin-sport-und-spiel.html'>Berufe, Technik, Medizin, Sport und Spiel</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/geschichte-portrats-kaiserhaus-militaria.html'>Geschichte, Porträts, Kaiserhaus, Militaria</a></li>
+    
+        <li><a href='/kataloge/graphik-neue-angebote-dezember-2025/religion-mythologie-jahreszeiten-varia.html'>Religion, Mythologie, Jahreszeiten, Varia</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2512-130>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/abraham-a-sancta-clara-eig-ulrich-megerle-1644-1709-prediger-2512-130.html'>
+                            <img class='thumb' src='/img/thumb/abraham-a-sancta-clara-eig-ulrich-megerle-1644-1709-prediger-2512-130.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/abraham-a-sancta-clara-eig-ulrich-megerle-1644-1709-prediger-2512-130.html'><strong>Abraham a Sancta Clara (eig. Ulrich Megerle, 1644-1709), Prediger</strong></a><br /><br />
+                    "P. Abraham a Sancta Clara, weyland Augustiner Barfüßer und kaiserl. Hofprediger ...". Stahlstich-Porträt von Johann Passini aus K. Armbruster, Historisch-malerische Ansichten der Residenzstadt Wien, Wien 1835, Bildausschnitt ca. 12 x 11,5 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 57/21. - Mit fehlerhaftem Geburtsdatum.</span>
+                    <a href='/artikel/abraham-a-sancta-clara-eig-ulrich-megerle-1644-1709-prediger-2512-130.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2512-130
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2512-131>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/militararzt-2512-131.html'>
+                            <img class='thumb' src='/img/thumb/militararzt-2512-131.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/militararzt-2512-131.html'><strong>Militärarzt</strong></a><br /><br />
+                    "Grenadier (deutsch) Feldarzt." Altkolorierte, im Stein signierte Tonlithographie von Franz Gerasch (1826-1906) aus "Das Oesterreichische Heer von 1835-1848" bei L. T. Neumann, Wien um 1854, 24 x 18 cm. - Montagespuren. <br /><br />
+                    <span style="display: none">De Ridder 29/101.</span>
+                    <a href='/artikel/militararzt-2512-131.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2512-131
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2512-132>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/militarmusik-2512-132.html'>
+                            <img class='thumb' src='/img/thumb/militarmusik-2512-132.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/militarmusik-2512-132.html'><strong>Militärmusik</strong></a><br /><br />
+                    Trompeter, Flötenspieler und Trommler aus der Zeit des Dreißigjährigen Kriegs. Drei altkolorierte, im Stein signierte Tonlithographien von Franz Gerasch (1826-1906) aus "Das Oesterreichische Heer von 1620-1650" bei L. T. Neumann, Wien um 1854, je 24 x 17 cm. - Einzelne unbedeutende Rand- und Eckmängel, rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">De Ridder 29/2, 14, 16.</span>
+                    <a href='/artikel/militarmusik-2512-132.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2512-132
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2512-133>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-melk-1805-2512-133.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-melk-1805-2512-133.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-melk-1805-2512-133.html'><strong>Napoleonische Kriege / Melk 1805</strong></a><br /><br />
+                    "L'armée francaise marchant sur Vienne traverse le defilé de Moelk 10 9[bre 1805]". Stahlstich auf China von Beyer nach einem Gemälde von Jean-Antoine-Siméon Fort (1793-1861) aus Charles Gavard, Galeries historiques de Versailles, Paris 1838-1849, 15 x 23,5 cm. - Französische Infanterie und Kavallerie am Ufer der Donau, rechts Ort und Stift Melk. - Kleiner Plattenschaden im Schriftfeld. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 1057/3b. - Nach der Einnahme Salzburgs im Oktober 1805 rückte Napoleon unaufhaltsam vom Westen her gegen Wien vor. Am 7. November besetzten die französischen Truppen Melk, am 10. November traf der Feldherr hier persönlich ein, sicherte den Benediktinern seine Unterstützung zu und verbrachte die Nacht im Stift. Drei Tage später bezog er im Schloss Schönbrunn Quartier.</span>
+                    <a href='/artikel/napoleonische-kriege-melk-1805-2512-133.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2512-133
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2512-134>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-wien-1809-2512-134.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-wien-1809-2512-134.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-wien-1809-2512-134.html'><strong>Napoleonische Kriege / Wien 1809</strong></a><br /><br />
+                    "Bombardement der Franzosen gegen die Stadt Wien. - Erzherzog Karl in der Schlacht bei Aspern." Zwei Kreidelithographien mit Tonplatte aus Anton Ziegler, Vaterländische Bilder-Chronik aus der Geschichte des österreichischen Kaiserstaates Bd. 3, Wien 1846, je 22,5 x 15 cm. - Mit viersprachiger Beschriftung in der Bordüre. Im weißen Rand geringfügig gebräunt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 860/258, (259). - Das erste Blatt im Stein signiert "Katzler" (Vincenz Katzler, 1883-1882).</span>
+                    <a href='/artikel/napoleonische-kriege-wien-1809-2512-134.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2512-134
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autographs &amp; Misc.</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/autographen-varia/theater-film-tanz-zirkus.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Autographs &amp; Misc.</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Theatre, Film, Dance, Circus
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/autographs-misc.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/autographs-misc/history.html'>History</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/arts.html'>Arts</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/literature.html'>Literature</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/music.html'>Music</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/theatre-film-dance-circus.html'>Theatre, Film, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/autographs-misc/science-technology-sports.html'>Science, Technology, Sports</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2302-11>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bortuluzzi-paolo-tanzer-1938-1993-2302-11.html'>
+                            <img class='thumb' src='/img/thumb/bortuluzzi-paolo-tanzer-1938-1993-2302-11.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bortuluzzi-paolo-tanzer-1938-1993-2302-11.html'><strong>Bortuluzzi, Paolo, Tänzer (1938-1993)</strong></a><br /><br />
+                    Fotoporträt mit eigenhändigem Namenszug auf der Bildseite, ohne Ort und Datum, 14,5 x 10,5 cm (Aufnahme Dünhöft, Köln); Rückseite mit Schriftabklatsch. - Beiliegend eine Porträtpostkarte des österreichischen Tänzers und Choreographen Willi Dirtl (1931-2019) mit eigh. Widmung im weißen Unterrand (Aufnahme Dietrich, Wien). <br /><br />
+                    <span style="display: none">Der in Genua geborene Paolo Bortoluzzi wurde von Maurice Béjart in sein "Ballet du XXe siècle" aufgenommen und feierte als Tänzer internationale Erfolge; er war auch als Choreograph und Ballettdirektor tätig. Willi Dirtl ist auf der Karte als Othello im Ballett "Der Mohr von Venedig" (Musik: Boris Blacher) abgebildet; es wurde 1955 von Erika Hanka zur Wiedereröffnung der Wiener Staatsoper geschaffen.</span>
+                    <a href='/en/articles/bortuluzzi-paolo-tanzer-1938-1993-2302-11.html'>Continue reading</a><br /><br />
+                    Order no. 2302-11
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1703-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/granger-stewart-filmschauspieler-1913-1993-1703-32.html'>
+                            <img class='thumb' src='/img/thumb/granger-stewart-filmschauspieler-1913-1993-1703-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/granger-stewart-filmschauspieler-1913-1993-1703-32.html'><strong>Granger, Stewart, Filmschauspieler (1913-1993)</strong></a><br /><br />
+                    Reproduziertes Fotoporträt 13 x 8 cm, bildseitig signiert. - Ecken mit Montagespuren. <br /><br />
+                    <span style="display: none">Stewart Granger wurde als James Lablache Stewart in England geboren und ging 1949 nach Hollywood. In späteren Jahren wirkte er unter anderem in mehreren "Winnetou"-Filmen sowie in Fernsehserien mit.</span>
+                    <a href='/en/articles/granger-stewart-filmschauspieler-1913-1993-1703-32.html'>Continue reading</a><br /><br />
+                    Order no. 1703-32
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-35>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/guitry-sacha-dramatiker-regisseur-und-schauspieler-1885-1957-2505-35.html'>
+                            <img class='thumb' src='/img/thumb/guitry-sacha-dramatiker-regisseur-und-schauspieler-1885-1957-2505-35.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/guitry-sacha-dramatiker-regisseur-und-schauspieler-1885-1957-2505-35.html'><strong>Guitry, Sacha, Dramatiker, Regisseur und Schauspieler (1885-1957)</strong></a><br /><br />
+                    Maschinschriftlicher Brief mit eigenhändiger schwungvoller Unterschrift, 2/3 Seite, kl-4, Paris, 23. 10. 1947. - An den damaligen französischen Finanzminister Robert Schuman, den er um einen Termin für eine kurze Unterredung bittet. "... un matin entre 10 heures et 11 heures, car de midi à 8 heures du soir, je tourne un film ...". - Beiliegend 2 Telegramme Guitrys, London 1911/12 (gebräunt und beschädigt). <br /><br />
+                    <span style="display: none">Guitrys Verhalten während der Zeit der deutschen Okkupation gab nach 1944 Anlass zu Kritik und führte zu seiner zeitweisen Inhaftierung; ein entsprechendes gerichtliches Verfahren wurde jedoch im August 1947 eingestellt, und im Oktober 1947 kehrte Guitry auf die Theater- und Filmszene  zurück. Der Briefempfänger Robert Schuman (1886-1963) wurde einen Monat darauf Ministerpräsident von Frankreich und später mit seinem "Schuman-Plan" einer der Gründerväter der Europäischen Union.</span>
+                    <a href='/en/articles/guitry-sacha-dramatiker-regisseur-und-schauspieler-1885-1957-2505-35.html'>Continue reading</a><br /><br />
+                    Order no. 2505-35
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1710-40>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/hebbel-christine-schauspielerin-und-ehefrau-von-friedrich-hebbel-1817-1910-1710-40.html'>
+                            <img class='thumb' src='/img/thumb/hebbel-christine-schauspielerin-und-ehefrau-von-friedrich-hebbel-1817-1910-1710-40.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/hebbel-christine-schauspielerin-und-ehefrau-von-friedrich-hebbel-1817-1910-1710-40.html'><strong>Hebbel, Christine, Schauspielerin und Ehefrau von Friedrich Hebbel (1817-1910)</strong></a><br /><br />
+                    Albumblatt mit eigh. 2-zeiligem Spruch und Unterschrift, quer-8. Wien, 9. 2. 1897. "Das Streben zum Guten, Wahren, und Schönen, heißt Leben." Rückseitig Montagespuren. - Beiliegend  fotographisch reproduziertes Porträt Friedrich Hebbels nach Kriehuber (um 1900). <br /><br />
+                    <span style="display: none">Geboren als Christine Enghaus, ermöglichte die erfolgreiche Schauspielerin ihrem Mann eine von materiellen Sorgen befreite schriftstellerische Tätigkeit. Hebbels früherer Lebensgefährtin Elise Lensing, die von der Eheschließung sehr getroffen wurde, nahm sie sich als einfühlsame Freundin an.</span>
+                    <a href='/en/articles/hebbel-christine-schauspielerin-und-ehefrau-von-friedrich-hebbel-1817-1910-1710-40.html'>Continue reading</a><br /><br />
+                    Order no. 1710-40
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-40>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/impekoven-niddy-tanzerin-1904-1994-2505-40.html'>
+                            <img class='thumb' src='/img/thumb/impekoven-niddy-tanzerin-1904-1994-2505-40.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/impekoven-niddy-tanzerin-1904-1994-2505-40.html'><strong>Impekoven, Niddy, Tänzerin (1904-1994)</strong></a><br /><br />
+                    Gelaufene Fotoporträt-Postkarte (Aufnahme Atelier d'Ora, Wien) mit eigenhändigen 12 Zeilen und Unterschrift, Freiburg i. B. (Poststempel), 12. 2. 1932. - An die Schweizer Pianistin Hanni Incker-Buff. "Liebe Frau Incker! Mögen Sie nur nicht denken, dass ich Sie vergessen hätte! Aber ich habe den Kopf so voll mit meinem bevorstehenden Erstauftreten mit dem neuen Programm, dass ich einfach nicht schreiben konnte. Ihnen und Ihrem Mann vielen Dank für den lieben Brief. Die besagten Noten sind bestellt. Bald mehr. Für heute in Eile schönste Grüsse Ihre Niddy Impekoven". <br /><br />
+                    <span style="display: none">Niddy Impekoven trat bereits als Vierzehnjährige in der Berliner Oper Unter den Linden mit einem eigenen Programm auf und trug wesentlich zur Entwicklung des modernen Ausdruckstanzes bei; Hanni Incker-Buff stand ihr mehrmals als Pianistin zur Seite. Das Foto zeigt Niddy Impekoven in einem volkstümlichen süddeutschen Kostüm mit Strohhut in der von ihr 1918 kreierten Tanzpantomime "Münchner Kaffeewärmer", die auf einen von Carl Englert komponierten bayerischen Walzer zurückgeht. Dieser Tanz blieb jahrelang in ihrem Repertoire.</span>
+                    <a href='/en/articles/impekoven-niddy-tanzerin-1904-1994-2505-40.html'>Continue reading</a><br /><br />
+                    Order no. 2505-40
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-38>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kalanag-d-i-schreiber-helmut-ewald-filmproduzent-und-magier-1903-1963-2302-38.html'>
+                            <img class='thumb' src='/img/thumb/kalanag-d-i-schreiber-helmut-ewald-filmproduzent-und-magier-1903-1963-2302-38.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kalanag-d-i-schreiber-helmut-ewald-filmproduzent-und-magier-1903-1963-2302-38.html'><strong>Kalanag (d. i. Schreiber, Helmut Ewald), Filmproduzent und Magier (1903-1963).</strong></a><br /><br />
+                    Fotoporträt in Postkartengröße mit eigenhändigem Namenszug im weißen Unterrand, ohne Ort und Datum (um 1960). - Leichte Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Helmut Schreiber betätigte sich schon seit Jugendjahren als Zauberer, sammelte aber auch Erfahrungen als Schauspieler und Dramaturg und machte zunächst als Aufnahmeleiter beim Film Karriere. Im Dritten Reich stieg er aufgrund seiner Kontakte zu Goebbels zum Produktionsleiter auf und nahm gleichzeitig als Präsident des Magischen Zirkels eine beherrschende und zugleich zwielichtige Stellung in der Illusionistenbranche ein; Hitler schätzte ihn als seinen "Hofmagier". 1945 dürfte Schreiber den Alliierten Vermittlerdienste geleistet und davon nicht unbeträchtlich profitiert haben; jedenfalls konnte er nach dem Krieg mit einer aus Eigenmitteln produzierten gigantischen exotischen Zaubershow neu starten und international große Erfolge feiern. Kalanag - der Künstlername ist aus Rudyard Kiplings Dschungelbuch übernommen - wurde mit seinen glamourösen Darbietungen zum Vorläufer und teilweise Vorbild für spätere Illusionisten. Der mit ihm abgebildete Gepard war ein fixer Bestandteil seiner Shows.</span>
+                    <a href='/en/articles/kalanag-d-i-schreiber-helmut-ewald-filmproduzent-und-magier-1903-1963-2302-38.html'>Continue reading</a><br /><br />
+                    Order no. 2302-38
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-43>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kock-eduard-schauspieler-und-regisseur-1882-1961-2209-43.html'>
+                            <img class='thumb' src='/img/thumb/kock-eduard-schauspieler-und-regisseur-1882-1961-2209-43.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kock-eduard-schauspieler-und-regisseur-1882-1961-2209-43.html'><strong>Köck, Eduard, Schauspieler und Regisseur (1882-1961)</strong></a><br /><br />
+                    Porträtfoto (16 x 12 cm) mit eigenhändiger rückseitiger Widmung "Innig und liebreichst / Onkel Edi / Innsbruck, im Juli 1949". - Geringfügig gewellt, Rückseite etwas fleckig. Beiliegend einige Zeitungsausschnitte. <br /><br />
+                    <span style="display: none">Aufnahme Foto Winkler, Wien. - Der Tiroler Eduard Köck wurde 1902 Mitbegründer der Innsbrucker Exlbühne und war bis zu deren Auflösung (1956) ihr Oberspielleiter. Als Schauspieler wurde er vor allem in Heimatfilmen populär.</span>
+                    <a href='/en/articles/kock-eduard-schauspieler-und-regisseur-1882-1961-2209-43.html'>Continue reading</a><br /><br />
+                    Order no. 2209-43
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-46>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/la-roche-carl-von-1794-1884-schauspieler-2505-46.html'>
+                            <img class='thumb' src='/img/thumb/la-roche-carl-von-1794-1884-schauspieler-2505-46.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/la-roche-carl-von-1794-1884-schauspieler-2505-46.html'><strong>La Roche, Carl von (1794-1884), Schauspieler</strong></a><br /><br />
+                    Porträtfotographie von H. Norden (Wien) im Visitformat (10,5 x 6 cm), Albuminabzug auf bedrucktem Karton, rückseitig eigenhändig signiert "Carl La Roche", von fremder Hand datiert 17. 4. 1869. - Unterschrift mit leichter Wischspur. <br /><br />
+                    <span style="display: none">Selten. - Der in Berlin geborene Schauspieler arbeitete unter anderem mit Goethe in Weimar, kam 1832 nach Wien und wurde hier lebenslängliches Mitglied des Burgtheaters. 1873 wurde er in den Adelsstand erhoben. Hermann Norden eröffnete um 1863 ein Atelier in Wien, in dem er sich vor allem der Porträtfotographie widmete; 1868 übersiedelte er nach Hamburg.</span>
+                    <a href='/en/articles/la-roche-carl-von-1794-1884-schauspieler-2505-46.html'>Continue reading</a><br /><br />
+                    Order no. 2505-46
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/legwarth-franz-2202-91.html'>
+                            <img class='thumb' src='/img/thumb/legwarth-franz-2202-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/legwarth-franz-2202-91.html'><strong>[Legwarth, Franz]</strong></a><br /><br />
+                    "Im Heiratsamt. Posse mit Gesang in drei Aufzügen." Vermutlich eigenhändiges Bühnenmanuskript (ohne Autorenangabe), wohl um 1900, in-4, 67 einseitig in sauberer Kurrentschrift beschriebene paginierte Blätter, in zeitgenössischem Halbleinenband mit Deckeletikett. - Einband mit stärkeren Gebrauchsspuren, teilweise kleine Eckmängel, gelegentlich etwas fleckig, insgesamt gut erhalten. Mit roter Tinte unterstrichene Regieanweisungen, einzelne spätere Bleistiftkorrekturen. Eine Skizze am Beginn jedes Aufzugs zeigt die Bühneneinrichtung bzw. die Aufstellung der Schauspieler. <br /><br />
+                    <span style="display: none">Lustspiel in österreichischem Lokalkolorit. Der Autor, dessen biographische Daten wir nicht ermitteln konnten, verfasste ab etwa 1880 Gebrauchsliteratur wie Gedichte für Ansichtskarten u. dgl. und steuerte zu Illustrationswerken von Fritz Schönpflug und Anton Strassgschwandtner heitere Texte bei. Sein Buch "Der Grazer Spaziergänger", eine Sammlung humoristischer Gedichte über Graz, erschien 1887 bereits in 3. Auflage. Das vorliegende Volksstück wurde 1924 von der Innsbrucker Exl-Bühne für ein Gastspiel im Wiener Raimundtheater erworben. - Für die Identifizierung des Autors danken wir Frau Dr. Waltraud Winkelbauer.</span>
+                    <a href='/en/articles/legwarth-franz-2202-91.html'>Continue reading</a><br /><br />
+                    Order no. 2202-91
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/neher-caspar-buhnenbildner-und-librettist-1897-1962-2505-63.html'>
+                            <img class='thumb' src='/img/thumb/neher-caspar-buhnenbildner-und-librettist-1897-1962-2505-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/neher-caspar-buhnenbildner-und-librettist-1897-1962-2505-63.html'><strong>Neher, Caspar, Bühnenbildner und Librettist (1897-1962)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 3/4 Seite, kl-4, Salzburg, 21. 10. 1948. - An den Dramaturgen Kurt Hirschfeld in Zürich betreffend Nehers Zusammenarbeit mit Bertolt Brecht. "Lieber Herr Dr. Hirschfeld, Dieser Tage war Brecht hier auf der Durchreise nach Berlin. Er teilte mir mit, dass er mit Ihnen gesprochen hätte und dass das Theater in Zürich einverstanden sei, wenn ich sofort mit ihm nach Berlin ginge[.] Da ich, wie ich bereits mitteilte ab 1. November dem Theater in Zürich zur Verfügung stehe, möchte ich doch falls Sie anders disponiert haben sollten eine schriftliche Bestätigung dieser Abmachung. Selbstverständlich wirft dieser obengenannte Plan auch meinerseits Alles über den Haufen. Würden Sie mir bitte Ihre rein persönliche Ansicht darüber mitteilen / Dafür wäre Ihnen sehr dankbar / Ihr Caspar Neher / Salzburg / Festspielhaus". - Seitlich gelocht. <br /><br />
+                    <span style="display: none">Caspar Neher wuchs in Augsburg auf und war dort ein Schulkollege von Bertolt Brecht, mit dem ihn eine lebenslange Freundschaft verband. Bereits in den frühen 1920er-Jahren arbeitete er für ihn als Zeichner und Bühnenbildner. Ab 1947 wirkte Neher am Wiederaufbau der Salzburger Festspiele mit, 1948 erhielt er die österreichische Staatsbürgerschaft. Als Brecht im Oktober dieses Jahres aus dem Exil nach Deutschland zurückkehrte, suchte er, wie aus dem vorliegenden Brief hervorgeht, Neher unverzüglich für eine weitere Zusammenarbeit zu gewinnen. Nachdem Brechts Stück "Herr Puntila und sein Knecht Matti" bereits im Juni 1948 seine Uraufführung in Zürich erlebt hatte - offiziell unter der alleinigen Regie von Hirschfeld, tatsächlich aber unter wesentlicher Beteiligung Brechts -  schuf Neher die Bühnenbilder für die nächste Inszenierung des Stücks, die im November 1949 zur Eröffnung von Brechts Berliner Ensemble im Deutschen Theater stattfand. Brecht nannte Neher einmal "den größten Bühnenbauer unserer Zeit".</span>
+                    <a href='/en/articles/neher-caspar-buhnenbildner-und-librettist-1897-1962-2505-63.html'>Continue reading</a><br /><br />
+                    Order no. 2505-63
+                    <br />
+                    
+                        € 320,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/raimund-ferdinand-roller-andreas-buhnenbildner-1805-1901-2005-44.html'>
+                            <img class='thumb' src='/img/thumb/raimund-ferdinand-roller-andreas-buhnenbildner-1805-1901-2005-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/raimund-ferdinand-roller-andreas-buhnenbildner-1805-1901-2005-44.html'><strong>[Raimund, Ferdinand]. - Roller, Andreas, Bühnenbildner (1805-1901)</strong></a><br /><br />
+                    Sprachlich und orthographisch unbeholfener Bittbrief an Ferdinand Raimund, "Resigeur und Schauspieler des k:k: prifl: Theaters in der Leopoldstadt in Wien", 2 Seiten mit gesiegeltem Adressblatt, gr-8, Graz, 26. 1. 1828. "Hochschätzbahrster Herr von Raimund! Da Sie mir so fiele Ehre und Freundschaft erzeugten als ich mich noch in Wien befand, und mir zugleich Erlaubten, daß wenn ich Jezeid an einem unfohrgesehenen Falle in Verlegenheit kommen solte, mich ohne Scheu an Sie wenden dürfte daher Sie es nicht Ungütig nehmen werden wen ich so frey bin eine Bitte an Sie zu stellen: die zwar nicht mich sondern meinen Vater in Dreßden betrift, da mir schon lange her Ihr Einfluß bey der Leopoldstädter Theater-Direktion bekant und nur Ihr Willensmeinung alldort geldent ist so werde ich nicht länger säumen den Wunsch meines Vaters Ihnen bekant zu machen:  Da er wo er sich jetzt befindet sehr unzufriden ist, und für ihm die Beschäftigung so wie die Bezahlung zu wenig, und er durch den Mahler Arigoni: so entsetzlich sekirt wird, so ist er fest Entschlossen seynen jetzigen Aufenthalt zu ferlasen, und seyn Tallent, sammt dessen meines Bruders Josephs nicht Erschlafen zu lassen: Er hatt mir aufgetragen in seynem Nahmen an Sie zu schreiben; indem er seyne Dienste so wie die meines Bruders anträgt: Da Sie selbst meinen Vater durch lange Jahre von seiner Geschüklichkeit überzeugt sind und ich für meinen Bruder gut stehe: so könte Ihnen diese Gelegenheit filleicht willkommen seyn, um daher, Ihnen gleich mit dem Ganzen Stand bekant zu machen so glaubt mein Vatter, für sich und meinen Brudern zwölfhundert f C:Mtz: [Gulden Conventionsmünze] fordern zu können welche er früher im Theater an der Wien auch hatte: / Da ich Ihre Gütte in Anspruch nehme, und wen Sie es dahin bringen können, und mein Vater wünscht: so werden Sie mich als einen Ewig dankbahren Menschen kennen lernen. Erlauben Sie mir Höflichst, um eine baldige Antwort zu bitten und mich zugleich zu Unterzeichnen / Euer Wohlgebohren / Ergebener / Andr: Roller / Franzensplatz No. 39." - Fleckig und leicht gebräunt, erste Seite mit Klebespur, Adressblatt mit Ausriss durch Siegelöffnung. Das Erledigungsdatum und die Registraturvermerke auf dem Adressblatt stammen vermutlich nicht von der Hand Raimunds.- Provenienz: aus dem Nachlass des Wiener Antiquars Heinrich Hinterberger (Bleistiftvermerk am unteren Rand der ersten Seite). <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 28, 537 und 2, 154. - Andreas Leonhard Sebastian Roller wurde in Regensburg in eine Theaterfamilie hineingeboren. Sein Vater Adam Roller, für den er Raimund hier um eine Anstellung bittet, war ein bekannter Theatermaschinist, der nach Engagements in Mainz und Augsburg von 1812 bis 1816 in Wien am Theater in der Leopoldstadt und von 1816 bis 1825 am Theater an der Wien tätig war. Dort wurde 1820 unter anderem zu seinem Benefiz Franz Schuberts Zauberharfe aufgeführt. 1822 sorgte er gemeinsam mit Hermann Neefe für die Ausstattung der Freischütz-Neueinstudierung. Nach einem kurzen Zwischenspiel in Graz wurde Adam Roller 1825 am Hoftheater in Dresden  beschäftigt und hatte dort, wie aus dem vorliegenden Brief zu entnehmen ist, von dem aus Wien stammenden Dekorationsmaler Anton Arrigoni (1788-1851) einiges zu leiden. Raimund gehörte seit Oktober 1817 dem Ensemble des Leopoldstädter Theaters an, spielte und führte Regie, konnte aber selbst nach seiner Ernennung zum artistischen Direktor - die einige Wochen nach dem Erhalt des vorliegenden Briefes erfolgte - keinen maßgeblichen Einfluss auf die Personalpolitik des Theaters nehmen. Adam Roller hatte jedenfalls mit seinem Ansuchen um eine erneute Anstellung am Leopoldstädter Theater keinen Erfolg und blieb bis zu seiner Pensionierung in Dresden. Der für ihn hier als Bittsteller auftretende Sohn Andreas war bereits von 1821 an - zunächst als Assistent seines Vaters - im Theater an der Wien, dann am Josephstädter Theater als Maschinist und Dekorationsmaler tätig. 1827/1828 finden wir ihn in Graz, dann in Kassel und Berlin; dort wurde er stark durch Karl Friedrich Schinkel beeinflusst und erlangte zunehmende Bekanntheit als erfahrener und einfallsreicher Bühnengestalter. 1834 folgte er einer Einladung nach Russland, wo er als Leiter des Ausstattungswesens der kaiserlichen Theater die Theaterkultur in St. Petersburg und Moskau maßgeblich beeinflusste und nicht weniger als 63 Ballette und 78 Opern im Sinn der Romantik effektvoll ausstattete, darunter Verdis "La forza del destino". 1873 erhielt er als Andrej Adamovic Roller die russische Staatsbügerschaft; auch eine Professur für Perspektivmalerei an der St. Petersburger Kunstakademie bekleidete er. - Ungewöhnliches Dokument zur Theatergeschichte der Biedermeierzeit.</span>
+                    <a href='/en/articles/raimund-ferdinand-roller-andreas-buhnenbildner-1805-1901-2005-44.html'>Continue reading</a><br /><br />
+                    Order no. 2005-44
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/sailer-toni-schirennlaufer-und-filmschauspieler-1935-2009-1802-75.html'>
+                            <img class='thumb' src='/img/thumb/sailer-toni-schirennlaufer-und-filmschauspieler-1935-2009-1802-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/sailer-toni-schirennlaufer-und-filmschauspieler-1935-2009-1802-75.html'><strong>Sailer, Toni, Schirennläufer und Filmschauspieler (1935-2009)</strong></a><br /><br />
+                    Farbiges Porträtfoto mit eigh. Namenszug auf der Bildseite, 21 x 15 cm. <br /><br />
+                    <span style="display: none">Private Aufnahme um 1960, veröffentlicht im Benco-Verlag, Wien.</span>
+                    <a href='/en/articles/sailer-toni-schirennlaufer-und-filmschauspieler-1935-2009-1802-75.html'>Continue reading</a><br /><br />
+                    Order no. 1802-75
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/strehler-giorgio-regisseur-1921-1997-2305-87.html'>
+                            <img class='thumb' src='/img/thumb/strehler-giorgio-regisseur-1921-1997-2305-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/strehler-giorgio-regisseur-1921-1997-2305-87.html'><strong>Strehler, Giorgio, Regisseur (1921-1997)</strong></a><br /><br />
+                    Reproduziertes Fotoporträt in Postkartengröße, im weißen Unterrand eigenhändig signiert (um 1980). <br /><br />
+                    <span style="display: none">Mit seinen Theater- und Operninszenierungen gehörte der in Triest geborene Strehler zu den bekanntesten Regisseuren Europas. "In seinem Mailänder Piccolo Teatro schuf er herausragende Bertolt-Brecht- und William-Shakespeare-Interpretationen, die ihn auf eine Stufe mit Peter Brook und Peter Stein in der europäischen Theatergeschichte stellten" (Wikipedia).</span>
+                    <a href='/en/articles/strehler-giorgio-regisseur-1921-1997-2305-87.html'>Continue reading</a><br /><br />
+                    Order no. 2305-87
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wien-um-1900-2105-92.html'>
+                            <img class='thumb' src='/img/thumb/wien-um-1900-2105-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wien-um-1900-2105-92.html'><strong>Wien um 1900</strong></a><br /><br />
+                    "Zum Andenken. Ein Autographen Album mit Sinnsprüchen deutscher Dichtung". Kleines Album (8,5 x 12 cm, verlegt bei Theo Stroepher in Nürnberg) mit Wiener Firmenstempel. Illustrierter Halbleinenband mit Illustrationen in Chromolithographie, gedruckten Sprüchen ohne Autorenangabe und Leerfeldern zur Eintragung von Autogrammen; insgesamt ca. 25 Blätter, darin 7 Signaturen meist von Schauspielern und Sängern, fallweise mit eigenhändigen Zusätzen, teilweise datiert 1897/1901, zweimal mit Ortsangabe Wien; die übrigen Leerfelder unbeschrieben. <br /><br />
+                    <span style="display: none">Gut erhaltenes zeittypisches Wiener Album. Enthalten sind die Eintragungen der Schauspieler Ferdinand Bonn (1861-1933), Georg Reimers (1860-1936) und Joseph Lewinsky (1835-1907), der Sänger Theodor Reichmann (1849-1903), Fritz Schrödter (1855-1924) und Hermann Winkelmann (1847-1912) sowie des Schriftstellers und Bühnenautors Rudolf Hawel (1860-1923).</span>
+                    <a href='/en/articles/wien-um-1900-2105-92.html'>Continue reading</a><br /><br />
+                    Order no. 2105-92
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wiener-autographenfacher-2309-85.html'>
+                            <img class='thumb' src='/img/thumb/wiener-autographenfacher-2309-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wiener-autographenfacher-2309-85.html'><strong>Wiener Autographenfächer</strong></a><br /><br />
+                    Faltfächer der Firma Gebr. Rodeck mit Holzbasis und Leinenbespannung, hergestellt in Wien um 1880, Dm. 27 cm. Auf dem Holzteil Metallapplike mit Monogramm, auf der 29-teiligen Bespannung drei kleine Deckfarbenmalereien und beiderseits insgesamt ca. 55 weitere Eintragungen bzw. Unterschriften, zumeist auf vorgezeichneten Feldern. Tinte wegen des etwas rauhen Untergrundes stellenweise etwas verfließend, gelegentlich Flecken; auf einem Feld Beitrag durch Übermalung getilgt. - Soweit die Autographen datiert sind, umfassen sie hauptsächlich den Zeitraum 1884/1897; einer von drei späteren Einträgen aus den Jahren 1921 und 1922 nennt eine Frau Kuranda als damalige Eigentümerin des Fächers. Mehrfach ist Wien als Eintragungsort angegeben, zweimal Berlin. Hinsichtlich der Persönlichkeiten liegt der Schwerpunkt im Bereich des Theaters, doch haben sich auch mehrere Schriftsteller, Maler und Musiker auf dem Fächer verewigt. Die meisten Eintragungen sind gut identifizierbar, einige wenige konnten bisher nicht zugeordnet werden. Die signierten Gouacheskizzen stammen von Gustav Gaul (1836-1888, Frauenporträt), Lazar Rosenberg (1862-1936, Kind an Staffelei) und Max Schödl (1834-1921, Stillleben mit orientalischer Kanne). Bei den Theaterleuten dominieren Mitglieder der Comédie Française - darunter "sociétaires" und "doyens" -, die im Mai 1892 im Rahmen der Theater- und Musikausstellung in der Rotunde ein vielbeachtetes achttägiges Gastspiel gab: Julia Bartet, Jules Boucher, Benoît Constant Coquelin, Pierre René Falconnier, Fréderic Febvre, Edmunt Got, Mary Kalb, Albert Lambert, Louis Leloir, Renée du Minil, Jean Mounet-Sully, Blanche Pierson, Mme. Prud'hon, Suzanne Reichenberg und Jules Truffier. Weiters sind aus dem französischen Theaterbereich vertreten die große Sarah Bernhardt ("mille choses aimables ...") sowie Anna Judic; aus dem österreichischen Theaterleben Ludwig Gabillon, Alexander Girardi ("Der schönen Frau küßt die Hände ..."), Ernst Hartmann, Fritz Krastel, Joseph Lewinsky, Hansi Niese ("Mir ist ganz bang in dieser bedeutenden Umgebung! Aber meine liebste Frau Kuranda will es!!!"), Emerich Robert, Adolf von Sonnenthal, Kathi Schratt, Adolf Wilbrandt, Else Wohlgemuth und Charlotte Wolter (nebst ihrem Ehemann, dem belgischen Diplomaten Charles O'Sullivan). Die Literaten haben durchwegs einen Spruch beigesteuert: Eduard Bauernfeld ("Sagst du zum schönen Augenblick: 'Verweile!' / Du mahnst vergebens! Er hat Eile"), Salvatore Farina ("Ho visto il brutto e mi sono innamorato del bello"), Julius Rodenberg ("O könnte man in's Herz der Frauen / Wie hinter einen Fächer schauen!") und Julius Stettenheim ("Wenn Deine Hand mit dem Fächer spielt, / Wenn dieses Fächers Spiel Dich kühlt, / Fachst du im Jüngling und im Mann / Flammende Bewund'rung an"). An Komponisten und ausübenden Musikern und Musikerinnen finden sich auf dem Fächer Alice Barbi, Alfred Grünfeld (mit Notenzeile), Pietro Mascagni (mit Notenzitat aus "Cavalleria Rusticana"), Jules Massenet (mit Notenzitat aus "Manon"), Theodor Reichmann, Arnold Rosé, Anton Rubinstein, Benno Schönberger (mit Notenzeile), Felix Weingartner und seine Ehefrau Lucille (mit Notenzeile). Bei einem weiteren musikalischen Zitat konnte der Schreiber leider nicht ermittelt werden. <br /><br />
+                    <span style="display: none">Reichhaltiger Autographenfächer mit Eintragungen einiger bedeutender Persönlichkeiten und ansprechender bildlicher Ausschmückung, angelegt in der Wiener Belle Epoque und nach dem 1. Weltkrieg nochmals aktiviert.</span>
+                    <a href='/en/articles/wiener-autographenfacher-2309-85.html'>Continue reading</a><br /><br />
+                    Order no. 2309-85
+                    <br />
+                    
+                        € 4500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wolff-pius-alexander-schauspieler-1782-1828-1603-26.html'>
+                            <img class='thumb' src='/img/thumb/wolff-pius-alexander-schauspieler-1782-1828-1603-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wolff-pius-alexander-schauspieler-1782-1828-1603-26.html'><strong>Wolff, Pius Alexander, Schauspieler (1782-1828)</strong></a><br /><br />
+                    Eigh. Brief an die Hoftheater-Direktion (in Weimar), 1 Seite, gr-8, Weimar, 8. 10. 1812. - "Einer Herzoglichen Hoftheater Directions Commission gnädigst erlassenen Schreiben vom 6.ten zu Folge ist alles berichtigt, was die Contracts Verlängerung zwischen uns bisher verzögern konnte, ich danke hiermit auch für das Letztbewilligte, und bitte mir den neuen Contract zur Unterschrift zu übersenden. Mit der grösten Hochachtung verharrend Einer Herzogl. Hoftheater Directions Commission gehorsamster Diener Wolff." - Etwas gebräunt, kleine Randmängel. <br /><br />
+                    <span style="display: none">Wolff, der auch als Dramatiker tätig war, stellte sich 1803 bei Goethe vor, wurde von ihm in väterlicher Weise in die Schauspielerei eingewiesen und gefördert und erhielt ein mehrjähriges Engagement. Goethe äußerte sich später zu Eckermann über Wolff folgendermaßen: "So viel ich auch ins Ganze gewirkt habe und so manches durch mich angeregt worden ist, so kann ich doch nur einen Menschen, der sich ganz nach meinem Sinne von Grund auf gebildet hat, nennen: das war der Schauspieler Wolff!" Gemeinsam mit seiner Frau, der Schauspielerin Amelie Wolff-Malcomi, spielte Wolff 1811 für kurze Zeit in Leipzig und Berlin, kehrte dann aber wieder nach Weimar zurück. Hier blieb das Ehepaar noch bis 1815 und ging dann gegen den Willen Goethes nach Berlin.</span>
+                    <a href='/en/articles/wolff-pius-alexander-schauspieler-1782-1828-1603-26.html'>Continue reading</a><br /><br />
+                    Order no. 1603-26
+                    <br />
+                    
+                        € 480,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1906-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wussow-klausjurgen-schauspieler-1929-2007-1906-50.html'>
+                            <img class='thumb' src='/img/thumb/wussow-klausjurgen-schauspieler-1929-2007-1906-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wussow-klausjurgen-schauspieler-1929-2007-1906-50.html'><strong>Wussow, Klausjürgen, Schauspieler (1929-2007)</strong></a><br /><br />
+                    Kopie eines Typoskripts (A4, 13+1 pp) mit polemischen Gedanken zum zeitgenössischen Theater und insbesondere zur Situation des Wiener Burgtheaters in der Ära Klingenberg, Wien, August 1974 bzw. 9. 9. 1974; dazu angehefteter Maschinbrief mit eigh. Anmerkung und Unterschrift an den Autor, Musiker und Kabarettisten Gerhard Bronner, ohne Ort, 8. 6. 1981. - Eine Ecke des Typoskripts auf zwei Seiten fleckig. <br /><br />
+                    <span style="display: none">Wussow gehört von 1964 bis 1986 zum Ensemble des Burgtheaters, verdankte seinen hohen Bekanntheitsgrad aber vor allem seiner Rolle als Professor Brinkmann in der TV-Serie "Die Schwarzwaldklinik". Die im Begleitbrief erwähnte "Entlassung von Ida" bezieht sich auf die Schauspielerin Ida Krottendorf (1927-1998), mit der Wussow von 1960 bis 1991 verheiratet war. - Aufschlussreiches Dokument zur österreichischen Theatergeschichte.</span>
+                    <a href='/en/articles/wussow-klausjurgen-schauspieler-1929-2007-1906-50.html'>Continue reading</a><br /><br />
+                    Order no. 1906-50
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

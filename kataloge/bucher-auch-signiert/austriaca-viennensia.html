@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/local-history-and-topography.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Austriaca, Viennensia
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2209-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/brand-johann-christian-2209-9.html'>
+                            <img class='thumb' src='/img/thumb/brand-johann-christian-2209-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/brand-johann-christian-2209-9.html'><strong>(Brand, Johann Christian)</strong></a><br /><br />
+                    Zeichnungen nach dem gemeinen Volke besonders Der Kaufruf in Wien. Wien, Burgverlag, 1924. In-folio; Titel mit Bordüre, 40 handkolorierte Tafeln in Kupfertiefdruck, 1 Bl. Druckvermerk; Orig.-Halbleinen mit wiederholtem Deckeltitel (hinten geringfügig angeschmutzt); die Tafeln teilweise unbeschnitten und teilweise im Falz montiert. <br /><br />
+                    <span style="display: none">Vgl. Wurzbach 1, 110; Thieme-Becker 4, 526; Lipperheide Ebb 1; Massin 219. - Verkleinerte Wiedergabe der erstmals 1775 veröffentlichten Sammlung nach Vorlagen des Wiener Malers und Akademieprofessors J. Chr. Brand (1722-1795). Die von verschiedenen Kupferstechern ausgeführten Tafeln zeigen in lebendiger und realistischer Darstellung die auf den Straßen und Märkten der Stadt anzutreffenden Volkstypen und Hausierer beiderlei Geschlechts, vom Mausefallen- und Blasbalgverkäufer bis zur Huterin, vom Lorbeerblattkrämer bis zum Schneckenweib.</span>
+                    <a href='/artikel/brand-johann-christian-2209-9.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-9
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-29>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/festorazzo-theodor-haller-michael-hrsg-1802-29.html'>
+                            <img class='thumb' src='/img/thumb/festorazzo-theodor-haller-michael-hrsg-1802-29.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/festorazzo-theodor-haller-michael-hrsg-1802-29.html'><strong>Festorazzo, Theodor -  Haller, Michael (Hrsg.)</strong></a><br /><br />
+                    Das Stift der regulirten Chorherren zu Klosterneuburg nächst Wien ... mit erläuternden(!) historischen Text, des hochwürdigen Herrn Maximilian Fischer regulirten Chorherren und Archivar des Stiftes. Klosterneuburg, Eigenverlag, um 1845. Gr-folio (Blattgröße je 67 x 51 cm); lithographiertes Titelblatt mit Vignette, lith. Widmungsblatt, 4 Textblätter, Habsburger-Stammbaum und 31 Ansichten bzw. Pläne in Aquatinta oder Radierung (mit vorgebundenen Seidenhemdchen); Halbleder der Zeit mit goldgeprägtem Rückentitel. - Stellenweise stockfleckig (das Titelblatt stärker), die Ansichten selbst meist nur im breiten weißen Rand etwas fleckig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 171 (dort nur 30 Taf.). - Komplett äußerst selten angebotenes großformatiges Tafelwerk mit prachtvollen, figural belebten Veduten des Stifts aus verschiedenen Blickwinkeln, Ansichten von Höfen und Innenräumen, einer Darstellung des Verduner Altars, Architekturdetails, einer Gesamtansicht Klosterneuburgs im 17. Jh. etc.</span>
+                    <a href='/artikel/festorazzo-theodor-haller-michael-hrsg-1802-29.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1802-29
+                    <br />
+                    
+                        € 3600,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-20>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fiedler-dominicus-2109-20.html'>
+                            <img class='thumb' src='/img/thumb/fiedler-dominicus-2109-20.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fiedler-dominicus-2109-20.html'><strong>Fiedler, Dominicus</strong></a><br /><br />
+                    Der Markt Frankenburg in Österreich ob der Enns, und deßen nächste Umgebung. Historisch und topographisch geschildert, sowie anthologisch beleuchtet. 2 Teile in 1 Bd. Wien, Mechitharisten Buchdruckerei, 1858. In-8; 4 Bll., 129, 168, (2) pp mit 24 Textholzschnitten, 2 lithographierte Tafeln; Bibl.-Halbleinen mit Papier-Rückenschildchen (leicht berieben); Frontispiz verso angeschmutzt und mit Bibl.-Nr.,Titelblätter gestempelt, letztes Blatt leicht gebräunt. <br /><br />
+                    <span style="display: none">Im Geist der Romantik verfasstes illustriertes Heimatbuch. Der oberösterreichische Ort am Hausruck ist vor allem durch die mit dem "Frankenburger Würfelspiel" (1625) beginnenden Bauernkriege bekannt. Im benachbarten Ampflwang wirkte von 1812 bis 1814 der Sektengründer Thomas Pöschl (1769-1837), dessen Anhänger sich später noch weiter radikalisierten und sogar religiös motivierte Morde begingen.</span>
+                    <a href='/artikel/fiedler-dominicus-2109-20.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-20
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2007-8>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/flexel-lienhart-2007-8.html'>
+                            <img class='thumb' src='/img/thumb/flexel-lienhart-2007-8.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/flexel-lienhart-2007-8.html'><strong>Flexel, Lienhart</strong></a><br /><br />
+                    Das grosse Herrenschiessen mit der Püchsen in Wien im Jahre 1563. Hrsg. nach dem handschriftlichen Original-Codex der k. k. Hofbibliothek von Albert Camesina R[itter] von San Vittore. Als Manuscript gedruckt. Wien, Selbstverlag / H. Manz, (1880). Kl-8; 4 Bll., 100 pp; Interimsbroschur, unbeschnitten und teilweise unaufgeschnitten (Umschlag lichtrandig, Vorsätze gebräunt und fleckig, einzelne Lagen lose); der breitrandige Druck teilweise gebräunt, angeschmutzt oder fleckig, überwiegend jedoch sauber und frisch. <br /><br />
+                    <span style="display: none">Gugitz I, 2184; Slg. Eckl 572; Slg. Mayer 2423; zum Autor siehe Kosch 5, 223 f. - Der Augsburger Pritschmeister Lienhart Flexel (auch Flechsel) bereiste im 16. Jahrhundert mit seinem Sohn zahlreiche Schützenfeste und besang sie in Versen. Seine kulturgeschichtlich höchst interessante, mit politischen Reflexionen durchsetzte Beschreibung des Wiener Festes von 1563 erschien noch im selben Jahr in Wien im Druck, hat sich aber nur in einem einzigen Exemplar sowie als Handschrift erhalten. Die hier vorliegende Neuausgabe durch den österreichischen Graphiker und Altertumsforscher Albert Camesina (1806-1881) erfolgte anlässlich des I. österreichischen Bundesschießens in Wien im Juli 1880. - In nur 100 Exemplaren gedruckt und im Handel von größter Seltenheit.</span>
+                    <a href='/artikel/flexel-lienhart-2007-8.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2007-8
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/geusau-anton-edler-von-2209-22.html'>
+                            <img class='thumb' src='/img/thumb/geusau-anton-edler-von-2209-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/geusau-anton-edler-von-2209-22.html'><strong>Geusau, Anton (Edler) von</strong></a><br /><br />
+                    Geschichte Oesterreichs von den ältesten bis auf gegenwärtige Zeiten. 2 Teile in 2 Bänden (alles Erschienene). Wien, Eigenverlag, 1800-1801. Kl-8; gest. Porträtfrontispiz, 10 Bll., 456 pp; 4 Bll., 408 pp; 2 Kopfvignetten; Pappbände der Zeit mit Rückenschildchen (Bd. 2 etwas fleckig, berieben und bestoßen); Bd. 1 mit durchgehendem Wasserrand in der oberer Ecke, sonst nur leichte Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Wurzbach 5, 127; Krieg MNE 1, 260. - Seltene, unvollendet gebliebene Geschichte Österreichs, die erstmals auch ausführlich auf die keltische Periode eingeht und mit dem späten 10. Jahrhundert abbricht. Der aus Bayern stammende Autor (1746-1811) arbeitete zunächst als Redakteur, Sekretär und Bibliothekar, kam 1787 als Beamter zum Wiener Magistrat und verfasste eine Reihe von lokalhistorischen und anderen Schriften.</span>
+                    <a href='/artikel/geusau-anton-edler-von-2209-22.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-22
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hahn-michael-2205-22.html'>
+                            <img class='thumb' src='/img/thumb/hahn-michael-2205-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hahn-michael-2205-22.html'><strong>Hahn, Michael</strong></a><br /><br />
+                    Der Bezirk Sechshaus. Eine Beschreibung der Ortschaften Braunhirschen, Fünfhaus, Gaudenzdorf, Ober- und Untermeidling mit Wilhelmsdorf, dann Reindorf, Rustendorf und Sechshaus in historischer, topographischer, statistischer, commerzieller und industrieller Beziehung. Wien, Gedr. bei Ferdinand Ulrich, 1853. In-8; VIII, 200 pp mit einer kleinen Skizze und einigen Tabellen; rotes Leinen der Zeit mit goldgepr. Rücken und Deckelfileten (berieben und bestoßen); stellenweise geringfügig stockfleckig, Exlibris. <br /><br />
+                    <span style="display: none">Slg. Mayer  1417. - Detailreiche Beschreibung einiger Wiener Vororte, die heute im 12. und 15. Wiener Gemeindebezirk aufgegangen sind. Mit Häuser-, Handels- und Gewerbeschematismus.</span>
+                    <a href='/artikel/hahn-michael-2205-22.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-22
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-37>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hubatschek-erika-2305-37.html'>
+                            <img class='thumb' src='/img/thumb/hubatschek-erika-2305-37.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hubatschek-erika-2305-37.html'><strong>Hubatschek, Erika</strong></a><br /><br />
+                    Alte Bauernhöfe im südöstlichen Kärnten. (Archiv für vaterländische Geschiche und Topographie Bd. 64). Klagenfurt, Verlag des Geschichtsvereines für Kärnten, 1970. Gr-8; 99 pp mit zahlreichen fotogr. Abb., 1 zweifarbige Faltkarte in Lasche; orig.-kartoniert. - Dazu als Beigaben: Tanz und Brauch. Aus der musikalischen Volksüberlieferung Kärntens. (Kärntner Museumsschriften 19, Klagenfurt 1959) und Th. Strastil von Strassenheim, Bibliographie der im Herzogtume Kärnten bis 1910 erschienenen Druckschriften, Klagenfurt 1912. <br /><br />
+                    <span style="display: none">Die österreichische Fotographin, Geographin und Volkskundlerin Erika Hubatschek (1917-2010) beschrieb und dokumentierte über 60 Jahre lang in zahlreichen Büchern das Leben der österreichischen Bergbauern. Hier liegt eines ihrer Hauptwerke in erster Ausgabe vor.</span>
+                    <a href='/artikel/hubatschek-erika-2305-37.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-37
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-49>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/koll-malachias-ocist-2003-49.html'>
+                            <img class='thumb' src='/img/thumb/koll-malachias-ocist-2003-49.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/koll-malachias-ocist-2003-49.html'><strong>Koll, Malachias OCist</strong></a><br /><br />
+                    Das Stift Heiligenkreuz in Oesterreich V. U. W. W. mit den dazugehörigen Pfarreyen und Besitzungen sammt dem vereinigten Stifte St. Gotthardt in Ungarn. Wien, Fr. Beck, 1834. Kl-8; lithogr. Titel, 320 pp, 5 lithogr. Tafeln (inkl. Frontispiz); blauer Blindgeprägter Leinenband der Zeit mit goldgeprägtem Rücken, silbergeprägtem Deckelmotto "Aus Achtung", Sprenkelschnitt und Lesebändchen; leichte Gebrauchs- und Altersspuren. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 312; Slg. Eckl 3, 180. - Detailreiche Monographie über die beiden Stifte und ihre Besitzungen (Sulz, Alland, Gaaden, Sparbach, Sittendorf, Thallern usw.). Von den Tafeln zeigen drei Heiligenkreuz, eine die dort aufbewahrte Kreuzreliquie und eine Szentgotthard. Der Verfasser (1783-1844) war Verwalter des Heiligenkreuzerhofes in Wien und betreute das damals dort untergebrachte Heiligenkreuzer Stiftsarchiv.</span>
+                    <a href='/artikel/koll-malachias-ocist-2003-49.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-49
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-40>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/laborde-alexandre-de-2109-40.html'>
+                            <img class='thumb' src='/img/thumb/laborde-alexandre-de-2109-40.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/laborde-alexandre-de-2109-40.html'><strong>Laborde, Alexandre de</strong></a><br /><br />
+                    Voyage pittoresque en Autriche. Bd. 1 (von 2). Paris, Imprimerie de P. Didot l'Ainé, 1821. Gr-folio; Vortitel, Titel, IV, 220, (1) pp mit Titelvignette und 6 Textabb.; doppelblattgroße Landkarte und 18 Kupferstiche auf 10 Tafeln mit Seidenhemdchen; Halbleder der Zeit mit Rückenschildchen (stark berieben, bestoßen und fleckig, Kapitale etwas schadhaft); breitrandiger unbeschnittener Druck; die Seidenhemdchen teilweise mit stärkeren Alters- und Gebrauchsspuren, sonst weitgehend fleckenfrei und frisch. <br /><br />
+                    <span style="display: none">Wurzbach 13, 452; Nebehay-Wagner 348. - Aufwendig gestaltetes großformatiges Reisewerk eines französischen Schriftstellers und Staatsmannes, der bis 1797 in der österreichischen Armee diente und als Fortsetzung zu seiner "Voyage pittoresque" noch ein ähnlich ausgestattetes Werk über den österreichisch-französischen Krieg von 1809 herausbrachte. Der vorliegende Band enthält eine Geschichte Österreichs bis zu Franz II., eine Karte des Habsburgerreichs sowie eine Reihe von Ansichten und Volksszenen aus Ober- und Niederösterreich in sorgfältig ausgeführten Aquatintastichen.</span>
+                    <a href='/artikel/laborde-alexandre-de-2109-40.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-40
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2202-56>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/lazius-wolfgang-2202-56.html'>
+                            <img class='thumb' src='/img/thumb/lazius-wolfgang-2202-56.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/lazius-wolfgang-2202-56.html'><strong>Lazius, Wolfgang</strong></a><br /><br />
+                    Vienna Austriae. Rerum Viennensium Co(m)mentarij in Quatuor libros distincti ... Basel, Johannes Oporinus, 1546. In-4; Titel mit Holzschnitt-Druckermarke, 5 Bll., 159, (1) pp, 8 Bll. Index; mit zahlreichen Holzschnitt-Initialen und einem großen Wappenholzschnitt; späterer Halblederband auf 5 Bünden mit goldgeprägtem Rückentitel, marmoriertem Deckelbezug und Buntpapiervorsätzen (berieben und bestoßen); teilweise leicht stock- oder fingerfleckig, Titel mit mehreren alten Besitzvermerken, mehrere Bleistiftkorrekturen, wenige leichte Knickspuren, die letzte Seite mit unrestauriertem Einriss im weißen Rand; insgesamt schönes breitrandiges Exemplar und sehr selten. <br /><br />
+                    <span style="display: none">VD16 L 855 (Var. 1); Gugitz 1; Czeike, 3, 699. - Erste Veröffentlichung des Wiener Humanisten, Arztes und Historikers Wolfgang Lazius (eigentlich Laz, 1514-1565), der als Gelehrter und Sammler sowie durch seine öffentlichen Funktionen zu einer Zentralfigur des Wiener Kulturlebens wurde. Sein Gönner Ferdinand I. ernannte ihn zum Hofhistoriographen und Leiter seiner Antiquitäten- und Münzsammlungen, 1546 wurde er geadelt. Das vorliegende Werk ist die erste gedruckte Stadtgeschichte Wiens und bildete trotz mancher fragwürdiger Details die Grundlage weiterer stadthistorischer Forschungen; größere Verbreitung erlebte es allerdings erst in einer 1619 von Heinrich Abermann hrsg. deutschen Fassung, die ungleich häufiger ist. Der Einleitungsteil enthält Begleitworte Ferdinand I. und des Basler Verlegers Oporinus, mehrere von verschiedenen Humanisten verfasste Preisgedichte auf Wien - zumeist verbunden mit einer Würdigung von Lazius - sowie Korekturen und eine Vorrede des Autors.</span>
+                    <a href='/artikel/lazius-wolfgang-2202-56.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2202-56
+                    <br />
+                    
+                        € 4500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2205-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/merian-matthaus-zeiller-martin-2205-51.html'>
+                            <img class='thumb' src='/img/thumb/merian-matthaus-zeiller-martin-2205-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/merian-matthaus-zeiller-martin-2205-51.html'><strong>Merian, Matthäus [- Zeiller, Martin]</strong></a><br /><br />
+                    Topographia Provinciarum Austriacaru(m) Austriae Styriae, Carinthiae, Carniolae, Tyrolis. etc: Das ist Beschreibung Vnd Abbildung der fürnembsten Stätt Vnd Plätz in den Osterreichischen Landen Vnder vnd OberOsterreich, Steyer, Kärndten, Crain, Vnd Tyrol. Frankfurt am Main, [1736]. In-4; 3 Bll. (inkl. gestochener Titel mit Porträtmedaillon Kaiser Leopold I.), 92 pp, 5 Bll.; Anhang I: 52 pp, 4 Bll.; Anhang II: 14 pp, 1 Bl.; 1 Bl. Kupferstichverzeichnis; mit insgesamt 6 doppelblattgroßen Landkarten und 160 Abbildungen auf 118 teils gefalteten und teils doppelblattgroßen Kupfertafeln; mehrere Vignetten; schlichter Pappband der Zeit (berieben und bestoßen, Vorsätze vermutlich erneuert, im Falz etwas knapp und mit einzelnen Mängeln); papierbedingt leicht gebräunt und gelegentlich etwas knittrig, einzelne kleine Gebrauchsspuren, insgesamt gut erhaltenes und weitgehend fleckenloses Exemplar; Exlibris. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407 (wie 6. Ausg., jedoch mit dem Kupferstichverzeichnis am Schluss). - Später Druck des erstmals 1649 erschienenen großen österreichischen Ansichtenwerks, hergestellt nach der Auflösung des Verlagshauses Merian (1727) unter Verwendung der Originalplatten. Wie üblich ohne die nur in den frühen Ausgaben enthaltenen Ansichten von Kufstein und Meran, jedoch komplett mit beiden Anhängen. Matthäus Merians "Topographia Germaniae", zu der Martin Zeiller den Text beisteuerte, erschien zunächst in 16 Bänden, wurde unter seinen Nachkommen auf 30 Bände erweitert und gilt bis heute als eines der bedeutendsten Werke der geographischen Illustration; der Österreich-Teil erlebte dabei die höchste Zahl an Auflagen.</span>
+                    <a href='/artikel/merian-matthaus-zeiller-martin-2205-51.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2205-51
+                    <br />
+                    
+                        € 4500,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-57>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/niederosterreich-und-wien-2109-57.html'>
+                            <img class='thumb' src='/img/thumb/niederosterreich-und-wien-2109-57.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/niederosterreich-und-wien-2109-57.html'><strong>Niederösterreich (und Wien)</strong></a><br /><br />
+                    Jahrbuch für Landeskunde von Nieder-Oesterreich. Jg. 1 (1867) und 2 (1868-69). [Und:] Blätter des Vereines für Landeskunde von Niederösterreich. Neue Folge. Jg. 4 (1870) bis 35 (1901). [Und:] Jahrbuch für Landeskunde von Niederösterreich. Neue Folge. Jg. 1 (1902) bis 19 (1924). [Und:] Jahrbuch für Landeskunde von Niederösterreich. Neue Folge. Jg. 20 (1926/27) bis 37 (1967) sowie 39 bis 41, 43, 48/49 und 52 (1971/1986). [Und:] Monatsblatt des Vereines für Landeskunde von Niederösterreich Bd. 1 bis 3 (1902-1907) und Jg. 13 bis 17 (1914-18). [Und:] Unsere Heimat. Monatsblatt des Vereines für Landeskunde von Niederösterreich und Wien. Neue Folge. Jg. 1 (1928) bis 51 (1980). [Und:] 4 Registerbände zu den Jahren 1865-1880, 1891-1927, 1928-1940 und 1941-1974; Festgabe 1864-1889 (1890) und Festschrift 1864-1964 (1964). Insgesamt 102 Bände, überwiegend privat in Halbleinen gebunden (jedoch nicht durchgehend einheitlich), einige Halbleder, Leinen oder Orig.-Kartonierung, sowie 60 Einzelhefte in Orig.-Kartonierung. Der Seitenumfang der einzelnen Jahrgänge und die Anzahl der beigegebenen Abbildungen weisen teils erhebliche Unterschiede auf. - Frühe Jahrgänge teilweise altersgebräunt, einzelne Gebrauchsspuren, insgesamt gut erhalten; 2 Bände ohne mitgebundene Titelblätter. <br /><br />
+                    <span style="display: none">Einige Jahrgänge um 1930 mit dem Zusatz "und Heimatschutz" nach "Landeskunde"; die Jahrgänge 1939-45 mit "Niederdonau" statt Niederösterreich". Zu der wenig übersichtlichen Benennung der einzelnen Folgen vgl. Diesch 4116 und 4134. - Umfangreicher Zeitschriftenbestand mit einer Reihe wichtiger Beiträge. Der 1864 gegründete Verein für Landeskunde von Niederösterreich, der zumindest zeitweise auch den Wiener Raum bewusst miteinbezog, ist eine der ältesten historisch-wissenschaftlichen Gesellschaften Österreichs. Im Verlauf der wechselvollen Vereinsgeschichte kam der Publikation landeskundlicher, besonders historisch-topographischer Forschungen stets hohe Priorität zu. Als Herausgeber waren unter anderem Anton Mayer, Max Vancsa und Karl Lechner tätig. - In dieser Reichhaltigkeit selten angeboten.</span>
+                    <a href='/artikel/niederosterreich-und-wien-2109-57.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-57
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/postordnung-1748-2305-71.html'>
+                            <img class='thumb' src='/img/thumb/postordnung-1748-2305-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/postordnung-1748-2305-71.html'><strong>Postordnung 1748</strong></a><br /><br />
+                    Gedruckte Verordnung der Kaiserin Maria Theresia, Wien, 14. 12. 1748. In-folio; 4 Bll.; ohne Umschlag, Papierrücken; Teilweise etwas gebräunt (die erste Seite stärker), Faltspuren und leichte Gebrauchsspuren. - Patent zur grundlegenden Neuordnung des Postwesens. <br /><br />
+                    <span style="display: none">Nachdem Karl VI. 1722 das Postwesen zum landesfürstlichen Regal erklärt hatte - davor lag es in den Händen der Familie Paar -, sorgte seine Tochter mit den hier vorliegenden detaillierten Bestimmungen dafür, dass die Verstaatlichung auch tatsächlich zum Tragen kam und nicht durch private Unternehmungen unterlaufen wurde. Im darauffolgenden Jahr kam es zur Etablierung der Postkutschen ("Diligencen"), 1751 wurden die Ortspoststempel eingeführt.</span>
+                    <a href='/artikel/postordnung-1748-2305-71.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-71
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sartori-franz-2001-72.html'>
+                            <img class='thumb' src='/img/thumb/sartori-franz-2001-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sartori-franz-2001-72.html'><strong>Sartori, Franz</strong></a><br /><br />
+                    Skizzirte Darstellung der physikalischen Beschaffenheit und der Naturgeschichte des Herzogthumes Steyermark. Als Grundlage zur Beförderung und Verbesserung der Oekonomie und des Bergbaues in diesem Lande. Graz, Kienreich, 1806. In-8; 8 Bll., 279 pp mit einigen Vignetten und zwei Textabb., 1 gefaltete Tabelle; Interimsbroschur der Zeit mit handschriftlichem Rückentitel, unbeschnitten; teilweise geringfügig gebräunt oder leicht stockfleckig. <br /><br />
+                    <span style="display: none">Wurzbach 28, 252; ÖBL 9, 428; Schlossar 91. - Origineller, auch heute noch lesenswerter früher Beitrag zur steirischen Landeskunde. Der Autor war als Beamter und Schriftsteller in Graz und Wien tätig.</span>
+                    <a href='/artikel/sartori-franz-2001-72.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-72
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/scharrer-adam-2109-72.html'>
+                            <img class='thumb' src='/img/thumb/scharrer-adam-2109-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/scharrer-adam-2109-72.html'><strong>Scharrer, Adam</strong></a><br /><br />
+                    Oesterreichische Marg=Graffen Von Leopold den Durchleuchtigen und Ersten biß auff Heinrich / letzten Marggraffen und I. Hertzogen zu Oesterreich. Unter welchen Leopoldus Der Gottsförchtige oder Heilige und VI. Marggraff der Glorwürdigst. ... Wien, Leopold Voigt, 1670. Kl-8; gestochenes Frontispiz, Titel, 13 Bll., 404 pp, 7 Kupfertafeln; Halbleder des 19. Jhs. mit goldgepr. Rückenschildchen, Farbschnitt und Lesebändchen (geringfügig berieben, Rücken aufgehellt, Gelenke angeplatzt); im Falz etwas knapp gebunden, teilweise gering gebräunt und vereinzelt feuchtfleckig, einige wenige kleine Randmängel; insgesamt sehr schönes frisches Exemplar, komplett mit allen Tafeln. <br /><br />
+                    <span style="display: none">VD 17, 23:240492V; Mayer (Wiens Buchdrucker-Geschichte) I, 293, Nr. 1876; vgl. auch Thieme-Becker 23, 110. - Wichtiges und oftmals zitiertes Werk, behandelt neben der Frühgeschichte Österreichs vor allem Leben, Wundertaten und Heiligsprechung von Babenbergerherzog Leopold III. (1073-1136) sowie die Geschichte von Stift Klosterneuburg. Mit Gebetsteil und Register. Adam Scharrer (1631-1681) war Chorherr und Dechant in Klosterneuburg. Die schönen Kupfer zur Vita des Hl. Leopold stammen von dem längere Zeit in Wien tätigen Württemberger Stecher Johann Martin Lerch.</span>
+                    <a href='/artikel/scharrer-adam-2109-72.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-72
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schimmer-karl-august-2409-88.html'>
+                            <img class='thumb' src='/img/thumb/schimmer-karl-august-2409-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schimmer-karl-august-2409-88.html'><strong>Schimmer, Karl August</strong></a><br /><br />
+                    Kaiser Joseph der Zweite ... Vierte, mit bis jetzt noch ungedruckten höchst wichtigen Urkunden bedeutend vermehrte Auflage. Wien, Dirnböck, 1850. In-8; gefaltetes Stahlstich-Frontispiz, XII (recte X), 371, (1) pp; zeitgenössischer reliefgeprägter Leinenband mit goldgeprägtem Rückentitel (hinterer Deckel mit kleinen Mängeln, Stempel einer Adelsbibliothek auf flieg. Vorsatz); frisches, ausgezeichnet erhaltenes Exemplar. <br /><br />
+                    <span style="display: none">Slg. Mayer 238; Wurzbach 29, 338. - Die populäre, mehrfach aufgelegte Biographie erschien unter verschiedenen Titeln (erstmals 1844) und legt den Schwerpunkt auf den Charakter des Kaisers und seine in zahlreichen Anekdoten überlieferten Volkstümlichkeit. Die vorliegende, nach nach der Revolution von 1848 umgearbeitete Ausgabe brachte das Buch auf den römischen Index.</span>
+                    <a href='/artikel/schimmer-karl-august-2409-88.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-88
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2005-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/silberstein-august-2005-50.html'>
+                            <img class='thumb' src='/img/thumb/silberstein-august-2005-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/silberstein-august-2005-50.html'><strong>Silberstein, August</strong></a><br /><br />
+                    Die Kaiserstadt am Donaustrand. Wien und die Wiener in Tag- und Nachtbildern ... Nebst zahlreichen Stahlstichen von bedeutenden Künstlern. Mit Berücksichtigung der Welt-Ausstellung und weiterer Ausflüge nach Semmering - Graz - Salzburg - Ischl - Prag - Pest-Ofen. Wien, Moritz Perles - Darmstadt, Ferdinand Lange, 1873. Kl-4; IV, 236 pp, 30 Tafeln (inkl. 2 Frontispize) mit Seidenhemdchen; rotes Orig.-Leinen mit reicher Gold- und Schwarzprägung, Lesebändchen und Schutzumschlag mit Vignette (dieser angeschmutzt, fleckig, am Rücken händisch beschriftet und mit kleinen Läsuren); Einband minimal berieben und geringfügig fleckig, Innengelenke geplatzt; innen geringfügig gebräunt und gelegentlich schwach stockfleckig, die letzten Seiten mit Tintenfleck am Schnitt, die Tafeln überwiegend sauber, einzelne leichte Gebrauchsspuren, der hintere fliegende Vorsatz mit Randriss. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 704 (Einbandvariante). - Das zur Weltausstellung erschienene prachtvolle Stahlstichwerk enthält neben Ansichten aus Wien (darunter einer schönen Gesamtansicht aus der Vogelschau) und von den im Untertitel angeführten Ausflugszielen auch einige Porträts. Der Zusatz "Zweite Auflage" auf dem Schutzumschlag bezieht sich auf eine vor 1873 bei Ferdinand Lange erschienene kleinere Ausgabe mit ähnlichem Titel (Nebehay-Wagner 703). Der Autor August Silberstein (1827-1900) war Erzähler, Lyriker und Publizist; in der Wiener akademischen Legion engagiert, musste er Österreich nach der gescheiterten Revolution von 1848 verlassen. 1854 wurde er wegen seiner unerlaubten Rückkehr zu fünfjähriger Festungshaft verurteilt, jedoch nach zwei Jahren amnestiert. - Mit Schutzumschlag sehr selten.</span>
+                    <a href='/artikel/silberstein-august-2005-50.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2005-50
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/steiermark-2505-84.html'>
+                            <img class='thumb' src='/img/thumb/steiermark-2505-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/steiermark-2505-84.html'><strong>Steiermark</strong></a><br /><br />
+                    Lanndhandvest. Deß Hertzogthumbs Steyer, Darinnen Desselben Kayserl. Königl. und Landsfürstliche von Zeit zu Zeit Allergnädigst und Gnädigist erhaltene Freyheiten, Statuta, Lands-Gebräuch und andere Satz- und Ordnungen nach langs begriffen. Graz, Widmanstätterische Erben, 1697. Kl-4; 10 Bll. (inkl. Titel rot-schwarz), 69 fol., 1 weißes Bl.; Wappenholzschnitt auf Titel verso, mehrere Vignetten und Initialen. - (Beigebunden:) Römischer kayserlicher, auch zu Hungarn und Böhaimb, Königl. Majestät, &c. Ertzhertzog zu Oesterreich, &c. Confirmation und Bestettigung, Deß Fürstenthumbs Steyer Berg-Rechts-Büchel. Ebenda, 1682; 6 Bll. (inkl. Titel mit Holzschnittbordüre); wiederholter Wappenholzschnitt auf Titel verso. - (Beigebunden:) Fürstlicher Durchleuchtigkeit Erzherzogen Ferdinandens ... Neuverfaste Zehend-Ordnung Im Fürstenthumb Steyer. Ebenda, 1697; 4 Bll. (davon 1 weiß); Schlussvignette. - Halblederband des 19. Jhs.; teilweise etwas gebräunt oder stockfleckig, einige Seiten mit Wasserrand. <br /><br />
+                    <span style="display: none">Schlossar 61 f.; Durstmüller 1, 166 f. - Vierte Ausgabe der steirischen Landhandfeste, der ersten gedruckten Zusammenstellung der die Steiermark betreffenden Freiheiten. Sie regelt die Beziehung der Steiermark zu ihrem Landesherrn in Wien und  bildet die Grundlage der steirischen Landesidentität; die Beibindungen enthalten die seit der Erstausgabe von 1583 hinzugekommenen Privilegien. - Schöner Druck aus der Widmannstätterschen Offizin, mit an Alt-Grazer Tradition erinnernder Federzugornamentik in Holzschnitt auf dem Haupttitel.</span>
+                    <a href='/artikel/steiermark-2505-84.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-84
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/stockerau-2102-82.html'>
+                            <img class='thumb' src='/img/thumb/stockerau-2102-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/stockerau-2102-82.html'><strong>Stockerau</strong></a><br /><br />
+                    Ansichten von Stockerau (Deckeltitel). Album mit 25 aufgewalzten Radierungen auf Chinapapier. (Wien, um 1875). Quer-8, Bildausschnitt jeweils ca. 8 x 13,5 cm; dekoratives rotes Orig.-Leinen (signiert H. Scheibe Wien) mit Gold- und Schwarzprägung; Bindung etwas gelockert, einige Tafeln im breiten weißen Rand stockfleckig; die Abbildungen selbst weitgehend sauber. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 54. - Schönes und sehr seltenes Album. Die zum Teil mit "J. S." (Jos. Schaumann?) monogrammierten Blätter zeigen Gesamtansichten der Stadt aus verschiedenen Richtungen sowie einzelne Gebäude, Plätze und Straßen (Rathaus, Gymnasium, Bahnhof, Bürgerspital, Postmühle usw.).</span>
+                    <a href='/artikel/stockerau-2102-82.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-82
+                    <br />
+                    
+                        € 1400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autographen &amp; Varia</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/autographs-misc/arts.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Autographen &amp; Varia</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kunst
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/autographen-varia.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/autographen-varia/geschichte.html'>Geschichte</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/kunst.html'>Kunst</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/literatur.html'>Literatur</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/musik.html'>Musik</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/theater-film-tanz-zirkus.html'>Theater, Film, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/wissenschaft-technik-sport.html'>Wissenschaft, Technik, Sport</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1803-6>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/andersen-robin-christian-maler-1890-1969-1803-6.html'>
+                            <img class='thumb' src='/img/thumb/andersen-robin-christian-maler-1890-1969-1803-6.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/andersen-robin-christian-maler-1890-1969-1803-6.html'><strong>Andersen, Robin Christian, Maler (1890-1969)</strong></a><br /><br />
+                    Zwei ausführliche Briefe seines Schwagers Karl Bruha an den Künstler, einer davon auf Briefpapier der "Ausstellung des Sonderbundes deutsch-österreichischer Künstler" in der Kunsthalle Bern (vom 20. Februar bis Ostermontag 1921), zusammen 12 Seiten, quer-8 und kl-4, Oberönz, 18. 1. 1921 und 4. 4. 1921. - Der in der Schweiz lebende Briefschreiber betreute damals die hier ausgestellten Bilder Andersens sowie des mit ihm verschwägerten Malers Anton Faistauer (1887-1930); einzelne Passagen betreffen Familiäres. "Mein lieber Robin! ... Genf ... Bis jetzt habe ich vier Kritiken (Journal de Genève, Neue Zürcher Zeitung, Solothurner Zeitung, Berner Volkszeitung) aufgefischt, einige sind noch ausstehend ... Ob F[aistauers] Bild verkauft ist, weiß ich nicht. ... Von neuen Verkäufen ist noch nichts bekannt. Es ist schlechte Zeit in der Schweiz. Die Kataloge werden mit Hand verbessert vom Sekretariat aus. Druckfehler sind bei allen Gruppen, sogar bei den Schweizern - das diene dir zum Trost. ...  Bern ... Damit wird wahrscheinlich nichts. Auf den euch eingeräumten Termin ist am Sonntag eine neue Ausstellung eröffnet worden. Amiet hat sich nicht mehr gemeldet - auch Kieser nicht. In Genf ist am Sonntag Schluß. Ich bin froh. Hoffentlich wird gut abgeräumt und verschlingen die Kosten nicht den Gewinn, den erhofften. Wenn nur nichts verlorengeht bei der ganzen Geschichte! ...  F[aistauer] werde ich je ein Exemplar der Kritiken und einen Katalog senden. Diese Zuvorkommenheit begehe ich wegen dem Bild, daß(!) ich ihm nie bezahlen werde. / Was ich machen konnte, habe ich gemacht. Du weißt, daß ich Euch nur im Nebenamt vertrat; und so ist es eine respektable Leistung für vier Wochen. Wenn Bern doch noch zustande kommt, will ich es über mich ergehen lassen, wie ein Walzbruder einen Wolkenbruch ..." (Brief vom 18. 1. 1921). / "Mein lieber Bruder Robin! ... Nun ist die Ausstellung zu Ende. Materiell ist das Resultat ganz negativ. Hingegen war der moralische Erfolg größer wie in Winterthur und Genf. Das(!) nichts verkauft wurde ist nicht meine Schuld. Es wurde viel intrigiert und dagegen war nicht anzukämpfen. ... Es tut mir leid, daß ich den Check auf 1 Million Kronen, den zu senden ich nach der Ausstellung imstande zu sein glaubte, nicht senden kann. Und jetzt zum Schluß wird noch die ganze Sache mit Bern, die sich ganz glatt abgewickelt hatte, verdorben. Faistauer sendet komischerweise das Geld nicht, für welches ich Bürgschaft geleistet ... Ich schreibe heute noch an Faistauer, daß er umgehend an Dr. Kieser das Geld senden soll. Es ist doch lächerlich, es wurde ja zu diesem Zwecke gesandt. Seit Faistauer das Geld hat, schreibt er mir nicht mehr ... Ich bin durch sein Verhalten sehr beleidigt, vor allem weil ich annehmen muß, daß er durch die Kritiken, in denen er nicht als Herrgott gerühmt wurde ... verstimmt ist; er ... sitzt auf den 900 Franken, als ob es seine Bruteier wären. Unterdessen gehört nicht ein Centimes davon ihm. So eine dreckige Geldgier ist mir unbegreiflich ..." (Brief vom 4. 4. 1921). - Ausführlichere Transkription beiliegend; die Identifizierung des undeutlich signierenden Briefschreibers ist Herrn Dr. Franz Smola (Österreichische Galerie Belvedere) zu verdanken. <br /><br />
+                    <span style="display: none">Andersen hatte 1909 zusammen mit Anton Faistauer, Anton Kolig, Franz Wiegele und Egon Schiele aus Protest gegen den konservativen Kunstbetrieb die "Neukunstgruppe" gegründet. 1913 heiratete Faistauer seine Schwester Ida. 1918 wurde Andersen Sekretär des "Sonderbundes", in dem sich die Maler der "Kunstschau" zusammengefunden hatten.</span>
+                    <a href='/artikel/andersen-robin-christian-maler-1890-1969-1803-6.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1803-6
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-5>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bakst-leon-maler-buhnen-und-kostumbildner-1866-1924-2305-5.html'>
+                            <img class='thumb' src='/img/thumb/bakst-leon-maler-buhnen-und-kostumbildner-1866-1924-2305-5.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bakst-leon-maler-buhnen-und-kostumbildner-1866-1924-2305-5.html'><strong>Bakst, Léon, Maler, Bühnen- und Kostümbildner (1866-1924)</strong></a><br /><br />
+                    Eigenhändige Briefkarte mit Unterschrift, quer-12, Paris (112 Boulevard Malesherbes), 29. 8. 1922. - Ersucht einen Mitarbeiter des Schweizer Magazins "L'Illustré", seinen Chef zur raschen Überweisung eines Honorars zu drängen. "Cher Ami, ne pouvez-vous pas presser votre directeur de l'Illustré pour qu'il m'envoie le montant pour la couverture, car je profiterais de la baisse du franc maintenant! Je vous ai envoyé le reçu, l'avez-vous en? Je vous expedie ces jours le souvenir pour vous et a bientot, cher ami, votre cordialement Bakst". <br /><br />
+                    <span style="display: none">Nach einem abgebrochenen Kunststudium in seiner Heimatstadt Grodno zog der als Leib-Chaim Israilewitsch Rosenberg aufgewachsene russische Maler 1893 nach Paris, wo er zum Kreis der Schriftsteller und Künstler um Sergei Pawlowitsch Djagilew und Alexandre Benoîs stieß und mit ihnen die einflussreiche Zeitschrift "Mir iskusstva" (Welt der Kunst) gründete. Ab 1909 arbeitete er überwiegend für die Bühne, wobei ihm vor allem seine farben- und formenreichen, vom russischen Symbolismus beeinflussten Ausstattungsentwürfe für die "Ballets Russes" internationale Anerkennung brachten; an der Gründung dieses bedeutenden Ballettensembles hatte er wesentlichen Anteil. Bakst war auch als Illustrator für Zeitschriften tätig und schuf etwa Titelbilder für die hier erwähnte "L'Illustré", die seit 1921 in Lausanne erschien. An der Adresse 112 Boulevard Malesherbes logierten mehrere Künstler und Künstlerinnen, teilweise in Wohngemeinschaften.</span>
+                    <a href='/artikel/bakst-leon-maler-buhnen-und-kostumbildner-1866-1924-2305-5.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-5
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/cham-d-i-amedee-charles-henri-vicomte-de-noe-franz-karikaturist-1819-1879-2409-19.html'>
+                            <img class='thumb' src='/img/thumb/cham-d-i-amedee-charles-henri-vicomte-de-noe-franz-karikaturist-1819-1879-2409-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/cham-d-i-amedee-charles-henri-vicomte-de-noe-franz-karikaturist-1819-1879-2409-19.html'><strong>Cham (d. i. Amédée Charles Henri, Vicomte de Noé), franz. Karikaturist (1819-1879)</strong></a><br /><br />
+                    Zwei eigenhändige humoristische Federzeichnungen mit darunterstehendem Text, wie üblich unsigniert und undatiert, 11 x 16 und 15 x 15 cm. - Szene mit zwei Jägern und einem Wildschwein: "défend moi donc! tire dessus! / "mon ami, laisse le jouir un peu de son reste, la chasse va fermer." Szene mit zwei Damen im Bad: "j'aimerais bien nager, mais pas dans l'eau / "dans quoi alors? / "c'te bétise! dans l'opulence parbleu!" - Unregelmäßig beschnitten. <br /><br />
+                    <span style="display: none">Wohl Publikationsvorlagen. - Amédée de Noé schuf zunächst eine Reihe von Bildergeschichten, die als Vorläufer der heutigen Comics gelten; ab 1843 zeichnete er vor allem Karikaturen für die Zeitschrift "Le Charivari". Er war auch als Koautor von Theaterstücken und als Librettist tätig.</span>
+                    <a href='/artikel/cham-d-i-amedee-charles-henri-vicomte-de-noe-franz-karikaturist-1819-1879-2409-19.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-19
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fuhrich-joseph-von-maler-1800-1876-2409-33.html'>
+                            <img class='thumb' src='/img/thumb/fuhrich-joseph-von-maler-1800-1876-2409-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fuhrich-joseph-von-maler-1800-1876-2409-33.html'><strong>Führich, Joseph von, Maler (1800-1876)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite, in-8, Erlakloster, 5. 9. 1860. - Empfehlungsschreiben für seinen Schüler August Wörndle. "Euer Hochwohlgeboren! Mein ehemahliger Schüler Herr August v. Wörndle theilt mir eben mit, daß er Aussicht habe in Insbruck einen Kreutzweg all Fresco zu malen. Erlauben Sie daß ich ein Wort der Empfehlung zu seinen Gunsten schreibe, was ich um so sicherer thun kann, als ich seinen Entwicklungsgang als Künstler kenne, und weiß daß bei dem Ernste mit welchem er an eine solche Arbeit gehn wird, von ihm nur Tüchtiges zu erwarten ist, wovon der Augenschein Sie selbst überzeugen wird, da er einen Carton zur Ansicht eingeschickt hat. Indem ich auf diese meine Ueberzeugung gestützt den herzlichen Wunsch außdrücke, diesen schönen Auftrag in den Händen genannten Hrn. v. Wörndle's zu sehn, zeichne ich Hochachtungsvoll Euer Wohlgeboren ergebenster Joseph Führich". <br /><br />
+                    <span style="display: none">Führich gilt als bedeutendster Vertreter der Nazarener in Österreich. Sein Schüler August Wörndle von Adelsfried (1829-1902) folgte ihm in dieser künstlerischen Richtung und wurde später sein Schwiegersohn. Zu Wörndles tatsächlich realisierten Fresken auf dem Innsbrucker Westfriedhof äußerte sich Wurzbach (57, 222) durchaus kritisch: "Von Wörndles Monumentalmalereien sind anzuführen: auf dem Innsbrucker Stadtgottesacker 'Die Kreuzwegbilder', deren Cartons künstlerisch höher gestellt werden, als die Ausführung al fresco, welche sehr viel zu wünschen läßt ...". Die Fresken wurden im 2. Weltkrieg teilweise zerstört.</span>
+                    <a href='/artikel/fuhrich-joseph-von-maler-1800-1876-2409-33.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-33
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kokoschka-oskar-maler-1886-1980-2302-42.html'>
+                            <img class='thumb' src='/img/thumb/kokoschka-oskar-maler-1886-1980-2302-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kokoschka-oskar-maler-1886-1980-2302-42.html'><strong>Kokoschka, Oskar, Maler (1886-1980)</strong></a><br /><br />
+                    Eigh. Kunstpostkarte mit Unterschrift, Poststempel Montreux, 13. 3. 1967. - An den Kunsthistoriker und Verleger Ludwig Goldscheider in London. "Liebster Herr Dr. Ludwig hoffentlich sind Sie wieder gesund?! Bitte Sie müssen ganz gesund werden, gehen Sie nach Tunesien in die Sonne! Hier gießt es Tag und Nacht seit unserer Rückkehr, bin verzweifelt, kann gar nichts machen. Grüssen Sie die Tochter herzlich und seien Sie umarmt von Ihrem immer ergebenen O. Kokoschka". - Minimaler Einriss am unteren Rand. <br /><br />
+                    <span style="display: none">Nach Jahren des Exils in Prag und England lebte Kokoschka seit 1953 im schweizerischen Villeneuve bei Montreux. Der österreichische Kunsthistoriker Dr. Ludwig Goldscheider (1896-1973) war Mitbegründer des Phaidon-Kunstverlags. 1938 nach London emigriert, führte er den Verlag dort weiter und veröffentlichte 1963 in Zusammenarbeit mit Kokoschka eine Monographie über den Künstler, die mehrere Auflagen und Übersetzungen erlebte. Die Karte zeigt Kokoschkas 1946 entstandenes Aquarell "Lobster"  in der Cecil Higgins Art Gallery in Bedford.</span>
+                    <a href='/artikel/kokoschka-oskar-maler-1886-1980-2302-42.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-42
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kokoschka-oskar-maler-1886-1980-2403-51.html'>
+                            <img class='thumb' src='/img/thumb/kokoschka-oskar-maler-1886-1980-2403-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kokoschka-oskar-maler-1886-1980-2403-51.html'><strong>Kokoschka, Oskar, Maler (1886-1980)</strong></a><br /><br />
+                    Beidseitig beschriebene eigenhändige Ansichtskarte in etwas fehlerhaftem Englisch mit Paraphe "OK", Hotel Regina (Venedig), 17. 7. 1948. - An Lea Bondy-Jaray in London. "My dear Mrs. Bondi / The missing drawings must still be at Zürich, Kunsthaus. Unfortunately not all your drawings where shown at Amsterdam, which I myself did not know as I had nothing to do with the arrangment or selection of Dr. Sandbergs show. Please get in touch with Dr. Wartman I shall do the same. Weather is awfull here, health worse. Kindest regards from us both. Above my modell which eternally is shrowded in clouds - burst and thunder and ligthnings. Yours OK." <br /><br />
+                    <span style="display: none">Die österreichische Galeristin und Kunstsammlerin Lea Bondi-Jaray (1880-1969), die unter anderem Egon Schieles Gemälde "Wally" besaß,  emigrierte nach dem Anschluss nach England; die von ihr geführte Galerie Würthle wurde arisiert. 1943 übernahm sie gemeinsam mit Otto Brill die St. George's Gallery in Mayfair, die rasch zu einer Anlaufstelle für deutschsprachige Emigranten wurde. Der Graphiker, Typograph und Designer Willem Sandberg (1897-1984) war von 1945 bis 1962 Direktor des Amsterdamer Stedelijk Museums und organisierte dort im Herbst 1947 eine Kokoschka-Ausstellung. Wilhelm Wartmann (1882-1970) leitete von 1909 bis 1949 das Kunsthaus Zürich. Die auf der Ansichtskarte gezeigte Basilika Santa Maria della Salute in Venedig wurde von Kokoschka mehrfach gemalt; "regards from us both" bezieht sich auf Olda, die Frau des Künstlers.</span>
+                    <a href='/artikel/kokoschka-oskar-maler-1886-1980-2403-51.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-51
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1609-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/landgrebe-erich-schriftsteller-und-maler-1908-1979-1609-58.html'>
+                            <img class='thumb' src='/img/thumb/landgrebe-erich-schriftsteller-und-maler-1908-1979-1609-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/landgrebe-erich-schriftsteller-und-maler-1908-1979-1609-58.html'><strong>Landgrebe, Erich, Schriftsteller und Maler (1908-1979)</strong></a><br /><br />
+                    Eigh. humoristische Zeichnung (Feder und Buntstift) mit Widmung und Unterschrift, kl-4, August 1976. - Faltspuren. <br /><br />
+                    <span style="display: none">Selbstkarikatur als Trinker.</span>
+                    <a href='/artikel/landgrebe-erich-schriftsteller-und-maler-1908-1979-1609-58.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1609-58
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-57>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/modersohn-otto-dt-maler-1865-1943-2302-57.html'>
+                            <img class='thumb' src='/img/thumb/modersohn-otto-dt-maler-1865-1943-2302-57.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/modersohn-otto-dt-maler-1865-1943-2302-57.html'><strong>Modersohn, Otto, dt. Maler (1865-1943)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite, kl-4, Worpswede, 26. 2. 1916. - An Frido Witte. "Werther Herr Witte! Besten Dank für Ihre freundlichen Wünsche zu meinem Geburtstage, der wie ich aus Ihren Zeilen sehe auch der Ihre ist, warum ich mich beile, Ihnen meinerseits alles erdenkliche Gute zu wünschen: möchten Sie bald zu den Werken des Friedens zurückkehren können, das ist wohl der Wunsch, der uns alle beseelt. Wie Sie am Poststempel sehen, sitze ich wieder in Worpswede und zwar seit Herbst vorigen Jahres; Fischerhude hatte bei all seiner Schönheit doch einige große Nachtheile. - Augenblicklich ist H. Vogeler für 3 Wochen hier auf Urlaub, es geht ihm sehr gut. Mit den besten Grüßen, auch von m[einer] Frau bleibe ich Ihr ergebener Otto Modersohn." - Rückseitig nicht störender Schriftabklatsch. <br /><br />
+                    <span style="display: none">Modersohn gehörte zu den Mitbegründern der Worpsweder Künstlerkolonie und wurde einer der bekanntesten deutschen Landschaftsmaler. Nach dem frühen Tod seiner zweiten Frau, der Malerin Paula Modersohn-Becker (1907) übersiedelte er in das nur wenige Kilometer entfernte Dorf Fischerhude, wo sich um ihn die Malergruppe "Junge Wilde von 1911" bildete; ab 1909 war er mit der Sängerin und Malerin Louise Modersohn-Breling, genannt Lolo, verheiratet. Der Maler, Architekt und Kunstgewerbler Friedrich Wilhelm (Frido) Witte (1881-1965) war häufig in Worpswede zu Gast; während des 1. Weltkriegs leistete er Kriegsdienst in Kiel und Flandern. Der vielseitige Maler, Graphiker, Designer und Schriftsteller Heinrich Vogeler (1872-1942) gehörte ebenfalls zur ersten Generation der Künstlerkolonie Worpswede.</span>
+                    <a href='/artikel/modersohn-otto-dt-maler-1865-1943-2302-57.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-57
+                    <br />
+                    
+                        € 560,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-34>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/overbeck-friedrich-maler-1789-1869-1903-34.html'>
+                            <img class='thumb' src='/img/thumb/overbeck-friedrich-maler-1789-1869-1903-34.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/overbeck-friedrich-maler-1789-1869-1903-34.html'><strong>Overbeck, Friedrich, Maler (1789-1869)</strong></a><br /><br />
+                    Schluss eines Briefes mit eigh. Unterschrift, von anderer Hand datiert 1841, 6 x 21 cm. - "Das mein Theurer! sind die aufrichtigen Wünsche die ich Dir von ganzem Herzen sowohl nachträglich zur lieblichen Weyhnachtsfeyer, als zum bevorstehenden Jahreswechsel und Deinem nahen Geburtstage darbringe und mit denen ich in unveränderlicher Liebe verbleibe Dein dankbarer und zärtlicher Bruder Friedrich Overbeck." - Kleines Papiersiegel. <br /><br />
+                    <span style="display: none">Vermutlich an ein Mitglied des sogenannten Lukasbundes gerichtet. Overbeck lebte seit 1810 als Führer der Nazarener in Rom. - Beiliegend ein reproduziertes Porträt des Künstlers.</span>
+                    <a href='/artikel/overbeck-friedrich-maler-1789-1869-1903-34.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1903-34
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1701-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/romako-anton-1701-66.html'>
+                            <img class='thumb' src='/img/thumb/romako-anton-1701-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/romako-anton-1701-66.html'><strong>Romako, Anton</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift, 1 Seite, in-8, Rom, "Samstag" (um 1860). - An einen Baron. "... Wollen Sie uns das Vergnügen machen und Sonntag den 4. um 7 Uhr abends bei uns speisen / Ihr ganz ergebenster A. Romako". Beiliegend ein Billet mit einem an Romako gerichteten 6-zeiligen Gedicht seines Malerfreundes Major Franz Kühlen, Rom, 3. 1. 1860. - Der Außenseiter der Wiener Ringstraßenepoche lebte von 1857 bis 1876 in Rom, wo er eine Zeitlang als Porträtist und Genremaler erfolgreich war. - Sehr selten. <br /><br />
+                    <span style="display: none">Zu Franz Kühlen siehe Thieme-Becker 22, 56. Sein Gedicht lautet: "An Romako. / So ist's ein ernstes, lustig Streben: / 'Das was man malt, muß man auch leben / Und auch das Leben recht genießen / Aus dem uns reine Freuden sprießen'; Drum lebe, male, immerfort / Es gelingt dir beides, auf mein Wort."</span>
+                    <a href='/artikel/romako-anton-1701-66.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1701-66
+                    <br />
+                    
+                        € 600,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1703-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/rouault-georg-maler-und-graphiker-1871-1958-1703-73.html'>
+                            <img class='thumb' src='/img/thumb/rouault-georg-maler-und-graphiker-1871-1958-1703-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/rouault-georg-maler-und-graphiker-1871-1958-1703-73.html'><strong>Rouault, Georg, Maler und Graphiker (1871-1958)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Paraphe "GR", 3/4 Seite, kl-4, ohne Ort und Datum (um 1925?). - In Eile geschriebener Brief mit einzelnen Korrekturen. "Cher monsieur, I. il y a quelques polémiques à propos de la publication en Mai de vos lithos. Je n'ai pas le temps de v[ou]s en causer ces a fond mais dites bien n'est-il pas vrai c'est la verité que je n'ai jamais voulu de date et qu'il ya plus trois ans que je vous avais promis - ceci repetéz le comme moi je le fais.  II. Arrangez vous avec la destinataire qui v[ou]s remettra ce qui est convenu pour echange. En hâte - meilleur souvenir GR". - Papier gebräunt. <br /><br />
+                    <span style="display: none">Neben seiner Tätigkeit als vielseitiger Maler und Illustrator arbeitete Rouault unter anderem auch als Ausstatter für die "Ballets Russes" und war außerdem als Drucker tätig.</span>
+                    <a href='/artikel/rouault-georg-maler-und-graphiker-1871-1958-1703-73.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1703-73
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

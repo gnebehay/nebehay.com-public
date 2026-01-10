@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/music-theatre-dance-circus.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Musik, Theater, Tanz, Zirkus
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2302-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/barnum-phineas-taylor-2302-9.html'>
+                            <img class='thumb' src='/img/thumb/barnum-phineas-taylor-2302-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/barnum-phineas-taylor-2302-9.html'><strong>Barnum, Phineas Taylor</strong></a><br /><br />
+                    Leben und Abenteuer P.T. Barnum's, vormaligen Theaterdirectors in New-York, seine großartigen Unternehmungen, seine Kunstfahrten mit Jenni Lind, mit Tom Thumb u. A. Von ihm selbst beschrieben. Aus dem Englischen. 3 Tle. in 1 Bd. Pest, Wien und Leipzig, Hartleben, 1855. Kl-8; 3 Titel, 192, 171, 155 pp; schlichtes Halbleinen der Zeit (berieben, unteres Kapital etwas eingerissen); stellenweise stockfleckig, einzelne kleine Papiermängel. <br /><br />
+                    <span style="display: none">Lesenswerte schillernde Autobiographie des amerikanischen Schaustellers, Museumsgründers, Zirkusunternehmers und Politikers P. T. Barnum (1810-1891), der mit teilweise höchst fragwürdigen Methoden geschäftlich überaus erfolgreich war ("König Humbug"); in der Psychologie ist der Barnum-Effekt nach ihm benannt. Eine von zwei deutschen Ausgaben im Jahr der amerikanischen Erstausgabe und wesentlich seltener als die in Leipzig unter dem Titel "Barnum der Kaufmann, Journalist und Raritätenmann" erschienene.</span>
+                    <a href='/artikel/barnum-phineas-taylor-2302-9.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-9
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-6>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bartok-bela-kodaly-zoltan-kiss-lajos-2509-6.html'>
+                            <img class='thumb' src='/img/thumb/bartok-bela-kodaly-zoltan-kiss-lajos-2509-6.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bartok-bela-kodaly-zoltan-kiss-lajos-2509-6.html'><strong>Bartók, Bela - Kodály, Zoltan - Kiss, Lajos</strong></a><br /><br />
+                    A magyar népzene tára (Corpus Musicae Popularis Hungaricae) III/A: Lakodalom. Budapest, Akadémiai Kiadó, 1955. Gr-8; XLIV, 1089, (1) pp mit 930 Musikbeispielen, 88 teils farbige fotographische Abbildungen auf Tafeln; goldgepr. Orig.-Leinenband (Rücken etwas geschossen und fleckig, vorderer Vorsatz feuchtrandig). - Auf dem Titelblatt von Zoltan Kodály mit vollem Namenszug signiert. <br /><br />
+                    <span style="display: none">Umfangreiche Sammlung ungarischer Volkslieder zum Hochzeitsbrauchtum, basierend auf der langjährigen Forschungstätigkeit von Bela Bartók und Zoltan Kodály und redigiert von Lajos Kiss. Mit Kommentar und mehreren Registern sowie einer begleitenden fotographischen Dokumentation.</span>
+                    <a href='/artikel/bartok-bela-kodaly-zoltan-kiss-lajos-2509-6.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-6
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/beethoven-n-n-2403-10.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-n-n-2403-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/beethoven-n-n-2403-10.html'><strong>Beethoven. - N. N.</strong></a><br /><br />
+                    Beethoven (Portfolio mit Text- und Tafelteil). Wien, Druckerei Luigard, (1927). In-folio; 8 pp mit 1 Abb., 15 lose teils farbige Tafeln; in Orig.-Kartonmappe mit montierter Deckelillustration (Mappe mit kleinen Mängeln, möglicherweise fehlt eine Umschlagklappe); Text- und Tafelteil mit leichten Gebrauchs- und Altersspuren, eine Tafel mit kleinen Druckstellen, insgesamt ordentlich. <br /><br />
+                    <span style="display: none">Seltener Privatdruck(?) mit einer anonymen Würdigung des Komponisten zum 100. Todestag und reproduzierten Bildern zu Leben, Werk und Nachwirkung. Das im Druck undeutlich monogrammierte Umschlagbild stammt von 1925.</span>
+                    <a href='/artikel/beethoven-n-n-2403-10.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-10
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1705-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/egk-werner-1705-22.html'>
+                            <img class='thumb' src='/img/thumb/egk-werner-1705-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/egk-werner-1705-22.html'><strong>Egk, Werner</strong></a><br /><br />
+                    Variationen über ein karibisches Thema. Studienpartitur. Mainz, Schott, (1960). Gr-8; 2 Bll., 175, (1) pp; OKart. (geringfügig gebräunt, leichte Knickspuren). - Auf dem Titelblatt eigh. Widmung und Unterschrift des Komponisten, 16. 8. 1960. <br /><br />
+                    <span style="display: none">Das 1959 komponierte Orchesterwerk wurde am 18. 1. 1960 in Freiburg uraufgeführt; szenische Aufführungen als Ballett tragen den zusätzlichen Titel "Danza". Werner Egk (eigentlich Werner Joseph Mayer, 1901-1983) gilt als Repräsentant des deutschen Neoklassizismus und des modernen Musiktheaters.</span>
+                    <a href='/artikel/egk-werner-1705-22.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1705-22
+                    <br />
+                    
+                        € 80,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-21>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/eysler-prosl-robert-maria-1810-21.html'>
+                            <img class='thumb' src='/img/thumb/eysler-prosl-robert-maria-1810-21.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/eysler-prosl-robert-maria-1810-21.html'><strong>Eysler. - Prosl, Robert Maria</strong></a><br /><br />
+                    Edmund Eysler. Aus Wiens zweiter klassischer Operettenzeit. Wien, K. Kühne, 1947. In-8; Porträt-Frontispiz, 119 pp, mehrere Fototaf.; OHLn. mit Deckelvignette und Rückenprägung; papierbedingt leicht gebräunt, Vorsätze mit kleinen Klebebandresten. - Numeriertes Exemplar (A 40) mit Signatur des Komponisten auf dem Titelblatt, darunter zusätzliche eigh. Notenzeile (erste 4 Takte des Walzers "Junge Mädchen tanzen gern"); auf dem Vorsatz eingeklebte Echtheitsbestätigung des Wiener Antiquars J. M. Tomanek vom 9. 6. 1947. <br /><br />
+                    <span style="display: none">Der Komponist Edmund Eysler (1874-1949) erzielte vor allem mit seinen vom Wiener Lokalokolorit geprägten Operetten große Erfolge, doch hatte er seiner jüdischen Abstammung wegen unter dem Nationalsozialismus Aufführungsverbot. Das hier von Eysler zitierte Walzerlied "Junge Mädchen tanzen gern" stammt aus seiner Operette "Der Frauenfresser" (Uraufführung 1911).</span>
+                    <a href='/artikel/eysler-prosl-robert-maria-1810-21.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-21
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fahrbach-philipp-jr-2102-24.html'>
+                            <img class='thumb' src='/img/thumb/fahrbach-philipp-jr-2102-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fahrbach-philipp-jr-2102-24.html'><strong>Fahrbach, Philipp jr.</strong></a><br /><br />
+                    Wo man singt. Walzer für das Pianoforte ... Op. 122. Budapest, Táborszky & Parsch, Verlags-Nr. 711 (um 1880). In-4; 11, (1) pp mit Noten und orig. Papierumschlag mit dekorativer farblithograph. Deckelillustration; Umschlag im Bug durchgerissen, mit altem Besitzvermerk und etwas fleckig (der hintere Deckel stärker); innen sauber. <br /><br />
+                    <span style="display: none">Philipp Fahrbach der Jüngere (184-1894) leitete seit 1855 die von seinem Vater gegründete Kapelle und feierte mit ihr große Triumphe bei der Weltausstellung Paris 1878. Er schrieb etwa 350 Tänze und Märsche. Während sein Vater eng mit Johann Strauß Sohn zusammenarbeitete, galt er als dessen Konkurrent.</span>
+                    <a href='/artikel/fahrbach-philipp-jr-2102-24.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-24
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-31>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/goldoni-carlo-montucci-antonio-hrsg-2001-31.html'>
+                            <img class='thumb' src='/img/thumb/goldoni-carlo-montucci-antonio-hrsg-2001-31.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/goldoni-carlo-montucci-antonio-hrsg-2001-31.html'><strong>Goldoni, Carlo - Montucci, Antonio (Hrsg.)</strong></a><br /><br />
+                    Scelta completa di tutte le migliori commedie di Carlo Goldoni preceduta da un compendio storico del Teatro Italiano. 4 Bde. (so komplett). Lipsia (Leipzig), F. Fleischer, 1828. Kl-8; XXVIII, 1 Bl., 275 pp; 2 Bll., 308 pp; 2 Bll., 408 pp; 2 Bll.; 434 pp; dekorative Halblederbände der Zeit mit gold- und blindgeprägten Rücken sowie Sprenkelschnitt (geringfügig berieben und bestoßen); teilweise etwas gebräunt und vereinzelt stockfleckig, insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Hübsche, in Deutschland erschienene Auswahlausgabe der Stücke Goldonis in Originalsprache. Der Herausgeber (1762-1829) war Jurist, Sinologe und Sprachlehrer.</span>
+                    <a href='/artikel/goldoni-carlo-montucci-antonio-hrsg-2001-31.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-31
+                    <br />
+                    
+                        € 350,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hindemith-paul-2403-42.html'>
+                            <img class='thumb' src='/img/thumb/hindemith-paul-2403-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hindemith-paul-2403-42.html'><strong>Hindemith, Paul</strong></a><br /><br />
+                    Mathis der Maler. Oper in sieben Bildern. (Textbuch). Zürich, Albert Kunzelmann / Apollo-Verlag, 1945. In-8; 35, (1) pp; orig.-kartoniert; leichte Gebrauchs- und Altersspuren. - Auf dem Titelblatt eigenhändiger Namenszug "Paul Hindemith". <br /><br />
+                    <span style="display: none">Seltene Lizenzausgabe für die Schweiz. Trotz Ächtung des Komponisten durch die Nationalsozialisten und Aufführungsverboten in Deutschland erschienen die Werke des Komponisten zunächst noch bei Schott's Söhnen in Mainz, bevor Hindemith ins Schweizer Exil ging. Die Oper "Mathis der Maler", zu der Hindemith auch das Libretto verfasste, ist vom Isenheimer Altar inspiriert und wurde 1938 in Zürich uraufgeführt; die Vor- und Zwischenspiele entstanden bereits 1934 als gleichnamige Symphonie.</span>
+                    <a href='/artikel/hindemith-paul-2403-42.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-42
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-38>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hoffmann-e-t-a-truhn-hieronymus-2505-38.html'>
+                            <img class='thumb' src='/img/thumb/hoffmann-e-t-a-truhn-hieronymus-2505-38.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hoffmann-e-t-a-truhn-hieronymus-2505-38.html'><strong>Hoffmann, E. T. A. - Truhn, Hieronymus</strong></a><br /><br />
+                    E. T. A. Hoffmann als Musiker. Mit Beziehung auf die bevorstehende Herausgabe seines musikalischen Nachlasses. In: Der Freihafen. Galerie von Unterhaltungsbildern aus den Kreisen der Literatur, Gesellschaft und Wissenschaft. 2. Jg. (3. Heft, S. 66-105 und 4 pp Notenbeilage). Altona, J. F. Hammerich, 1839. In-8; VI, 248, 4 pp; VI, 269, (1) pp; marmorierter Pappband der Zeit mit Rückenschildchen (berieben und bestoßen); gebräunt und stellenweise leicht stockfleckig, Titel und Zwischentitel dezent gestempelt; Adelsexlibris. <br /><br />
+                    <span style="display: none">Erstdrucke des vom deutschen Dirigenten, Komponisten und Musikschriftsteller Friedrich Hieronymus Truhn (1811-1886) verfassten wichtigen Artikels sowie von Hoffmanns Lied "In des Irtisch weisse Fluthen". Der vorliegende Band umfasst Heft 3 und 4 und damit den gesamten zweiten Jahrgang der vom Schriftsteller Theodor Mundt (1808-1861) anonym herausgegebenen Zeitschrift "Der Freihafen", die von 1838 bis 1844 erschien. Enthalten sind in ihm unter anderem auch ein zweiteiliger Beitrag über Ludwig Tieck und die deutsche Romantik (von Rudolf Kausler) sowie eine deutsche Fassung von Hegels lateinischer Rede zur 3. Säkularfeier der Augsburger Konfession (1830).</span>
+                    <a href='/artikel/hoffmann-e-t-a-truhn-hieronymus-2505-38.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-38
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-46>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiser-friedrich-2403-46.html'>
+                            <img class='thumb' src='/img/thumb/kaiser-friedrich-2403-46.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiser-friedrich-2403-46.html'><strong>Kaiser, Friedrich</strong></a><br /><br />
+                    Ein Traum - kein Traum, oder: Der Schauspielerin letzte Rolle. Posse mit Gesang in zwei Akten. Zum ersten Male aufgeführt im k. k. priv. Theater an der Wien, am 3. December 1848. Wien, Wallishausser, 1851. In-8; gestochenes Frontispiz (von Andreas Geiger), Titel, VIII, 126 pp; gold- und blindgeprägter Leinenband der Zeit mit Goldschnitt (etwas berieben); einzelne leichte Gebrauchsspuren, insgesamt schönes Exemplar. <br /><br />
+                    <span style="display: none">Wurzbach 10, 370; Slg. Mayer 5827. - Der österreichische Dramatiker und Revolutionär Friedrich Anton Kaiser (1814-1874) verfasste in Serienproduktion über 160 Stücke für das Alt-Wiener Volkstheater, vor allem für die Bühnen des Theaterdirektors Carl Carl, dem auch das vorliegende Stück gewidmet ist. Vielseitig kulturell und politisch engagiert, entging Kaiser während der Revolution von 1848 nur knapp einem gewaltsamen Tod. "In der österreichischen Literaturgeschichte steht Kaiser im Schatten von Raimund, Nestroy und Anzengruber, was seiner literarischen Leistung nicht gerecht wird" (Wikipedia).</span>
+                    <a href='/artikel/kaiser-friedrich-2403-46.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-46
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/laszlo-carl-fenkart-rolf-2309-44.html'>
+                            <img class='thumb' src='/img/thumb/laszlo-carl-fenkart-rolf-2309-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/laszlo-carl-fenkart-rolf-2309-44.html'><strong>Laszlo, Carl - Fenkart, Rolf</strong></a><br /><br />
+                    Des Geometers Hochzeit eine tragische Revue. Basel, Panderma Verlag Carl Laszlo, (1957). In-folio; 24 pp (Wiedergabe von Handschrift Carl Laszlos bzw. Notenhandschrift von Rolf Fenkart); orig.-kartoniert (leichte Gebrauchsspuren, unteres Kapital mit kleinen Schäden). - Nr. 32 einer limitierten Auflage. <br /><br />
+                    <span style="display: none">Carl Laszlo (ungarisch László Károly, 1923-2013) war ein ungarisch-schweizerischer Kunsthändler, Sammler, Psychoanalytiker und Autor, der mehrere Konzentrationslager überlebte; seine dramatischen Versuche sind von den Ideen des absurden Theaters geprägt. Rolf Fenkart (geb. 1931), ein Vertreter der Zwölftonmusik, wandte sich in der Folge der Astronomie und später der Literatur zu. Das Jean Cocteau gewidmete Dramolett "Des Geometers Hochzeit" ist im vorliegenden Heft sowohl mit seinem Text wie auch in der vertonten Fassung vertreten, weiters sind kurze Notizen zu den ersten Aufführungen beigefügt.</span>
+                    <a href='/artikel/laszlo-carl-fenkart-rolf-2309-44.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-44
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/liszt-bory-robert-2003-58.html'>
+                            <img class='thumb' src='/img/thumb/liszt-bory-robert-2003-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/liszt-bory-robert-2003-58.html'><strong>Liszt. - Bory, Robert</strong></a><br /><br />
+                    La vie de Franz Liszt par l'image. Précedée d'une introduction biographique par Alfred Cortot. (Genf), Journal de Genève, 1936. In-4; 249 pp mit zahlr. Abb., 1 Bl:, Ln. m. goldgepr. Rückenschildchen, Teile der Orig.-Broschur (mit faksimilierter Signatur Liszts) miteingebunden; erstes weißes Blatt gebräunt, sonst tadellos. - Nr. 29/50 der Vorzugsausgabe auf unbeschnittenem van-Gelder-Bütten, im Druckvermerk von Bory und Cortot signiert. <br /><br />
+                    <span style="display: none">Standardwerk zur Ikonographie des Komponisten, hier in der seltenen, vom französischen Pianisten Alfred Cortot (1877-1962) mitsignierten Vorzugsausgabe.</span>
+                    <a href='/artikel/liszt-bory-robert-2003-58.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-58
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/liszt-franz-1902-42.html'>
+                            <img class='thumb' src='/img/thumb/liszt-franz-1902-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/liszt-franz-1902-42.html'><strong>Liszt, Franz</strong></a><br /><br />
+                    Christus. Oratorium für Soli, Chor, Orgel und grosses Orchester. Klavierauszug. Adliswil (u. a.), Edition Kunzelmann, (nach 1979). Kl-4; 6 Bl., 241 pp Noten; OKart. <br /><br />
+                    <span style="display: none">Hrsg. von Gábor Darvas. Mit Einleitung von Klára Hamburger in Englisch und Deutsch.</span>
+                    <a href='/artikel/liszt-franz-1902-42.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-42
+                    <br />
+                    
+                        € 36,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mozart-wolfgang-amadeus-2505-59.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-2505-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mozart-wolfgang-amadeus-2505-59.html'><strong>Mozart, Wolfgang Amadeus</strong></a><br /><br />
+                    Mozart Operas in Facsimile III: Le nozze di Figaro K. 492. Facsimile of the Autograph Score. 3 Bände. Los Altos, The Packard Humanities Institute, 2006-2007. Quer-4; Faksimileteil 624 Farbtaf., 6 Bll. in 2 Bänden; Kommentarband (in Englisch und Deutsch) VII, 124 pp mit zahlr. meist farb. Abb.; Orig.-Halbleder mit goldgepr. Rückentitel; ein Titelblatt mit kleinem hinterlegtem Eckabriss, sonst fast neuwertig. <br /><br />
+                    <span style="display: none">Farbgetreue Wiedergabe des nahezu vollständig in Mozarts Handschrift erhaltenen Autographs, das heute auf mehrere Bibliotheken aufgeteilt ist; der Kommentarband mit Beiträgen von Norbert Miller und Dexter Edge. Sorgfältig erstellte und ausgestattete Edition.</span>
+                    <a href='/artikel/mozart-wolfgang-amadeus-2505-59.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-59
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-32>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/neher-caspar-1903-32.html'>
+                            <img class='thumb' src='/img/thumb/neher-caspar-1903-32.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/neher-caspar-1903-32.html'><strong>Neher, Caspar</strong></a><br /><br />
+                    Johanna Balk. Oper in 3 Akten. Musik von Rudolf Wagner-Regeny. Wien, Universal-Edition, 1941. In-8; 43, (1) pp; OBrosch.; Umschlag und Textblock papierbedingt gebräunt, kleine Knickspuren und Fehlstellen. <br /><br />
+                    <span style="display: none">Der deutsch-österreichische Bühnenbilder Caspar Neher (1897-1962) ist vor allem durch die lebenslange Zusammenarbeit mit seinem Schulkollegen Bertolt Brecht bekannt. Er schrieb aber auch Libretti für Opern von Kurt Weill und Rudolf Wagner-Regeny.</span>
+                    <a href='/artikel/neher-caspar-1903-32.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1903-32
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/niggl-paul-2409-75.html'>
+                            <img class='thumb' src='/img/thumb/niggl-paul-2409-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/niggl-paul-2409-75.html'><strong>Niggl, Paul</strong></a><br /><br />
+                    Große Dirigenten auf Medaillen. München, Egon Beckenbauer, 1967. Gr-8; 100, (1) pp mit Einleitung, 44 Kurzbiographien und 44 ganzseitigen Abbildungen; orig. Pappband; neuwertig. <br /><br />
+                    <span style="display: none">Clain-Stefanelli 14226.</span>
+                    <a href='/artikel/niggl-paul-2409-75.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-75
+                    <br />
+                    
+                        € 13,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/saltarino-signor-d-i-otto-hermann-waldemar-2509-68.html'>
+                            <img class='thumb' src='/img/thumb/saltarino-signor-d-i-otto-hermann-waldemar-2509-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/saltarino-signor-d-i-otto-hermann-waldemar-2509-68.html'><strong>Saltarino, Signor [d. i. Otto, Hermann Waldemar]</strong></a><br /><br />
+                    Das Artistentum und seine Geschichte. Gesammeltes und Erlebtes. Leipzig, International-Artistischer Literatur-Vlg. W. Backhaus, 1910. Kl-4; 1 Bl., 244 pp mit Vignetten und zahlreichen fotograph. Abb., 2 Bll.; goldgepr. Orig.-Leinenband mit Kopfgoldschnitt (berieben und bestoßen, Rücken fleckig, Bindung gelockert); durchgehender Eckknick, vord. flieg. Vorsatz mit eingeklebtem Zeitungsartikel aus 1931. - Dazu als Beigabe: Victor Claudius, Gaukler. Beiträge zur Geschichte der Artistik. Wien, Int. Artisten-Organisation, (1926). Gr-8; 16 pp mit 1 Abb., späteres Halbleinen mit eingebundener Orig.-Broschur. <br /><br />
+                    <span style="display: none">Die seltene Originalausgabe. Weit ausgreifende, lebendig geschriebene Darstellung, behandelt u. a. auch Zauberkünstler, Gaukler und Abenteurer in den Freimaurerlogen, Puppenspieler, Zirkusliteraten etc. Der Autor (1863-1941) war  Journalist, Artist und Bergbauunternehmer.</span>
+                    <a href='/artikel/saltarino-signor-d-i-otto-hermann-waldemar-2509-68.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-68
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1708-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schonherr-karl-1708-79.html'>
+                            <img class='thumb' src='/img/thumb/schonherr-karl-1708-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schonherr-karl-1708-79.html'><strong>Schönherr, Karl</strong></a><br /><br />
+                    Erde. Eine Komödie des Lebens in drei Akten. Berlin, S. Fischer, 1908. Kl-8; 126 pp, 4 Bll.; illustr. Orig.-Leinen im Jugendstil (monogrammiert OE) mit Kopfgoldschnitt und Lesebändchen (minimal abgegriffen); Vortitel mit Farbstift-Nummer. - Auf Vortitel verso eigh. Widmung mit Unterschrift an den Schriftsteller und Redakteur Vinzenz Chiavacci und seine Frau Malvine. <br /><br />
+                    <span style="display: none">Wilpert-G.10. - Erstausgabe, hier im schönen Verlagseinband von Otto Eckmann, einem Hauptvertreter des "floralen" Jugendstils, der auch das Signet des S. Fischer Verlags entwarf. Der als Arzt und Schriftsteller tätige Karl Schönherr (1867-1943) heiratete nach dem Tod Chiavaccis (1916) dessen Witwe Malvine.</span>
+                    <a href='/artikel/schonherr-karl-1708-79.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1708-79
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/seyfried-ignaz-von-2509-74.html'>
+                            <img class='thumb' src='/img/thumb/seyfried-ignaz-von-2509-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/seyfried-ignaz-von-2509-74.html'><strong>Seyfried, Ignaz von</strong></a><br /><br />
+                    Motette, nach David's 46stem Psalm; In Musik gesetzt für Tenor-Solo, den 4stimmigen Chor, mit Begleitung des Orchesters. Wien, Tobias Haslinger, [1838], Verlags-Nr. 7341. In-4; 19 pp, davon 1 Seite gestochener Titel (zugleich vorderer Umschlag) und 18 Seiten gestochene Noten; orig. Fadenheftung; etwas abgegriffen und stockfleckig (die letzte Seite stärker), alte Vermerke auf Titelblatt. - Vollständige Partitur mit unterlegtem lateinischem und deutschem Text. <br /><br />
+                    <span style="display: none">Der Wiener Ignaz Ritter von Seyfried (1776-1841) studierte unter anderem bei Mozart Klavier und bei Albrechtsberger Komposition und wirkte ab 1797 bis 1801 als Kapellmeister in Schikaneders Theater im Freihaus und anschließend bis 1828 im Theater an der Wien. Beethoven nahestehend, dirigierte er 1805 die Uraufführung des "Fidelio" und hinterließ wertvolle Erinnerungen an den Meister; zu Beethovens Begräbnisfeier komponierte er ein "Libera me".</span>
+                    <a href='/artikel/seyfried-ignaz-von-2509-74.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-74
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/tagblatt-bibliothek-2409-97.html'>
+                            <img class='thumb' src='/img/thumb/tagblatt-bibliothek-2409-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/tagblatt-bibliothek-2409-97.html'><strong>Tagblatt-Bibliothek</strong></a><br /><br />
+                    109 verschiedene Bändchen der Reihe. Wien, Steyrermühl-Verlag bzw. Ostmärkischer Zeitungsverlag bzw. Globus-Verlag, 1927/1950. In-8; je Heft ca. 15-100 pp, orig.-brosch. Vereinzelte Gebrauchsspuren, insgesamt sehr gut erhalten. - Einzelhefte auf Anfrage. <br /><br />
+                    <span style="display: none">Die Sammlung umfasst hauptsächlich Operntextbücher, durchwegs in deutscher Sprache. Weiters vorhanden sind mehrere Textbücher zu Theaterstücken, Singspielen und Oratorien, einige kleine Musikführer (besonders zu Beethoven) sowie ein Heft mit Essays von Rabindranath Tagore. - Die 1923 ins Leben gerufene Tagblatt-Bibliothek pflegte sowohl das "praktische" Buch wie auch klassische und moderne Belletristik; die billig aber ansprechend produzierten Hefte bildeten ein erfolgreiches Pendant zu den deutschen Reclam-Heften. Bis zum Anschluss wurde die Bibliothek von Ernst Pisko geleitet, der als Jude dann fristlos und ohne Abfertigung entlassen wurde.</span>
+                    <a href='/artikel/tagblatt-bibliothek-2409-97.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-97
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-107>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/west-carl-august-d-i-schreyvogel-joseph-2409-107.html'>
+                            <img class='thumb' src='/img/thumb/west-carl-august-d-i-schreyvogel-joseph-2409-107.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/west-carl-august-d-i-schreyvogel-joseph-2409-107.html'><strong>West, Carl August (d. i. Schreyvogel, Joseph)</strong></a><br /><br />
+                    Donna Diana. Lustspiel in 3 Akten. Nach dem Spanischen des Don Agustin Moreto. Wien, Wallishausser, 1819. Kl-8; 2 Bll., 192 pp; Pappband der Zeit mit Rückenvergoldung (etwas berieben und bestoßen, Rückenbezug mit retuschierten Fehlstellen, ohne hinteren fliegenden Vorsatz); vereinzelt geringfügig stockfleckig, insgesamt gut erhalten und frisch. <br /><br />
+                    <span style="display: none">Goedeke IX, 21.25; Holzmann-B. 308. - Erste österreichische Ausgabe, ein Jahr nach der von Göschen verlegten deutschen Erstausgabe erschienen. Der zumeist in Wien lebende Schriftsteller Joseph Schreyvogel (1768-1832) arbeitete an Schillers "Thalia" und an Wielands "Merkur" mit, leitete von 1814 bis 1832 das Wiener Burgtheater und übte einen starken Einfluss auf Grillparzer aus, der auch seine Grabinschrift verfasste. Schreyvogels vorliegende Bearbeitung des Lustspiels "El desdén, con el desdén" des spanischen Theaterdichters Agustín Moreto aus dem Jahr 1654 diente Emil Nikolaus von Reznicek als Grundlage für seine Opernfassung des Stücks.</span>
+                    <a href='/artikel/west-carl-august-d-i-schreyvogel-joseph-2409-107.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-107
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

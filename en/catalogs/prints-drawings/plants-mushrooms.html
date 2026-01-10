@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik/pflanzen-und-pilze.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Plants &amp; Mushrooms
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1712-136>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/baumwolle-1712-136.html'>
+                            <img class='thumb' src='/img/thumb/baumwolle-1712-136.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/baumwolle-1712-136.html'><strong>Baumwolle</strong></a><br /><br />
+                    "Gossypium Arboreum Linn. Cotone Arboreo". Chromolithographie von G. Mochi nach A. Menici  aus F. Parlatore, Le specie dei cotoni, Firenze 1866, ca. 41 x 30 cm. <br /><br />
+                    <span style="display: none">Nissen 1491. - Eine der vier Arten der Kulturbaumwolle.</span>
+                    <a href='/en/articles/baumwolle-1712-136.html'>Continue reading</a><br /><br />
+                    Order no. 1712-136
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-143>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bergminze-1911-143.html'>
+                            <img class='thumb' src='/img/thumb/bergminze-1911-143.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bergminze-1911-143.html'><strong>Bergminze</strong></a><br /><br />
+                    "Calamintha frutescens, Satureiae folio, facie, et odore  ...". Altkolorierter Kupferstich mit lateinischer, italienischer und französischer Beschriftung aus Giorgio Bonelli, Hortus Romanus, 8 Bände, Rom 1772-1793, Bildformat 34 x 22 cm, Blattgröße 55 x 39 cm. - Kaum sichtbare horizontale Quetschfalten. <br /><br />
+                    <span style="display: none">Nissen 200. - Das mit 8 Bänden umfangreichste botanische Tafelwerk Italiens erschien nur in kleiner Auflage; komplette Bände sind heute überaus selten. Die mit einem blauen oder roten Rand eingefassten großformatigen Kupferstiche erinnern an ältere Holzschnitte und üben in ihrer Einfachheit und ihrem lebhaften Kolorit einen eigenen Reiz aus. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/bergminze-1911-143.html'>Continue reading</a><br /><br />
+                    Order no. 1911-143
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-138>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/blumenstuck-2412-138.html'>
+                            <img class='thumb' src='/img/thumb/blumenstuck-2412-138.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/blumenstuck-2412-138.html'><strong>Blumenstück</strong></a><br /><br />
+                    Blumen mit Schmetterlingen. Anonyme Gouachemalerei auf bräunlichem Papier, wohl um 1800, Blattgröße 31 x 22 cm. - Unregelmäßig beschnitten (minimaler Bildverlust am unteren Rand). <br /><br />
+                    <span style="display: none">Dekoratives Stillleben, fein und in leuchtenden Farben gemalt. Vermutlich Werk eines Wiener Porzellanmalers.</span>
+                    <a href='/en/articles/blumenstuck-2412-138.html'>Continue reading</a><br /><br />
+                    Order no. 2412-138
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-144>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/epidendrum-1911-144.html'>
+                            <img class='thumb' src='/img/thumb/epidendrum-1911-144.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/epidendrum-1911-144.html'><strong>Epidendrum</strong></a><br /><br />
+                    "Epidendrum secundum. L." Altkolorierter Kupferstich aus Johannes Zorn, Dreyhundert auserlesene amerikanische Gewächse, Bd. 3, Nürnberg 1787, 16,5 x 9,5 cm. <br /><br />
+                    <span style="display: none">Nissen 2204. - Aus den von einem Apotheker aus Kempten herausgegebenen verkleinerten Nachstichen der Folio-Blätter in "Selectarum stirpium Americanarum historiae" (Nissen 979/980) von Nicolaus Joseph von Jacquin. Fein koloriert und nicht häufig. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/epidendrum-1911-144.html'>Continue reading</a><br /><br />
+                    Order no. 1911-144
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-145>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/farber-scharte-1911-145.html'>
+                            <img class='thumb' src='/img/thumb/farber-scharte-1911-145.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/farber-scharte-1911-145.html'><strong>Färber-Scharte</strong></a><br /><br />
+                    "Jacea nemorensis, quae serratula vulgó ...". Altkolorierter Kupferstich mit lateinischer, italienischer und französischer Beschriftung aus Giorgio Bonelli, Hortus Romanus, Rom 1772-1793, Bildformat 34 x 22 cm, Blattgröße 55 x 39 cm. - Serratula tinctoria. - Kaum sichtbare horizontale Quetschfalte. <br /><br />
+                    <span style="display: none">Nissen 200. - Das mit 8 Bänden umfangreichste botanische Tafelwerk Italiens erschien nur in kleiner Auflage; komplette Bände sind heute überaus selten. Die mit einem blauen oder roten Rand eingefassten großformatigen Kupferstiche erinnern an ältere Holzschnitte und üben in ihrer Einfachheit und ihrem lebhaften Kolorit einen eigenen Reiz aus. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/farber-scharte-1911-145.html'>Continue reading</a><br /><br />
+                    Order no. 1911-145
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-146>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/flamingoblume-1911-146.html'>
+                            <img class='thumb' src='/img/thumb/flamingoblume-1911-146.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/flamingoblume-1911-146.html'><strong>Flamingoblume</strong></a><br /><br />
+                    "Pothos acaulis. L." Altkolorierter Kupferstich aus Johannes Zorn, Dreyhundert auserlesene amerikanische Gewächse, Bd. 3, Nürnberg 1787, 16 x 9,5 cm. <br /><br />
+                    <span style="display: none">Nissen 2204. - Aus den von einem Apotheker aus Kempten herausgegebenen verkleinerten Nachstichen der Folio-Blätter in "Selectarum stirpium Americanarum historiae" (Nissen 979/980) von Nicolaus Joseph von Jacquin. Fein koloriert und nicht häufig. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/flamingoblume-1911-146.html'>Continue reading</a><br /><br />
+                    Order no. 1911-146
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-156>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/flockenblume-2112-156.html'>
+                            <img class='thumb' src='/img/thumb/flockenblume-2112-156.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/flockenblume-2112-156.html'><strong>Flockenblume</strong></a><br /><br />
+                    "Chaussetrape rude". Farbkupferstich nach Jean Henri Jaume Saint-Hilaire aus "Plantes de la France décrites et peintes d'après nature", Paris 1805-1822, Blattgröße 25 x 15 cm. - Centaurea sp. <br /><br />
+                    <span style="display: none">Pritzel 4401; Nissen 989. - Jaume Saint-Hilaire (1772-1845), französischer Botaniker und Künstler. Weitere Blätter aus dieser Serie lagernd.</span>
+                    <a href='/en/articles/flockenblume-2112-156.html'>Continue reading</a><br /><br />
+                    Order no. 2112-156
+                    <br />
+                    
+                        € 45,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-157>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/flockenblume-2112-157.html'>
+                            <img class='thumb' src='/img/thumb/flockenblume-2112-157.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/flockenblume-2112-157.html'><strong>Flockenblume</strong></a><br /><br />
+                    "Sarrète". Farbkupferstich nach Jean Henri Jaume Saint-Hilaire aus "Plantes de la France décrites et peintes d'après nature", Paris 1805-1822, Blattgröße 25 x 15 cm. - Centaurea sp. <br /><br />
+                    <span style="display: none">Pritzel 4401; Nissen 989. - Jaume Saint-Hilaire (1772-1845), französischer Botaniker und Künstler. Weitere Blätter aus dieser Serie lagernd.</span>
+                    <a href='/en/articles/flockenblume-2112-157.html'>Continue reading</a><br /><br />
+                    Order no. 2112-157
+                    <br />
+                    
+                        € 45,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-139>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gartenarchitektur-2412-139.html'>
+                            <img class='thumb' src='/img/thumb/gartenarchitektur-2412-139.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gartenarchitektur-2412-139.html'><strong>Gartenarchitektur</strong></a><br /><br />
+                    "Der Kielmännische Garten bey Wien." Kupferstich aus Matthäus Merian, Topographia Provinciarum Austriacarum, Frankfurt 1649,  29 x 37,5 cm. - Kräftiger Abzug mit kaum störenden druckbedingten Faltspuren und hinterlegten Randmängeln. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 407/37. - Die prachtvolle Gartenanlage des kaiserlichen Rats Heinrich Kielmansegg (1589-1659), die in der Wiener Vorstadt Landstraße am rechten Ufer des Wienflusses lag (heute 3. Bezirk, Invalidenstraße 1-11) und während der 2. Türkenbelagerung teilweise zerstört wurde.</span>
+                    <a href='/en/articles/gartenarchitektur-2412-139.html'>Continue reading</a><br /><br />
+                    Order no. 2412-139
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-140>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/getreide-mais-und-hirse-2412-140.html'>
+                            <img class='thumb' src='/img/thumb/getreide-mais-und-hirse-2412-140.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/getreide-mais-und-hirse-2412-140.html'><strong>Getreide / Mais und Hirse</strong></a><br /><br />
+                    "Pflanzen XXXVII." Altkolorierter Kupferstich aus F. J. Bertuch, Bilderbuch zum Nutzen und Vergnügen der Jugend, Wien um 1810, Blattgröße 24,5 x 19,5 cm. - Mit zugehörigem Textblatt. <br /><br />
+                    <span style="display: none">Der Weimarer Unternehmer, Verleger und Philanthrop Friedrich Justin Bertuch (1747-1822) suchte mit seinem ab 1790 in monatlichen Lieferungen erschienenen "Bilderbuch für Kinder" der jungen Generation zeitgenössisches Wissen in unterhaltsamer und abwechslungsreicher Form nahezubringen. Ein um 1810 in Wien unter leicht geändertem Titel erschienener Nachdruck verstand sich als wohlfeile Alternative zur Originalausgabe.</span>
+                    <a href='/en/articles/getreide-mais-und-hirse-2412-140.html'>Continue reading</a><br /><br />
+                    Order no. 2412-140
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-141>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gewurzpflanzen-cardamom-und-kapern-2412-141.html'>
+                            <img class='thumb' src='/img/thumb/gewurzpflanzen-cardamom-und-kapern-2412-141.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gewurzpflanzen-cardamom-und-kapern-2412-141.html'><strong>Gewürzpflanzen / Cardamom und Kapern</strong></a><br /><br />
+                    "Pflanzen XI." Altkolorierter Kupferstich von Franz Xaver Schmuzer aus F. J. Bertuch, Bilderbuch zum Nutzen und Vergnügen der Jugend, Wien um 1810, Blattgröße 25 x 19 cm. - Geringfügig wellig. Mit zugehörigem Textblatt. <br /><br />
+                    <span style="display: none">Der Weimarer Unternehmer, Verleger und Philanthrop Friedrich Justin Bertuch (1747-1822) suchte mit seinem ab 1790 in monatlichen Lieferungen erschienenen "Bilderbuch für Kinder" der jungen Generation zeitgenössisches Wissen in unterhaltsamer und abwechslungsreicher Form nahezubringen. Ein um 1810 in Wien unter leicht geändertem Titel erschienener Nachdruck verstand sich als wohlfeile Alternative zur Originalausgabe.</span>
+                    <a href='/en/articles/gewurzpflanzen-cardamom-und-kapern-2412-141.html'>Continue reading</a><br /><br />
+                    Order no. 2412-141
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-143>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/gewurzpflanzen-pfeffer-und-ingwer-2412-143.html'>
+                            <img class='thumb' src='/img/thumb/gewurzpflanzen-pfeffer-und-ingwer-2412-143.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/gewurzpflanzen-pfeffer-und-ingwer-2412-143.html'><strong>Gewürzpflanzen / Pfeffer und Ingwer</strong></a><br /><br />
+                    "Pflanzen VI." Altkolorierter Kupferstich aus F. J. Bertuch, Bilderbuch für Kinder, Weimar um 1800, Blattgröße 25 x 19 cm. - Mit anhängendem zugehörigem Textblatt. <br /><br />
+                    <span style="display: none">Der Weimarer Unternehmer, Verleger und Philanthrop Friedrich Justin Bertuch (1747-1822) suchte mit seinem ab 1790 in monatlichen Lieferungen erschienenen "Bilderbuch" der jungen Generation zeitgenössisches Wissen in unterhaltsamer und abwechslungsreicher Form nahezubringen.</span>
+                    <a href='/en/articles/gewurzpflanzen-pfeffer-und-ingwer-2412-143.html'>Continue reading</a><br /><br />
+                    Order no. 2412-143
+                    <br />
+                    
+                        € 55,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-111>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ixora-2311-111.html'>
+                            <img class='thumb' src='/img/thumb/ixora-2311-111.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ixora-2311-111.html'><strong>Ixora</strong></a><br /><br />
+                    "Ixora speciosa." Farbkupferstich in Punktiermanier mit sorgfältig nachkolorierten Details von de Gouy nach Pierre Joseph Redouté aus Aimé Bonpland, Description des plantes rares cultivées à Malmaison et à Navarre, Paris 1813, Bildformat 30 x 20 cm, Blattgröße 54 x 36 cm. - Der französische Naturforscher Bonpland bereiste 1799-1804 mit Alexander von Humboldt Spanien und Amerika. Das von Redouté für Napoleons Gattin Josephine gemalte Originalbild der aus Ostindien stammenden immergrünen Strauchpflanze befindet sich heute im Fitzwilliam Museum in Cambridge. - Minimale Altersspuren. <br /><br />
+                    <span style="display: none">Nissen 207 (Taf. 49).</span>
+                    <a href='/en/articles/ixora-2311-111.html'>Continue reading</a><br /><br />
+                    Order no. 2311-111
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-148>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kapernstrauch-1911-148.html'>
+                            <img class='thumb' src='/img/thumb/kapernstrauch-1911-148.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kapernstrauch-1911-148.html'><strong>Kapernstrauch</strong></a><br /><br />
+                    "Capparis cynophallophora. L." Altkolorierter Kupferstich aus Johannes Zorn, Dreyhundert auserlesene amerikanische Gewächse, Bd. 3, Nürnberg 1787, 17 x 9 cm. <br /><br />
+                    <span style="display: none">Nissen 2204. - Aus den von einem Apotheker aus Kempten herausgegebenen verkleinerten Nachstichen der Folio-Blätter in "Selectarum stirpium Americanarum historiae" (Nissen 979/980) von Nicolaus Joseph von Jacquin. Fein koloriert und nicht häufig. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/kapernstrauch-1911-148.html'>Continue reading</a><br /><br />
+                    Order no. 1911-148
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-150>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kokospflaume-1911-150.html'>
+                            <img class='thumb' src='/img/thumb/kokospflaume-1911-150.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kokospflaume-1911-150.html'><strong>Kokospflaume</strong></a><br /><br />
+                    "Chrysobalanus icaco. L." Altkolorierter Kupferstich aus Johannes Zorn, Dreyhundert auserlesene amerikanische Gewächse, Bd. 3, Nürnberg 1787, 16,5 x 9,5 cm. <br /><br />
+                    <span style="display: none">Nissen 2204. - Aus den von einem Apotheker aus Kempten herausgegebenen verkleinerten Nachstichen der Folio-Blätter in "Selectarum stirpium Americanarum historiae" (Nissen 979/980) von Nicolaus Joseph von Jacquin. Fein koloriert und nicht häufig. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/kokospflaume-1911-150.html'>Continue reading</a><br /><br />
+                    Order no. 1911-150
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-151>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mammi-oder-mammeyapfel-1911-151.html'>
+                            <img class='thumb' src='/img/thumb/mammi-oder-mammeyapfel-1911-151.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mammi-oder-mammeyapfel-1911-151.html'><strong>Mammi- oder Mammeyapfel</strong></a><br /><br />
+                    "Mammea americana. L." Altkolorierter Kupferstich aus Johannes Zorn, Dreyhundert auserlesene amerikanische Gewächse, Bd. 3, Nürnberg 1787, 17 x 9,5 cm. - Leichter Farbabklatsch. <br /><br />
+                    <span style="display: none">Nissen 2204. - Aus den von einem Apotheker aus Kempten herausgegebenen verkleinerten Nachstichen der Folio-Blätter in "Selectarum stirpium Americanarum historiae" (Nissen 979/980) von Nicolaus Joseph von Jacquin. Fein koloriert und nicht häufig. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/mammi-oder-mammeyapfel-1911-151.html'>Continue reading</a><br /><br />
+                    Order no. 1911-151
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-152>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mauer-schuttkraut-1911-152.html'>
+                            <img class='thumb' src='/img/thumb/mauer-schuttkraut-1911-152.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mauer-schuttkraut-1911-152.html'><strong>Mauer-Schuttkraut</strong></a><br /><br />
+                    "Valantia annua ...". Altkolorierter Kupferstich mit lateinischer, italienischer und französischer Beschriftung aus Giorgio Bonelli, Hortus Romanus, 8 Bände, Rom 1772-1793, Bildformat 33 x 22 cm, Blattgröße 55 x 39 cm. - Auch Mauer-Vaillantie genannt (Valantia muralis). - Horizontale Falte; von alter Hand rechts oben im Bild nummeriert.  <br /><br />
+                    <span style="display: none">Nissen 200. - Das mit 8 Bänden umfangreichste botanische Tafelwerk Italiens erschien nur in kleiner Auflage; komplette Bände sind heute überaus selten. Die mit einem blauen oder roten Rand eingefassten großformatigen Kupferstiche erinnern an ältere Holzschnitte und üben in ihrer Einfachheit und ihrem lebhaften Kolorit einen eigenen Reiz aus. - Weitere Blätter aus dieser Serie auf Anfrage.</span>
+                    <a href='/en/articles/mauer-schuttkraut-1911-152.html'>Continue reading</a><br /><br />
+                    Order no. 1911-152
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-159>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/naturselbstdrucke-braun-und-grunstieliger-streifenfarn-2112-159.html'>
+                            <img class='thumb' src='/img/thumb/naturselbstdrucke-braun-und-grunstieliger-streifenfarn-2112-159.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/naturselbstdrucke-braun-und-grunstieliger-streifenfarn-2112-159.html'><strong>Naturselbstdrucke / Braun- und grünstieliger Streifenfarn</strong></a><br /><br />
+                    "Asplenium Trichomanes Linn. - A. viride Huds." Naturselbstdruck der k. k. Hof- und Staatsdruckerei aus Constantin von Ettingshausen & Alois Pokorny, Physiotypia plantarum Austriacarum, Wien 1856, Taf. 18, Plattengröße 47 x 29 cm, Papierformat 57 x 40,5 cm. <br /><br />
+                    <span style="display: none">Nissen 613. - Der schon in der Renaissance bekannte Naturselbstdruck wurde von Alois Auer Ritter von Welsbach, seit 1841 Direktor der Wiener Staatsdruckerei, perfektioniert, indem er Abdrucke getrockneter Pflanzen auf Bleiplatten durch galvanische Verfahren auf kupferne Druckplatten übertragen ließ. Die in diesem aufwendigen Verfahren hergestellten botanischen Darstellungen sind gleichermaßen ästhetisch ansprechend wie naturgetreu.</span>
+                    <a href='/en/articles/naturselbstdrucke-braun-und-grunstieliger-streifenfarn-2112-159.html'>Continue reading</a><br /><br />
+                    Order no. 2112-159
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-160>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/naturselbstdrucke-fruhlingsknotenblume-marzenbecher-2112-160.html'>
+                            <img class='thumb' src='/img/thumb/naturselbstdrucke-fruhlingsknotenblume-marzenbecher-2112-160.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/naturselbstdrucke-fruhlingsknotenblume-marzenbecher-2112-160.html'><strong>Naturselbstdrucke / Frühlingsknotenblume (Märzenbecher)</strong></a><br /><br />
+                    "Leucojum vernum Linn." Naturselbstdruck der k. k. Hof- und Staatsdruckerei aus Constantin von Ettingshausen & Alois Pokorny, Physiotypia plantarum Austriacarum, Wien 1856, Taf. 176, Plattengröße 42 x 29 cm, Papierformat 59 x 40 cm. <br /><br />
+                    <span style="display: none">Nissen 613. - Der schon in der Renaissance bekannte Naturselbstdruck wurde von Alois Auer Ritter von Welsbach, seit 1841 Direktor der Wiener Staatsdruckerei, perfektioniert, indem er Abdrucke getrockneter Pflanzen auf Bleiplatten durch galvanische Verfahren auf kupferne Druckplatten übertragen ließ. Die in diesem aufwendigen Verfahren hergestellten botanischen Darstellungen sind gleichermaßen ästhetisch ansprechend wie naturgetreu.</span>
+                    <a href='/en/articles/naturselbstdrucke-fruhlingsknotenblume-marzenbecher-2112-160.html'>Continue reading</a><br /><br />
+                    Order no. 2112-160
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-161>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/naturselbstdrucke-gewohnliche-simsenlilie-2112-161.html'>
+                            <img class='thumb' src='/img/thumb/naturselbstdrucke-gewohnliche-simsenlilie-2112-161.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/naturselbstdrucke-gewohnliche-simsenlilie-2112-161.html'><strong>Naturselbstdrucke / Gewöhnliche Simsenlilie</strong></a><br /><br />
+                    "Tofieldia calyculata Wahlenb." Naturselbstdruck der k. k. Hof- und Staatsdruckerei aus Constantin von Ettingshausen & Alois Pokorny, Physiotypia plantarum Austriacarum, Wien 1856, Taf. 140, Plattengröße 43 x 29,5 cm, Papierformat 58 x 40 cm. <br /><br />
+                    <span style="display: none">Nissen 613. - Der schon in der Renaissance bekannte Naturselbstdruck wurde von Alois Auer Ritter von Welsbach, seit 1841 Direktor der Wiener Staatsdruckerei, perfektioniert, indem er Abdrucke getrockneter Pflanzen auf Bleiplatten durch galvanische Verfahren auf kupferne Druckplatten übertragen ließ. Die in diesem aufwendigen Verfahren hergestellten botanischen Darstellungen sind gleichermaßen ästhetisch ansprechend wie naturgetreu.</span>
+                    <a href='/en/articles/naturselbstdrucke-gewohnliche-simsenlilie-2112-161.html'>Continue reading</a><br /><br />
+                    Order no. 2112-161
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-162>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/naturselbstdrucke-kornblume-2112-162.html'>
+                            <img class='thumb' src='/img/thumb/naturselbstdrucke-kornblume-2112-162.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/naturselbstdrucke-kornblume-2112-162.html'><strong>Naturselbstdrucke / Kornblume</strong></a><br /><br />
+                    "Centaurea Cyanus Linn." Naturselbstdruck der k. k. Hof- und Staatsdruckerei aus Constantin von Ettingshausen & Alois Pokorny, Physiotypia plantarum Austriacarum, Wien 1856, Taf. 263, Plattengröße 44 x 31 cm, Papierformat 58 x 40,5 cm. <br /><br />
+                    <span style="display: none">Nissen 613. - Der schon in der Renaissance bekannte Naturselbstdruck wurde von Alois Auer Ritter von Welsbach, seit 1841 Direktor der Wiener Staatsdruckerei, perfektioniert, indem er Abdrucke getrockneter Pflanzen auf Bleiplatten durch galvanische Verfahren auf kupferne Druckplatten übertragen ließ. Die in diesem aufwendigen Verfahren hergestellten botanischen Darstellungen sind gleichermaßen ästhetisch ansprechend wie naturgetreu.</span>
+                    <a href='/en/articles/naturselbstdrucke-kornblume-2112-162.html'>Continue reading</a><br /><br />
+                    Order no. 2112-162
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-163>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/naturselbstdrucke-krautiges-immergrun-2112-163.html'>
+                            <img class='thumb' src='/img/thumb/naturselbstdrucke-krautiges-immergrun-2112-163.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/naturselbstdrucke-krautiges-immergrun-2112-163.html'><strong>Naturselbstdrucke / Krautiges Immergrün</strong></a><br /><br />
+                    "Vinca herbacea W. K." Naturselbstdruck der k. k. Hof- und Staatsdruckerei aus Constantin von Ettingshausen & Alois Pokorny, Physiotypia plantarum Austriacarum, Wien 1856, Taf. 299, Plattengröße 43 x 32 cm, Papierformat 58 x 41 cm. - Kaum störende leichte Knickspur und kleine Randmängel, insgesamt sehr dekorativ. <br /><br />
+                    <span style="display: none">Nissen 613. - Der schon in der Renaissance bekannte Naturselbstdruck wurde von Alois Auer Ritter von Welsbach, seit 1841 Direktor der Wiener Staatsdruckerei, perfektioniert, indem er Abdrucke getrockneter Pflanzen auf Bleiplatten durch galvanische Verfahren auf kupferne Druckplatten übertragen ließ. Die in diesem aufwendigen Verfahren hergestellten botanischen Darstellungen sind gleichermaßen ästhetisch ansprechend wie naturgetreu.</span>
+                    <a href='/en/articles/naturselbstdrucke-krautiges-immergrun-2112-163.html'>Continue reading</a><br /><br />
+                    Order no. 2112-163
+                    <br />
+                    
+                        € 290,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-102>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/obst-apfel-2211-102.html'>
+                            <img class='thumb' src='/img/thumb/obst-apfel-2211-102.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/obst-apfel-2211-102.html'><strong>Obst / Äpfel</strong></a><br /><br />
+                    "Batullen-Apfel". Chromolithographie nach G. Ebenhusen aus Nicolas Gaucher, Pomologie des Praktischen Obstbaumzüchters, Stuttgart 1894, Blattgröße 25 x 18 cm. - Ausführliche Sortenbeschreibung beiliegend. <br /><br />
+                    <span style="display: none">Gauchers "Pomologie" stellt eine wertvolle Dokumentation alter Obsorten dar. Die Abbildungen übernahm der Autor aus der von ihm hrsg. Zeitschrift "Der praktische Obstbaumzüchter".</span>
+                    <a href='/en/articles/obst-apfel-2211-102.html'>Continue reading</a><br /><br />
+                    Order no. 2211-102
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/obst-birnen-2211-103.html'>
+                            <img class='thumb' src='/img/thumb/obst-birnen-2211-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/obst-birnen-2211-103.html'><strong>Obst / Birnen</strong></a><br /><br />
+                    "Stuttgarter Gaishirtle." Chromolithographie nach A. Rupp aus Nicolas Gaucher, Pomologie des Praktischen Obstbaumzüchters, Stuttgart 1894, Blattgröße 25 x 18 cm. - Ausführliche Sortenbeschreibung beiliegend. <br /><br />
+                    <span style="display: none">Gauchers "Pomologie" stellt eine wertvolle Dokumentation alter Obsorten dar. Die Abbildungen übernahm der Autor aus der von ihm hrsg. Zeitschrift "Der praktische Obstbaumzüchter".</span>
+                    <a href='/en/articles/obst-birnen-2211-103.html'>Continue reading</a><br /><br />
+                    Order no. 2211-103
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-104>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/obst-kirschen-2211-104.html'>
+                            <img class='thumb' src='/img/thumb/obst-kirschen-2211-104.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/obst-kirschen-2211-104.html'><strong>Obst / Kirschen</strong></a><br /><br />
+                    "Kaiserin Eugenie". Chromolithographie nach G. Ebenhusen aus Nicolas Gaucher, Pomologie des Praktischen Obstbaumzüchters, Stuttgart 1894, Blattgröße 25 x 18 cm. - Ausführliche Sortenbeschreibung beiliegend. <br /><br />
+                    <span style="display: none">Gauchers "Pomologie" stellt eine wertvolle Dokumentation alter Obsorten dar. Die Abbildungen übernahm der Autor aus der von ihm hrsg. Zeitschrift "Der praktische Obstbaumzüchter".</span>
+                    <a href='/en/articles/obst-kirschen-2211-104.html'>Continue reading</a><br /><br />
+                    Order no. 2211-104
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-106>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/orchidee-2211-106.html'>
+                            <img class='thumb' src='/img/thumb/orchidee-2211-106.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/orchidee-2211-106.html'><strong>Orchidee</strong></a><br /><br />
+                    "Epidendrum Finense - Epidendre de la Chine". Farbkupferstich in Punktiermanier mit sorgfältig altkolorierten Details von Marye nach Pierre Joseph Redouté aus "Les Liliacées" (Taf. 113), Paris 1802-16, Bildformat ca. 40 x 30 cm, Blattgröße 51 x 34 cm. - Bis zum Plattenrand beschnitten, stellenweise gering fleckig. <br /><br />
+                    <span style="display: none">Nissen 1597. - Schönes großformatiges Blatt aus einem der beiden Hauptwerke Redoutés.</span>
+                    <a href='/en/articles/orchidee-2211-106.html'>Continue reading</a><br /><br />
+                    Order no. 2211-106
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-166>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/storchschnabel-geranie-2112-166.html'>
+                            <img class='thumb' src='/img/thumb/storchschnabel-geranie-2112-166.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/storchschnabel-geranie-2112-166.html'><strong>Storchschnabel (Geranie)</strong></a><br /><br />
+                    "Geranium primum. Storckenschnabel." Altkolorierter Holzschnitt aus Leonhart Fuchs, De historia stirpium, Basel, Isingrin,  1542, Blattgröße 35 x 23,5 cm. Rückseitig lateinischer Text. - Minimal fleckig, alte handschriftliche Zusätze.  <br /><br />
+                    <span style="display: none">Nissen 658. - Einzelblatt (Seite 204) aus der ersten Ausgabe des berühmten Kräuterbuchs, dekorativ und selten. Verfasser war der deutsche Arzt L. Fuchs (1501-1566), nach dem später die Pflanzengattung Fuchsia benannt wurde.</span>
+                    <a href='/en/articles/storchschnabel-geranie-2112-166.html'>Continue reading</a><br /><br />
+                    Order no. 2112-166
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-112>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/tabak-2311-112.html'>
+                            <img class='thumb' src='/img/thumb/tabak-2311-112.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/tabak-2311-112.html'><strong>Tabak</strong></a><br /><br />
+                    Altkolorierter Kupferstich von P. Sluyter aus Maria Sibylla Merian, Metamorphosis insectorum Surinamensium, vermutlich holländische Ausgabe um 1730, 36 x 26 cm. - Weißblühende Tabakpflanze mit Schmetterlingen, Raupe und Puppe sowie kleineren Insekten. Prachtvolles seltenes Blatt nach einer Pergamentmalerei der bedeutenden frühen Naturforscherin und Künstlerin Maria Sibylla Merian (1647-1717), die sich zwei Jahre in Suriname aufhielt. - Geringfügig nachgedunkelt, vereinzelte Stockflecken und eine kleine alte Reparaturstelle im breiten weißen Rand. <br /><br />
+                    <span style="display: none">Nissen 1341 (Taf. 36).</span>
+                    <a href='/en/articles/tabak-2311-112.html'>Continue reading</a><br /><br />
+                    Order no. 2311-112
+                    <br />
+                    
+                        € 1.400,-,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

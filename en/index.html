@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiener Antiquariat Ingo Nebehay</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+    
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/index.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+<h1>Welcome!</h1>
+<p>Established in 1962, our premises are situated right in the heart of Vienna (2 minutes from St. Stephen's). We buy and sell old &amp; rare books, fine antique prints and autographs and offer expert advise.</p>
+<p><a class="btn btn-primary btn-lg" href="/en/catalogs" role="button">
+To our online catalog &raquo;
+</a></p>
+<hr />
+<p>We are happy to keep you up-to-date about new offers.</p>
+<p><a class="btn btn-primary btn-lg" href="https://wienerantiquariat.hosted.phplist.com/lists/?p=subscribe&id=3" role="button">
+Subscribe to new catalogs &raquo;
+</a></p>
+<hr />
+<p><a class="fancybox" href='/img/raum.jpg'>
+<img style='width:100%' src='/img/raum.jpg'>
+</a></p>
+<hr />
+<h2>Opening hours before Christmas</h2>
+<p>Monday through Thursday  12:30 pm - 6:00 pm<br />
+Friday  10:00 am - 7:00 pm<br />
+Saturday  10:00 am - 5:00 pm<br />
+Dec 24  9:30 am - 1:00 pm<br />
+Closed Dec 8 &amp; 25 - Jan 1</p>
+<hr />
+<h2>How to find us</h2>
+<div id='mapscontainer'>
+
+<iframe id='maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.9969705571793!2d16.367901715740402!3d48.20667427922906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e85732f8f%3A0x1704082298ffe328!2sWiener%20Antiquariat%20Ingo%20Nebehay!5e0!3m2!1sen!2sch!4v1571597729278!5m2!1sen!2sch" scrolling='no'></iframe>
+</div>
+
+<hr />
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

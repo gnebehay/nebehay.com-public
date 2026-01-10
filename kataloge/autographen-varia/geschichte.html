@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autographen &amp; Varia</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/autographs-misc/history.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Autographen &amp; Varia</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Geschichte
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/autographen-varia.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/autographen-varia/geschichte.html'>Geschichte</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/kunst.html'>Kunst</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/literatur.html'>Literatur</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/musik.html'>Musik</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/theater-film-tanz-zirkus.html'>Theater, Film, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/autographen-varia/wissenschaft-technik-sport.html'>Wissenschaft, Technik, Sport</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2003-4>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/arthaber-rudolf-von-industrieller-und-kunstmazen-1795-1867-2003-4.html'>
+                            <img class='thumb' src='/img/thumb/arthaber-rudolf-von-industrieller-und-kunstmazen-1795-1867-2003-4.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/arthaber-rudolf-von-industrieller-und-kunstmazen-1795-1867-2003-4.html'><strong>Arthaber, Rudolf von, Industrieller und Kunstmäzen (1795-1867)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift, 1 Seite auf Doppelblatt, kl-4, Wien, 9. 3. 1842, mit eigh. Adresse und Siegel. - An Carl H. Kob in Leipzig. "Verehrter Freund! Sehr erfreut hat mich Ihr w[ert]h[es] v. 22[.] v[origen] M[onaths], denn es brachte mir die Nachricht Ihres und der w[ert]h[en] Ihrigen Wohlbefindens, u. ich werde mich sehr gern Ihrem Auftrage unterziehen. Nur muss ich Sie ersuchen mir einige Zeit zu gönnen, da man bey den Herren, die ich größtentheils persönlich kenne, wenn man nicht selbst sie besucht, nicht leicht etwas mehr als eine bloße Unterschrift erhält. Verlassen Sie sich darauf, ich werde mir die Sache angelegen seyn lassen, aber Zeit gönnen Sie mir. Indem ich Sie ersuche Ihrer lieben Frau und Familie mich bestens zu empfehlen, habe ich das Vergnügen, Sie herzlich zu grüßen und mit aller Achtung zu seyn Ihr Ergebener Arthaber". - Adressblatt mit Poststempeln und Empfängervermerken. <br /><br />
+                    <span style="display: none">Der erfolgreiche österreichische Textilfabrikant unterhielt Zweigniederlassungen in Budapest, Mailand und Rom sowie ein Handelshaus in Leipzig und beschäftigte zeitweise etwa 8000 Menschen. 1839 war er Mitbegründer und später Präsident des Niederösterreichischen Gewerbevereins. In seiner Villa in Wien-Döbling trug er die damals bedeutendste Wiener Kollektion zeitgenössischer Kunst zusammen, auch regte er die Gründung des Wiener Kunstvereins an. Politisch liberal eingestellt, befürwortete er 1848 die Anliegen der Märzrevolution und leitete diese mit ein. - Selten.</span>
+                    <a href='/artikel/arthaber-rudolf-von-industrieller-und-kunstmazen-1795-1867-2003-4.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-4
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-16>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/dayan-yael-schriftstellerin-u-politikerin-geb-1939-tochter-von-general-moshe-dayan-1603-16.html'>
+                            <img class='thumb' src='/img/thumb/dayan-yael-schriftstellerin-u-politikerin-geb-1939-tochter-von-general-moshe-dayan-1603-16.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/dayan-yael-schriftstellerin-u-politikerin-geb-1939-tochter-von-general-moshe-dayan-1603-16.html'><strong>Dayan, Yael, Schriftstellerin u. Politikerin (geb. 1939), Tochter von General Moshe Dayan.</strong></a><br /><br />
+                    Albumblatt in Postkartengröße mit eigh. 3 Zeilen und Unterschrift, um 1975. - Sammlervermerke. <br /><br />
+                    <span style="display: none">"All people who suffered a lot have a sense of humour?"</span>
+                    <a href='/artikel/dayan-yael-schriftstellerin-u-politikerin-geb-1939-tochter-von-general-moshe-dayan-1603-16.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1603-16
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2003-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/diaz-porfirio-general-und-politiker-1830-1915-2003-14.html'>
+                            <img class='thumb' src='/img/thumb/diaz-porfirio-general-und-politiker-1830-1915-2003-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/diaz-porfirio-general-und-politiker-1830-1915-2003-14.html'><strong>Díaz, Porfirio, General und Politiker (1830-1915)</strong></a><br /><br />
+                    Diktatbrief in spanischer Sprache mit Initialen in Golddruck und eigh. Unterschrift, 1 1/2 Seiten auf Doppelblatt, kl-4, México, 9. 11. 1899. - An Barbara Frances Stuart, Gattin des Chefingenieurs der in Konkurs gegangenen Mexican Southeastern Railroad Company. Sagt ihr die Weiterleitung von Informationen zu, die ihren von Gläubigern und der Justiz verfolgten Mann entlasten sollen. "... que es lo unico que puedo hacer ...". - Mit montiertem Kuvert; die zweite Seite etwas fleckig, die dritte (leere) Seite mit Montagespuren, auf der vierten Seite eine zeitgenössische handschriftliche englische Übersetzung aufgeklebt; angeheftet das vierseitige englische Briefkonzept von Barbara Frances Stuart mit ausführlicher Darstellung der Angelegenheit. <br /><br />
+                    <span style="display: none">Díaz kämpfte zunächst gegen konservative Generäle sowie gegen die Franzosen, dann gegen Kaiser Maximilian. Als Staatspräsident (1876-1880 und 1884-1911) regierte er autoritär, förderte aber die wirtschaftliche Entwicklung von Mexiko und holte ausländische Investoren ins Land, unter anderem für den Ausbau des Eisenbahnwesens.</span>
+                    <a href='/artikel/diaz-porfirio-general-und-politiker-1830-1915-2003-14.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2003-14
+                    <br />
+                    
+                        € 320,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.html'>
+                            <img class='thumb' src='/img/thumb/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.html'><strong>Don Carlos. - Elisabeth von Valois, Königin von Spanien (1545-1568)</strong></a><br /><br />
+                    Eigenhändiger Brief ohne Unterschrift, 1/2 Seite, in-4, ohne Ort und Datum (wohl Madrid oder Aranjuez, Juli 1568), rückseitig adressiert "A Monssieur lambassadeur". - Geheimschreiben (klein gefaltet, am rechten Rand Nadelspuren), wohl an Raimond Beccarie de Fourquevaux, den französischer Botschafter am spanischen Hof. Über den bevorstehenden Tod des Infanten Don Carlos. "monssieur lambassadeur jay eu au jaurduy de fort movaises [nouvelles] (Einfügung, wohl von fremder Hand) du prince parquoy il me samble quil vaut mieux que monssieur ... Cest atande a venir aun autre jour je Vous envoye les lettres dans lesquelles je me remets a vous je ne pance pas quil passe cete nuit" (Herr Botschafter, ich habe heute ganz schlechte Nachrichten vom Prinzen gehabt ... ich denke nicht, dass er diese Nacht überleben wird). - Stellenweise braun- und tintenfleckig. <br /><br />
+                    <span style="display: none">Elisabeth, Tocher Heinrichs II. von Frankreich und Katharinas von Medici, war die dritte Gemahlin von Philipp II. Ursprünglich mit dessen Sohn Don Carlos verlobt, wurde sie nach dem Tod von Philipps zweiter Frau als vierzehnjährige französische Prinzessin mit dem spanischen König verheiratet, was den Frieden zwischen Frankreich und Spanien sichern sollte. In ihre Rolle als spanische Königin lebte sie sich gut ein, wie auch ihre Ehe mit dem wesentlich älteren Philipp glücklich gewesen sein dürfte. Ihr körperlich und geistig zurückgebliebener Stiefsohn Don Carlos war kränklich, litt unter Wahnvorstellungen und wurde wegen seiner Unberechenbarkeit von seinem Vater unter Hausarrest gestellt. Der Infant verstarb am 24. 7. 1568 im Alter von 23 Jahren, Elisabeth folgte ihm wenige Wochen später nach einer Fehlgeburt; beide wurden im Monasterio de San Lorenzo de El Escorial beigesetzt. Die angebliche Liebesbeziehung zwischen Don Carlos und Elisabeth, wie sie unter anderem von Schiller literarisch verarbeitet wurde, gehört in den Bereich späterer romantischer Legendenbildung. - Autographe der Königin, noch dazu Don Carlos betreffend, sind von größter Seltenheit.</span>
+                    <a href='/artikel/don-carlos-elisabeth-von-valois-konigin-von-spanien-1545-1568-2403-24.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-24
+                    <br />
+                    
+                        € 2750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-13>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/eugen-von-savoyen-feldherr-und-staatsmann-1663-1736-1903-13.html'>
+                            <img class='thumb' src='/img/thumb/eugen-von-savoyen-feldherr-und-staatsmann-1663-1736-1903-13.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/eugen-von-savoyen-feldherr-und-staatsmann-1663-1736-1903-13.html'><strong>Eugen von Savoyen, Feldherr und Staatsmann (1663-1736)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift, 4 Seiten, in-8, Blessy (Arr. Béthune, Dép. Pas-de-Calais), 28. 9. 1710. - Inhaltsreiches Schreiben aus dem Spanischen Erbfolgekrieg an eine Exzellenz aus Wien, deren Rückkehr dringend erwartet wird, mit Erwähnung des ersten Duke of Marlborough (John Churchill) und einer Stellungname zu neuen Friedensverhandlungen. "jay receu hier la lettre de S[on] E[xcellence] du 10 ainsi une poste plus tard que les autres. je suis ravi que son rétour soit sur ce n'ést pas tout il faut qu'elle soit icy avant la fin d'octobre estant absolument necessaire que le duc de marlborough et moy puissions vous parler avant nostre depart la victoires despagne et lestat des affaires de ces pays ne laissant presque pas douter que cette hyver ne soit une des plus turbulente quil y aye eue pour les negotiations et vous scavé par experience que si on ne peut pas arrester entierement cequi pourroit estre contraire au service du maistre aumoins on leurs fait faire beaucoup plus de reflexions et suspendre souvent les resolutions precipités quil seroient capables de prendre dans les premiers mouvements soit de crainte ou d'enuie de la paix sans considerer que tout le monde la souhaite bonne mais qu'une mauvaise est pire que la guerre ne pouvant pas durer. jay veu la lettre qu'on repond a l'estat et je la trouve bien, les affaires d'engleterre vont de pis en pis nous en parleront a vostre retour celleicy serat la dernierre esperant mesme qu'elle ne vous trouverat plus a vienne; a vostre retour nous parlerons aussi de ceque vous me mandé des affaires de la cour et je suis de S[on] E[xcellence] tres humble et tres obeissant serviteur Eugen de Savoye". <br /><br />
+                    <span style="display: none">Provenienz: Auktion Stargardt 653 (1993) Nr. 1353. - Nach glänzenden Siegen in Hochstädt/Blenheim (1704), Ramillies (1706) und Malplaque (1709) waren der Duke of Marlborough und Prinz Eugen Ende April 1810 von Tournay aus aufgebrochen, um die französischen Linien von Marschall Villars zu durchbrechen. Der Marschall wich einer Schlacht aus, und die Verbündeten eroberten im Juni Douai und Béthune und im September Saint-Venant, während in Spanien Generalfeldzeugmeister Starhemberg mit Unterstützung der britischen Truppen unter Lord Stanhope im Juli und August Siege bei Almenara und Saragossa erfocht; am Tag der Abfassung des Briefs zog Karl von Österreich in Madrid ein. Zugleich begann aber in England der Stern Churchills zu sinken - er musste im folgenden Jahr seine politischen Ämter aufgeben und wurde 1712 auch als Feldherr abberufen. Die dadurch geschwächten Truppen Eugens erlitten daraufhin im Juli dieses Jahres in der Schlacht bei Denain eine empfindliche Niederlage gegen Villars. - Eigenhändige Briefe Prinz Eugens sind selten.</span>
+                    <a href='/artikel/eugen-von-savoyen-feldherr-und-staatsmann-1663-1736-1903-13.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1903-13
+                    <br />
+                    
+                        € 6800,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-16>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ferdinand-karl-d-este-erzherzog-von-osterreich-1781-1850-2009-16.html'>
+                            <img class='thumb' src='/img/thumb/ferdinand-karl-d-este-erzherzog-von-osterreich-1781-1850-2009-16.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ferdinand-karl-d-este-erzherzog-von-osterreich-1781-1850-2009-16.html'><strong>Ferdinand Karl d&#39;Este, Erzherzog von Österreich (1781-1850)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1/2 Seite, in-8,  ohne Ort und Datum (1847). - "Liebster Fürst, mit vielen[!] Dank stelle ich Ihnen die mir mitgetheilte interessante Anlage zurück. - Wir sind alle sehr betroffen über den so unerwarteten Tod des so guten, und hoffnungsvollen E[rz]H[erzog] Friedrich - dieses so traurige Ereigniß verspäte[!] um einige Tage die Abreiße nach Mähren von meinem Neffen Ferdinand, mit seiner jungen Frau / Eh. Ferdinand". - Im unbeschriebenen Teil etwas fleckig. <br /><br />
+                    <span style="display: none">Der Enkel von Maria Theresia und Franz I. nahm an zahlreichen Feldzügen gegen die Franzosen teil, wurde 1836 zum Feldmarschall ernannt und wirkte zuletzt als kaiserlicher Kommissär in Siebenbürgen. Vizeadmiral Erzherzog Friedrich (1821-1847) war der dritte Sohn von Erzherzog Karl und verstarb 26jährig an Gelbsucht. Beim "Neffen Ferdinand" handelt es sich um den ebenfalls jung verstorbenen Feldmarschallleutnant Ferdinand Karl Viktor d'Este (1821-1849), der 1847 die damals 16jährige Elisabeth, Tochter von Erzherzog-Palatin Josef Anton und Maria Dorothea von Württemberg, ehelichte.</span>
+                    <a href='/artikel/ferdinand-karl-d-este-erzherzog-von-osterreich-1781-1850-2009-16.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-16
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-18>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/fey-emil-politiker-1886-1938-1902-18.html'>
+                            <img class='thumb' src='/img/thumb/fey-emil-politiker-1886-1938-1902-18.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/fey-emil-politiker-1886-1938-1902-18.html'><strong>Fey, Emil, Politiker (1886-1938)</strong></a><br /><br />
+                    Maschinbrief mit eigenhändiger Unterschrift "Fey" und gedrucktem Briefkopf als Bundesminister, Generalstaatskommissär und Major der Reserve, 1 1/4 Seiten, gr-8, Wien, 17. 10. 1935. - An eine Sekretärin. "... Aus Anlass meines Scheidens als Bundesminister und Generalstaatskommissar, ist es mir ein Herzensbedürfnis, Ihnen noch einmal ... für Ihre mir während meiner Amtstätigkeit geleisteten ausgezeichneten Dienste den aufrichtigsten Dank und vollste Anerkennung auszusprechen ...". - Minimal knittrig. <br /><br />
+                    <span style="display: none">Emil Fey, Berufsoffizier und Heimwehrführer, wurde im September 1933 Vizekanzler der Regierung Dollfuß, musste dieses Amt aber bereits im Mai 1934 wieder an seinen Rivalen Ernst Rüdiger Starhemberg abtreten. Am Tag der Abfassung des voreliegenden Briefs verlor er seinen Posten als Bundesminister im Bundeskanzleramt und blieb nur noch (bis Mai 1936) als Minister für die innere Verwaltung sowie für die "Bekämpfung staatsgefährlicher Bestrebungen in der Privatwirtschaft" zuständig. Nach der Machtergreifung der Nationalsozialisten beging er Selbstmord.</span>
+                    <a href='/artikel/fey-emil-politiker-1886-1938-1902-18.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-18
+                    <br />
+                    
+                        € 145,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-22>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/franz-i-kaiser-von-osterreich-1768-1835-2509-22.html'>
+                            <img class='thumb' src='/img/thumb/franz-i-kaiser-von-osterreich-1768-1835-2509-22.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/franz-i-kaiser-von-osterreich-1768-1835-2509-22.html'><strong>Franz I., Kaiser von Österreich (1768-1835)</strong></a><br /><br />
+                    Gedrucktes Circular der Niederösterreichischen Landesregierung zu seinem Ableben, gezeichnet von seinem Nachfolger Ferdinand, Wien, 2. 3. 1835, dazu ein weiteres gedrucktes Circular mit einem Auszug aus dem Testament, Wien, 8. 3. 1835, jeweils gr-folio (44 x 57 cm). - Einzelne Flecken, Falt- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Der erste Einblattdruck verlautbart auch die Thronbesteigung Ferdinands und fordert die Untertanen auf, "sogleich jede mit der allgemeinen Trauer unvereinbarliche Belustigungsart" einzustellen.</span>
+                    <a href='/artikel/franz-i-kaiser-von-osterreich-1768-1835-2509-22.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-22
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1903-14>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/frobel-julius-politiker-1805-1893-1903-14.html'>
+                            <img class='thumb' src='/img/thumb/frobel-julius-politiker-1805-1893-1903-14.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/frobel-julius-politiker-1805-1893-1903-14.html'><strong>Fröbel, Julius, Politiker (1805-1893)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift, 2 Seiten auf Doppelblatt, in-8, Frankfurt/M., 2. 4. 1858. - An Elisabeth Lewald, Gattin des Justizrates Otto Lewald in Berlin. "Geehrte Freundin: Sie haben in Ihren Zeilen, für die ich Ihnen von Herzen danke, nach meinem Sohn gefragt. Ich schicke Ihnen hiermit denselben als Träger dieses Briefes. Er studirt seit einem Jahre in Freiberg, wird im Herbst wieder nach Amerika zurückkehren, und benutzt seine Ferien zu einem Besuche in Berlin. Es wird vielleicht Ihrer ganzen Freundlichkeit bedürfen um über seinen Mangel an Liebenswürdigkeit hinweg zu sehen. Das deutsche, das schweizerische u. das amerikanische Element liegen in seinem Wesen noch unvermittelt nebeneinander, und sein bisheriges Leben hat wenige sonnige Tage gehabt deren Wärme zur Verschmelzung hätte beitragen können. Ich weiß daß Sie ihn mit Güte empfangen werden. / Ich hoffe es wird uns vor unserer Rückkehr nach Amerika, die im Sommer statt finden soll, möglich werden einen Besuch in Berlin zu machen. Ich glaube ich werde Sie dann überzeugen können, daß wenn auch die Erfahrungen u. das Denken in zehn Jahren mir die Ziele des geistigen Strebens in anderer Gestalt gezeigt haben mögen, dieses Streben selbst in mir nicht erkaltet ist. In meinem Buche mag Sie manches Wort kalt anwehen. Ich habe die Schwachheit, dem Verdrusse über das was ich hinderlich erkenne, oft auch den zwecklosen Ausdruck nicht versagen zu können. Dies sind jedoch Äußerlichkeiten, und aus eigener Erfahrung hege ich die innigste Ueberzeugung, daß der echte Enthusiasmus für alles was unseres Strebens würdig ist, durch keine Beschäftigung mit der Wirklichkeit und ihren Härten leiden kann, wenn er auch eine andere Form annehmen mag. / Ich freue mich bei meinem Besuche Herrn Lewald kennen zu lernen. Sagen Sie ihm meinen Gruß. / Julius Froebel". - Schrift durchschlagend, etwas knittrig. <br /><br />
+                    <span style="display: none">Der deutsche Geologe und Mineraloge Fröbel war im Vormärz ein führender Politiker der demokratischen Bewegungen und verlegte in der Schweiz unter dem Pseudonym C. Junius in Deutschland verbotene demokratische Literatur. 1848 wurde er Mitglied der Frankfurter Nationalversammlung und nahm als deren Delegierter gemeinsam mit Robert Blum am Wiener Oktoberaufstand teil. Hier zunächst zum Tode verurteilt, dann aber im Gegensatz zu Blum begnadigt, emgrierte er nach Amerika und arbeite dort als Anwalt. Seine dort gemachten Erfahrungen verarbeite er unter anderem in dem Buch "Aus Amerika. Erfahrungen, Reisen und Studien" (2 Bde. 1857-1858). Nachdem Fröbel 1857 in Deutschland unter die Generalamnestie gefallen war, engagierte er sich hier weiterhin politisch und trat in seinen späteren Lebensjahren als Diplomat in den Dienst des Deutschen Reichs. Er gilt heute als Vordenker der Diskurstheorie bzw. der deliberativen Demokratie.</span>
+                    <a href='/artikel/frobel-julius-politiker-1805-1893-1903-14.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1903-14
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-33>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/hermannstadt-sibiu-2509-33.html'>
+                            <img class='thumb' src='/img/thumb/hermannstadt-sibiu-2509-33.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/hermannstadt-sibiu-2509-33.html'><strong>Hermannstadt / Sibiu</strong></a><br /><br />
+                    Ehrenbürgerdiplom für Hauptmann Johann Ritter von Herle, überreicht von Bürgermeister, Magistrat und Gemeinderat der ehemaligen siebenbürgischen Hauptstadt. Mehrfarbig geschriebene und ausgeschmückte deutsche Handschrift auf starkem Papier mit gedecktem Siegel und mehreren Unterschriften, Hermannstadt 27. 5. 1852. 3 Blätter in-4 mit Seidenhemdchen, eingebunden in rote Samtmappe mit Metallappliken und Seidenmoiréevorsätzen; leichte Gebrauchs- und Altersspuren. - Beiliegend ein kallligraphierter "Nachruf" der Stadtverantwortlichen anlässlich von Herles Abschied von Hermannstadt im Jahr 1857 mit Dankworten des Bürgermeisters und einem zehnstrophigen Gedicht; Doppelblatt in-4 mit lithographierter Bordüre, dazu ein Entwurf in Form eines S-förmigen Papierstreifens. <br /><br />
+                    <span style="display: none">Dekorative Urkunde mit ornamentaler und figuraler Ausschmückung sowie reicher Goldhöhung, aufwendig und vermutlich ohne Verwendung lithographierter Elemente angefertigt. Johann von Herle diente als Hauptmann im 5. Feldartillerie-Regiment der österreichischen Armee und war Ritter des Militär-Maria-Theresien- und des Leopold-Ordens. Während der Ungarischen Revolution von 1848/1849 zeichnete er sich in Hermannstadt bei einem feindlichen Kavallerieangriff am 21. 1. 1849 durch besonderen Einsatz aus.</span>
+                    <a href='/artikel/hermannstadt-sibiu-2509-33.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-33
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-45>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/illustre-gaste-2409-45.html'>
+                            <img class='thumb' src='/img/thumb/illustre-gaste-2409-45.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/illustre-gaste-2409-45.html'><strong>Illustre Gäste</strong></a><br /><br />
+                    Zwei vorgedruckte Einzelblätter aus dem Fremdenbuch vermutlich eines österreichischen Hotels aus den Jahren 1935 bis 1937 mit insgesamt 10 eigenhändigen Namenszügen, meist ergänzt durch weitere Angaben. Hervorzuheben sind: Abdul Medjid, letzter osmanischer Kalif (1868-1944) und seine Tochter Durru Shehvar (1914-2006); Krishnaraja Wadiyar IV., Maharaja von Mysore (1884-1940) und sein Premierminister (Dewan) Mirza Muhammad Ismail (1883-1959); Jagatjit Singh, letzter regierender Maharaja von Kapurthala (1872-1949, mit Namenszug sowohl in lateinischer wie in arabischer Schrift) und sein dritter Sohn Maharajkumar Amarjit Singh (1893-1944); die italienischen Sportler Umberto Cerati (Langstreckenläufer, 1911-1994) und Danilo Innocenti (Stabhochspringer, 1904-1949). - Faltspuren. <br /><br />
+                    <span style="display: none">Abdul Medjid (Abdülmecid) II. wurde nach dem Ende des osmanischen Sultanats (1922) zum Kalifen gewählt; zwei Jahre später wurde auch das osmanische Kalifat aufgelöst und Abdul Medjid ging ins Exil nach Paris, wo er Musik, Literatur und bildende Künste förderte und sich auch selbst mit Malerei beschäftigte. Seine einzige Tochter Durru Shehvar (Dürrüsehvar) heiratete 1931 in Nizza den Kronprinzen von Hyderabad und wurde in dem indischen Staat zu einer populären Figur des öffentlichen Lebens. Der weitblickende und reformfreudige Krishnaraja Wadiyar gilt als Musterbild eines Herrschers und bescherte dem südindischen Fürstenstaat Mysore ein "goldenes Zeitalter"; zugleich war er nach dem Nizam von Hyderabad der zweitreichste Mann Indiens. Sein Jugendfreund Mirza Muhammad Ismail trug als hervorragender Administrator wesentlich zum Gedeihen Mysores bei. Jagatjit Singh beherrschte eine Reihe von Sprachen, war frankophil orientiert und unternahm ausgedehnte Reisen durch mehrere Kontinente; er war mit vielen europäischen Herrschern - darunter auch Kaiser Franz Joseph - persönlich bekannt. Maharajkumar Amarjit Singh machte militärisch Karriere und diente unter anderem im 1. Weltkrieg als Offizier der Britisch-Indischen Armee in Frankreich. Die Spitzensportler Cerati und Innocenti nahmen beide an den Olympischen Sommerspielen 1936 in Berlin teil.</span>
+                    <a href='/artikel/illustre-gaste-2409-45.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-45
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kaiserhaus-karl-i-1887-1922-2409-48.html'>
+                            <img class='thumb' src='/img/thumb/kaiserhaus-karl-i-1887-1922-2409-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kaiserhaus-karl-i-1887-1922-2409-48.html'><strong>Kaiserhaus / Karl I. (1887-1922)</strong></a><br /><br />
+                    Versilberte Bronzemedaille mit Porträt, Wappen und Wahlspruch INDIVISIBILITER AC INSEPARABILITER. Durchmesser 50 mm, Gewicht 48,9 g. - Kleine Prüfspuren im Rand. <br /><br />
+                    <span style="display: none">Nicht bei Wurzbach. - Auch in Silber bekannt; ohne Künstlersignatur. Selten.</span>
+                    <a href='/artikel/kaiserhaus-karl-i-1887-1922-2409-48.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-48
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-40>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kitzbuhel-maximilian-erzherzog-von-osterreich-1558-1618-2102-40.html'>
+                            <img class='thumb' src='/img/thumb/kitzbuhel-maximilian-erzherzog-von-osterreich-1558-1618-2102-40.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kitzbuhel-maximilian-erzherzog-von-osterreich-1558-1618-2102-40.html'><strong>Kitzbühel - Maximilian, Erzherzog von Österreich (1558-1618)</strong></a><br /><br />
+                    Kanzleibrief der Innsbrucker Statthalterei in Innsbruck im Auftrag von "F[ürst]l. D[urch]l[aucht] Erzherzog Maximiliani zu österr. President, Canzler, Regent und Rath o[ber]o[esterr.] Lande", 1 1/2 Seiten, Adressblatt mit 5 kleinen papiergedeckten Siegeln, in-4, Innsbruck, 3. September 1616. - An "Den Ersamen weisen, H[errn] Bürgermaister und Rath der Stat Kitzbihl, vnsern guten Freundten". Über die Bereinigung von Unstimmigkeiten bei der Besteuerung der im Kitzbühler Bergbau und Hüttenwesen tätigen Berufsgruppen; ausdrücklich genannt werden Schmelzer, Gewerken, Stürzer und Bergwerksarbeiter. Mit vier Unterschriften, darunter Lazarus F[rei]h[err] zu Spaur. - Transkription beiliegend. <br /><br />
+                    <span style="display: none">"... Demnach man nun ein lange zeit herr ... in der Herrschafft Küzpühel ... vil und vberflüßig behelligt worden, auch deßen noch kein End ist, ... damit man aber ... zu rhue khomen mege, Sein wir entschloßen, ein solliche Ab= und außtheillung zu mach[en] ...". Gut erhaltenes, wirtschaftshistorisch interessantes Dekret zu dem bis in die Bronzezeit zurückreichenden Kitzbühler Bergbau auf Silber und Kupfer, der allerdings um 1600 seinen Höhepunkt bereits wieder überschritten hatte. Durch die habsburgischen Haus- und Teilungsverträge von 1379 und 1406 war die Grafschaft Tirol staatsrechtlich mit den vorderösterreichischen Landen verbunden; unter Kaiser Maximilian wurde für diesen Regierungs- und Verwaltungsbereich der Oberbegriff "Oberösterreichische Lande" eingeführt. Maximilian (III.), Bruder der Kaiser Rudolf II. und Mathias, war der erste habsburgische Hoch- und Deutschmeister und seit 1602 Regent in Tirol.</span>
+                    <a href='/artikel/kitzbuhel-maximilian-erzherzog-von-osterreich-1558-1618-2102-40.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-40
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1906-24>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/leopold-i-romisch-deutscher-kaiser-1640-1705-1906-24.html'>
+                            <img class='thumb' src='/img/thumb/leopold-i-romisch-deutscher-kaiser-1640-1705-1906-24.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/leopold-i-romisch-deutscher-kaiser-1640-1705-1906-24.html'><strong>Leopold I., römisch-deutscher Kaiser (1640-1705)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift, 2/3 Seite auf Doppelblatt, in-4, Augsburg, 1. 2. 1690. Mit eigh. Adressblatt. - Schwer lesbares Schreiben an seinen Schwiegersohn Kurfürst Maximilian II. Emanuel von Bayern betreffend einen Stallmeister, unterzeichnet als "Dienstwillig[er] Vetter Leopold". - Mehrfach gefaltet und etwas fleckig, Adressblatt angeschmutzt und mit Siegelspur. <br /><br />
+                    <span style="display: none">Der Fürstabt von Fulda, Placidus von Droste, hatte Leopolds dritte Gemahlin Leonore am 19. 1. 1690 in Augsburg zur Kaiserin gekrönt. Der gemeinsame zwölfjährige Sohn Joseph (der spätere Kaiser Joseph I.) war am 24. 1. 1690 beim Kurfürstentag in Augsburg zum römischen König gewählt und zwei Tage später ebenfalls hier gekrönt worden. Leopold hatte diese Maßnahmen ohne Mühe durchgesetzt und dokumentierte damit seine gefestigte Stellung im Reich.</span>
+                    <a href='/artikel/leopold-i-romisch-deutscher-kaiser-1640-1705-1906-24.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1906-24
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/liechtenstein-anton-florian-furst-staatsmann-und-landesherr-1656-1721-2302-51.html'>
+                            <img class='thumb' src='/img/thumb/liechtenstein-anton-florian-furst-staatsmann-und-landesherr-1656-1721-2302-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/liechtenstein-anton-florian-furst-staatsmann-und-landesherr-1656-1721-2302-51.html'><strong>Liechtenstein, Anton Florian (Fürst), Staatsmann und Landesherr (1656-1721)</strong></a><br /><br />
+                    Brief in italienischer Sprache mit eigenhändiger Empfehlungsformel und Unterschrift, 1 1/2 Seiten, kl-4, Wien, 17. 3. 1703. - An den kaiserlichen Staatsrat Marchese Antonio Santa Croce in Rom. Bericht über militärische Ereignisse im dritten Jahr des Spanischen Erbfolgekrieges, insbesondere über die letzten Operationen der kaiserlichen Truppen gegen Bayern ("ulteriori operazioni contra Baviera"). "... L'altre notitie sono, che li Francesi habbino già molte volte tentato di sforzare li passi & unirsi alli Bavaresi ...". Namentlich genannt werden der als "Türkenlouis" populär gewordene Reichsfeldmarschall Ludwig Wilhelm von Baden ("Luigi") sowie die Generäle Styrum und Schlick. - Schrift durchschlagend, etwas fleckig. <br /><br />
+                    <span style="display: none">Anton Florian wurde schon früh auf die Übernahme politischer Ämter am Kaiserhof vorbereitet. 1689 in den Geheimen Rat aufgenommen, wurde er zwei Jahre später von Leopold I. als Botschafter an den päpstlichen Hof nach Rom entsandt. Mit der Erziehung Erzherzog Karls, des späteren Kaisers Karl VI. betraut, war er von 1703 bis 1711 mit diesem - als nunmehr designiertem Gegenkönig Karl III. - im Spanischen Erbfolgekrieg im Einsatz. Nach seiner Rückkehr (1718) stellte sich Anton Florian an die Spitze des Hauses Liechtenstein, nahm den Titel eines Fürsten an und erreichte es, dass auch alle seine fürstlichen Nachfolger mit einem Sitz im Reichsfürstenrat belehnt wurden. Um das gesetzlich zu verankern, erhob Karl VI. die Herrschaften Schellenberg und Vaduz in die Reichsunmittelbarkeit, womit ein souveränes Reichsfürstentum Liechtenstein geschaffen wurde.</span>
+                    <a href='/artikel/liechtenstein-anton-florian-furst-staatsmann-und-landesherr-1656-1721-2302-51.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-51
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-52>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-2302-52.html'>
+                            <img class='thumb' src='/img/thumb/ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-2302-52.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-2302-52.html'><strong>Ligne, Charles-Joseph de (Fürst), Offizier, Diplomat und Schriftsteller (1735-1814)</strong></a><br /><br />
+                    Eigenhändiger Brief an einen fürstlichen Truppenführer, wie meist ohne Unterschrift, 1/2 Seite auf Doppelblatt, gr-8, Wien, 19. September (ohne Jahr). - Empfehlungsschreiben betreffend die Beförderung eines Unteroffiziers bei der berittenen Garde. "Le Cher Prince que j'aime, et admire depuis si Longtems, Veut il bien laisser tomber quelque bienfait d'avancement sur un bas officier de la garde à Cheval nommé charles Bauller? son pere etait 'Lieutenant-Colonel'. Ses parens icy m'ont prié de le recommander à Mon Prince. Je m'y recommande moi même, et le supplie de se souvenir toujours de son ...atique, ..., et idolatre. / Vienne le 19 7bre." - Kleine Tintenabklatsche. <br /><br />
+                    <span style="display: none">Provenienz: Auktion Stargardt 634 (1985) Nr. 1152. - Der aus Brüssel stammende Fürst de Ligne war ein hervorragender Militärexperte und Diplomat und wurde 1808 zum Feldmarschall ernannt. Als charmanter Kosmopolit verkehrte er in den höchsten Kreisen seiner Zeit.</span>
+                    <a href='/artikel/ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-2302-52.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-52
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/maiziere-lothar-de-politiker-geb-1940-1803-60.html'>
+                            <img class='thumb' src='/img/thumb/maiziere-lothar-de-politiker-geb-1940-1803-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/maiziere-lothar-de-politiker-geb-1940-1803-60.html'><strong>Maizière, Lothar de, Politiker (geb. 1940)</strong></a><br /><br />
+                    Farbiges Porträtfoto 16 x 11,5 cm mit eigh. Unterschrift "de Maizière" im weißen Unterrand, um 1990. - Montiert in Leinenmappe mit Kordelbindung und goldgeprägtem Staatswappen der DDR; das Foto mit kleinen Randunebenheiten. <br /><br />
+                    <span style="display: none">Der Rechtsanwalt Lothar de Maizière trat im November 1989 als Minister in die DDR-Regierung ein, wurde im April des folgenden Jahres zum Ministerpräsidenten gewählt und war ab August 1990 auch Außenminister. Nach der Wiedervereinigung blieb er bis zum Dezember 1990 Bundesminister für besondere Aufgaben.</span>
+                    <a href='/artikel/maiziere-lothar-de-politiker-geb-1940-1803-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1803-60
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2009-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/maleta-alfred-politiker-1906-1990-2009-42.html'>
+                            <img class='thumb' src='/img/thumb/maleta-alfred-politiker-1906-1990-2009-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/maleta-alfred-politiker-1906-1990-2009-42.html'><strong>Maleta, Alfred, Politiker (1906-1990)</strong></a><br /><br />
+                    Maschinschriftlicher Brief mit gedrucktem Kopf und eigenhändiger Unterschrift, 1 Seite, kl-4, Wien, 14. 2. 1955, mit Kuvert. - An Dr. Arnold Sucher. Intervention für den Propagandareferenten Eugen Zink, " ... der seit sieben Jahren zu den treuesten und agilsten Parteimitarbeitern gehört und dessen Beschwerde gegen seine Einstufung als Belasteter am 1. 3. 1955 vor die Beschwerdekommission im Bundesministerium für Inneres kommt. Du kannst Dir daher sicher denken, dass wir Interesse an dem Falle haben und Herrn Zink gerne behilflich sein möchten. Ich bitte dich, dieses Schreiben lediglich als vertrauliche Information über die Person unseres Mitarbeiters ... zu werten ... ". - Auf der Rückseite des Kuverts Empfängernotizen (teilweise stenographiert) mit Nennung mehrerer Namen. <br /><br />
+                    <span style="display: none">Der Jurist und spätere Unternehmer Alfred Maleta war in der Zwischenkriegszeit sowohl in der Arbeitnehmervertretung als auch in der Vaterländischen Front tätig; von 1938 bis 1941 war er in Dachau und Flossenbürg interniert. Nach dem Krieg wurde Maleta Abgeordneter und zeitweise Klubobmann der Österreichischen Volkspartei sowie Nationalratspräsident. Auf der Oberweiser Konferenz von 1949 suchte er ehemals führende Nationalsozialisten für die Volkspartei zu gewinnen, wozu ihn seine eigene Vergangenheit als KZ-Häftling gewissermaßen legitimierte. 1981 erschien Maletas Buch "Bewältigte Vergangenheit. Österreich 1932-1945". - Der Jurist und Politiker Arnold Sucher (1898-1983) war von 1936 bis zum Anschluss Landeshauptmann von Kärnten und beteiligte sich nach dem Krieg am Aufbau des Wiener Justizwesens; von 1966 bis 1968 war er Präsident des Oberlandesgerichts Wien. - Zeittypischer Beleg zur Praxis der Entnazifizierung in Österreich.</span>
+                    <a href='/artikel/maleta-alfred-politiker-1906-1990-2009-42.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2009-42
+                    <br />
+                    
+                        € 125,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/metternich-clemens-wenzel-lothar-furst-von-staatsmann-1773-1859-2305-59.html'>
+                            <img class='thumb' src='/img/thumb/metternich-clemens-wenzel-lothar-furst-von-staatsmann-1773-1859-2305-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/metternich-clemens-wenzel-lothar-furst-von-staatsmann-1773-1859-2305-59.html'><strong>Metternich, Clemens Wenzel Lothar Fürst von, Staatsmann (1773-1859)</strong></a><br /><br />
+                    Eigenhändiges Briefkuvert an den außerordentlichen Gesandten und bevollmächtigten Minister Graf Rewitzky in Florenz mit Absenderangabe "Metternich" auf der Vorderseite, Empfängervermerk 6. 2. 1842. Rückseitig Siegelrest. - Beiliegend zeitgenössisches Kupferstich-Porträt Metternichs von C. Schule bei Schumann, Zwickau 1814, Plattengr. 20 x 13 cm. <br /><br />
+                    <span style="display: none">Das Porträt zeigt Metternich als österreichischen Außenminister und Leiter der Staatskanzlei im Jahr des Beginns des Wiener Kongresses.</span>
+                    <a href='/artikel/metternich-clemens-wenzel-lothar-furst-von-staatsmann-1773-1859-2305-59.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-59
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2209-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/mindszenty-jozsef-kardinal-1892-1975-2209-60.html'>
+                            <img class='thumb' src='/img/thumb/mindszenty-jozsef-kardinal-1892-1975-2209-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/mindszenty-jozsef-kardinal-1892-1975-2209-60.html'><strong>Mindszenty, József, Kardinal (1892-1975)</strong></a><br /><br />
+                    Reproduziertes Foto mit Signatur im weißen Unterrand, 22,5 x 13,5 cm. <br /><br />
+                    <span style="display: none">Die Aufnahme zeigt den Primas von Ungarn in Begleitung von Papst Paul VI. bei der Eröffnung der Bischofssynode in Rom am 30. 9. 1971; zwei Tage zuvor war Mindszenty nach Schauprozess, Haft und fünfzehnjährigem Asyl in der Budapester US-Botschaft ins Exil gegangen. - Sehr selten.</span>
+                    <a href='/artikel/mindszenty-jozsef-kardinal-1892-1975-2209-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2209-60
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-57>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-1902-57.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-1902-57.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-1902-57.html'><strong>Napoleonische Kriege</strong></a><br /><br />
+                    Kalligraphiertes Bittschreiben des deutschen Kupferstechers und Kartographen Carl Jättnig an den französischen Generalkommandanten von Berlin, General Pierre Augustin Hullin, 1 Seite auf Doppelblatt, in-folio, Berlin, 22. 1. 1807. - Jättnig hatte an der Kartierung Westfalens durch den preußischen General Karl Ludwig von Le Coq mitgearbeitet, hatte jedoch nach der preußischen Niederlage bei Jena und Auerstedt (14. 10. 1806), der Flucht des Königs und dem Einzug der französischen Truppen in Berlin seine Stelle verloren und konnte nun sich und seine Familie nicht mehr ernähren. "... Nothgedrungen, und von der Brodtlosigkeit zu Boden gedrückt ... flehe ich Ew: Excellenz um Hülfe und Beistand an ... Ich würde mich zu jedem Geschäft brauchbar finden laßen ... zeige hiermit an, das ich auch als ein gelernter, und ehemals in Militair Diensten gestandener Chyrurgus, irgendwo bei einem Feld=Hospital unter der Leitung eines erfahrenen Arztes einstweilen ein brauchbarer Gehülfe sein würde. Wäre es aber auch auf diese Weise nicht möglich mir zu helfen, so wage ich die Bitte an Ew: Exzellenz mir zu erlauben, das ich nach Königsberg reisen dürfte, und mich dieserhalb mit einem sichern Pass zu versorgen ...". Mit französischer Zusammenfassung des Ansuchens von fremder Hand und zwei abschlägigen französischen Aktenvermerken. - Adressblatt etwas fleckig, Siegelrest. <br /><br />
+                    <span style="display: none">Über das weitere Schicksal Carl Jättnigs ist uns nichts bekannt. Mehrere Mitglieder der Berliner Familie, darunter sein gleichnamiger Sohn(?), waren bis zur Mitte des 19. Jhs. als Kupferstecher und Kartographen tätig (vgl. Thieme-Becker 18, 337).</span>
+                    <a href='/artikel/napoleonische-kriege-1902-57.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-57
+                    <br />
+                    
+                        € 185,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2001-58>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-berthier-alexandre-1753-1815-2001-58.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-berthier-alexandre-1753-1815-2001-58.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-berthier-alexandre-1753-1815-2001-58.html'><strong>Napoleonische Kriege - Berthier, Alexandre (1753-1815)</strong></a><br /><br />
+                    Diktatbrief mit eigh. Unterschrift als Major Géneral sowie von Berthier beglaubigte Abschrift eines Dekrets Kaiser Napoleons mit eigh. Unterschrift als Kriegminister, 2 1/2 und 3 Seiten, in-4, beide Schönbrunn, 24 brumaire XIV (25. 11. 1805). - An den Divisionsgeneral Henri Clarke, dem er seine Ernennung zum Generalgouverneur von Österreich und die damit verbundenen Aufgaben mitteilt: "... Vous êtes chargé de la police du pays et sous ce point de Vue, vous avez toutes les attributions du Ministre de la police. L'Administration, la Direction de la Gendarmerie, celle des gardes bourgeoises de Vienne; celle de toute les Villes et enfin de toute autre troupe qui existe dans l'arrondissement du Gouvernement de Vienne, sont aussi dans vos attributions ... Vous avez le Droit de representer et de parler au nom de l'Empereur. Tous vos actes devron porter en titre, Napoléon, Empereur des Français, Roi d'Italie ... L'intention de l'Empereur, Monsieur le Gouverneur, est que vous portiez un soin particulier a la surveillance des journaux, des livres, des theatres et de tout ce qui concerne la Religion et les cultes ... L'intention de L'Empereur est que Vous logierez au palais a Vienne .." Das beiliegende Dekret fasst in 15 Artikeln die Richtlinien für die Verwaltung der bisher besetzten österreichischen Gebiete und der noch zu besetzenden Provinzen Steiermark, Kärnten und Krain zusammen und ernennt neben Clarke als Generalgouverneur den Staatsrat Pierre Daru zum Generalintendanten. <br /><br />
+                    <span style="display: none">Nachdem die Franzosen am 5. November 1805 Innsbruck besetzt hatten, zogen sie beiderseits der Donau stromabwärts und erreichten am 12. November Wien; zwei Tage später bezog Napoleon im Schloss Schönbrunn Quartier. Das Waffenstillstandsabkommen von Austerlitz (6. Dezember) und der Frieden von Pressburg (26. Dezember) machten die beabsichtigte Besetzung von Steiermark, Kärnten und der Krain hinfällig, und am 13. Jänner 1806 zogen die französischen Truppen aus Wien ab. Louis-Alexandre Berthier, 1804 zum Marschall und 1809 zum Fürst von Wagram ernannt, war im italienischen Feldzug Stabschef Bonapartes, ab 1800 Kriegsminister und ab 1805 Generalstabschef; er starb unter ungeklärten Umständen bei einem Fenstersturz, nachdem er 1814 zu Ludwig XVIII. übergegangen war. Der irischstämmige General und Staatsmann Henri-Jacques-Guillaume Clarke dHunebourg (1765-1818) löste 1807 Berthier als Kriegsminister ab und wurde zwei Jahre später zum Herzog von Feltre ernannt. Graf Pierre Daru (1767-1829) war Finanzmann, Dichter und Historiker und wurde von Napoleon bei der Kriegsverwaltung sowie zu wichtigen Staatsgeschäften eingesetzt.</span>
+                    <a href='/artikel/napoleonische-kriege-berthier-alexandre-1753-1815-2001-58.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2001-58
+                    <br />
+                    
+                        € 2400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/napoleonische-kriege-ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-1909-69.html'>
+                            <img class='thumb' src='/img/thumb/napoleonische-kriege-ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-1909-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/napoleonische-kriege-ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-1909-69.html'><strong>Napoleonische Kriege. - Ligne, Charles-Joseph de (Fürst), Offizier, Diplomat und Schriftsteller (1735-1814)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite auf Doppelblatt, in-8, Wien, 30. 4. [1806]. - An "Mon Cher, et excellent Compatriote", den französischen Stadtkommandanten von Wien, Pierre-Augustin Hulin. "Le Général Andréossi Veut bien se charger de ma Lettre pour Vous, mon cher Commandant. La Manière dont Vous avéz porté Ce Titre, sera Toujours gravé dans la Mémoire de Tous Les Habitans de Vienne. Votre Justice, Votre délicatesse, Vos soins pour prévenir, ou arrêter Les abus, Votre désinteréssement, Votre façon de faire oublier que Vous etiéz Nos Vainqueurs, Vous méritent Les plus grandes recompenses chéz Vous, et la plus grande reconnoisance chéz Nous. / Je ne Doute point que Vous ne Soyez employé d'une maniere utile, et honorable, Telle que Cela Vous Convient. J'y prendrai toute(?) La part La plus sincère, ainsi qu'a tout Ce qui Vous arrivera. Ma Famille qui pense de même, me charge de Vous en assurer, ainsi à Tous Les Sentimens d'amitié de notre ancien Connaissance, se Joint encore ma reconnaissance particuliere e La Considération distinguée avec La quelle J'ai L'Honneur d'être / Votre Très humble et Très obeissant Serviteur Charles Prince De Ligne". <br /><br />
+                    <span style="display: none">Provenienz: Auktion Stargardt 639 (1987), Nr. 1035. - Die Franzosen waren im November 1805 in Wien einmarschiert, ohne auf Widerstand zu stoßen; Napoleon bezog in Schönbrunn Quartier und ernannte seinen General Hulin (auch Hullin, 1758-1841) zum Stadtkommandant von Wien. Das Zusammenleben der Bevölkerung mit der Besatzungsmacht verlief im Wesentlichen friedlich. Nach familärer Überlieferung soll sich der im Palais Lobkowitz untergebrachte General sogar gelangweilt haben, weil seine 3000 französischen Soldaten "so famos Ruhe und Ordnung in Wien hielten", und den Komponisten Joseph Haydn zu seiner Zerstreuung zu sich gerufen haben. Nach dem Frieden von Pressburg verließen die französischen Besatzer bereits im Jänner 1806 die Stadt wieder, und Hulin wurde zum Stadtkommandant von Berlin bestellt. Der als Überbringer des Briefes genannte Graf Antoine-François Andréossy (1761-1828) nahm als Brigadegeneral an Bonapartes Zug nach Ägypten teil, wurde 1802 Gesandter in London, nahm 1805 am Krieg gegen Österreich teil und blieb nach dem Frieden von Pressburg als Kommissär und Botschafter in Wien.</span>
+                    <a href='/artikel/napoleonische-kriege-ligne-charles-joseph-de-furst-offizier-diplomat-und-schriftsteller-1735-1814-1909-69.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1909-69
+                    <br />
+                    
+                        € 2400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/palme-olof-politiker-1927-1986-2509-60.html'>
+                            <img class='thumb' src='/img/thumb/palme-olof-politiker-1927-1986-2509-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/palme-olof-politiker-1927-1986-2509-60.html'><strong>Palme, Olof, Politiker (1927-1986)</strong></a><br /><br />
+                    Porträtfoto unter Passepartout, auf Faltbillet montiert, mit eigenhändigem Namenszug auf dem Passepartout, Gesamtgröße 14 x 18,5 cm. - Beiliegend ein undatiertes und nicht signiertes maschinschriftliches Begleitschreiben seines Sekretariats. <br /><br />
+                    <span style="display: none">Wohl um 1975. - Der schwedische Ministerpräsident wurde am 28. Februar 1986 im Zentrum Stockholms unter nie ganz geklärten Umständen auf offener Straße erschossen.</span>
+                    <a href='/artikel/palme-olof-politiker-1927-1986-2509-60.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2509-60
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-65>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/palmerston-d-i-henry-john-temple-3-viscount-palmerston-staatsmann-1784-1865-2305-65.html'>
+                            <img class='thumb' src='/img/thumb/palmerston-d-i-henry-john-temple-3-viscount-palmerston-staatsmann-1784-1865-2305-65.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/palmerston-d-i-henry-john-temple-3-viscount-palmerston-staatsmann-1784-1865-2305-65.html'><strong>Palmerston (d. i. Henry John Temple, 3. Viscount Palmerston), Staatsmann (1784-1865)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift, 1 Seite, kl-8, (London-) Piccadilly, 19. 10. 1858. - An einen Herrn. "My dear Sir, I am come to Town for a couple of Days and should be glad if you could call here Tomorrow (Wednesday) / I think you will find that the applications which you recommended have been useful / Y[ou]rs faithfully Palmerston". <br /><br />
+                    <span style="display: none">Nachdem er lange Jahre hindurch verschiedene Ministerämter ausgeübt hatte, wurde Palmerston 1855 im Alter von 70 Jahren britischer Premier und blieb das mit einer kurzen Unterbrechung bis zu seinem Tod.</span>
+                    <a href='/artikel/palmerston-d-i-henry-john-temple-3-viscount-palmerston-staatsmann-1784-1865-2305-65.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-65
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/pedro-ii-kaiser-von-brasilien-1825-1891-2409-80.html'>
+                            <img class='thumb' src='/img/thumb/pedro-ii-kaiser-von-brasilien-1825-1891-2409-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/pedro-ii-kaiser-von-brasilien-1825-1891-2409-80.html'><strong>Pedro II., Kaiser von Brasilien (1825-1891)</strong></a><br /><br />
+                    Eigenhändiger Brief in französischer Sprache mit Unterschrift,  1 1/2 Seiten, kl-8, London (Briefkopf des Claridge's Hotel), um 1888. - An eine Dame. Bedauert, wegen seines gedrängten Aufenthaltes in London nur eine kurze Visite machen zu können. "Madame / Je regrette vivement que tant d'occupations à Londres dans un temps aussi court ne me permettent que de vous faire une simple visite pendant laquelle j'espère que nous pourrons causer sur tout ce qui vous interesse sans que nous soyons gênés. Merci, mille fois merci de votre lettre, et je vous prie de me recevoir avec la même bonté qu'à Edinbourg, le 27 à 9h du matin. Excusez-moi une heure si matinale - qui ... vous prouver le désir ... de vous rencontrer / Votre affectionnel / D[om] Pedro d'Alcantara". - In der linken oberen Ecke der Vorderseite leicht fleckig, zwei kleine Wischspuren. <br /><br />
+                    <span style="display: none">Pedro II., Enkel des österreichischen Kaisers Franz I., zählte zu den fähigsten Monarchen seiner Zeit. Er setzte sich für die Abschaffung der Sklaverei ein und sorgte tatkräftig für die Entwicklung Brasiliens, war jedoch seiner Einstellung und seinem Auftreten nach eher Gelehrter als Politiker; Victor Hugo nannten ihn einen Nachkommen Marc Aurels. Auf einer 1871 unternommenen Europareise besuchte er auch Wien und logierte hier im Hotel Munsch (heute Ambassador) am Neuen Markt. Die vom Kaiser verfassten und empfangenen Briefe über seine zahlreichen Reisen zählen seit 2013 zum Weltdokumentenerbe. Nach der Ausrufung der Republik in Brasilien (1889) ging der Monarch mit seiner Familie nach Frankreich ins Exil.</span>
+                    <a href='/artikel/pedro-ii-kaiser-von-brasilien-1825-1891-2409-80.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-80
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/prodi-romano-okonom-und-politiker-geb-1939-1810-78.html'>
+                            <img class='thumb' src='/img/thumb/prodi-romano-okonom-und-politiker-geb-1939-1810-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/prodi-romano-okonom-und-politiker-geb-1939-1810-78.html'><strong>Prodi, Romano, Ökonom und Politiker (geb. 1939)</strong></a><br /><br />
+                    Farbfoto 12,5 x 18 cm mit eigh. Namenszug auf der Bildseite, Brüssel, Juli 1999. - "Romano Prodi Bruxelles luglio '99". <br /><br />
+                    <span style="display: none">Prodi war 1996-1998 und 2006-2008 italienischer Ministerpräsident und von September 1999 bis November 2004 Präsident der Europäischen Kommission. </span>
+                    <a href='/artikel/prodi-romano-okonom-und-politiker-geb-1939-1810-78.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-78
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2309-65>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/radetzky-josef-wenzel-graf-feldmarschall-1766-1858-2309-65.html'>
+                            <img class='thumb' src='/img/thumb/radetzky-josef-wenzel-graf-feldmarschall-1766-1858-2309-65.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/radetzky-josef-wenzel-graf-feldmarschall-1766-1858-2309-65.html'><strong>Radetzky, Josef Wenzel (Graf), Feldmarschall (1766-1858)</strong></a><br /><br />
+                    Eigenhändiges Schriftstück aus dem zweiten Koalitionskrieg mit Anweisungen an einen Offizier und Unterschrift "Radetzky Ob[er]stl[eutnant]", 1 Seite, kl-4, ohne Ort und Datum (Piemont, August 1799). "Zur Beschiessung von Ser[r]avalle sind Euer Hochgebohren als Trenché Major bestimt, dieselben marchiren danach noch heute mit den Pioniers nach Novi wo Sie an den Obersten Harding angewiesen sind. Von Seite der Artillerie komt Haupt[mann] Perzek[?] als Comand[an]t. Von Alessandria sind nach den beyliegenden Befehl 1500 Schauflen 1000 Krampen 2000 Sandsäcke nebst 3000 Pflöcke bringen zu lassen, wohin gleich 1 Kurier mit diesem Befehl an Hr. G[ene]ral Bell[e]garde zu schicken ist. Die erforderliche Faschinen und Schanzkörbe sind in Novi erzeugen zu lassen. Welches den Hr. Hauptmann zur Richtschnur[?] bekant gegeben wird ...". - Sprachlich flüchtig geschrieben. <br /><br />
+                    <span style="display: none">Der Oberkommandant der österreichischen Armee in Oberitalien, General Melas, hatte sich beim Hofkriegsrat Oberstleutnant Radetzky zum Generaladjutanten erbeten. Serravalle Scrivia liegt ca. 30 km südöstlich der piemontesischen Provinzhauptstadt Alessandria; in der Schlacht bei Novi (Novi Ligure) am 15. August 1799 besiegten die verbündeten Russen und Österreicher unter Feldmarschall Alexander Suworow die Franzosen unter den Generälen Joubert und Moreau. Heinrich von Bellegarde (1756-1845) befehligte damals ein selbständig operierendes Korps, das die Verbindung zwischen den Russen unter Suworow und der österreichischen Hauptarmee unter Erzherzog Karl zu halten hatte. - Eigenhändige Schriftstücke Radetzkys aus der Frühzeit seiner militärischer Karriere sind selten.</span>
+                    <a href='/artikel/radetzky-josef-wenzel-graf-feldmarschall-1766-1858-2309-65.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2309-65
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1902-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/rothmuller-s-aktiengesellschaft-1902-67.html'>
+                            <img class='thumb' src='/img/thumb/rothmuller-s-aktiengesellschaft-1902-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/rothmuller-s-aktiengesellschaft-1902-67.html'><strong>Rothmüller S. Aktiengesellschaft</strong></a><br /><br />
+                    Gründeraktie Nr. 14477 zu 200 Kronen mit 2 Originalsignaturen, farblithographierter Doppelbogen, quer-folio, Wien, Oktober 1918. - Leichte Gebrauchsspuren. Inliegend Kupons Nr. 10-23. <br /><br />
+                    <span style="display: none">Die Wiener Metallwarenfabrik war unter anderem im Eisenbahnbau tätig.</span>
+                    <a href='/artikel/rothmuller-s-aktiengesellschaft-1902-67.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1902-67
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-71>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/salesianer-2105-71.html'>
+                            <img class='thumb' src='/img/thumb/salesianer-2105-71.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/salesianer-2105-71.html'><strong>Salesianer</strong></a><br /><br />
+                    "Messe des Heiligen Franz v. Sales Bischof und Kirchenlehrer". Mehrfärbig kalligraphierte und illuminierte späthistoristische Handschrift mit reicher Goldhöhung, in-4, 7 Seiten auf 2 Doppelblättern (davon 2 Seiten Quadratnoten auf 4 roten Linien), liturgische Texte in Latein, der erste Bogen ohne eine zu erwartende Fortsetzung, der zweite Bogen in sich abgeschlossen mit einem Autorisierungsvermerk des Generalvikars Pierre-François Poncet, datiert Annecy 28. 5. 1890. - Minimal fleckig, ein kleiner Bugriss. <br /><br />
+                    <span style="display: none">Prachtvolles, jedoch offensichtlich nicht ganz vollständiges Messformular zum Fest des Hl. Franz von Sales (29. Jänner) in der Art eines spätmittelalterlichen Manuskripts, mit zahlreichen größeren und kleineren Initialen und Schlussvignette. Inhaltlich beglaubigt mit dem Vermerk: "... cum authentico exemplari concordare reperta est."</span>
+                    <a href='/artikel/salesianer-2105-71.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2105-71
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/scheel-walter-politiker-1919-2016-1810-81.html'>
+                            <img class='thumb' src='/img/thumb/scheel-walter-politiker-1919-2016-1810-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/scheel-walter-politiker-1919-2016-1810-81.html'><strong>Scheel, Walter, Politiker (1919-2016)</strong></a><br /><br />
+                    Farbfoto 10 x 15 cm mit eigenhändigem Namenszug auf der Bildseite (um 1999). <br /><br />
+                    <span style="display: none">Scheel war von 1974 bis 1979 vierter Bundespräsident der BRD. Seit 1946 Mitglied der DFP, wurde er 1980 zum Ehrenvorsitzenden ernannt.</span>
+                    <a href='/artikel/scheel-walter-politiker-1919-2016-1810-81.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1810-81
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schonborn-friedrich-karl-von-furstbischof-und-reichsvizekanzler-1674-1746-2102-75.html'>
+                            <img class='thumb' src='/img/thumb/schonborn-friedrich-karl-von-furstbischof-und-reichsvizekanzler-1674-1746-2102-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schonborn-friedrich-karl-von-furstbischof-und-reichsvizekanzler-1674-1746-2102-75.html'><strong>Schönborn, Friedrich Karl von, Fürstbischof und Reichsvizekanzler (1674-1746)</strong></a><br /><br />
+                    Eigh. Brief mit Unterschrift, 1 Seite, in-8, Laxenburg, 31. 5. 1725. - An einen Freund über eine Unterredung mit dem Kaiser. "Ca[rissi]me Amice / Ich habe den Schnappauff vorgesterth zu E[uer] D[urchlauch]t geschickt, weilen er aber dieselbe nicht ahngetroffen, also wünsche ich die gelegenheith dieselbe ohne meinem Duschel[?] bald bedienen zu können, umb sond[er]lich über das stattliche guthachten in denen reichs und religions sachen, mitt E[uer] D[urchlauch]t mich besprechen zu können welches I[hrer] k[aiserlichen] M[ajestä]t ich heuth zu E[uer] D[urchlauch]t gebahren immerwährendem lob vorgestellet, und gezeicht habe, wie das werk den maister, die trew einen bestverdiensten Ministrum, die gelährt und geschiklichste vorführung einer so großen und weithlaufichen föderlichen, aber eben dahero d. K[aiserlichen] M[ajestä]t, und dem ganzen Vatterland höchst ahngelegenen sache, welche in sacra et profana totius M[ajesta]tis auff das aller tiefeste  einschlaget, einen grund gelährten rath loben muss; I[hre] K[aiserliche] M[ajestä]t haben alles g[nä]d[ig]st ahngehört, und verlangen dass man forderst hernach zu end eilen solle: hac pro notitia von E[uer] D[urchlauch]t ergebenstem trewen diener und Freund FCFvSchönborn". - Unbedeutende Eck- und Randmängel. <br /><br />
+                    <span style="display: none">Friedrich Karl Reichsgraf von Schönborn-Buchheim leitete von 1705 bis 1731 als Reichsvizekanzler unter den Kaisern Joseph I. und Karl VI. die Reichshofkanzlei in Wien, die oberste Behörde des Heiligen Römischen Reichs. Neben einer Wohnung in dem auf sein Betreiben hin neu errichteten Reichskanzleitrakt der Hofburg und seinem Palais in der Wiener Vorstadt besaß er auch den "Blauen Hof" in Laxenburg, den er zwischen 1710 und 1720 von Lukas von Hildebrandt ausbauen ließ. Mit den angesprochenen "reichs und religions sachen" könnte der zunächst vergebliche Versuch gemeint sein, das Amt des Fürstbischofs von Würzburg von seinem 1724 unerwartet verstorbenen Bruders Johann Philipp Franz zu übernehmen. Da sich dieser sich in seinem Amt nicht sonderlich beliebt gemacht hatte, wurde zunächst Christoph Franz von Hutten gewählt. Nach dessen Tod 1729 konnte Friedrich Karl schließlich die nächste Wahl für sich entscheiden; im selben Jahr erhielt er auch das Amt des Fürstbischofs von Bamberg. Er war so wie der mit ihm befreundete Prinz Eugen ein großer Bücherfreund, Kunstsammler und Bauherr, ließ die Residenz in Würzburg vollenden und förderte Bildungswesen und Wirtschaft in Franken ("Schönborn-Zeit"). - Sehr selten. Provenienz: Nachlass des Wiener Antiquars Heinrich Hinterberger.</span>
+                    <a href='/artikel/schonborn-friedrich-karl-von-furstbischof-und-reichsvizekanzler-1674-1746-2102-75.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-75
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schottland-medizin-2109-75.html'>
+                            <img class='thumb' src='/img/thumb/schottland-medizin-2109-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schottland-medizin-2109-75.html'><strong>Schottland / Medizin</strong></a><br /><br />
+                    Prüfungsdiplom des Collegium Regium Chirurgorum Edinense für den Medizinstudenten John McNaughtan. Gedruckte und geschriebene Urkunde auf Pergamentpapier, in-folio, Edinburgh, 18. 7. 1873. Mit 9 Unterschriften, Papiersiegel und Vignette. Leichte Gebrauchsspuren. - Dazu: Einbürgerungsschein (Burgess Ticket) der Guild Court Perth für denselben. Gedruckte und geschriebene Urkunde auf Papier, quer-folio, Perth, 30. 10. 1880. Mit Unterschrift des Gildensekretärs, farbigem Prägesiegel und großer Vignette mit Stadtwappen. Original gefaltet, oben unregelmäßig beschnitten, leichte Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Dekorative Dokumente. John McNaughtan erwarb seinen Bachelor of Medicine 1875 an der Universität Glasgow und promovierte ebenda 1877 zum Doktor der Medizin. Er war anschließend am General Prison of Perth sowie als Schiffsarzt tätig.</span>
+                    <a href='/artikel/schottland-medizin-2109-75.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2109-75
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/schuschnigg-kurt-politiker-1897-1977-1803-79.html'>
+                            <img class='thumb' src='/img/thumb/schuschnigg-kurt-politiker-1897-1977-1803-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/schuschnigg-kurt-politiker-1897-1977-1803-79.html'><strong>Schuschnigg, Kurt, Politiker (1897-1977)</strong></a><br /><br />
+                    Maschinbrief mit geprägtem Briefkopf "Der Bundeskanzler" und eigh. Unterschrift "Schuschnigg", 3/4 Seite, kl-4 (Doppelblatt), (Wien), 21. 11. 1934. - Bestellung von Ministerialrat Dr. Karl Hirsch zum Mitglied der Ehrenzeichenkommission vom Roten Kreuz. <br /><br />
+                    <span style="display: none">Nach der Ermordung von Engelbert Dollfuß wurde Schuschnigg im Juli 1934 Bundeskanzler im Ständestaat. Am 11. März 1938 wurde er auf Druck Hitlers zum Rücktritt gezwungen.</span>
+                    <a href='/artikel/schuschnigg-kurt-politiker-1897-1977-1803-79.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1803-79
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/seipel-ignaz-theologe-und-politiker-1876-1932-1803-82.html'>
+                            <img class='thumb' src='/img/thumb/seipel-ignaz-theologe-und-politiker-1876-1932-1803-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/seipel-ignaz-theologe-und-politiker-1876-1932-1803-82.html'><strong>Seipel, Ignaz, Theologe und Politiker (1876-1932)</strong></a><br /><br />
+                    Heliogravüre nach Fotographie mit faksimiliertem Namenszug, um 1928, Bildformat 32 x 20,5 cm, Gesamtgr. 49 x 39 cm. - Auf China gedruckt; das Trägerpapier mit nicht störenden Mängeln im breiten Rand. <br /><br />
+                    <span style="display: none">Prälat Seipel war Obmann der Christlichsozialen Partei und amtierte zwischen 1922 und 1929 zweimal als Bundeskanzler.</span>
+                    <a href='/artikel/seipel-ignaz-theologe-und-politiker-1876-1932-1803-82.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1803-82
+                    <br />
+                    
+                        € 80,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2102-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/sinzendorf-philipp-ludwig-graf-diplomat-und-staatsmann-1671-1742-2102-79.html'>
+                            <img class='thumb' src='/img/thumb/sinzendorf-philipp-ludwig-graf-diplomat-und-staatsmann-1671-1742-2102-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/sinzendorf-philipp-ludwig-graf-diplomat-und-staatsmann-1671-1742-2102-79.html'><strong>Sinzendorf, Philipp Ludwig Graf, Diplomat und Staatsmann (1671-1742)</strong></a><br /><br />
+                    Eigenhändiger Brief  mit Unterschrift in etwas fehlerhaftem Französisch, 1 3/4 Seiten, in-4, Wien, 2. 6. 1706. - An eine Dame in Prag wegen der Zuerkennung einer Pension. "Madame / Si j'etois quelque têms, sans me donner l'honneur de vous repondre a la lettre, que vous avez eû la bonté de m'ecrire du 9vme de maj, j'etois pour tacher de voir, si les projets que vous aviez proposez s'auroient pû executer, mais je suis taché de vous dire qu'on les a trouvé impossibles. ainsi madame l'affaire se reduit presentement, a l'etablissement de vôtre pension, je croi qu'elle sera assignée a prague, come vous vous y trouvez presentement, et dez que le president de la chambre en aura expediez l'ordre, je me donnerois l'honneur de vous l'envoier, vous assurant, Madame que je m'estimerois heureux, de vous pouvoir marquer en toutes les occasions qui dependeront de moi que je suis avec bien du respect / Madame / Votre tres humble et tres obeissant serviteur le comte de Sinzendorff". - Im Randbereich etwas stockfleckig. <br /><br />
+                    <span style="display: none">Philipp Ludwig Wenzel Graf von Sinzendorf (auch Zinzendorf) wurde schon in jungen Jahren Mitglied im Reichshofrat und Gesandter am Hof von Versailles. Kaiser Leopold I. ernannte ihn 1701 zum geheimen Rat und betraute ihn mit verschiedenen diplomatischen Aufgaben. Als Hofkanzler (ab 1705) und später Oberhofkanzler gestaltete er unter Joseph I. und Karl VI. für Jahrzehnte die österreichische Außenpolitik maßgeblich mit, etwa bei den Haager Verhandlungen im Spanischen Erbfolgekrieg. Zuletzt unterstützte er noch Maria Theresia bei der Durchsetzung ihrer Erbansprüche und im Ersten Schlesischen Krieg. Eigenhändige Briefe Sinzendorfs - er korrespondierte unter anderem mit Gottfried Wilhelm Leibniz - sind im Handel äußerst selten.</span>
+                    <a href='/artikel/sinzendorf-philipp-ludwig-graf-diplomat-und-staatsmann-1671-1742-2102-79.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2102-79
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/turkenkrieg-grosser-1683-1699-2409-103.html'>
+                            <img class='thumb' src='/img/thumb/turkenkrieg-grosser-1683-1699-2409-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/turkenkrieg-grosser-1683-1699-2409-103.html'><strong>Türkenkrieg, Großer (1683-1699)</strong></a><br /><br />
+                    Dokument in spanischer Sprache, ausgestellt vom spanischen Botschafter und Oberst Marquis de Burgomaine d' Este mit Unterschrift und rotem Lacksiegel, 1 Seite auf Doppelblatt, in-4, Wien, 8. 12. 1686. Bestätigung für Graf Antonio Sormani, bei der Belagerung und Einnahme von Buda tapfere Kriegsdienste geleistet zu haben. "Certifico que haviendo benido a estos paises el Conde Don Antonio Sormani a servir en esta guerra contra el Enemigo Comun, lo a executado de voluntario estas dos ultimas campanas, saviendo-se sallado en todas las ocasiones que se han ofrezido, y en particular en el sitio y toma de Buda, en todos los asaltos, salidas, y demas  encuentros, que han ocurrido durante de el, en que ha hecho bien conocer su mucho valor, y desempenadose muy conforme a las obligar de su sangre, y con mucha gloria, y comun aplauso de todos los gentes del ex[erci]to, por lo qual, le surgo merezedor de todas las mercedes, que S. M. / Dios le g[uar]de / fuere servido harerle, y para que conste donde combenga, le doy la presente firmada de mi mano, sellada con el sello de mis armas, y le frendada del Infrascripto sec[reta]rio de S. M. y de esta R[oya]l embax[a]da en Viena ...". Eine Gegenzeichnung. - Faltspuren, geringfügig knittrig. <br /><br />
+                    <span style="display: none">Nach der zweiten erfolglos gebliebenen Belagerung Wiens durch die Osmanen (1683) gingen die verbündeten europäischen Mächte zur Gegenoffensive über. Nachdem 1684 die Einnahme von Buda (deutsch Ofen, heute Stadtteil von Budapest) zunächst gescheitert war, wurde sie 1686 nochmals mit Erfolg versucht. Die Belagerung begann Mitte Juni; ein im August eingetroffenes türkisches Entsatzheer scheute sich anzugreifen, und am 2. September eroberten die kaiserlichen Truppen die Festung. In der Folge wurden die Osmanen aus ganz Ungarn vertrieben.</span>
+                    <a href='/artikel/turkenkrieg-grosser-1683-1699-2409-103.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-103
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1703-92>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/unruh-hans-victor-von-politiker-1806-1886-1703-92.html'>
+                            <img class='thumb' src='/img/thumb/unruh-hans-victor-von-politiker-1806-1886-1703-92.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/unruh-hans-victor-von-politiker-1806-1886-1703-92.html'><strong>Unruh, Hans Victor von, Politiker (1806-1886)</strong></a><br /><br />
+                    Eigh. Schreiben mit Unterschrift, 1 Seite, kl-4, Berlin, 9. 1. 1849. - In Erwartung seiner baldigen Verhaftung an einen Redakteur. "Einliegend übersende ich Ihnen ganz ergebenst meinem gestrigen Versprechen gemäß einen anderen Schluß für meine Schrift, den Sie statt der im Manuscript schließenden Schlußbemerkung drucken lassen wollen, und zwar recht schnell: denn die Nachricht von unserer Verhaftung bestätigt sich. Wahrscheinlich erfolgt diese morgen oder übermorgen, wenn der Criminalsenat in seiner morgenden Sitzung nicht eben sich anders besinnt. Werde ich nicht verhaftet so treffe ich morgen Mittag in Magdeburg ein und besuche Sie. Ergebenst v.Unruh / P.S. Wenn Sie wollen lassen Sie den einliegenden Schluß als Probe in der Faberschen Zeitung abdrucken; ich rate dringend dazu. Die Zeitung nimmt den Artikel unentgeltlich auf." - Bleistiftnotizen von fremder Hand. Mit altem Sammlerumschlag. <br /><br />
+                    <span style="display: none">Der preußische Bauingenieur und Unternehmer Hans Victor von Unruh wurde nach der Revolution vom März 1848 in die Preußische Verfassunggebende Versammlung als liberaler Abgeordneter gewählt und stand ihr ab Oktober 1848 als Präsident vor. Den bewaffneten Kampf lehnte er ab, auf ihn geht die Wortschöpfung "passiver Widerstand" zurück. Nach der Auflösung der Versammlung wurde er im Januar 1849 in die zweite Kammer des Preußischen Landtags gewählt und veröffentlichte im selben Jahr sein Werk "Skizzen aus Preußens neuester Geschichte". Auch nach der Revolution blieb er politisch tätig; seine Erinnerungen erschienen posthum 1895. Die vom Verlag der Faberschen Buchdruckerei in Magdeburg seit 1664 herausgegebene "Magdeburgische Zeitung" war die älteste deutschsprachige Zeitung und bestand bis 1944. - Selten.</span>
+                    <a href='/artikel/unruh-hans-victor-von-politiker-1806-1886-1703-92.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1703-92
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wien-hetzendorf-2403-87.html'>
+                            <img class='thumb' src='/img/thumb/wien-hetzendorf-2403-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wien-hetzendorf-2403-87.html'><strong>Wien - Hetzendorf</strong></a><br /><br />
+                    "Entwurf einer Eingabe an die Gemeinde Vertretung der k. k., Reichs- Haupt und Residenzstadt Wien, behufs Inangriffnahme des Baues einer Bürgerschule in Hetzendorf". Aktenstück von Schreiberhand unterzeichnet von einem Oberkommissär Hermann, 3 1/2 Seiten, in-4, Wien, 13. 5. 1898. - Obwohl zur Errichtung einer Bürgerschule für die ehemaligen Gemeinden Hetzendorf und Altmannsdorf im 12. Wiener Gemeindebezirk bereits das Grundstück und die notwendigen Geldmittel vorhanden sind, "wird die Inangriffnahme dieses Schulbaues von Jahr zu Jahr verschoben. Daß durch die Verzögerung dieses Baues den Bewohnern dieses Bezirkstheiles in vieler Hinsicht Nachtheile erwachsen ist leicht nachzuweisen. Viele Bewohner von Hetzendorf resp. Altmannsdorf sind aus dem Grunde ... von hier weggezogen, und diese Fälle wiederholen sich jährlich. ... Schon seit Jahren wird von Seite der hiesigen Bevölkerung bitter empfunden, daß ihre Kinder, sobald sie das 5, Schuljahr absovirt haben vor die alternative gestellt sind, entweder in der 5. Classe der Volksschule durch 3 Jahre hindurch denselben Unterricht zu genießen, oder auf dem Wege nach der über eine halbe Stunde entfernten Bürgerschule zu Meidling ihre Gesundheit aufs Spiel zu setzen. Bekanntlich führen die Wege zwischen Altmannsdorf, Hetzendorf einerseits und Meidling anderseits zum größten Theile über freie Felder ... Ohne gerade das Schlimste ins Auge zu fassen - erscheint es passend, wenn Knaben und Mädchen in diesem Alter gemeinsam auf einsamen Wegen über freies Feld und durch das Gatterholz zur Schule wandern müssen? Aus demselben Grund sahen sich Famlien, die so vermögend sind, daß sie ihre Kinder per Bahn in eine Wiener Bürgerschule schicken könnten gezwungen, in die Stadt zu übersiedeln, sobald ihre Kinder die Volksschule absoviert hatten. Wer selbst einmal Zeuge war, welchen Belästigungen die Mädchen vonseite halbwüchsiger Burschen im Coupé ausgesetzt sind, wer mit eigenen Ohren gehört, in welch picante Dialoge oft ein solches Mädchen, das zuhaus nie ein zweideutiges Wort hörte, verwickelt wird, der muß jeder Mutter rechtgeben, die die geistige Ausbildung ihrer Tochter nicht um den Preis einer sittlichen Verderbniß erkaufen will ...". Es folgen kritische Bemerkungen zu den baulichen und sanitären Verhältnissen in den beiden heillos überfüllten Hetzendorfer Volksschulen. - Gebräunt und fleckig, kleine Bug- und Randmängel. <br /><br />
+                    <span style="display: none">Beiliegend ein Schriftstück betreffend die Aufführung von Haydns "Schöpfung" im Hetzendorfer Casino, Februar 1901.</span>
+                    <a href='/artikel/wien-hetzendorf-2403-87.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2403-87
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1909-98>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/wilhelm-i-deutscher-kaiser-konig-von-preussen-1797-1888-1909-98.html'>
+                            <img class='thumb' src='/img/thumb/wilhelm-i-deutscher-kaiser-konig-von-preussen-1797-1888-1909-98.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/wilhelm-i-deutscher-kaiser-konig-von-preussen-1797-1888-1909-98.html'><strong>Wilhelm I., deutscher Kaiser, König von Preußen (1797-1888)</strong></a><br /><br />
+                    Eigenhändiges Schriftstück mit Unterschrift "Wilhelm", 1 Seite, in-8, ohne Ort (wohl Berlin), 5. 9. 1872. - Erlass zum Dreikaisertreffen. "Es sollen nicht nur die Pfeiffer zu den Trommeln, sondern auch die Musiker des Infanterie u. Cavaleriez[u)gs in diesen Tagen, weder die russische noch österreichische Volks-Hymne als Märsche blasen." - Rechts oben rot nummeriert, rückseitig Bleistiftvermerk von 1873 und leichter rezenter Schriftabklatsch. <br /><br />
+                    <span style="display: none">Das Treffen zwischen Wilhelm I., Kaiser Franz Joseph von Österreich und dem russischen Zaren Alexander II. fand vom 6. bis 11. September 1872 in Berlin statt und bereitete das im Schloss Schönbrunn unterzeichnete Dreikaiserabkommen vom 22. Oktober 1873 vor, das als Konsultativpakt den Friedenszustand in Europa sichern sollte. - Eigenhändige Schreiben des Kaisers sind selten.</span>
+                    <a href='/artikel/wilhelm-i-deutscher-kaiser-konig-von-preussen-1797-1888-1909-98.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1909-98
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-110>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/windsors-in-osterreich-2409-110.html'>
+                            <img class='thumb' src='/img/thumb/windsors-in-osterreich-2409-110.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/windsors-in-osterreich-2409-110.html'><strong>Windsors in Österreich</strong></a><br /><br />
+                    Vorgedrucktes Einzelblatt aus dem Fremdenbuch vermutlich eines österreichischen Hotels am Semmering mit eigenhändigen Namenszügen von Edward Herzog von Windsor (1894-1972), seiner Schwester Mary (1897-1965), deren Ehemann Henry Lascelles Earl of Harewood (1882-1947) sowie zwei Begleitpersonen, Winter 1936/1937, Größe 30 x 35 cm. Faltspuren. - Beiliegend ein zweites Blatt mit Eintragungen französischer Gäste. <br /><br />
+                    <span style="display: none">Edward bestieg im Januar 1936 als Edward VIII. den britischen Königsthron, dankte aber noch im Dezember desselben Jahr auf Grund seiner Affäre mit Wallis Simpson ab. Die Monate danach verbrachte er mit seiner Schwester Mary, die ihm besonders nahe stand, und deren Mann auf Schloss Enzesfeld südlich von Wien und wartete hier die Scheidung der damals noch verheirateten Wallis Simpson ab. Von Enzesfeld aus fuhr er täglich in seinem privaten Buick auf den Semmering, um dort das Skifahren zu erlernen.</span>
+                    <a href='/artikel/windsors-in-osterreich-2409-110.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2409-110
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/zeppelin-ferdinand-graf-von-general-und-luftschiffkonstrukteur-1838-1917-2302-90.html'>
+                            <img class='thumb' src='/img/thumb/zeppelin-ferdinand-graf-von-general-und-luftschiffkonstrukteur-1838-1917-2302-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/zeppelin-ferdinand-graf-von-general-und-luftschiffkonstrukteur-1838-1917-2302-90.html'><strong>Zeppelin, Ferdinand Graf von, General und Luftschiffkonstrukteur (1838-1917)</strong></a><br /><br />
+                    Eigenhändiger Brief mit Unterschrift "Graf Zeppelin", 5 3/4 Seiten und ein weißes Blatt, kl-4, Berlin, 17. 1. 1890. - "Hochverehrtester Herr Generallieutenant! Nachdem soeben auch Ihre Majestät die Kaiserin mich mit meiner Frau in Abschiedsaudienz empfangen hat, bin ich, abgesehen von einigen Abmeldungen, auch mit den nachzüglerischen Verpflichtungen meines bisherigen Amtes zu Ende. Da sonach der Zeitpunkt heranrückt, wo ich mich von hier entfernen könnte, erlaube ich mir Euere Exzellenz ganz gehorsamst zu bitten, mir die Allerhöchsten Befehle Seiner Majestät des Königs darüber gütigst vermitteln zu wollen, ob ich mich sofort zur Meldung einfinden soll, oder ob das erst geschehen soll, nachdem ich erfahren haben werde, welche Brigade ich erhalte. In letzterer Beziehung befinde ich mich in der völligsten Ungewißheit; welche bei längerer Fortdauer dadurch sehr nachtheilig für mich wirken müßte, daß ich gar keinen Plan für meinen Aufen[t]halt mit meiner Familie auswärts von Berlin, wo wir schicklicher Weise nicht gut länger verweile[n] können, entwerfen kann, - nicht weiß was ich mit meinem Hausrathe anfangen soll, welche[r] in den ersten Märztagen demjenigen meines Nachfolgers weichen soll usw. Dazu kommt, daß mir von Offizieren aus der Umgebung des Kaisers und aus dem Kriegsministerium gesagt wird, Gleich nehme seinen Abschied und ich wür[de] sein Nachfolger in Stuttgart werden. Wenn Gleich, wie ich zu meinem aufrichtigen Bedauern annehmen muß, wirklich geht, so würde allerdings kein Mensch begreifen, daß mich mein König nach Preußen schickt, wenn gleichzeitig eine Stelle in Württemberg, für mich geeignet, frei wird. Da spricht mir aber Grl. von Steinheil in einem soeben erst eingetroffenen Briefe immer nur von der Zeit bis zu meiner Uebernahme auf den "preußischen" Etat. ... Graf Zeppelin Gnmjr. General à. l. s. Sr. Maj. des Königs." - Spuren eines zersetzten Trauerrands mit dadurch bedingten einzelnen kleinen Textverlusten, Empfängervermerk mit Rotstift. Vollständige Transkription beiliegend. <br /><br />
+                    <span style="display: none">Ausführlicher, biographisch interessanter Brief des bedeutenden Erfinders. Zeppelin war unter König Wilhelm II. 1885 zum Militärbevollmächtigten an der württembergischen Gesandtschaft in Berlin und 1887 ebenda zum Gesandten ernannt worden. Er verfasste in dieser Zeit bereits eine Denkschrift, derzufolge nur lenkbare Luftschiffe (im Gegensatz zu Ballonen) militärisch einsetzbar seien. Nach seiner hier dokumentierten Abberufung als Gesandter wurde er als Brigadekommandant eingesetzt, als solcher jedoch ungünstig beurteilt; die im vorliegenden Brief bereits anklingende Unzufriedenheit mit seinem Stand in der Armee endete noch im selben Jahr mit seinem Abschied aus dem aktiven Militärdienst. Allerdings beförderte ihn Wilhelm noch zum Generalleutnant, und Zeppelin blieb weiterhin "General à la suite". Nach seiner Verabschiedung widmete er sich dann ganz der Konstruktion eines lenkbaren starren Luftschiffs. - Gleich: Alarich von Gleich (1831-1896), württembergischer Generalleutnant. Steinheil: Gustav von Steinheil (1832-1908), württembergischer Generalleutnant und Kriegsminister, 1891 General der Infanterie.</span>
+                    <a href='/artikel/zeppelin-ferdinand-graf-von-general-und-luftschiffkonstrukteur-1838-1917-2302-90.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-90
+                    <br />
+                    
+                        € 1750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

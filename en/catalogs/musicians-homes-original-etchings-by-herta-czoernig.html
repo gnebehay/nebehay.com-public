@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Musicians&#39; Homes - Original etchings by Herta Czoernig</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/musikerhauser-originalradierungen-von-herta-czoernig.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Musicians&#39; Homes - Original etchings by Herta Czoernig</h1>
+    <hr />
+
+    
+
+<h2>Herta Czoernig-Gobanz</h2>
+<div style='text-align: center; margin: 20px'>
+    <a class=fancybox href='/img/Czoern_portr.jpg'>
+    <img src='/img/Czoern_portr_thumb.jpg'/><br>
+    </a>
+    Herta Czoernig<br>
+    (1886 - 1970)
+</div>
+<div class='smalltext'>
+
+<p>
+Born in 1886 in Klagenfurt as the daughter of Karl Freiherr von Czoernig, federal state director of
+finance, she wanted to become an artist at an early age. Since only male students were admitted
+to the Academy of Fine Arts in Vienna at that time, she first attended the Vienna School of Art for
+Women and Girls and later studied at the Grand-Ducal School in Weimar. Her teacher in the
+difficult technique of etching was Professor Ludwig Michalek (1859-1942), with whom she
+maintained a lifelong friendship.
+</p>
+<p>
+As a young woman she married the naval officer Siegfried Gobanz, whose professional career
+was over in 1918 with the end of the monarchy. This meant that he could no longer provide for
+the couple alone. Thus, while art had initially been a hobby for Herta Czoernig, it now became
+her livelihood.
+</p>
+<p>
+Besides drawings, watercolors and oil paintings, Herta Czoernig mainly created etchings (about
+500), which she usually reproduced herself in strenuous work. Her focus was predominantly on
+topographical motifs, among which the views of Austrian (and also German) musicians&#39; houses
+are particularly outstanding. She managed to capture the atmosphere of these sites and usually
+underlined their special significance with an appropriate musical quotation. The composer
+Ludwig van Beethoven, who changed his apartments rather frequently, is particularly often
+represented. It is difficult to date these etchings precisely; they can probably be assigned mainly
+to the last two decades of her creative work.
+</p>
+<p>
+After the artist&#39;s death in 1970, we acquired the copper plates from her estate and have
+produced from them the etchings offered here in collaboration with one of the last copperplate
+printers in Vienna. These are original prints and by no means reproductions. For each, the copper
+plate is inked separately and pressed against moistened laid paper on a hand press (intaglio
+process). We then color the prints individually by hand and add a title as well as the signature
+&quot;Nachlass H. Czoernig&quot;.
+</p>
+
+</div>
+<hr />
+
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+Shipping prices on request
+<br>
+
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=1200-709>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-709.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-709.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-709.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Baden near Vienna, Frauengasse 10. - In the autumn of 1822, Beethoven rented two rooms with a kitchen in the "Magdalenenhof" for several days. He went to Baden for a spa treatment and presumably began here with first sketches for the Symphony No. 9. The musical quotation is taken from this symphony (op. 125), as is the European anthem. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 18 x 16,5 cm (7 x 6½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-709.html'>Continue reading</a><br /><br />
+                    Order no. 1200-709
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-710>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-710.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-710.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-710.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Mödling, Achsenaugasse 6. - Beethoven spent the summer of 1820 in the "Christhof" in a garden apartment. The house was owned by the Augustinian Order from the 16th to the 18th century; in Beethoven's time it belonged to the winegrower Anton Speer. The musical quotation is taken from the Missa solemnis (op. 123), on which the composer worked from 1819 to 1823 - among other places in Mödling. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 19 x 20 cm (7½ x 7¾ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-710.html'>Continue reading</a><br /><br />
+                    Order no. 1200-710
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-713>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-713.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-713.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-713.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Mödling, Hauptstraße 79. - For the summer stays of the years 1818 and 1819, Beethoven chose the so-called "Hafnerhaus", a Renaissance building from the 16th century that belonged to the master stove-fitter Jakob Tuschek (today a memorial). Here he worked on a Piano Sonata ("Hammerklavier"), the Diabelli Variations, the "Mödlinger Tänze" and the Missa solemnis. The musical quotation shows the initial chords of the "Hammerklavier" Piano Sonata No. 29 in B flat major op. 106, which was written between 1817 and 1819. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 22,5 x 16,5 cm (8¾ x 6½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-713.html'>Continue reading</a><br /><br />
+                    Order no. 1200-713
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-715>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-715.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-715.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-715.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Vienna-Alsergrund, Trinitarian Church (popular name "Alserkirche"). - The funeral service for the composer was held in this church situated on Alser Street, on 29 March 1827. After the blessing, Beethoven's body was transferred to the Währing local cemetery. The musical quotation is taken from the second movement of Symphony No. 3 (op. 55) "Eroica", the funeral march "Marcia Funebre". <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 23,5 x 19 cm (9¼ x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-715.html'>Continue reading</a><br /><br />
+                    Order no. 1200-715
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-701>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-701.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-701.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-701.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Vienna-Heiligenstadt, Pfarrplatz. - In 1817 the composer lived in house no. 2 (then as now an inn), on the first floor of the left wing of the building. The musical quotation shows the beginning of Piano Sonata No. 26 op. 81a "Les Adieux", composed in 1809/1810. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 19,5 x 19 cm (7½ x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-701.html'>Continue reading</a><br /><br />
+                    Order no. 1200-701
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-708>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-708.html'>
+                            <img class='thumb' src='/img/thumb/beethoven-ludwig-van-1770-1827-1200-708.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-708.html'><strong>Beethoven, Ludwig van (1770-1827)</strong></a><br /><br />
+                    Vienna-Nußdorf, Kahlenberger Straße. - The composer is said to have spent the summer of 1824 in house no. 26 on the left side of the street, a former country house with a baroque façade ("Greinerhaus"). The musical quotation is from Symphony No. 3 op. 55 "Eroica", written in 1802/1803. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 21 x 19 cm (8¼ x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/beethoven-ludwig-van-1770-1827-1200-708.html'>Continue reading</a><br /><br />
+                    Order no. 1200-708
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-781>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/brahms-johannes-1833-1897-1200-781.html'>
+                            <img class='thumb' src='/img/thumb/brahms-johannes-1833-1897-1200-781.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/brahms-johannes-1833-1897-1200-781.html'><strong>Brahms, Johannes (1833-1897)</strong></a><br /><br />
+                    Birthplace. - The "Gängeviertel" quarter in Hamburg with its typical half-timbered houses. The actual birthplace of the composer in the Caffamacherreihe street was destroyed in a bombing raid in 1943 and could no longer be depicted by the artist. The musical quotation is taken from the "Three Intermezzi" (op. 117) written in 1892 and shows the beginning of the first piano piece; it is inspired by a Scottish lullaby arranged by Johann Gottfried von Herder. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20,5 x 19 cm (8 x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/brahms-johannes-1833-1897-1200-781.html'>Continue reading</a><br /><br />
+                    Order no. 1200-781
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-785>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bruckner-anton-1824-1896-1200-785.html'>
+                            <img class='thumb' src='/img/thumb/bruckner-anton-1824-1896-1200-785.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bruckner-anton-1824-1896-1200-785.html'><strong>Bruckner, Anton (1824-1896)</strong></a><br /><br />
+                    Village and monastery of St. Florian (Upper Austria). - In 1837 the young Bruckner was accepted as a choirboy in the Augustinian canon's monastery. He worked here from 1845 to 1855, first as an assistant teacher, then as an organist, and wrote his first important compositions here. Bruckner is also buried in the collegiate church. The musical quotation is taken from Symphony No. 4 "Die Romantische" (WAB 104), the first version of which was written in 1874. It was successfully premiered in Vienna in 1881 and earned Bruckner appreciation as a composer - which had been lacking for a long time, because Bruckner had been more recognised as an organist. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20 x 18 cm (7¾ x 7 in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/bruckner-anton-1824-1896-1200-785.html'>Continue reading</a><br /><br />
+                    Order no. 1200-785
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-784>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bruckner-anton-1824-1896-1200-784.html'>
+                            <img class='thumb' src='/img/thumb/bruckner-anton-1824-1896-1200-784.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bruckner-anton-1824-1896-1200-784.html'><strong>Bruckner, Anton (1824-1896)</strong></a><br /><br />
+                    St. Florian's Monastery. - The entrance of the Augustinian canon's monastery in Upper Austria, where the young Bruckner was accepted as a choirboy in 1837 and where he spent his days from 1845 to 1855, first as an assistant teacher, then as monastery organist, writing his first important compositions. The famous Bruckner organ is located in the collegiate church, and Bruckner is also buried here. The musical quotation is from Mass No. 3 in F minor (WAB 28), which the composer revised four times and which became one of the most popular choral works of the Romantic period after his death. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20,5 x 19 cm (8 x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/bruckner-anton-1824-1896-1200-784.html'>Continue reading</a><br /><br />
+                    Order no. 1200-784
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-737>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/haydn-joseph-1732-1809-1200-737.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-1732-1809-1200-737.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/haydn-joseph-1732-1809-1200-737.html'><strong>Haydn, Joseph (1732-1809)</strong></a><br /><br />
+                    Eisenstadt, Bergkirche (Haydnkirche) church. - The composer was Kapellmeister (music director) to Prince Paul Anton von Esterházy in Eisenstadt from 1761 to 1790. In 1820 Prince Nikolaus II, who had dissolved the orchestra and thus caused Haydn's return to Vienna, had the bones of the composer brought back from Vienna to Eisenstadt and buried in the Bergkirche; in 1932 the Haydn Mausoleum was built there. The musical quotation shows the beginning of the self-ironic song "Der Greis" ("The Old Man") based on a text by Johann Wilhelm Ludwig Gleim: "Hin ist alle meine Kraft" ("Gone is all my strength"). Haydn also had these words printed on his business card. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 23 x 21 cm (9 x 8¼ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/haydn-joseph-1732-1809-1200-737.html'>Continue reading</a><br /><br />
+                    Order no. 1200-737
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-738>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/haydn-joseph-1732-1809-1200-738.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-1732-1809-1200-738.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/haydn-joseph-1732-1809-1200-738.html'><strong>Haydn, Joseph (1732-1809)</strong></a><br /><br />
+                    Eisenstadt, Haydnhaus. - The composer acquired the house, the courtyard of which is shown here, in 1766 and lived in it together with his wife Maria Anna Theresia for 12 years. Today the Haydn Museum is located there. The musical quotation shows the beginning of the piano song "Ein kleines Haus" ("A small house", Hob. XXVIa:45) from 1801. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20,5 x 19 cm (8 x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/haydn-joseph-1732-1809-1200-738.html'>Continue reading</a><br /><br />
+                    Order no. 1200-738
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-736>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/haydn-joseph-1732-1809-1200-736.html'>
+                            <img class='thumb' src='/img/thumb/haydn-joseph-1732-1809-1200-736.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/haydn-joseph-1732-1809-1200-736.html'><strong>Haydn, Joseph (1732-1809)</strong></a><br /><br />
+                    Vienna, Michaelerplatz. - From 1751 to 1756 the composer lived in an attic room of "Großes Michaelerhaus" (No. 4) in the city center of Vienna. At that time he was valet to the Italian composer Nicola Porpora, who lived in the same house, and gave piano lessons (for free food) to the later singer, pianist and composer Marianne Martinez, who also lived there. The picture also shows the neighbouring church "Michaelerkirche", where Haydn played the organ in 1749. The musical quotation is an excerpt from the oratorio "The Creation" (Hob. XXI:2), which was played for the first time in 1799 in the old Burgtheater in Vienna. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 21 x 17,5 cm (8¼ x 7 in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/haydn-joseph-1732-1809-1200-736.html'>Continue reading</a><br /><br />
+                    Order no. 1200-736
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-747>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-747.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-1756-1791-1200-747.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-747.html'><strong>Mozart, Wolfgang Amadeus (1756-1791)</strong></a><br /><br />
+                    Salzburg, Mozarthaus Getreidegasse 9. - On January 27, 1756 Mozart was born in an apartment on the third floor of the so-called "Hagenauerhaus" and spent his childhood and youth here until 1773, together with his parents Leopold and Anna Maria and his sister Nannerl. Today the building houses a much-visited Mozart museum. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 13 x 9 cm (5 x 3½ in), sheet size 29 x 24 cm (13¾ x 11½ x 9½ in).</span>
+                    <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-747.html'>Continue reading</a><br /><br />
+                    Order no. 1200-747
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-754>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-754.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-1756-1791-1200-754.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-754.html'><strong>Mozart, Wolfgang Amadeus (1756-1791)</strong></a><br /><br />
+                    Salzburg, Mozartzimmer. - Mozart's apartment in the house where he was born (Getreidegasse 9, now a museum), where the young composer lived with his family until 1773. In the center is Mozart's fortepiano, built around 1782, on which he used to play during his public performances in Vienna; it was given to the Mozarteum Foundation by his son in 1856. The painting in the background was created by Thaddäus Helbling in 1768 and shows Mozart's childhood friend Karl Graf von Firmian. The musical quotation features the beginning of the lullaby "Schlafe, mein Prinzchen, schlaf ein" ("Sleep, my little prince, go to sleep") by Johann Friedrich Anton Fleischmann (1766-1798), which was for a long time wrongly attributed to Mozart (KV 350). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 19 x 17,5 cm (7½ x 7), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-754.html'>Continue reading</a><br /><br />
+                    Order no. 1200-754
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-743>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-743.html'>
+                            <img class='thumb' src='/img/thumb/mozart-wolfgang-amadeus-1756-1791-1200-743.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-743.html'><strong>Mozart, Wolfgang Amadeus (1756-1791)</strong></a><br /><br />
+                    Vienna, Schulerstrasse 8 (detail). - The upper part of the house where the Mozart couple lived with their children from 1784 to 1787. The building, which was erected in the 17th century and is also known as "Figaro House", today accomodates a Mozart memorial. Mozart was visited here by his father Leopold as well as by Joseph Haydn and Ludwig van Beethoven, and it was here that he wrote his opera "Le Nozze di Figaro" (KV 492), among other works. It is also the source of the musical quotation, the beginning of Cherubino's aria from the first act ("Non so più cosa son, cosa faccio") in German version: "Neue Freuden, neue Schmerzen". <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 19 x 21 cm (7½ x 8¼ in), sheet size 35 x 29 cm (13¾ x 11½ in) or 39 x 25 cm (15¼ x 9¾ in) - please specify when ordering.</span>
+                    <a href='/en/articles/mozart-wolfgang-amadeus-1756-1791-1200-743.html'>Continue reading</a><br /><br />
+                    Order no. 1200-743
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-772>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1797-1828-1200-772.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-772.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-772.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Mödling, Höldrichsmühle. - Between 1820 and 1826 the composer often visited the inn in the romantic valley of Hinterbrühl near Mödling (Lower Austria) with friends. Legend has it that the famous song "Der Lindenbaum" ("The Linden Tree", D 911-5) from the cycle "Winterreise" ("Winter Journey", op. 89) based on poems by Wilhelm Müller was written here. The musical quotation shows the beginning of the song published in 1828: "Am Brunnen vor dem Tore da steht ein Lindenbaum" ("At the fountain in front of the gate there is a linden tree"). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 19,5 x 18,5 cm (7½ x 7¼ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-772.html'>Continue reading</a><br /><br />
+                    Order no. 1200-772
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-765>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1797-1828-1200-765.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-765.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-765.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Vienna-Alsergrund, Schuberthaus. - The courtyard of the house at Nußdorfer Strasse 54, where the composer was born and spent the first years of his life, from the garden side. Today the building, which dates from the 18th century, houses a memorial. The musical quotation shows the beginning of the song "Ständchen" ("Serenade") after a poem by Ludwig Rellstab from Schubert's last, posthumously published cycle "Schwanengesang" ("Swan song", D 957): "Leise flehen meine Lieder durch die Nacht zu dir" ("Softly my songs plead through the night to you"). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 21,5 x 17 cm (8½ x 6¾ in), sheet size 29 x 24 cm (11½ x 9½ in).</span>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-765.html'>Continue reading</a><br /><br />
+                    Order no. 1200-765
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-767>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1797-1828-1200-767.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-767.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-767.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Vienna-Alsergrund, Schuberthaus. - The courtyard of the house at Nußdorfer Strasse 54, where the composer was born and spent his early years, facing the garden. Today the building, which dates from the 18th century, houses a memorial. The musical quotation shows the beginning of the song "Wohin?" ("Where to?") from Schubert's cycle "Die schöne Müllerin" (op. 25, D 795) composed in 1823 after poems by Wilhelm Müller: "Ich hört ein Bächlein rauschen wohl aus dem Felsenquell" ("I heard a little brook babbling from its rocky source"). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20,5 x 19 cm (8 x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-767.html'>Continue reading</a><br /><br />
+                    Order no. 1200-767
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-769>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1797-1828-1200-769.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-769.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-769.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Vienna-Wieden, Karlsplatz. - In 1825 and 1826 the composer lived in the so-called "Fruwirthaus" next to Karlskirche church, where Johann Fruwirt's gun factory was located. The building captured in the picture by the artist had to make way for an office building in 1971. Among other works, Schubert wrote the "Deutsche Messe" ("German Mass", D 872) here, which was premiered in the Karlskirche. The musical quotation shows the beginning of "Das Wandern" ("Wandering"), the first song in the cycle "Die schöne Müllerin" (op. 25, D 795) composed in 1823 after poems by Wilhelm Müller: "Das Wandern ist des Müllers Lust, das Wandern" ("To wander is the miller's delight, to wander"). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20 x 18,5 cm (7¾ x 7¼ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-769.html'>Continue reading</a><br /><br />
+                    Order no. 1200-769
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-771>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1797-1828-1200-771.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-771.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-771.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Vienna-Wieden, Schuberthof. - The courtyard of the house at Kettenbrückengasse 6, a building typical of the Biedermeier period with its own well. Franz Schubert spent the last weeks of his life in this house in the apartment of his brother Ferdinand and died here on November 19, 1828. The musical quotation shows the beginning of one of his most famous songs, "Die Forelle" ("The Trout", op. 32, D 550): "In einem Bächlein helle da schoss in froher Eil" ("In a sparkling stream  darted about happily and swift "). It was composed between 1816 and 1817. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20 x 18 cm (7¾ x 7 in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-771.html'>Continue reading</a><br /><br />
+                    Order no. 1200-771
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-770>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schubert-franz-1797-1828-1200-770.html'>
+                            <img class='thumb' src='/img/thumb/schubert-franz-1797-1828-1200-770.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-770.html'><strong>Schubert, Franz (1797-1828)</strong></a><br /><br />
+                    Vienna-Wieden, Schuberthof. - The courtyard of the house at Kettenbrückengasse 6, a building typical of the Biedermeier period with its own well. Franz Schubert spent the last weeks of his life in this house in the apartment of his brother Ferdinand and died here on November 19, 1828. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 11 x 13 cm (4¼ x 5 in), sheet size 29 x 24 cm (11½ x 9½ in).</span>
+                    <a href='/en/articles/schubert-franz-1797-1828-1200-770.html'>Continue reading</a><br /><br />
+                    Order no. 1200-770
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-728>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/strauss-johann-1825-1899-1200-728.html'>
+                            <img class='thumb' src='/img/thumb/strauss-johann-1825-1899-1200-728.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/strauss-johann-1825-1899-1200-728.html'><strong>Strauss, Johann (1825-1899)</strong></a><br /><br />
+                    Vienna-Salmannsdorf. - From 1829 to 1832, the family of Johann Strauss the Elder stayed for the summers in an early Biedermeier house (Dreimarksteingasse 13) in the then suburb in the west of Vienna. This is where Johann Strauss the Younger is said to have composed his first waltz "Erster Gedanke" at the age of 6. The musical quotation shows an excerpt from the dance waltz op. 325 "Geschichten aus dem Wienerwald" ("Tales from the Vienna Woods") with the text "Wenn fern des Lenzes Ruf erhallt ... " ("When springtime calls from afar "). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20,5 x 19 cm (8 x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/strauss-johann-1825-1899-1200-728.html'>Continue reading</a><br /><br />
+                    Order no. 1200-728
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-791>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wagner-richard-1813-1883-1200-791.html'>
+                            <img class='thumb' src='/img/thumb/wagner-richard-1813-1883-1200-791.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wagner-richard-1813-1883-1200-791.html'><strong>Wagner, Richard (1813-1883)</strong></a><br /><br />
+                    Bayreuth, Festspielhaus. - The festival hall was built between 1872 and 1875 by Otto Brückwald according to designs by Richard Wagner in the style of Hellenistic Romanticism on the "Grüner Hügel" in Bayreuth. It was opened on August 13, 1876 with a performance of "Rheingold". Since then, the composer's legacy of dramatic operas is cherished here and performed as part of the annual festival. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 22 x 19 cm (8¾ x 7½ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/wagner-richard-1813-1883-1200-791.html'>Continue reading</a><br /><br />
+                    Order no. 1200-791
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-792>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wagner-richard-1813-1883-1200-792.html'>
+                            <img class='thumb' src='/img/thumb/wagner-richard-1813-1883-1200-792.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wagner-richard-1813-1883-1200-792.html'><strong>Wagner, Richard (1813-1883)</strong></a><br /><br />
+                    Bayreuth, house Wahnfried. - The entrance area of the building, established 1872-1874 according to Wagner's ideas at the edge of the Bayreuther Hofgarten. The composer lived here with his family from 1874 until his death, but also spent a lot of time in Italy because of the milder climate there. The acquisition of the land and the construction of the house were largely financed by King Ludwig II of Bavaria (1845-1886), whose youthful bust stands in front of the villa. After his death in Venice, Wagner was transferred to Bayreuth and buried in a crypt in the garden. <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 22,5 x 18 cm (8¾ x 7 in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/wagner-richard-1813-1883-1200-792.html'>Continue reading</a><br /><br />
+                    Order no. 1200-792
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-731>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wolf-hugo-1860-1903-1200-731.html'>
+                            <img class='thumb' src='/img/thumb/wolf-hugo-1860-1903-1200-731.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wolf-hugo-1860-1903-1200-731.html'><strong>Wolf, Hugo (1860-1903)</strong></a><br /><br />
+                    Perchtoldsdorf. - The courtyard of the house Brunner Gasse 26, where the composer spent many winters. It belonged to the married couple Heinrich and Marie Werner, who did not use the summer house on the edge of the Vienna Woods themselves during the cold season and left it to the composer, who was constantly short of money. Wolf created no less than 116 songs here; the musical quotation shows the beginning of "Verborgenheit" ("Seclusion"), to a text by Eduard Mörike: "Lass, o Welt, o lass mich sein!" ("Let, O world, O let me be!"). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 20,5 x 18,5 cm (8 x 7¼ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/wolf-hugo-1860-1903-1200-731.html'>Continue reading</a><br /><br />
+                    Order no. 1200-731
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1200-732>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wolf-hugo-1860-1903-1200-732.html'>
+                            <img class='thumb' src='/img/thumb/wolf-hugo-1860-1903-1200-732.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wolf-hugo-1860-1903-1200-732.html'><strong>Wolf, Hugo (1860-1903)</strong></a><br /><br />
+                    Perchtoldsdorf. - Street view of the house Brunner Gasse 26, where Hugo Wolf spent many winters. Today it houses a memorial to the composer, who is known above all for his "Lieder" (art songs). The musical quotation shows the beginning of "In der Frühe" ("Early morning"), a poem by Eduard Mörike set to music by Wolf: "Kein Schlaf noch kühlt das Auge mir" ("Still no sleep cools my eyes"). <br /><br />
+                    <span style="display: none">Hand-colored etching by Herta Czoernig-Gobanz (1886-1970), estate signed. Plate size 19 x 21 cm (7½ x 8¼ in), sheet size 35 x 29 cm (13¾ x 11½ in).</span>
+                    <a href='/en/articles/wolf-hugo-1860-1903-1200-732.html'>Continue reading</a><br /><br />
+                    Order no. 1200-732
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

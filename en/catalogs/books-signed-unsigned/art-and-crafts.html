@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books (signed &amp; unsigned)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Books (signed &amp; unsigned)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Art and Crafts
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/books-signed-unsigned.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/early-printed-books.html'>Early Printed Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/local-history-and-topography.html'>Local History and Topography</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/botany-zoology-agriculture-horsemanship-hunting.html'>Botany, Zoology, Agriculture, Horsemanship, Hunting</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/geography-travel-ethnology.html'>Geography, Travel, Ethnology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/history-archeology-numismatics.html'>History, Archeology, Numismatics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/children-s-books.html'>Children&#39;s Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/gastronomy-sports-and-games-miscellaneous.html'>Gastronomy, Sports and Games, Miscellaneous</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/art-and-crafts.html'>Art and Crafts</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/literature-liguistics-books-about-books.html'>Literature, Liguistics, Books about Books</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/medicine-psychology-pedagogics.html'>Medicine, Psychology, Pedagogics</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/militaria-and-naval-matters.html'>Militaria and Naval Matters</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/science-mathematics-technology.html'>Science, Mathematics, Technology</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/philosophy-and-religion.html'>Philosophy and Religion</a></li>
+    
+        <li><a href='/en/catalogs/books-signed-unsigned/politics-law-economics.html'>Politics, Law, Economics</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2509-10>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/bock-ralf-2509-10.html'>
+                            <img class='thumb' src='/img/thumb/bock-ralf-2509-10.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/bock-ralf-2509-10.html'><strong>Bock, Ralf</strong></a><br /><br />
+                    Adolf Loos. Leben und Werke 1870-1933. Mit Aufnahmen von Philippe Ruault. Aus dem Italienischen übersetzt von Ulrike Stopfel. München, Deutsche Verlags-Anstalt, 2008. Kl-4; 302 pp mit zahlreichen teils ganzseitigen und teils farbigen Abbildungen; Orig.-Pappband mit illustriertem Schutzumschlag; neuwertig. <br /><br />
+                    <span style="display: none">Deutsche Fassung des Standardwerks in ansprechender Ausstattung. Die englisch-italienische Erstausgabe erschien 2007 bei Skira in Mailand.</span>
+                    <a href='/en/articles/bock-ralf-2509-10.html'>Continue reading</a><br /><br />
+                    Order no. 2509-10
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2007-3>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/boni-filippo-de-hrsg-2007-3.html'>
+                            <img class='thumb' src='/img/thumb/boni-filippo-de-hrsg-2007-3.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/boni-filippo-de-hrsg-2007-3.html'><strong>Boni, Filippo de (Hrsg.)</strong></a><br /><br />
+                    Biografia degli Artisti. (Emporeo biografico metodico, ovvero biografia universale ordinata per classi; classe decima). Venezia, Co' Tipi del Gondoliere, 1840. Kl-4; VIII (inkl. Titel mit Druckermarke in Holzstich), 1109 pp; neueres Halbleinen mit goldgeprägtem altem Rückenschildchen (dieses berieben); einzelne kleine Papierläsuren, stellenweise etwas fleckig, einige Bleistiftanstreichungen. - Es fehlen die Seiten 39-48, die in Kopie beiliegen. <br /><br />
+                    <span style="display: none">Seltenes Universal-Künstlerlexikon, zusammengestellt von einem italienischen Abbate.</span>
+                    <a href='/en/articles/boni-filippo-de-hrsg-2007-3.html'>Continue reading</a><br /><br />
+                    Order no. 2007-3
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-19>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/feilacher-johann-bosch-gabriele-red-1603-19.html'>
+                            <img class='thumb' src='/img/thumb/feilacher-johann-bosch-gabriele-red-1603-19.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/feilacher-johann-bosch-gabriele-red-1603-19.html'><strong>Feilacher, Johann - Bösch, Gabriele (Red.)</strong></a><br /><br />
+                    Carom.! Kunst aus Gugging in der Sammlung Essl. Klosterneuburg, Edition Sammlung Essl, 1999. In-4; 143, (1) pp mit zahlr. meist farbigen und überwiegend ganzseitigen Abb.; farbillustr. OPp. - Tadellos. <br /><br />
+                    <span style="display: none">Großzügig ausgestattete Monographie über die Gugginger Künstler, hrsg. zur Ausstellung im Schömer-Haus in Klosterneuburg (2.6.-1.10.1999). Vergriffen und gesucht.</span>
+                    <a href='/en/articles/feilacher-johann-bosch-gabriele-red-1603-19.html'>Continue reading</a><br /><br />
+                    Order no. 1603-19
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2109-26>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/garzarolli-thurnlack-karl-2109-26.html'>
+                            <img class='thumb' src='/img/thumb/garzarolli-thurnlack-karl-2109-26.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/garzarolli-thurnlack-karl-2109-26.html'><strong>Garzarolli-Thurnlack, Karl</strong></a><br /><br />
+                    Österreichische Barockmalerei: Zwölf Farbenlichtdrucke mit einer Einführung. Wien, Max Jaffé, 1949. In-folio; 22 pp, 1 Bl., 12 lose Farbtafeln in beigebundener Mappe; orig. Halbleinen mit farbiger Deckelillustration; tadellos. - Dazu als Beigabe: Grandezza. Der Barockmaler Daniel Gran 1694-1757. Ausstellungskatalog Diözesanmuseum St. Pölten 2007 (kl-4, kartoniert, 208 pp, durchgehend farbig illustriert). <br /><br />
+                    <span style="display: none">Nicht numeriertes Exemplar der auf 200 Stück beschränkten großformatigen Liebhaberausgabe. Garzarolli-Thurnlack präsentiert hier Werke von J. M. Rottmayr, Martin Altomonte, Daniel Gran, Paul Troger, Martin van Meytens, Franz Anton Maulbertsch, Martin Johann Schmidt (Kremser-Schmidt) und Johann Christian Brand.</span>
+                    <a href='/en/articles/garzarolli-thurnlack-karl-2109-26.html'>Continue reading</a><br /><br />
+                    Order no. 2109-26
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2409-50>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kasimir-lorenz-albert-2409-50.html'>
+                            <img class='thumb' src='/img/thumb/kasimir-lorenz-albert-2409-50.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kasimir-lorenz-albert-2409-50.html'><strong>Kasimir. - Lorenz, Albert</strong></a><br /><br />
+                    Luigi Kasimir. Mit 76 farbigen Radierungen des Künstlers und einer Bildniszeichnung von Tanna K. Hoernes. Wien, Wiener Verlag, [1949]. Kl-4; 55, (1) pp mit 1 Abb., 2 Bll., 76 Farbtafeln nach Radierungen; privater schwarzer Leinenband mit montierter Reproduktion auf dem fliegenden Vorsatz; Titelblatt am unteren Rand gering fleckig, sonst ausgezeichnet erhalten. - Auf dem Titelblatt eigenhändige Bleistiftwidmung Kasimirs (Badgastein Sommer 1949), auf der weißen Seite gegenüber dem Titel originale Farbstiftzeichnung des Künstlers, bezeichnet "Sonne über Europe". <br /><br />
+                    <span style="display: none">Zweite Ausgabe, mit dem Copyrightvermerk der ersten Ausgabe (1944); die Hakenkreuzfahnen vor dem Wiener Parlament auf Taf. 18 wurden für diese Ausgabe durch rot-weiß-rote Fahnen ersetzt. Sowohl die Originalzeichnung wie auch die Reproduktion (nach einem Original von 1949) zeigen das 1906-1909 errichtete Grand Hotel de lEurope in Bad Gastein, das seinerzeit zu den größten und modernsten Hotels der österreich-ungarischen Monarchie zählte.</span>
+                    <a href='/en/articles/kasimir-lorenz-albert-2409-50.html'>Continue reading</a><br /><br />
+                    Order no. 2409-50
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2105-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/kosel-hermann-cl-emens-2105-44.html'>
+                            <img class='thumb' src='/img/thumb/kosel-hermann-cl-emens-2105-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/kosel-hermann-cl-emens-2105-44.html'><strong>Kosel, Hermann Cl(emens)</strong></a><br /><br />
+                    Kosel-Album. Zweite Sammlung Buchdruckreproduktionen nach Original-Photographien von Hermann Cl. Kosel, Wien. Wien, Verlag des "Photo-Sport", 1910. In-4; 4 Bll. mit Vignetten, 64 nicht numerierte Tafeln mit vorgebundenen bedruckten Seidenhemdchen; Orig.-Kartoneinband mit zusätzlicher Kordelbindung (angeschmutzt und mit Knickspuren, unteres Kapital schadhaft, hinterer Deckel mit kleinen Einrissen); die Textblätter gebräunt, Text und erste Tafeln mit kleinem Eckknick, mehrere unbedeutende kleine Randmängel, sonst in gutem Zustand. <br /><br />
+                    <span style="display: none">Hochreiter-Starl 2, 139; vgl. ÖBL 4, 143 f. - Mit einem Vorwort von A. F. Seligmann. Hermann Clemens Kosel (1867-1945) war ein vielseitiger österreichischer Schriftsteller, Maler, Graphiker und Fotograph. Als solcher verbesserte und propagierte er das Gummidruckverfahren, redigierte die Zeitschrift Photo-Sport, beschäftigte in seinem Atelier mehr als 20 Mitarbeiter und wurde 1911 Hofphotograph. Sein erstes Album mit reproduzierten Fotographien erschien 1906, eine dritte Folge 1914. Der vorliegend Band enthält künstlerisch hochwertige Porträts (zum Großteil aus Adelskreisen), einige Landschafts- und Städtebilder sowie einzelne Milieustudien. Alle Kosel-Alben sind sehr selten.</span>
+                    <a href='/en/articles/kosel-hermann-cl-emens-2105-44.html'>Continue reading</a><br /><br />
+                    Order no. 2105-44
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2505-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/larisch-rudolf-2505-48.html'>
+                            <img class='thumb' src='/img/thumb/larisch-rudolf-2505-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/larisch-rudolf-2505-48.html'><strong>Larisch, Rudolf</strong></a><br /><br />
+                    Unterricht in ornamentaler Schrift. 5. veränderte Aufl. Wien, Deutschösterr. Staatsdruckerei, 1919. In-8; 119, (1) pp mit zahlreichen teils ganzseitigen Abb., 8 Taf.; beigebunden vierseitiger Verlagsprospekt zur 7. Aufl.; dekorativer Halbleder-Handeinband von Fini Skarica mit Deckelbezügen aus Buntpapier, Rotschnitt und kleinem Exlibris der Künstlerin (Rücken aufgehellt); ganz vereinzelt etwas stockfleckig, zwei Tafeln mit unbedeutendem kleinen Papierschaden im Falz. Stellenweise in Rot gedruckt, auf dem Titelblatt handschriftliche Widmung des Autors. - Beiliegend ein weiterer Handeinband von Fini Skarica: in-8, weißes Ganzleder mit Goldschnitt und handschriftlichem Rückentitel in Pappschuber mit Buntpapierbezug (dieser mit Gebrauchsspuren); enthält Friedrich Pollak, Lorenzo Bernini, Stuttgart 1919. <br /><br />
+                    <span style="display: none">Hauptwerk des österreichischen Schriftgestalters und Typographen Rudolf von Larisch (1856-1934), erstmals 1905 erschienen und in der Folge mehrmals aufgelegt. Larisch unterrichtete an der Graphischen Lehr- und Versuchsanstalt sowie an der Akademie der Bildenden Künste in Wien und war Gründungsmitglied des Österreichischen Werkbundes. Seine Schülerin Fini (Josefine) Skarica verehelichte Ehrendorfer (1898-1986) betätigte sich in Wien und Graz als Schriftkünstlerin, Illustratorin und Kunsthandwerkerin. Sie war Mitglied der Wiener Frauenkunst und des Werkbundes.</span>
+                    <a href='/en/articles/larisch-rudolf-2505-48.html'>Continue reading</a><br /><br />
+                    Order no. 2505-48
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2007-28>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/marci-adolph-friedrich-ubers-2007-28.html'>
+                            <img class='thumb' src='/img/thumb/marci-adolph-friedrich-ubers-2007-28.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/marci-adolph-friedrich-ubers-2007-28.html'><strong>Marci, Adolph Friedrich (Übers.)</strong></a><br /><br />
+                    Beschreibung des Rath-Hauses der Stadt Amsterdam, mit einer Erklärung von denen Hieroglyphischen Figuren, Mahlereyen und Bildern &c., welche so wohl von innen, als von außen an dieses herrliche Gebäude wahrzunehmen sind. Aus dem Holländischen übersetzt. Amsterdam, Wwe. P. Mortier, (um 1785). Kl-8; Titel, 90 pp, 4 gefaltete Kupfertafeln; zeitgenössischer Buntpapiereinband (Kapitale und Ecken abgenützt); unfrisch und gelegentlich etwas fleckig, eine Tafel mit restauriertem Bugriss, insgesamt ordentlich. <br /><br />
+                    <span style="display: none">Ausführliche Beschreibung des 1648-1655 von Jacob van Campen im niederländisch-klassizistischen Stil errichteten Gebäudes mit Bildhauerarbeiten aus der Werkstatt von Artus Quellijn; es wird heute als "Paleis op de Dam"  von der Königsfamilie für Repräsentationszwecke genutzt. Das Büchlein ist erstmals um 1750 erschienen, und zwar offensichtlich in vier Sprachen; das Deutsch der vorliegenden Ausgabe ist nicht ganz fehlerfrei. Die Tafeln zeigen unter anderem auch den gotischen Vorgängerbau des Rathauses.</span>
+                    <a href='/en/articles/marci-adolph-friedrich-ubers-2007-28.html'>Continue reading</a><br /><br />
+                    Order no. 2007-28
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-59>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/ottillinger-eva-b-2509-59.html'>
+                            <img class='thumb' src='/img/thumb/ottillinger-eva-b-2509-59.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/ottillinger-eva-b-2509-59.html'><strong>Ottillinger, Eva B.</strong></a><br /><br />
+                    Adolf Loos. Wohnkonzepte und Möbelentwürfe. Salzburg und Wien, Residenz Verlag, 1994. Kl-4; 185, (1) pp mit zahlreichen teils farbigen Abb.; Orig.-Leinen mit Schutzumschlag (dieser mit kleiner Klebeband-Reparatur). <br /><br />
+                    <span style="display: none">"Anders als die meisten der Künstler-Architekten der Jahrhundertwende stellte Loos die Bedürfnisse der Bewohner und die Forderung nach Privatheit und Bequemlichkeit in den eigenen vier Wänden in den Mittelpunkt seiner Überlegungen ..." (Klappentext).</span>
+                    <a href='/en/articles/ottillinger-eva-b-2509-59.html'>Continue reading</a><br /><br />
+                    Order no. 2509-59
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1810-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/parnass-zeitschrift-1810-73.html'>
+                            <img class='thumb' src='/img/thumb/parnass-zeitschrift-1810-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/parnass-zeitschrift-1810-73.html'><strong>Parnass (Zeitschrift)</strong></a><br /><br />
+                    Österreichische Kunst- und Kulturzeitschrift hrsg. von Charlotte Kreuzmayr. Konvolut von 98 Heften, davon 17 weitgehend komplette Jahrgänge (1983-1999) und 12 Sonderhefte. Kl-4; je Heft ca. 75-150 pp (einschließlich Anzeigen), durchgehend farbig illustriert; 12 Jahrgänge in orig. Sammelboxen, der Rest lose; einzelne Gebrauchsspuren. <br /><br />
+                    <span style="display: none">In diesem Umfang selten angebotene Folge dieser für die österreichische Kunststzene repräsentativen Zeitschrift. Vorhanden sind: Heft 6/1982; Jg. 3 (1983) bis 19 (1999) ohne Heft 4/1995; sowie die Sonderhefte 2 und 6-16. </span>
+                    <a href='/en/articles/parnass-zeitschrift-1810-73.html'>Continue reading</a><br /><br />
+                    Order no. 1810-73
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/schantl-alexandra-hrsg-1803-74.html'>
+                            <img class='thumb' src='/img/thumb/schantl-alexandra-hrsg-1803-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/schantl-alexandra-hrsg-1803-74.html'><strong>Schantl, Alexandra (Hrsg.)</strong></a><br /><br />
+                    Die Liebe zu den Objekten. Aspekte zeitgenössischer Skulptur / The Love of Objects. Aspects of Contemporary Sculpture. (Katalog des Niederösterreichischen Landesmuseums Neue Folge 496.) Wien - New York, Springer, (2008). Kl-4; 253 pp, 1 Bl. mit zahlr. meist ganzseitigen farb. Abb.; orig. Klappenbroschur. <br /><br />
+                    <span style="display: none">Deutsch-englischer Begleitband zur Ausstellung vom 17. 11. 2007 bis 26. 10. 2008 im Niederösterreichischen Landesmuseum. "Die Ausstellung und die vorliegende Publikation veranschaulichen auf faszinierende Weise die Entstehung eines erweiterten Skulpturbegriffs in der österreichen Kunst der letzten 30 Jahre im Kontext der Auseinandersetzung mit Licht, Klang, Video, Assemblagen, neuen Medien und Kinetismus" (A. Schantl im Vorwort).</span>
+                    <a href='/en/articles/schantl-alexandra-hrsg-1803-74.html'>Continue reading</a><br /><br />
+                    Order no. 1803-74
+                    <br />
+                    
+                        € 36,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1802-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/shishkina-l-s-batogovoi-e-g-1802-80.html'>
+                            <img class='thumb' src='/img/thumb/shishkina-l-s-batogovoi-e-g-1802-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/shishkina-l-s-batogovoi-e-g-1802-80.html'><strong>Shishkina, L. S. - Batogovoi, E. G.</strong></a><br /><br />
+                    El arte de Rusia desde el realismo socialista hasta nuestros dias. Art of Russia. From Socialist Realism Till Today. Moskva, Kremlevski Dvorets Syezdov, 1992. Kl-4; 52 Bll. mit zahlr. Farbabb.; OKart. <br /><br />
+                    <span style="display: none">Katalog einer Ausstellung in Caracas im Juni 1992 mit einem repräsentativen Querschnitt durch die neuere russische Malerei. Text in Spanisch und Englisch.</span>
+                    <a href='/en/articles/shishkina-l-s-batogovoi-e-g-1802-80.html'>Continue reading</a><br /><br />
+                    Order no. 1802-80
+                    <br />
+                    
+                        € 24,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2509-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/szadkowska-maria-van-duzer-leslie-cernouskova-dagmar-2509-80.html'>
+                            <img class='thumb' src='/img/thumb/szadkowska-maria-van-duzer-leslie-cernouskova-dagmar-2509-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/szadkowska-maria-van-duzer-leslie-cernouskova-dagmar-2509-80.html'><strong>Szadkowska, Maria - Van Duzer, Leslie - Cernouskovà, Dagmar </strong></a><br /><br />
+                    Adolf Loos - dílo v ceských zemích / Adolf Loos - Works in the Czech Lands. Prag, Stadtmuseum und KANT Publishers, 2009. Gr-8; 391, (2) pp mit zahlreichen teils farbigen Abbildungen; orig. Klappenbroschur. <br /><br />
+                    <span style="display: none">Ausführliche Monographie in Tschechisch und Englisch, erschienen zur gleichnamigen Ausstellung im Museum der Stadt Prag. Tadellos erhalten und selten.</span>
+                    <a href='/en/articles/szadkowska-maria-van-duzer-leslie-cernouskova-dagmar-2509-80.html'>Continue reading</a><br /><br />
+                    Order no. 2509-80
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

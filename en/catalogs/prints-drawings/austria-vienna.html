@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prints &amp; Drawings</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /en/search.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/kataloge/graphik/osterreich-wien.html">Deutsch</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/catalogs/">Catalogs</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+          <li><a href="/en/agb.html">Terms</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Search" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Prints &amp; Drawings</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Orders:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Shipping prices on request.<br>
+    
+    Our <a href="/en/agb.html" target="_blank">Terms &amp; Conditions</a> apply.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Austria - Vienna
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/en/catalogs/prints-drawings.html'>All categories</a></li>
+        
+    
+        <li><a href='/en/catalogs/prints-drawings/fine-art-prints-16th-to-20th-c.html'>Fine Art Prints (16th to 20th c.)</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-provinces.html'>Austria - Provinces</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/austria-vienna.html'>Austria - Vienna</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/europe.html'>Europe</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/non-european-countries.html'>Non-European Countries</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/maps.html'>Maps</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/plants-mushrooms.html'>Plants &amp; Mushrooms</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/animals-horsemanship-hunting-fishing.html'>Animals, Horsemanship, Hunting &amp; Fishing</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/crafts-technology-medicine-sports-and-games.html'>Crafts, Technology, Medicine, Sports and Games</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/music-theatre-dance-circus.html'>Music, Theatre, Dance, Circus</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/history-portraits-house-of-habsburg-militaria.html'>History, Portraits, House of Habsburg, Militaria</a></li>
+    
+        <li><a href='/en/catalogs/prints-drawings/religion-mythology-seasons-misc.html'>Religion, Mythology, Seasons, Misc.</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        No articles found containing this keyword.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2112-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-altes-rathaus-2112-74.html'>
+                            <img class='thumb' src='/img/thumb/01-altes-rathaus-2112-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-altes-rathaus-2112-74.html'><strong>(01) Altes Rathaus</strong></a><br /><br />
+                    "Prospect deß Stadt und Rath-Hauß in der Wiplinger Strassen." Kupferstich von Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 2. Teil, Augsburg 1725, 22 x 33 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/II/27. - Das Gebäude in der Wipplingerstraße 8 mit seiner barocken Fassade im Stil von Johann Bernhard Fischer von Erlach wurde bis 1885 als Wiener Rathaus genutzt. Heute beherbergt es magistratische Bezirksstellen, das Bezirksmuseum Innere Stadt sowie das Dokumentationsarchiv des österreichischen Widerstands.</span>
+                    <a href='/en/articles/01-altes-rathaus-2112-74.html'>Continue reading</a><br /><br />
+                    Order no. 2112-74
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-dominikanerkirche-2112-76.html'>
+                            <img class='thumb' src='/img/thumb/01-dominikanerkirche-2112-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-dominikanerkirche-2112-76.html'><strong>(01) Dominikanerkirche</strong></a><br /><br />
+                    "Das Gottes Hauß Mariae Rotundae, anjetzo der H[ochwürdigen] H[erren] P.P. Dominicaner Kirch von Leopoldo VIII. Hertzog von Österr. A[nn]o 1225. erbauet, und damals den Tempel Herrn eingegeben ...". Kupferstich von Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Die frühbarocke Hauptfassade, rechts hinten das Jesuitenkolleg. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/5. - Die Absenkung des Straßenniveaus vor der Kirche machte später den Anbau einer Treppenanlage notwendig. In welcher Form das Areal vor den 1226 von Herzog Leopold VI. nach Wien berufenen Dominikanern von den Templern genutzt war, ist im Detail nicht geklärt.</span>
+                    <a href='/en/articles/01-dominikanerkirche-2112-76.html'>Continue reading</a><br /><br />
+                    Order no. 2112-76
+                    <br />
+                    
+                        € 250,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-dominikanerviertel-2412-78.html'>
+                            <img class='thumb' src='/img/thumb/01-dominikanerviertel-2412-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-dominikanerviertel-2412-78.html'><strong>(01) Dominikanerviertel</strong></a><br /><br />
+                    "Die Gegend vom Stubenthor mit der alten Dominikaner Kirche / Nach einem Original von J. Houfnagel um das Jahr 1600." Kupferstich von J. W. Zinke aus G. A. Schimmer, Das alte Wien, Wien 1855, ca. 21 x 33 cm. - Zeigt die dicht bebaute Dominikanerbastei an der Wien mit der anschließenden Stubenbastei. - Druckbedingte leichte Faltspur. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 637/13.</span>
+                    <a href='/en/articles/01-dominikanerviertel-2412-78.html'>Continue reading</a><br /><br />
+                    Order no. 2412-78
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-62>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-franz-josefs-kai-2311-62.html'>
+                            <img class='thumb' src='/img/thumb/01-franz-josefs-kai-2311-62.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-franz-josefs-kai-2311-62.html'><strong>(01) Franz-Josefs-Kai</strong></a><br /><br />
+                    "Franz Joseph-Quai." Tonlithographie von C. Waage nach Nicolas-Marie-Joseph Chapuy aus "Souvenir de Vienne" bei Artaria & Co., Wien um 1860, 16 x 22 cm. - Das belebte rechte Ufer des Donaukanals vom Bereich des heutigen Schwedenplatzes bis zur ehemaligen Franz-Josephs-Kaserne und der Einmündung des Wienflusses. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 912/53.</span>
+                    <a href='/en/articles/01-franz-josefs-kai-2311-62.html'>Continue reading</a><br /><br />
+                    Order no. 2311-62
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-freyung-1603-88.html'>
+                            <img class='thumb' src='/img/thumb/01-freyung-1603-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-freyung-1603-88.html'><strong>(01) Freyung</strong></a><br /><br />
+                    Chromolithographie nach Franz Alt aus "Album von Wien", Wien 1872, 25 x 38 cm. - Im Stein signiert. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 35-38/5. - Der historische Platz in der Wiener Innenstadt. Die Serie mit Chromolithographien von Rudolf und Franz Alt erschien in mehreren Ausgaben, auch unter dem Titel "Wien im Weltausstellungsjahr 1873". Der vorliegende Abzug ohne die sonst übliche Montierung auf Karton und ohne typographische Beschriftung.</span>
+                    <a href='/en/articles/01-freyung-1603-88.html'>Continue reading</a><br /><br />
+                    Order no. 1603-88
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-himmelpfortgasse-winterpalais-prinz-eugen-2311-63.html'>
+                            <img class='thumb' src='/img/thumb/01-himmelpfortgasse-winterpalais-prinz-eugen-2311-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-himmelpfortgasse-winterpalais-prinz-eugen-2311-63.html'><strong>(01) Himmelpfortgasse / Winterpalais Prinz Eugen</strong></a><br /><br />
+                    "Façade des Pallasts, welchen S. Hochfürstl: Durchl:, Printz Eugenius von Savoyen, in Wien aufführen laßen." Kupferstich von Johann Anton Delsenbach nach Joseph Emanuel Fischer von Erlach aus "Anfang einiger Vorstellungen der vornehmsten Gebäude ... von Wien", um 1720, 22 x 32 cm. - Nicht störende Flecken im weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 139/4. - Das Stadtpalais des Prinzen (Himmelpfortgasse 8) wurde in mehreren Phasen von 1696 bis 1724 durch Johann Bernhard Fischer von Erlach und Johann Lukas von Hildebrandt erbaut und wird heute vom Finanzministerium genutzt.</span>
+                    <a href='/en/articles/01-himmelpfortgasse-winterpalais-prinz-eugen-2311-63.html'>Continue reading</a><br /><br />
+                    Order no. 2311-63
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-hofburg-2412-82.html'>
+                            <img class='thumb' src='/img/thumb/01-hofburg-2412-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-hofburg-2412-82.html'><strong>(01) Hofburg</strong></a><br /><br />
+                    "Die K.K. Burg von Seite der Bastei die Abendpromenade und Terasse Ihrer Majestät der Kaiserinn." Altkolorierte Umrissradierung von Carl Postl nach Laurenz Janscha, Wien um 1800, 26 x 39,5 cm. - Reich belebter Blick über den heutigen Volksgarten (mit Pavillon und musizierender Kapelle) zum Leopoldinischen Trakt der Hofburg (heute Präsidentschaftskanzlei), zur Hofbibliothek und zum Palais Alberts von Sachsen-Teschen (heute Albertina). <br /><br />
+                    <span style="display: none">Vgl. Nebehay-Wagner 426/1 und Schwarz S. 77. - Im Verlagskatalog der Firma Artaria von 1805/1806 als Nr. 2 verzeichnet, kommt aber auch mit Widmungszusatz des Verlegers Tranquillo Mollo vor; die Produktion der beiden Verlage weist Überschneidungen auf und ist nicht immer sauber zu trennen.</span>
+                    <a href='/en/articles/01-hofburg-2412-82.html'>Continue reading</a><br /><br />
+                    Order no. 2412-82
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-42>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-hofburg-2211-42.html'>
+                            <img class='thumb' src='/img/thumb/01-hofburg-2211-42.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-hofburg-2211-42.html'><strong>(01) Hofburg</strong></a><br /><br />
+                    "Wien, Hofburg". Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, 15,5 x 11 cm. - Blick in den Schweizerhof mit dem Aufgang zur Burgkapelle. <br /><br />
+                    <span style="display: none">Die erstmals 1296 urkundlich erwähnte Hofburgkapelle wurde im Lauf der Zeit mehrfach umgestaltet.</span>
+                    <a href='/en/articles/01-hofburg-2211-42.html'>Continue reading</a><br /><br />
+                    Order no. 2211-42
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-hofburg-schweizertor-2112-79.html'>
+                            <img class='thumb' src='/img/thumb/01-hofburg-schweizertor-2112-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-hofburg-schweizertor-2112-79.html'><strong>(01) Hofburg / Schweizertor</strong></a><br /><br />
+                    "Schweitzerhof-Thor in der K.K. Burg in Wien". Kupferstich von Georg Christian Wilder bei Ferdinand Kettner, Wien um 1825, 32 x 29 cm. - Das von Ferdinand I. 1552 errichte Renaissancetor, benannt nach der im inneren Burghof untergebrachten Schweizer Leibgarde. - Bis zum Plattenrand beschnitten, im weißen Rand gering fleckig, rückseitig Montagespuren. <br /><br />
+                    <span style="display: none">Andresen, Handbuch für Kupferstichsammler II. 731, Nr. 4; vgl. auch Thieme-Becker 35, 565. - Seltenes, im Verzeichnis österreichischer Ansichten von Paulusch nicht verzeichnetes Blatt. Der aus Nürnberg stammende Künstler (1797-1855) wirkte von 1819 bis 1829 in Wien und schuf hier zahlreiche Architekturaufnahmen, von denen er viele auch radierte.</span>
+                    <a href='/en/articles/01-hofburg-schweizertor-2112-79.html'>Continue reading</a><br /><br />
+                    Order no. 2112-79
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-hofpostamt-schulerstrasse-2012-73.html'>
+                            <img class='thumb' src='/img/thumb/01-hofpostamt-schulerstrasse-2012-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-hofpostamt-schulerstrasse-2012-73.html'><strong>(01) Hofpostamt (Schulerstraße)</strong></a><br /><br />
+                    "Prospect der Kayserl. Königlichen Post ohnweit dem Stuben-Thor in Wienn." Guckkastenblatt, altkolorierter Kupferstich von Martin Sichnit nach Salomon Kleiner bei Kaiserliche Kunstakademie, Augsburg um 1780, 27 x 38 cm. - Seitenverkehrte Darstellung des bis 1849 bestehenden Postgebäudes mit der Stadtmauer im Vordergrund und dem Stephansdom im Hintergrund.- Unten knapprandig, unbedeutende kleine Farbflecken und Papiermängel. <br /><br />
+                    <span style="display: none">Zu Nebehay-Wagner 306/III/21. - Deutsch und französisch beschriftet mit Serientitel "Collections des Prospects", über dem Bild seitenverkehrt "Vuë de la Poste Imperiale a Vienne". Der Stecher Martin Sichnit (1754-1804) war als Maler und Radierer in Wien tätig.</span>
+                    <a href='/en/articles/01-hofpostamt-schulerstrasse-2012-73.html'>Continue reading</a><br /><br />
+                    Order no. 2012-73
+                    <br />
+                    
+                        € 340,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-karntner-strasse-1911-68.html'>
+                            <img class='thumb' src='/img/thumb/01-karntner-strasse-1911-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-karntner-strasse-1911-68.html'><strong>(01) Kärntner Straße</strong></a><br /><br />
+                    "Wien, Kärntnerstraße". Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, vermutlich um 1935, Bildformat 11,5 x 10 cm, Blattgröße 25 x 19,5 cm. <br /><br />
+                    <span style="display: none">Die nächtlich belebte Geschäftsstraße mit Blick gegen den Stephansdom.</span>
+                    <a href='/en/articles/01-karntner-strasse-1911-68.html'>Continue reading</a><br /><br />
+                    Order no. 1911-68
+                    <br />
+                    
+                        € 30,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-66>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-liechtensteinsches-majoratshaus-bankgasse-9-2311-66.html'>
+                            <img class='thumb' src='/img/thumb/01-liechtensteinsches-majoratshaus-bankgasse-9-2311-66.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-liechtensteinsches-majoratshaus-bankgasse-9-2311-66.html'><strong>(01) Liechtensteinsches Majoratshaus (Bankgasse 9)</strong></a><br /><br />
+                    "Vue du Palais du Prince de Liechtenstein à Vienne." Guckkastenblatt, altkolorierter Kupferstich nach Salomon Kleiner bei J. Chereau, Paris um 1770, 26 x 40 cm. Seitenverkehrte Darstellung. - Breitrandig und gut erhalten. <br /><br />
+                    <span style="display: none">Zu Nebehay-Wagner 306/II/18. - Das seit 2013 renovierten Stadtpalais mit seinen Kunstsammlungen gilt als erstes bedeutendes Bauwerk des Hochbarocks in Wien.</span>
+                    <a href='/en/articles/01-liechtensteinsches-majoratshaus-bankgasse-9-2311-66.html'>Continue reading</a><br /><br />
+                    Order no. 2311-66
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-lobkowitzplatz-1911-69.html'>
+                            <img class='thumb' src='/img/thumb/01-lobkowitzplatz-1911-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-lobkowitzplatz-1911-69.html'><strong>(01) Lobkowitzplatz</strong></a><br /><br />
+                    Signierte Farbradierung von Luigi Kasimir (1881-1962), in der Platte datiert "Oct. Nov. 1940", 37 x 45 cm. <br /><br />
+                    <span style="display: none">Blick von der Albertinarampe in die Augustinerstraße und zum Lobkowitzpalais (heute Theatermuseum); rechts im Hintergrund die fensterlose Seitenfassade des Dorotheums.</span>
+                    <a href='/en/articles/01-lobkowitzplatz-1911-69.html'>Continue reading</a><br /><br />
+                    Order no. 1911-69
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-maria-am-gestade-1911-70.html'>
+                            <img class='thumb' src='/img/thumb/01-maria-am-gestade-1911-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-maria-am-gestade-1911-70.html'><strong>(01) Maria am Gestade</strong></a><br /><br />
+                    "Die Kirche zu Maria-Stiegen." Kupferstich von Neubauer aus C. F. Strahlheim, Die Wundermappe, Frankfurt 1834-37, 17 x 12 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 725/5.</span>
+                    <a href='/en/articles/01-maria-am-gestade-1911-70.html'>Continue reading</a><br /><br />
+                    Order no. 1911-70
+                    <br />
+                    
+                        € 60,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-maria-am-gestade-2311-67.html'>
+                            <img class='thumb' src='/img/thumb/01-maria-am-gestade-2311-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-maria-am-gestade-2311-67.html'><strong>(01) Maria am Gestade</strong></a><br /><br />
+                    "Wien Maria Gestade". Signierte Farbradierung von Hertha Czoernig-Gobanz (1886-1970), um 1930, 29 x 20 cm. - Blick aus der Gasse "Am Gestade" zum Hauptportal der gotischen Kirche. - Im breiten weißen Rand minimal stockfleckig. Gerahmt. <br /><br />
+                    <span style="display: none">Seltene Dokumentation des damaligen Straßenbildes. Das Haus links vorne (ehemals Tiefer Graben 36) wurde im Zuge des 1935-1937 vorgenommenen Neubaus der Stiegenanlage abgerissen, um eine bessere Sicht auf die Kirche zu ermöglichen.</span>
+                    <a href='/en/articles/01-maria-am-gestade-2311-67.html'>Continue reading</a><br /><br />
+                    Order no. 2311-67
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-michaelerplatz-2412-84.html'>
+                            <img class='thumb' src='/img/thumb/01-michaelerplatz-2412-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-michaelerplatz-2412-84.html'><strong>(01) Michaelerplatz</strong></a><br /><br />
+                    "1. Die Pfarrkirche zu St. Michael. 2. Das alte Michaelerhaus. 3. Das neue Michaelerhaus, in Wien." Altkolorierter Kupferstich von Gottfried Prixner aus F. C. Weidmann, Panorama von Wien, 1832, 7 x 10 cm. - Wiederabdruck einer Kupferplatte von 1796. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 816/11.</span>
+                    <a href='/en/articles/01-michaelerplatz-2412-84.html'>Continue reading</a><br /><br />
+                    Order no. 2412-84
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-68>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-minoritenkirche-2311-68.html'>
+                            <img class='thumb' src='/img/thumb/01-minoritenkirche-2311-68.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-minoritenkirche-2311-68.html'><strong>(01) Minoritenkirche</strong></a><br /><br />
+                    "Wien Minoritenkirche". Signierte kolorierte Radierung von Herta Czoernig-Gobanz (1886-1970), 21 x 22 cm. <br /><br />
+                    <span style="display: none">Die im Ursprung mittelalterliche Kirche wurde 1784-1789 durch Johann Ferdinand Hetzendorf von Hohenberg umgestaltet. Sie bildet die Heimat der italienischsprachigen Gemeinde Wiens.</span>
+                    <a href='/en/articles/01-minoritenkirche-2311-68.html'>Continue reading</a><br /><br />
+                    Order no. 2311-68
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-69>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-minoritenkirche-2311-69.html'>
+                            <img class='thumb' src='/img/thumb/01-minoritenkirche-2311-69.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-minoritenkirche-2311-69.html'><strong>(01) Minoritenkirche</strong></a><br /><br />
+                    Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, 21 x 22 cm. <br /><br />
+                    <span style="display: none">Die im Ursprung mittelalterliche Kirche wurde 1784-1789 durch Johann Ferdinand Hetzendorf von Hohenberg umgestaltet. Sie bildet die Heimat der italienischsprachigen Gemeinde Wiens.</span>
+                    <a href='/en/articles/01-minoritenkirche-2311-69.html'>Continue reading</a><br /><br />
+                    Order no. 2311-69
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-molker-bastei-2211-44.html'>
+                            <img class='thumb' src='/img/thumb/01-molker-bastei-2211-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-molker-bastei-2211-44.html'><strong>(01) Mölker Bastei</strong></a><br /><br />
+                    "Wien Mölkerbastei wohnte Beethoven". Signierte brauntonige Radierung von Herta Czoernig-Gobanz (1886-1970), 12 x 13 cm. - Blick auf das Pasqualatihaus, in dem Beethoven mit Unterbrechungen insgesamt acht Jahre wohnte. Heute Gedenkstätte. <br /><br />
+                    <span style="display: none">Der Militärbeamte Johann Baptist Freiherr von Pasqualati (1777-1830) zählte zu den Gönnern Beethovens.</span>
+                    <a href='/en/articles/01-molker-bastei-2211-44.html'>Continue reading</a><br /><br />
+                    Order no. 2211-44
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-museumsplatz-maria-theresien-platz-2112-82.html'>
+                            <img class='thumb' src='/img/thumb/01-museumsplatz-maria-theresien-platz-2112-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-museumsplatz-maria-theresien-platz-2112-82.html'><strong>(01) Museumsplatz / Maria-Theresien-Platz</strong></a><br /><br />
+                    "Wien Naturhist. Museum". Signierte Farbradierung von Herta Czoernig-Gobanz (1886-1970), 20 x 20 cm. <br /><br />
+                    <span style="display: none">Winterlicher Blick vom Museumsplatz mit der Johannes-Nepomuk-Statue auf das 1889 eröffnete Naturhistorische Museum.</span>
+                    <a href='/en/articles/01-museumsplatz-maria-theresien-platz-2112-82.html'>Continue reading</a><br /><br />
+                    Order no. 2112-82
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-neuer-markt-2112-84.html'>
+                            <img class='thumb' src='/img/thumb/01-neuer-markt-2112-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-neuer-markt-2112-84.html'><strong>(01) Neuer Markt</strong></a><br /><br />
+                    "Die Mehl-Grube, ein der Stadt Wien zum ausmiethen gehöriges Hauß. Hier seynd vor diesem die allgemeine Fastnachts-Täntze gehalten worden." Kupferstich von Johann Adam Delsenbach nach Johann Bernhard Fischer von Erlach aus "Anfang einiger Vorstellungen der vornehmsten Gebäude ... von Wien", um 1720, 22 x 32 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 139/6. - 1716 als Vergnügungslokal für den Adel eröffnet, war die Mehlgrube 1785/86 Schauplatz mehrerer Akademien Mozarts, bei denen er seine Werke auf dem Spinett vortrug. Heute befindet sich hier das nach dem 2. Weltkrieg neu errichtete Hotel Ambassador.</span>
+                    <a href='/en/articles/01-neuer-markt-2112-84.html'>Continue reading</a><br /><br />
+                    Order no. 2112-84
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-85>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-neuer-markt-2112-85.html'>
+                            <img class='thumb' src='/img/thumb/01-neuer-markt-2112-85.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-neuer-markt-2112-85.html'><strong>(01) Neuer Markt</strong></a><br /><br />
+                    "Der Brunnen auf dem neuen Markte zu Wien." Anonymer Kupferstich aus "Zeitung für die elegante Welt" (Nr. 103) vom 28. 8. 1806, 13 x 18 cm. <br /><br />
+                    <span style="display: none">Der 1737-39 errichtete Providentiabrunnen (volkstümlich Donnerbrunnen) mit den 1773-1801 wegen ihrer Nacktheit entfernt gewesenen allegorischen Flussfiguren von Georg Raphael Donner.</span>
+                    <a href='/en/articles/01-neuer-markt-2112-85.html'>Continue reading</a><br /><br />
+                    Order no. 2112-85
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-oper-2311-72.html'>
+                            <img class='thumb' src='/img/thumb/01-oper-2311-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-oper-2311-72.html'><strong>(01) Oper</strong></a><br /><br />
+                    "Wien, Staatsoper". Signierte Farbradierung von Ludwig Adamus, in der Platte datiert 1944, 27,5 x 23 cm. - Blick aus der Nebenfahrbahn der Ringstraße auf die Arkaden und den Herbert-von Karajan-Platz. <br /><br />
+                    <span style="display: none">Ludwig Adamus (1912-1980) erhielt seine Ausbildung an der Wiener Akademie. Er schuf vor allem Ansichten aus Wien und dem übrigen Österreich.</span>
+                    <a href='/en/articles/01-oper-2311-72.html'>Continue reading</a><br /><br />
+                    Order no. 2311-72
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-47>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-peterskirche-petersplatz-2211-47.html'>
+                            <img class='thumb' src='/img/thumb/01-peterskirche-petersplatz-2211-47.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-peterskirche-petersplatz-2211-47.html'><strong>(01) Peterskirche / Petersplatz</strong></a><br /><br />
+                    "Die mit einer neuen Facade A[nno]o 1734. gezierte St. Peters-Kirche ...". Kupferstich von Johann Bernhard Hattinger nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio ..., 4. Teil, Augsburg 1737, 22 x 34 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/IV/1. - Die im frühen 18. Jh. nach Abbruch eines Vorgängerbaus errichtete Kirche war der erste Kuppelbau des barocken Wien und gilt als eine der schönsten Barockkirchen der Stadt.</span>
+                    <a href='/en/articles/01-peterskirche-petersplatz-2211-47.html'>Continue reading</a><br /><br />
+                    Order no. 2211-47
+                    <br />
+                    
+                        € 360,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-79>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-rathaus-2012-79.html'>
+                            <img class='thumb' src='/img/thumb/01-rathaus-2012-79.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-rathaus-2012-79.html'><strong>(01) Rathaus</strong></a><br /><br />
+                    "Wien, Rathaus". Farbradierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, um 1940(?), 26 x 30 cm. <br /><br />
+                    <span style="display: none">Auf dünnem Papier gedruckt; im weißen Rand etwas knittrig und angeschmutzt.</span>
+                    <a href='/en/articles/01-rathaus-2012-79.html'>Continue reading</a><br /><br />
+                    Order no. 2012-79
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-82>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-ruprechtskirche-2012-82.html'>
+                            <img class='thumb' src='/img/thumb/01-ruprechtskirche-2012-82.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-ruprechtskirche-2012-82.html'><strong>(01) Ruprechtskirche</strong></a><br /><br />
+                    "Wiens älteste Kirche zum Heiligen Rupprecht". Altkolorierte Umrissradierung aus "Ansichten-Sammlung" bei Maria Geissler, Wien um 1815, 7,5 x 11 cm. - Blick über den Ruprechtsplatz auf die Seitenfront der Kirche; links ein Teil des benachbarten Praghauses (abgebrochen 1832-34), das das Salzamt beherbergte. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 193/44.</span>
+                    <a href='/en/articles/01-ruprechtskirche-2012-82.html'>Continue reading</a><br /><br />
+                    Order no. 2012-82
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-89>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-schottenring-1603-89.html'>
+                            <img class='thumb' src='/img/thumb/01-schottenring-1603-89.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-schottenring-1603-89.html'><strong>(01) Schottenring</strong></a><br /><br />
+                    Chromolithographie nach Franz Alt aus "Album von Wien", Wien 1872, 25 x 37,5 cm. - Im Stein signiert. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 35-38/12. - Der nordwestliche Abschnitt der Wiener Prachtstraße mit dem 1881 abgebrannten Ringtheater sowie der Börse im Hintergrund. Die Serie mit Chromolithographien von Rudolf und Franz Alt erschien in mehreren Ausgaben, auch unter dem Titel "Wien im Weltausstellungsjahr 1873". Der vorliegende Abzug ohne die sonst übliche Montierung auf Karton und ohne typographische Beschriftung.</span>
+                    <a href='/en/articles/01-schottenring-1603-89.html'>Continue reading</a><br /><br />
+                    Order no. 1603-89
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-48>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-stadtpark-2211-48.html'>
+                            <img class='thumb' src='/img/thumb/01-stadtpark-2211-48.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-stadtpark-2211-48.html'><strong>(01) Stadtpark</strong></a><br /><br />
+                    Signierte Farbradierung von Reiner Tiefenbacher (geb. 1952), um 1990, Bildformat 19 x 27 cm, Blattgröße 36 x 40 cm. - Das von Friedrich Ohmann gestaltete Wienflussportal (gebaut 1903-1906) mit seinen Pavillons. - Nr. 11 von 300 Exemplaren. <br /><br />
+                    <span style="display: none">Im Hintergrund das Hotel Intercontinental, das demnächst durch einen umstrittenen Neubau ersetzt werden soll.</span>
+                    <a href='/en/articles/01-stadtpark-2211-48.html'>Continue reading</a><br /><br />
+                    Order no. 2211-48
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/01-ursulinenkirche-2412-86.html'>
+                            <img class='thumb' src='/img/thumb/01-ursulinenkirche-2412-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/01-ursulinenkirche-2412-86.html'><strong>(01) Ursulinenkirche</strong></a><br /><br />
+                    "Kirche und Closter der H. Ursulä ...". Kupferstich von Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Die 1673-75 erbaute Kirche mit Klostergebäude in der Johannesgasse; heute Teil der Musikunversität. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/18.</span>
+                    <a href='/en/articles/01-ursulinenkirche-2412-86.html'>Continue reading</a><br /><br />
+                    Order no. 2412-86
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-am-tabor-1911-72.html'>
+                            <img class='thumb' src='/img/thumb/02-am-tabor-1911-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-am-tabor-1911-72.html'><strong>(02) Am Tabor</strong></a><br /><br />
+                    "Tabor-Linie". Aquarellierte Federzeichnung, signiert und datiert O. Hinterberger 1926, 17 x 22 cm. - Vergrößerte Wiedergabe einer Abbildung aus Franz Kopállik - A. Groner, Aus unserer Vaterstadt. 50 Original-Illustrationen zur Erweiterung Wiens, Wien 1892. Das ehemalige Mauthaus Am Tabor (Am Tabor 2 / Taborstraße 80). - Montiert. <br /><br />
+                    <span style="display: none">Aus Sammlung F. Hohberger. - Das ehemalige Mauthaus Am Tabor (Am Tabor 2 / Taborstraße 80), an dem bis zur Eingemeindung der Wiener Vororte (1890/92) die sogenannte Verzehrsteuer eingehoben wurde.</span>
+                    <a href='/en/articles/02-am-tabor-1911-72.html'>Continue reading</a><br /><br />
+                    Order no. 1911-72
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-73>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-augarten-1911-73.html'>
+                            <img class='thumb' src='/img/thumb/02-augarten-1911-73.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-augarten-1911-73.html'><strong>(02) Augarten</strong></a><br /><br />
+                    "Preis-Vertheilung für veredeltes Horn und Schaaf Vieh, Von der österreichischen Landwirthschafts-Gesellschaft in Gegenwart S[einer] M[ajestät] des Königs Ferdinand V." Lithographie von Franz Wolf nach Johann Nepomuk Höchle aus "Journal pittoresque" Heft 4, Wien 1832, Bildformat ca. 24 x 33 cm. - Etwas beschnitten, Beschriftungsspuren am unteren Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 849/13; vgl. auch Thieme-Becker 17, 181. - Obersthofmeister Peter Graf von Goëss überreicht im Wiener Augarten im Beisein des nachmaligen Kaisers Ferdinand I. einem Landwirt einen Preis für sein ausgezeichnetes Zuchtrind. Ferdinand war 1830 als Ferdinand V. zum König von Ungarn gekrönt worden und nahm als solcher Repräsentationsaufgaben in Vertretung von Kaiser Franz I. wahr.</span>
+                    <a href='/en/articles/02-augarten-1911-73.html'>Continue reading</a><br /><br />
+                    Order no. 1911-73
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-karmeliterkirche-2412-87.html'>
+                            <img class='thumb' src='/img/thumb/02-karmeliterkirche-2412-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-karmeliterkirche-2412-87.html'><strong>(02) Karmeliterkirche</strong></a><br /><br />
+                    "Kirchen und Closter der H. Theresia, in der Leopold-Statt, von Ferd. II. erbaut, und besitzen solche die PP. Carmeliter Barfüsser." Kupferstich nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Die nach italienischem Vorbild im 17. Jh. errichtete Kirche in der Taborstraße ist seit 1783 dem Hl. Josef geweiht. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/19.</span>
+                    <a href='/en/articles/02-karmeliterkirche-2412-87.html'>Continue reading</a><br /><br />
+                    Order no. 2412-87
+                    <br />
+                    
+                        € 90,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-88>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-leopoldstadt-2412-88.html'>
+                            <img class='thumb' src='/img/thumb/02-leopoldstadt-2412-88.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-leopoldstadt-2412-88.html'><strong>(02) Leopoldstadt</strong></a><br /><br />
+                    [Ansicht der Vorstadt Leopoldstadt]. Kupferstich von Anton Bogner nach J. Wett aus F. X. Schweickhardt von Sickingen, Darstellung der k. k. Haupt- und Residenzstadt Wien, 1832, 16,5 x 54 cm. - Druckbedingte alte Faltspuren. Der zugehörige Text liegt Kopie bei. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 679/11. - Detailreicher Panoramablick von der Servitenkirche in der Roßau bis zur Einmündung der Wien in den Donaukanal; im Mittelpunkt die Ferdinandsbrücke und der Beginn der Taborstraße.</span>
+                    <a href='/en/articles/02-leopoldstadt-2412-88.html'>Continue reading</a><br /><br />
+                    Order no. 2412-88
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-51>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-leopoldstadt-2211-51.html'>
+                            <img class='thumb' src='/img/thumb/02-leopoldstadt-2211-51.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-leopoldstadt-2211-51.html'><strong>(02) Leopoldstadt</strong></a><br /><br />
+                    "Ein Theil der Leopoldstadt. Une Partie de la Leopoldstadt." Altkolorierte Umrissradierung von Johann Ziegler bei Artaria, Wien 1780, 26 x 41 cm. Einziger Etat (Platte um 1792 abgeschliffen). - Minimal altersgebräunt. Gerahmt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 671/12; Schwarz 12. - Detailreicher Blick von der Rotenturmbastei über den Donaukanal auf die ehemalige Vorstadt mit den Kirchen St. Leopold, St. Josef (Karmeliterkirche) und St. Johannes (Barmherzige Brüder). Links im Hintergrund der Bisamberg.</span>
+                    <a href='/en/articles/02-leopoldstadt-2211-51.html'>Continue reading</a><br /><br />
+                    Order no. 2211-51
+                    <br />
+                    
+                        € 1200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-2012-84.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-2012-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-2012-84.html'><strong>(02) Prater</strong></a><br /><br />
+                    "Das neue Wiener Ringelspiel im Prater." Altkolorierte Umrissradierung von Carl Postl nach Laurenz Janscha bei Artaria, Wien um 1810, 26,5 x 41 cm. - Gebräunt mit Lichtrand im Schriftfeld, der breite Rand etwas fleckig und mit kleinen Altersschäden; insgesamt attraktives Blatt mit reichem Volksleben. <br /><br />
+                    <span style="display: none">Vgl. Nebehay-Wagner 59/28. - Früher Abzug mit Platten-Nr. 26. Im Hintergrund der Feuerwerksplatz.</span>
+                    <a href='/en/articles/02-prater-2012-84.html'>Continue reading</a><br /><br />
+                    Order no. 2012-84
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-54>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-2211-54.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-2211-54.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-2211-54.html'><strong>(02) Prater</strong></a><br /><br />
+                    "Das Vogelschiessen. Eine Gegend aus dem Prather." Radierung von Friedrich August Brand (1735-1806) nach Johann Christian Brand (1722-1795), ohne Verlagsadresse (wohl Wien), um 1785/1790, 24,5 x 36 cm. - Auf starkem Papier gedruckt. Mit schmalem Rand um die Plattenkante; geringfügig angeschmutzt. <br /><br />
+                    <span style="display: none">Vgl. Thieme-Becker 4, 525 f. - Geselliger Treffpunkt inmitten der Aulandschaft des Wiener Praters. Das Schießen auf eine hölzerne Vogelattrappe auf hoher Stange diente im Mittelalter der militärischen Schulung  und wurde später als Freizeitvergnügen populär. Die Brüder Johann Christian und Friedrich August Brand waren als Landschafts- und Historienmaler sowie Kupferstecher in Wien tätig und lehrten an der Wiener Akademie.</span>
+                    <a href='/en/articles/02-prater-2211-54.html'>Continue reading</a><br /><br />
+                    Order no. 2211-54
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-hauptallee-1811-84.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-hauptallee-1811-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-hauptallee-1811-84.html'><strong>(02) Prater / Hauptallee</strong></a><br /><br />
+                    "Ansicht der Grossen Allee im Prater beym Cafféehaus". Altkolorierte Umrissradierung bei Artaria, Wien um 1810, 26,5 x 40 cm. - Die Hauptallee in dem unter Joseph II. geöffneten Prater mit mehreren Kaffeehäusern und zahlreichem Publikum in Empiremode. - Bis zum Plattenrand beschnitten, Altschäden restauriert. <br /><br />
+                    <span style="display: none">Schwarz S. 80, Nr. 23; zu Nebehay-Wagner 59/24. - Sehr seltener früher, wohl erster Etat des sonst nur mit Biedermeierstaffage bekannten Blattes. Es scheint in den Katalogen des Verlags erstmals um 1812 auf.</span>
+                    <a href='/en/articles/02-prater-hauptallee-1811-84.html'>Continue reading</a><br /><br />
+                    Order no. 1811-84
+                    <br />
+                    
+                        € 850,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-lusthaus-2311-74.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-lusthaus-2311-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-lusthaus-2311-74.html'><strong>(02) Prater / Lusthaus</strong></a><br /><br />
+                    "Das Lusthaus im Prater". Altkolorierte Umrissradierung von Johann Ziegler bei Artaria, 1. Etat (von 2), Wien 1783, 39,5 x 53 cm. - Der 1781-83 von Joseph II. nach Plänen von Isidore Canevale erbaute Pavillon am Ende der heutigen Hauptallee. - Mit getuschtem Zierrand. Gerahmt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 671/25; Schwarz Nr. 25.</span>
+                    <a href='/en/articles/02-prater-lusthaus-2311-74.html'>Continue reading</a><br /><br />
+                    Order no. 2311-74
+                    <br />
+                    
+                        € 2650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-75>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-schwimmschule-2311-75.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-schwimmschule-2311-75.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-schwimmschule-2311-75.html'><strong>(02) Prater / Schwimmschule</strong></a><br /><br />
+                    "Schwim Schule von Innen in Prater." - "Schwim Schule von Aussen in Prater." Zwei altkolorierte Umrissradierungen aus "Ansichten-Sammlung" bei Maria Geissler, Wien um 1815, je 8 x 11 cm.  - Die ältesten Ansichten der ersten, 1813 errichteten Wiener Schwimmschule. Sie lag am Praterufer des damaligen Hauptstroms der noch unregulierten Donau (Kaiserwasser, heute  Nebenarm der Alten Donau). <br /><br />
+                    <span style="display: none">Nebehay-Wagner 193/75-76.</span>
+                    <a href='/en/articles/02-prater-schwimmschule-2311-75.html'>Continue reading</a><br /><br />
+                    Order no. 2311-75
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1603-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-weltausstellung-1873-1603-91.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-weltausstellung-1873-1603-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-weltausstellung-1873-1603-91.html'><strong>(02) Prater / Weltausstellung 1873</strong></a><br /><br />
+                    Chromolithographie nach Franz Alt, um 1873, 24 x 36 cm. - Im Stein signiert, Signatur angeschnitten. <br /><br />
+                    <span style="display: none">Wohl Nebehay-Wagner 36/15. - Gehört offensichtlich zur Serie "Album von Wien" bzw. "Wien im Weltausstellungsjahr 1873". Der vorliegende Abzug ohne die sonst übliche Montierung auf Karton und ohne typographische Beschriftung.</span>
+                    <a href='/en/articles/02-prater-weltausstellung-1873-1603-91.html'>Continue reading</a><br /><br />
+                    Order no. 1603-91
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2403-89>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-wiener-volksbelustigungen-2403-89.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-wiener-volksbelustigungen-2403-89.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-wiener-volksbelustigungen-2403-89.html'><strong>(02) Prater / Wiener Volksbelustigungen</strong></a><br /><br />
+                    "Wiener Lieblings-Unterhaltungen im Pratter." Altkolorierte Umrissradierung (von Georg Emanuel Opitz), wohl aus "Nüzliches Taschenbuch für Fremde und Einheimische auf das Jahr 1805" bei Artaria, Wien, 11 x 16 cm. - Bis zur Einfassungslinie und knapp unter die Beschriftung (diese unkomplett?) beschnitten, geringfügig fleckig, kaum sichtbarer Mittelbug; gerahmt. <br /><br />
+                    <span style="display: none">Vgl. Slg. Mayer 438 (sein Exemplar ohne dieses Blatt, jedoch mit einer anderen Praterbelustigung); nicht in Slg. Eckl und bei Nebehay-Wagner. - Doppelblattgroße Illustration aus einer äußerst seltenen Kalenderpublikation, von der bisher nur ein einziger Jahrgang nachgewiesen ist. Die ans Groteske grenzende Darstellung zeigt eine deftige Schaukelattraktion im Wiener Prater mit einer in Ohnmacht gefallenen Frau im Vordergrund. Georg Emanuel Opitz (auch Opiz und Oppitz, 1775-1841) stammte aus Prag und kam um 1801 als Wanderkünstler nach Wien, "wo er sein Talent für Darstellung charakteristischer Szenen aus dem Volksleben ausbildete" (H. Vollmer).</span>
+                    <a href='/en/articles/02-prater-wiener-volksbelustigungen-2403-89.html'>Continue reading</a><br /><br />
+                    Order no. 2403-89
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/02-prater-zirkus-bach-2112-91.html'>
+                            <img class='thumb' src='/img/thumb/02-prater-zirkus-bach-2112-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/02-prater-zirkus-bach-2112-91.html'><strong>(02) Prater / Zirkus Bach</strong></a><br /><br />
+                    "Circus Gimnasticus im Pratter". Altkolorierte Aquatinta von Wilhelm Friedrich Schlotterbeck aus "Wiens Umgebungen" bei Tranquillo Mollo, Wien um 1815, 21 x 29 cm. - Auf Plattenkante beschnitten; leichte Mängel im weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 646/6. - Der 1808 von Christoph de Bach eröffnete Zirkus auf einer Wiese südlich der Hauptallee erlebte seine Blütezeit während des Wiener Kongresses. Das vermutlich von Josef Kornhäusel entworfene Gebäude wurde 1852 demoliert.</span>
+                    <a href='/en/articles/02-prater-zirkus-bach-2112-91.html'>Continue reading</a><br /><br />
+                    Order no. 2112-91
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-86>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/03-belvedere-menagerie-prinz-eugens-2012-86.html'>
+                            <img class='thumb' src='/img/thumb/03-belvedere-menagerie-prinz-eugens-2012-86.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/03-belvedere-menagerie-prinz-eugens-2012-86.html'><strong>(03) Belvedere / Menagerie Prinz Eugens</strong></a><br /><br />
+                    Drei Kupferstiche von Jacob Gottlieb Thelot nach Salomon Kleiner aus "Vorbildung Aller ausländischer Thiere so in dem Thier-Garten Sr. Hochfürstl. Durchl. Eugenii Francisci Hertzogen von Savoyen und Piemont ... aufbehalten werden", Augsburg 1734, jeweils ca. 24 x 38 cm. - Bis zur Umfasssungslinie beschnitten (Verlust der Beschriftung), vereinzelt geringfügig fleckig, kleine Papierschäden alt hinterlegt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 305/XI/1,2,6. - Der Naturfreund Prinz Eugen begann 1716 mit dem Bau seiner Menagerie im Belvedere, wobei ihm die Anlage Ludwigs XIV. in Versailles als Vorbild diente; sie galt nach jener als die schönste Europas und bildete eine vielbesuchte Wiener Attraktion. Eugen war stets an der Erwerbung seltener exotischer Tiere interessiert, wobei ihm seine diplomatischen Beziehungen zustatten kamen. Salomon Kleiners bildliche Dokumentation der Menageriebewohner erschien als Ergänzung zu seinem zehnteiligen Werk "Residences Memorables ...de... Prince Eugene Francois Duc de Savoye ... Wunderwürdiges Kriegs- und Siegs-Lager ... oder Eigentliche Vor und Abbildungen der Hoff-Lust-und Garten Gebäude deß Durchlauchtigsten Fürstens und Herrn Eugenii Francisci Hertzogen zu Savoyen und Piemont" und blieb mit 12 erschienenen Tafeln unvollendet. - Seltene originelle Blätter.</span>
+                    <a href='/en/articles/03-belvedere-menagerie-prinz-eugens-2012-86.html'>Continue reading</a><br /><br />
+                    Order no. 2012-86
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-56>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/03-hundertwasserhaus-2211-56.html'>
+                            <img class='thumb' src='/img/thumb/03-hundertwasserhaus-2211-56.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/03-hundertwasserhaus-2211-56.html'><strong>(03) Hundertwasserhaus</strong></a><br /><br />
+                    Signierte Farbradierung von Reiner Tiefenbacher, 1986, Bildformat 16 x 22,5 cm, Blattgröße 27 x 38,5 cm. - Nr. 294 von 300 numerierten Exemplaren. Gedruckte Biographie des niederösterreichischen Künstlers Tiefenbacher (geb. 1952) beiliegend. <br /><br />
+                    <span style="display: none">Die von 1983 bis 1985 nach Plänen von Friedensreich Hundertwasser, Josef Krawina und Peter Pelikan erbaute kommunale Wohnhausanlage zählt heute zu den touristischen Sehenswürdigkeiten Wiens.</span>
+                    <a href='/en/articles/03-hundertwasserhaus-2211-56.html'>Continue reading</a><br /><br />
+                    Order no. 2211-56
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-74>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/03-landstrasser-hauptstrasse-1911-74.html'>
+                            <img class='thumb' src='/img/thumb/03-landstrasser-hauptstrasse-1911-74.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/03-landstrasser-hauptstrasse-1911-74.html'><strong>(03) Landstraßer Hauptstraße</strong></a><br /><br />
+                    "Die 1784 aufg[elassene] St: Nicolas Kirche, am Gotts=Acker auf der Landstraße." Lithographie aus "Historische und topographische Darstellung der Pfarren, Stifte, Klöster, milden Stiftungen und Denkmähler im Erzherzogthume Oesterreich" I. Abt. Bd. 9, Wien 1835, 10 x 14,5 cm. - Auf gelblichem Papier gedruckt, leicht gebräunt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 135/I/9/4. - Die ehemalige Nikolaikirche im Bereich des heutigen Rochusmarkts, dahinter angedeutet die Rochuskirche. Topographisch ungenaue Darstellung aus der sogenannten "Kirchlichen Topographie von Österreich".</span>
+                    <a href='/en/articles/03-landstrasser-hauptstrasse-1911-74.html'>Continue reading</a><br /><br />
+                    Order no. 1911-74
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/03-st-marx-1911-76.html'>
+                            <img class='thumb' src='/img/thumb/03-st-marx-1911-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/03-st-marx-1911-76.html'><strong>(03) St. Marx</strong></a><br /><br />
+                    "Wien III. Brauerei St. Marx." Aquarellierte Tuschzeichnung, undeutlich signiert, 1922, Bildformat 6 x 9 cm, Blattgröße 22 x 15 cm. <br /><br />
+                    <span style="display: none">Hübsche kleine Ansicht der alten Brauerei auf dem Gelände des Bürgerspitals, die von Adolf Ignaz Mautner in der 2. Hälfte des 19. Jhs. zur drittgrößten Europas ausgebaut wurde.</span>
+                    <a href='/en/articles/03-st-marx-1911-76.html'>Continue reading</a><br /><br />
+                    Order no. 1911-76
+                    <br />
+                    
+                        € 70,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-90>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/04-karlskirche-2412-90.html'>
+                            <img class='thumb' src='/img/thumb/04-karlskirche-2412-90.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/04-karlskirche-2412-90.html'><strong>(04) Karlskirche</strong></a><br /><br />
+                    "Die Kirche St. Caroli Borromaei als eines Patroni wider die Pest, wurde von Keyser Caroli VI. als ein Gelübd vor dem Kärndtner Thor zu bauen angefangen, und Ao. 1715. d. 5. Febr. der erste Stein darzu gelegt." Kupferstich von Hieronymus Sperling nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. - Nicht störender restaurierter Ausriss im weißen Rand. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/32. - Detailgetreue Darstellung nach dem Entwurf von Johann Bernhard Fischer von Erlach. Fertiggestellt wurde die Kirche erst 1739.</span>
+                    <a href='/en/articles/04-karlskirche-2412-90.html'>Continue reading</a><br /><br />
+                    Order no. 2412-90
+                    <br />
+                    
+                        € 275,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-77>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/04-paulanerkirche-2311-77.html'>
+                            <img class='thumb' src='/img/thumb/04-paulanerkirche-2311-77.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/04-paulanerkirche-2311-77.html'><strong>(04) Paulanerkirche</strong></a><br /><br />
+                    Sepia-Radierung mit Signaturstempel Richard Moser, um 1915, Bildformat 18 x 24 cm, Plattengröße 20 x 26 cm. - Die an der Abzweigung der Favoritenstraße von der Wiedner Hauptstraße gelegene frühbarocke Kirche mit Straßenleben. - Breitrandig. <br /><br />
+                    <span style="display: none">Der österreichische Architektur- und Landschaftsmaler Richard Moser (1874-1924) war Autodidakt und schuf vor allem Ansichten des alten Wien.</span>
+                    <a href='/en/articles/04-paulanerkirche-2311-77.html'>Continue reading</a><br /><br />
+                    Order no. 2311-77
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-78>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/04-schwarzenbergplatz-haus-der-kaufmannschaft-2311-78.html'>
+                            <img class='thumb' src='/img/thumb/04-schwarzenbergplatz-haus-der-kaufmannschaft-2311-78.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/04-schwarzenbergplatz-haus-der-kaufmannschaft-2311-78.html'><strong>(04) Schwarzenbergplatz / Haus der Kaufmannschaft</strong></a><br /><br />
+                    Kolorierte Radierung von Herta Czoernig-Gobanz (1886-1970) mit Nachlass-Signatur, 10 x 13 cm. <br /><br />
+                    <span style="display: none">Das repräsentative, 1902/1903 nach Plänen von Ernst von Gotthilf und Oskar Neumann in Formen des Neobarock errichtete palaisartige Gebäude an der Ecke zur Lothringerstraße beherbergt die Sektion Handel der Kammer der gewerblichen Wirtschaft für Wien.</span>
+                    <a href='/en/articles/04-schwarzenbergplatz-haus-der-kaufmannschaft-2311-78.html'>Continue reading</a><br /><br />
+                    Order no. 2311-78
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-60>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/06-mariahilfer-kirche-2211-60.html'>
+                            <img class='thumb' src='/img/thumb/06-mariahilfer-kirche-2211-60.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/06-mariahilfer-kirche-2211-60.html'><strong>(06) Mariahilfer Kirche</strong></a><br /><br />
+                    "Die Kirche bey Mariae Hülff auf der Leimgruben ...". Kupferstich von Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/25. - Die auch als Barnabitenkirche und Haydn-Kirche bezeichnete Kirche an der Mariahilferstraße wurde 1686-1689 errichtet und ab 1711 zu ihrer heutigen Gestalt umgebaut.</span>
+                    <a href='/en/articles/06-mariahilfer-kirche-2211-60.html'>Continue reading</a><br /><br />
+                    Order no. 2211-60
+                    <br />
+                    
+                        € 175,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/06-mariahilfer-kirche-2112-100.html'>
+                            <img class='thumb' src='/img/thumb/06-mariahilfer-kirche-2112-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/06-mariahilfer-kirche-2112-100.html'><strong>(06) Mariahilfer Kirche</strong></a><br /><br />
+                    "Die Kirche zu Mariahülf, auf der Leimgrube, an Wien." Altkolorierter Kupferstich von Gottfried Prixner aus F. C. Weidmann, Panorama von Wien, bei R. Sammer, Wien 1832, 8 x 10 cm. - Wiederabdruck einer Kupferplatte von 1796. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 816/47.</span>
+                    <a href='/en/articles/06-mariahilfer-kirche-2112-100.html'>Continue reading</a><br /><br />
+                    Order no. 2112-100
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1712-81>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/07-altlerchenfelder-kirche-1712-81.html'>
+                            <img class='thumb' src='/img/thumb/07-altlerchenfelder-kirche-1712-81.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/07-altlerchenfelder-kirche-1712-81.html'><strong>(07) Altlerchenfelder Kirche</strong></a><br /><br />
+                    "Pfarr-Kirche in der Vorstadt Altlerchenfeld." Blau-schwarz gedruckter Stahlstich von F. Würthle nach Rudolf Alt aus F. Paterno, Ansichten von Wien, um 1865, 21 x 14,5 cm. - Aus Sammlung Georg Eckl. Leichte Alters- und Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 32/17. - Die Kirche wurde am 29. 9. 1861 eingeweiht. In zweifarbigem Druck ist das Blatt ganz ungewöhnlich.</span>
+                    <a href='/en/articles/07-altlerchenfelder-kirche-1712-81.html'>Continue reading</a><br /><br />
+                    Order no. 1712-81
+                    <br />
+                    
+                        € 115,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-94>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/07-trautsonpalais-2412-94.html'>
+                            <img class='thumb' src='/img/thumb/07-trautsonpalais-2412-94.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/07-trautsonpalais-2412-94.html'><strong>(07) Trautsonpalais</strong></a><br /><br />
+                    "Alt Wien Palais Trautsohn". Signierte kolorierte Radierung von Herta Czoernig-Gobanz (1886-1970), 17 x 26 cm. - Das 1710-1712 nach Plänen von Johann Bernhard Fischer von Erlach errichtete Palais in der Museumstraße, heute Sitz des österreichischen Justizministeriums. <br /><br />
+                    <span style="display: none">Das Palais Trautson zählt zu den prächtigsten Bauwerken des Barock in Wien und war Schauplatz zahlreicher Festlichkeiten. Kaiserin Maria Theresia erwarb es 1760 und stellte es der Ungarischen Garde zur Verfügung.</span>
+                    <a href='/en/articles/07-trautsonpalais-2412-94.html'>Continue reading</a><br /><br />
+                    Order no. 2412-94
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-80>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/09-allgemeines-krankenhaus-alserstrasse-2311-80.html'>
+                            <img class='thumb' src='/img/thumb/09-allgemeines-krankenhaus-alserstrasse-2311-80.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/09-allgemeines-krankenhaus-alserstrasse-2311-80.html'><strong>(09) Allgemeines Krankenhaus / Alserstrasse</strong></a><br /><br />
+                    "Prospect des Armen Hausses und Soldaten Spithal... in der Alster-Gassen." Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 3. Teil, Augsburg 1733, 21 x 31 cm. - In Rahmung und Verglasung des 18. Jahrhunderts. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/III/14.</span>
+                    <a href='/en/articles/09-allgemeines-krankenhaus-alserstrasse-2311-80.html'>Continue reading</a><br /><br />
+                    Order no. 2311-80
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-64>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/09-boltzmanngasse-2211-64.html'>
+                            <img class='thumb' src='/img/thumb/09-boltzmanngasse-2211-64.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/09-boltzmanngasse-2211-64.html'><strong>(09) Boltzmanngasse</strong></a><br /><br />
+                    "Das neue Akademiegebäude." Farbiger Lichtdruck nach Aquarell von Erwin Pendl aus Festschrift der K. und K. Konsular-Akademie, Wien 1904, 15 x 22 cm. <br /><br />
+                    <span style="display: none">Im Mittelpunkt das nach Plänen von Ludwig Baumann errichtete neobarocke Gebäude, in dem von 1904 bis 1938 die Konsularakademie untergebracht war. Seit 1947 beherbergt es die Botschaft der Vereinigten Staaten von Amerika.</span>
+                    <a href='/en/articles/09-boltzmanngasse-2211-64.html'>Continue reading</a><br /><br />
+                    Order no. 2211-64
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-94>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/09-nussdorfer-linie-1811-94.html'>
+                            <img class='thumb' src='/img/thumb/09-nussdorfer-linie-1811-94.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/09-nussdorfer-linie-1811-94.html'><strong>(09) Nußdorfer Linie</strong></a><br /><br />
+                    "Kapelle. Nussdorfer-Linie". Aquarell mit Gouache, signiert Hans Lutz, um 1910, 24 x 20 cm. <br /><br />
+                    <span style="display: none">Nicht bei Czeike. - Die etwa im Bereich der heutigen Viriotgasse gelegene ehemalige Linienkapelle zum Hl. Johannes Nepomuk wurde 1780 errichtet und 1914 abgerissen; der Plan ihrer Wiederrichtung an der Ecke zur Nußdorfer Straße scheiterte trotz Unterstützung durch Thronfolger Franz Ferdinand.</span>
+                    <a href='/en/articles/09-nussdorfer-linie-1811-94.html'>Continue reading</a><br /><br />
+                    Order no. 1811-94
+                    <br />
+                    
+                        € 120,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-65>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/09-schwarzspanierkirche-2211-65.html'>
+                            <img class='thumb' src='/img/thumb/09-schwarzspanierkirche-2211-65.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/09-schwarzspanierkirche-2211-65.html'><strong>(09) Schwarzspanierkirche</strong></a><br /><br />
+                    "Das Kloster sammt der Kirchen St. Mariae von Berg Serrato Reform. Benedictiner Ordens, insgemein die schwarze Spanier benamset ... ". Kupferstich von Johann August Corvinus nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 1. Teil, Augsburg 1724, 22 x 33 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/I/26. - Von der 1690-1739 errichtete Klosterkirche ist heute nur noch die Fassade erhalten (Evangelisches Studentenheim); im anschließenden Schwarzspanierhaus wohnten Beethoven, Lenau und Otto Weiniger.</span>
+                    <a href='/en/articles/09-schwarzspanierkirche-2211-65.html'>Continue reading</a><br /><br />
+                    Order no. 2211-65
+                    <br />
+                    
+                        € 200,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-98>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/10-inzersdorf-2412-98.html'>
+                            <img class='thumb' src='/img/thumb/10-inzersdorf-2412-98.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/10-inzersdorf-2412-98.html'><strong>(10) Inzersdorf</strong></a><br /><br />
+                    "Inzerstorff". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15 cm. - Das von einem Wassergraben umgebene alte Schloss mit Kirche (1965 abgerissen) auf dem Platz der heutigen Wohnhausanlage Kirchenplatz 1 / Draschestraße 9. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I/48.</span>
+                    <a href='/en/articles/10-inzersdorf-2412-98.html'>Continue reading</a><br /><br />
+                    Order no. 2412-98
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-99>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/10-sud-und-ostbahnhof-2412-99.html'>
+                            <img class='thumb' src='/img/thumb/10-sud-und-ostbahnhof-2412-99.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/10-sud-und-ostbahnhof-2412-99.html'><strong>(10) Süd- und Ostbahnhof</strong></a><br /><br />
+                    "Der Südbahnhof". Kolorierte Tonlithographie von Franz Xaver Sandmann nach Rudolf von Alt aus Wien-Album bei H. F. Müller, Wien um 1850, 7 x 11,5 cm. - Der 1840/41 errichtete Bahnhofskomplex mit den beiden Kopfbahnhöfen der Raaber Bahn (Ostbahn) und Gloggnitzer Bahn (Südbahn). Knapp östlich des heutigen Hauptbahnhofs gelegen, bestand er in dieser Form bis 1869. - Knickspur. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 46/37.</span>
+                    <a href='/en/articles/10-sud-und-ostbahnhof-2412-99.html'>Continue reading</a><br /><br />
+                    Order no. 2412-99
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/11-kaiserebersdorf-2412-100.html'>
+                            <img class='thumb' src='/img/thumb/11-kaiserebersdorf-2412-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/11-kaiserebersdorf-2412-100.html'><strong>(11) Kaiserebersdorf</strong></a><br /><br />
+                    "Prospect Ihro Röm. Keyl. und Königl. Cathol. Majest: Lust- und Jagt- Schloß Ebersdorff ohnweit Wien." Kupferstich von G. D. Heumann nach Salomon Kleiner aus S. Kleiner - J. A. Pfeffel, Vera et accurata delineatio, 2. Teil, Augsburg 1725, 22 x 33 cm. - Das heute als Justizanstalt genutzte Schloss erlebte unter Ferdinand II. seine Glanzzeit. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 306/II/6.</span>
+                    <a href='/en/articles/11-kaiserebersdorf-2412-100.html'>Continue reading</a><br /><br />
+                    Order no. 2412-100
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-94>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/12-meidling-tivoli-2012-94.html'>
+                            <img class='thumb' src='/img/thumb/12-meidling-tivoli-2012-94.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/12-meidling-tivoli-2012-94.html'><strong>(12) Meidling / Tivoli</strong></a><br /><br />
+                    "Tivoli in Meidling ca. 1831" (Sammlerbeschriftung mit Bleistift). Anonyme Kreidelithographie um 1830 auf grünlichem Papier, Blattgröße 41 x 54 cm. - Beschnitten (wohl unter etwas Bildverlust), unbedeutende kleine Mängel, zusammen mit Sammleretikett auf Karton montiert. <br /><br />
+                    <span style="display: none">Sammlung Eckl IV/1395 (dieses Exemplar). - Großformatige Ansicht des 1828 gegründeten Vergnügungsetablissements Tivoli mit der großen Rutschbahn. Wohl ein Probedruck und vermutlich das einzige bekannte Exemplar dieser Darstellung. Der Bildausschnitt ähnelt einer mit 1830 datierten Lithographie von Franz Wolf im Bezirksmuseum Meidling, von der ebenfalls nur ein Abzug bekannt sein dürfte.</span>
+                    <a href='/en/articles/12-meidling-tivoli-2012-94.html'>Continue reading</a><br /><br />
+                    Order no. 2012-94
+                    <br />
+                    
+                        € 1400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-102>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/13-hacking-2412-102.html'>
+                            <img class='thumb' src='/img/thumb/13-hacking-2412-102.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/13-hacking-2412-102.html'><strong>(13) Hacking</strong></a><br /><br />
+                    "Hacking." Kolorierte Lithographie aus "Wiens Vorstädte und malerische Umgebung" bei J. Trentsensky, Wien um 1840, Bildformat ca. 13 x 17 cm. - Ein altes Gehöft an der Wien. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 1177a/39; abgebildet bei Czeike Bd. 3, 14. - Seltenes Blatt.</span>
+                    <a href='/en/articles/13-hacking-2412-102.html'>Continue reading</a><br /><br />
+                    Order no. 2412-102
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-84>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/13-hietzing-1911-84.html'>
+                            <img class='thumb' src='/img/thumb/13-hietzing-1911-84.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/13-hietzing-1911-84.html'><strong>(13) Hietzing</strong></a><br /><br />
+                    "Der Kirchenplatz zu Hiezing und der Eingang in den Garden(!) in Schönbrunn nächst Wien". Altkolorierte Umrissradierung von und nach J. Knipp bei Artaria, Wien um 1820, 26 x 39,5 cm. - Früher Abzug auf Papier mit Wasserzeichen "Grand ..." und ohne die später übliche Platten-Nr. "47". Im Himmel minimal stockfleckig, Verlagsadresse im Blatt getilgt. <br /><br />
+                    <span style="display: none">Nicht bei Nebehay-Wagner. - Blick auf das Hietzinger Tor und den Platz vor der Hietzinger Kirche mit der Mariensäule.</span>
+                    <a href='/en/articles/13-hietzing-1911-84.html'>Continue reading</a><br /><br />
+                    Order no. 1911-84
+                    <br />
+                    
+                        € 750,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-95>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/13-hietzing-2012-95.html'>
+                            <img class='thumb' src='/img/thumb/13-hietzing-2012-95.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/13-hietzing-2012-95.html'><strong>(13) Hietzing</strong></a><br /><br />
+                    "Ein Theil eines Herrschaftlichen Garten unweit Schönbrun". Altkolorierte Umrissradierung mit breitem getuschtem Zierrand von Joseph Schaffer bei F. Molis, Wien um 1790/1800, 16 x 21 cm. - Außerhalb des Bildes etwas fleckig. <br /><br />
+                    <span style="display: none">Slg. Eckl 1408; nicht bei Nebehay-Wagner. - Das seltene Blatt zeigt vermutlich einen bei Ober St. Veit gelegenen Landschaftsgarten und gehört zu einer bibliographisch noch nicht befriedigend erfassten Serie von Garten- und Landschaftsdarstellungen.</span>
+                    <a href='/en/articles/13-hietzing-2012-95.html'>Continue reading</a><br /><br />
+                    Order no. 2012-95
+                    <br />
+                    
+                        € 240,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/13-hietzing-2412-103.html'>
+                            <img class='thumb' src='/img/thumb/13-hietzing-2412-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/13-hietzing-2412-103.html'><strong>(13) Hietzing</strong></a><br /><br />
+                    "Kirche und Kirchenplatz in Hietzing". Kolorierter Holzstich nach Johann Josef Kirchner aus Zeitschrift 1878, Bildformat 22,5 x 13,5 cm. - Auf ganzer Seite mit umgebendem Text; papierbedingt etwas gebräunt, nicht störende Randmängel. <br /><br />
+                    <span style="display: none">Die im 19. Jahrhundert umgebaute Pfarr- und Wallfahrtskirche mit dem Maximilian-Denkmal.</span>
+                    <a href='/en/articles/13-hietzing-2412-103.html'>Continue reading</a><br /><br />
+                    Order no. 2412-103
+                    <br />
+                    
+                        € 75,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-96>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/14-hadersdorf-2012-96.html'>
+                            <img class='thumb' src='/img/thumb/14-hadersdorf-2012-96.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/14-hadersdorf-2012-96.html'><strong>(14) Hadersdorf</strong></a><br /><br />
+                    "... Loudons Schloss und Garten in Hadersdorf / Maison de Campagne de Mr. le Bar. de Loudon ...". Kolorierte Umrissradierung bei Artaria, Wien um 1830, hier in einem Abzug des 20. Jhs., 27 x 40,5 cm. - Leichte Knickspur. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 59/50. - Das auf eine mittelalterliche Wehranlage zurückgehende barocke Wasserschloss war 1776 bis 1790 im Besitz von Feldmarschall Ernst Gideon von Laudon und beherbergt heute die Verwaltungsakademie des Bundes. Selten.</span>
+                    <a href='/en/articles/14-hadersdorf-2012-96.html'>Continue reading</a><br /><br />
+                    Order no. 2012-96
+                    <br />
+                    
+                        € 450,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-108>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/14-weidlingau-2112-108.html'>
+                            <img class='thumb' src='/img/thumb/14-weidlingau-2112-108.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/14-weidlingau-2112-108.html'><strong>(14) Weidlingau</strong></a><br /><br />
+                    "Maison de plaisance de Mr. le Baron de Huldenberg ... à Weidlingsau, prés de Vienne ...". Kupferstich (1715) von Johann Anton Delsenbach nach Johann Bernhard Fischer von Erlach aus "Anfang einiger Vorstellungen der vornehmsten Gebäude ... von Wien", 22 x 32 cm. - Die von J. B. Fischer von Erlach erbaute Villa für den englischen Gesandten Daniel Erasmus von Huldenberg in der Mühlbergstraße 9. - Altersspuren. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 139/28. - Von der Anlage mit ihrer prachtvollen barocken Gartenarchitektur ist nach vielfachen Veränderungen sowie Kriegsschäden (1945) nichts mehr erhalten.</span>
+                    <a href='/en/articles/14-weidlingau-2112-108.html'>Continue reading</a><br /><br />
+                    Order no. 2112-108
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-67>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/15-funfhauser-kirche-2211-67.html'>
+                            <img class='thumb' src='/img/thumb/15-funfhauser-kirche-2211-67.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/15-funfhauser-kirche-2211-67.html'><strong>(15) Fünfhauser Kirche</strong></a><br /><br />
+                    "Kirche in Fünfhaus." Chromolithographie nach Johann Varrone (Giovanni Varoni) aus J. Varrone - L. Petrovits, Fünfzig Ansichten von Wien und Umgebung, Wien 1891/1894, 15 x 9 cm. - Die 1867-75 nach Plänen von Friedrich Schmidt errichtete Kirche "Maria vom Siege" am Mariahilfer Gürtel. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 772/47.- Die katholische Pfarrkirche wurde 2015 nach Auflasssung der Pfarre der koptisch-orthodoxen Kirche geschenkt.</span>
+                    <a href='/en/articles/15-funfhauser-kirche-2211-67.html'>Continue reading</a><br /><br />
+                    Order no. 2211-67
+                    <br />
+                    
+                        € 48,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1601-96>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/16-ottakring-1601-96.html'>
+                            <img class='thumb' src='/img/thumb/16-ottakring-1601-96.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/16-ottakring-1601-96.html'><strong>(16) Ottakring</strong></a><br /><br />
+                    Ansichtskarte von der Kaiser-Jubiläumswarte auf dem Gallitzinberg (Wilhelminenberg), beschrieben und datiert 22. 7. 1903. - Leichte Gebrauchsspuren. <br /><br />
+                    <span style="display: none">Die 1899 aufgestellte Eisenkonstruktion der Warte stammte von der Jubiläumsausstellung im Prater und ersetzte den 1898 errichteten und noch im selben Jahr von einem Sturm umgeblasenen hölzernen Vorgängerbau; die 1900 gebaute Schutzhütte wurde bald ein beliebtes Ausflugsziel der Wiener. 1953 wurden Warte und Gaststätte abgerissen und in der Folge neu errichtet.</span>
+                    <a href='/en/articles/16-ottakring-1601-96.html'>Continue reading</a><br /><br />
+                    Order no. 1601-96
+                    <br />
+                    
+                        € 25,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/16-zum-goldenen-pelikan-1911-87.html'>
+                            <img class='thumb' src='/img/thumb/16-zum-goldenen-pelikan-1911-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/16-zum-goldenen-pelikan-1911-87.html'><strong>(16) Zum goldenen Pelikan</strong></a><br /><br />
+                    "Das Haus zum Pelikan in Neulerchenfeld." Holzstich auf ganzer Buchseite aus Albert Ilg (Hrsg.), Alt-Wien in Bild und Wort, Wien 1893, Bildformat 20 x 22 cm, Blattgröße 46 x 30 cm. <br /><br />
+                    <span style="display: none">1740 erstmals urkundlich erwähnt und vermutlich um 1770 zur heutigen Form umgebaut, wird diese Ottakringer Gaststätte am Lerchenfelder Gürtel seit 1914 als Weinhaus Sittl geführt.</span>
+                    <a href='/en/articles/16-zum-goldenen-pelikan-1911-87.html'>Continue reading</a><br /><br />
+                    Order no. 1911-87
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-100>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/17-hernals-2012-100.html'>
+                            <img class='thumb' src='/img/thumb/17-hernals-2012-100.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/17-hernals-2012-100.html'><strong>(17) Hernals</strong></a><br /><br />
+                    "Hernalser Haupstraße". Signierte Tuschfederzeichnung von Franz Grünberger, datiert 1. Mai 1983, ca. 32 x 45 cm. - Blick entlang der dicht belebten Straße vom Elterleinplatz bis zur Kreuzung mit der Bergsteiggasse. <br /><br />
+                    <span style="display: none">Zum Künstler vgl. Fuchs G 2, 29.</span>
+                    <a href='/en/articles/17-hernals-2012-100.html'>Continue reading</a><br /><br />
+                    Order no. 2012-100
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-103>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/18-universitatssternwarte-1811-103.html'>
+                            <img class='thumb' src='/img/thumb/18-universitatssternwarte-1811-103.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/18-universitatssternwarte-1811-103.html'><strong>(18) Universitätssternwarte</strong></a><br /><br />
+                    "Die Sternwarte". Kolorierter Holzstich um 1890, 8 x 12 cm. <br /><br />
+                    <span style="display: none">1874-1879 nach Berliner Vorbild errichtet und 1883 eröffnet, ist die Sternwarte in der Türkenschanzstraße noch heute das größte Sternwarte-Gebäude Europas.</span>
+                    <a href='/en/articles/18-universitatssternwarte-1811-103.html'>Continue reading</a><br /><br />
+                    Order no. 1811-103
+                    <br />
+                    
+                        € 65,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-106>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-dobling-2412-106.html'>
+                            <img class='thumb' src='/img/thumb/19-dobling-2412-106.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-dobling-2412-106.html'><strong>(19) Döbling</strong></a><br /><br />
+                    "Haus der Therese Krones Heiligenstadt". Signierte Radierung von Herta Czoernig-Gobanz (1886-1970), um 1930(?), 17 x 19 cm. - Das "Daheimhäuschen" (Hohe Warte 37), von 1824 bis 1826 Sommerwohnung der Schauspielerin Therese Krones (1801-1830). <br /><br />
+                    <span style="display: none">Das Haus wurde 1945 abgerissen.</span>
+                    <a href='/en/articles/19-dobling-2412-106.html'>Continue reading</a><br /><br />
+                    Order no. 2412-106
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-89>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-dobling-1911-89.html'>
+                            <img class='thumb' src='/img/thumb/19-dobling-1911-89.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-dobling-1911-89.html'><strong>(19) Döbling</strong></a><br /><br />
+                    "Von Döbling." Radierung, in der Platte monogrammiert "H: S.", um 1860(?), Plattengröße 20 x 14,5 cm. - Kleines Gebäude an einer Mauer, im Hintergrund ein Hügel des Wienerwalds. <br /><br />
+                    <span style="display: none">Möglicherweise eine Arbeit des Landschaftsmalers Heinrich Carl Schubert (1827-1897), eines Neffen des Komponisten.</span>
+                    <a href='/en/articles/19-dobling-1911-89.html'>Continue reading</a><br /><br />
+                    Order no. 1911-89
+                    <br />
+                    
+                        € 110,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-107>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-grinzing-2412-107.html'>
+                            <img class='thumb' src='/img/thumb/19-grinzing-2412-107.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-grinzing-2412-107.html'><strong>(19) Grinzing</strong></a><br /><br />
+                    "Grinzing 1918". Signierte Radierung von Herta Czoernig-Gobanz (1886-1970), 27 x 20,5 cm. - Stimmungsvoller Blick aus einem Garten auf ein zweigeschoßiges Haus, im Hintergrund angedeutet ein Bergrücken des Wienerwalds. <br /><br />
+                    <span style="display: none">Mit der von der Künstlerin selten verwendeten Signatur "Herta Gobanz-Czoernig".</span>
+                    <a href='/en/articles/19-grinzing-2412-107.html'>Continue reading</a><br /><br />
+                    Order no. 2412-107
+                    <br />
+                    
+                        € 130,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1911-91>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-grinzing-1911-91.html'>
+                            <img class='thumb' src='/img/thumb/19-grinzing-1911-91.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-grinzing-1911-91.html'><strong>(19) Grinzing</strong></a><br /><br />
+                    "(Österreich) Grinzing mit dem Kahlenberg ...". Kolorierte Umrissradierung (nach Jacob Alt?) mit deutscher und französischer Beschriftung bei Artaria, Wien um 1830, späterer Abzug (um 1900), 27 x 40,5 cm. - In der Bildmitte die aus dem 15. Jh. stammende Pfarrkirche des Weinhauerortes. - Minimal altersfleckig, am unteren Blattrand geringfügig feuchtrandig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 59/72; hier mit Nr. 52.</span>
+                    <a href='/en/articles/19-grinzing-1911-91.html'>Continue reading</a><br /><br />
+                    Order no. 1911-91
+                    <br />
+                    
+                        € 550,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-101>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-heiligenstadt-2012-101.html'>
+                            <img class='thumb' src='/img/thumb/19-heiligenstadt-2012-101.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-heiligenstadt-2012-101.html'><strong>(19) Heiligenstadt</strong></a><br /><br />
+                    "Ansicht der uralten Kirche zu Heiligenstadt, ohnweit Wien. - Vue de l'Eglise fort vieille à Heiligenstadt, aux environs de Vienne." Altkolorierte Umrissradierung von Johann Ziegler nach Laurenz Janscha bei Franz Xaver Stöckl, Wien um 1790(?), 26 x 41 cm. - Sauber bis nahe zum Plattenrand beschnitten; feines zeittypisches Kolorit und nur minimale Altersspuren. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 578/95. - Die auf eine romanische Gründung zurückgehende Pfarrkirche zum Hl. Michael inmitten ländlicher Umgebung. Selten und gesucht.</span>
+                    <a href='/en/articles/19-heiligenstadt-2012-101.html'>Continue reading</a><br /><br />
+                    Order no. 2012-101
+                    <br />
+                    
+                        € 2700,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-112>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-heiligenstadt-2112-112.html'>
+                            <img class='thumb' src='/img/thumb/19-heiligenstadt-2112-112.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-heiligenstadt-2112-112.html'><strong>(19) Heiligenstadt</strong></a><br /><br />
+                    "Beethoven-Haus in Heiligenstadt bei Wien." Kolorierte Heliogravüre(?) von Perger bei Kunstverlag Nedomansky, Wien um 1920, 19 x 27 cm. - Phantasieblatt im Biedermeierstil.  Das bekannte Haus am Heiligenstädter Pfarrplatz (heute Heurigenbetrieb), davor Meister Beethoven persönlich mit Zylinder und Notenmanuskript. - Gerahmt. <br /><br />
+                    <span style="display: none">Die kuriose Darstellung wurde vom Verlag auch als handkolorierte Künstlerpostkarte vertrieben.</span>
+                    <a href='/en/articles/19-heiligenstadt-2112-112.html'>Continue reading</a><br /><br />
+                    Order no. 2112-112
+                    <br />
+                    
+                        € 165,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-70>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-heiligenstadt-2211-70.html'>
+                            <img class='thumb' src='/img/thumb/19-heiligenstadt-2211-70.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-heiligenstadt-2211-70.html'><strong>(19) Heiligenstadt</strong></a><br /><br />
+                    "Heiligenstatt." Kupferstich von Vincenz Raimund Grüner aus Franz de Paula Gaheis, Wanderungen und Spazierfahrten in die Gegenden von Wien, 1801-1808, 7,5 x 12 cm. - Etwas altersfleckig. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 192/8/54; vgl. auch Thieme-Becker 15, 131. - Die Pfarrkirche St. Michael im damaligen Bauzustand.</span>
+                    <a href='/en/articles/19-heiligenstadt-2211-70.html'>Continue reading</a><br /><br />
+                    Order no. 2211-70
+                    <br />
+                    
+                        € 220,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-heiligenstadt-2412-109.html'>
+                            <img class='thumb' src='/img/thumb/19-heiligenstadt-2412-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-heiligenstadt-2412-109.html'><strong>(19) Heiligenstadt</strong></a><br /><br />
+                    "Ziegelöfen bei Heiligenstadt." Farblithographie von Josef Danilowatz (im Stein monogrammiert J. D., aus der Jahresmappe der Gesellschaft für vervielfältigende Kunst, Wien 1906), 39 x 50 cm. - Hinterlegter Riss im grauen Rand außerhalb des Bildes. <br /><br />
+                    <span style="display: none">Eindrucksvolle Dokumentation der noch weitgehend händisch und unter schlechten sozialen Bedingungen betriebenen Ziegelproduktion am Stadtrand von Wien um die Jahrhundertwende. Vorne Männer und Frauen beim Abbau und Abtransport des Lehms aus einem Lösshang, im Mittelgrund Trocknungsanlagen und Brennofen, hinten städtischer Bereich mit Gründerzeithäusern und Fabriksanlagen. - Der österreichische Maler und Graphiker Josef Danilowatz (1877-1945) war Schüler von William Unger und widmete sich besonders den Bereichen Technik und Karikatur.</span>
+                    <a href='/en/articles/19-heiligenstadt-2412-109.html'>Continue reading</a><br /><br />
+                    Order no. 2412-109
+                    <br />
+                    
+                        € 140,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2211-72>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/19-kahlenbergerdorf-2211-72.html'>
+                            <img class='thumb' src='/img/thumb/19-kahlenbergerdorf-2211-72.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/19-kahlenbergerdorf-2211-72.html'><strong>(19) Kahlenbergerdorf</strong></a><br /><br />
+                    "Ansicht des Kahlenbergerdorfes". Altkolorierte Umrissradierung von Ludwig Mohn bei Artaria, Wien um 1830, späterer Abzug (Ende 19. Jh.), 27 x 40 cm. - Etwas gebräunt und geschossen sowie minimal fleckig, insgesamt aber attraktives und seltenes Blatt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 59/74; zum Künstler vgl. Thieme-Becker 25, 19. - Blick vom linken Donauufer auf das gegenüberliegende Dorf mit Kahlen- und Leopoldsberg. Die seit etwa 1125 nachweisbare Ortschaft kam am Ende des 19. Jhs. zu Wien.</span>
+                    <a href='/en/articles/19-kahlenbergerdorf-2211-72.html'>Continue reading</a><br /><br />
+                    Order no. 2211-72
+                    <br />
+                    
+                        € 260,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-112>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/22-hubertusdamm-2412-112.html'>
+                            <img class='thumb' src='/img/thumb/22-hubertusdamm-2412-112.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/22-hubertusdamm-2412-112.html'><strong>(22) Hubertusdamm</strong></a><br /><br />
+                    "Am Donaudamm bei Wien". Farbiger Homogendruck von Hans Frank (1884-1948), 1923, 20 x 21 cm. - Das ehemalige Überschwemmungsgebiet mit Blick auf die Reichsbrücke, im Hintergrund der Wienerwald. <br /><br />
+                    <span style="display: none">Bezeichnung und Signatur gedruckt. Die Ansicht wurde auch für den Künstlerhaus-Kalender von 1934 verwendet.</span>
+                    <a href='/en/articles/22-hubertusdamm-2412-112.html'>Continue reading</a><br /><br />
+                    Order no. 2412-112
+                    <br />
+                    
+                        € 85,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1811-109>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/22-kaisermuhlen-1811-109.html'>
+                            <img class='thumb' src='/img/thumb/22-kaisermuhlen-1811-109.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/22-kaisermuhlen-1811-109.html'><strong>(22) Kaisermühlen</strong></a><br /><br />
+                    "bei d: Kaisermühlen in(!) Prater." Radierung auf aufgewalztem China von Lorenz Schön, Bildformat 7 x 11 cm, Blattgröße 24 x 36 cm. -  Aus einer 1847-1851 gemeinsam mit Conrad Grefe veröffentlichten Serie von Radierungen; möglicherweise späterer Abzug (um 1900?) von der Originalplatte. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 663/12. - Künstlerisch anspruchsvolle kleine Darstellung. Der österreichische Maler, Radierer und Lithograph Lorenz Schön (1817-1889) war Inhaber einer Zeichenschule in Wien.</span>
+                    <a href='/en/articles/22-kaisermuhlen-1811-109.html'>Continue reading</a><br /><br />
+                    Order no. 1811-109
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1601-97>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/22-stadlau-1601-97.html'>
+                            <img class='thumb' src='/img/thumb/22-stadlau-1601-97.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/22-stadlau-1601-97.html'><strong>(22) Stadlau</strong></a><br /><br />
+                    "Wien 22., Stadlauerstrasse". - Anonyme aquarellierte Tuschzeichnung in Grisaillemanier, rückseitig bezeichnet und datiert 1. 3. 1967, 17 x 22 cm. <br /><br />
+                    <span style="display: none">Zeigt die Stadlauer Straße mit dem 1902 errichteten und 1970 demolierten Amtshaus sowie der Bäckerei Pospisil. Der Glockenturm des Amtshauses befindet sich heute im Bezirksmuseum auf dem Kagraner Platz.</span>
+                    <a href='/en/articles/22-stadlau-1601-97.html'>Continue reading</a><br /><br />
+                    Order no. 1601-97
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2112-117>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/22-sussenbrunn-2112-117.html'>
+                            <img class='thumb' src='/img/thumb/22-sussenbrunn-2112-117.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/22-sussenbrunn-2112-117.html'><strong>(22) Süßenbrunn</strong></a><br /><br />
+                    "Siessenbrvnn". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15 cm. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/III/79. - Das gegen Ende des 16. Jhs. errichtete Schloss an der Süßenbrunner Hauptstraße, zu dem eine bedeutende Gutsherrschaft gehörte, wechselte häufig den Besitzer. 2008 wurde es von der Schuhmanufaktur Ludwig Reiter erworben und nach gründlicher Sanierung als Produktionsstätte und Büro eingerichtet.</span>
+                    <a href='/en/articles/22-sussenbrunn-2112-117.html'>Continue reading</a><br /><br />
+                    Order no. 2112-117
+                    <br />
+                    
+                        € 100,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2012-104>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/23-alterlaa-2012-104.html'>
+                            <img class='thumb' src='/img/thumb/23-alterlaa-2012-104.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/23-alterlaa-2012-104.html'><strong>(23) Alterlaa</strong></a><br /><br />
+                    "Erla". Kupferstich aus Georg Matthäus Vischer, Topographia Archiducatus Austriae Inf: Modernae, 1672, 10 x 15 cm. - Kaum störender hinterlegter Riss im unteren Bildteil. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 783/I/29. - Das auf eine mittelalterliche Anlage zurückgehende Erlaaer Schloss wurde in der Barockzeit von Nikolaus Pacassi umgestaltet und bildete bis 1848 das Zentrum eines bedeutenden Herrschaftskomplexes.</span>
+                    <a href='/en/articles/23-alterlaa-2012-104.html'>Continue reading</a><br /><br />
+                    Order no. 2012-104
+                    <br />
+                    
+                        € 80,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2412-114>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wien-im-19-jh-2412-114.html'>
+                            <img class='thumb' src='/img/thumb/wien-im-19-jh-2412-114.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wien-im-19-jh-2412-114.html'><strong>Wien im 19. Jh.</strong></a><br /><br />
+                    "Nieder-Oesterreich / Wien." Lithographie nach Jakob Alt aus Adolf Kunike, Donau-Ansichten, Wien 1826, 26 x 35 cm. - Blick von der Rossau entlang des Donaukanals auf die Stadt und ihre nördlichen Vorstädte. Links der Augarten, rechts das Allgemeine Krankenhaus. Schöne, seltene Gesamtansicht. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 336/118.</span>
+                    <a href='/en/articles/wien-im-19-jh-2412-114.html'>Continue reading</a><br /><br />
+                    Order no. 2412-114
+                    <br />
+                    
+                        € 400,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2311-87>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/en/articles/wien-um-1840-2311-87.html'>
+                            <img class='thumb' src='/img/thumb/wien-um-1840-2311-87.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/en/articles/wien-um-1840-2311-87.html'><strong>Wien um 1840</strong></a><br /><br />
+                    "Ansicht vom Gloriette in Schönbrunn." Getönte Lithographie von Alexander Kaiser nach Franz X. Sandmann aus der Serie "Wien und seine Umgebungen" bei Franz Paterno, Wien um 1840/1845, 14 x 20 cm. - Detailreicher Blick über den Schönbrunner Schlosspark zur Stadt. <br /><br />
+                    <span style="display: none">Nebehay-Wagner 475a/1.</span>
+                    <a href='/en/articles/wien-um-1840-2311-87.html'>Continue reading</a><br /><br />
+                    Order no. 2311-87
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bücher (auch signiert)</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+
+	function search_text(ele) {
+	    if(event.key === 'Enter') {
+            search(ele.value)
+	    }
+	}
+
+	function search() {
+		searchBoxValue = document.getElementById('searchBox').value
+		window.location.href = ' /suche.html?q=' + encodeURIComponent(searchBoxValue)
+	}
+
+    </script>
+
+    
+
+<script>
+
+function filter_items(q) {
+
+    q = q.toLowerCase()
+
+    // Retrieve all articles
+    var rows = document.getElementsByClassName('row')
+
+    // Keep track of what should be deleted
+    var toBeDeleted = []
+
+    // Skip first row, this is just the logo
+    for (var i = 1; i < rows.length; i++) {
+
+        var row = rows[i]
+
+        if (!row.innerText.toLowerCase().includes(q)) {
+            toBeDeleted.push(row)
+        }
+    }
+
+    for (var i = 0; i < toBeDeleted.length; i++) {
+
+        var row = toBeDeleted[i]
+        // This is the <hr> tag
+        var hr = row.nextElementSibling;
+        // This is the <br> tag
+        var br = hr.nextElementSibling;
+
+        row.parentNode.removeChild(row);
+        hr.parentNode.removeChild(hr);
+        br.parentNode.removeChild(br);
+    }
+
+    // Everything got deleted
+    if(rows.length === 1) {
+        document.getElementById("noresults").style.display="block"
+    }
+
+}
+
+function run_on_load() {
+
+    var url = new URL(window.location.href)
+    var q = url.searchParams.get("q")
+
+    if (q !== null) {
+
+        // Repopulate search box
+        document.getElementById('searchBox').value = q
+
+        filter_items(q)
+
+        document.getElementById("catalog").style.display="block"
+    }
+
+}
+
+window.onload = run_on_load
+
+</script>
+
+
+  </head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Deutsch<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="/en/catalogs/books-signed-unsigned/children-s-books.html">English</a>
+                </li>
+            </ul>
+         </li>
+     </ul>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/kataloge/">Kataloge</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+      </ul>
+
+      <div class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input id="searchBox" type="text" class="form-control" placeholder="Suchen" onkeydown="search_text(this)">
+        </div>
+        <button type="button" class="btn btn-default" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class='row'>
+  <div class='col-sm-2'></div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.ilab.org' target='_blank'><img style='max-width: 100%' src="/img/ilab.png" /></a>
+</div>
+  <div class='col-sm-6 vcenter' style="text-align: center">
+  <img style='max-width: 100%' src="/img/logo.jpg" />
+</div>
+  <div class='col-sm-1 hidden-xs vcenter' style="text-align: center">
+  <a href='http://www.antiquare.at' target='_blank'><img style='max-width: 100%' src="/img/zvab.png" /></a>
+  <!--<a href="index.html"><img style='max-width:100%' src="img/logo.png" /></a>-->
+</div>
+  <div class='col-sm-2'></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+    <h1>Bücher (auch signiert)</h1>
+    <hr />
+
+    
+
+    <div class='smalltext'>
+        <p>Bestellungen:<br />
+    <a href='mailto:wa@nebehay.com'>wa@nebehay.com</a><br />
+    Tel. +43 1 512 54 66
+    </p>
+    <p>
+    
+    Versandkosten auf Anfrage.<br>
+    
+    Es gelten unsere <a href="/agb.html" target="_blank">AGB</a>.
+    </p>
+    </div>
+
+    
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kinder- und Jugendbücher
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li><a href='/kataloge/bucher-auch-signiert.html'>Alle Kategorien</a></li>
+        
+    
+        <li><a href='/kataloge/bucher-auch-signiert/alte-drucke.html'>Alte Drucke</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/austriaca-viennensia.html'>Austriaca, Viennensia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/botanik-zoologie-landwirtschaft-pferd-jagd.html'>Botanik, Zoologie, Landwirtschaft, Pferd, Jagd</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geographie-reisen-ethnologie.html'>Geographie, Reisen, Ethnologie</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/geschichte-archaologie-numismatik.html'>Geschichte, Archäologie, Numismatik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kinder-und-jugendbucher.html'>Kinder- und Jugendbücher</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kochkunst-spiel-sport-varia.html'>Kochkunst, Spiel &amp; Sport, Varia</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/kunst-und-kunsthandwerk.html'>Kunst und Kunsthandwerk</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/literatur-linguistik-buchwesen.html'>Literatur, Linguistik, Buchwesen</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/medizin-psychologie-padagogik.html'>Medizin, Psychologie, Pädagogik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/militaria-und-marine.html'>Militaria und Marine</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/musik-theater-tanz-zirkus.html'>Musik, Theater, Tanz, Zirkus</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/naturwissenschaft-mathematik-technik.html'>Naturwissenschaft, Mathematik, Technik</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/philosophie-und-religion.html'>Philosophie und Religion</a></li>
+    
+        <li><a href='/kataloge/bucher-auch-signiert/politik-recht-wirtschaft.html'>Politik, Recht, Wirtschaft</a></li>
+    
+      </ul>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="noresults" style="display: none">
+        Es wurden keine Artikel mit diesem Suchbegriff gefunden.
+    </div>
+
+    <div id="catalog">
+
+        <script>
+            var url = new URL(window.location.href)
+            var q = url.searchParams.get("q")
+
+            if (q !== null) {
+                document.getElementById("catalog").style.display="none"
+            }
+        </script>
+
+
+        
+
+            <div class='row' id=2505-9>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bertuch-f-j-2505-9.html'>
+                            <img class='thumb' src='/img/thumb/bertuch-f-j-2505-9.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bertuch-f-j-2505-9.html'><strong>Bertuch, F. J.</strong></a><br /><br />
+                    Bilderbuch zum Nutzen und Vergnügen der Jugend ... Bd. 1 und 2 in 1 Bd. Wien, A. Pichler, 1813 und 1808. Kl-4; 6 Bll. (Titel und Einleitung), 50 altkolorierte Kupfertafeln mit je einem Textblatt (eine Seite deutsch, eine Seite französisch), 2 Bll. Register; 2 Bll., 50 Tafeln mit Text wie vorhin, 2 Bll. Register; Halblederband der Zeit mit zwei goldgeprägten Rückenschildchen und Buntpapiervorsätzen (berieben und bestoßen); stellenweise fleckig, von Kinderhand bekritzelt oder mit Papiermängeln, die auf sehr dünnem Papier gedruckten Textblätter teilweise stärker beschädigt (fallweise auch mit Textverlust). - Die Kupfertafeln sind teilweise mit Jacob Xaver Schmuzer (oder einer Abkürzung davon) signiert. <br /><br />
+                    <span style="display: none">Der Weimarer Unternehmer, Verleger und Philanthrop Friedrich Justin Bertuch (1747-1822) suchte mit seinem ab 1790 in monatlichen Lieferungen erschienenen "Bilderbuch" der jungen Generation zeitgenössisches Wissen in unterhaltsamer und abwechslungsreicher Form nahezubringen; der hier in den ersten zwei Bänden vorliegende Wiener Nachdruck verstand sich als wohlfeile Alternative zur Originalausgabe und sollte die Verbreitung des Werks fördern. Abgebildet und in prägnanten Kurzbeschreibungen behandelt sind hier Tiere, Pflanzen, Mineralien, Altertümer, Trachten aus aller Welt sowie Schiffstypen. - Stark gebraucht, aber komplett mit allen Tafeln und ein durchaus noch sammelwürdiges originelles Zeitdokument.</span>
+                    <a href='/artikel/bertuch-f-j-2505-9.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2505-9
+                    <br />
+                    
+                        € 650,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2305-15>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/bucciarelli-belardinelli-dina-hrsg-della-torre-angelo-illustr-2305-15.html'>
+                            <img class='thumb' src='/img/thumb/bucciarelli-belardinelli-dina-hrsg-della-torre-angelo-illustr-2305-15.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/bucciarelli-belardinelli-dina-hrsg-della-torre-angelo-illustr-2305-15.html'><strong>Bucciarelli Belardinelli, Dina (Hrsg.) - Della Torre, Angelo (Illustr.)</strong></a><br /><br />
+                    Sillabario e piccole letture. Roma, La Libreria dello Stato, a. XII (=1934). Gr-8; 112 pp, durchgehend illustriert mit zahlreichen meist farbigen Lithographien; orig.-kartoniert (Bindung stellenweise gelockert, Rücken mit Leinenstreifen verstärkt, vorderer Deckel aufgewölbt, stärker fleckig und mit kleinen Randläsuren); die letzten Seiten mit Fraßspur am unteren Falzende. - Beiliegend ein Fragment eines weiteren Schulbuchs der Zeit mit einem Reiterporträt Mussolinis. <br /><br />
+                    <span style="display: none">Illustrierte Schulfibel aus der Zeit des italienischen Faschismus mit stark indoktrinierender Tendenz. Neben der Behandlung kindgemäßer Themen wie Familie und Alltag, Natur und Jahreslauf werden Führerkult, Soldatentum und Nationalismus propagiert mit der Religion als ideologischem Überbau: "Il Duce guida il popolo d'Italia. Dio protegga il Duce! ... Tutti i bambini d'Italia sono piccoli fascisti ...". - Sehr selten.</span>
+                    <a href='/artikel/bucciarelli-belardinelli-dina-hrsg-della-torre-angelo-illustr-2305-15.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2305-15
+                    <br />
+                    
+                        € 370,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=2302-44>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/kreidolf-ernst-2302-44.html'>
+                            <img class='thumb' src='/img/thumb/kreidolf-ernst-2302-44.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/kreidolf-ernst-2302-44.html'><strong>Kreidolf, Ernst</strong></a><br /><br />
+                    Der Gartentraum. Neue Blumenmärchen. Köln, Hermann & Friedrich Schaffstein, [1911]. Lithogr. Titel, 16 fol., 1 Blatt, 16 einseitig bedruckte farblithogr. Tafeln; Orig.-Halbleinen mit farblithogr. Deckelilllustration und dreifarbig illustr. Vorsätzen (etwas bestoßen und fleckig, unteres Kapital schadhaft, Buchblock in der Mitte des Bandes geplatzt, Heftklammern aber sauber); einige wenige kleine Flecken, geringfügige Altersspuren an den Papierrändern; insgesamt sehr gut erhalten. <br /><br />
+                    <span style="display: none">Huggler 182; Schug 490 (dort "1912"). - Erste Ausgabe. Bezaubernd illustriertes Kinderbuch des Schweizer Künstlers (1863-1956), der auch die begleitenden Verse verfasste. Im Anhang ein Verzeichnis der Blumennamen.</span>
+                    <a href='/artikel/kreidolf-ernst-2302-44.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 2302-44
+                    <br />
+                    
+                        € 300,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1806-63>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/meggendorfer-lothar-illustr-beck-julius-1806-63.html'>
+                            <img class='thumb' src='/img/thumb/meggendorfer-lothar-illustr-beck-julius-1806-63.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/meggendorfer-lothar-illustr-beck-julius-1806-63.html'><strong>Meggendorfer, Lothar (Illustr.) - Beck, Julius</strong></a><br /><br />
+                    Neues Struwwelpeterbuch von Lothar Meggendorfer. Text von Ludwig Beck. Eßlingen & München, J. F. Schreiber (um 1900, Best.-Nr. 127). Kl-4; 8 Bll. mit teils farb. Illustrationen; farbillustr. OHLn. (berieben und bestoßen, hinterer Deckel etwas fleckig, der mit Klammern geheftete Buchblock lose); leicht gebräunt, stellenweise geringfügig fingerfleckig. - Ohne Titelblatt. <br /><br />
+                    <span style="display: none">Krahé 108. - Mehrfach aufgelegte Struwwelpeteriade, erstmals 1891 erschienen. Dieses Exemplar ohne Angabe der Auflage, auf dem Innendeckel eine Bleistiftwidmung aus 1924. - Inhalt: Der böse Julius - Die Lampenmarie - Der lachende Willi - Die weinende Sofie - Die unartige Laura - Der Pulverfritz.</span>
+                    <a href='/artikel/meggendorfer-lothar-illustr-beck-julius-1806-63.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1806-63
+                    <br />
+                    
+                        € 160,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1609-76>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/osten-a-v-d-1609-76.html'>
+                            <img class='thumb' src='/img/thumb/osten-a-v-d-1609-76.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/osten-a-v-d-1609-76.html'><strong>Osten, A. v. d.</strong></a><br /><br />
+                    Die Kinder von Bucheck. Eine Erzählung für Knaben und Mädchen von 8-12 Jahren. Mit vier farbigen Bildern von Eugen Klimsch. Stuttgart, Thienemann, [1887]. In-8; Titel, 140 pp, 2 Bll. (Verlagsverz.), 4 chromolith. Taf. (Lithogr.); farbillustr. OHLn. (etwas berieben, Innengelenke geplatzt); Vorsätze gebräunt, kl. Namensstempel auf Titel. <br /><br />
+                    <span style="display: none">Hinrichs 8, 634; Ries 641,31; Wegehaupt 2, 2556; Kosch 11, 746. - Anna Klapp-Osten (1840-?), norddeutsche Schriftstellerin und Redakteurin, widmete sich besonders der Frauenfrage und der Jugendliteratur.</span>
+                    <a href='/artikel/osten-a-v-d-1609-76.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1609-76
+                    <br />
+                    
+                        € 24,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+            <div class='row' id=1803-93>
+
+                <div style='text-align:center' class='col-md-4'>
+                    
+                        <a href='/artikel/voit-j-oseph-1803-93.html'>
+                            <img class='thumb' src='/img/thumb/voit-j-oseph-1803-93.jpg' />
+                        </a>
+                    
+                </div>
+
+                <div class='col-md-8 smalltext'>
+                    <a href='/artikel/voit-j-oseph-1803-93.html'><strong>Voit, J(oseph)</strong></a><br /><br />
+                    Deutsche Ruhmeshalle. Der deutschen Jugend Österreichs gewidmet. Wien, Selbstverlag bzw. Commissionsverlag Seidl & Sohn, (um 1888). Kl-4; farblith. Titel, 40 pp mit 17 Abb., 5 Taf. (davon 4 in Farblithographie); farbillustr. OHLn. mit wiederholtem Titelbild (beschabt und etwas fleckig, Innengelenke geringfügig angeplatzt); innen ausgezeichnet erhalten und nur geringfügig altersgebräunt. <br /><br />
+                    <span style="display: none">Von A. Siber illustriertes patriotisches Jugendbuch mit ausgewählten Biographien von Männern, die "durch den Glanz ihres Geistes und die Kraft ihres Wollens zu den höchsten Zielen gelangt sind. Wenn der jugendliche Leser daraus mit gehobenem Gefühle erkennen wird, daß das deutsche Volk auf seine Vergangenheit stolz sein kann, so wird es ihn zugleich mit patriotischer Freude erfüllen, in der Reihe dieser glänzenden Vorbilder den Stamm Österreichs reichlich vertreten zu finden ...". (Aus dem Vorwort).</span>
+                    <a href='/artikel/voit-j-oseph-1803-93.html'>Weiterlesen</a><br /><br />
+                    Bestellnummer 1803-93
+                    <br />
+                    
+                        € 40,-
+                    
+                </div>
+
+            </div>
+
+            <hr />
+            <br />
+
+        
+
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</body>
+</html>
